@@ -1,0 +1,139 @@
+#--- technical_mapping_cn_v1.9.rml.ttl ---
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix tedm: <http://data.europa.eu/a4g/mapping/sf-rml/> .
+@prefix epo: <http://data.europa.eu/a4g/ontology#> .
+@prefix epo-not: <http://data.europa.eu/a4g/ontology#>.
+@prefix cv: <http://data.europa.eu/m8g/> .
+@prefix cccev: <http://data.europa.eu/m8g/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix cpov: <http://data.europa.eu/m8g/> .
+@prefix	foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix time: <http://www.w3.org/2006/time#>.
+@prefix ext: <urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2#> .
+@prefix cbc: <urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2#> .
+@prefix efext: <http://data.europa.eu/p27/eforms-ubl-extensions/1#> .
+@prefix efbc: <http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1#> .
+@prefix efac: <http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1#> .
+@prefix cac: <urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+# to be copied in the appropriate mapping suite, together with all related imports, if it is the case.
+tedm:technical_mapping_cn_v19
+  a owl:Ontology ;
+  #owl:imports 	tedm:contracting_authority, tedm:object, tedm:procedure, tedm:award_of_contract, tedm:complementary_information, tedm:annexe_d1, tedm:notice;
+  dct:description "This module provides the mapping definitions for the eForm subtypes 10-24 for SDK v1.9 against ePO 4.0.0"@en ;
+  rdfs:label "TED-SWS mapping of eForm subtypes 10-24 SDK v1.9 ePO 4.0.0"@en ;
+  dct:date "2024-02-15"^^xsd:date
+.
+
+tedm:MG-Notice_ND-Root
+    a rr:TriplesMap ;
+    rdfs:label "ND-Root" ;
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*";
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Notice" ;
+            rr:class epo:Notice
+        ] ;
+#    rr:predicateObjectMap
+#        [
+#            rdfs:comment "We set the notice subtype to epo-not:CompetitionNotice, but this should be set conditionally based on the notice subtype";
+#            rr:predicate rdf:type ;
+#            rr:objectMap
+#                [
+#                    rml:reference "http://data.europa.eu/a4g/ontology#CompetitionNotice";
+#                    rr:termType rr:IRI;
+#                ] ;
+#        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:comment "The identifier of a notice" ;
+            rr:predicate adms:identifier ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-Identifier-identifier-Notice
+                ] ;
+        ]
+.
+
+tedm:MG-Identifier-identifier-Notice a rr:TriplesMap ;
+    rdfs:label "BT-701-notice" ;
+    rdfs:comment "The identifier of a notice" ;
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/cbc:ID[@schemeName='notice-id']";
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference "if (exists(/*/cbc:ID[@schemeName='notice-id'])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_NoticeIdentifier_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
+            rr:class adms:Identifier
+        ] ;
+    rr:predicateObjectMap
+        [
+
+            rr:predicate skos:notation ;
+            rr:objectMap
+                [
+                    rml:reference "/*/cbc:ID[@schemeName='notice-id']";
+                ] ;
+        ]
+.
+
+##--- Helper Lists ---
+
+tedm:buyerLegalType a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/buyer_legal_type.csv" ;
+            rml:referenceFormulation ql:CSV
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference
+                "conceptURI" ;
+        ]
+.
+
+tedm:nuts a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/nuts.json" ;
+            rml:iterator "$.results.bindings[*]" ;
+            rml:referenceFormulation ql:JSONPath
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference
+                "conceptURI.value" ;
+        ]
+.
+
+tedm:country a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/country.json" ;
+            rml:iterator "$.results.bindings[*]" ;
+            rml:referenceFormulation ql:JSONPath
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference
+                "conceptURI.value" ;
+        ]
+.

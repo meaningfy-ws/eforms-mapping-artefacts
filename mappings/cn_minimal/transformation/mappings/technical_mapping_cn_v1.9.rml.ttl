@@ -47,6 +47,7 @@ tedm:MG-Notice_ND-Root
     rr:subjectMap
         [
             rdfs:label "ND-Root" ;
+            rdfs:comment "Primary type declaration for MG-Notice under ND-Root" ;
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Notice" ;
             rr:class epo:Notice
         ] ;
@@ -62,13 +63,112 @@ tedm:MG-Notice_ND-Root
 #        ] ;
     rr:predicateObjectMap
         [
+            rdfs:label "BT-02-notice" ;
+            rdfs:comment "Notice Type of MG-Notice under ND-Root" ;
+            rr:predicate epo:hasNoticeType ;
+            rr:objectMap
+                [
+                    rdfs:label "at-voc:notice-type" ;
+                    rml:reference "/*/cbc:NoticeTypeCode" ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-03-notice" ;
+            rdfs:comment "Form Type of MG-Notice under ND-Root" ;
+            rr:predicate epo:hasFormType ;
+            rr:objectMap
+                [
+                    rdfs:label "at-voc:form-type" ;
+                    rml:reference "/*/cbc:NoticeTypeCode/@listName" ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
             rdfs:comment "The identifier of a notice" ;
             rr:predicate adms:identifier ;
             rr:objectMap
                 [
                     rr:parentTriplesMap tedm:MG-Identifier-identifier-Notice
                 ] ;
-        ]
+        ] ;
+    rr:predicateObjectMap
+        [
+            # TODO: we may have to concatenate this with ID, confirm with OP with example
+            rdfs:label "BT-757-notice" ;
+            rdfs:comment "Notice Version of MG-Notice under ND-Root" ;
+            rr:predicate epo:hasVersion ;
+            rr:objectMap
+                [
+                    rml:reference "/*/cbc:VersionID" ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-702(a)-notice" ;
+            rdfs:comment "Notice Official Language of MG-Notice under ND-Root" ;
+            rr:predicate epo:hasOfficialLanguage ;
+            rr:objectMap
+                [
+                    rdfs:label "at-voc:language" ;
+                    rml:reference "/*/cbc:NoticeLanguageCode" ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-05(a)-notice and BT-05(b)-notice" ;
+            rdfs:comment "Notice Dispatch Date and Notice Dispatch Time of MG-Notice under ND-Root" ;
+            rr:predicate epo:hasDispatchDate ;
+            rr:objectMap
+                [
+                    # here we use relative XPaths under the parent (iterator) to combine values stripping out the time zone from the first
+                    # it handles the case where there is no time zone indicated in the date time, just in case validation on OP-TED failed on a notice
+                    # however, it won't handle the case if there are other malformations
+                    rml:reference "if(exists(cbc:IssueDate) and exists(cbc:IssueTime) and contains(cbc:IssueDate, '+')) then substring-before(cbc:IssueDate, '+') || 'T' || cbc:IssueTime else if(exists(cbc:IssueDate) and exists(cbc:IssueTime)) then cbc:IssueDate || 'T' || cbc:IssueTime else if(exists(cbc:IssueDate)) then cbc:IssueDate else null" ;
+                    rr:datatype xsd:dateTime ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "OPP-070-notice" ;
+            rdfs:comment "Notice Subtype of MG-Notice under ND-Root" ;
+            rr:predicate epo:hasEFormsSubtype ;
+            rr:objectMap
+                [
+                    rml:reference "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeSubType/cbc:SubTypeCode" ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "OPP-010-notice" ;
+            rdfs:comment "Notice Publication Number of MG-Notice under ND-Root" ;
+            rr:predicate epo:hasNoticePublicationNumber ;
+            rr:objectMap
+                [
+                    rml:reference "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Publication/efbc:NoticePublicationID[@schemeName='ojs-notice-id']" ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "OPP-011-notice" ;
+            rdfs:comment "OJEU Identifier of MG-Notice under ND-Root" ;
+            rr:predicate epo:hasOJSIssueNumber ;
+            rr:objectMap
+                [
+                    rml:reference "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Publication/efbc:GazetteID[@schemeName='ojs-id']" ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "OPP-012-notice" ;
+            rdfs:comment "OJEU Publication Date of MG-Notice under ND-Root" ;
+            rr:predicate epo:hasPublicationDate ;
+            rr:objectMap
+                [
+                    rml:reference "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Publication/efbc:PublicationDate" ;
+                    rr:datatype xsd:date ;
+                ] ;
+        ] ;
 .
 
 # this is an example of a composition instance

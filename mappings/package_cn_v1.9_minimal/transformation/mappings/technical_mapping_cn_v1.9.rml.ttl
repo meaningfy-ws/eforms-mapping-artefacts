@@ -9,6 +9,7 @@
 @prefix locn: <http://www.w3.org/ns/locn#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix tedm: <http://data.europa.eu/a4g/mapping/sf-rml/> .
+@prefix epd: <http://data.europa.eu/a4g/resource/> .
 @prefix epo: <http://data.europa.eu/a4g/ontology#> .
 @prefix epo-not: <http://data.europa.eu/a4g/ontology#>.
 @prefix cv: <http://data.europa.eu/m8g/> .
@@ -37,7 +38,6 @@ tedm:technical_mapping_cn_v19
 
 tedm:MG-Notice_ND-Root
     a rr:TriplesMap ;
-    rdfs:label "ND-Root" ;
     rml:logicalSource
         [
             rml:source "data/source.xml" ;
@@ -46,6 +46,7 @@ tedm:MG-Notice_ND-Root
         ] ;
     rr:subjectMap
         [
+            rdfs:label "ND-Root" ;
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Notice" ;
             rr:class epo:Notice
         ] ;
@@ -70,8 +71,10 @@ tedm:MG-Notice_ND-Root
         ]
 .
 
+# this is an example of a composition instance
+# (subject is a child dependent on its parent,
+# i.e. Identifier dependent on Notice)
 tedm:MG-Identifier-identifier-Notice a rr:TriplesMap ;
-    rdfs:label "BT-701-notice" ;
     rdfs:comment "The identifier of a notice" ;
     rml:logicalSource
         [
@@ -81,6 +84,7 @@ tedm:MG-Identifier-identifier-Notice a rr:TriplesMap ;
         ] ;
     rr:subjectMap
         [
+            rdfs:label "BT-701-notice" ;
             rml:reference "if (exists(/*/cbc:ID[@schemeName='notice-id'])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_NoticeIdentifier_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
             rr:class adms:Identifier
         ] ;

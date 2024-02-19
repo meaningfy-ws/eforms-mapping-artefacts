@@ -1,0 +1,243 @@
+#--- technical_mapping_cn_v1.9.rml.ttl ---
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix tedm: <http://data.europa.eu/a4g/mapping/sf-rml/> .
+@prefix epd: <http://data.europa.eu/a4g/resource/> .
+@prefix epo: <http://data.europa.eu/a4g/ontology#> .
+@prefix epo-not: <http://data.europa.eu/a4g/ontology#>.
+@prefix cv: <http://data.europa.eu/m8g/> .
+@prefix cccev: <http://data.europa.eu/m8g/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix cpov: <http://data.europa.eu/m8g/> .
+@prefix	foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix time: <http://www.w3.org/2006/time#>.
+@prefix ext: <urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2#> .
+@prefix cbc: <urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2#> .
+@prefix efext: <http://data.europa.eu/p27/eforms-ubl-extensions/1#> .
+@prefix efbc: <http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1#> .
+@prefix efac: <http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1#> .
+@prefix cac: <urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+# to be copied in the appropriate mapping suite, together with all related imports, if it is the case.
+tedm:technical_mapping_cn_v19
+  a owl:Ontology ;
+  #owl:imports 	tedm:contracting_authority, tedm:object, tedm:procedure, tedm:award_of_contract, tedm:complementary_information, tedm:annexe_d1, tedm:notice;
+  dct:description "This module provides the mapping definitions for the eForm subtypes 10-24 for SDK v1.9 against ePO 4.0.0"@en ;
+  rdfs:label "TED-SWS mapping of eForm subtypes 10-24 SDK v1.9 ePO 4.0.0"@en ;
+  dct:date "2024-02-15"^^xsd:date
+.
+
+tedm:MG-Notice_ND-Root
+    a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*";
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-Root" ;
+            rdfs:comment "Primary type declaration for MG-Notice under ND-Root" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Notice" ;
+            rr:class epo:Notice
+        ] ;
+#    rr:predicateObjectMap
+#        [
+#            rdfs:comment "We set the notice subtype to epo-not:CompetitionNotice, but this should be set conditionally based on the notice subtype";
+#            rr:predicate rdf:type ;
+#            rr:objectMap
+#                [
+#                    rml:reference "http://data.europa.eu/a4g/ontology#CompetitionNotice";
+#                    rr:termType rr:IRI;
+#                ] ;
+#        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-02-notice" ;
+            rdfs:comment "Notice Type of MG-Notice under ND-Root" ;
+            rr:predicate epo:hasNoticeType ;
+            rr:objectMap
+                [
+                    rdfs:label "at-voc:notice-type" ;
+                    rml:reference "/*/cbc:NoticeTypeCode" ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-03-notice" ;
+            rdfs:comment "Form Type of MG-Notice under ND-Root" ;
+            rr:predicate epo:hasFormType ;
+            rr:objectMap
+                [
+                    rdfs:label "at-voc:form-type" ;
+                    rml:reference "/*/cbc:NoticeTypeCode/@listName" ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:comment "The identifier of a notice" ;
+            rr:predicate adms:identifier ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-Identifier-identifier-Notice
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            # TODO: we may have to concatenate this with ID, confirm with OP with example
+            rdfs:label "BT-757-notice" ;
+            rdfs:comment "Notice Version of MG-Notice under ND-Root" ;
+            rr:predicate epo:hasVersion ;
+            rr:objectMap
+                [
+                    rml:reference "/*/cbc:VersionID" ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-702(a)-notice" ;
+            rdfs:comment "Notice Official Language of MG-Notice under ND-Root" ;
+            rr:predicate epo:hasOfficialLanguage ;
+            rr:objectMap
+                [
+                    rdfs:label "at-voc:language" ;
+                    rml:reference "/*/cbc:NoticeLanguageCode" ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-05(a)-notice and BT-05(b)-notice" ;
+            rdfs:comment "Notice Dispatch Date and Notice Dispatch Time of MG-Notice under ND-Root" ;
+            rr:predicate epo:hasDispatchDate ;
+            rr:objectMap
+                [
+                    # here we use relative XPaths under the parent (iterator) to combine values stripping out the time zone from the first
+                    # it handles the case where there is no time zone indicated in the date time, just in case validation on OP-TED failed on a notice
+                    # however, it won't handle the case if there are other malformations
+                    rml:reference "if(exists(cbc:IssueDate) and exists(cbc:IssueTime) and contains(cbc:IssueDate, '+')) then substring-before(cbc:IssueDate, '+') || 'T' || cbc:IssueTime else if(exists(cbc:IssueDate) and exists(cbc:IssueTime)) then cbc:IssueDate || 'T' || cbc:IssueTime else if(exists(cbc:IssueDate)) then cbc:IssueDate else null" ;
+                    rr:datatype xsd:dateTime ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "OPP-070-notice" ;
+            rdfs:comment "Notice Subtype of MG-Notice under ND-Root" ;
+            rr:predicate epo:hasEFormsSubtype ;
+            rr:objectMap
+                [
+                    rml:reference "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeSubType/cbc:SubTypeCode" ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "OPP-010-notice" ;
+            rdfs:comment "Notice Publication Number of MG-Notice under ND-Root" ;
+            rr:predicate epo:hasNoticePublicationNumber ;
+            rr:objectMap
+                [
+                    rml:reference "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Publication/efbc:NoticePublicationID[@schemeName='ojs-notice-id']" ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "OPP-011-notice" ;
+            rdfs:comment "OJEU Identifier of MG-Notice under ND-Root" ;
+            rr:predicate epo:hasOJSIssueNumber ;
+            rr:objectMap
+                [
+                    rml:reference "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Publication/efbc:GazetteID[@schemeName='ojs-id']" ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "OPP-012-notice" ;
+            rdfs:comment "OJEU Publication Date of MG-Notice under ND-Root" ;
+            rr:predicate epo:hasPublicationDate ;
+            rr:objectMap
+                [
+                    rml:reference "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Publication/efbc:PublicationDate" ;
+                    rr:datatype xsd:date ;
+                ] ;
+        ] ;
+.
+
+# this is an example of a composition instance
+# (subject is a child dependent on its parent,
+# i.e. Identifier dependent on Notice)
+tedm:MG-Identifier-identifier-Notice a rr:TriplesMap ;
+    rdfs:comment "The identifier of a notice" ;
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/cbc:ID[@schemeName='notice-id']";
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "BT-701-notice" ;
+            rml:reference "if (exists(/*/cbc:ID[@schemeName='notice-id'])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_NoticeIdentifier_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
+            rr:class adms:Identifier
+        ] ;
+    rr:predicateObjectMap
+        [
+
+            rr:predicate skos:notation ;
+            rr:objectMap
+                [
+                    rml:reference "/*/cbc:ID[@schemeName='notice-id']";
+                ] ;
+        ]
+.
+
+##--- Helper Lists ---
+
+tedm:buyerLegalType a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/buyer_legal_type.csv" ;
+            rml:referenceFormulation ql:CSV
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference
+                "conceptURI" ;
+        ]
+.
+
+tedm:nuts a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/nuts.json" ;
+            rml:iterator "$.results.bindings[*]" ;
+            rml:referenceFormulation ql:JSONPath
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference
+                "conceptURI.value" ;
+        ]
+.
+
+tedm:country a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/country.json" ;
+            rml:iterator "$.results.bindings[*]" ;
+            rml:referenceFormulation ql:JSONPath
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference
+                "conceptURI.value" ;
+        ]
+.

@@ -36,6 +36,43 @@ tedm:technical_mapping_cn_v19
   dct:date "2024-02-15"^^xsd:date
 .
 
+tedm:MG-Notice_ND-Root_conditional
+    a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "if(/*/cbc:NoticeTypeCode/@listName='competition' or /*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeSubType/cbc:SubTypeCode=('10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24') or exists(/ContractNotice)) then /* else null";
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-Root" ;
+            rdfs:comment "Primary type declaration for MG-Notice under ND-Root" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Notice" ;
+            rr:class epo:Notice
+        ] ;
+   rr:predicateObjectMap
+       [
+           rdfs:comment "We set the notice subtype to epo-not:CompetitionNotice, but this should be set conditionally based on the notice subtype";
+           rr:predicate rdf:type ;
+           rr:objectMap
+               [
+                    rr:constant epo-not:CompetitionNotice ;
+               ] ;
+       ] ;
+    # this is an example of a (backpropagated) association that is not represented by a BT/field
+    rr:predicateObjectMap
+        [
+            rdfs:label "MG-Buyer-announcesRole-CompetitionNotice" ;
+            rdfs:comment "MG-Buyer-announcesRole-CompetitionNotice under ND-ContractingParty" ;
+            rr:predicate epo-not:announcesRole ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-Buyer_ND-ContractingParty
+                ] ;
+        ] ;
+.
+
 tedm:MG-Notice_ND-Root
     a rr:TriplesMap ;
     rml:logicalSource
@@ -51,16 +88,6 @@ tedm:MG-Notice_ND-Root
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Notice" ;
             rr:class epo:Notice
         ] ;
-#    rr:predicateObjectMap
-#        [
-#            rdfs:comment "We set the notice subtype to epo-not:CompetitionNotice, but this should be set conditionally based on the notice subtype";
-#            rr:predicate rdf:type ;
-#            rr:objectMap
-#                [
-#                    rml:reference "http://data.europa.eu/a4g/ontology#CompetitionNotice";
-#                    rr:termType rr:IRI;
-#                ] ;
-#        ] ;
     rr:predicateObjectMap
         [
             rdfs:label "BT-02-notice" ;
@@ -198,6 +225,100 @@ tedm:MG-Identifier-identifier-Notice a rr:TriplesMap ;
                 ] ;
         ]
 .
+
+tedm:MG-Buyer_ND-ContractingParty a rr:TriplesMap ;
+    rdfs:label "MG-Buyer" ;
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/cac:ContractingParty";
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-ContractingParty" ;
+            rdfs:comment "Primary type declaration for MG-Buyer under ND-ContractingParty" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Buyer_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rr:class epo:Buyer
+        ] ;
+    # rr:predicateObjectMap
+    #     [
+    #         rdfs:label "OPT-300-Procedure-Buyer" ;
+    #         rr:predicate epo:playedBy ;
+    #         rr:objectMap
+    #             [
+    #                 rr:parentTriplesMap tedm:ND-ServiceProvider;
+    #             ] ;
+    #     ] ;
+    # rr:predicateObjectMap
+    #     [
+    #         rdfs:label "BT-508-Procedure";
+    #         rr:predicate   epo:hasBuyerProfile ;
+    #         rr:objectMap
+    #             [
+    #                 rml:reference "cbc:BuyerProfileURI";
+    #                 rr:datatype xsd:anyURI
+    #             ] ;
+    #     ] .
+#    rr:predicateObjectMap
+#        [
+#            rdfs:comment "The buyer role is played by an organization";
+#            rdfs:label "ND-ServiceProvider";
+#            rr:predicate epo:playedBy ;
+#            rr:objectMap
+#                [
+#                    rr:parentTriplesMap tedm:ND-ProviderParty
+#                ] ;
+#        ] .
+.
+
+#ND-ServiceProvider
+# tedm:ND-ServiceProvider a rr:TriplesMap ;
+#     rdfs:label "ND-ServiceProvider";
+#     rdfs:comment "Represents the Buyer Organization";
+#     rml:logicalSource
+#         [
+#             rml:source "data/source.xml" ;
+#             rml:iterator "/*/cac:ContractingParty/cac:Party";
+#             rml:referenceFormulation ql:XPath
+#         ] ;
+#     rr:subjectMap
+#         [
+#             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Organization_{cac:PartyIdentification/cbc:ID}" ;
+#             rr:class org:Organization
+#         ] ;
+#     rr:predicateObjectMap
+#         [
+#             rdfs:label "BT-11-Procedure-Buyer";
+#             rr:predicate epo:hasBuyerLegalType ;
+#             rr:objectMap
+#                 [
+#                     rml:reference "../cac:ContractingPartyType/cbc:PartyTypeCode[@listName='buyer-legal-type']";
+#                 ] ;
+#         ];
+#     rr:predicateObjectMap
+#         [
+#             rdfs:label "BT-10-Procedure-Buyer";
+#             rr:predicate   epo:hasMainActivity ;
+#             rr:objectMap
+#                 [
+#                     rml:reference "../cac:ContractingActivity/cbc:ActivityTypeCode[@listName='authority-activity']";
+#                 ] ;
+#         ] .
+#    rr:predicateObjectMap
+#        [
+#            rdfs:label "OPT-300-Procedure";
+#            rdfs:comment "The identifier of a buyer organization";
+#            rr:predicate epo:hasID ;
+#            rr:objectMap
+#                [
+#                    rr:parentTriplesMap tedm:BuyerOrganizationIdentifier;
+#                    rr:joinCondition [
+#                        rr:child "path(.)";
+#                        rr:parent "path(../.)";
+#                    ];
+#                ]
+#        ] .
 
 ##--- Helper Lists ---
 

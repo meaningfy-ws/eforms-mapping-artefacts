@@ -226,6 +226,7 @@ tedm:MG-Identifier-identifier-Notice a rr:TriplesMap ;
         ]
 .
 
+# this is an example of a role being declared on a node
 tedm:MG-Buyer_ND-ContractingParty a rr:TriplesMap ;
     rdfs:label "MG-Buyer" ;
     rml:logicalSource
@@ -241,6 +242,7 @@ tedm:MG-Buyer_ND-ContractingParty a rr:TriplesMap ;
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Buyer_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
             rr:class epo:Buyer
         ] ;
+    # this is an example of an association to an independent resource (role to organization)
     # rr:predicateObjectMap
     #     [
     #         rdfs:label "OPT-300-Procedure-Buyer" ;
@@ -250,26 +252,40 @@ tedm:MG-Buyer_ND-ContractingParty a rr:TriplesMap ;
     #                 rr:parentTriplesMap tedm:ND-ServiceProvider;
     #             ] ;
     #     ] ;
-    # rr:predicateObjectMap
-    #     [
-    #         rdfs:label "BT-508-Procedure";
-    #         rr:predicate   epo:hasBuyerProfile ;
-    #         rr:objectMap
-    #             [
-    #                 rml:reference "cbc:BuyerProfileURI";
-    #                 rr:datatype xsd:anyURI
-    #             ] ;
-    #     ] .
-#    rr:predicateObjectMap
-#        [
-#            rdfs:comment "The buyer role is played by an organization";
-#            rdfs:label "ND-ServiceProvider";
-#            rr:predicate epo:playedBy ;
-#            rr:objectMap
-#                [
-#                    rr:parentTriplesMap tedm:ND-ProviderParty
-#                ] ;
-#        ] .
+    rr:predicateObjectMap
+        [
+            # this is an example of a conditioned attribute where neither type, legalType or ePO type are the same
+            rdfs:label "BT-740-Procedure-Buyer (cont-ent)" ;
+            rdfs:comment "Is BuyerContractingEntity of MG-Buyer under ND-ContractingParty, TRUE case" ;
+            rr:predicate epo:isContractingEntity ;
+            rr:objectMap
+                [
+                    rml:reference "if(/*/cac:ContractingParty/cac:ContractingPartyType/cbc:PartyTypeCode[@listName='buyer-contracting-type']/text()='cont-ent') then 'true' else null" ;
+                    rr:datatype xsd:boolean ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-740-Procedure-Buyer (not-cont-ent)" ;
+            rdfs:comment "Is BuyerContractingEntity of MG-Buyer under ND-ContractingParty, FALSE case" ;
+            rr:predicate epo:isContractingEntity ;
+            rr:objectMap
+                [
+                    rml:reference "if(/*/cac:ContractingParty/cac:ContractingPartyType/cbc:PartyTypeCode[@listName='buyer-contracting-type']/text()='not-cont-ent') then 'false' else null" ;
+                    rr:datatype xsd:boolean ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-508-Procedure-Buyer" ;
+            rdfs:comment "Buyer Profile URL of of MG-Buyer under ND-ContractingParty" ;
+            rr:predicate epo:hasBuyerProfile ;
+            rr:objectMap
+                [
+                    rml:reference "cbc:BuyerProfileURI";
+                    rr:datatype xsd:anyURI
+                ] ;
+        ] ;
 .
 
 #ND-ServiceProvider

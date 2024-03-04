@@ -71,6 +71,16 @@ tedm:MG-Notice_ND-Root_conditional
                     rr:parentTriplesMap tedm:MG-Buyer_ND-ContractingParty
                 ] ;
         ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "MG-ProcurementServiceProvider-announcesRole-CompetitionNotice" ;
+            rdfs:comment "MG-ProcurementServiceProvider-announcesRole-CompetitionNotice under ND-ServiceProviderParty" ;
+            rr:predicate epo-not:announcesRole ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-ProcurementServiceProvider_ND-ServiceProviderParty
+                ] ;
+        ] ;
 .
 
 tedm:MG-Notice_ND-Root
@@ -335,6 +345,55 @@ tedm:MG-Buyer_ND-ContractingParty a rr:TriplesMap ;
 #                    ];
 #                ]
 #        ] .
+
+tedm:MG-ProcurementServiceProvider_ND-ServiceProviderParty a rr:TriplesMap ;
+    rdfs:label "MG-ProcurementServiceProvider";
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/cac:ContractingParty/cac:Party/cac:ServiceProviderParty";
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-ContractingParty" ;
+            rdfs:comment "Primary type declaration for MG-ProcurementServiceProvider under ND-ServiceProviderParty" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ProcurementServiceProvider_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rr:class epo:ProcurementServiceProvider
+        ] ;
+    # rr:predicateObjectMap
+    #     [
+    #         rdfs:label "OPT-300-Procedure-SProvider" ;
+    #         rr:predicate epo:playedBy ;
+    #         rr:objectMap
+    #             [
+    #                 rr:parentTriplesMap tedm:ND-ProviderParty ;
+    #             ] ;
+    #     ] ;
+    rr:predicateObjectMap
+        [
+            rr:predicate epo:actsOnBehalfOf ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-Buyer_ND-ContractingParty ;
+                    # TODO: Why is this needed if this is linkage in the same source?
+                    # rr:joinCondition [
+                    #     rr:child "path(/*/cac:ContractingParty)" ;
+                    #     rr:parent "path(.)" ;
+                    # ];
+                ] ;
+        ] ;
+        rr:predicateObjectMap
+        [
+            rdfs:label "OPT-030-Procedure-SProvider (ted-esen)" ;
+            rdfs:comment "Provided Service Type of MG-ProcurementServiceProvider under ND-ServiceProviderParty, only for eSender" ;
+            rr:predicate dct:description ;
+            rr:objectMap
+                [
+                    rml:reference "if(/*/cac:ContractingParty/cac:Party/cac:ServiceProviderParty/cbc:ServiceTypeCode[@listName='organisation-role']/text()='ted-esen') then cbc:ServiceTypeCode else null" ;
+                ] ;
+        ] ;
+.
 
 ##--- Helper Lists ---
 

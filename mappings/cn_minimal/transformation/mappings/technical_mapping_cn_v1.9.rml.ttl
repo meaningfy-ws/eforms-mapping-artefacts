@@ -476,18 +476,19 @@ tedm:MG-Procedure_ND-ProcedureProcurementScope a rr:TriplesMap ;
 #                    rml:reference "if(exists(descendant::cbc:ItemClassificationCode) and exists(descendant::cbc:ItemClassificationCode/@listName)) then concat(cbc:ItemClassificationCode, ':', cbc:ItemClassificationCode/@listName) else null";
 #                ] ;
 #        ] ;
-    # rr:predicateObjectMap
-    #     [
-    #         rr:predicate epo:foreseesContractSpecificTerm ;
-    #         rr:objectMap
-    #             [
-    #                 rr:parentTriplesMap tedm:ND-ProcedurePlacePerformanceAdditionalInformation;
-    #                 rr:joinCondition [
-    #                     rr:child "path(.)";
-    #                     rr:parent "path(../.)";
-    #                 ];
-    #             ]
-    #     ] ;
+    rr:predicateObjectMap
+        [
+            rr:predicate epo:foreseesContractSpecificTerm ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-ContractTerm_ND-ProcedurePlacePerformanceAdditionalInformation ;
+                    # TODO why do this?
+                    # rr:joinCondition [
+                    #     rr:child "path(.)";
+                    #     rr:parent "path(../.)";
+                    # ];
+                ]
+        ] ;
     # rr:predicateObjectMap
     #     [
     #         rdfs:label "BT-27-Procedure";
@@ -528,6 +529,80 @@ tedm:MG-Identifier-hasInternalIdentifier-Procedure a rr:TriplesMap ;
                 [
                     # TODO decide on abs or rel XPath for such composition link values
                     rml:reference "/*/cac:ProcurementProject/cbc:ID";
+                ] ;
+        ]
+.
+
+tedm:MG-ContractTerm_ND-ProcedurePlacePerformanceAdditionalInformation a rr:TriplesMap ;
+    rdfs:label "MG-ContractTerm" ;
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/cac:ProcurementProject/cac:RealizedLocation" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-ProcedurePlacePerformanceAdditionalInformation" ;
+            rdfs:comment "Primary type declaration for MG-ContractTerm under ND-ProcedurePlacePerformanceAdditionalInformation" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ProcurementProjectContractTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rr:class epo:ContractTerm
+        ] ;
+    # rr:predicateObjectMap
+    #     [
+    #         rr:predicate epo:definesSpecificPlaceOfPerformance ;
+    #         rr:objectMap
+    #             [
+    #                 rr:parentTriplesMap tedm:ProcurementProjectContractLocation;
+    #                 rr:joinCondition [
+    #                     rr:child "path(.)";
+    #                     rr:parent "path(.)";
+    #                 ];
+    #             ]
+    #     ] ;
+    # rr:predicateObjectMap
+    #     [
+    #         rdfs:label "BT-727-Procedure";
+    #         rr:predicate epo:hasBroadPlaceOfPerformance ;
+    #         rr:objectMap
+    #             [
+    #                 rml:reference "descendant::cbc:Region";
+    #                 rr:datatype xsd:string;
+    #             ] ;
+    #     ] ;
+    # rr:predicateObjectMap
+    #     [
+    #         rdfs:label "BT-728-Procedure";
+    #         rr:predicate epo:hasPlaceOfPerformanceAdditionalInformation ;
+    #         rr:objectMap
+    #             [
+    #                 rml:reference "descendant::cbc:Description";
+    #                 rr:datatype xsd:string;
+    #             ] ;
+    #     ] ;
+    # this is an example of a predicate with value from a complex ancestor XPath
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-531-Procedure" ;
+            rdfs:comment "Additional Nature (different from Main) of MG-ContractTerm under ND-ProcedurePlacePerformanceAdditionalInformation" ;
+            rr:predicate  epo:hasAdditionalContractNature ;
+            rr:objectMap
+                [
+                    # v1.8+ (TODO peer-review this XPath please)
+                    rml:reference "../cac:ProcurementAdditionalType[cbc:ProcurementTypeCode/@listName='contract-nature']/cbc:ProcurementTypeCode" ;
+                    # v1.3-1.7 (TODO check this XPath for other versions)
+                    # rml:reference "descendant::cbc:ProcurementTypeCode[not(@listName='transport-service')]" ;
+                ] ;
+        ] ;
+    # this is an example of a predicate with value from an ancestor XPath
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-23-Procedure" ;
+            rdfs:comment "Main Nature of MG-ContractTerm under ND-ProcedurePlacePerformanceAdditionalInformation" ;
+            rr:predicate  epo:hasContractNatureType;
+            rr:objectMap
+                [
+                    rml:reference "../cbc:ProcurementTypeCode";
                 ] ;
         ]
 .

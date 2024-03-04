@@ -45,6 +45,15 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_NoticeIdentifier_cMBzh6pL4JRkiaCd4DW
   a adms:Identifier;
   skos:notation "14549263-b47b-4e59-96a1-2d0d13e19343" .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureIdentifier_eySzap22e3jkZr3f7VXYNj
+  a adms:Identifier;
+  skos:notation "2023-P-0001" .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_MnX8qyREnFMNLeS5MJAX9K a epo:Procedure;
+  epo:hasInternalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureIdentifier_eySzap22e3jkZr3f7VXYNj;
+  dct:description "Description ---";
+  dct:title "Procurement Title ---" .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementServiceProvider_f7UuQ7S8iGMkM7gCN4x35m
   a epo:ProcurementServiceProvider;
   epo:actsOnBehalfOf epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Buyer_MT3gdCnJ9BA7aEqaGqKxAh;

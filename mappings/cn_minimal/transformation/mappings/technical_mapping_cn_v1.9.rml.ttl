@@ -421,7 +421,7 @@ tedm:MG-Procedure_ND-ProcedureProcurementScope a rr:TriplesMap ;
                 [
                     rr:parentTriplesMap tedm:MG-Identifier-hasInternalIdentifier-Procedure ;
                 ]
-        ] ;        
+        ] ;
     rr:predicateObjectMap
         [
             rdfs:label "BT-21-Procedure" ;
@@ -429,7 +429,10 @@ tedm:MG-Procedure_ND-ProcedureProcurementScope a rr:TriplesMap ;
             rr:predicate dct:title ;
             rr:objectMap
                 [
-                    rml:reference "/*/cac:ProcurementProject/cbc:Name" ;
+                    rml:reference "cbc:Name" ;
+                    rml:languageMap [
+                        rml:reference "lower-case(cbc:Name/@languageID)"
+                    ] ;
                 ] ;
         ] ;
     rr:predicateObjectMap
@@ -439,7 +442,10 @@ tedm:MG-Procedure_ND-ProcedureProcurementScope a rr:TriplesMap ;
             rr:predicate dct:description ;
             rr:objectMap
                 [
-                    rml:reference "/*/cac:ProcurementProject/cbc:Description" ;
+                    rml:reference "cbc:Description" ;
+                    rml:languageMap [
+                        rml:reference "lower-case(cbc:Description/@languageID)"
+                    ] ;
                 ] ;
         ] ;
     # rr:predicateObjectMap

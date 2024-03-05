@@ -581,10 +581,14 @@ tedm:MG-ContractTerm_ND-ProcedurePlacePerformanceAdditionalInformation a rr:Trip
             rr:predicate  epo:hasAdditionalContractNature ;
             rr:objectMap
                 [
-                    # v1.8+ (TODO peer-review this XPath please)
+                    tedm:minSDKVersion "1.8" ;
                     rml:reference "../cac:ProcurementAdditionalType[cbc:ProcurementTypeCode/@listName='contract-nature']/cbc:ProcurementTypeCode" ;
+                ] ,
+                [
+                    tedm:minSDKVersion "1.3" ;
+                    tedm:maxSDKVersion "1.7" ;
                     # v1.3-1.7 (TODO check this XPath for other versions)
-                    # rml:reference "descendant::cbc:ProcurementTypeCode[not(@listName='transport-service')]" ;
+                    rml:reference "descendant::cbc:ProcurementTypeCode[not(@listName='transport-service')]" ;
                 ] ;
         ] ;
     # this is an example of a predicate with value from an ancestor XPath

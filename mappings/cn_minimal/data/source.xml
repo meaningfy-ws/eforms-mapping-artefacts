@@ -557,6 +557,15 @@
 		</cac:LotDistribution>
 	</cac:TenderingTerms>
 	<cac:TenderingProcess>
+		<ext:UBLExtensions>
+			<ext:UBLExtension>
+				<ext:ExtensionContent>
+					<efext:EformsExtension>
+						<efbc:ProcedureRelaunchIndicator>false</efbc:ProcedureRelaunchIndicator>
+					</efext:EformsExtension>
+				</ext:ExtensionContent>
+			</ext:UBLExtension>
+		</ext:UBLExtensions>
 		<!--BT-88-->
 		<cbc:Description languageID="ENG">Description of the procedure  ---</cbc:Description>
 		<!--BT-105-->

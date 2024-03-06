@@ -605,6 +605,51 @@ tedm:MG-ContractTerm_ND-ProcedurePlacePerformanceAdditionalInformation a rr:Trip
         ]
 .
 
+# this is an example of a type declaration on a field with secondary assertions
+tedm:MG-ProcurementProcessInformation_ND-ProcedureTenderingProcess a rr:TriplesMap ;
+    rdfs:label "MG-ProcurementProcessInformation" ;
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/cac:TenderingProcess/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-ProcedureTenderingProcess" ;
+            rdfs:comment "Primary type declaration for MG-ProcurementProcessInformation under ND-ProcedureTenderingProcess" ;
+            rml:reference "if(exists(efbc:ProcedureRelaunchIndicator)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_ProcurementProcessInformation_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
+            rr:class epo:ProcurementProcessInformation
+
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-634-Procedure" ;
+            rdfs:comment "Procurement Relaunch of MG-ProcurementProcessInformation under ND-ProcedureTenderingProcess" ;
+            rr:predicate epo:isToBeRelaunched ;
+            rr:objectMap
+                [
+                    rml:reference "efbc:ProcedureRelaunchIndicator" ;
+                    rr:datatype xsd:boolean
+                ] ;
+        ] ;
+    # this is an example of a predicate that can link to one of multiple TMaps with the same subject IRI
+    rr:predicateObjectMap
+        [
+            rr:predicate epo:concernsProcedure ;
+            rr:objectMap
+                [
+                    # TODO how do we decide whether to link at ProcedureTenderingProcess or ProcedureProcurementScope?
+                    rr:parentTriplesMap tedm:MG-Procedure_ND-ProcedureProcurementScope ;
+                    # rr:parentTriplesMap tedm:ND-ProcedureTenderingProcess ;
+                    # rr:joinCondition [
+                    #     rr:child "path(/*/cac:TenderingProcess)" ;
+                    #     rr:parent "path(.)" ;
+                    # ] ;
+                ]
+        ]
+.
+
 ##--- Helper Lists ---
 
 tedm:buyerLegalType a rr:TriplesMap ;

@@ -56,6 +56,11 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_MnX8qyREnFMNLeS5MJAX9K a e
   dct:description "Description ---"@eng;
   dct:title "Procurement Title ---"@eng .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProcessInformation_Bh5qwhngs3Hc9wnu7VDUTo
+  a epo:ProcurementProcessInformation;
+  epo:concernsProcedure epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_MnX8qyREnFMNLeS5MJAX9K;
+  epo:isToBeRelaunched false .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_67o9ur9Jjef9htMoaQhdxm
   a epo:ContractTerm;
   epo:hasAdditionalContractNature "works";

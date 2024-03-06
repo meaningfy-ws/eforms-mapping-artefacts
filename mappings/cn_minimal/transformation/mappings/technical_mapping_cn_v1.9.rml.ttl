@@ -119,7 +119,7 @@ tedm:MG-Notice_ND-Root
             rr:predicate adms:identifier ;
             rr:objectMap
                 [
-                    rr:parentTriplesMap tedm:MG-Identifier-identifier-Notice
+                    rr:parentTriplesMap tedm:MG-Identifier-identifier-Notice_ND-Root
                 ] ;
         ] ;
     rr:predicateObjectMap
@@ -204,7 +204,7 @@ tedm:MG-Notice_ND-Root
 # this is an example of a composition instance
 # (subject is a child dependent on its parent,
 # i.e. Identifier dependent on Notice)
-tedm:MG-Identifier-identifier-Notice a rr:TriplesMap ;
+tedm:MG-Identifier-identifier-Notice_ND-Root a rr:TriplesMap ;
     rdfs:comment "The identifier of a notice" ;
     rml:logicalSource
         [
@@ -412,7 +412,7 @@ tedm:MG-Procedure_ND-ProcedureProcurementScope a rr:TriplesMap ;
             rr:predicate epo:hasInternalIdentifier ;
             rr:objectMap
                 [
-                    rr:parentTriplesMap tedm:MG-Identifier-hasInternalIdentifier-Procedure ;
+                    rr:parentTriplesMap tedm:MG-Identifier-hasInternalIdentifier-Procedure_ND-ProcedureProcurementScope ;
                 ]
         ] ;
     rr:predicateObjectMap
@@ -497,8 +497,7 @@ tedm:MG-Procedure_ND-ProcedureProcurementScope a rr:TriplesMap ;
     #     ] ;
 .
 
-# TODO decide on TMap naming for composition links like this
-tedm:MG-Identifier-hasInternalIdentifier-Procedure a rr:TriplesMap ;
+tedm:MG-Identifier-hasInternalIdentifier-Procedure_ND-ProcedureProcurementScope a rr:TriplesMap ;
     rdfs:comment "The identifier of a procedure" ;
     rml:logicalSource
         [

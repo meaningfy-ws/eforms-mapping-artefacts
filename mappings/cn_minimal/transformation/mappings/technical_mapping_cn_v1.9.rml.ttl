@@ -99,7 +99,7 @@ tedm:MG-Notice_ND-Root
             rr:objectMap
                 [
                     rdfs:label "at-voc:notice-type" ;
-                    rml:reference "/*/cbc:NoticeTypeCode" ;
+                    rml:reference "cbc:NoticeTypeCode" ;
                 ] ;
         ] ;
     rr:predicateObjectMap
@@ -110,7 +110,7 @@ tedm:MG-Notice_ND-Root
             rr:objectMap
                 [
                     rdfs:label "at-voc:form-type" ;
-                    rml:reference "/*/cbc:NoticeTypeCode/@listName" ;
+                    rml:reference "cbc:NoticeTypeCode/@listName" ;
                 ] ;
         ] ;
     rr:predicateObjectMap
@@ -130,7 +130,7 @@ tedm:MG-Notice_ND-Root
             rr:predicate epo:hasVersion ;
             rr:objectMap
                 [
-                    rml:reference "/*/cbc:VersionID" ;
+                    rml:reference "cbc:VersionID" ;
                 ] ;
         ] ;
     rr:predicateObjectMap
@@ -141,7 +141,7 @@ tedm:MG-Notice_ND-Root
             rr:objectMap
                 [
                     rdfs:label "at-voc:language" ;
-                    rml:reference "/*/cbc:NoticeLanguageCode" ;
+                    rml:reference "cbc:NoticeLanguageCode" ;
                 ] ;
         ] ;
     rr:predicateObjectMap
@@ -151,13 +151,14 @@ tedm:MG-Notice_ND-Root
             rr:predicate epo:hasDispatchDate ;
             rr:objectMap
                 [
-                    # here we use relative XPaths under the parent (iterator) to combine values stripping out the time zone from the first
-                    # it handles the case where there is no time zone indicated in the date time, just in case validation on OP-TED failed on a notice
+                    # here we combine values across (relative) XPaths/fields stripping out the time zone from the first
+                    # it handles the case where there is no time zone indicated in the date time, just in case validation failed on a notice
                     # however, it won't handle the case if there are other malformations
                     rml:reference "if(exists(cbc:IssueDate) and exists(cbc:IssueTime) and contains(cbc:IssueDate, '+')) then substring-before(cbc:IssueDate, '+') || 'T' || cbc:IssueTime else if(exists(cbc:IssueDate) and exists(cbc:IssueTime)) then cbc:IssueDate || 'T' || cbc:IssueTime else if(exists(cbc:IssueDate)) then cbc:IssueDate else null" ;
                     rr:datatype xsd:dateTime ;
                 ] ;
         ] ;
+    # this is an example of a predicate which has an orthogonal XPath compared to its subject
     rr:predicateObjectMap
         [
             rdfs:label "OPP-070-notice" ;
@@ -215,7 +216,9 @@ tedm:MG-Identifier-identifier-Notice_ND-Root a rr:TriplesMap ;
     rr:subjectMap
         [
             rdfs:label "BT-701-notice" ;
+            # TODO can this become a template since the iterator is already on the required element?
             rml:reference "if (exists(/*/cbc:ID[@schemeName='notice-id'])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_NoticeIdentifier_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
+            # rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_NoticeIdentifier_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
             rr:class adms:Identifier
         ] ;
     rr:predicateObjectMap
@@ -224,7 +227,7 @@ tedm:MG-Identifier-identifier-Notice_ND-Root a rr:TriplesMap ;
             rr:predicate skos:notation ;
             rr:objectMap
                 [
-                    rml:reference "/*/cbc:ID[@schemeName='notice-id']";
+                    rml:reference ".";
                 ] ;
         ]
 .
@@ -519,8 +522,7 @@ tedm:MG-Identifier-hasInternalIdentifier-Procedure_ND-ProcedureProcurementScope 
             rr:predicate skos:notation ;
             rr:objectMap
                 [
-                    # TODO decide on abs or rel XPath for such composition link values
-                    rml:reference "/*/cac:ProcurementProject/cbc:ID";
+                    rml:reference "cbc:ID";
                 ] ;
         ]
 .

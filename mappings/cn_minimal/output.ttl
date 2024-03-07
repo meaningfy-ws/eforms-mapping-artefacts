@@ -27,6 +27,34 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Buyer_MT3gdCnJ9BA7aEqaGqKxAh a epo:B
   epo:hasBuyerProfile "https://profile.example.com"^^xsd:anyURI;
   epo:isContractingEntity true .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_9EoaX693zGgFRHUBTqQE58
+  a locn:Address;
+  locn:fullAddress "87 Big Avenue, , " .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_CXdDFvgV5RjePYb9cagtRa
+  a locn:Address;
+  locn:fullAddress "23 Nelson Square, , " .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_JAQDkMB4STjLj2Z9DkzGKS
+  a locn:Address;
+  locn:fullAddress "162 Broad Street, 2nd floor, " .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_SyrXybB9qnydTsiCYvqfwn
+  a locn:Address;
+  locn:fullAddress "Bruce Wayne House, 2 Gotham Street, " .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_dtBY8KdbdWyJb9xZnV4Xcw
+  a locn:Address;
+  locn:fullAddress ", , " .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_ikV4AfPuLDPpY2gzokb7GH
+  a locn:Address;
+  locn:fullAddress "85 Norwish Road, , " .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_kp4YHhT2Gw9BnTPKnwxcdW
+  a locn:Address;
+  locn:fullAddress "6 Main Street, , " .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0001 a epo:Identifier;
   skos:notation "ORG-0001" .
 
@@ -97,36 +125,43 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_oL2naWEEvhzCj
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0001 a org:Organization;
   epo:hasLegalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_ezhXiD7oQurCdTdR4RSM9g;
   epo:hasLegalName "Financial Adinistration for ..."@eng;
+  cccev:registeredAddress epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_SyrXybB9qnydTsiCYvqfwn;
   adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0001 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0002 a org:Organization;
   epo:hasLegalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_ZowVe8fwBUBP7Pd4ikinCk;
   epo:hasLegalName "TaxInfo Department"@eng;
+  cccev:registeredAddress epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_kp4YHhT2Gw9BnTPKnwxcdW;
   adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0002 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0003 a org:Organization;
   epo:hasLegalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_dcFQz5DL4ZBPqMeq5T8Yet;
   epo:hasLegalName "EnvironmentalInfo Dpt"@eng;
+  cccev:registeredAddress epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_CXdDFvgV5RjePYb9cagtRa;
   adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0003 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0004 a org:Organization;
   epo:hasLegalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_5ZoEQEDimbU7BLyB2frEpT;
   epo:hasLegalName "EmploymentInfo Division"@eng;
+  cccev:registeredAddress epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_JAQDkMB4STjLj2Z9DkzGKS;
   adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0004 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0005 a org:Organization;
   epo:hasLegalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_ewuXkefLbEMgjnxiEwoxj6;
   epo:hasLegalName "Pub Proc Appeal Adm"@eng;
+  cccev:registeredAddress epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_9EoaX693zGgFRHUBTqQE58;
   adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0005 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0006 a org:Organization;
   epo:hasLegalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_oL2naWEEvhzCjBHXXR6juG;
   epo:hasLegalName "The Public Mediator"@eng;
+  cccev:registeredAddress epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_ikV4AfPuLDPpY2gzokb7GH;
   adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0006 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0007 a org:Organization;
   epo:hasLegalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_EVJLSmcpmMxC2ser3UGKGb;
   epo:hasLegalName "eSendCorp"@eng;
+  cccev:registeredAddress epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_dtBY8KdbdWyJb9xZnV4Xcw;
   adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0007 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureIdentifier_eySzap22e3jkZr3f7VXYNj

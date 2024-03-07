@@ -650,6 +650,140 @@ tedm:MG-ProcurementProcessInformation_ND-ProcedureTenderingProcess a rr:TriplesM
         ]
 .
 
+# this is an example of a TMap which has the same subject IRI as another (tedm:MG-Procedure_ND-ProcedureProcurementScope)
+tedm:MG-Procedure_ND-ProcedureTenderingProcess a rr:TriplesMap ;
+    rdfs:label "MG-Procedure" ;
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/cac:TenderingProcess" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            #This one maps to the parent path
+            # TODO why?
+            rdfs:label "ND-ProcedureTenderingProcess" ;
+            rdfs:comment "Type declaration for MG-Procedure under ND-ProcedureTenderingProcess" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Procedure_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
+            rr:class epo:Procedure
+        ] ;
+    #  rr:predicateObjectMap
+    #     [
+    #         rdfs:label "ND-Lot";#add in cm line that this goes from procedure to lot
+    #         rr:predicate epo:hasProcurementScopeDividedIntoLot ;
+    #         rr:objectMap
+    #             [
+    #                 rr:parentTriplesMap tedm:ND-Lot;
+    #             ]
+    #     ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-88-Procedure" ;
+            rdfs:comment "Procedure Features of MG-Procedure under ND-ProcedureTenderingProcess" ;
+            rr:predicate epo:hasMainFeature ;
+            rr:objectMap
+                [
+                    rml:reference "cbc:Description" ;
+                    rml:languageMap [
+                        rml:reference "lower-case(cbc:Description/@languageID)"
+                    ] ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-105-Procedure" ;
+            rdfs:comment "Procedure Type of MG-Procedure under ND-ProcedureTenderingProcess" ;
+            rr:predicate epo:hasProcedureType ;
+            rr:objectMap
+                [
+                    # TODO at-voc
+                    rdfs:label "at-voc:procurement-procedure-type" ;
+                    rml:reference "cbc:ProcedureCode" ;
+                ] ;
+        ] ;
+    # rr:predicateObjectMap
+    #     [
+    #         rdfs:label "BT-01-notice and BT-01(e)-notice and BT-01(f)-notice";
+    #         rr:predicate  epo:hasLegalBasis  ;
+    #         rr:objectMap
+    #             [
+    #                 rml:reference "if(exists(/*/cbc:RegulatoryDomain) or exists(cac:ProcurementLegislationDocumentReference[cbc:ID/text()='LocalLegalBasis']/cbc:ID[text()='LocalLegalBasis']) or exists(cac:ProcurementLegislationDocumentReference[cbc:ID/text()='LocalLegalBasis']/cbc:DocumentDescription)) then concat(/*/cbc:RegulatoryDomain, ' ',concat(cac:ProcurementLegislationDocumentReference[cbc:ID/text()='LocalLegalBasis']/cbc:ID[text()='LocalLegalBasis'], ' ', cac:ProcurementLegislationDocumentReference[cbc:ID/text()='LocalLegalBasis']/cbc:DocumentDescription)) else null";
+    #                 rr:datatype xsd:string
+    #             ] ;
+    #     ]  ;
+    # rr:predicateObjectMap
+    #     [
+    #         rdfs:label "BT-01-notice and BT-01(c)-notice and BT-01(d)-notice";
+    #         rr:predicate  epo:hasLegalBasis  ;
+    #         rr:objectMap
+    #             [
+    #                 rml:reference "if(exists(/*/cbc:RegulatoryDomain) or exists(cac:ProcurementLegislationDocumentReference[not(cbc:ID/text()=('CrossBorderLaw','LocalLegalBasis'))]/cbc:ID[not(text()=('CrossBorderLaw','LocalLegalBasis'))]) or exists(cac:ProcurementLegislationDocumentReference[not(cbc:ID/text()=('CrossBorderLaw','LocalLegalBasis'))]/cbc:DocumentDescription)) then concat(/*/cbc:RegulatoryDomain, ' ',concat(cac:ProcurementLegislationDocumentReference[not(cbc:ID/text()=('CrossBorderLaw','LocalLegalBasis'))]/cbc:ID[not(text()=('CrossBorderLaw','LocalLegalBasis'))], ' ', cac:ProcurementLegislationDocumentReference[not(cbc:ID/text()=('CrossBorderLaw','LocalLegalBasis'))]/cbc:DocumentDescription)) else null";
+    #                 rr:datatype xsd:string
+    #             ] ;
+    #     ] ;
+    # rr:predicateObjectMap
+    #     [
+    #         rdfs:label "BT-106-Procedure";
+    #         rr:predicate   epo:isAccelerated  ;
+    #         rr:objectMap
+    #             [
+    #                 rml:reference "descendant::cbc:ProcessReasonCode[@listName='accelerated-procedure']";
+    #                 rr:datatype xsd:boolean
+    #             ] ;
+    #     ] ;
+    # rr:predicateObjectMap
+    #     [
+    #         rdfs:label "BT-1351-Procedure";
+    #         rr:predicate   epo:hasAcceleratedProcedureJustification  ;
+    #         rr:objectMap
+    #             [
+    #                 rml:reference "descendant::cbc:ProcessReason";
+    #                 rr:datatype xsd:string
+    #             ] ;
+    #     ]   ;
+    # rr:predicateObjectMap
+    #     [
+    #         rdfs:label "ProcedureTerm";
+    #         rdfs:comment "This is the ProcedureTerm that is associated with a Procedure";
+    #         rr:predicate epo:isSubjectToProcedureSpecificTerm ;
+    #         rr:objectMap
+    #             [
+    #                 rr:parentTriplesMap tedm:ND-ProcedureTerms;
+    #                 rr:joinCondition [
+    #                     rr:child "path(/*/cac:TenderingTerms)";
+    #                     rr:parent "path(.)";
+    #                 ];
+    #             ]
+    #     ] ;
+    # rr:predicateObjectMap
+    #     [
+    #         rdfs:label "ND-ExclusionGrounds";
+    #         rr:predicate epo:specifiesExclusionGround ;
+    #         rr:objectMap
+    #             [
+    #                 rr:parentTriplesMap tedm:ND-ExclusionGrounds;#/*/cac:TenderingTerms/cac:TendererQualificationRequest/cac:SpecificTendererRequirement
+    #                 rr:joinCondition [
+    #                     rr:child "path(..)";
+    #                     rr:parent "path(../../..)";
+    #                 ];
+    #             ]
+    #     ];
+    # rr:predicateObjectMap
+    #     [
+    #         rdfs:label "BT-09(b)-Procedure";
+    #         rr:predicate epo:refersToProcedure ;
+    #         rr:objectMap
+    #             [
+    #                 rr:parentTriplesMap tedm:ND-ProcedureTenderingProcess;
+    #                 rr:joinCondition [
+    #                     rr:child "path(/*/cac:TenderingProcess)";
+    #                     rr:parent "path(.)";
+    #                 ];
+    #             ]
+    #     ]
+.
+
 ##--- Helper Lists ---
 
 tedm:buyerLegalType a rr:TriplesMap ;

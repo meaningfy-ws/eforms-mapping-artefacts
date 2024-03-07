@@ -294,6 +294,169 @@ tedm:MG-Buyer_ND-ContractingParty a rr:TriplesMap ;
         ] ;
 .
 
+tedm:MG-Organization_ND-Company a rr:TriplesMap ;
+    rdfs:label "MG-Organization" ;
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            # TODO why do we not iterate one level up on Organization?
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Organizations/efac:Organization/efac:Company" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-Company" ;
+            rdfs:comment "Primary type declaration for MG-Organization under ND-Company" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Organization_{cac:PartyIdentification/cbc:ID}" ;
+            rr:class org:Organization
+        ] ;
+    # rr:predicateObjectMap
+    #     [
+    #         rr:predicate epo:hasPrimaryContactPoint ;
+    #         rr:objectMap
+    #             [
+    #                 rdfs:label "ND-CompanyContact";
+    #                 rr:parentTriplesMap tedm:ND-CompanyContact ;
+    #                 rr:joinCondition [
+    #                     rr:child "path(.)";
+    #                     rr:parent "path(../.)";
+    #                 ];
+    #             ]
+    #     ] ;
+    # rr:predicateObjectMap
+    #     [
+    #         #The channel of ND-Company it is created for the BT-509-Organization-Company it does not correspond to a node"
+    #         rr:predicate epo:hasDeliveryGateway ;
+    #         rr:objectMap
+    #             [
+    #                 rr:parentTriplesMap tedm:ND-CompanyChannel ;
+    #                 rr:joinCondition [
+    #                     rr:child "path(.)";
+    #                     rr:parent "path(.)";
+    #                 ];
+    #             ]
+    #     ] ;
+    # rr:predicateObjectMap
+    #     [
+    #         rr:predicate cv:registeredAddress ;
+    #         rr:objectMap
+    #             [
+    #                 rdfs:label "ND-CompanyAddress";
+    #                 rr:parentTriplesMap tedm:ND-CompanyAddress;
+    #                 rr:joinCondition [
+    #                     rr:child "path(.)";
+    #                     rr:parent "path(../.)";
+    #                 ];
+    #             ]
+    #     ];
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-500-Organization-Company" ;
+            rdfs:comment "Organisation Name of MG-Organization under ND-Company" ;
+            rr:predicate epo:hasLegalName ;
+            rr:objectMap
+                [
+                    rml:reference "cac:PartyName/cbc:Name" ;
+                    # this was used initially but wrong as it would pick up Contact name
+                    # rml:reference "descendant::cbc:Name" ;
+                    rml:languageMap [
+                        rml:reference "lower-case(cac:PartyName/cbc:Name/@languageID)"
+                    ] ;
+                ] ;
+        ] ;
+    # rr:predicateObjectMap
+    #     [
+    #         rdfs:label "BT-16-Organization-Company";
+    #         rr:predicate epo:hasOrganisationUnit ;
+    #         rr:objectMap
+    #             [
+    #                 rml:reference "descendant::cbc:Department";
+    #             ] ;
+    #     ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "OPT-200-Organization-Company" ;
+            rdfs:comment "Organisation Technical Identifier of MG-Organization under ND-Company" ;
+            rr:predicate adms:identifier ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-Identifier-identifier-Organization_ND-Company ;
+                    # TODO how does this work?
+                    rr:joinCondition [
+                        rr:child "path(.)" ;
+                        rr:parent "path(.)" ;
+                    ] ;
+                ]
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-501-Organization-Company" ;
+            rdfs:comment "Organisation Identifier of MG-Organization under ND-Company" ;
+            rr:predicate epo:hasLegalIdentifier ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-Identifier-hasLegalIdentifier-Organization_ND-Company ;
+                    rr:joinCondition [
+                        rr:child "path(.)" ;
+                        rr:parent "path(.)" ;
+                    ] ;
+                ]
+        ] ;
+.
+
+tedm:MG-Identifier-identifier-Organization_ND-Company a rr:TriplesMap ;
+    rdfs:label "MG-Identifier" ;
+    rdfs:comment "The identifier of an organization" ;
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Organizations/efac:Organization/efac:Company" ;
+            rml:referenceFormulation ql:XPath
+        ];
+    rr:subjectMap
+        [
+            rdfs:label "ND-Company" ;
+            rml:reference "if (exists(cac:PartyIdentification/cbc:ID)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_Identifier_' || cac:PartyIdentification/cbc:ID else null" ;
+            # rml:reference "if (exists(cac:PartyIdentification/cbc:ID)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_OrganisationIdentifier_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(cac:PartyIdentification/cbc:ID)) || '?response_type=raw') else null" ;
+            rr:class epo:Identifier
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "identifier" ;
+            rr:predicate skos:notation ;
+            rr:objectMap
+                [
+                    rml:reference "cac:PartyIdentification/cbc:ID" ;
+                ] ;
+        ] ;
+.
+
+tedm:MG-Identifier-hasLegalIdentifier-Organization_ND-Company a rr:TriplesMap ;
+    rdfs:label "MG-Identifier" ;
+    rdfs:comment "The legal identifier of an organization" ;
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Organizations/efac:Organization/efac:Company" ;
+            rml:referenceFormulation ql:XPath
+        ];
+    rr:subjectMap
+        [
+            rdfs:label "ND-Company" ;
+            rml:reference "if (exists(cac:PartyLegalEntity/cbc:CompanyID)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_OrganisationIdentifier_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(cac:PartyLegalEntity/cbc:CompanyID)) || '?response_type=raw') else null" ;
+            rr:class epo:Identifier
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "legal identifier" ;
+            rr:predicate skos:notation ;
+            rr:objectMap
+                [
+                    rml:reference "cac:PartyLegalEntity/cbc:CompanyID" ;
+                ] ;
+        ] ;
+.
+
 #ND-ServiceProvider
 # tedm:ND-ServiceProvider a rr:TriplesMap ;
 #     rdfs:label "ND-ServiceProvider";

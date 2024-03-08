@@ -9,7 +9,10 @@
 @prefix epd: <http://data.europa.eu/a4g/resource/> .
 @prefix epo: <http://data.europa.eu/a4g/ontology#> .
 @prefix ext: <urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2#> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix idlab-fn: <http://example.com/idlab/function/> .
 @prefix locn: <http://www.w3.org/ns/locn#> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -178,7 +181,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_MnX8qyREnFMNLeS5MJAX9K a e
   epo:hasProcedureType "neg-w-call";
   epo:isAccelerated true;
   dct:description "Description ---"@eng;
-  dct:title "Procurement Title ---"@eng .
+  dct:title "Procurement Title ---"@en .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProcessInformation_Bh5qwhngs3Hc9wnu7VDUTo
   a epo:ProcurementProcessInformation;

@@ -26,6 +26,9 @@
 @prefix cac: <urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2#> .
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix fnml:   <http://semweb.mmlab.be/ns/fnml#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix idlab-fn: <http://example.com/idlab/function/> .
 
 # to be copied in the appropriate mapping suite, together with all related imports, if it is the case.
 tedm:technical_mapping_cn_v19
@@ -658,7 +661,16 @@ tedm:MG-Procedure_ND-ProcedureProcurementScope a rr:TriplesMap ;
                 [
                     rml:reference "cbc:Name" ;
                     rml:languageMap [
-                        rml:reference "lower-case(cbc:Name/@languageID)"
+                        fnml:functionValue [
+                            rr:predicateObjectMap [
+                                rr:predicate idlab-fn:str ;
+                                rr:objectMap [ rml:reference "cbc:Name/@languageID" ]
+                                ] ,
+                                tedm:idlab-fn_executes_lookup ,
+                                tedm:idlab-fn_inputFile_language ,
+                                tedm:idlab-fn_fromColumn_0 ,
+                                tedm:idlab-fn_toColumn_1
+                        ]
                     ] ;
                 ] ;
         ] ;
@@ -1071,6 +1083,13 @@ tedm:MG-Procedure_ND-AcceleratedProcedure a rr:TriplesMap ;
                 ] ;
         ]   ;
 .
+
+##--- Function Parameters ---
+
+tedm:idlab-fn_executes_lookup rr:predicate fno:executes ; rr:objectMap [ rr:constant idlab-fn:lookup ] .
+tedm:idlab-fn_inputFile_language rr:predicate idlab-fn:inputFile ; rr:objectMap [ rr:constant "transformation/resources/language.csv" ] .
+tedm:idlab-fn_fromColumn_0 rr:predicate idlab-fn:fromColumn ; rr:objectMap [ rr:constant "0" ] .
+tedm:idlab-fn_toColumn_1 rr:predicate idlab-fn:toColumn ; rr:objectMap [ rr:constant "1" ] .
 
 ##--- Helper Lists ---
 

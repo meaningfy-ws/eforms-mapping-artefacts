@@ -466,17 +466,20 @@ tedm:MG-Address-registeredAddress-Organization_ND-CompanyAddress a rr:TriplesMap
         ] ;
     rr:subjectMap
         [
+            rdfs:label "ND-CompanyAddress" ;
+            rdfs:comment "Primary type declaration for Address-registeredAddress-Organization under ND-CompanyAddress" ;
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_CompanyAddress_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
             rr:class locn:Address
 
         ] ;
     rr:predicateObjectMap
         [
-            rdfs:label "BT-510(a|b|c)-Organization-Company";
+            rdfs:label "BT-510(a|b|c),BT-512,BT-513,514-Organization-Company" ;
+            rdfs:comment "Aggregate of Street, Streetline 1, Streetline 2, Organisation City, Organisation Post Code, Organisation Country Code" ;
             rr:predicate locn:fullAddress ;
             rr:objectMap
                 [
-                    rml:reference "cbc:StreetName || ', ' || cbc:AdditionalStreetName || ', ' || cbc:Line" ;
+                    rml:reference "normalize-space(cbc:StreetName || ' ' || cbc:AdditionalStreetName || ' ' || cbc:Line || ' ' || cbc:CityName || ' ' || cbc:PostalZone || ' ' || cac:Country/cbc:IdentificationCode)" ;
                 ] ;
         ] ;
     # rr:predicateObjectMap

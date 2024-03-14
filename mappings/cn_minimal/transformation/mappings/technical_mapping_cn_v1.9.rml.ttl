@@ -226,7 +226,17 @@ tedm:MG-Identifier-identifier-Notice_ND-Root a rr:TriplesMap ;
                 [
                     rml:reference ".";
                 ] ;
-        ]
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-701-notice-Scheme" ;
+            rdfs:comment "Scheme of MG-Identifier for MG-Notice under ND-Root" ;
+            rr:predicate epo:hasScheme ;
+            rr:objectMap
+                [
+                    rml:reference "./@schemeName";
+                ] ;
+        ] ;
 .
 
 # this is an example of a role being declared on a node
@@ -426,6 +436,16 @@ tedm:MG-Identifier-identifier-Organization_ND-Company a rr:TriplesMap ;
             rr:objectMap
                 [
                     rml:reference "cac:PartyIdentification/cbc:ID" ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "OPT-200-Organization-Company-Scheme" ;
+            rdfs:comment "Scheme of MG-Identifier for MG-Organization under ND-Company" ;
+            rr:predicate epo:hasScheme ;
+            rr:objectMap
+                [
+                    rml:reference "cac:PartyIdentification/cbc:ID/@schemeName";
                 ] ;
         ] ;
 .
@@ -767,7 +787,17 @@ tedm:MG-Identifier-hasInternalIdentifier-Procedure_ND-ProcedureProcurementScope 
                 [
                     rml:reference "cbc:ID";
                 ] ;
-        ]
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-22-Procedure-Scheme" ;
+            rdfs:comment "Scheme of MG-Identifier for MG-Procedure under ND-ProcedureProcurementScope" ;
+            rr:predicate epo:hasScheme ;
+            rr:objectMap
+                [
+                    rml:reference "cbc:ID/@schemeName";
+                ] ;
+        ] ;
 .
 
 tedm:MG-ContractTerm_ND-ProcedurePlacePerformanceAdditionalInformation a rr:TriplesMap ;

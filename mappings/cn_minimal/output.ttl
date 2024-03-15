@@ -163,6 +163,18 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0007 a epo:Identifier
   epo:hasScheme "organization";
   skos:notation "ORG-0007" .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_TPO-0001 a epo:Identifier;
+  epo:hasScheme "touchpoint";
+  skos:notation "TPO-0001" .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_TPO-0002 a epo:Identifier;
+  epo:hasScheme "touchpoint";
+  skos:notation "TPO-0002" .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_TPO-0003 a epo:Identifier;
+  epo:hasScheme "touchpoint";
+  skos:notation "TPO-0003" .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Notice a epo:CompetitionNotice, epo:Notice;
   epo:announcesRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Buyer_MT3gdCnJ9BA7aEqaGqKxAh,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementServiceProvider_f7UuQ7S8iGMkM7gCN4x35m;
@@ -295,3 +307,57 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementServiceProvider_f7UuQ7S8i
   a epo:ProcurementServiceProvider;
   epo:actsOnBehalfOf epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Buyer_MT3gdCnJ9BA7aEqaGqKxAh;
   dct:description "ted-esen" .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_9saVKYT6LaLiq7HmXaeWEQ
+  a locn:Address;
+  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
+  epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
+  locn:fullAddress "Tenders Evaluation Committee Bruce Wayne House 2 Gotham Street London N1 9FL GBR";
+  locn:postCode "N1 9FL";
+  locn:postName "London" .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_DQ3D2nHojn4VijYMYRtvzY
+  a locn:Address;
+  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
+  epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
+  locn:fullAddress "Procurement Dpt Bruce Wayne House 2 Gotham Street London N1 9FL GBR";
+  locn:postCode "N1 9FL";
+  locn:postName "London" .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_ZDibsmqh6XaKEG4WjjfUDb
+  a locn:Address;
+  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
+  epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
+  locn:fullAddress "Fin Adm Archives Dpt Bruce Wayne House 2 Gotham Street London N1 9FL GBR";
+  locn:postCode "N1 9FL";
+  locn:postName "London" .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_3PD5XH69rqe5ksKERcWv5s a cccev:ContactPoint;
+  epo:hasContactName "Evaluation Dpt";
+  epo:hasFax "+44 1234567779";
+  epo:hasInternetAddress "http://tender-evaluation.fin-adm.com"^^xsd:anyURI;
+  cccev:email "proc-eval@fin-adm.com";
+  cccev:telephone "+44 123456777";
+  dct:description "Tenders Evaluation Committee"@eng;
+  adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_TPO-0003;
+  locn:address epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_9saVKYT6LaLiq7HmXaeWEQ .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_Ud9UCKnRE7Ktx8vDgbsqmm a cccev:ContactPoint;
+  epo:hasContactName "Head of Procurement Department";
+  epo:hasFax "+123 456789";
+  epo:hasInternetAddress "http://tender-submit.fin-adm.com"^^xsd:anyURI;
+  cccev:email "proc-info@fin-adm.com";
+  cccev:telephone "+123 45678";
+  dct:description "Procurement Department"@eng;
+  adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_TPO-0001;
+  locn:address epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_DQ3D2nHojn4VijYMYRtvzY .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_VrhSdfx4KsPjDwzxKDzs5A a cccev:ContactPoint;
+  epo:hasContactName "Proc Archives Dpt Lead";
+  epo:hasFax "+44 1234567769";
+  epo:hasInternetAddress "http://archives.fin-adm.com"^^xsd:anyURI;
+  cccev:email "proc-archi@fin-adm.com";
+  cccev:telephone "+44 123456776";
+  dct:description "Fin Adm Archives"@eng;
+  adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_TPO-0002;
+  locn:address epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_ZDibsmqh6XaKEG4WjjfUDb .

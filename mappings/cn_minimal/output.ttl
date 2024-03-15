@@ -80,6 +80,61 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_kp4YHhT2Gw9BnTPKnwxcd
   locn:postCode "N1 9FL";
   locn:postName "London" .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyContactPoint_2KJnTZs6heaXxBaUWvBfGP
+  a cccev:ContactPoint;
+  epo:hasContactName "Info desk";
+  epo:hasFax "+44 098765432";
+  epo:hasInternetAddress "https://www.pub-mediator.com"^^xsd:anyURI;
+  cccev:email "info@pub-mediator.com";
+  cccev:telephone "+44 123456345678" .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyContactPoint_7iFD8NVFhULkdXRNPqKyHs
+  a cccev:ContactPoint;
+  epo:hasContactName "Info desk";
+  epo:hasFax "+44 123456789";
+  epo:hasInternetAddress "https://www.fin-adm.com"^^xsd:anyURI;
+  cccev:email "info@fin-adm.com";
+  cccev:telephone "+44 123456780" .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyContactPoint_CCKfjNm3UAMuYf3dDso6C2
+  a cccev:ContactPoint;
+  epo:hasContactName "Info desk";
+  epo:hasFax "+44 123456789";
+  epo:hasInternetAddress "https://www.fin-leg.com"^^xsd:anyURI;
+  cccev:email "info@example.com";
+  cccev:telephone "+44 123456780" .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyContactPoint_Qdvn4zi39DtmxZAnxmSELy
+  a cccev:ContactPoint;
+  epo:hasContactName "A and R Department";
+  epo:hasFax "+44 9928736";
+  epo:hasInternetAddress "https://www.appeal-adm-proc.com"^^xsd:anyURI;
+  cccev:email "info@appeal-adm-proc.com";
+  cccev:telephone "+44 899375" .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyContactPoint_VBaHVZvvDEkusW8YJnjRf7
+  a cccev:ContactPoint;
+  epo:hasContactName "Info desk";
+  epo:hasFax "+44 123456789";
+  epo:hasInternetAddress "https://www.employment-legis.com"^^xsd:anyURI;
+  cccev:email "info@example.com";
+  cccev:telephone "+44 123456780" .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyContactPoint_YG3RWHcWTBZPCNqFAQ7guC
+  a cccev:ContactPoint;
+  epo:hasContactName "Info desk";
+  epo:hasFax "+44 123456789";
+  epo:hasInternetAddress "https://www.env-dpt.com"^^xsd:anyURI;
+  cccev:email "info@env-dpt.com";
+  cccev:telephone "+44 123456780" .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyContactPoint_dxvvStPQ7ekRVg6xG9QN3E
+  a cccev:ContactPoint;
+  epo:hasFax "+352 1234567899";
+  epo:hasInternetAddress "https://esendercorp.eu"^^xsd:anyURI;
+  cccev:email "esender@esendcorp.lu";
+  cccev:telephone "+352 123456789" .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0001 a epo:Identifier;
   epo:hasScheme "organization";
   skos:notation "ORG-0001" .
@@ -158,42 +213,49 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_oL2naWEEvhzCj
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0001 a org:Organization;
   epo:hasLegalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_ezhXiD7oQurCdTdR4RSM9g;
   epo:hasLegalName "Financial Adinistration for ..."@eng;
+  epo:hasPrimaryContactPoint epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyContactPoint_7iFD8NVFhULkdXRNPqKyHs;
   cccev:registeredAddress epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_SyrXybB9qnydTsiCYvqfwn;
   adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0001 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0002 a org:Organization;
   epo:hasLegalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_ZowVe8fwBUBP7Pd4ikinCk;
   epo:hasLegalName "TaxInfo Department"@eng;
+  epo:hasPrimaryContactPoint epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyContactPoint_CCKfjNm3UAMuYf3dDso6C2;
   cccev:registeredAddress epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_kp4YHhT2Gw9BnTPKnwxcdW;
   adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0002 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0003 a org:Organization;
   epo:hasLegalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_dcFQz5DL4ZBPqMeq5T8Yet;
   epo:hasLegalName "EnvironmentalInfo Dpt"@eng;
+  epo:hasPrimaryContactPoint epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyContactPoint_YG3RWHcWTBZPCNqFAQ7guC;
   cccev:registeredAddress epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_CXdDFvgV5RjePYb9cagtRa;
   adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0003 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0004 a org:Organization;
   epo:hasLegalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_5ZoEQEDimbU7BLyB2frEpT;
   epo:hasLegalName "EmploymentInfo Division"@eng;
+  epo:hasPrimaryContactPoint epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyContactPoint_VBaHVZvvDEkusW8YJnjRf7;
   cccev:registeredAddress epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_JAQDkMB4STjLj2Z9DkzGKS;
   adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0004 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0005 a org:Organization;
   epo:hasLegalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_ewuXkefLbEMgjnxiEwoxj6;
   epo:hasLegalName "Pub Proc Appeal Adm"@eng;
+  epo:hasPrimaryContactPoint epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyContactPoint_Qdvn4zi39DtmxZAnxmSELy;
   cccev:registeredAddress epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_9EoaX693zGgFRHUBTqQE58;
   adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0005 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0006 a org:Organization;
   epo:hasLegalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_oL2naWEEvhzCjBHXXR6juG;
   epo:hasLegalName "The Public Mediator"@eng;
+  epo:hasPrimaryContactPoint epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyContactPoint_2KJnTZs6heaXxBaUWvBfGP;
   cccev:registeredAddress epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_ikV4AfPuLDPpY2gzokb7GH;
   adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0006 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0007 a org:Organization;
   epo:hasLegalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_EVJLSmcpmMxC2ser3UGKGb;
   epo:hasLegalName "eSendCorp"@eng;
+  epo:hasPrimaryContactPoint epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyContactPoint_dxvvStPQ7ekRVg6xG9QN3E;
   cccev:registeredAddress epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_dtBY8KdbdWyJb9xZnV4Xcw;
   adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0007 .
 

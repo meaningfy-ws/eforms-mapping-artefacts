@@ -317,19 +317,20 @@ tedm:MG-Organization_ND-Company a rr:TriplesMap ;
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Organization_{cac:PartyIdentification/cbc:ID}" ;
             rr:class org:Organization
         ] ;
-    # rr:predicateObjectMap
-    #     [
-    #         rr:predicate epo:hasPrimaryContactPoint ;
-    #         rr:objectMap
-    #             [
-    #                 rdfs:label "ND-CompanyContact";
-    #                 rr:parentTriplesMap tedm:ND-CompanyContact ;
-    #                 rr:joinCondition [
-    #                     rr:child "path(.)";
-    #                     rr:parent "path(../.)";
-    #                 ];
-    #             ]
-    #     ] ;
+    rr:predicateObjectMap
+        [
+            rr:predicate epo:hasPrimaryContactPoint ;
+            rr:objectMap
+                [
+                    rdfs:label "ND-CompanyContact" ;
+                    rr:parentTriplesMap tedm:MG-ContactPoint-hasPrimaryContactPoint-Organization_ND-CompanyContact ;
+                    # TODO how does this work?
+                    rr:joinCondition [
+                        rr:child "path(.)" ;
+                        rr:parent "path(../.)" ;
+                    ] ;
+                ]
+        ] ;
     # rr:predicateObjectMap
     #     [
     #         #The channel of ND-Company it is created for the BT-509-Organization-Company it does not correspond to a node"
@@ -550,6 +551,71 @@ tedm:MG-Address-registeredAddress-Organization_ND-CompanyAddress a rr:TriplesMap
                 #         rr:parent "code.value" ;
                 #     ] ;
                 # ] ;
+        ] ;
+.
+
+tedm:MG-ContactPoint-hasPrimaryContactPoint-Organization_ND-CompanyContact a rr:TriplesMap ;
+    rdfs:label "MG-ContactPoint-hasPrimaryContactPoint-Organization";
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Organizations/efac:Organization/efac:Company/cac:Contact" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-CompanyContact" ;
+            rdfs:comment "Primary type declaration for MG-ContactPoint-hasPrimaryContactPoint-Organization under ND-CompanyContact" ;
+            rml:reference "if(exists(cbc:Name) or exists(cbc:ElectronicMail) or exists(cbc:Telephone) or exists(cbc:Telefax)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_CompanyContactPoint_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
+            rr:class cpov:ContactPoint
+
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-502-Organization-Company" ;
+            rr:predicate epo:hasContactName ;
+            rr:objectMap
+                [
+                    rml:reference "cbc:Name" ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-506-Organization-Company";
+            rr:predicate cpov:email ;
+            rr:objectMap
+                [
+                    rml:reference "cbc:ElectronicMail" ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-503-Organization-Company" ;
+            rr:predicate cpov:telephone ;
+            rr:objectMap
+                [
+                    rml:reference "cbc:Telephone" ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-739-Organization-Company" ;
+            rr:predicate epo:hasFax ;
+            rr:objectMap
+                [
+                    rml:reference "cbc:Telefax" ;
+                ] ;
+        ] ;
+    # this is an example of a predicate with an XPath at the parent
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-505-Organization-Company" ;
+            rr:predicate epo:hasInternetAddress ;
+            rr:objectMap
+                [
+                    rml:reference "../cbc:WebsiteURI" ;
+                    rr:datatype xsd:anyURI ;
+                ] ;
         ] ;
 .
 

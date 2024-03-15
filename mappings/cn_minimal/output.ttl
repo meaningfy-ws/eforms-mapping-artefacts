@@ -22,7 +22,8 @@
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Buyer_MT3gdCnJ9BA7aEqaGqKxAh a epo:Buyer;
   epo:hasBuyerProfile "https://profile.example.com"^^xsd:anyURI;
-  epo:isContractingEntity true .
+  epo:isContractingEntity true;
+  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0001 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_9EoaX693zGgFRHUBTqQE58
   a locn:Address;
@@ -223,8 +224,10 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_oL2naWEEvhzCj
   skos:notation "09812345" .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0001 a org:Organization;
+  epo:hasBuyerLegalType "body-pl";
   epo:hasLegalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_ezhXiD7oQurCdTdR4RSM9g;
   epo:hasLegalName "Financial Adinistration for ..."@eng;
+  epo:hasMainActivity "econ-aff";
   epo:hasPrimaryContactPoint epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyContactPoint_7iFD8NVFhULkdXRNPqKyHs;
   cccev:registeredAddress epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_SyrXybB9qnydTsiCYvqfwn;
   adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0001 .

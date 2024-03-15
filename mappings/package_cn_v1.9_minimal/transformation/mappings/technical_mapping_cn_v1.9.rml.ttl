@@ -18,12 +18,6 @@
 @prefix cpov: <http://data.europa.eu/m8g/> .
 @prefix	foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix time: <http://www.w3.org/2006/time#>.
-@prefix ext: <urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2#> .
-@prefix cbc: <urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2#> .
-@prefix efext: <http://data.europa.eu/p27/eforms-ubl-extensions/1#> .
-@prefix efbc: <http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1#> .
-@prefix efac: <http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1#> .
-@prefix cac: <urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2#> .
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix fnml:   <http://semweb.mmlab.be/ns/fnml#> .
@@ -232,7 +226,17 @@ tedm:MG-Identifier-identifier-Notice_ND-Root a rr:TriplesMap ;
                 [
                     rml:reference ".";
                 ] ;
-        ]
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-701-notice-Scheme" ;
+            rdfs:comment "Scheme of MG-Identifier for MG-Notice under ND-Root" ;
+            rr:predicate epo:hasScheme ;
+            rr:objectMap
+                [
+                    rml:reference "./@schemeName";
+                ] ;
+        ] ;
 .
 
 # this is an example of a role being declared on a node
@@ -434,6 +438,16 @@ tedm:MG-Identifier-identifier-Organization_ND-Company a rr:TriplesMap ;
                     rml:reference "cac:PartyIdentification/cbc:ID" ;
                 ] ;
         ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "OPT-200-Organization-Company-Scheme" ;
+            rdfs:comment "Scheme of MG-Identifier for MG-Organization under ND-Company" ;
+            rr:predicate epo:hasScheme ;
+            rr:objectMap
+                [
+                    rml:reference "cac:PartyIdentification/cbc:ID/@schemeName";
+                ] ;
+        ] ;
 .
 
 tedm:MG-Identifier-hasLegalIdentifier-Organization_ND-Company a rr:TriplesMap ;
@@ -472,17 +486,20 @@ tedm:MG-Address-registeredAddress-Organization_ND-CompanyAddress a rr:TriplesMap
         ] ;
     rr:subjectMap
         [
+            rdfs:label "ND-CompanyAddress" ;
+            rdfs:comment "Primary type declaration for Address-registeredAddress-Organization under ND-CompanyAddress" ;
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_CompanyAddress_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
             rr:class locn:Address
 
         ] ;
     rr:predicateObjectMap
         [
-            rdfs:label "BT-510(a|b|c)-Organization-Company";
+            rdfs:label "BT-510(a|b|c),BT-512,BT-513,514-Organization-Company" ;
+            rdfs:comment "Aggregate of Street, Streetline 1, Streetline 2, Organisation City, Organisation Post Code, Organisation Country Code" ;
             rr:predicate locn:fullAddress ;
             rr:objectMap
                 [
-                    rml:reference "cbc:StreetName || ', ' || cbc:AdditionalStreetName || ', ' || cbc:Line" ;
+                    rml:reference "normalize-space(cbc:StreetName || ' ' || cbc:AdditionalStreetName || ' ' || cbc:Line || ' ' || cbc:CityName || ' ' || cbc:PostalZone || ' ' || cac:Country/cbc:IdentificationCode)" ;
                 ] ;
         ] ;
     # rr:predicateObjectMap
@@ -770,7 +787,17 @@ tedm:MG-Identifier-hasInternalIdentifier-Procedure_ND-ProcedureProcurementScope 
                 [
                     rml:reference "cbc:ID";
                 ] ;
-        ]
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-22-Procedure-Scheme" ;
+            rdfs:comment "Scheme of MG-Identifier for MG-Procedure under ND-ProcedureProcurementScope" ;
+            rr:predicate epo:hasScheme ;
+            rr:objectMap
+                [
+                    rml:reference "cbc:ID/@schemeName";
+                ] ;
+        ] ;
 .
 
 tedm:MG-ContractTerm_ND-ProcedurePlacePerformanceAdditionalInformation a rr:TriplesMap ;

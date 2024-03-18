@@ -196,6 +196,7 @@ tedm:MG-Address-address-ContactPoint_ND-TouchpointAddress a rr:TriplesMap ;
                 [
                     # TODO: map to vocab once updated to iso-3
                     # this is an example of a workaround to instantiate vocabulary IRIs instead of mapping to a vocabulary parent resource
+                    rdfs:label "at-voc:country" ;
                     rml:reference "'http://publications.europa.eu/resource/authority/country/' || cac:Country/cbc:IdentificationCode" ;
                     rr:termType rr:IRI ;
                 ] ;

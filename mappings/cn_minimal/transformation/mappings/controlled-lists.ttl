@@ -64,3 +64,17 @@ tedm:country a rr:TriplesMap ;
                 "conceptURI.value" ;
         ]
 .
+
+tedm:procurement-procedure-type a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/procurement-procedure-type.json" ;
+            rml:iterator "$.results.bindings[*]" ;
+            rml:referenceFormulation ql:JSONPath
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference
+                "conceptURI.value" ;
+        ]
+.

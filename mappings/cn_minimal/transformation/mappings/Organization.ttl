@@ -255,6 +255,7 @@ tedm:MG-Address-registeredAddress-Organization_ND-CompanyAddress a rr:TriplesMap
             rr:objectMap
                 [
                     # rml:reference "descendant::cbc:IdentificationCode" ;
+                    rdfs:label "at-voc:country" ;
                     rml:reference "cac:Country/cbc:IdentificationCode" ;
                 ] ;
                 # TODO: update at-voc to put out iso3

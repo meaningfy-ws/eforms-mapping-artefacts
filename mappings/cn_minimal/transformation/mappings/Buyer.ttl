@@ -128,9 +128,14 @@ tedm:MG-Organization-playedBy-Buyer_ND-ServiceProvider a rr:TriplesMap ;
             rr:objectMap
                 [
                     rdfs:label "at-voc:main-activity" ;
-                    rml:reference "../cac:ContractingActivity/cbc:ActivityTypeCode[@listName='authority-activity']" ;
+                   # rml:reference "../cac:ContractingActivity/cbc:ActivityTypeCode[@listName='authority-activity']" ;
+                rr:parentTriplesMap tedm:main-activity ;
+                    rr:joinCondition [
+                        rr:child "../cac:ContractingActivity/cbc:ActivityTypeCode[@listName='authority-activity']" ;
+                        rr:parent "code" ;
                 ] ;
         ] ;
+          ] ;
     rr:predicateObjectMap
         [
             rdfs:label "BT-610-Procedure-Buyer" ;
@@ -139,7 +144,12 @@ tedm:MG-Organization-playedBy-Buyer_ND-ServiceProvider a rr:TriplesMap ;
             rr:objectMap
                 [
                     rdfs:label "at-voc:main-activity" ;
-                    rml:reference "../cac:ContractingActivity/cbc:ActivityTypeCode[@listName='entity-activity']" ;
-                ] ;
+                   # rml:reference "../cac:ContractingActivity/cbc:ActivityTypeCode[@listName='authority-activity']" ;
+                rr:parentTriplesMap tedm:main-activity ;
+                    rr:joinCondition [
+                        rr:child "../cac:ContractingActivity/cbc:ActivityTypeCode[@listName='authority-activity']" ;
+                        rr:parent "code" ;
+                                 ] ;
         ] ;
+          ] ;
 .

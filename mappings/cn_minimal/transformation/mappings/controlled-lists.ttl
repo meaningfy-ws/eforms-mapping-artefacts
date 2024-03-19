@@ -78,3 +78,71 @@ tedm:procurement-procedure-type a rr:TriplesMap ;
                 "conceptURI.value" ;
         ]
 .
+
+tedm:main-activity a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/main_activity.csv" ;
+            rml:referenceFormulation ql:CSV
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference
+                "conceptURI" ;
+        ]
+.
+
+tedm:contract-nature a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/contract_nature.json" ;
+            rml:iterator "$.results.bindings[*]" ;
+            rml:referenceFormulation ql:JSONPath
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference
+                "conceptURI.value" ;
+        ]
+.
+tedm:notice-type a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/notice-type.json" ;
+            rml:iterator "$.results.bindings[*]" ;
+            rml:referenceFormulation ql:JSONPath
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference
+                "conceptURI.value" ;
+        ]
+.
+tedm:form-type a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/form-type.json" ;
+            rml:iterator "$.results.bindings[*]" ;
+            rml:referenceFormulation ql:JSONPath
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference
+                "conceptURI.value" ;
+        ]
+.
+
+
+tedm:language a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/language.json" ;
+            rml:iterator "$.results.bindings[*]" ;
+            rml:referenceFormulation ql:JSONPath
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference
+                "conceptURI.value" ;
+        ]
+.

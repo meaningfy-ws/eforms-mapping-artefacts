@@ -27,3 +27,11 @@ The current RML rules require and are tested for RMLMapper versions 6.2.2 and
 6.3.0 with Java 11. Later versions require Java 17 and may work, but are
 untested. Earlier versions will _not_ work due to RML funtion namespace
 differences (currently used in _languageMaps_).
+
+The structure of the RML files (we call them _modules_ because they are modular
+files with RML rules that work together when combined) is based on the
+primary/root class of a set of mapping rules, which are part of one or more
+_Mapping Groups_ (MGs) that share such a root class (the final segment of an MG
+name). An MG represents a logical grouping of related instances/resources (like
+a `foaf:Person` with all of its properties _and_ relationships together with
+the instances of those relationships).

@@ -96,12 +96,12 @@ tedm:MG-Notice_ND-Root
             rr:objectMap
                 [
                     rdfs:label "at-voc:notice-type" ;
-                   # rml:reference "cbc:NoticeTypeCode" ;
-                     rr:parentTriplesMap tedm:notice-type ;
+                    # rml:reference "cbc:NoticeTypeCode" ;
+                    rr:parentTriplesMap tedm:notice-type ;
                     rr:joinCondition [
                         rr:child "cbc:NoticeTypeCode" ;
                         rr:parent "code.value" ;
-                ] ;
+                    ] ;
                 ] ;
         ] ;
     rr:predicateObjectMap
@@ -112,13 +112,12 @@ tedm:MG-Notice_ND-Root
             rr:objectMap
                 [
                     rdfs:label "at-voc:form-type" ;
-                   # rml:reference "cbc:NoticeTypeCode/@listName" ;
-                     rr:parentTriplesMap tedm:form-type ;
+                    # rml:reference "cbc:NoticeTypeCode/@listName" ;
+                    rr:parentTriplesMap tedm:form-type ;
                     rr:joinCondition [
                         rr:child "cbc:NoticeTypeCode/@listName" ;
                         rr:parent "code.value" ;
-                ] ;
-
+                    ] ;
                 ] ;
         ] ;
     rr:predicateObjectMap
@@ -150,11 +149,11 @@ tedm:MG-Notice_ND-Root
                 [
                     rdfs:label "at-voc:language" ;
                     rml:reference "cbc:NoticeLanguageCode" ;
-                 #   rr:parentTriplesMap tedm:language ;
-                  #  rr:joinCondition [
-                       # rr:child "cbc:NoticeLanguageCode" ;
-                      #     rr:parent "code.value" ;
-               # ] ;
+                    # rr:parentTriplesMap tedm:language ;
+                    # rr:joinCondition [
+                        # rr:child "cbc:NoticeLanguageCode" ;
+                        # rr:parent "code.value" ;
+                    # ] ;
                 ] ;
         ] ;
     rr:predicateObjectMap

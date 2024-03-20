@@ -199,7 +199,6 @@ tedm:MG-Address-address-ContactPoint_ND-TouchpointAddress a rr:TriplesMap ;
                     rdfs:label "at-voc:country" ;
                     rml:reference "'http://publications.europa.eu/resource/authority/country/' || cac:Country/cbc:IdentificationCode" ;
                     rr:termType rr:IRI ;
-
                 ] ;
         ]
 .

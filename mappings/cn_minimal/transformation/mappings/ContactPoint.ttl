@@ -194,11 +194,15 @@ tedm:MG-Address-address-ContactPoint_ND-TouchpointAddress a rr:TriplesMap ;
             rr:predicate epo:hasCountryCode ;
             rr:objectMap
                 [
-                    # TODO: map to vocab once updated to iso-3
-                    # this is an example of a workaround to instantiate vocabulary IRIs instead of mapping to a vocabulary parent resource
                     rdfs:label "at-voc:country" ;
-                    rml:reference "'http://publications.europa.eu/resource/authority/country/' || cac:Country/cbc:IdentificationCode" ;
-                    rr:termType rr:IRI ;
+                    # this is an example of a workaround to instantiate vocabulary IRIs instead of mapping to a vocabulary parent resource
+                    # rml:reference "'http://publications.europa.eu/resource/authority/country/' || cac:Country/cbc:IdentificationCode" ;
+                    # rr:termType rr:IRI ;
+                    rr:parentTriplesMap tedm:country ;
+                    rr:joinCondition [
+                        rr:child "cac:Country/cbc:IdentificationCode" ;
+                        rr:parent "code.value" ;
+                    ] ;
                 ] ;
         ]
 .

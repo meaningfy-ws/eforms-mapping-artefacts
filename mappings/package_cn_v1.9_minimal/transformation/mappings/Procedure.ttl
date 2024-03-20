@@ -231,7 +231,12 @@ tedm:MG-Procedure_ND-ProcedureTenderingProcess a rr:TriplesMap ;
                 [
                     # TODO at-voc
                     rdfs:label "at-voc:procurement-procedure-type" ;
-                    rml:reference "cbc:ProcedureCode" ;
+                    # rml:reference "cbc:ProcedureCode" ;
+                    rr:parentTriplesMap tedm:procurement-procedure-type ;
+                    rr:joinCondition [
+                        rr:child "cbc:ProcedureCode" ;
+                        rr:parent "code.value" ;
+                    ] ;
                 ] ;
         ] ;
     # rr:predicateObjectMap

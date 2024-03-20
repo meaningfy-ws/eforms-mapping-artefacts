@@ -17,3 +17,10 @@ For collaboration, create branches with a three-fragment scheme
 understandable among collaborators, such as a deliverable name (e.g. `part1`),
 optionally hyphen-suffixed with relevant component/concept names (e.g. `-Lot`
 yielding the ending branch segment `part1-Lot`).
+
+Please note that feature branches are bound to change often and therefore
+collaborators may need to run `git reset --hard origin/{feature-branch-name}`
+instead of `git pull`, or always use `git pull --rebase` to ensure local
+changes come on top (and to check whether or not the local changes conflict).
+Feature branches should also always be rebased against `main` whenever possible
+so as to reduce surprises (and is why they are "bound to change").

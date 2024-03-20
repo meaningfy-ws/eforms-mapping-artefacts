@@ -81,14 +81,24 @@ tedm:MG-ContractTerm_ND-ProcedurePlacePerformanceAdditionalInformation a rr:Trip
                 [
                     tedm:minSDKVersion "1.8" ;
                     rdfs:label "at-voc:contract-nature" ;
-                    rml:reference "../cac:ProcurementAdditionalType[cbc:ProcurementTypeCode/@listName='contract-nature']/cbc:ProcurementTypeCode" ;
+                    # rml:reference "../cac:ProcurementAdditionalType[cbc:ProcurementTypeCode/@listName='contract-nature']/cbc:ProcurementTypeCode" ;
+                    rr:parentTriplesMap tedm:contract-nature ;
+                    rr:joinCondition [
+                        rr:child "../cac:ProcurementAdditionalType[cbc:ProcurementTypeCode/@listName='contract-nature']/cbc:ProcurementTypeCode" ;
+                        rr:parent "code.value" ;
+                    ] ;
                 ] ,
                 [
                     tedm:minSDKVersion "1.3" ;
                     tedm:maxSDKVersion "1.7" ;
                     rdfs:label "at-voc:contract-nature" ;
                     # v1.3-1.7 (TODO check this XPath for the first and last versions)
-                    rml:reference "descendant::cbc:ProcurementTypeCode[not(@listName='transport-service')]" ;
+                    # rml:reference "descendant::cbc:ProcurementTypeCode[not(@listName='transport-service')]" ;
+                    rr:parentTriplesMap tedm:contract-nature ;
+                    rr:joinCondition [
+                        rr:child "descendant::cbc:ProcurementTypeCode[not(@listName='transport-service')]" ;
+                        rr:parent "code.value" ;
+                    ] ;
                 ] ;
         ] ;
     # this is an example of a predicate with value from an ancestor XPath
@@ -100,7 +110,12 @@ tedm:MG-ContractTerm_ND-ProcedurePlacePerformanceAdditionalInformation a rr:Trip
             rr:objectMap
                 [
                     rdfs:label "at-voc:contract-nature" ;
-                    rml:reference "../cbc:ProcurementTypeCode" ;
+                    # rml:reference "../cbc:ProcurementTypeCode" ;
+                    rr:parentTriplesMap tedm:contract-nature ;
+                    rr:joinCondition [
+                        rr:child "../cbc:ProcurementTypeCode" ;
+                        rr:parent "code.value" ;
+                    ] ;
                 ] ;
         ]
 .

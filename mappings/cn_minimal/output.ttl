@@ -27,7 +27,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Buyer_MT3gdCnJ9BA7aEqaGqKxAh a epo:B
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_9EoaX693zGgFRHUBTqQE58
   a locn:Address;
-  epo:hasCountryCode "GBR";
+  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
   epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
   locn:fullAddress "Reviews and Complains 87 Big Avenue London N1 9FL GBR";
   locn:postCode "N1 9FL";
@@ -35,7 +35,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_9EoaX693zGgFRHUBTqQE5
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_CXdDFvgV5RjePYb9cagtRa
   a locn:Address;
-  epo:hasCountryCode "GBR";
+  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
   epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
   locn:fullAddress "Environment Information department 23 Nelson Square London N1 9FL GBR";
   locn:postCode "N1 9FL";
@@ -43,7 +43,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_CXdDFvgV5RjePYb9cagtR
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_JAQDkMB4STjLj2Z9DkzGKS
   a locn:Address;
-  epo:hasCountryCode "GBR";
+  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
   epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
   locn:fullAddress "ABC Unit 162 Broad Street 2nd floor London N1 9FL GBR";
   locn:postCode "N1 9FL";
@@ -51,7 +51,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_JAQDkMB4STjLj2Z9DkzGK
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_SyrXybB9qnydTsiCYvqfwn
   a locn:Address;
-  epo:hasCountryCode "GBR";
+  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
   epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
   locn:fullAddress "Finance Division Bruce Wayne House 2 Gotham Street London N1 9FL GBR";
   locn:postCode "N1 9FL";
@@ -59,7 +59,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_SyrXybB9qnydTsiCYvqfw
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_dtBY8KdbdWyJb9xZnV4Xcw
   a locn:Address;
-  epo:hasCountryCode "LUX";
+  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/LUX>;
   epo:hasNutsCode <http://data.europa.eu/nuts/code/LU000>;
   locn:fullAddress "Luxembourg 2985 LUX";
   locn:postCode "2985";
@@ -67,7 +67,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_dtBY8KdbdWyJb9xZnV4Xc
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_ikV4AfPuLDPpY2gzokb7GH
   a locn:Address;
-  epo:hasCountryCode "GBR";
+  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
   epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
   locn:fullAddress "Public Procurement 85 Norwish Road London N1 9FL GBR";
   locn:postCode "N1 9FL";
@@ -75,7 +75,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_ikV4AfPuLDPpY2gzokb7G
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_kp4YHhT2Gw9BnTPKnwxcdW
   a locn:Address;
-  epo:hasCountryCode "GBR";
+  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
   epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
   locn:fullAddress "6 Main Street London N1 9FL GBR";
   locn:postCode "N1 9FL";
@@ -181,9 +181,9 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Notice a epo:CompetitionNotice, epo:
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementServiceProvider_f7UuQ7S8iGMkM7gCN4x35m;
   epo:hasDispatchDate "2023-03-23T20:59:32+01:00"^^xsd:dateTime;
   epo:hasEFormsSubtype "16";
-  epo:hasFormType "competition";
+  epo:hasFormType <http://publications.europa.eu/resource/authority/form-type/competition>;
   epo:hasNoticePublicationNumber "00675564-2023";
-  epo:hasNoticeType "cn-standard";
+  epo:hasNoticeType <http://publications.europa.eu/resource/authority/notice-type/cn-standard>;
   epo:hasOJSIssueNumber "214/2023";
   epo:hasOfficialLanguage "ENG";
   epo:hasPublicationDate "2023-11-07Z"^^xsd:date;
@@ -224,10 +224,10 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_oL2naWEEvhzCj
   skos:notation "09812345" .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0001 a org:Organization;
-  epo:hasBuyerLegalType "body-pl";
+  epo:hasBuyerLegalType <http://publications.europa.eu/resource/authority/buyer-legal-type/body-pl>;
   epo:hasLegalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_ezhXiD7oQurCdTdR4RSM9g;
   epo:hasLegalName "Financial Adinistration for ..."@eng;
-  epo:hasMainActivity "econ-aff";
+  epo:hasMainActivity <http://publications.europa.eu/resource/authority/main-activity/econ-aff>;
   epo:hasPrimaryContactPoint epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyContactPoint_7iFD8NVFhULkdXRNPqKyHs;
   cccev:registeredAddress epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_SyrXybB9qnydTsiCYvqfwn;
   adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0001 .
@@ -286,7 +286,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_MnX8qyREnFMNLeS5MJAX9K a e
   epo:hasAdditionalInformation "Additional information ---"@eng;
   epo:hasInternalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureIdentifier_eySzap22e3jkZr3f7VXYNj;
   epo:hasMainFeature "Description of the procedure  ---"@eng;
-  epo:hasProcedureType "neg-w-call";
+  epo:hasProcedureType <http://publications.europa.eu/resource/authority/procurement-procedure-type/neg-w-call>;
   epo:isAccelerated true;
   dct:description "Description ---"@eng;
   dct:title "Procurement Title ---"@en .
@@ -298,13 +298,13 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProcessInformation_Bh5qwh
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_67o9ur9Jjef9htMoaQhdxm
   a epo:ContractTerm;
-  epo:hasAdditionalContractNature "works";
-  epo:hasContractNatureType "services" .
+  epo:hasAdditionalContractNature <http://publications.europa.eu/resource/authority/contract-nature/works>;
+  epo:hasContractNatureType <http://publications.europa.eu/resource/authority/contract-nature/services> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_QmFgWdHMQiunuxrdtntYZx
   a epo:ContractTerm;
-  epo:hasAdditionalContractNature "works";
-  epo:hasContractNatureType "services" .
+  epo:hasAdditionalContractNature <http://publications.europa.eu/resource/authority/contract-nature/works>;
+  epo:hasContractNatureType <http://publications.europa.eu/resource/authority/contract-nature/services> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementServiceProvider_f7UuQ7S8iGMkM7gCN4x35m
   a epo:ProcurementServiceProvider;

@@ -91,6 +91,16 @@ tedm:MG-CompetitionNotice_ND-Root
                     rr:parentTriplesMap tedm:MG-AwardingCentralPurchasingBody_ND-Organization
                 ] ;
         ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "MG-AcquiringCentralPurchasingBody-announcesRole-CompetitionNotice" ;
+            rdfs:comment "MG-AcquiringCentralPurchasingBody-announcesRole-CompetitionNotice under ND-Organization" ;
+            rr:predicate epo-not:announcesRole ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-AcquiringCentralPurchasingBody_ND-Organization
+                ] ;
+        ] ;
 .
 
 tedm:MG-Notice_ND-Root

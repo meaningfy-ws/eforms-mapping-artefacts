@@ -45,10 +45,10 @@ tedm:MG-LeadBuyer_ND-Organization a rr:TriplesMap ;
                 [
                     rdfs:label "ND-Company";
                     rr:parentTriplesMap tedm:MG-Organization-playedBy-LeadBuyer_ND-Organization ;
-                    # rr:joinCondition [
-                    #     rr:child "path(.)" ;
-                    #     rr:parent "path(../.)" ;
-                    # ] ;
+                    rr:joinCondition [
+                        rr:child "path(.)" ;
+                        rr:parent "path(../.)" ;
+                    ] ;
                 ] ;
         ] ;
 .
@@ -59,7 +59,7 @@ tedm:MG-Organization-playedBy-LeadBuyer_ND-Organization a rr:TriplesMap ;
     rml:logicalSource
         [
             rml:source "data/source.xml" ;
-            rml:iterator "/*/cac:ContractingParty/cac:Party";
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Organizations/efac:Organization/efac:Company" ;
             rml:referenceFormulation ql:XPath
         ] ;
     rr:subjectMap

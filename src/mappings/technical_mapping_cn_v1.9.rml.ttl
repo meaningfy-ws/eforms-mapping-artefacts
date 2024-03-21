@@ -71,6 +71,16 @@ tedm:MG-CompetitionNotice_ND-Root
                     rr:parentTriplesMap tedm:MG-ProcurementServiceProvider_ND-ServiceProviderParty
                 ] ;
         ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "MG-LeadBuyer-announcesRole-CompetitionNotice" ;
+            rdfs:comment "MG-LeadBuyer-announcesRole-CompetitionNotice under ND-Organization" ;
+            rr:predicate epo-not:announcesRole ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-LeadBuyer_ND-Organization
+                ] ;
+        ] ;
 .
 
 tedm:MG-Notice_ND-Root

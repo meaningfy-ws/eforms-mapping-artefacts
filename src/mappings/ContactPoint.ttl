@@ -48,7 +48,16 @@ tedm:MG-ContactPoint_ND-Touchpoint a rr:TriplesMap ;
                 [
                     rml:reference "cac:PartyName/cbc:Name" ;
                     rml:languageMap [
-                        rml:reference "lower-case(cac:PartyName/cbc:Name/@languageID)"
+                        fnml:functionValue [
+                            rr:predicateObjectMap [
+                                rr:predicate idlab-fn:str ;
+                                rr:objectMap [ rml:reference "'http://publications.europa.eu/resource/authority/language/' || cac:PartyName/cbc:Name/@languageID" ]
+                                ] ,
+                                tedm:idlab-fn_executes_lookup ,
+                                tedm:idlab-fn_inputFile_language ,
+                                tedm:idlab-fn_fromColumn_0 ,
+                                tedm:idlab-fn_toColumn_1
+                        ]
                     ] ;
                 ] ;
         ] ;

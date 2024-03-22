@@ -82,7 +82,16 @@ tedm:MG-Procedure_ND-ProcedureProcurementScope a rr:TriplesMap ;
                 [
                     rml:reference "cbc:Description" ;
                     rml:languageMap [
-                        rml:reference "lower-case(cbc:Description/@languageID)"
+                        fnml:functionValue [
+                            rr:predicateObjectMap [
+                                rr:predicate idlab-fn:str ;
+                                rr:objectMap [ rml:reference "'http://publications.europa.eu/resource/authority/language/' || cbc:Description/@languageID" ]
+                                ] ,
+                                tedm:idlab-fn_executes_lookup ,
+                                tedm:idlab-fn_inputFile_language ,
+                                tedm:idlab-fn_fromColumn_0 ,
+                                tedm:idlab-fn_toColumn_1
+                        ]
                     ] ;
                 ] ;
         ] ;
@@ -95,7 +104,16 @@ tedm:MG-Procedure_ND-ProcedureProcurementScope a rr:TriplesMap ;
                 [
                     rml:reference "cbc:Note";
                     rml:languageMap [
-                        rml:reference "lower-case(cbc:Note/@languageID)"
+                        fnml:functionValue [
+                            rr:predicateObjectMap [
+                                rr:predicate idlab-fn:str ;
+                                rr:objectMap [ rml:reference "'http://publications.europa.eu/resource/authority/language/' || cbc:Note/@languageID" ]
+                                ] ,
+                                tedm:idlab-fn_executes_lookup ,
+                                tedm:idlab-fn_inputFile_language ,
+                                tedm:idlab-fn_fromColumn_0 ,
+                                tedm:idlab-fn_toColumn_1
+                        ]
                     ] ;
                 ] ;
         ] ;
@@ -218,7 +236,16 @@ tedm:MG-Procedure_ND-ProcedureTenderingProcess a rr:TriplesMap ;
                 [
                     rml:reference "cbc:Description" ;
                     rml:languageMap [
-                        rml:reference "lower-case(cbc:Description/@languageID)"
+                        fnml:functionValue [
+                            rr:predicateObjectMap [
+                                rr:predicate idlab-fn:str ;
+                                rr:objectMap [ rml:reference "'http://publications.europa.eu/resource/authority/language/' || cbc:Description/@languageID" ]
+                                ] ,
+                                tedm:idlab-fn_executes_lookup ,
+                                tedm:idlab-fn_inputFile_language ,
+                                tedm:idlab-fn_fromColumn_0 ,
+                                tedm:idlab-fn_toColumn_1
+                        ]
                     ] ;
                 ] ;
         ] ;
@@ -369,7 +396,16 @@ tedm:MG-Procedure_ND-AcceleratedProcedure a rr:TriplesMap ;
                 [
                     rml:reference "cbc:ProcessReason" ;
                     rml:languageMap [
-                        rml:reference "lower-case(cbc:ProcessReason/@languageID)"
+                        fnml:functionValue [
+                            rr:predicateObjectMap [
+                                rr:predicate idlab-fn:str ;
+                                rr:objectMap [ rml:reference "'http://publications.europa.eu/resource/authority/language/' || cbc:ProcessReason/@languageID" ]
+                                ] ,
+                                tedm:idlab-fn_executes_lookup ,
+                                tedm:idlab-fn_inputFile_language ,
+                                tedm:idlab-fn_fromColumn_0 ,
+                                tedm:idlab-fn_toColumn_1
+                        ]
                     ] ;
                 ] ;
         ]   ;

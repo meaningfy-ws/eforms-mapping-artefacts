@@ -63,7 +63,7 @@ tedm:MG-Procedure_ND-ProcedureProcurementScope a rr:TriplesMap ;
                         fnml:functionValue [
                             rr:predicateObjectMap [
                                 rr:predicate idlab-fn:str ;
-                                rr:objectMap [ rml:reference "cbc:Name/@languageID" ]
+                                rr:objectMap [ rml:reference "'http://publications.europa.eu/resource/authority/language/' || cbc:Name/@languageID" ]
                                 ] ,
                                 tedm:idlab-fn_executes_lookup ,
                                 tedm:idlab-fn_inputFile_language ,

@@ -223,7 +223,8 @@ tedm:MG-Address-registeredAddress-Organization_ND-CompanyAddress a rr:TriplesMap
             rr:predicate locn:fullAddress ;
             rr:objectMap
                 [
-                    rml:reference "normalize-space(cbc:Department || ' ' || cbc:StreetName || ' ' || cbc:AdditionalStreetName || ' ' || cbc:Line || ' ' || cbc:CityName || ' ' || cbc:PostalZone || ' ' || cac:Country/cbc:IdentificationCode)" ;
+                    rml:reference "replace(replace(cbc:Department || ', ' || cbc:StreetName || ', ' || cbc:AdditionalStreetName || ', ' || cbc:Line || ', ' || cbc:CityName || ', ' || cbc:PostalZone || ', ' || cac:Country/cbc:IdentificationCode, '(, )+', ', '),  '^, |, $', '')" ;
+                    # rml:reference "normalize-space(cbc:Department || ' ' || cbc:StreetName || ' ' || cbc:AdditionalStreetName || ' ' || cbc:Line || ' ' || cbc:CityName || ' ' || cbc:PostalZone || ' ' || cac:Country/cbc:IdentificationCode)" ;
                 ] ;
         ] ;
     rr:predicateObjectMap

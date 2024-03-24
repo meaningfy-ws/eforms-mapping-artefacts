@@ -447,3 +447,291 @@ tedm:MG-Identifier-identifier-Lot_ND-Lot a rr:TriplesMap ;
         ]
     # TODO add hasScheme
 .
+tedm:MG-EAuctionTechnique-usesTechnique-Lot_ND-AuctionTerms a rr:TriplesMap ;
+    rdfs:label "MG-EAuctionTechnique";
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingProcess/cac:AuctionTerms";
+            rml:referenceFormulation ql:XPath
+        ];
+    rr:subjectMap
+        [
+            rdfs:label "ND-AuctionTerms";
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_AuctionTerms_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rr:class epo:EAuctionTechniqueUsage
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-767-Lot";
+            rdfs:comment "Electronic Auction of MG-EAuctionTechnique under ND-AuctionTerms ";
+            rr:predicate  epo:hasUsage ;
+            rr:objectMap
+                [
+                    rml:reference "cbc:AuctionConstraintIndicator";
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-122-Lot";
+            rdfs:comment "Electronic Auction Description of MG-EAuctionTechnique under ND-AuctionTerms ";
+            rr:predicate dct:description;
+            rr:objectMap
+                [
+                    rml:reference "cbc:Description";
+                ] ;
+        ]
+.
+
+tedm:MG-SubmissionTerm-isSubjectToLotSpecificTerm-Lot_ND-AuctionTerms a rr:TriplesMap ;
+    rdfs:label "MG-SubmissionTerm";
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingProcess/cac:AuctionTerms";
+            rml:referenceFormulation ql:XPath
+        ];
+    rr:subjectMap
+        [
+            rdfs:label "ND-AuctionTerms";
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_SubmissionTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(../..)) || '?response_type=raw')}" ;
+            rr:class epo:SubmissionTerm
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-123-Lot";
+            rdfs:comment "Electronic Auction URL of MG-SubmissionTerm under ND-AuctionTerms ";
+            rr:predicate epo:hasEAuctionURL ;
+            rr:objectMap
+                [
+                    rml:reference "cbc:AuctionURI";
+                    rr:datatype xsd:anyURI
+                ] ;
+        ]
+.
+
+tedm:MG-Lot_ND-LotTenderingProcess a rr:TriplesMap ;
+    rdfs:label "MG-Lot";
+    rml:logicalSource
+        [
+           rml:source "data/source.xml" ;
+            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']";
+            rml:referenceFormulation ql:XPath
+        ];
+    rr:subjectMap
+        [
+            rdfs:label "ND-LotTenderingProcess";
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Lot_{cbc:ID}" ;
+            rr:class epo:Lot
+        ] ;
+ rr:predicateObjectMap
+        [
+            rdfs:label "BT-115-Lot";
+            rdfs:comment "GPA Coverage of MG-Lot under ND-LotTenderingProcess";
+            rr:predicate epo:isCoveredByGPA  ;
+            rr:objectMap
+                [
+                    rml:reference "cac:TenderingProcess/cbc:GovernmentAgreementConstraintIndicator";
+                    rr:datatype xsd:boolean
+                ] ;
+        ]
+.
+
+tedm:MG-FrameworkAgreementTerm-isSubjectToLotSpecificTerm-Lot_ND-LotTenderingProcess a rr:TriplesMap ;
+    rdfs:label "MG-FrameworkAgreementTerm";
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingProcess";
+            rml:referenceFormulation ql:XPath
+        ];
+    rr:subjectMap
+        [
+            rdfs:label "ND-LotTenderingProcess";
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_FrameworkAgreementTechnicalUsage_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rr:class  epo:FrameworkAgreementTerm
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-765-Lot";
+            rdfs:comment "Framework Agreement of MG-FrameworkAgreementTerm under ND-LotTenderingProcess ";
+            rr:predicate epo:hasFrameworkAgreementType ;
+            rr:objectMap
+                [
+                    rml:reference "cac:ContractingSystem/cbc:ContractingSystemTypeCode[@listName='framework-agreement']";
+                ] ;
+        ]
+.
+
+tedm:MG-DynamicPurchaseSystemTechnique-usesTechnique-Lot_ND-LotTenderingProcess a rr:TriplesMap ;
+    rdfs:label "MG-DynamicPurchaseSystemTechnique";
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingProcess";
+            rml:referenceFormulation ql:XPath
+        ];
+    rr:subjectMap
+        [
+            rdfs:label "ND-LotTenderingProcess";
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_DynamicPurchaseSystemTechnicalUsage_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rr:class epo:DynamicPurchaseSystemTechnique
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-766-Lot";
+            rdfs:comment "Dynamic Purchasing System of MG-DynamicPurchaseSystemTechnique under ND-LotTenderingProcess";
+            rr:predicate epo:hasDPSScope ;
+            rr:objectMap
+                [
+                    rml:reference "cac:ContractingSystem/cbc:ContractingSystemTypeCode[@listName='dps-usage']";
+                ] ;
+        ]
+.
+tedm:MG-FrameworkAgreementTerm-isSubjectToLotSpecificTerm-Lot_ND-FA a rr:TriplesMap ;
+    rdfs:label "MG-FrameworkAgreementTerm";
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingProcess/cac:FrameworkAgreement";
+            rml:referenceFormulation ql:XPath
+        ];
+    rr:subjectMap
+        [
+            rdfs:label "ND-FA";
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_FrameworkTermAgreement_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rr:class epo:FrameworkAgreementTerm
+        ] ;
+    rr:predicateObjectMap
+        [
+
+            rdfs:label "BT-113-Lot";
+            rdfs:comment "Framework Maximum Participants Number of MG-FrameworkAgreementTerm under ND-FA";
+            rr:predicate epo:hasMaximumParticipantsNumber ;
+            rr:objectMap
+                [
+                    rml:reference "cbc:MaximumOperatorQuantity";
+                    rr:datatype xsd:integer;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-109-Lot";
+            rdfs:comment "Framework Duration Justification of MG-FrameworkAgreementTerm under ND-FA";
+            rr:predicate epo:hasDurationExtensionJustification ;
+            rr:objectMap
+                [
+                    rml:reference "cbc:Justification";
+                    rr:datatype xsd:string;
+                ] ;
+        ]
+.
+tedm:MG-FrameworkAgreementTerm-isSubjectToLotSpecificTerm-Lot_ND-FABuyerCategories a rr:TriplesMap ;
+    rdfs:label "MG-FrameworkAgreementTerm";
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingProcess/cac:FrameworkAgreement/cac:SubsequentProcessTenderRequirement[cbc:Name/text()='buyer-categories']";
+            rml:referenceFormulation ql:XPath
+        ];
+    rr:subjectMap
+        [
+            rdfs:label "ND-FABuyerCategories";
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_FrameworkTermAgreement_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
+            rr:class epo:FrameworkAgreementTerm
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-111-Lot";
+            rdfs:comment "Framework Buyer Categories of MG-FrameworkAgreementTerm under ND-FABuyerCategories";
+            rr:predicate epo:hasBuyerCategoryDescription ;
+            rr:objectMap
+                [
+                    rml:reference "cbc:Description";
+                    rr:datatype xsd:string;
+                ] ;
+        ]
+.
+
+tedm:MG-MultipleStageProcedureTerm-isSubjectToLotSpecificTerm-Lot_ND-LotTenderingProcess a rr:TriplesMap ;
+    rdfs:label "MG-MultipleStageProcedureTerm";
+    rdfs:comment "different from old mapping";
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            # rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingProcess";
+            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingProcess/cac:EconomicOperatorShortList";
+            rml:referenceFormulation ql:XPath
+        ];
+    rr:subjectMap
+        [
+            rdfs:label "ND-LotTenderingProcess";
+            rml:reference "if (exists(cbc:CandidateReductionConstraintIndicator) or exists(descendant::cbc:LimitationDescription) or exists(descendant::cbc:MaximumQuantity) or exists(descendant::cbc:MinimumQuantity)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_MultipleStageProcedureTerm_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(../..)) || '?response_type=raw') else null" ;
+            rr:class  epo:MultipleStageProcedureTerm
+        ] ;
+ rr:predicateObjectMap
+        [
+            rdfs:label "BT-52-Lot";
+            rdfs:comment "Successive Reduction Indicator (Lot) of MG-MultipleStageProcedureTerm under ND-LotTenderingProcess";
+            rr:predicate epo:hasSuccessiveReduction ;
+            rr:objectMap
+                [
+                    rml:reference "../cbc:CandidateReductionConstraintIndicator";
+                    rr:datatype xsd:boolean
+                ] ;
+        ]
+.
+tedm:MG-MultipleStageProcedureTerm-isSubjectToLotSpecificTerm-Lot_ND-SecondStage a rr:TriplesMap ;
+    rdfs:label "MG-MultipleStageProcedureTerm";
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingProcess/cac:EconomicOperatorShortList";
+            rml:referenceFormulation ql:XPath
+        ];
+    rr:subjectMap
+        [
+            rdfs:label "ND-SecondStage";
+            rml:reference "if (exists(cbc:CandidateReductionConstraintIndicator) or exists(descendant::cbc:LimitationDescription) or exists(descendant::cbc:MaximumQuantity) or exists(descendant::cbc:MinimumQuantity)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_MultipleStageProcedureTerm_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(../..)) || '?response_type=raw') else null" ;
+            rr:class epo:MultipleStageProcedureTerm
+        ] ;
+
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-51-Lot";
+            rdfs:comment "Maximum Candidates Number of MG-MultipleStageProcedureTerm under ND-SecondStage";
+            rr:predicate epo:hasMaximumNumberOfCandidates ;
+            rr:objectMap
+                [
+                    rml:reference "cbc:MaximumQuantity";
+                    rr:datatype xsd:integer
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-50-Lot";
+            rdfs:label "Minimum Candidates of MG-MultipleStageProcedureTerm under ND-SecondStage";
+            rr:predicate epo:hasMinimumNumberOfCandidates ;
+            rr:objectMap
+                [
+                    rml:reference "cbc:MinimumQuantity";
+                    rr:datatype xsd:integer
+                ] ;
+        ]
+.
+
+#tedm:MG-Lot-concernsLot-ProcurementProcessInformation_ND-LotTenderingProcessExtension a rr:TriplesMap ;
+#    rdfs:label "MG-Lot";
+#    rml:logicalSource
+#        [
+#            rml:source "data/source.xml" ;
+#            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingProcess/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension";
+#            rml:referenceFormulation ql:XPath
+#        ];
+#    rr:subjectMap
+#        [
+#            rdfs:label "ND-LotTenderingProcessExtension" ;
+#            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Lot_{../../../../../cbc:ID}" ;
+#            rr:class epo:Lot
+#        ]
+#.

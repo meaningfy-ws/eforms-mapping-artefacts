@@ -205,10 +205,13 @@ tedm:MG-Notice_ND-Root
         [
             rdfs:label "OPP-070-notice" ;
             rdfs:comment "Notice Subtype of MG-Notice under ND-Root" ;
-            rr:predicate epo:hasEFormsSubtype ;
+            # rr:predicate epo:hasEFormsSubtype ;
+            rr:predicate rdf:type ;
             rr:objectMap
                 [
-                    rml:reference "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeSubType/cbc:SubTypeCode" ;
+                    # rml:reference "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeSubType/cbc:SubTypeCode" ;
+                    rml:reference "'http://data.europa.eu/a4g/ontology#Notice' || /*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeSubType/cbc:SubTypeCode" ;
+                    rr:termType rr:IRI ;
                 ] ;
         ] ;
     rr:predicateObjectMap

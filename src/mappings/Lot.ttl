@@ -96,6 +96,13 @@ tedm:MG-EAuctionTechnique-usesTechnique-Lot_ND-AuctionTerms a rr:TriplesMap ;
             rr:predicate  epo:hasUsage ;
             rr:objectMap
                 [
+#                        TODO at-voc
+#                   rdfs:label "at-voc:usage";
+#                   rr:parentTriplesMap tedm:usage ;
+#                    rr:joinCondition [
+#                        rr:child "cbc:AuctionConstraintIndicator";
+#                       rr:parent "code.value" ;
+#                    ] ;
                     rml:reference "cbc:AuctionConstraintIndicator";
                 ] ;
         ] ;
@@ -186,8 +193,15 @@ tedm:MG-FrameworkAgreementTerm-isSubjectToLotSpecificTerm-Lot_ND-LotTenderingPro
             rr:predicate epo:hasFrameworkAgreementType ;
             rr:objectMap
                 [
-                    rml:reference "cac:ContractingSystem/cbc:ContractingSystemTypeCode[@listName='framework-agreement']";
+                    rdfs:label "at-voc:framework-agreement" ;
+                    rr:parentTriplesMap tedm:framework-agreement ;
+                    rr:joinCondition [
+                        rr:child "cac:ContractingSystem/cbc:ContractingSystemTypeCode[@listName='framework-agreement']";
+                        rr:parent "code.value" ;
+                    ] ;
+#                    rml:reference "cac:ContractingSystem/cbc:ContractingSystemTypeCode[@listName='framework-agreement']";
                 ] ;
+
         ]
 .
 
@@ -212,7 +226,13 @@ tedm:MG-DynamicPurchaseSystemTechnique-usesTechnique-Lot_ND-LotTenderingProcess 
             rr:predicate epo:hasDPSScope ;
             rr:objectMap
                 [
-                    rml:reference "cac:ContractingSystem/cbc:ContractingSystemTypeCode[@listName='dps-usage']";
+                    rdfs:label "at-voc:dps-usage" ;
+                    rr:parentTriplesMap tedm:fdps-usage ;
+                    rr:joinCondition [
+                        rr:child "cac:ContractingSystem/cbc:ContractingSystemTypeCode[@listName='dps-usage']";
+                        rr:parent "code.value" ;
+                    ] ;
+#                    rml:reference "cac:ContractingSystem/cbc:ContractingSystemTypeCode[@listName='dps-usage']";
                 ] ;
         ]
 .
@@ -588,7 +608,13 @@ tedm:MG-SubmissionTerm-isSubjectToLotSpecificTerm-Lot_ND-LotTenderingProcess a r
             rr:predicate epo:hasESubmissionPermission ;
             rr:objectMap
                 [
-                    rml:reference "if(exists(cbc:SubmissionMethodCode[@listName='esubmission'])) then cbc:SubmissionMethodCode else null";
+                    rdfs:label "permission:" ;
+                    rr:parentTriplesMap tedm:permission;
+                    rr:joinCondition [
+                        rr:child "if(exists(cbc:SubmissionMethodCode[@listName='esubmission'])) then cbc:SubmissionMethodCode else null" ;
+                        rr:parent "code.value" ;
+                    ] ;
+#                    rml:reference "if(exists(cbc:SubmissionMethodCode[@listName='esubmission'])) then cbc:SubmissionMethodCode else null";
                 ] ;
         ]
 .
@@ -613,7 +639,13 @@ tedm:MG-SubmissionTerm-isSubjectToLotSpecificTerm-Lot_ND-NoESubmission a rr:Trip
             rr:predicate epo:hasNonElectronicSubmissionJustification ;
             rr:objectMap
                 [
-                    rml:reference "cbc:ProcessReasonCode[@listName='no-esubmission-justification']";
+                    rdfs:label "at-voc:communication-justification" ;
+                    rr:parentTriplesMap tedm:communication-justification ;
+                    rr:joinCondition [
+                        rr:child "cbc:ProcessReasonCode[@listName='no-esubmission-justification']";
+                        rr:parent "code.value" ;
+                    ] ;
+#                    rml:reference "cbc:ProcessReasonCode[@listName='no-esubmission-justification']";
                 ] ;
         ];
  rr:predicateObjectMap

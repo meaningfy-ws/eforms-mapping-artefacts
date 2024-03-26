@@ -155,19 +155,19 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyContactPoint_dxvvStPQ7ekRVg6x
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_DynamicPurchaseSystemTechnicalUsage_4qCitbxYVRfdbqxnYtJTZF
   a epo:DynamicPurchaseSystemTechnique;
-  epo:hasDPSScope "dps-list" .
+  epo:hasDPSScope <http://publications.europa.eu/resource/authority/dps-usage/dps-list> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_DynamicPurchaseSystemTechnicalUsage_8APvjTVZXX8CxGPVJZoBww
   a epo:DynamicPurchaseSystemTechnique;
-  epo:hasDPSScope "none" .
+  epo:hasDPSScope <http://publications.europa.eu/resource/authority/dps-usage/none> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTechnicalUsage_4qCitbxYVRfdbqxnYtJTZF
   a epo:FrameworkAgreementTerm;
-  epo:hasFrameworkAgreementType "fa-w-rc" .
+  epo:hasFrameworkAgreementType <http://publications.europa.eu/resource/authority/framework-agreement/fa-w-rc> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTechnicalUsage_8APvjTVZXX8CxGPVJZoBww
   a epo:FrameworkAgreementTerm;
-  epo:hasFrameworkAgreementType "fa-w-rc" .
+  epo:hasFrameworkAgreementType <http://publications.europa.eu/resource/authority/framework-agreement/fa-w-rc> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkTermAgreement_4pryWpjZoJQ6k9AhEGANFB
   a epo:FrameworkAgreementTerm;
@@ -369,8 +369,8 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_MnX8qyREnFMNLeS5MJAX9K a e
   epo:hasAcceleratedProcedureJustification "Procedure Accelerated Justification ---"@en;
   epo:hasAdditionalInformation "Additional information ---"@en;
   epo:hasInternalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureIdentifier_eySzap22e3jkZr3f7VXYNj;
-  epo:hasLegalBasis "32014L0024  ";
-  epo:hasLegalBasisDescription "32014L0024  ";
+  epo:hasLegalBasis "art. 410 ust. 1 ustawy z dnia 11 września 2019 r. - Prawo zamówień publicznych (Dz. U. z 2023r. poz. 1605 t.j.)";
+  epo:hasLegalBasisDescription "legal base description ---";
   epo:hasMainFeature "Description of the procedure  ---"@en;
   epo:hasProcedureType <http://publications.europa.eu/resource/authority/procurement-procedure-type/neg-w-call>;
   epo:isAccelerated true;
@@ -406,16 +406,16 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_8y8GPfmPvSRdBcci6WWcS
   a epo:AccessTerm, epo:SubmissionTerm;
   epo:hasAdditionalInformationDeadline "2023-05-20+01:00T20:59:32+01:00";
   epo:hasEAuctionURL "https://electronic-auction.com"^^xsd:anyURI;
-  epo:hasESubmissionPermission "not-allowed";
+  epo:hasESubmissionPermission <http://publications.europa.eu/resource/authority/permission/not-allowed>;
   epo:hasNonElectronicSubmissionDescription "Nonelectronic Submission Description ---";
-  epo:hasNonElectronicSubmissionJustification "ipr-iss";
+  epo:hasNonElectronicSubmissionJustification <http://publications.europa.eu/resource/authority/communication-justification/ipr-iss>;
   epo:hasReceiptTenderDeadline "2023-05-22+01:00T20:59:32+01:00"^^xsd:dateTime .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_daUDPcwCUoxbJRjGb7tKNQ
   a epo:AccessTerm, epo:SubmissionTerm;
   epo:hasAdditionalInformationDeadline "2023-05-20+01:00T20:59:32+01:00";
   epo:hasEAuctionURL "https://electronic-auction.com"^^xsd:anyURI;
-  epo:hasESubmissionPermission "required";
+  epo:hasESubmissionPermission <http://publications.europa.eu/resource/authority/permission/required>;
   epo:hasReceiptParticipationRequestDeadline "2020-05-07+01:00T23:55:00+01:00"^^xsd:dateTime;
   epo:hasReceiptTenderDeadline "2023-05-22+01:00T20:59:32+01:00"^^xsd:dateTime .
 

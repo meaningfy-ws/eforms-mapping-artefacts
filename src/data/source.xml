@@ -480,7 +480,11 @@
 		</cac:Party>
 	</cac:ContractingParty>
 	<cac:TenderingTerms>
-		<!--BT-09-->
+		 <cac:ProcurementLegislationDocumentReference>
+			 <cbc:ID>art. 410 ust. 1 ustawy z dnia 11 września 2019 r. - Prawo zamówień publicznych (Dz. U. z 2023r. poz. 1605 t.j.)</cbc:ID>
+             <cbc:DocumentDescription languageID="ENG">legal base description ---</cbc:DocumentDescription>
+		 </cac:ProcurementLegislationDocumentReference>
+				<!--BT-09-->
 		<cac:ProcurementLegislationDocumentReference>
 			<cbc:ID>CrossBorderLaw</cbc:ID>
 			<cbc:DocumentDescription languageID="ENG">Cross border law description ---</cbc:DocumentDescription>

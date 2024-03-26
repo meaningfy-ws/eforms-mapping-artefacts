@@ -217,15 +217,6 @@ tedm:MG-Procedure_ND-ProcedureTenderingProcess a rr:TriplesMap ;
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Procedure_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
             rr:class epo:Procedure
         ] ;
-    #  rr:predicateObjectMap
-    #     [
-    #         rdfs:label "ND-Lot";#add in cm line that this goes from procedure to lot
-    #         rr:predicate epo:hasProcurementScopeDividedIntoLot ;
-    #         rr:objectMap
-    #             [
-    #                 rr:parentTriplesMap tedm:ND-Lot;
-    #             ]
-    #     ] ;
     rr:predicateObjectMap
         [
             rdfs:label "BT-88-Procedure" ;

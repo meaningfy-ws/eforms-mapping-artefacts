@@ -60,6 +60,7 @@ tedm:MG-Buyer_ND-ContractingParty a rr:TriplesMap ;
             rr:predicate epo:isContractingEntity ;
             rr:objectMap
                 [
+                    # TODO should the condition be relative?
                     rml:reference "if(/*/cac:ContractingParty/cac:ContractingPartyType/cbc:PartyTypeCode[@listName='buyer-contracting-type']/text()='cont-ent') then 'true' else null" ;
                     rr:datatype xsd:boolean ;
                 ] ;
@@ -71,6 +72,7 @@ tedm:MG-Buyer_ND-ContractingParty a rr:TriplesMap ;
             rr:predicate epo:isContractingEntity ;
             rr:objectMap
                 [
+                    # TODO should the condition be relative?
                     rml:reference "if(/*/cac:ContractingParty/cac:ContractingPartyType/cbc:PartyTypeCode[@listName='buyer-contracting-type']/text()='not-cont-ent') then 'false' else null" ;
                     rr:datatype xsd:boolean ;
                 ] ;

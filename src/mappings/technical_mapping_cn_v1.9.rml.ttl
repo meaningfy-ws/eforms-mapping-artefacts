@@ -152,7 +152,17 @@ tedm:MG-Notice_ND-Root
         ] ;
     rr:predicateObjectMap
         [
-            rdfs:comment "The identifier of a notice" ;
+            rdfs:label "BT-04-notice" ;
+            rdfs:comment "Procedure Identifier of MG-Procedure-refersToProcedure-Notice under ND-Root" ;
+            rr:predicate epo:refersToProcedure ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-Procedure_ND-ProcedureProcurementScope
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:comment "The identifier of MG-Notice under ND-Root" ;
             rr:predicate adms:identifier ;
             rr:objectMap
                 [

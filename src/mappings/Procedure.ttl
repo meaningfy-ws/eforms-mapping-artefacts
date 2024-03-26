@@ -24,6 +24,46 @@
 @prefix fno: <https://w3id.org/function/ontology#> .
 @prefix idlab-fn: <http://example.com/idlab/function/> .
 
+tedm:MG-Procedure_ND-LocalLegalBasisWithID a rr:TriplesMap ;
+    rdfs:label "MG-Procedure";
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/cac:TenderingProcess";
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            #This one maps to the parent path
+            rdfs:label "ND-LocalLegalBasisWithID";
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Procedure_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
+            rr:class epo:Procedure
+
+        ] ;
+ rr:predicateObjectMap
+        [
+            rdfs:label "BT-01(c)-Procedure";
+            rdfs:comment "Procedure Legal Basis (ID) of MG-Procedure under ND-LocalLegalBasisWithID ";
+            rr:predicate  epo:hasLegalBasis  ;
+            rr:objectMap
+                [
+                    rml:reference "if(exists(/*/cbc:RegulatoryDomain) or exists(cac:ProcurementLegislationDocumentReference[cbc:ID/text()='LocalLegalBasis']/cbc:ID[text()='LocalLegalBasis']) or exists(cac:ProcurementLegislationDocumentReference[cbc:ID/text()='LocalLegalBasis']/cbc:DocumentDescription)) then concat(/*/cbc:RegulatoryDomain, ' ',concat(cac:ProcurementLegislationDocumentReference[cbc:ID/text()='LocalLegalBasis']/cbc:ID[text()='LocalLegalBasis'], ' ', cac:ProcurementLegislationDocumentReference[cbc:ID/text()='LocalLegalBasis']/cbc:DocumentDescription)) else null";
+
+                ] ;
+        ];
+rr:predicateObjectMap
+        [
+            rdfs:label "BT-01(d)-Procedure";
+            rdfs:comment "Procedure Legal Basis (ID) of MG-Procedure under ND-LocalLegalBasisWithID ";
+            rr:predicate epo:hasLegalBasisDescription  ;
+            rr:objectMap
+                [
+                    rml:reference "if(exists(/*/cbc:RegulatoryDomain) or exists(cac:ProcurementLegislationDocumentReference[cbc:ID/text()='LocalLegalBasis']/cbc:ID[text()='LocalLegalBasis']) or exists(cac:ProcurementLegislationDocumentReference[cbc:ID/text()='LocalLegalBasis']/cbc:DocumentDescription)) then concat(/*/cbc:RegulatoryDomain, ' ',concat(cac:ProcurementLegislationDocumentReference[cbc:ID/text()='LocalLegalBasis']/cbc:ID[text()='LocalLegalBasis'], ' ', cac:ProcurementLegislationDocumentReference[cbc:ID/text()='LocalLegalBasis']/cbc:DocumentDescription)) else null";
+
+                ] ;
+        ]
+.
+
 tedm:MG-Procedure_ND-ProcedureProcurementScope a rr:TriplesMap ;
     rdfs:label "MG-Procedure";
     rml:logicalSource

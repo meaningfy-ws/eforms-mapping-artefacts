@@ -250,7 +250,6 @@ tedm:MG-FrameworkAgreementTerm-isSubjectToLotSpecificTerm-Lot_ND-FA a rr:Triples
             rr:objectMap
                 [
                     rml:reference "cbc:Justification";
-                    rr:datatype xsd:string;
                 ] ;
         ]
 .
@@ -276,7 +275,6 @@ tedm:MG-FrameworkAgreementTerm-isSubjectToLotSpecificTerm-Lot_ND-FABuyerCategori
             rr:objectMap
                 [
                     rml:reference "cbc:Description";
-                    rr:datatype xsd:string;
                 ] ;
         ]
 .
@@ -364,8 +362,7 @@ tedm:MG-MultipleStageProcedureTerm-isSubjectToLotSpecificTerm-Lot_ND-SecondStage
             rr:objectMap
                 [
                     rml:reference "cbc:MinimumQuantity";
-                    rr:datatype xsd:integer
-                ] ;
+                                  ] ;
         ]
 
 .
@@ -430,7 +427,6 @@ tedm:MG-AccessTerm-isSubjectToLotSpecificTerm-Lot_ND-LotInfoRequestPeriod a rr:T
             rr:objectMap
                 [
                     rml:reference "if(exists(cbc:EndDate) and exists(cbc:EndTime)) then cbc:EndDate || 'T' || cbc:EndTime else if(exists(cbc:EndDate)) then cbc:EndDate else null";
-                    rr:datatype xsd:string;
                 ] ;
         ];
 rr:predicateObjectMap
@@ -441,8 +437,7 @@ rr:predicateObjectMap
             rr:objectMap
                 [
                     rml:reference "if(exists(cbc:EndDate) and exists(cbc:EndTime)) then cbc:EndDate || 'T' || cbc:EndTime else if(exists(cbc:EndDate)) then cbc:EndDate else null";
-                    rr:datatype xsd:string;
-                ] ;
+                                  ] ;
         ]
 .
 
@@ -594,7 +589,6 @@ tedm:MG-SubmissionTerm-isSubjectToLotSpecificTerm-Lot_ND-LotTenderingProcess a r
             rr:objectMap
                 [
                     rml:reference "if(exists(cbc:SubmissionMethodCode[@listName='esubmission'])) then cbc:SubmissionMethodCode else null";
-                    rr:datatype xsd:string;
                 ] ;
         ]
 .
@@ -620,7 +614,6 @@ tedm:MG-SubmissionTerm-isSubjectToLotSpecificTerm-Lot_ND-NoESubmission a rr:Trip
             rr:objectMap
                 [
                     rml:reference "cbc:ProcessReasonCode[@listName='no-esubmission-justification']";
-                    rr:datatype xsd:string;
                 ] ;
         ];
  rr:predicateObjectMap
@@ -631,7 +624,6 @@ tedm:MG-SubmissionTerm-isSubjectToLotSpecificTerm-Lot_ND-NoESubmission a rr:Trip
             rr:objectMap
                 [
                     rml:reference "cbc:Description";
-                    rr:datatype xsd:string;
                 ] ;
         ]
 .

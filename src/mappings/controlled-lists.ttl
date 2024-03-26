@@ -146,3 +146,18 @@ tedm:language a rr:TriplesMap ;
                 "conceptURI" ;
         ]
 .
+
+# TODO why is the file w/ underscore? (the at-voc in ePO is w/ hyphen)
+tedm:legal-basis a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/legal_basis.json" ;
+            rml:iterator "$.results.bindings[*]" ;
+            rml:referenceFormulation ql:JSONPath
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference
+                "conceptURI.value" ;
+        ]
+.

@@ -211,8 +211,7 @@ tedm:MG-Procedure_ND-ProcedureTenderingProcess a rr:TriplesMap ;
         ] ;
     rr:subjectMap
         [
-            #This one maps to the parent path
-            # TODO why?
+            # this is an example of a template/IRI that hashes on the parent path
             rdfs:label "ND-ProcedureTenderingProcess" ;
             rdfs:comment "Type declaration for MG-Procedure under ND-ProcedureTenderingProcess" ;
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Procedure_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
@@ -266,16 +265,23 @@ tedm:MG-Procedure_ND-ProcedureTenderingProcess a rr:TriplesMap ;
                     ] ;
                 ] ;
         ] ;
-    # rr:predicateObjectMap
-    #     [
-    #         rdfs:label "BT-01-notice and BT-01(e)-notice and BT-01(f)-notice";
-    #         rr:predicate  epo:hasLegalBasis  ;
-    #         rr:objectMap
-    #             [
-    #                 rml:reference "if(exists(/*/cbc:RegulatoryDomain) or exists(cac:ProcurementLegislationDocumentReference[cbc:ID/text()='LocalLegalBasis']/cbc:ID[text()='LocalLegalBasis']) or exists(cac:ProcurementLegislationDocumentReference[cbc:ID/text()='LocalLegalBasis']/cbc:DocumentDescription)) then concat(/*/cbc:RegulatoryDomain, ' ',concat(cac:ProcurementLegislationDocumentReference[cbc:ID/text()='LocalLegalBasis']/cbc:ID[text()='LocalLegalBasis'], ' ', cac:ProcurementLegislationDocumentReference[cbc:ID/text()='LocalLegalBasis']/cbc:DocumentDescription)) else null";
-    #                 rr:datatype xsd:string
-    #             ] ;
-    #     ]  ;
+    # TODO bring this into another TMap to align w/ MG+Node?
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-01-notice" ;
+            rdfs:comment "Procedure Legal Basis of MG-Procedure under ND-Root" ;
+            rr:predicate epo:hasLegalBasis ;
+            rr:objectMap
+                [
+                    rdfs:label "at-voc:legal-basis" ;
+                    # rml:reference "/*/cbc:RegulatoryDomain" ;
+                    rr:parentTriplesMap tedm:legal-basis ;
+                    rr:joinCondition [
+                        rr:child "/*/cbc:RegulatoryDomain" ;
+                        rr:parent "code.value" ;
+                    ] ;
+                ] ;
+        ]  ;
     # rr:predicateObjectMap
     #     [
     #         rdfs:label "BT-01-notice and BT-01(c)-notice and BT-01(d)-notice";

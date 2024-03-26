@@ -39,22 +39,31 @@ tedm:MG-ProcurementServiceProvider_ND-ServiceProviderParty a rr:TriplesMap ;
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ProcurementServiceProvider_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
             rr:class epo:ProcurementServiceProvider
         ] ;
-    # rr:predicateObjectMap
-    #     [
-    #         rdfs:label "OPT-300-Procedure-SProvider" ;
-    #         rr:predicate epo:playedBy ;
-    #         rr:objectMap
-    #             [
-    #                 rr:parentTriplesMap tedm:ND-ProviderParty ;
-    #             ] ;
-    #     ] ;
+    # this is an example of an associated object linked through explicit template
+    rr:predicateObjectMap
+        [
+            rdfs:label "OPT-300-Procedure-SProvider" ;
+            rdfs:comment "Service Provider Technical Identifier Reference of MG-Organization-playedBy-ProcurementServiceProvider under " ;
+            rr:predicate epo:playedBy ;
+            rr:objectMap
+                [
+                    # TODO find the correct joinCondition
+                    # rr:parentTriplesMap tedm:MG-Organization_ND-Company ;
+                    # rr:joinCondition [
+                    #     rr:child "path(.)" ;
+                    #     rr:parent "path(.)" ;
+                    # ] ;
+                    rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Organization_{cac:Party/cac:PartyIdentification/cbc:ID}" ;
+                    rr:termType rr:IRI ;
+                ] ;
+        ] ;
     rr:predicateObjectMap
         [
             rr:predicate epo:actsOnBehalfOf ;
             rr:objectMap
                 [
                     rr:parentTriplesMap tedm:MG-Buyer_ND-ContractingParty ;
-                    # TODO: Why is this needed if this is linkage in the same source?
+                    # TODO: Check if a join is actually needed and whether absolute or relative child should be used
                     # rr:joinCondition [
                     #     rr:child "path(/*/cac:ContractingParty)" ;
                     #     rr:parent "path(.)" ;

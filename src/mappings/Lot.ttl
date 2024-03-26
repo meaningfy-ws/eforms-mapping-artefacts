@@ -38,7 +38,204 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Lot_{cbc:ID}" ;
             rr:class epo:Lot
         ]  ;
+
+                   rr:predicateObjectMap
+        [
+            rdfs:label "BT-767-Lot,and BT-122-Lot ";
+            rr:predicate epo:usesTechnique ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-EAuctionTechnique-usesTechnique-Lot_ND-AuctionTerms ;
+                    rr:joinCondition [
+                        rr:child "path(.)";
+                        rr:parent "path(../../.)";
+                    ];
+                ] ;
+        ] ;
+     rr:predicateObjectMap
+        [
+            rdfs:label "BT-123-Lot";
+            rr:predicate epo:isSubjectToLotSpecificTerm ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-SubmissionTerm-isSubjectToLotSpecificTerm-Lot_ND-AuctionTerms ;
+                    rr:joinCondition [
+                        rr:child "path(.)";
+                        rr:parent "path(../../.)";
+                    ];
+                ] ;
+        ];
     rr:predicateObjectMap
+        [
+            rdfs:label "BT-765-Lot";
+            rr:predicate epo:isSubjectToLotSpecificTerm ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-FrameworkAgreementTerm-isSubjectToLotSpecificTerm-Lot_ND-LotTenderingProcess ;
+                    rr:joinCondition [
+                        rr:child "path(.)";
+                        rr:parent "path(../../.)";
+                    ];
+                ] ;
+        ];
+        rr:predicateObjectMap
+        [
+            rdfs:label "BT-113-Lot, BT-109-Lot";
+            rr:predicate epo:isSubjectToLotSpecificTerm ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-FrameworkAgreementTerm-isSubjectToLotSpecificTerm-Lot_ND-FA  ;
+                    rr:joinCondition [
+                        rr:child "path(.)";
+                        rr:parent "path(../../.)";
+                    ];
+                ] ;
+        ];
+        rr:predicateObjectMap
+        [
+            rdfs:label "BT-111-Lot";
+            rr:predicate epo:isSubjectToLotSpecificTerm ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-FrameworkAgreementTerm-isSubjectToLotSpecificTerm-Lot_ND-FABuyerCategories  ;
+                    rr:joinCondition [
+                        rr:child "path(.)";
+                        rr:parent "path(../../.)";
+                    ];
+                ] ;
+        ];
+        rr:predicateObjectMap
+        [
+            rdfs:label "BT-52-Lot, BT-130-Lot, BT-631-Lot";
+            rr:predicate epo:isSubjectToLotSpecificTerm ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-MultipleStageProcedureTerm-isSubjectToLotSpecificTerm-Lot_ND-LotTenderingProcess  ;
+                    rr:joinCondition [
+                        rr:child "path(.)";
+                        rr:parent "path(../../.)";
+                    ];
+                ] ;
+        ];
+        rr:predicateObjectMap
+        [
+            rdfs:label "BT-51-Lot and BT-50-Lot";
+            rr:predicate epo:isSubjectToLotSpecificTerm ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-MultipleStageProcedureTerm-isSubjectToLotSpecificTerm-Lot_ND-SecondStage ;
+                    rr:joinCondition [
+                        rr:child "path(.)";
+                        rr:parent "path(../../.)";
+                    ];
+                ] ;
+        ];
+        rr:predicateObjectMap
+        [
+            rdfs:label "BT-131(d)-Lot and BT-131(t)-Lot";
+            rr:predicate epo:isSubjectToLotSpecificTerm ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-SubmissionTerm-isSubjectToLotSpecificTerm-Lot_ND-SubmissionDeadline ;
+                    rr:joinCondition [
+                        rr:child "path(.)";
+                        rr:parent "path(../../.)";
+                    ];
+                ] ;
+        ];
+        rr:predicateObjectMap
+        [
+            rdfs:label "BT-13(d)-Lot and BT-13(t)-Lot";
+            rr:predicate epo:isSubjectToLotSpecificTerm ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-AccessTerm-isSubjectToLotSpecificTerm-Lot_ND-LotInfoRequestPeriod ;
+                    rr:joinCondition [
+                        rr:child "path(.)";
+                        rr:parent "path(../../.)";
+                    ];
+                ] ;
+        ];
+        rr:predicateObjectMap
+        [
+            rdfs:label "BT-1311(d)-Lot and BT-1311(t)-Lot";
+            rr:predicate epo:isSubjectToLotSpecificTerm ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-SubmissionTerm-isSubjectToLotSpecificTerm-Lot_ND-ParticipationRequestPeriod ;
+                    rr:joinCondition [
+                        rr:child "path(.)";
+                        rr:parent "path(../../.)";
+                    ];
+                ] ;
+        ];
+        rr:predicateObjectMap
+        [
+            rdfs:label "BT-134-Lot, BT-132(d)-Lot, BT-132(t)-Lot and BT-133-Lot";
+            rr:predicate epo:isSubjectToLotSpecificTerm ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-OpeningTerm-isSubjectToLotSpecificTerm-Lot_ND-PublicOpening ;
+                    rr:joinCondition [
+                        rr:child "path(.)";
+                        rr:parent "path(../../.)";
+                    ];
+                ] ;
+        ];
+        rr:predicateObjectMap
+        [
+            rdfs:label "BT-133-Lot";
+            rr:predicate epo:isSubjectToLotSpecificTerm ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-Address-definesOpeningPlace-OpeningTerm-isSubjectToLotSpecificTerm-Lot_ND-PublicOpeningPlace;
+                    rr:joinCondition [
+                        rr:child "path(.)";
+                        rr:parent "path(../../.)";
+                    ];
+                ] ;
+        ];
+        rr:predicateObjectMap
+        [
+            rdfs:label "BT-17-Lot";
+            rr:predicate epo:isSubjectToLotSpecificTerm ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-SubmissionTerm-isSubjectToLotSpecificTerm-Lot_ND-LotTenderingProcess;
+                    rr:joinCondition [
+                        rr:child "path(.)";
+                        rr:parent "path(../../.)";
+                    ];
+                ] ;
+        ];
+
+        rr:predicateObjectMap
+        [
+            rdfs:label "BT-124-Lot";
+        rr:predicate epo:usesChannel ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-AdHocChannel-usesChannel-Lot_ND-LotTenderingProcess;
+                    rr:joinCondition [
+                         rr:child "path(.)";
+                        rr:parent "path(../.)";
+                    ];
+                ] ;
+        ];
+         rr:predicateObjectMap
+        [
+            rdfs:label "BT-632-Lot";
+        rr:predicate epo:usesChannel ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-AdHocChannel-usesChannel-Lot_ND-LotTenderingProcessExtension;
+                    rr:joinCondition [
+                         rr:child "path(.)";
+                        rr:parent "path(../.)";
+                    ];
+                ] ;
+        ];
+        rr:predicateObjectMap
         [
             rdfs:label "BT-137-Lot" ;
             rdfs:comment "Purpose Lot Identifier of MG-Lot under ND-Lot" ;
@@ -103,7 +300,8 @@ tedm:MG-EAuctionTechnique-usesTechnique-Lot_ND-AuctionTerms a rr:TriplesMap ;
 #                        rr:child "cbc:AuctionConstraintIndicator";
 #                       rr:parent "code.value" ;
 #                    ] ;
-                    rml:reference "cbc:AuctionConstraintIndicator";
+                    rml:reference "if(/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingProcess/cac:AuctionTerms/cbc:AuctionConstraintIndicator/text()='true') then 'http://publications.europa.eu/resource/authority/usage/used' else null";
+                    rr:termType rr:IRI
                 ] ;
         ] ;
     rr:predicateObjectMap
@@ -207,7 +405,7 @@ tedm:MG-FrameworkAgreementTerm-isSubjectToLotSpecificTerm-Lot_ND-LotTenderingPro
         ]
 .
 
-tedm:MG-DynamicPurchaseSystemTechnique-usesTechnique-Lot_ND-LotTenderingProcess a rr:TriplesMap ;
+tedm:MG-DynamicPurchaseSystemTechnique-Tusesechnique-Lot_ND-LotTenderingProcess a rr:TriplesMap ;
     rdfs:label "MG-DynamicPurchaseSystemTechnique";
     rml:logicalSource
         [
@@ -710,7 +908,7 @@ tedm:MG-AdHocChannel-usesChannel-Lot_ND-LotTenderingProcess a rr:TriplesMap ;
             rml:reference "if (exists(descendant::efbc:AccessToolName) or exists(cbc:AccessToolsURI)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_Channel_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
             rr:class epo:AdHocChannel
         ] ;
-rr:predicateObjectMap
+    rr:predicateObjectMap
         [
             rdfs:label "BT-124-Lot";
             rdfs:comment "Tool Atypical URL of MG-AdHocChannel underND-LotTenderingProcess";
@@ -721,5 +919,4 @@ rr:predicateObjectMap
                     rr:datatype xsd:anyURI
                 ] ;
         ]
-
 .

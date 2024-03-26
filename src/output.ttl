@@ -22,12 +22,12 @@
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AuctionTerms_a3YxuhxVZtuVM6PB6isrBc a
     epo:EAuctionTechniqueUsage;
-  epo:hasUsage "true";
+  epo:hasUsage <http://publications.europa.eu/resource/authority/usage/used>;
   dct:description "Electronic auction description ---" .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AuctionTerms_fEtfKJVcbukziY28mGZdui a
     epo:EAuctionTechniqueUsage;
-  epo:hasUsage "true";
+  epo:hasUsage <http://publications.europa.eu/resource/authority/usage/used>;
   dct:description "Electronic auction description ---" .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Buyer_MT3gdCnJ9BA7aEqaGqKxAh a epo:Buyer;
@@ -227,15 +227,37 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotIdentifier_daUDPcwCUoxbJRjGb7tKNQ
     adms:Identifier;
   skos:notation "LOT-0001" .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotValueEstimateExtension_9thMAaeveYJRewotgDGorG
+  a epo:MonetaryValue;
+  epo:hasAmountValue 247547.0 .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001 a epo:Lot;
   epo:isCoveredByGPA true;
+  epo:isSubjectToLotSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkTermAgreement_SsJtj5DGjqxKj6eVgR4GbT,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MultipleStageProcedureTerm_daUDPcwCUoxbJRjGb7tKNQ,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OpeningTerm_QuUbCTvwqkE5rYfeGgqExM, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_daUDPcwCUoxbJRjGb7tKNQ;
+  epo:usesChannel epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Channel_4qCitbxYVRfdbqxnYtJTZF;
+  epo:usesTechnique epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AuctionTerms_fEtfKJVcbukziY28mGZdui;
   adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotIdentifier_8y8GPfmPvSRdBcci6WWcSi,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotIdentifier_daUDPcwCUoxbJRjGb7tKNQ .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002 a epo:Lot;
   epo:isCoveredByGPA true;
+  epo:isSubjectToLotSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkTermAgreement_4pryWpjZoJQ6k9AhEGANFB,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MultipleStageProcedureTerm_8y8GPfmPvSRdBcci6WWcSi,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_8y8GPfmPvSRdBcci6WWcSi;
+  epo:usesChannel epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Channel_8APvjTVZXX8CxGPVJZoBww;
+  epo:usesTechnique epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AuctionTerms_a3YxuhxVZtuVM6PB6isrBc;
   adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotIdentifier_8y8GPfmPvSRdBcci6WWcSi,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotIdentifier_daUDPcwCUoxbJRjGb7tKNQ .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValueLot_WdC3kBS9amJ4en7K2hRKUQ
+  a epo:MonetaryValue;
+  epo:hasAmountValue 9999999.99 .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValueLot_evidV3nok82ih2xWwJYg9n
+  a epo:MonetaryValue;
+  epo:hasAmountValue 9999999.99 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MultipleStageProcedureTerm_8y8GPfmPvSRdBcci6WWcSi
   a epo:MultipleStageProcedureTerm;
@@ -370,7 +392,8 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_MnX8qyREnFMNLeS5MJAX9K a e
   epo:hasAdditionalInformation "Additional information ---"@en;
   epo:hasInternalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureIdentifier_eySzap22e3jkZr3f7VXYNj;
   epo:hasLegalBasis "art. 410 ust. 1 ustawy z dnia 11 września 2019 r. - Prawo zamówień publicznych (Dz. U. z 2023r. poz. 1605 t.j.)";
-  epo:hasLegalBasisDescription "legal base description ---";
+  epo:hasLegalBasisDescription "Loi modifiée du 8 juillet 2018 sur les concessions",
+    "legal base description ---";
   epo:hasMainFeature "Description of the procedure  ---"@en;
   epo:hasProcedureType <http://publications.europa.eu/resource/authority/procurement-procedure-type/neg-w-call>;
   epo:isAccelerated true;

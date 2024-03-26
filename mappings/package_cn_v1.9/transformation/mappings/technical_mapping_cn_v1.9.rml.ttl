@@ -3977,13 +3977,14 @@ tedm:ND-SecondStage a rr:TriplesMap ;
     rr:predicateObjectMap
         [
             rdfs:label "BT-130-Lot";
-            rr:predicate epo:hasEstimatedInvitationToTenderDate ;
+            rr:predicate epo:hasEstimatedInvitationToTenderDate;
             rr:objectMap
                 [
                     rml:reference "../cac:InvitationSubmissionPeriod/cbc:StartDate";
                     rr:datatype xsd:date;
                 ] ;
-        ] .
+        ]
+.
 
 #ND-SecondStage for BT-120-Lot
 tedm:ND-SecondStage_BT-120-Lot a rr:TriplesMap ;

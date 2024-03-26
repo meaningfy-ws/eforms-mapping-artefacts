@@ -35,6 +35,13 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Buyer_MT3gdCnJ9BA7aEqaGqKxAh a epo:B
   epo:isContractingEntity true;
   epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0001 .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Channel_4qCitbxYVRfdbqxnYtJTZF a epo:AdHocChannel;
+  epo:hasAddressURL "https://www.the-chest.org.uk/"^^xsd:anyURI;
+  dct:description "Access tool ---" .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Channel_8APvjTVZXX8CxGPVJZoBww a epo:AdHocChannel;
+  dct:description "Access tool ---" .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_9EoaX693zGgFRHUBTqQE58
   a locn:Address;
   epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
@@ -238,6 +245,8 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MultipleStageProcedureTerm_8y8GPfmPv
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MultipleStageProcedureTerm_daUDPcwCUoxbJRjGb7tKNQ
   a epo:MultipleStageProcedureTerm;
+  epo:hasEstimatedInvitationToExpressInterestDate "2023-12-12+01:00"^^xsd:date;
+  epo:hasEstimatedInvitationToTenderDate "2020-05-22+02:00"^^xsd:date;
   epo:hasMaximumNumberOfCandidates 7;
   epo:hasMinimumNumberOfCandidates 3;
   epo:hasSuccessiveReduction true .
@@ -260,6 +269,15 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_NoticeIdentifier_cMBzh6pL4JRkiaCd4DW
   a adms:Identifier;
   epo:hasScheme "notice-id";
   skos:notation "14549263-b47b-4e59-96a1-2d0d13e19343" .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OpenTenderEventPlace_TpCFHZDentQZiC2NomrGLF
+  a locn:Address;
+  locn:fullAddress "Renfrewshire House, Cotton Street, Paisley." .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OpeningTerm_QuUbCTvwqkE5rYfeGgqExM a epo:OpeningTerm;
+  epo:definesOpeningPlace epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OpenTenderEventPlace_TpCFHZDentQZiC2NomrGLF;
+  epo:hasOpeningDateTime "2020-06-12+01:00T14:00:00+01:00"^^xsd:dateTime;
+  epo:hasOpeningDescription "Strictly by invitation only." .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_5ZoEQEDimbU7BLyB2frEpT
   a epo:Identifier;
@@ -383,12 +401,21 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementServiceProvider_f7UuQ7S8i
   dct:description "ted-esen" .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_8y8GPfmPvSRdBcci6WWcSi
-  a epo:SubmissionTerm;
-  epo:hasEAuctionURL "https://electronic-auction.com"^^xsd:anyURI .
+  a epo:AccessTerm, epo:SubmissionTerm;
+  epo:hasAdditionalInformationDeadline "2023-05-20+01:00T20:59:32+01:00";
+  epo:hasEAuctionURL "https://electronic-auction.com"^^xsd:anyURI;
+  epo:hasESubmissionPermission "not-allowed";
+  epo:hasNonElectronicSubmissionDescription "Nonelectronic Submission Description ---";
+  epo:hasNonElectronicSubmissionJustification "ipr-iss";
+  epo:hasReceiptTenderDeadline "2023-05-22+01:00T20:59:32+01:00"^^xsd:dateTime .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_daUDPcwCUoxbJRjGb7tKNQ
-  a epo:SubmissionTerm;
-  epo:hasEAuctionURL "https://electronic-auction.com"^^xsd:anyURI .
+  a epo:AccessTerm, epo:SubmissionTerm;
+  epo:hasAdditionalInformationDeadline "2023-05-20+01:00T20:59:32+01:00";
+  epo:hasEAuctionURL "https://electronic-auction.com"^^xsd:anyURI;
+  epo:hasESubmissionPermission "required";
+  epo:hasReceiptParticipationRequestDeadline "2020-05-07+01:00T23:55:00+01:00"^^xsd:dateTime;
+  epo:hasReceiptTenderDeadline "2023-05-22+01:00T20:59:32+01:00"^^xsd:dateTime .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_9saVKYT6LaLiq7HmXaeWEQ
   a locn:Address;

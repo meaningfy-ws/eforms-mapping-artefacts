@@ -1097,6 +1097,25 @@
 			</cac:SecurityClearanceTerm>
 		</cac:TenderingTerms>
 		<cac:TenderingProcess>
+			<cac:InvitationSubmissionPeriod>
+				<cbc:StartDate>2020-05-22+02:00</cbc:StartDate>
+			</cac:InvitationSubmissionPeriod>
+			 <cac:ParticipationInvitationPeriod>
+            <cbc:StartDate>2023-12-12+01:00</cbc:StartDate>
+         </cac:ParticipationInvitationPeriod>
+			<cac:ParticipationRequestReceptionPeriod>
+				<cbc:EndDate>2020-05-07+01:00</cbc:EndDate>
+				<cbc:EndTime>23:55:00+01:00</cbc:EndTime>
+			</cac:ParticipationRequestReceptionPeriod>
+			<cbc:AccessToolsURI>https://www.the-chest.org.uk/</cbc:AccessToolsURI>
+			<cac:OpenTenderEvent>
+				<cbc:OccurrenceDate>2020-06-12+01:00</cbc:OccurrenceDate>
+				<cbc:OccurrenceTime>14:00:00+01:00</cbc:OccurrenceTime>
+				<cbc:Description languageID="ENG">Strictly by invitation only.</cbc:Description>
+				<cac:OccurenceLocation>
+					<cbc:Description languageID="ENG">Renfrewshire House, Cotton Street, Paisley.</cbc:Description>
+				</cac:OccurenceLocation>
+			</cac:OpenTenderEvent>
 			<ext:UBLExtensions>
 				<ext:UBLExtension>
 					<ext:ExtensionContent>

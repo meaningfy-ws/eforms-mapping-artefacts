@@ -189,6 +189,22 @@ tedm:MG-Notice_ND-Root
         ] ;
     rr:predicateObjectMap
         [
+            rdfs:label "BT-702(b)-notice" ;
+            rdfs:comment "Notice Official Language of MG-Notice under ND-Root" ;
+            rr:predicate epo:hasOfficialLanguage ;
+            rr:objectMap
+                [
+                    rdfs:label "at-voc:language" ;
+                    # rml:reference "cac:AdditionalNoticeLanguage/cbc:ID" ;
+                    rr:parentTriplesMap tedm:language ;
+                    rr:joinCondition [
+                        rr:child "'http://publications.europa.eu/resource/authority/language/' || cac:AdditionalNoticeLanguage/cbc:ID" ;
+                        rr:parent "conceptURI" ;
+                    ] ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
             rdfs:label "BT-05(a)-notice and BT-05(b)-notice" ;
             rdfs:comment "Notice Dispatch Date and Notice Dispatch Time of MG-Notice under ND-Root" ;
             rr:predicate epo:hasDispatchDate ;

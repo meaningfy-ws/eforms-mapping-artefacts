@@ -453,6 +453,9 @@
 	<cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
 	<!--BT-702-->
 	<cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
+	<cac:AdditionalNoticeLanguage>
+		<cbc:ID>BUL</cbc:ID>
+	</cac:AdditionalNoticeLanguage>
 	<cac:ContractingParty>
 		<!--BT-508-->
 		<cbc:BuyerProfileURI>https://profile.example.com</cbc:BuyerProfileURI>

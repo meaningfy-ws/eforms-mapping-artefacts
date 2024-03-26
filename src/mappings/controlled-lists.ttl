@@ -105,6 +105,7 @@ tedm:contract-nature a rr:TriplesMap ;
                 "conceptURI.value" ;
         ]
 .
+
 tedm:notice-type a rr:TriplesMap ;
     rml:logicalSource
         [
@@ -118,6 +119,7 @@ tedm:notice-type a rr:TriplesMap ;
                 "conceptURI.value" ;
         ]
 .
+
 tedm:form-type a rr:TriplesMap ;
     rml:logicalSource
         [
@@ -132,17 +134,15 @@ tedm:form-type a rr:TriplesMap ;
         ]
 .
 
-
 tedm:language a rr:TriplesMap ;
     rml:logicalSource
         [
-            rml:source "transformation/resources/language.json" ;
-            rml:iterator "$.results.bindings[*]" ;
-            rml:referenceFormulation ql:JSONPath
+            rml:source "transformation/resources/language.csv" ;
+            rml:referenceFormulation ql:CSV
         ] ;
     rr:subjectMap
         [
             rml:reference
-                "conceptURI.value" ;
+                "conceptURI" ;
         ]
 .

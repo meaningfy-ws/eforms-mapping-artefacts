@@ -178,12 +178,13 @@ tedm:MG-Notice_ND-Root
             rr:objectMap
                 [
                     rdfs:label "at-voc:language" ;
-                    rml:reference "cbc:NoticeLanguageCode" ;
-                    # rr:parentTriplesMap tedm:language ;
-                    # rr:joinCondition [
-                        # rr:child "cbc:NoticeLanguageCode" ;
-                        # rr:parent "code.value" ;
-                    # ] ;
+                    # rml:reference "cbc:NoticeLanguageCode" ;
+                    rr:parentTriplesMap tedm:language ;
+                    # we look up as complete IRI for full coverage -- if we don't find one we don't map
+                    rr:joinCondition [
+                        rr:child "'http://publications.europa.eu/resource/authority/language/' || cbc:NoticeLanguageCode" ;
+                        rr:parent "conceptURI" ;
+                    ] ;
                 ] ;
         ] ;
     rr:predicateObjectMap

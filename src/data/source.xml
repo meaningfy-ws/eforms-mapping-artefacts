@@ -480,20 +480,22 @@
 		</cac:Party>
 	</cac:ContractingParty>
 	<cac:TenderingTerms>
-		 <cac:ProcurementLegislationDocumentReference>
-			 <cbc:ID>art. 410 ust. 1 ustawy z dnia 11 września 2019 r. - Prawo zamówień publicznych (Dz. U. z 2023r. poz. 1605 t.j.)</cbc:ID>
-             <cbc:DocumentDescription languageID="ENG">legal base description ---</cbc:DocumentDescription>
+		<!--BT-01(c|d) [alt. to BT-01(e|f)]-->
+		<cac:ProcurementLegislationDocumentReference>
+			<cbc:ID>art. 410 ust. 1 ustawy z dnia 11 września 2019 r. - Prawo zamówień publicznych (Dz. U. z 2023r. poz. 1605 t.j.)</cbc:ID>
+			<cbc:DocumentDescription languageID="ENG">legal base description ---</cbc:DocumentDescription>
 		 </cac:ProcurementLegislationDocumentReference>
+		<!--BT-01(e|f) [alt. to BT-01(c|d)]-->
 		 <cac:ProcurementLegislationDocumentReference>
-         <cbc:ID>LocalLegalBasis</cbc:ID>
-         <cbc:DocumentDescription languageID="FRA">Loi modifiée du 8 juillet 2018 sur les concessions</cbc:DocumentDescription>
-      </cac:ProcurementLegislationDocumentReference>
-				<!--BT-09-->
+			<cbc:ID>LocalLegalBasis</cbc:ID>
+			<cbc:DocumentDescription languageID="FRA">Loi modifiée du 8 juillet 2018 sur les concessions</cbc:DocumentDescription>
+		</cac:ProcurementLegislationDocumentReference>
+		<!--BT-09-->
 		<cac:ProcurementLegislationDocumentReference>
 			<cbc:ID>CrossBorderLaw</cbc:ID>
 			<cbc:DocumentDescription languageID="ENG">Cross border law description ---</cbc:DocumentDescription>
 		</cac:ProcurementLegislationDocumentReference>
-				<!--BT-67-->
+		<!--BT-67-->
 		<cac:TendererQualificationRequest>
 			<cac:SpecificTendererRequirement>
 				<cbc:TendererRequirementTypeCode listName="exclusion-ground">crime-org</cbc:TendererRequirementTypeCode>
@@ -1117,9 +1119,9 @@
 			<cac:InvitationSubmissionPeriod>
 				<cbc:StartDate>2020-05-22+02:00</cbc:StartDate>
 			</cac:InvitationSubmissionPeriod>
-			 <cac:ParticipationInvitationPeriod>
-            <cbc:StartDate>2023-12-12+01:00</cbc:StartDate>
-         </cac:ParticipationInvitationPeriod>
+			<cac:ParticipationInvitationPeriod>
+				<cbc:StartDate>2023-12-12+01:00</cbc:StartDate>
+			</cac:ParticipationInvitationPeriod>
 			<cac:ParticipationRequestReceptionPeriod>
 				<cbc:EndDate>2020-05-07+01:00</cbc:EndDate>
 				<cbc:EndTime>23:55:00+01:00</cbc:EndTime>

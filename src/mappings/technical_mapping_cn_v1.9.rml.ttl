@@ -227,7 +227,6 @@ tedm:MG-Notice_ND-Root
                     rr:datatype xsd:dateTime ;
                 ] ;
         ] ;
-    # this is an example of a predicate which has an orthogonal XPath compared to its subject
     rr:predicateObjectMap
         [
             rdfs:label "OPP-070-notice" ;
@@ -236,8 +235,8 @@ tedm:MG-Notice_ND-Root
             rr:predicate rdf:type ;
             rr:objectMap
                 [
-                    # rml:reference "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeSubType/cbc:SubTypeCode" ;
-                    rml:reference "'http://data.europa.eu/a4g/ontology#Notice' || /*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeSubType/cbc:SubTypeCode" ;
+                    # rml:reference "ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeSubType/cbc:SubTypeCode" ;
+                    rml:reference "'http://data.europa.eu/a4g/ontology#Notice' || ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeSubType/cbc:SubTypeCode" ;
                     rr:termType rr:IRI ;
                 ] ;
         ] ;
@@ -248,7 +247,7 @@ tedm:MG-Notice_ND-Root
             rr:predicate epo:hasNoticePublicationNumber ;
             rr:objectMap
                 [
-                    rml:reference "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Publication/efbc:NoticePublicationID[@schemeName='ojs-notice-id']" ;
+                    rml:reference "ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Publication/efbc:NoticePublicationID[@schemeName='ojs-notice-id']" ;
                 ] ;
         ] ;
     rr:predicateObjectMap
@@ -258,7 +257,7 @@ tedm:MG-Notice_ND-Root
             rr:predicate epo:hasOJSIssueNumber ;
             rr:objectMap
                 [
-                    rml:reference "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Publication/efbc:GazetteID[@schemeName='ojs-id']" ;
+                    rml:reference "ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Publication/efbc:GazetteID[@schemeName='ojs-id']" ;
                 ] ;
         ] ;
     rr:predicateObjectMap
@@ -268,7 +267,7 @@ tedm:MG-Notice_ND-Root
             rr:predicate epo:hasPublicationDate ;
             rr:objectMap
                 [
-                    rml:reference "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Publication/efbc:PublicationDate" ;
+                    rml:reference "ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Publication/efbc:PublicationDate" ;
                     rr:datatype xsd:date ;
                 ] ;
         ] ;

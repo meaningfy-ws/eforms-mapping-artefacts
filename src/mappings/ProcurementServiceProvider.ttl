@@ -77,7 +77,7 @@ tedm:MG-ProcurementServiceProvider_ND-ServiceProviderParty a rr:TriplesMap ;
             rr:predicate dct:description ;
             rr:objectMap
                 [
-                    rml:reference "if(/*/cac:ContractingParty/cac:Party/cac:ServiceProviderParty/cbc:ServiceTypeCode[@listName='organisation-role']/text()='ted-esen') then cbc:ServiceTypeCode else null" ;
+                    rml:reference "if(cbc:ServiceTypeCode[@listName='organisation-role']/text()='ted-esen') then cbc:ServiceTypeCode else null" ;
                 ] ;
         ] ;
 .

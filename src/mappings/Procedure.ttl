@@ -82,31 +82,32 @@ tedm:MG-Procedure_ND-LocalLegalBasisNoID a rr:TriplesMap ;
             rr:class epo:Procedure
 
         ] ;
- rr:predicateObjectMap
-        [
-            # TODO min SDK 1.3 max SDK 1.3
-            # TODO min SDK 1.4 max SDK 1.7
-            # TODO min SDK 1.8
-            #TODO rdfs:label "BT-01(c)-Procedure";
-#            rdfs:comment "Procedure Legal Basis (ID) of MG-Procedure under ND-LocalLegalBasisNoID ";
-            rr:predicate  epo:hasLegalBasis  ;
-#            rr:objectMap
-#                [
-#                    rml:reference "cbc:ID";
-#
-#                ] ;
-        ];
-rr:predicateObjectMap
+    # according to feedback we are not to map this but makes no sense with the next one mapped
+    # rr:predicateObjectMap
+    #     [
+    #         # TODO min SDK 1.4 max SDK 1.7 (if/when this becomes mappable)
+    #         rdfs:label "BT-01(e)-Procedure";
+    #         rdfs:comment "Procedure Legal Basis (NoID) of MG-Procedure under ND-LocalLegalBasisNoID";
+    #         rr:predicate epo:hasLegalBasis ;
+    #         rr:objectMap
+    #            [
+    #                 tedm:minSDKVersion "1.8" ;
+    #                 rml:reference "cbc:ID";
+    #            ] ;
+    #     ];
+    rr:predicateObjectMap
         [
             rdfs:label "BT-01(f)-Procedure";
-            rdfs:comment "Procedure Legal Basis (Description) of MG-Procedure under ND-LocalLegalBasisNoID ";
-            rr:predicate epo:hasLegalBasisDescription  ;
+            rdfs:comment "Procedure Legal Basis (NoID Description) of MG-Procedure under ND-LocalLegalBasisNoID";
+            rr:predicate epo:hasLegalBasisDescription ;
             rr:objectMap
                 [
-            rml:reference "cbc:DocumentDescription";
+                    tedm:minSDKVersion "1.4" ;
+                    rml:reference "cbc:DocumentDescription";
                 ] ;
         ]
 .
+
 tedm:MG-Procedure_ND-ProcedureTerms a rr:TriplesMap ;
     rdfs:label "MG-ProcedureTerm";
     rml:logicalSource

@@ -39,7 +39,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
             rr:class epo:Lot
         ]  ;
 
-                   rr:predicateObjectMap
+    rr:predicateObjectMap
         [
             rdfs:label "BT-767-Lot,and BT-122-Lot ";
             rr:predicate epo:usesTechnique ;
@@ -49,6 +49,19 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     rr:joinCondition [
                         rr:child "path(.)";
                         rr:parent "path(../../.)";
+                    ];
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-766-Lot ";
+            rr:predicate epo:usesTechnique ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-DynamicPurchaseSystemTechnique-usesTechnique-Lot_ND-LotTenderingProcess ;
+                    rr:joinCondition [
+                       rr:child "path(.)";
+                         rr:parent "path(../.)";
                     ];
                 ] ;
         ] ;
@@ -217,8 +230,8 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                 [
                     rr:parentTriplesMap tedm:MG-AdHocChannel-usesChannel-Lot_ND-LotTenderingProcess;
                     rr:joinCondition [
-                         rr:child "path(.)";
-                        rr:parent "path(../.)";
+                         rr:child "cbc:ID";
+                        rr:parent "../cbc:ID";
                     ];
                 ] ;
         ];
@@ -230,8 +243,8 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                 [
                     rr:parentTriplesMap tedm:MG-AdHocChannel-usesChannel-Lot_ND-LotTenderingProcessExtension;
                     rr:joinCondition [
-                         rr:child "path(.)";
-                        rr:parent "path(../.)";
+                        rr:child "cbc:ID";
+                        rr:parent "../cbc:ID";
                     ];
                 ] ;
         ];
@@ -405,7 +418,7 @@ tedm:MG-FrameworkAgreementTerm-isSubjectToLotSpecificTerm-Lot_ND-LotTenderingPro
         ]
 .
 
-tedm:MG-DynamicPurchaseSystemTechnique-Tusesechnique-Lot_ND-LotTenderingProcess a rr:TriplesMap ;
+tedm:MG-DynamicPurchaseSystemTechnique-usesTechnique-Lot_ND-LotTenderingProcess a rr:TriplesMap ;
     rdfs:label "MG-DynamicPurchaseSystemTechnique";
     rml:logicalSource
         [

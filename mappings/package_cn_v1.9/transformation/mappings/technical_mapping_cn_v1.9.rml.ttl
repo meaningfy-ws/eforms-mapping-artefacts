@@ -1738,6 +1738,7 @@ tedm:ND-LotsGroup  a rr:TriplesMap ;
             rr:class epo:LotGroup
         ] ;
     rr:predicateObjectMap
+
         [
             rdfs:label "BT-330-Procedure";
             rr:predicate epo:hasID ;
@@ -2808,8 +2809,7 @@ tedm:ND-Lot a rr:TriplesMap ;
                         rr:parent "path(../.)";
                     ];
                 ]
-        ]
-.
+        ] .
 
 #Lot Identifier
 tedm:LotIdentifier a rr:TriplesMap ;

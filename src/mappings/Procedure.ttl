@@ -38,7 +38,6 @@ tedm:MG-Procedure_ND-LocalLegalBasisWithID a rr:TriplesMap ;
             rdfs:label "ND-LocalLegalBasisWithID";
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Procedure_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(../..)) || '?response_type=raw')}" ;
             rr:class epo:Procedure
-
         ] ;
     # currently unmappable according to feedback and instead combined in the next one BT-01(d)-Procedure
     # rr:predicateObjectMap
@@ -54,7 +53,7 @@ tedm:MG-Procedure_ND-LocalLegalBasisWithID a rr:TriplesMap ;
     #                 rml:reference "cbc:ID";
     #             ] ;
     #     ];
-rr:predicateObjectMap
+    rr:predicateObjectMap
         [
             rdfs:label "BT-01(d)-Procedure";
             rdfs:comment "Procedure Legal Basis (Description) of MG-Procedure under ND-LocalLegalBasisWithID ";
@@ -125,38 +124,38 @@ tedm:MG-Procedure_ND-ProcedureTerms a rr:TriplesMap ;
             #rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ProcedureTerms_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
             rr:class epo:Procedure
         ] ;
-
     rr:predicateObjectMap
-         [
+        [
             # FIXME this is to be instantiated from the Procedure under CrossBorderLaw
-             rdfs:label "BT-09(b)-Procedure";
-             rdfs:comment "This is the ProcedureTerm that is associated with a Procedure";
-             rr:predicate epo:isSubjectToProcedureSpecificTerm ;
-             rr:objectMap
-                 [
-                     rr:parentTriplesMap tedm:MG-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-CrossBorderLaw;
-                     rr:joinCondition [
-                         rr:child "path(.)";
-                         rr:parent "path(./..)";
-                     ];
-                 ]
-         ] ;
-rr:predicateObjectMap
-         [
-            # FIXME this is to be instantiated from a Procedure somewhere else likely under ND-LotDistribution
-             rdfs:label "BT-31-Procedure and BT-33-Procedure";
-             rdfs:comment "This is the ProcedureTerm that is associated with a Procedure";
-             rr:predicate epo:isSubjectToProcedureSpecificTerm ;
-             rr:objectMap
-                 [
-                     rr:parentTriplesMap tedm:MG-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-LotDistribution;
-                     rr:joinCondition [
-                         rr:child "path(.)";
-                         rr:parent "path(./..)";
-                     ];
-                 ]
-         ] ;
+            rdfs:label "BT-09(b)-Procedure";
+            rdfs:comment "This is the ProcedureTerm that is associated with a Procedure";
+            rr:predicate epo:isSubjectToProcedureSpecificTerm ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-CrossBorderLaw;
+                    rr:joinCondition [
+                        rr:child "path(.)";
+                        rr:parent "path(./..)";
+                    ];
+                ]
+        ] ;
+    rr:predicateObjectMap
+        [
+        # FIXME this is to be instantiated from a Procedure somewhere else likely under ND-LotDistribution
+            rdfs:label "BT-31-Procedure and BT-33-Procedure";
+            rdfs:comment "This is the ProcedureTerm that is associated with a Procedure";
+            rr:predicate epo:isSubjectToProcedureSpecificTerm ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-LotDistribution;
+                    rr:joinCondition [
+                        rr:child "path(.)";
+                        rr:parent "path(./..)";
+                    ];
+                ]
+        ] ;
 .
+
 tedm:MG-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-LotDistribution a rr:TriplesMap ;
     rdfs:label "MG-ProcedureTerm";
     rml:logicalSource
@@ -196,7 +195,8 @@ tedm:MG-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-LotDistribut
                     rr:datatype xsd:integer
                 ] ;
         ] ;
- .
+.
+
 tedm:MG-Procedure_ND-ProcedureProcurementScope a rr:TriplesMap ;
     rdfs:label "MG-Procedure";
     rml:logicalSource
@@ -322,18 +322,18 @@ tedm:MG-Procedure_ND-ProcedureProcurementScope a rr:TriplesMap ;
                 ]
         ] ;
      rr:predicateObjectMap
-         [
-             rdfs:label "BT-27-Procedure";
-             rr:predicate epo:hasEstimatedValue ;
-             rr:objectMap
-                 [
-                     rr:parentTriplesMap tedm:MG-MonetaryValue-hasEstimatedValue-Procedure_ND-ProcedureValueEstimate;
-                     rr:joinCondition [
-                         rr:child "path(.)";
-                         rr:parent "path(../.)";
-                     ];
-                 ]
-         ] ;
+        [
+            rdfs:label "BT-27-Procedure";
+            rr:predicate epo:hasEstimatedValue ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-MonetaryValue-hasEstimatedValue-Procedure_ND-ProcedureValueEstimate;
+                    rr:joinCondition [
+                        rr:child "path(.)";
+                        rr:parent "path(../.)";
+                    ];
+                ]
+        ] ;
      rr:predicateObjectMap
         [
             rdfs:label "BT-271-Procedure";
@@ -400,7 +400,6 @@ rr:predicateObjectMap
                     rr:joinCondition [
                         rr:child "path(.)";
                         rr:parent "path(../.)";
-#
                     ];
                 ]
         ]
@@ -528,7 +527,6 @@ tedm:MG-Procedure_ND-ProcedureTenderingProcess a rr:TriplesMap ;
     #                 rr:datatype xsd:string
     #             ] ;
     #     ]   ;
-
     # rr:predicateObjectMap
     #     [
     #         rdfs:label "ND-ExclusionGrounds";
@@ -619,6 +617,7 @@ tedm:MG-Procedure_ND-AcceleratedProcedure a rr:TriplesMap ;
                 ] ;
         ]   ;
 .
+
 tedm:MG-MonetaryValue-hasEstimatedValue-Procedure_ND-ProcedureValueEstimate a rr:TriplesMap ;
     rdfs:label "MG-MonetaryValue";
    rml:logicalSource
@@ -653,6 +652,7 @@ tedm:MG-MonetaryValue-hasEstimatedValue-Procedure_ND-ProcedureValueEstimate a rr
                 ] ;
         ]
 .
+
 tedm:MG-MonetaryValue-hasLaunchFrameworkAgreementMaximumValue-Procedure_ND-ProcedureValueEstimateExtension a rr:TriplesMap ;
     rdfs:label "MG-MonetaryValue";
     rml:logicalSource
@@ -688,6 +688,7 @@ tedm:MG-MonetaryValue-hasLaunchFrameworkAgreementMaximumValue-Procedure_ND-Proce
                 ] ;
         ]
  .
+
 tedm:MG-Purpose-hasPurpose-Procedure_ND-ProcedureMainClassificationCode a rr:TriplesMap ;
     rdfs:label "MG-Purpose";
     rml:logicalSource
@@ -720,6 +721,7 @@ tedm:MG-Purpose-hasPurpose-Procedure_ND-ProcedureMainClassificationCode a rr:Tri
                 ] ;
         ] ;
 .
+
 tedm:MG-Purpose-hasPurpose-Procedure_ND-ProcedureAdditionalCommodityClassification a rr:TriplesMap ;
     rdfs:label "MG-Purpose";
     rml:logicalSource
@@ -752,6 +754,7 @@ tedm:MG-Purpose-hasPurpose-Procedure_ND-ProcedureAdditionalCommodityClassificati
                 ] ;
         ] ;
 .
+
 tedm:MG-Address-address-Location-definesSpecificPlaceOfPerformance-ContractTerm-foreseesContractSpecificTerm-Procedure_ND-ProcedurePlacePerformance a rr:TriplesMap ;
     rdfs:label "MG-Address";
     rml:logicalSource
@@ -848,7 +851,6 @@ tedm:MG-Address-address-Location-definesSpecificPlaceOfPerformance-ContractTerm-
                     rml:reference "cbc:PostalZone";
                   ] ;
         ];
-
       rr:predicateObjectMap
         [
            rdfs:label "BT-5071-Procedure";
@@ -880,10 +882,10 @@ tedm:MG-Address-address-Location-definesSpecificPlaceOfPerformance-ContractTerm-
                 ] ;
         ] ;
 .
+
 tedm:MG-Location-definesSpecificPlaceOfPerformance-ContractTerm-foreseesContractSpecificTerm-Procedure_ND-ProcedurePlacePerformance a rr:TriplesMap ;
     rdfs:label "MG-Location";
     rdfs:comment "This is an iterator for the location it has the same xpath with the ND-ProcedurePlacePerformanceAdditionalInformation as this one goes through the ContractTerm";
-
     rml:logicalSource
         [
             rml:source "data/source.xml" ;
@@ -943,6 +945,7 @@ tedm:MG-Location-definesSpecificPlaceOfPerformance-ContractTerm-foreseesContract
 
         ]
 .
+
 tedm:MG-ContractTerm-foreseesContractSpecificTerm-Procedure_ND-ProcedurePlacePerformance a rr:TriplesMap ;
     rdfs:label "MG-ContractTerm";
      rml:logicalSource
@@ -1017,6 +1020,7 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-Procedure_ND-ProcedurePlacePer
 #                ] ;
 #        ]
 .
+
 tedm:MG-ContractTerm-foreseesContractSpecificTerm-Procedure_ND-ProcedurePlacePerformanceAdditionalInformation a rr:TriplesMap ;
     rdfs:label "MG-ContractTerm";
     rml:logicalSource
@@ -1043,7 +1047,6 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-Procedure_ND-ProcedurePlacePer
 #                    ];
 #                ]
 #        ] ;
-
     rr:predicateObjectMap
         [
             rdfs:label "BT-728-Procedure";
@@ -1056,6 +1059,7 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-Procedure_ND-ProcedurePlacePer
                 ] ;
         ] ;
 .
+
 tedm:MG-ExclusionGround-specifiesExclusionGround-Procedure_ND-ExclusionGrounds a rr:TriplesMap ;
     rdfs:label "MG-ExclusionGround";
     rml:logicalSource
@@ -1092,6 +1096,7 @@ tedm:MG-ExclusionGround-specifiesExclusionGround-Procedure_ND-ExclusionGrounds a
 #                ] ;
 #        ]
 .
+
 tedm:MG-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-CrossBorderLaw a rr:TriplesMap ;
     rdfs:label "MG-ProcedureTerm";
     rml:logicalSource

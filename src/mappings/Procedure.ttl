@@ -117,6 +117,7 @@ tedm:MG-Procedure_ND-ProcedureTerms a rr:TriplesMap ;
             rml:iterator "/*/cac:TenderingTerms";
             rml:referenceFormulation ql:XPath
         ] ;
+    # FIXME this is wrong, creates another procedure
     rr:subjectMap
         [
             rdfs:label "ND-ProcedureTerms";
@@ -127,6 +128,7 @@ tedm:MG-Procedure_ND-ProcedureTerms a rr:TriplesMap ;
 
     rr:predicateObjectMap
          [
+            # FIXME this is to be instantiated from the Procedure under CrossBorderLaw
              rdfs:label "BT-09(b)-Procedure";
              rdfs:comment "This is the ProcedureTerm that is associated with a Procedure";
              rr:predicate epo:isSubjectToProcedureSpecificTerm ;
@@ -141,6 +143,7 @@ tedm:MG-Procedure_ND-ProcedureTerms a rr:TriplesMap ;
          ] ;
 rr:predicateObjectMap
          [
+            # FIXME this is to be instantiated from a Procedure somewhere else likely under ND-LotDistribution
              rdfs:label "BT-31-Procedure and BT-33-Procedure";
              rdfs:comment "This is the ProcedureTerm that is associated with a Procedure";
              rr:predicate epo:isSubjectToProcedureSpecificTerm ;
@@ -1114,268 +1117,6 @@ tedm:MG-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-CrossBorderL
             rr:objectMap
                 [
                     rml:reference "cbc:DocumentDescription";
-                ] ;
-        ]
-.
-
-tedm:MG-Identifier-identifier-LotGroup-definesLotGroup-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-GroupComposition  a rr:TriplesMap ;
-    rdfs:label "MG-Identifier";
-    rml:logicalSource
-        [
-            rml:source "data/source.xml" ;
-            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='LotsGroup']" ;
-            rml:referenceFormulation ql:XPath
-        ] ;
-    rr:subjectMap
-        [
-            rdfs:label "ND-GroupComposition";
-            rml:reference "if (exists(cbc:ID)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_LotGroupIdentifier_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_LotGroupIdentifier_{cbc:ID}" ;
-            rr:class adms:Identifier
-        ] ;
-    rr:predicateObjectMap
-        [
-             #  TODO min SDK 1.6
-             # TODO min SDK 1.3 max SDK 1.5.12
-            rdfs:label "BT-330-Procedure";
-            rdfs:comment "Group Identifier of MG-Identifier under ND-LotsGroup";
-            rr:predicate skos:notation ;
-            rr:objectMap
-                [
-                    rml:reference "cbc:ID";
-                ] ;
-        ]
-.
-tedm:MG-LotGroup-definesLotGroup-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-GroupComposition  a rr:TriplesMap ;
-    rdfs:label "MG-LotGroup";
-     rml:logicalSource
-        [
-            rml:source "data/source.xml" ;
-            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='LotsGroup']" ;
-            rml:referenceFormulation ql:XPath
-        ] ;
-    rr:subjectMap
-        [
-            rdfs:label "ND-GroupComposition";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_LotGroup_{cbc:ID}" ;
-            rr:class epo:LotGroup
-        ] ;
-    rr:predicateObjectMap
-        [
-            rdfs:label "BT-330-Procedure";
-            rdfs:comment "Group Identifier of MG-Identifier under ND-LotsGroup";
-            rr:predicate adms:identifier ;
-            rr:objectMap
-                [
-                    rr:parentTriplesMap tedm:MG-Identifier-identifier-LotGroup-definesLotGroup-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-GroupComposition ;
-                     rr:joinCondition [
-                         rr:child "path(.)";
-                         rr:parent "path(.)";
-                     ];
-                ] ;
-        ] ;
-.
-tedm:MG-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-GroupComposition a rr:TriplesMap ;
-    rdfs:label "MG-ProcedureTerm";
-    rml:logicalSource
-        [
-            rml:source "data/source.xml" ;
-            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='LotsGroup']" ;
-            rml:referenceFormulation ql:XPath
-        ] ;
-    rr:subjectMap
-        [
-            rdfs:label "ND-GroupComposition";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_LotGroupProcedureTerm_{cbc:ID}" ;
-            rr:class epo:ProcedureTerm
-        ] ;
-    rr:predicateObjectMap
-        [
-            rr:predicate epo:definesLotGroup ;
-            rr:objectMap
-                [
-                    rr:parentTriplesMap tedm:MG-LotGroup-definesLotGroup-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-GroupComposition;
-                    rr:joinCondition [
-                        rr:child "path(.)";
-                        rr:parent "path(.)";
-                    ];
-                ]
-        ] ;
-.
-tedm:MG-Procedure_ND-GroupComposition a rr:TriplesMap ;
-    rdfs:label "MG-ProcedureTerm";
-    rml:logicalSource
-        [
-            rml:source "data/source.xml" ;
-            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='LotsGroup']" ;
-            rml:referenceFormulation ql:XPath
-        ] ;
-    rr:subjectMap
-        [
-            rdfs:label "ND-GroupComposition";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_LotGroupProcedure_{cbc:ID}" ;
-            rr:class epo:Procedure
-        ] ;
-    rr:predicateObjectMap
-         [
-             rdfs:label "BT-330-Procedure";
-             rdfs:comment "This is the ProcedureTerm that is associated with a Procedure";
-             rr:predicate epo:isSubjectToProcedureSpecificTerm ;
-             rr:objectMap
-                 [
-                     rr:parentTriplesMap tedm:MG-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-GroupComposition;
-                     rr:joinCondition [
-                         rr:child "path(.)";
-                         rr:parent "path(.)";
-                     ];
-                 ]
-         ] ;
-.
-tedm:MG-Identifier-identifier-Lot-setsGroupingContextForLot-LotGroup-definesLotGroup-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-GroupCompositionLotReference a rr:TriplesMap ;
-    rdfs:label "MG-Identifier";
-    rml:logicalSource
-        [
-            rml:source "data/source.xml" ;
-            rml:iterator "/*/cac:TenderingTerms/cac:LotDistribution/cac:LotsGroup/cac:ProcurementProjectLotReference";
-            rml:referenceFormulation ql:XPath
-        ];
-    rr:subjectMap
-        [
-            rdfs:label "ND-GroupCompositionLotReference";
-            rml:reference "if (exists(cbc:ID[@schemeName='Lot'])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_LotGroupIdentifierN_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
-            rr:class adms:Identifier
-        ] ;
-    rr:predicateObjectMap
-        [
-            # TODO min SDK 1.6 max SDK 1.7
-            # TODO min SDK 1.8
-            # TODO min SDK 1.3 max SDK 1.5.12
-            rdfs:label "BT-1375-Procedure";
-            rdfs:comment "Group Lot Identifier of MG-Identifier under ND-GroupCompositionLotReference";
-            rr:predicate skos:notation ;
-            rr:objectMap
-                [
-                    rml:reference "cbc:ID[@schemeName='Lot']";
-                ] ;
-        ]
-.
-tedm:MG-Lot-setsGroupingContextForLot-LotGroup-definesLotGroup-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-GroupCompositionLotReference a rr:TriplesMap ;
-    rdfs:label "MG-Lot";
-    rml:logicalSource
-        [
-            rml:source "data/source.xml" ;
-            rml:iterator "/*/cac:TenderingTerms/cac:LotDistribution/cac:LotsGroup/cac:ProcurementProjectLotReference";
-            rml:referenceFormulation ql:XPath
-        ];
-    rr:subjectMap
-        [
-             rdfs:label "ND-GroupCompositionLotReference";
-             rml:reference "if (exists(cbc:ID[@schemeName='Lot'])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_Lot_GroupProcedureTermID_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
-#            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Lot_GroupProcedureTermID_{cbc:ID}" ;
-             rr:class epo:Lot
-        ] ;
-    rr:predicateObjectMap
-        [
-            rdfs:label "BT-1375-Procedure";
-            rdfs:comment "Group Lot Identifier of MG-Lot under ND-GroupCompositionLotReference";
-            rr:predicate adms:identifier;
-            rr:objectMap
-                [
-                     rr:parentTriplesMap tedm:MG-Identifier-identifier-Lot-setsGroupingContextForLot-LotGroup-definesLotGroup-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-GroupCompositionLotReference ;
-                     rr:joinCondition [
-                         rr:child "path(.)";
-                         rr:parent "path(.)";
-                     ];
-                ] ;
-        ]
-.
-tedm:MG-LotGroup-definesLotGroup-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-GroupCompositionLotReference a rr:TriplesMap ;
-    rdfs:label "MG-LotGroup";
-    rml:logicalSource
-        [
-            rml:source "data/source.xml" ;
-            rml:iterator "/*/cac:TenderingTerms/cac:LotDistribution/cac:LotsGroup/cac:ProcurementProjectLotReference";
-            rml:referenceFormulation ql:XPath
-        ];
-    rr:subjectMap
-        [
-             rdfs:label "ND-GroupCompositionLotReference";
-             rml:reference "if (exists(cbc:ID[@schemeName='Lot'])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_Lot_GroupProcedureTermNID_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
-#            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Lot_GroupProcedureTermID_{cbc:ID}" ;
-             rr:class epo:LotGroup
-        ] ;
-    rr:predicateObjectMap
-        [
-            rdfs:label "BT-1375-Procedure";
-            rdfs:comment "Group Lot Identifier of MG-LotGroup under ND-GroupCompositionLotReference";
-            rr:predicate  epo:setsGroupingContextForLot;
-            rr:objectMap
-                [
-                     rr:parentTriplesMap tedm:MG-Lot-setsGroupingContextForLot-LotGroup-definesLotGroup-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-GroupCompositionLotReference ;
-                     rr:joinCondition [
-                         rr:child "path(.)";
-                         rr:parent "path(.)";
-                     ];
-                ] ;
-        ]
-.
-tedm:MG-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-GroupCompositionLotReference a rr:TriplesMap ;
-    rdfs:label "MG-ProcedureTerm";
-    rml:logicalSource
-        [
-            rml:source "data/source.xml" ;
-            rml:iterator "/*/cac:TenderingTerms/cac:LotDistribution/cac:LotsGroup/cac:ProcurementProjectLotReference";
-            rml:referenceFormulation ql:XPath
-        ];
-    rr:subjectMap
-        [
-             rdfs:label "ND-GroupCompositionLotReference";
-             rml:reference "if (exists(cbc:ID[@schemeName='Lot'])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_Lot_GroupProcedureTermL_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
-#            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Lot_GroupProcedureTermID_{cbc:ID}" ;
-             rr:class epo:ProcedureTerm
-        ] ;
-    rr:predicateObjectMap
-        [
-            rdfs:label "BT-1375-Procedure";
-            rdfs:comment "Group Lot Identifier of MG-ProcedureTerm under ND-GroupCompositionLotReference";
-            rr:predicate  epo:definesLotGroup;
-            rr:objectMap
-                [
-                     rr:parentTriplesMap tedm:MG-LotGroup-definesLotGroup-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-GroupCompositionLotReference ;
-                     rr:joinCondition [
-                         rr:child "path(.)";
-                         rr:parent "path(.)";
-                     ];
-                ] ;
-        ]
-.
-tedm:MG-Procedure_ND-GroupCompositionLotReference a rr:TriplesMap ;
-    rdfs:label "MG-ProcedureTerm";
-    rml:logicalSource
-        [
-            rml:source "data/source.xml" ;
-            rml:iterator "/*/cac:TenderingTerms/cac:LotDistribution/cac:LotsGroup/cac:ProcurementProjectLotReference";
-            rml:referenceFormulation ql:XPath
-        ];
-    rr:subjectMap
-        [
-             rdfs:label "ND-GroupCompositionLotReference";
-             rml:reference "if (exists(cbc:ID[@schemeName='Lot'])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_Lot_GroupProcedureTermD_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
-#            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Lot_GroupProcedureTermID_{cbc:ID}" ;
-             rr:class epo:Procedure
-        ] ;
-    rr:predicateObjectMap
-        [
-            rdfs:label "BT-1375-Procedure";
-            rdfs:comment "Group Lot Identifier of MG-Procedure under ND-GroupCompositionLotReference";
-            rr:predicate  epo:isSubjectToProcedureSpecificTerm;
-            rr:objectMap
-                [
-                     rr:parentTriplesMap tedm:MG-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-GroupCompositionLotReference ;
-                     rr:joinCondition [
-                         rr:child "path(.)";
-                         rr:parent "path(.)";
-                     ];
                 ] ;
         ]
 .

@@ -80,7 +80,6 @@ tedm:MG-Procedure_ND-LocalLegalBasisNoID a rr:TriplesMap ;
             rdfs:label "ND-LocalLegalBasisNoID";
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Procedure_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(../..)) || '?response_type=raw')}" ;
             rr:class epo:Procedure
-
         ] ;
     # currently unmappable according to feedback but makes no sense with the next one mapped
     # rr:predicateObjectMap
@@ -108,52 +107,86 @@ tedm:MG-Procedure_ND-LocalLegalBasisNoID a rr:TriplesMap ;
         ]
 .
 
-tedm:MG-Procedure_ND-ProcedureTerms a rr:TriplesMap ;
-    rdfs:label "MG-ProcedureTerm";
+# TODO MG missing in CM
+tedm:MG-Procedure_ND-CrossBorderLaw a rr:TriplesMap ;
+    rdfs:label "MG-Procedure";
     rml:logicalSource
         [
             rml:source "data/source.xml" ;
-            rml:iterator "/*/cac:TenderingTerms";
+            rml:iterator "/*/cac:TenderingTerms/cac:ProcurementLegislationDocumentReference[cbc:ID/text()='CrossBorderLaw']";
             rml:referenceFormulation ql:XPath
         ] ;
-    # FIXME this is wrong, creates another procedure
     rr:subjectMap
         [
-            rdfs:label "ND-ProcedureTerms";
-            rml:reference "if (exists(descendant::cbc:MaximumLotsSubmittedNumeric) or exists(descendant::cbc:MaximumLotsAwardedNumeric) or exists(cac:ProcurementLegislationDocumentReference[cbc:ID/text()='CrossBorderLaw']/cbc:ID[text()='CrossBorderLaw'])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_ProcedureTerms_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
-            #rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ProcedureTerms_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rdfs:label "ND-CrossBorderLaw";
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Procedure_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(../..)) || '?response_type=raw')}" ;
             rr:class epo:Procedure
         ] ;
     rr:predicateObjectMap
         [
-            # FIXME this is to be instantiated from the Procedure under CrossBorderLaw
-            rdfs:label "BT-09(b)-Procedure";
-            rdfs:comment "This is the ProcedureTerm that is associated with a Procedure";
+            rdfs:label "ProcedureTerm";
+            rdfs:comment "Composition relationship between Procedure and ProcedureTerm";
             rr:predicate epo:isSubjectToProcedureSpecificTerm ;
             rr:objectMap
                 [
                     rr:parentTriplesMap tedm:MG-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-CrossBorderLaw;
                     rr:joinCondition [
                         rr:child "path(.)";
-                        rr:parent "path(./..)";
+                        rr:parent "path(.)";
                     ];
                 ]
         ] ;
+.
+
+# TODO min SDK 1.3 max SDK 1.3 required only for BT-01(c)-Procedure
+# tedm:MG-Procedure_ND-ProcedureTerms a rr:TriplesMap ;
+#     rdfs:label "MG-Procedure";
+#     rml:logicalSource
+#         [
+#             rml:source "data/source.xml" ;
+#             rml:iterator "/*/cac:TenderingTerms";
+#             rml:referenceFormulation ql:XPath
+#         ] ;
+#     rr:subjectMap
+#         [
+#             rdfs:label "ND-ProcedureTerms";
+#             rdfs:comment "Primary type declaration of MG-Procedure under ND-ProcedureTerms";
+#             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Procedure_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
+#             rr:class epo:Procedure
+#         ] ;
+# .
+
+# TODO MG missing in CM
+tedm:MG-Procedure_ND-LotDistribution a rr:TriplesMap ;
+    rdfs:label "MG-Procedure";
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/cac:TenderingTerms/cac:LotDistribution";
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-LotDistribution";
+            rdfs:comment "Primary type declaration of MG-Procedure under ND-LotDistribution";
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Procedure_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(../..)) || '?response_type=raw')}" ;
+            rr:class epo:Procedure
+        ] ;
     rr:predicateObjectMap
         [
-        # FIXME this is to be instantiated from a Procedure somewhere else likely under ND-LotDistribution
-            rdfs:label "BT-31-Procedure and BT-33-Procedure";
-            rdfs:comment "This is the ProcedureTerm that is associated with a Procedure";
+            rdfs:label "ProcedureTerm";
+            rdfs:comment "Composition relationship between Procedure and ProcedureTerm";
             rr:predicate epo:isSubjectToProcedureSpecificTerm ;
             rr:objectMap
                 [
                     rr:parentTriplesMap tedm:MG-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-LotDistribution;
                     rr:joinCondition [
                         rr:child "path(.)";
-                        rr:parent "path(./..)";
+                        rr:parent "path(.)";
                     ];
                 ]
         ] ;
+        # TODO BT-330-Procedure definesLotGroup -> LotGroup -> BT-1375 setsGroupingContextForLot -> Lot
 .
 
 tedm:MG-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-LotDistribution a rr:TriplesMap ;
@@ -167,30 +200,31 @@ tedm:MG-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-LotDistribut
     rr:subjectMap
         [
             rdfs:label "ND-LotDistribution";
-            rml:reference "if (exists(descendant::cbc:MaximumLotsSubmittedNumeric) or exists(descendant::cbc:MaximumLotsAwardedNumeric) or exists(cac:ProcurementLegislationDocumentReference[cbc:ID/text()='CrossBorderLaw']/cbc:ID[text()='CrossBorderLaw'])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_ProcedureTerms_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
-            #rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ProcedureTerms_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rdfs:comment "Primary type declaration of MG-ProcedureTerm under ND-LotDistribution";
+            # rml:reference "if (exists(cbc:MaximumLotsSubmittedNumeric) or exists(cbc:MaximumLotsAwardedNumeric)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_ProcedureTerms_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ProcedureTerms_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
             rr:class epo:ProcedureTerm
         ] ;
     rr:predicateObjectMap
         [
-            # TODO min SDK 1.6
-            rdfs:label "BT-31-Procedure MG-ProcedureTerm under ND-ND-LotDistribution";
-            rdfs:comment "Lots Max Allowed of MG-ProcedureTerm under  ";
-            rr:predicate  epo:hasMaximumLotSubmissionAllowed  ;
+            rdfs:label "BT-31-Procedure";
+            rdfs:comment "Lots Max Allowed of MG-ProcedureTerm under ND-LotDistribution";
+            rr:predicate epo:hasMaximumLotSubmissionAllowed ;
             rr:objectMap
                 [
+                    tedm:minSDKVersion 1.6 ;
                     rml:reference "cbc:MaximumLotsSubmittedNumeric";
                     rr:datatype xsd:integer
                 ] ;
         ] ;
     rr:predicateObjectMap
         [
-            # TODO min SDK 1.6
             rdfs:label "BT-33-Procedure";
-            rdfs:comment  "Lots Max Awarded MG-ProcedureTerm under ND-ND-LotDistribution";
-            rr:predicate  epo:hasMaximumNumberOfLotsToBeAwarded  ;
+            rdfs:comment "Lots Max Awarded of MG-ProcedureTerm under ND-LotDistribution";
+            rr:predicate epo:hasMaximumNumberOfLotsToBeAwarded ;
             rr:objectMap
                 [
+                    tedm:minSDKVersion 1.6 ;
                     rml:reference "cbc:MaximumLotsAwardedNumeric";
                     rr:datatype xsd:integer
                 ] ;
@@ -1108,17 +1142,16 @@ tedm:MG-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-CrossBorderL
     rr:subjectMap
         [
             rdfs:label "ND-CrossBorderLaw";
-#            rml:reference "if (exists(cbc:MaximumLotsSubmittedNumeric) or exists(cbc:MaximumLotsAwardedNumeric) or exists(cac:ProcurementLegislationDocumentReference[cbc:ID/text()='CrossBorderLaw']/cbc:ID[text()='CrossBorderLaw'])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_ProcedureTerms_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
+            rdfs:comment "Primary type declaration of MG-ProcedureTerm under ND-CrossBorderLaw";
+            # rml:reference "if (exists(cac:ProcurementLegislationDocumentReference[cbc:ID/text()='CrossBorderLaw']/cbc:ID[text()='CrossBorderLaw'])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_ProcedureTerms_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ProcedureTerms_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
             rr:class epo:ProcedureTerm
         ] ;
     rr:predicateObjectMap
         [
-            # TODO min SDK 1.3 max SDK 1.7
-            # TODO min SDK 1.8
-            rdfs:label "BT-09(a)-Procedure";
-            rdfs:comment  "Cross Border Law of MG-ProcedureTerm under ND-CrossBorderLaw";
-            rr:predicate  epo:hasCrossBorderLaw  ;
+            rdfs:label "BT-09(b)-Procedure";
+            rdfs:comment "Cross Border Law Description of MG-ProcedureTerm under ND-CrossBorderLaw";
+            rr:predicate epo:hasCrossBorderLaw ;
             rr:objectMap
                 [
                     rml:reference "cbc:DocumentDescription";

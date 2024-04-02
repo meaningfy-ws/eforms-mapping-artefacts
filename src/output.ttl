@@ -486,11 +486,6 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerms_BniuuBzYtT7voNxpkh6A9
   epo:hasMaximumLotSubmissionAllowed 2;
   epo:hasMaximumNumberOfLotsToBeAwarded 2 .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerms_UkA4NavMbVKymCiDgm45qc
-  a epo:Procedure;
-  epo:isSubjectToProcedureSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerms_5ePSyM3yjeKrNdoLehDe7g,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerms_BniuuBzYtT7voNxpkh6A9M .
-
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureValueEstimateExtension_9thMAaeveYJRewotgDGorG
   a epo:MonetaryValue;
   epo:hasAmountValue 247547.0;
@@ -510,6 +505,8 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_MnX8qyREnFMNLeS5MJAX9K a e
   epo:hasProcedureType <http://publications.europa.eu/resource/authority/procurement-procedure-type/neg-w-call>;
   epo:hasPurpose epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_eySzap22e3jkZr3f7VXYNj;
   epo:isAccelerated true;
+  epo:isSubjectToProcedureSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerms_5ePSyM3yjeKrNdoLehDe7g,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerms_BniuuBzYtT7voNxpkh6A9M;
   dct:description "Description ---"@en;
   dct:title "Procurement Title ---"@en .
 

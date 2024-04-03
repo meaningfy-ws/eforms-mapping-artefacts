@@ -114,7 +114,6 @@ tedm:MG-Identifier-identifier-ContactPoint_ND-Touchpoint a rr:TriplesMap ;
         [
             rdfs:label "ND-Touchpoint" ;
             rml:reference "if (exists(cbc:ID)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_Identifier_' || cbc:ID else null" ;
-            # rml:reference "if (exists(cbc:ID)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_TouchPointIdentifier_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
             rr:class epo:Identifier
         ] ;
         rr:predicateObjectMap
@@ -161,7 +160,6 @@ tedm:MG-Address-address-ContactPoint_ND-TouchpointAddress a rr:TriplesMap ;
             rr:objectMap
                 [
                     rml:reference "replace(replace(cbc:Department || ', ' || cbc:StreetName || ', ' || cbc:AdditionalStreetName || ', ' || cbc:Line || ', ' || cbc:CityName || ', ' || cbc:PostalZone || ', ' || cac:Country/cbc:IdentificationCode, '(, )+', ', '),  '^, |, $', '')" ;
-                    # rml:reference "normalize-space(cbc:Department || ' ' || cbc:StreetName || ' ' || cbc:AdditionalStreetName || ' ' || cbc:Line || ' ' || cbc:CityName || ' ' || cbc:PostalZone || ' ' || cac:Country/cbc:IdentificationCode)" ;
                 ] ;
         ] ;
     rr:predicateObjectMap
@@ -205,7 +203,7 @@ tedm:MG-Address-address-ContactPoint_ND-TouchpointAddress a rr:TriplesMap ;
             rr:objectMap
                 [
                     rdfs:label "at-voc:country" ;
-                    # this is an example of a workaround to instantiate vocabulary IRIs instead of mapping to a vocabulary parent resource
+                    # alternative: instantiate vocabulary IRIs instead of mapping to a vocabulary parent resource
                     # rml:reference "'http://publications.europa.eu/resource/authority/country/' || cac:Country/cbc:IdentificationCode" ;
                     # rr:termType rr:IRI ;
                     rr:parentTriplesMap tedm:country ;

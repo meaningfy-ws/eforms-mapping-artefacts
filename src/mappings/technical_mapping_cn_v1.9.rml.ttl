@@ -126,7 +126,6 @@ tedm:MG-Notice_ND-Root
             rr:objectMap
                 [
                     rdfs:label "at-voc:notice-type" ;
-                    # rml:reference "cbc:NoticeTypeCode" ;
                     rr:parentTriplesMap tedm:notice-type ;
                     rr:joinCondition [
                         rr:child "cbc:NoticeTypeCode" ;
@@ -142,7 +141,6 @@ tedm:MG-Notice_ND-Root
             rr:objectMap
                 [
                     rdfs:label "at-voc:form-type" ;
-                    # rml:reference "cbc:NoticeTypeCode/@listName" ;
                     rr:parentTriplesMap tedm:form-type ;
                     rr:joinCondition [
                         rr:child "cbc:NoticeTypeCode/@listName" ;
@@ -188,7 +186,6 @@ tedm:MG-Notice_ND-Root
             rr:objectMap
                 [
                     rdfs:label "at-voc:language" ;
-                    # rml:reference "cbc:NoticeLanguageCode" ;
                     rr:parentTriplesMap tedm:language ;
                     # we look up as complete IRI for full coverage -- if we don't find one we don't map
                     rr:joinCondition [
@@ -205,7 +202,6 @@ tedm:MG-Notice_ND-Root
             rr:objectMap
                 [
                     rdfs:label "at-voc:language" ;
-                    # rml:reference "cac:AdditionalNoticeLanguage/cbc:ID" ;
                     rr:parentTriplesMap tedm:language ;
                     rr:joinCondition [
                         rr:child "'http://publications.europa.eu/resource/authority/language/' || cac:AdditionalNoticeLanguage/cbc:ID" ;
@@ -231,11 +227,9 @@ tedm:MG-Notice_ND-Root
         [
             rdfs:label "OPP-070-notice" ;
             rdfs:comment "Notice Subtype of MG-Notice under ND-Root" ;
-            # rr:predicate epo:hasEFormsSubtype ;
             rr:predicate rdf:type ;
             rr:objectMap
                 [
-                    # rml:reference "ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeSubType/cbc:SubTypeCode" ;
                     rml:reference "'http://data.europa.eu/a4g/ontology#Notice' || ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeSubType/cbc:SubTypeCode" ;
                     rr:termType rr:IRI ;
                 ] ;

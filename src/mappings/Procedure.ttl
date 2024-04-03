@@ -141,7 +141,7 @@ tedm:MG-Procedure_ND-ProcedureProcurementScope a rr:TriplesMap ;
             rr:objectMap
                 [
                     rr:parentTriplesMap tedm:MG-ContractTerm_ND-ProcedurePlacePerformanceAdditionalInformation ;
-                    # TODO why do this?
+                    # TODO check if this is needed
                     # rr:joinCondition [
                     #     rr:child "path(.)";
                     #     rr:parent "path(../.)";
@@ -246,9 +246,7 @@ tedm:MG-Procedure_ND-ProcedureTenderingProcess a rr:TriplesMap ;
             rr:predicate epo:hasProcedureType ;
             rr:objectMap
                 [
-                    # TODO at-voc
                     rdfs:label "at-voc:procurement-procedure-type" ;
-                    # rml:reference "cbc:ProcedureCode" ;
                     rr:parentTriplesMap tedm:procurement-procedure-type ;
                     rr:joinCondition [
                         rr:child "cbc:ProcedureCode" ;
@@ -265,7 +263,6 @@ tedm:MG-Procedure_ND-ProcedureTenderingProcess a rr:TriplesMap ;
             rr:objectMap
                 [
                     rdfs:label "at-voc:legal-basis" ;
-                    # rml:reference "/*/cbc:RegulatoryDomain" ;
                     rr:parentTriplesMap tedm:legal-basis ;
                     rr:joinCondition [
                         rr:child "/*/cbc:RegulatoryDomain" ;

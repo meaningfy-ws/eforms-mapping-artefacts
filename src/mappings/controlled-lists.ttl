@@ -147,7 +147,6 @@ tedm:language a rr:TriplesMap ;
         ]
 .
 
-# TODO why is the file w/ underscore? (the at-voc in ePO is w/ hyphen)
 tedm:legal-basis a rr:TriplesMap ;
     rml:logicalSource
         [

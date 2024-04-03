@@ -282,8 +282,17 @@ tedm:MG-Identifier-identifier-Lot_ND-Lot a rr:TriplesMap ;
                 [
                     rml:reference "cbc:ID";
                 ] ;
-        ]
-    # TODO add hasScheme
+        ];
+     rr:predicateObjectMap
+        [
+            rdfs:label "BT-137-Lot-Scheme" ;
+            rdfs:comment "Scheme of MG-Identifier under ND-Lot" ;
+            rr:predicate epo:hasScheme ;
+            rr:objectMap
+                [
+                    rml:reference "cbc:ID/@schemeName";
+                ] ;
+        ] ;
 .
 tedm:MG-Identifier-identifier-PlanningNotice-refersToPrevious-Notice_ND-LotPreviousPlanning a rr:TriplesMap ;
     rdfs:label "MG-Identifier";
@@ -304,14 +313,24 @@ tedm:MG-Identifier-identifier-PlanningNotice-refersToPrevious-Notice_ND-LotPrevi
         [
             # TODO link to LOt (In CM no link)
             rdfs:label "BT-125(i)-Lot";
-            rdfs:comment "Previous Planning Identifier of MG-Identifier under ND-LotPreviousPlanning ";
+            rdfs:comment "Previous Planning Identifier of MG-Identifier under ND-LotPreviousPlanning";
             rr:predicate skos:notation ;
             rr:objectMap
                 [
                     rml:reference "cbc:ID";
                 ] ;
-        ]
-    # TODO add hasScheme
+        ];
+
+#   rr:predicateObjectMap
+#        [
+#            rdfs:label "BT-125(i)-Lot-Scheme" ;
+#            rdfs:comment "Scheme of MG-Identifier under ND-LotPreviousPlanning" ;
+#            rr:predicate epo:hasScheme ;
+#            rr:objectMap
+#                [
+#                    rml:reference "cbc:ID/@schemeName";
+#                ] ;
+#        ] ;
 .
 tedm:MG-PlanningNotice-refersToPrevious-Notice_ND-LotPreviousPlanning a rr:TriplesMap ;
     rdfs:label "MG-PlanningNotice";

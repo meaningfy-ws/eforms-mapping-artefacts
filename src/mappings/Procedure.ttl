@@ -62,6 +62,18 @@ tedm:MG-Procedure_ND-LocalLegalBasisWithID a rr:TriplesMap ;
                 [
                     rml:reference "normalize-space(cbc:ID || ' ' || cbc:ID/@schemeName || ' ' || cbc:DocumentDescription)";
                     # rml:reference "cbc:DocumentDescription";
+                    rml:languageMap [
+                        fnml:functionValue [
+                            rr:predicateObjectMap [
+                                rr:predicate idlab-fn:str ;
+                                rr:objectMap [ rml:reference "'http://publications.europa.eu/resource/authority/language/' || cbc:DocumentDescription/@languageID" ]
+                            ] ,
+                            tedm:idlab-fn_executes_lookup ,
+                            tedm:idlab-fn_inputFile_language ,
+                            tedm:idlab-fn_fromColumn_0 ,
+                            tedm:idlab-fn_toColumn_1
+                        ]
+                    ] ;
                 ] ;
         ]
 .
@@ -103,6 +115,18 @@ tedm:MG-Procedure_ND-LocalLegalBasisNoID a rr:TriplesMap ;
                 [
                     tedm:minSDKVersion "1.4" ;
                     rml:reference "cbc:DocumentDescription";
+                    rml:languageMap [
+                        fnml:functionValue [
+                            rr:predicateObjectMap [
+                                rr:predicate idlab-fn:str ;
+                                rr:objectMap [ rml:reference "'http://publications.europa.eu/resource/authority/language/' || cbc:DocumentDescription/@languageID" ]
+                            ] ,
+                            tedm:idlab-fn_executes_lookup ,
+                            tedm:idlab-fn_inputFile_language ,
+                            tedm:idlab-fn_fromColumn_0 ,
+                            tedm:idlab-fn_toColumn_1
+                        ]
+                    ] ;
                 ] ;
         ]
 .
@@ -878,13 +902,26 @@ tedm:MG-Address-address-Location-definesSpecificPlaceOfPerformance-ContractTerm-
         ] ;
     rr:predicateObjectMap
         [
-            rdfs:label "BT-5101(a|b|c),BT-5121,BT-5131,5141-Organization-Company" ;
+            rdfs:label "BT-5101(a|b|c),BT-5121,BT-5131,5141" ;
             rdfs:comment "Aggregate of Department, Street, Streetline 1, Streetline 2,  City,  Post Code,  Country Code" ;
             rr:predicate locn:fullAddress ;
             rr:objectMap
                 [
                     rml:reference "normalize-space(cbc:Department || ' ' || cbc:StreetName || ' ' || cbc:AdditionalStreetName || ' ' || cbc:Line || ' ' || cbc:CityName || ' ' || cbc:PostalZone || ' ' || cac:Country/cbc:IdentificationCode)" ;
+#                rml:languageMap [
+#                        fnml:functionValue [
+#                            rr:predicateObjectMap [
+#                                rr:predicate idlab-fn:str ;
+#                                rr:objectMap [ rml:reference "'http://publications.europa.eu/resource/authority/language/' || cbc:Description/@languageID" ]
+#                            ] ,
+#                            tedm:idlab-fn_executes_lookup ,
+#                            tedm:idlab-fn_inputFile_language ,
+#                            tedm:idlab-fn_fromColumn_0 ,
+#                            tedm:idlab-fn_toColumn_1
+#                        ]
+#                    ] ;
                 ] ;
+
         ] ;
 #    rr:predicateObjectMap
 #        [
@@ -1160,6 +1197,18 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-Procedure_ND-ProcedurePlacePer
             rr:objectMap
                 [
                     rml:reference "cbc:Description";
+                    rml:languageMap [
+                        fnml:functionValue [
+                            rr:predicateObjectMap [
+                                rr:predicate idlab-fn:str ;
+                                rr:objectMap [ rml:reference "'http://publications.europa.eu/resource/authority/language/' || cbc:Description/@languageID" ]
+                            ] ,
+                            tedm:idlab-fn_executes_lookup ,
+                            tedm:idlab-fn_inputFile_language ,
+                            tedm:idlab-fn_fromColumn_0 ,
+                            tedm:idlab-fn_toColumn_1
+                        ]
+                    ] ;
 
                 ] ;
         ] ;
@@ -1226,6 +1275,18 @@ tedm:MG-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-CrossBorderL
             rr:objectMap
                 [
                     rml:reference "cbc:DocumentDescription";
+                    rml:languageMap [
+                        fnml:functionValue [
+                            rr:predicateObjectMap [
+                                rr:predicate idlab-fn:str ;
+                                rr:objectMap [ rml:reference "'http://publications.europa.eu/resource/authority/language/' || cbc:DocumentDescription/@languageID" ]
+                            ] ,
+                            tedm:idlab-fn_executes_lookup ,
+                            tedm:idlab-fn_inputFile_language ,
+                            tedm:idlab-fn_fromColumn_0 ,
+                            tedm:idlab-fn_toColumn_1
+                        ]
+                    ] ;
                 ] ;
         ]
 .

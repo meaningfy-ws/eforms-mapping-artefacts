@@ -1,0 +1,25 @@
+name: Tests
+
+on:
+  push:
+    branches: [ feature/* , main , release/* ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: Tests
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    # - name: Set up Python
+    #   uses: actions/setup-python@v4
+    #   with:
+    #     python-version: 3.8
+    - name: Update OS
+      run: sudo apt-get update
+    - name: Install dependencies
+      run: make setup-jena-tools
+    - name: Run Tests
+      run: make test

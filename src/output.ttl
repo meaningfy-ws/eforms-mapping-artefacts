@@ -333,6 +333,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Notice a epo:CompetitionNotice, epo:
   epo:hasOfficialLanguage "ENG";
   epo:hasPublicationDate "2023-11-07Z"^^xsd:date;
   epo:hasVersion "03";
+  epo:refersToPrevious epd:id_9c0fd704-64d3-4294-a3b6-6df45911ab9f-01_Notice;
   adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_NoticeIdentifier_cMBzh6pL4JRkiaCd4DWjT2 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_NoticeIdentifier_cMBzh6pL4JRkiaCd4DWjT2
@@ -427,42 +428,6 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0007 a org:Organiza
   epo:hasPrimaryContactPoint epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyContactPoint_dxvvStPQ7ekRVg6xG9QN3E;
   cccev:registeredAddress epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_dtBY8KdbdWyJb9xZnV4Xcw;
   adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0007 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_PlannedProcurementPartIdentifier_UinoqmoRR38aq4t6ex6TZE
-  a epo:PlannedProcurementPart, adms:Identifier;
-  skos:notation "9c0fd704-64d3-4294-a3b6-6df45911ab9f-01";
-  adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_PlannedProcurementPartIdentifier_UinoqmoRR38aq4t6ex6TZE .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_PlannedProcurementPartIdentifier_WoMnHyzoNPLZbD3ftSkt26
-  a epo:PlannedProcurementPart, adms:Identifier;
-  skos:notation "9c0fd704-64d3-4294-a3b6-6df45911ab9f-01";
-  adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_PlannedProcurementPartIdentifier_WoMnHyzoNPLZbD3ftSkt26 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_PlanningNoticeIdentifier_UinoqmoRR38aq4t6ex6TZE
-  a adms:Identifier;
-  skos:notation "9c0fd704-64d3-4294-a3b6-6df45911ab9f-01" .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_PlanningNoticeIdentifier_WoMnHyzoNPLZbD3ftSkt26
-  a adms:Identifier;
-  skos:notation "9c0fd704-64d3-4294-a3b6-6df45911ab9f-01" .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_PlanningNoticeNoticeIdentifier_UinoqmoRR38aq4t6ex6TZE
-  a epo:PlanningNotice;
-  epo:announcesPlannedProcurementPart epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_PlannedProcurementPartIdentifier_UinoqmoRR38aq4t6ex6TZE;
-  adms:Identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_PlanningNoticeIdentifier_UinoqmoRR38aq4t6ex6TZE .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_PlanningNoticeNoticeIdentifier_WoMnHyzoNPLZbD3ftSkt26
-  a epo:PlanningNotice;
-  epo:announcesPlannedProcurementPart epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_PlannedProcurementPartIdentifier_WoMnHyzoNPLZbD3ftSkt26;
-  adms:Identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_PlanningNoticeIdentifier_WoMnHyzoNPLZbD3ftSkt26 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_PlanningNotice_UinoqmoRR38aq4t6ex6TZE
-  a epo:Notice;
-  epo:refersToPrevious epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_PlanningNoticeNoticeIdentifier_UinoqmoRR38aq4t6ex6TZE .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_PlanningNotice_WoMnHyzoNPLZbD3ftSkt26
-  a epo:Notice;
-  epo:refersToPrevious epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_PlanningNoticeNoticeIdentifier_WoMnHyzoNPLZbD3ftSkt26 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureIdentifier_eySzap22e3jkZr3f7VXYNj
   a adms:Identifier;
@@ -626,3 +591,19 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_VrhSdfx4KsPjDwzxKDzs5A a 
   dct:description "Fin Adm Archives"@en;
   adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_TPO-0002;
   locn:address epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_ZDibsmqh6XaKEG4WjjfUDb .
+
+epd:id_9c0fd704-64d3-4294-a3b6-6df45911ab9f-01_Notice a epo:PlanningNotice;
+  epo:announcesPlannedProcurementPart epd:id_9c0fd704-64d3-4294-a3b6-6df45911ab9f-01_PlannedProcurementPart_K53mu54F9PCk4RoVqcWwaL;
+  adms:Identifier epd:id_9c0fd704-64d3-4294-a3b6-6df45911ab9f-01_PlanningNoticeIdentifier_K53mu54F9PCk4RoVqcWwaL .
+
+epd:id_9c0fd704-64d3-4294-a3b6-6df45911ab9f-01_PlannedProcurementPartIdentifier_K53mu54F9PCk4RoVqcWwaL
+  a adms:Identifier;
+  skos:notation "123" .
+
+epd:id_9c0fd704-64d3-4294-a3b6-6df45911ab9f-01_PlannedProcurementPart_K53mu54F9PCk4RoVqcWwaL
+  a epo:PlannedProcurementPart;
+  adms:identifier epd:id_9c0fd704-64d3-4294-a3b6-6df45911ab9f-01_PlannedProcurementPartIdentifier_K53mu54F9PCk4RoVqcWwaL .
+
+epd:id_9c0fd704-64d3-4294-a3b6-6df45911ab9f-01_PlanningNoticeIdentifier_K53mu54F9PCk4RoVqcWwaL
+  a adms:Identifier;
+  skos:notation "9c0fd704-64d3-4294-a3b6-6df45911ab9f-01" .

@@ -270,7 +270,6 @@ tedm:MG-Identifier-identifier-Lot_ND-Lot a rr:TriplesMap ;
         ];
     rr:subjectMap
         [
-            # TODO update the reference to include the ID
             rml:reference "if (exists(cbc:ID)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_LotIdentifier_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
             rr:class adms:Identifier
         ] ;
@@ -294,6 +293,8 @@ tedm:MG-Identifier-identifier-Lot_ND-Lot a rr:TriplesMap ;
                 ] ;
         ] ;
 .
+
+# this is an example of a linked resource that is instantiated on an iterator that repeats, but for a parent resource that does not
 tedm:MG-Identifier-identifier-PlanningNotice-refersToPrevious-Notice_ND-LotPreviousPlanning a rr:TriplesMap ;
     rdfs:label "MG-Identifier";
    rml:logicalSource
@@ -304,9 +305,9 @@ tedm:MG-Identifier-identifier-PlanningNotice-refersToPrevious-Notice_ND-LotPrevi
         ];
     rr:subjectMap
         [
-            # TODO update the reference to include the ID
             rdfs:label "ND-LotPreviousPlanning";
-            rml:reference "if (exists(cbc:ID)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_PlanningNoticeIdentifier_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
+            # this is an example of an IRI component hashing on an explicit element to prevent unwanted instances (owing to an iterator that has repeating elements)
+            rml:reference "if (exists(cbc:ID)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(cbc:ID, ' ', '-' ), '/' , '-') || '_PlanningNoticeIdentifier_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(cbc:ID) || '?response_type=raw') else null" ;
             rr:class adms:Identifier
         ] ;
     rr:predicateObjectMap
@@ -320,7 +321,6 @@ tedm:MG-Identifier-identifier-PlanningNotice-refersToPrevious-Notice_ND-LotPrevi
                     rml:reference "cbc:ID";
                 ] ;
         ];
-
 #   rr:predicateObjectMap
 #        [
 #            rdfs:label "BT-125(i)-Lot-Scheme" ;
@@ -332,6 +332,8 @@ tedm:MG-Identifier-identifier-PlanningNotice-refersToPrevious-Notice_ND-LotPrevi
 #                ] ;
 #        ] ;
 .
+
+# this is an example of an external root resource (Notice) instantiation for referencing
 tedm:MG-PlanningNotice-refersToPrevious-Notice_ND-LotPreviousPlanning a rr:TriplesMap ;
     rdfs:label "MG-PlanningNotice";
    rml:logicalSource
@@ -342,9 +344,9 @@ tedm:MG-PlanningNotice-refersToPrevious-Notice_ND-LotPreviousPlanning a rr:Tripl
         ];
     rr:subjectMap
         [
-            # TODO update the reference to include the ID
             rdfs:label "ND-LotPreviousPlanning";
-            rml:reference "if (exists(cbc:ID)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_PlanningNoticeNoticeIdentifier_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
+            # we use the ID at this level to create an IRI with the pattern of a Notice
+            rml:reference "if (exists(cbc:ID)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(cbc:ID, ' ', '-' ), '/' , '-') || '_Notice' else null" ;
             rr:class epo:PlanningNotice
         ] ;
     rr:predicateObjectMap
@@ -376,7 +378,8 @@ tedm:MG-PlanningNotice-refersToPrevious-Notice_ND-LotPreviousPlanning a rr:Tripl
                     ];
                 ] ;
         ]
-  .
+.
+
 tedm:MG-Notice_ND-LotPreviousPlanning a rr:TriplesMap ;
     rdfs:label "MG-Notice";
    rml:logicalSource
@@ -387,9 +390,9 @@ tedm:MG-Notice_ND-LotPreviousPlanning a rr:TriplesMap ;
         ];
     rr:subjectMap
         [
-            # TODO update the reference to include the ID
             rdfs:label "ND-LotPreviousPlanning";
-            rml:reference "if (exists(cbc:ID)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_PlanningNotice_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Notice" ;
+            # rml:reference "if (exists(cbc:ID)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_PlanningNotice_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
             rr:class epo:Notice
         ] ;
     rr:predicateObjectMap
@@ -407,22 +410,9 @@ tedm:MG-Notice_ND-LotPreviousPlanning a rr:TriplesMap ;
                     ];
                 ] ;
         ] ;
-#   rr:predicateObjectMap
-#        [
-#            # TODO link to LOt (In CM no link)
-#            rdfs:label "BT-1251-Lot";
-#            rdfs:comment "Previous Planning Part Identifier of MG-PlanningNotice under ND-LotPreviousPlanning ";
-#            rr:predicate epo:announcesPlannedProcurementPart ;
-#            rr:objectMap
-#                [
-#                    rr:parentTriplesMap tedm:MG-PlannedProcurementPart-announcesPlannedProcurementPart-PlanningNotice-refersToPrevious-Notice_ND-LotPreviousPlanning;
-#                    rr:joinCondition [
-#                        rr:child "path(.)";
-#                        rr:parent "path(.)";
-#                    ];
-#                ] ;
-#        ]
 .
+
+# this is an example of a second-degree linked resource of a linked external resource
 tedm:MG-Identifier-identifier-PlannedProcurementPart-announcesPlannedProcurementPart-PlanningNotice-refersToPrevious-Notice_ND-LotPreviousPlanning a rr:TriplesMap ;
     rdfs:label "MG-Identifier";
    rml:logicalSource
@@ -433,9 +423,9 @@ tedm:MG-Identifier-identifier-PlannedProcurementPart-announcesPlannedProcurement
         ];
     rr:subjectMap
         [
-            # TODO update the reference to include the ID
             rdfs:label "ND-LotPreviousPlanning";
-            rml:reference "if (exists(cbc:ReferencedDocumentInternalAddress)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_PlannedProcurementPartIdentifier_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
+            # we hash on the ID instead as it is bound to be unique (this internal address is not)
+            rml:reference "if (exists(cbc:ReferencedDocumentInternalAddress)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(cbc:ID, ' ', '-' ), '/' , '-') || '_PlannedProcurementPartIdentifier_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(cbc:ID) || '?response_type=raw') else null" ;
             rr:class adms:Identifier
         ] ;
     rr:predicateObjectMap
@@ -446,10 +436,12 @@ tedm:MG-Identifier-identifier-PlannedProcurementPart-announcesPlannedProcurement
             rr:predicate skos:notation ;
             rr:objectMap
                 [
-                    rml:reference "cbc:ID";
+                    rml:reference "cbc:ReferencedDocumentInternalAddress";
                 ] ;
         ]
 .
+
+# this is an example of a linked resource of a linked external resource
 tedm:MG-PlannedProcurementPart-announcesPlannedProcurementPart-PlanningNotice-refersToPrevious-Notice_ND-LotPreviousPlanning a rr:TriplesMap ;
     rdfs:label "MG-PlannedProcurementPart";
    rml:logicalSource
@@ -460,9 +452,8 @@ tedm:MG-PlannedProcurementPart-announcesPlannedProcurementPart-PlanningNotice-re
         ];
     rr:subjectMap
         [
-            # TODO update the reference to include the ID
             rdfs:label "ND-LotPreviousPlanning";
-            rml:reference "if (exists(cbc:ReferencedDocumentInternalAddress)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_PlannedProcurementPartIdentifier_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
+            rml:reference "if (exists(cbc:ReferencedDocumentInternalAddress)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(cbc:ID, ' ', '-' ), '/' , '-') || '_PlannedProcurementPart_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(cbc:ID) || '?response_type=raw') else null" ;
             rr:class epo:PlannedProcurementPart
         ] ;
     rr:predicateObjectMap
@@ -480,71 +471,8 @@ tedm:MG-PlannedProcurementPart-announcesPlannedProcurementPart-PlanningNotice-re
                     ];
                 ] ;
         ]
-
 .
-#tedm:MG-PlanningNotice-refersToPrevious-Notice_ND-LotPreviousPlanning a rr:TriplesMap ;
-#    rdfs:label "MG-PlanningNotice";
-#   rml:logicalSource
-#        [
-#            rml:source "data/source.xml" ;
-#            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingProcess/cac:NoticeDocumentReference";
-#            rml:referenceFormulation ql:XPath
-#        ];
-#    rr:subjectMap
-#        [
-#            # TODO update the reference to include the ID
-#            rdfs:label "ND-LotPreviousPlanning";
-#            rml:reference "if (exists(cbc:ReferencedDocumentInternalAddress)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_PlannedProcurementPartPlannedNotice_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
-#            rr:class  epo-not:PlanningNotice
-#        ] ;
-#    rr:predicateObjectMap
-#        [
-#            # TODO link to LOt (In CM no link)
-#            rdfs:label "BT-1251-Lot";
-#            rdfs:comment "Previous Planning Part Identifier of MG-PlanningNotice under ND-LotPreviousPlanning ";
-#            rr:predicate epo:announcesPlannedProcurementPart ;
-#            rr:objectMap
-#                [
-#                    rr:parentTriplesMap tedm:MG-PlannedProcurementPart-announcesPlannedProcurementPart-PlanningNotice-refersToPrevious-Notice_ND-LotPreviousPlanning;
-#                    rr:joinCondition [
-#                        rr:child "path(.)";
-#                        rr:parent "path(.)";
-#                    ];
-#                ] ;
-#        ]
-#.
-#tedm:MG-Notice_ND-LotPreviousPlanning a rr:TriplesMap ;
-#    rdfs:label "MG-Notice";
-#   rml:logicalSource
-#        [
-#            rml:source "data/source.xml" ;
-#            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingProcess/cac:NoticeDocumentReference";
-#            rml:referenceFormulation ql:XPath
-#        ];
-#    rr:subjectMap
-#        [
-#            # TODO update the reference to include the ID
-#            rdfs:label "ND-LotPreviousPlanning";
-#            rml:reference "if (exists(cbc:ReferencedDocumentInternalAddress)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_PlannedProcurementPartIdentifierPreviousNotice_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
-#            rr:class  epo-not:Notice
-#        ] ;
-#    rr:predicateObjectMap
-#        [
-#            # TODO link to LOt (In CM no link)
-#            rdfs:label "BT-1251-Lot";
-#            rdfs:comment "Previous Planning Part Identifier of MG-Notice under ND-LotPreviousPlanning ";
-#            rr:predicate epo:refersToPrevious ;
-#            rr:objectMap
-#                [
-#                    rr:parentTriplesMap tedm:MG-PlanningNotice-refersToPrevious-Notice_ND-LotPreviousPlanning ;
-#                    rr:joinCondition [
-#                        rr:child "path(.)";
-#                        rr:parent "path(.)";
-#                    ];
-#                ] ;
-#        ]
-#
-#.
+
 tedm:MG-EAuctionTechnique-usesTechnique-Lot_ND-AuctionTerms a rr:TriplesMap ;
     rdfs:label "MG-EAuctionTechnique";
     rml:logicalSource

@@ -419,8 +419,7 @@ rr:predicateObjectMap
                     rr:parentTriplesMap tedm:MG-ContractTerm-foreseesContractSpecificTerm-Procedure_ND-ProcedurePlacePerformance;
                     rr:joinCondition [
                         rr:child "path(.)";
-                        rr:parent "path(../.)";
-#                            /*/cac:ProcurementProject/cac:RealizedLocation/cac:Address
+                        rr:parent "path(../..)";
                     ];
                 ]
         ];

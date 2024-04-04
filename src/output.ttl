@@ -268,6 +268,11 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_TPO-0003 a epo:Identifier
   epo:hasScheme "touchpoint";
   skos:notation "TPO-0003" .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroup_GLO-0001 a epo:LotGroup;
+  epo:setsGroupingContextForLot epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
+  adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotsGroupIdentifier_246rmGzZvwFBcxRNZTXjTW .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotIdentifier_8y8GPfmPvSRdBcci6WWcSi a
     adms:Identifier;
   epo:hasScheme "Lot";
@@ -301,6 +306,11 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002 a epo:Lot;
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_DynamicPurchaseSystemTechnicalUsage_8APvjTVZXX8CxGPVJZoBww;
   adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotIdentifier_8y8GPfmPvSRdBcci6WWcSi,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotIdentifier_daUDPcwCUoxbJRjGb7tKNQ .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotsGroupIdentifier_246rmGzZvwFBcxRNZTXjTW
+  a adms:Identifier;
+  epo:hasScheme "LotsGroup";
+  skos:notation "GLO-0001" .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValueLot_BaGzsXLuGR4tRgDAxRPwS8
   a epo:MonetaryValue;
@@ -452,6 +462,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerms_5ePSyM3yjeKrNdoLehDe7
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerms_BniuuBzYtT7voNxpkh6A9M
   a epo:ProcedureTerm;
+  epo:definesLotGroup epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroup_GLO-0001;
   epo:hasMaximumLotSubmissionAllowed 2;
   epo:hasMaximumNumberOfLotsToBeAwarded 2 .
 

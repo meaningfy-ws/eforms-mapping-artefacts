@@ -353,7 +353,7 @@ tedm:MG-PlanningNotice-refersToPrevious-Notice_ND-LotPreviousPlanning a rr:Tripl
         [
             rdfs:label "BT-125(i)-Lot";
             rdfs:comment "Previous Planning Identifier of MG-PlanningNotice under ND-LotPreviousPlanning ";
-            rr:predicate adms:Identifier ;
+            rr:predicate adms:identifier ;
             rr:objectMap
                 [
                     rr:parentTriplesMap tedm:MG-Identifier-identifier-PlanningNotice-refersToPrevious-Notice_ND-LotPreviousPlanning ;

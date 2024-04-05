@@ -74,6 +74,7 @@ tedm:MG-ContractTerm_ND-ProcedurePlacePerformanceAdditionalInformation a rr:Trip
     # this is an example of a predicate with value from a complex ancestor XPath
     rr:predicateObjectMap
         [
+            # TODO min SDK 1.3 max SDK 1.7
             rdfs:label "BT-531-Procedure" ;
             rdfs:comment "Additional Nature (different from Main) of MG-ContractTerm under ND-ProcedurePlacePerformanceAdditionalInformation" ;
             rr:predicate  epo:hasAdditionalContractNature ;

@@ -63,11 +63,14 @@ tedm:MG-CompetitionNotice_ND-Root
         ] ;
     rr:predicateObjectMap
         [
+            # TODO min SDK 1.10
             rdfs:label "MG-ProcurementServiceProvider-announcesRole-CompetitionNotice" ;
             rdfs:comment "MG-ProcurementServiceProvider-announcesRole-CompetitionNotice under ND-ServiceProviderParty" ;
             rr:predicate epo-not:announcesRole ;
             rr:objectMap
                 [
+                    tedm:minSDKVersion "1.3" ;
+                    tedm:maxSDKVersion "1.9.1" ;
                     rr:parentTriplesMap tedm:MG-ProcurementServiceProvider_ND-ServiceProviderParty
                 ] ;
         ] ;

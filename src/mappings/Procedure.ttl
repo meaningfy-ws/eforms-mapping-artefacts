@@ -362,16 +362,19 @@ tedm:MG-Procedure_ND-AcceleratedProcedure a rr:TriplesMap ;
         ] ;
     rr:predicateObjectMap
         [
+            # TODO min SDK 1.3 max SDK 1.4
+            # TODO min SDK 1.5.12 max SDK 1.7
             rdfs:label "BT-106-Procedure" ;
             rdfs:comment "Procedure Accelerated of MG-Procedure under ND-AcceleratedProcedure" ;
             rr:predicate epo:isAccelerated ;
             rr:objectMap
-                [
-                    tedm:minSDKVersion "1.5.12" ;
-                    tedm:maxSDKVersion "1.7" ;
-                    rml:reference "cbc:ProcessReasonCode[@listName='accelerated-procedure']" ;
-                    rr:datatype xsd:boolean
-                ] ,
+            #     [
+            #         tedm:minSDKVersion "1.5.12" ;
+            #         tedm:maxSDKVersion "1.7" ;
+            #         rml:reference "cbc:ProcessReasonCode[@listName='accelerated-procedure']" ;
+            #         rr:datatype xsd:boolean
+            #     ]
+            #     ,
                 [
                     # this is an example of a version-specific assertion that has no difference
                     # with its other counterparts due to simple changes in the XPath only

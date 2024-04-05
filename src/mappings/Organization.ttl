@@ -89,8 +89,6 @@ tedm:MG-Organization_ND-Company a rr:TriplesMap ;
             rr:objectMap
                 [
                     rml:reference "cac:PartyName/cbc:Name" ;
-                    # this was used initially but wrong as it would pick up Contact name
-                    # rml:reference "descendant::cbc:Name" ;
                     rml:languageMap [
                         fnml:functionValue [
                             rr:predicateObjectMap [
@@ -122,12 +120,13 @@ tedm:MG-Organization_ND-Company a rr:TriplesMap ;
         ] ;
     rr:predicateObjectMap
         [
-            # TODO versions
+            # TODO min SDK 1.3 max SDK 1.7
             rdfs:label "BT-501-Organization-Company" ;
             rdfs:comment "Organisation Identifier of MG-Organization under ND-Company" ;
             rr:predicate epo:hasLegalIdentifier ;
             rr:objectMap
                 [
+                    tedm:minSDKVersion "1.8" ;
                     rr:parentTriplesMap tedm:MG-Identifier-hasLegalIdentifier-Organization_ND-Company ;
                     rr:joinCondition [
                         rr:child "path(.)" ;
@@ -150,7 +149,6 @@ tedm:MG-Identifier-identifier-Organization_ND-Company a rr:TriplesMap ;
         [
             rdfs:label "ND-Company" ;
             rml:reference "if (exists(cac:PartyIdentification/cbc:ID)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_Identifier_' || cac:PartyIdentification/cbc:ID else null" ;
-            # rml:reference "if (exists(cac:PartyIdentification/cbc:ID)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_OrganisationIdentifier_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(cac:PartyIdentification/cbc:ID)) || '?response_type=raw') else null" ;
             rr:class epo:Identifier
         ] ;
     rr:predicateObjectMap
@@ -223,7 +221,7 @@ tedm:MG-Address-registeredAddress-Organization_ND-CompanyAddress a rr:TriplesMap
             rr:predicate locn:fullAddress ;
             rr:objectMap
                 [
-                    rml:reference "normalize-space(cbc:Department || ' ' || cbc:StreetName || ' ' || cbc:AdditionalStreetName || ' ' || cbc:Line || ' ' || cbc:CityName || ' ' || cbc:PostalZone || ' ' || cac:Country/cbc:IdentificationCode)" ;
+                    rml:reference "replace(replace(cbc:Department || ', ' || cbc:StreetName || ', ' || cbc:AdditionalStreetName || ', ' || cbc:Line || ', ' || cbc:CityName || ', ' || cbc:PostalZone || ', ' || cac:Country/cbc:IdentificationCode, '(, )+', ', '),  '^, |, $', '')" ;
                 ] ;
         ] ;
     rr:predicateObjectMap
@@ -264,7 +262,6 @@ tedm:MG-Address-registeredAddress-Organization_ND-CompanyAddress a rr:TriplesMap
             rr:objectMap
                 [
                     rdfs:label "at-voc:country" ;
-                    # rml:reference "descendant::cbc:IdentificationCode" ;
                     rr:parentTriplesMap tedm:country ;
                     rr:joinCondition [
                         rr:child "cac:Country/cbc:IdentificationCode" ;

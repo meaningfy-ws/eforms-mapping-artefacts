@@ -20,6 +20,14 @@
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AcquiringCentralPurchasingBody_TftBQ7CiqCcyirLAwhsyEn
+  a epo:AcquiringCentralPurchasingBody;
+  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0004 .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardingCentralPurchasingBody_U3RE4hoDTRa29J56Gmq3BL
+  a epo:AwardingCentralPurchasingBody;
+  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0003 .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Buyer_MT3gdCnJ9BA7aEqaGqKxAh a epo:Buyer;
   epo:hasBuyerProfile "https://profile.example.com"^^xsd:anyURI;
   epo:isContractingEntity true;
@@ -29,7 +37,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_9EoaX693zGgFRHUBTqQE5
   a locn:Address;
   epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
   epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
-  locn:fullAddress "Reviews and Complains 87 Big Avenue London N1 9FL GBR";
+  locn:fullAddress "Reviews and Complains, 87 Big Avenue, London, N1 9FL, GBR";
   locn:postCode "N1 9FL";
   locn:postName "London" .
 
@@ -37,7 +45,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_CXdDFvgV5RjePYb9cagtR
   a locn:Address;
   epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
   epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
-  locn:fullAddress "Environment Information department 23 Nelson Square London N1 9FL GBR";
+  locn:fullAddress "Environment Information department, 23 Nelson Square, London, N1 9FL, GBR";
   locn:postCode "N1 9FL";
   locn:postName "London" .
 
@@ -45,7 +53,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_JAQDkMB4STjLj2Z9DkzGK
   a locn:Address;
   epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
   epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
-  locn:fullAddress "ABC Unit 162 Broad Street 2nd floor London N1 9FL GBR";
+  locn:fullAddress "ABC Unit, 162 Broad Street, 2nd floor, London, N1 9FL, GBR";
   locn:postCode "N1 9FL";
   locn:postName "London" .
 
@@ -53,7 +61,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_SyrXybB9qnydTsiCYvqfw
   a locn:Address;
   epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
   epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
-  locn:fullAddress "Finance Division Bruce Wayne House 2 Gotham Street London N1 9FL GBR";
+  locn:fullAddress "Finance Division, Bruce Wayne House, 2 Gotham Street, London, N1 9FL, GBR";
   locn:postCode "N1 9FL";
   locn:postName "London" .
 
@@ -61,7 +69,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_dtBY8KdbdWyJb9xZnV4Xc
   a locn:Address;
   epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/LUX>;
   epo:hasNutsCode <http://data.europa.eu/nuts/code/LU000>;
-  locn:fullAddress "Luxembourg 2985 LUX";
+  locn:fullAddress "Luxembourg, 2985, LUX";
   locn:postCode "2985";
   locn:postName "Luxembourg" .
 
@@ -69,7 +77,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_ikV4AfPuLDPpY2gzokb7G
   a locn:Address;
   epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
   epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
-  locn:fullAddress "Public Procurement 85 Norwish Road London N1 9FL GBR";
+  locn:fullAddress "Public Procurement, 85 Norwish Road, London, N1 9FL, GBR";
   locn:postCode "N1 9FL";
   locn:postName "London" .
 
@@ -77,7 +85,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_kp4YHhT2Gw9BnTPKnwxcd
   a locn:Address;
   epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
   epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
-  locn:fullAddress "6 Main Street London N1 9FL GBR";
+  locn:fullAddress "6 Main Street, London, N1 9FL, GBR";
   locn:postCode "N1 9FL";
   locn:postName "London" .
 
@@ -176,18 +184,25 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_TPO-0003 a epo:Identifier
   epo:hasScheme "touchpoint";
   skos:notation "TPO-0003" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Notice a epo:CompetitionNotice, epo:Notice;
-  epo:announcesRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Buyer_MT3gdCnJ9BA7aEqaGqKxAh,
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LeadBuyer_N4cgMQL3K4CA88AYBBwUNn a epo:LeadBuyer;
+  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0001 .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Notice a epo:CompetitionNotice, epo:Notice,
+    epo:Notice16;
+  epo:announcesRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AcquiringCentralPurchasingBody_TftBQ7CiqCcyirLAwhsyEn,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardingCentralPurchasingBody_U3RE4hoDTRa29J56Gmq3BL,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Buyer_MT3gdCnJ9BA7aEqaGqKxAh, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LeadBuyer_N4cgMQL3K4CA88AYBBwUNn,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementServiceProvider_f7UuQ7S8iGMkM7gCN4x35m;
-  epo:hasDispatchDate "2023-03-23T20:59:32+01:00"^^xsd:dateTime;
-  epo:hasEFormsSubtype "16";
+  epo:hasEsenderDispatchDate "2023-03-23T20:59:32+01:00"^^xsd:dateTime;
   epo:hasFormType <http://publications.europa.eu/resource/authority/form-type/competition>;
   epo:hasNoticePublicationNumber "00675564-2023";
   epo:hasNoticeType <http://publications.europa.eu/resource/authority/notice-type/cn-standard>;
   epo:hasOJSIssueNumber "214/2023";
-  epo:hasOfficialLanguage "ENG";
+  epo:hasOfficialLanguage <http://publications.europa.eu/resource/authority/language/BUL>,
+    <http://publications.europa.eu/resource/authority/language/ENG>;
   epo:hasPublicationDate "2023-11-07Z"^^xsd:date;
   epo:hasVersion "03";
+  epo:refersToProcedure epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_MnX8qyREnFMNLeS5MJAX9K;
   adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_NoticeIdentifier_cMBzh6pL4JRkiaCd4DWjT2 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_NoticeIdentifier_cMBzh6pL4JRkiaCd4DWjT2
@@ -279,12 +294,17 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureIdentifier_eySzap22e3jkZr3f
   epo:hasScheme "InternalID";
   skos:notation "2023-P-0001" .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_MnX8qyREnFMNLeS5MJAX9K a
+    epo:ProcedureTerm;
+  epo:isSubmissionForAllLotsRequired true .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_MnX8qyREnFMNLeS5MJAX9K a epo:Procedure;
   epo:foreseesContractSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_67o9ur9Jjef9htMoaQhdxm,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_QmFgWdHMQiunuxrdtntYZx;
   epo:hasAcceleratedProcedureJustification "Procedure Accelerated Justification ---"@en;
   epo:hasAdditionalInformation "Additional information ---"@en;
   epo:hasInternalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureIdentifier_eySzap22e3jkZr3f7VXYNj;
+  epo:hasLegalBasis <http://publications.europa.eu/resource/authority/legal-basis/32014L0024>;
   epo:hasMainFeature "Description of the procedure  ---"@en;
   epo:hasProcedureType <http://publications.europa.eu/resource/authority/procurement-procedure-type/neg-w-call>;
   epo:isAccelerated true;
@@ -309,13 +329,14 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_QmFgW
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementServiceProvider_f7UuQ7S8iGMkM7gCN4x35m
   a epo:ProcurementServiceProvider;
   epo:actsOnBehalfOf epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Buyer_MT3gdCnJ9BA7aEqaGqKxAh;
+  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0007;
   dct:description "ted-esen" .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_9saVKYT6LaLiq7HmXaeWEQ
   a locn:Address;
   epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
   epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
-  locn:fullAddress "Tenders Evaluation Committee Bruce Wayne House 2 Gotham Street London N1 9FL GBR";
+  locn:fullAddress "Tenders Evaluation Committee, Bruce Wayne House, 2 Gotham Street, London, N1 9FL, GBR";
   locn:postCode "N1 9FL";
   locn:postName "London" .
 
@@ -323,7 +344,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_DQ3D2nHojn4VijYMYR
   a locn:Address;
   epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
   epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
-  locn:fullAddress "Procurement Dpt Bruce Wayne House 2 Gotham Street London N1 9FL GBR";
+  locn:fullAddress "Procurement Dpt, Bruce Wayne House, 2 Gotham Street, London, N1 9FL, GBR";
   locn:postCode "N1 9FL";
   locn:postName "London" .
 
@@ -331,7 +352,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_ZDibsmqh6XaKEG4Wjj
   a locn:Address;
   epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
   epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
-  locn:fullAddress "Fin Adm Archives Dpt Bruce Wayne House 2 Gotham Street London N1 9FL GBR";
+  locn:fullAddress "Fin Adm Archives Dpt, Bruce Wayne House, 2 Gotham Street, London, N1 9FL, GBR";
   locn:postCode "N1 9FL";
   locn:postName "London" .
 

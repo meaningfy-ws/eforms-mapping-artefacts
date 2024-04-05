@@ -33,12 +33,12 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AcquiringCentralPurchasingBody_TftBQ
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AuctionTerms_a3YxuhxVZtuVM6PB6isrBc a
     epo:EAuctionTechniqueUsage;
   epo:hasUsage <http://publications.europa.eu/resource/authority/usage/used>;
-  dct:description "Electronic auction description ---" .
+  dct:description "Electronic auction description ---"@en .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AuctionTerms_fEtfKJVcbukziY28mGZdui a
     epo:EAuctionTechniqueUsage;
   epo:hasUsage <http://publications.europa.eu/resource/authority/usage/used>;
-  dct:description "Electronic auction description ---" .
+  dct:description "Electronic auction description ---"@en .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardingCentralPurchasingBody_U3RE4hoDTRa29J56Gmq3BL
   a epo:AwardingCentralPurchasingBody;
@@ -234,12 +234,12 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTechnicalUsage_8AP
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTerm_4pryWpjZoJQ6k9AhEGANFB
   a epo:FrameworkAgreementTerm;
-  epo:hasBuyerCategoryDescription "Framework Buyer Categories ---";
+  epo:hasBuyerCategoryDescription "Framework Buyer Categories ---"@en;
   epo:hasMaximumParticipantsNumber 10 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTerm_SsJtj5DGjqxKj6eVgR4GbT
   a epo:FrameworkAgreementTerm;
-  epo:hasBuyerCategoryDescription "Framework Buyer Categories ---";
+  epo:hasBuyerCategoryDescription "Framework Buyer Categories ---"@en;
   epo:hasMaximumParticipantsNumber 10 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0001 a epo:Identifier;
@@ -376,12 +376,12 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_NoticeIdentifier_cMBzh6pL4JRkiaCd4DW
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OpenTenderEventPlace_TpCFHZDentQZiC2NomrGLF
   a locn:Address;
-  locn:fullAddress "Renfrewshire House, Cotton Street, Paisley." .
+  locn:fullAddress "Renfrewshire House, Cotton Street, Paisley."@en .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OpeningTerm_QuUbCTvwqkE5rYfeGgqExM a epo:OpeningTerm;
   epo:definesOpeningPlace epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OpenTenderEventPlace_TpCFHZDentQZiC2NomrGLF;
   epo:hasOpeningDateTime "2020-06-12T14:00:00+01:00"^^xsd:dateTime;
-  epo:hasOpeningDescription "Strictly by invitation only." .
+  epo:hasOpeningDescription "Strictly by invitation only."@en .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_5ZoEQEDimbU7BLyB2frEpT
   a epo:Identifier;
@@ -485,7 +485,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_MnX8qyREnFMNLeS5MJAX9K
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerms_5ePSyM3yjeKrNdoLehDe7g
   a epo:ProcedureTerm;
-  epo:hasCrossBorderLaw "Cross border law description ---" .
+  epo:hasCrossBorderLaw "Cross border law description ---"@en .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerms_BniuuBzYtT7voNxpkh6A9M
   a epo:ProcedureTerm;
@@ -509,8 +509,8 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_MnX8qyREnFMNLeS5MJAX9K a e
   epo:hasInternalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureIdentifier_eySzap22e3jkZr3f7VXYNj;
   epo:hasLaunchFrameworkAgreementMaximumValue epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureValueEstimateExtension_9thMAaeveYJRewotgDGorG;
   epo:hasLegalBasis <http://publications.europa.eu/resource/authority/legal-basis/32014L0024>;
-  epo:hasLegalBasisDescription "Loi modifiée du 8 juillet 2018 sur les concessions",
-    "art. 410 ust. 1 ustawy z dnia 11 września 2019 r. - Prawo zamówień publicznych (Dz. U. z 2023r. poz. 1605 t.j.) thisAlmostNeverOccurs legal base description ---";
+  epo:hasLegalBasisDescription "art. 410 ust. 1 ustawy z dnia 11 września 2019 r. - Prawo zamówień publicznych (Dz. U. z 2023r. poz. 1605 t.j.) thisAlmostNeverOccurs legal base description ---"@en,
+    "Loi modifiée du 8 juillet 2018 sur les concessions"@fr;
   epo:hasMainFeature "Description of the procedure  ---"@en;
   epo:hasProcedureType <http://publications.europa.eu/resource/authority/procurement-procedure-type/neg-w-call>;
   epo:hasPurpose epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_eySzap22e3jkZr3f7VXYNj;
@@ -538,13 +538,13 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_67o9u
   a epo:ContractTerm;
   epo:hasAdditionalContractNature <http://publications.europa.eu/resource/authority/contract-nature/works>;
   epo:hasContractNatureType <http://publications.europa.eu/resource/authority/contract-nature/services>;
-  epo:hasPlaceOfPerformanceAdditionalInformation "Additional information ---" .
+  epo:hasPlaceOfPerformanceAdditionalInformation "Additional information ---"@en .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_QmFgWdHMQiunuxrdtntYZx
   a epo:ContractTerm;
   epo:hasAdditionalContractNature <http://publications.europa.eu/resource/authority/contract-nature/works>;
   epo:hasContractNatureType <http://publications.europa.eu/resource/authority/contract-nature/services>;
-  epo:hasPlaceOfPerformanceAdditionalInformation "The main location is ..." .
+  epo:hasPlaceOfPerformanceAdditionalInformation "The main location is ..."@en .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_RxWyYo5p6B6QKE6kAx4iDD
   a epo:ContractTerm;
@@ -565,7 +565,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_8y8GPfmPvSRdBcci6WWcS
   a epo:SubmissionTerm;
   epo:hasEAuctionURL "https://electronic-auction.com"^^xsd:anyURI;
   epo:hasESubmissionPermission <http://publications.europa.eu/resource/authority/permission/not-allowed>;
-  epo:hasNonElectronicSubmissionDescription "Nonelectronic Submission Description ---";
+  epo:hasNonElectronicSubmissionDescription "Nonelectronic Submission Description ---"@en;
   epo:hasNonElectronicSubmissionJustification <http://publications.europa.eu/resource/authority/communication-justification/ipr-iss>;
   epo:hasReceiptTenderDeadline "2023-05-22T20:59:32+01:00"^^xsd:dateTime .
 

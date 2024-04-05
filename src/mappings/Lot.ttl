@@ -798,25 +798,14 @@ tedm:MG-SubmissionTerm-isSubjectToLotSpecificTerm-Lot_ND-SubmissionDeadline a rr
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_SubmissionTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(../..)) || '?response_type=raw')}" ;
             rr:class epo:SubmissionTerm
         ] ;
-    rr:predicateObjectMap
-        [
-            rdfs:label "BT-131(d)-Lot";
-            rdfs:comment "Deadline Receipt Tenders of MG-SubmissionTerm under ND-SubmissionDeadline";
-            rr:predicate epo:hasReceiptTenderDeadline ;
-            rr:objectMap
-                [
-                    rml:reference "if(exists(cbc:EndDate) and exists(cbc:EndTime)) then cbc:EndDate || 'T' || cbc:EndTime else if(exists(cbc:EndDate)) then cbc:EndDate else null";
-                    rr:datatype xsd:dateTime;
-                ] ;
-        ];
  rr:predicateObjectMap
         [
-            rdfs:label "BT-131(t)-Lot";
-            rdfs:comment "Deadline Receipt Tenders of MG-SubmissionTerm under ND-SubmissionDeadline";
+            rdfs:label "BT-131(d)-Lot and BT-131(t)-Lot";
+            rdfs:comment "Deadline Receipt Tenders of MG-SubmissionTerm under ND-SubmissionDeadline (incl. Time)";
             rr:predicate epo:hasReceiptTenderDeadline ;
             rr:objectMap
                 [
-                    rml:reference "if(exists(cbc:EndDate) and exists(cbc:EndTime)) then cbc:EndDate || 'T' || cbc:EndTime else if(exists(cbc:EndDate)) then cbc:EndDate else null";
+                    rml:reference "if(exists(cbc:EndDate) and exists(cbc:EndTime) and contains(cbc:EndDate, '+')) then substring-before(cbc:EndDate, '+') || 'T' || cbc:EndTime else if(exists(cbc:EndDate) and exists(cbc:EndTime)) then cbc:EndDate || 'T' || cbc:EndTime else if(exists(cbc:EndDate)) then cbc:EndDate else null";
                     rr:datatype xsd:dateTime;
                 ] ;
         ]
@@ -874,23 +863,12 @@ tedm:MG-SubmissionTerm-isSubjectToLotSpecificTerm-Lot_ND-ParticipationRequestPer
         ] ;
     rr:predicateObjectMap
         [
-            rdfs:label "BT-1311(d)-Lot";
-            rdfs:comment "Deadline Receipt Requests of under ND-ParticipationRequestPeriod";
+            rdfs:label "BT-1311(d)-Lot and BT-1311(t)-Lot";
+            rdfs:comment "Deadline Receipt Requests of under ND-ParticipationRequestPeriod (incl. Time)";
             rr:predicate epo:hasReceiptParticipationRequestDeadline ;
             rr:objectMap
                 [
-                    rml:reference "if(exists(cbc:EndDate) and exists(cbc:EndTime)) then cbc:EndDate || 'T' || cbc:EndTime else if(exists(cbc:EndDate)) then cbc:EndDate else null";
-                    rr:datatype xsd:dateTime;
-                ] ;
-        ];
-rr:predicateObjectMap
-        [
-            rdfs:label "BT-1311(t)-Lot";
-            rdfs:comment "Deadline Receipt Requests of under ND-ParticipationRequestPeriod";
-            rr:predicate epo:hasReceiptParticipationRequestDeadline ;
-            rr:objectMap
-                [
-                    rml:reference "if(exists(cbc:EndDate) and exists(cbc:EndTime)) then cbc:EndDate || 'T' || cbc:EndTime else if(exists(cbc:EndDate)) then cbc:EndDate else null";
+                    rml:reference "if(exists(cbc:EndDate) and exists(cbc:EndTime) and contains(cbc:EndDate, '+')) then substring-before(cbc:EndDate, '+') || 'T' || cbc:EndTime else if(exists(cbc:EndDate) and exists(cbc:EndTime)) then cbc:EndDate || 'T' || cbc:EndTime else if(exists(cbc:EndDate)) then cbc:EndDate else null";
                     rr:datatype xsd:dateTime;
                 ] ;
         ]
@@ -921,25 +899,14 @@ tedm:MG-OpeningTerm-isSubjectToLotSpecificTerm-Lot_ND-PublicOpening a rr:Triples
                     rml:reference "cbc:Description";
                 ] ;
         ] ;
-    rr:predicateObjectMap
-        [
-            rdfs:label "BT-132(d)-Lot";
-            rdfs:comment "Public Opening Date of MG-OpeningTerm under ND-PublicOpening";
-            rr:predicate epo:hasOpeningDateTime ;
-            rr:objectMap
-                [
-                    rml:reference "if(exists(cbc:OccurrenceDate) and exists(cbc:OccurrenceTime)) then cbc:OccurrenceDate || 'T' || cbc:OccurrenceTime else if(exists(cbc:OccurrenceDate)) then cbc:OccurrenceDate else null";
-                    rr:datatype xsd:dateTime;
-                ] ;
-        ] ;
 rr:predicateObjectMap
         [
-            rdfs:label "BT-132(t)-Lot";
-            rdfs:comment "Public Opening Date of MG-OpeningTerm under ND-PublicOpening";
+            rdfs:label "BT-132(d)-Lot and BT-132(t)-Lot";
+            rdfs:comment "Public Opening Date of MG-OpeningTerm under ND-PublicOpening (incl. Time)";
             rr:predicate epo:hasOpeningDateTime ;
             rr:objectMap
                 [
-                    rml:reference "if(exists(cbc:OccurrenceDate) and exists(cbc:OccurrenceTime)) then cbc:OccurrenceDate || 'T' || cbc:OccurrenceTime else if(exists(cbc:OccurrenceDate)) then cbc:OccurrenceDate else null";
+                    rml:reference "if(exists(cbc:OccurrenceDate) and exists(cbc:OccurrenceTime) and contains(cbc:OccurrenceDate, '+')) then substring-before(cbc:OccurrenceDate, '+') || 'T' || cbc:OccurrenceTime else if(exists(cbc:OccurrenceDate) and exists(cbc:OccurrenceTime)) then cbc:OccurrenceDate || 'T' || cbc:OccurrenceTime else if(exists(cbc:OccurrenceDate)) then cbc:OccurrenceDate else null";
                     rr:datatype xsd:dateTime;
                 ] ;
         ];

@@ -6,7 +6,6 @@ JENA_TOOLS_ARQ = $(JENA_TOOLS_DIR)/bin/arq
 CANONICAL_TEST_OUTPUT = src/output.ttl
 CANONICAL_RML_DIR = src/mappings
 TEST_QUERIES_DIR = test_queries
-TEST_QUERY_ORPHANS = $(TEST_QUERIES_DIR)/test_orphans.rq
 ROOT_CONCEPTS_GREPFILTER = "_Organization_|_TouchPoint_|_Notice|_ProcurementProcessInformation_|_Lot_"
 TEST_QUERY_RESULTS_FORMAT = CSV
 
@@ -27,9 +26,13 @@ test:
 	@ echo "Validating test output w/ $(JENA_TOOLS_RIOT)"
 	@ $(JENA_TOOLS_RIOT) --validate $(CANONICAL_TEST_OUTPUT)
 
-test_output_orphans:
-	@ echo "Validating test output orphans w/ $(JENA_TOOLS_ARQ) in $(TEST_QUERY_RESULTS_FORMAT) format"
-	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERY_ORPHANS) --data $(CANONICAL_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT) | grep -vE $(ROOT_CONCEPTS_GREPFILTER)
+test_output:
+	@ echo "Testing output w/ $(JENA_TOOLS_ARQ) in $(TEST_QUERY_RESULTS_FORMAT) format"
+	@ echo "==> Test output orphans"
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_orphans.rq --data $(CANONICAL_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT) | grep -vE $(ROOT_CONCEPTS_GREPFILTER)
+	@ echo
+	@ echo "==> Test output mixed types"
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_mixed_types.rq --data $(CANONICAL_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
 
 clean:
 	@ rm -v jena.zip

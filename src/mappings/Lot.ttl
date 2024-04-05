@@ -320,16 +320,16 @@ tedm:MG-Identifier-identifier-PlanningNotice-refersToPrevious-Notice_ND-LotPrevi
                     rml:reference "cbc:ID";
                 ] ;
         ];
-#   rr:predicateObjectMap
-#        [
-#            rdfs:label "BT-125(i)-Lot-Scheme" ;
-#            rdfs:comment "Scheme of MG-Identifier under ND-LotPreviousPlanning" ;
-#            rr:predicate epo:hasScheme ;
-#            rr:objectMap
-#                [
-#                    rml:reference "cbc:ID/@schemeName";
-#                ] ;
-#        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-125(i)-Lot-Scheme" ;
+            rdfs:comment "Scheme of MG-Identifier under ND-LotPreviousPlanning" ;
+            rr:predicate epo:hasScheme ;
+            rr:objectMap
+                [
+                    rml:reference "cbc:ID/@schemeName";
+                ] ;
+        ] ;
 .
 
 # this is an example of an external root resource (Notice) instantiation for referencing

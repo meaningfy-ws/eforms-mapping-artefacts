@@ -104,6 +104,16 @@ tedm:MG-CompetitionNotice_ND-Root
                     rr:parentTriplesMap tedm:MG-AcquiringCentralPurchasingBody_ND-Organization
                 ] ;
         ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "MG-Lot-announcesLot-CompetitionNotice" ;
+            rdfs:comment "MG-Lot-announcesLot-CompetitionNotice under ND-Lot" ;
+            rr:predicate epo:announcesLot ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-Lot_ND-Lot
+                ] ;
+        ] ;
 .
 
 tedm:MG-Notice_ND-Root

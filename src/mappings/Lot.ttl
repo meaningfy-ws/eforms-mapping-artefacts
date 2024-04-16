@@ -678,7 +678,6 @@ tedm:MG-FrameworkAgreementTerm-isSubjectToLotSpecificTerm-Lot_ND-FA a rr:Triples
         ] ;
     rr:predicateObjectMap
         [
-            # TODO add cbc:Justification in the source there are no values
             rdfs:label "BT-109-Lot";
             rdfs:comment "Framework Duration Justification of MG-FrameworkAgreementTerm under ND-FA";
             rr:predicate epo:hasDurationExtensionJustification ;

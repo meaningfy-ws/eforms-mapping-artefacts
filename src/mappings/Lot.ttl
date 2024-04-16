@@ -308,16 +308,6 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     rr:parentTriplesMap tedm:MG-Identifier-identifier-Lot_ND-Lot ;
                 ] ;
         ];
-     rr:predicateObjectMap
-        [
-            rdfs:label "BT-60-Lot";
-            rr:predicate epo:isUsingEUFunds  ;
-            rr:objectMap
-                [
-                    rml:reference "cac:TenderingTerms/cbc:FundingProgramCode[@listName='eu-funded']";
-                    rr:datatype xsd:boolean
-                ] ;
-        ] ;
     rr:predicateObjectMap
         [
             rdfs:label "BT-7220-Lot and BT-5010-Lot";
@@ -2423,6 +2413,24 @@ tedm:MG-Lot_ND-LotTenderingTerms a rr:TriplesMap ;
                                 tedm:idlab-fn_toColumn_1
                         ]
                     ] ;
+                ] ;
+        ] ;
+     rr:predicateObjectMap
+        [
+            rdfs:label "BT-60-Lot";
+            rdfs:comment "EU Funds of MG-Lot under ND-LotTenderingTerms";
+            rr:predicate epo:isUsingEUFunds;
+            rr:objectMap
+                [
+                    rdfs:comment "translation of at-voc value 'eu-funds' to ePO value 'true'" ;
+                    rml:reference "if(cac:TenderingTerms/cbc:FundingProgramCode[@listName='eu-funded']/text()='eu-funds') then 'true' else null";
+                    rr:datatype xsd:boolean
+                ]
+                ,
+                [
+                    rdfs:comment "translation of at-voc value 'no-eu-funds' to ePO value 'false'" ;
+                    rml:reference "if(cac:TenderingTerms/cbc:FundingProgramCode[@listName='eu-funded']/text()='no-eu-funds') then 'false' else null";
+                    rr:datatype xsd:boolean
                 ] ;
         ] ;
 .

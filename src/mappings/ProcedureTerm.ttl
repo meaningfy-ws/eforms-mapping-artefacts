@@ -48,6 +48,7 @@ tedm:MG-ProcedureTerm_ND-ProcedureTenderingProcess a rr:TriplesMap ;
             rr:predicate epo:isSubmissionForAllLotsRequired ;
             rr:objectMap
                 [
+                    # this needs no inverse mapping for false as there is only one value in the voc
                     tedm:minSDKVersion "1.9.1" ;
                     rml:reference "if(cbc:PartPresentationCode/text()='all') then 'true' else null" ;
                     rr:datatype xsd:boolean ;

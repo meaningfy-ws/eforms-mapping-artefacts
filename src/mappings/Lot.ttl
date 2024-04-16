@@ -2361,9 +2361,17 @@ tedm:MG-SubmissionTerm-isSubjectToLotSpecificTerm-Lot_ND-LotTenderingTerms a rr:
             rr:predicate epo:isMultipleTenderSubmissionAllowed ;
             rr:objectMap
                 [
-                    rml:reference "cbc:MultipleTendersCode";
+                    rdfs:comment "translation of at-voc value 'allowed' to ePO value 'true'";
+                    rml:reference "if(cbc:MultipleTendersCode/text()='allowed') then 'true' else null";
+                    rr:datatype xsd:boolean;
+                ]
+                ,
+                [
+                    rdfs:comment "translation of at-voc value 'not-allowed' to ePO value 'false'";
+                    rml:reference "if(cbc:MultipleTendersCode/text()='not-allowed') then 'false' else null";
                     rr:datatype xsd:boolean;
                 ] ;
+                # we are not mapping 'required' as there is no equivalent ontological representation
         ];
 .
 

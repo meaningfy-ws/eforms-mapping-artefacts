@@ -806,7 +806,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_8y8GPfmPvSRdBcci6WWcS
   epo:hasNonElectronicSubmissionJustification <http://publications.europa.eu/resource/authority/communication-justification/ipr-iss>;
   epo:hasReceiptTenderDeadline "2023-05-22T20:59:32+01:00"^^xsd:dateTime;
   epo:hasVariantPermission <http://publications.europa.eu/resource/authority/permission/not-allowed>;
-  epo:isMultipleTenderSubmissionAllowed "allowed"^^xsd:boolean .
+  epo:isMultipleTenderSubmissionAllowed true .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_daUDPcwCUoxbJRjGb7tKNQ
   a epo:SubmissionTerm;
@@ -816,7 +816,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_daUDPcwCUoxbJRjGb7tKN
   epo:hasLateSubmissionPermission <http://publications.europa.eu/resource/authority/missing-info-submission/late-all>;
   epo:hasReceiptParticipationRequestDeadline "2020-05-07T23:55:00+01:00"^^xsd:dateTime;
   epo:hasReceiptTenderDeadline "2023-05-22T20:59:32+01:00"^^xsd:dateTime;
-  epo:isMultipleTenderSubmissionAllowed "allowed"^^xsd:boolean .
+  epo:isMultipleTenderSubmissionAllowed true .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_9saVKYT6LaLiq7HmXaeWEQ
   a locn:Address;

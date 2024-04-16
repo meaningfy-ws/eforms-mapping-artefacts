@@ -16,6 +16,7 @@
 					</efac:NoticeSubType>
 					<efac:Organizations>
 						<efac:Organization>
+							<efbc:GroupLeadIndicator>true</efbc:GroupLeadIndicator>
 							<efac:Company>
 								<!--BT-505-->
 								<cbc:WebsiteURI>https://www.fin-adm.com</cbc:WebsiteURI>
@@ -211,6 +212,7 @@
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
+							<efbc:AwardingCPBIndicator>true</efbc:AwardingCPBIndicator>
 							<efac:Company>
 								<!--BT-505-->
 								<cbc:WebsiteURI>https://www.env-dpt.com</cbc:WebsiteURI>
@@ -257,6 +259,7 @@
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
+							<efbc:AcquiringCPBIndicator>true</efbc:AcquiringCPBIndicator>
 							<!--BT-633-->
 							<efac:Company>
 								<!--BT-505-->
@@ -450,6 +453,9 @@
 	<cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
 	<!--BT-702-->
 	<cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
+	<cac:AdditionalNoticeLanguage>
+		<cbc:ID>BUL</cbc:ID>
+	</cac:AdditionalNoticeLanguage>
 	<cac:ContractingParty>
 		<!--BT-508-->
 		<cbc:BuyerProfileURI>https://profile.example.com</cbc:BuyerProfileURI>

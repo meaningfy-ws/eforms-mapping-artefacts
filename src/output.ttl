@@ -21,20 +21,24 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_8y8GPfmPvSRdBcci6WWcSi a epo:AccessTerm;
-  epo:hasAdditionalInformationDeadline "2023-05-20+01:00T20:59:32+01:00" .
+  epo:hasAdditionalInformationDeadline "2023-05-20T20:59:32+01:00"^^xsd:dateTime .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_daUDPcwCUoxbJRjGb7tKNQ a epo:AccessTerm;
-  epo:hasAdditionalInformationDeadline "2023-05-20+01:00T20:59:32+01:00" .
+  epo:hasAdditionalInformationDeadline "2023-05-20T20:59:32+01:00"^^xsd:dateTime .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AcquiringCentralPurchasingBody_TftBQ7CiqCcyirLAwhsyEn
+  a epo:AcquiringCentralPurchasingBody;
+  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0004 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AuctionTerms_a3YxuhxVZtuVM6PB6isrBc a
     epo:EAuctionTechniqueUsage;
   epo:hasUsage <http://publications.europa.eu/resource/authority/usage/used>;
-  dct:description "Electronic auction description ---" .
+  dct:description "Electronic auction description ---"@en .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AuctionTerms_fEtfKJVcbukziY28mGZdui a
     epo:EAuctionTechniqueUsage;
   epo:hasUsage <http://publications.europa.eu/resource/authority/usage/used>;
-  dct:description "Electronic auction description ---" .
+  dct:description "Electronic auction description ---"@en .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_4cgbfPEuSgC4MeB6X9HTss
   a epo:AwardCriterion;
@@ -85,6 +89,10 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardEvaluationTerm_g9BZcQVSEYMdC6do
   a epo:AwardEvaluationTerm;
   epo:hasAwardCriteriaOrderJustification "........"@en .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardingCentralPurchasingBody_U3RE4hoDTRa29J56Gmq3BL
+  a epo:AwardingCentralPurchasingBody;
+  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0003 .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Buyer_MT3gdCnJ9BA7aEqaGqKxAh a epo:Buyer;
   epo:hasBuyerProfile "https://profile.example.com"^^xsd:anyURI;
   epo:isContractingEntity true;
@@ -101,7 +109,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_9EoaX693zGgFRHUBTqQE5
   a locn:Address;
   epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
   epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
-  locn:fullAddress "Reviews and Complains 87 Big Avenue London N1 9FL GBR";
+  locn:fullAddress "Reviews and Complains, 87 Big Avenue, London, N1 9FL, GBR";
   locn:postCode "N1 9FL";
   locn:postName "London" .
 
@@ -109,7 +117,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_CXdDFvgV5RjePYb9cagtR
   a locn:Address;
   epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
   epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
-  locn:fullAddress "Environment Information department 23 Nelson Square London N1 9FL GBR";
+  locn:fullAddress "Environment Information department, 23 Nelson Square, London, N1 9FL, GBR";
   locn:postCode "N1 9FL";
   locn:postName "London" .
 
@@ -117,7 +125,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_JAQDkMB4STjLj2Z9DkzGK
   a locn:Address;
   epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
   epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
-  locn:fullAddress "ABC Unit 162 Broad Street 2nd floor London N1 9FL GBR";
+  locn:fullAddress "ABC Unit, 162 Broad Street, 2nd floor, London, N1 9FL, GBR";
   locn:postCode "N1 9FL";
   locn:postName "London" .
 
@@ -125,7 +133,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_SyrXybB9qnydTsiCYvqfw
   a locn:Address;
   epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
   epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
-  locn:fullAddress "Finance Division Bruce Wayne House 2 Gotham Street London N1 9FL GBR";
+  locn:fullAddress "Finance Division, Bruce Wayne House, 2 Gotham Street, London, N1 9FL, GBR";
   locn:postCode "N1 9FL";
   locn:postName "London" .
 
@@ -133,7 +141,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_dtBY8KdbdWyJb9xZnV4Xc
   a locn:Address;
   epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/LUX>;
   epo:hasNutsCode <http://data.europa.eu/nuts/code/LU000>;
-  locn:fullAddress "Luxembourg 2985 LUX";
+  locn:fullAddress "Luxembourg, 2985, LUX";
   locn:postCode "2985";
   locn:postName "Luxembourg" .
 
@@ -141,7 +149,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_ikV4AfPuLDPpY2gzokb7G
   a locn:Address;
   epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
   epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
-  locn:fullAddress "Public Procurement 85 Norwish Road London N1 9FL GBR";
+  locn:fullAddress "Public Procurement, 85 Norwish Road, London, N1 9FL, GBR";
   locn:postCode "N1 9FL";
   locn:postName "London" .
 
@@ -149,7 +157,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_kp4YHhT2Gw9BnTPKnwxcd
   a locn:Address;
   epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
   epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
-  locn:fullAddress "6 Main Street London N1 9FL GBR";
+  locn:fullAddress "6 Main Street, London, N1 9FL, GBR";
   locn:postCode "N1 9FL";
   locn:postName "London" .
 
@@ -285,12 +293,12 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTechnicalUsage_8AP
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTerm_4pryWpjZoJQ6k9AhEGANFB
   a epo:FrameworkAgreementTerm;
-  epo:hasBuyerCategoryDescription "Framework Buyer Categories ---";
+  epo:hasBuyerCategoryDescription "Framework Buyer Categories ---"@en;
   epo:hasMaximumParticipantsNumber 10 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTerm_SsJtj5DGjqxKj6eVgR4GbT
   a epo:FrameworkAgreementTerm;
-  epo:hasBuyerCategoryDescription "Framework Buyer Categories ---";
+  epo:hasBuyerCategoryDescription "Framework Buyer Categories ---"@en;
   epo:hasMaximumParticipantsNumber 10 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FundIdentifier_UQnAwfk3ERwvnj7e2sbo39
@@ -336,6 +344,9 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_TPO-0002 a epo:Identifier
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_TPO-0003 a epo:Identifier;
   epo:hasScheme "touchpoint";
   skos:notation "TPO-0003" .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LeadBuyer_N4cgMQL3K4CA88AYBBwUNn a epo:LeadBuyer;
+  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0001 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotFund_UQnAwfk3ERwvnj7e2sbo39 a epo:Fund;
   epo:hasFundProgramme <http://publications.europa.eu/resource/authority/eu-programme/LIFE_2021>;
@@ -440,19 +451,24 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MultipleStageProcedureTerm_daUDPcwCU
   epo:hasNoNegotiationNecessary false;
   epo:hasSuccessiveReduction true .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Notice a epo:CompetitionNotice, epo:Notice;
-  epo:announcesRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Buyer_MT3gdCnJ9BA7aEqaGqKxAh,
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Notice a epo:CompetitionNotice, epo:Notice,
+    epo:Notice16;
+  epo:announcesLot epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
+  epo:announcesRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AcquiringCentralPurchasingBody_TftBQ7CiqCcyirLAwhsyEn,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardingCentralPurchasingBody_U3RE4hoDTRa29J56Gmq3BL,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Buyer_MT3gdCnJ9BA7aEqaGqKxAh, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LeadBuyer_N4cgMQL3K4CA88AYBBwUNn,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementServiceProvider_f7UuQ7S8iGMkM7gCN4x35m;
-  epo:hasDispatchDate "2023-03-23T20:59:32+01:00"^^xsd:dateTime;
-  epo:hasEFormsSubtype "16";
+  epo:hasEsenderDispatchDate "2023-03-23T20:59:32+01:00"^^xsd:dateTime;
   epo:hasFormType <http://publications.europa.eu/resource/authority/form-type/competition>;
   epo:hasNoticePublicationNumber "00675564-2023";
   epo:hasNoticeType <http://publications.europa.eu/resource/authority/notice-type/cn-standard>;
   epo:hasOJSIssueNumber "214/2023";
-  epo:hasOfficialLanguage "ENG";
+  epo:hasOfficialLanguage <http://publications.europa.eu/resource/authority/language/BUL>,
+    <http://publications.europa.eu/resource/authority/language/ENG>;
   epo:hasPublicationDate "2023-11-07Z"^^xsd:date;
   epo:hasVersion "03";
   epo:refersToPrevious epd:id_9c0fd704-64d3-4294-a3b6-6df45911ab9f-01_Notice;
+  epo:refersToProcedure epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_MnX8qyREnFMNLeS5MJAX9K;
   adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_NoticeIdentifier_cMBzh6pL4JRkiaCd4DWjT2 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_NoticeIdentifier_cMBzh6pL4JRkiaCd4DWjT2
@@ -462,12 +478,12 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_NoticeIdentifier_cMBzh6pL4JRkiaCd4DW
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OpenTenderEventPlace_TpCFHZDentQZiC2NomrGLF
   a locn:Address;
-  locn:fullAddress "Renfrewshire House, Cotton Street, Paisley." .
+  locn:fullAddress "Renfrewshire House, Cotton Street, Paisley."@en .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OpeningTerm_QuUbCTvwqkE5rYfeGgqExM a epo:OpeningTerm;
   epo:definesOpeningPlace epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OpenTenderEventPlace_TpCFHZDentQZiC2NomrGLF;
-  epo:hasOpeningDateTime "2020-06-12+01:00T14:00:00+01:00"^^xsd:dateTime;
-  epo:hasOpeningDescription "Strictly by invitation only." .
+  epo:hasOpeningDateTime "2020-06-12T14:00:00+01:00"^^xsd:dateTime;
+  epo:hasOpeningDescription "Strictly by invitation only."@en .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_5ZoEQEDimbU7BLyB2frEpT
   a epo:Identifier;
@@ -577,9 +593,13 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedurePlacePerformance_btiykpkF9y
   locn:postCode "N1 9FL";
   locn:postName "London" .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_MnX8qyREnFMNLeS5MJAX9K a
+    epo:ProcedureTerm;
+  epo:isSubmissionForAllLotsRequired true .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerms_5ePSyM3yjeKrNdoLehDe7g
   a epo:ProcedureTerm;
-  epo:hasCrossBorderLaw "Cross border law description ---" .
+  epo:hasCrossBorderLaw "Cross border law description ---"@en .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerms_BniuuBzYtT7voNxpkh6A9M
   a epo:ProcedureTerm;
@@ -602,8 +622,9 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_MnX8qyREnFMNLeS5MJAX9K a e
   epo:hasEstimatedValue epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValueLot_BaGzsXLuGR4tRgDAxRPwS8;
   epo:hasInternalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureIdentifier_eySzap22e3jkZr3f7VXYNj;
   epo:hasLaunchFrameworkAgreementMaximumValue epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureValueEstimateExtension_9thMAaeveYJRewotgDGorG;
-  epo:hasLegalBasisDescription "Loi modifiée du 8 juillet 2018 sur les concessions",
-    "art. 410 ust. 1 ustawy z dnia 11 września 2019 r. - Prawo zamówień publicznych (Dz. U. z 2023r. poz. 1605 t.j.) thisAlmostNeverOccurs legal base description ---";
+  epo:hasLegalBasis <http://publications.europa.eu/resource/authority/legal-basis/32014L0024>;
+  epo:hasLegalBasisDescription "art. 410 ust. 1 ustawy z dnia 11 września 2019 r. - Prawo zamówień publicznych (Dz. U. z 2023r. poz. 1605 t.j.) thisAlmostNeverOccurs legal base description ---"@en,
+    "Loi modifiée du 8 juillet 2018 sur les concessions"@fr;
   epo:hasMainFeature "Description of the procedure  ---"@en;
   epo:hasProcedureType <http://publications.europa.eu/resource/authority/procurement-procedure-type/neg-w-call>;
   epo:hasPurpose epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_eySzap22e3jkZr3f7VXYNj;
@@ -631,13 +652,13 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_67o9u
   a epo:ContractTerm;
   epo:hasAdditionalContractNature <http://publications.europa.eu/resource/authority/contract-nature/works>;
   epo:hasContractNatureType <http://publications.europa.eu/resource/authority/contract-nature/services>;
-  epo:hasPlaceOfPerformanceAdditionalInformation "Additional information ---" .
+  epo:hasPlaceOfPerformanceAdditionalInformation "Additional information ---"@en .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_QmFgWdHMQiunuxrdtntYZx
   a epo:ContractTerm;
   epo:hasAdditionalContractNature <http://publications.europa.eu/resource/authority/contract-nature/works>;
   epo:hasContractNatureType <http://publications.europa.eu/resource/authority/contract-nature/services>;
-  epo:hasPlaceOfPerformanceAdditionalInformation "The main location is ..." .
+  epo:hasPlaceOfPerformanceAdditionalInformation "The main location is ..."@en .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_RxWyYo5p6B6QKE6kAx4iDD
   a epo:ContractTerm;
@@ -651,6 +672,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_btiyk
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementServiceProvider_f7UuQ7S8iGMkM7gCN4x35m
   a epo:ProcurementServiceProvider;
   epo:actsOnBehalfOf epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Buyer_MT3gdCnJ9BA7aEqaGqKxAh;
+  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0007;
   dct:description "ted-esen" .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTermConstrain_ALkBdU6DUVGQjGaBxVKxrs
@@ -779,9 +801,9 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_8y8GPfmPvSRdBcci6WWcS
   epo:hasESubmissionPermission <http://publications.europa.eu/resource/authority/permission/not-allowed>;
   epo:hasLateSubmissionInformationDescription "Later tender information description ---"@en;
   epo:hasLateSubmissionPermission <http://publications.europa.eu/resource/authority/missing-info-submission/late-all>;
-  epo:hasNonElectronicSubmissionDescription "Nonelectronic Submission Description ---";
+  epo:hasNonElectronicSubmissionDescription "Nonelectronic Submission Description ---"@en;
   epo:hasNonElectronicSubmissionJustification <http://publications.europa.eu/resource/authority/communication-justification/ipr-iss>;
-  epo:hasReceiptTenderDeadline "2023-05-22+01:00T20:59:32+01:00"^^xsd:dateTime;
+  epo:hasReceiptTenderDeadline "2023-05-22T20:59:32+01:00"^^xsd:dateTime;
   epo:hasVariantPermission <http://publications.europa.eu/resource/authority/permission/not-allowed>;
   epo:isMultipleTenderSubmissionAllowed "allowed"^^xsd:boolean .
 
@@ -791,15 +813,15 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_daUDPcwCUoxbJRjGb7tKN
   epo:hasESubmissionPermission <http://publications.europa.eu/resource/authority/permission/required>;
   epo:hasLateSubmissionInformationDescription "Later tender information description ---"@en;
   epo:hasLateSubmissionPermission <http://publications.europa.eu/resource/authority/missing-info-submission/late-all>;
-  epo:hasReceiptParticipationRequestDeadline "2020-05-07+01:00T23:55:00+01:00"^^xsd:dateTime;
-  epo:hasReceiptTenderDeadline "2023-05-22+01:00T20:59:32+01:00"^^xsd:dateTime;
+  epo:hasReceiptParticipationRequestDeadline "2020-05-07T23:55:00+01:00"^^xsd:dateTime;
+  epo:hasReceiptTenderDeadline "2023-05-22T20:59:32+01:00"^^xsd:dateTime;
   epo:isMultipleTenderSubmissionAllowed "allowed"^^xsd:boolean .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_9saVKYT6LaLiq7HmXaeWEQ
   a locn:Address;
   epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
   epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
-  locn:fullAddress "Tenders Evaluation Committee Bruce Wayne House 2 Gotham Street London N1 9FL GBR";
+  locn:fullAddress "Tenders Evaluation Committee, Bruce Wayne House, 2 Gotham Street, London, N1 9FL, GBR";
   locn:postCode "N1 9FL";
   locn:postName "London" .
 
@@ -807,7 +829,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_DQ3D2nHojn4VijYMYR
   a locn:Address;
   epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
   epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
-  locn:fullAddress "Procurement Dpt Bruce Wayne House 2 Gotham Street London N1 9FL GBR";
+  locn:fullAddress "Procurement Dpt, Bruce Wayne House, 2 Gotham Street, London, N1 9FL, GBR";
   locn:postCode "N1 9FL";
   locn:postName "London" .
 
@@ -815,7 +837,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_ZDibsmqh6XaKEG4Wjj
   a locn:Address;
   epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
   epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
-  locn:fullAddress "Fin Adm Archives Dpt Bruce Wayne House 2 Gotham Street London N1 9FL GBR";
+  locn:fullAddress "Fin Adm Archives Dpt, Bruce Wayne House, 2 Gotham Street, London, N1 9FL, GBR";
   locn:postCode "N1 9FL";
   locn:postName "London" .
 

@@ -73,7 +73,7 @@ tedm:MG-Identifier-identifier-LotGroup_ND-LotsGroup a rr:TriplesMap ;
         ] ;
      rr:predicateObjectMap
         [
-            rdfs:label "BT-137-LotGroup-Scheme" ;
+            rdfs:label "BT-137-LotsGroup-Scheme" ;
             rdfs:comment "Scheme of MG-Identifier under ND-LotsGroup" ;
             rr:predicate epo:hasScheme ;
             rr:objectMap

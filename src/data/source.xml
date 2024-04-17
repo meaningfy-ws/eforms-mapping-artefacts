@@ -1320,6 +1320,9 @@
 	<cac:ProcurementProjectLot>
 		<cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
 		<cac:TenderingTerms>
+			<cac:AllowedSubcontractTerms>
+				<cbc:SubcontractingConditionsCode listName="subcontracting-obligation">none</cbc:SubcontractingConditionsCode>
+			</cac:AllowedSubcontractTerms>
 			<cbc:RecurringProcurementIndicator>false</cbc:RecurringProcurementIndicator>
 			<cbc:RecurringProcurementDescription languageID="FRA">.......</cbc:RecurringProcurementDescription>
 			<cbc:VariantConstraintCode listName="permission">not-allowed</cbc:VariantConstraintCode>
@@ -1327,6 +1330,9 @@
 				<ext:UBLExtension>
 					<ext:ExtensionContent>
 						<efext:EformsExtension>
+							<efac:TenderSubcontractingRequirements>
+								<efbc:TenderSubcontractingRequirementsCode listName="subcontracting-indication">none</efbc:TenderSubcontractingRequirementsCode>
+							</efac:TenderSubcontractingRequirements>
 							<efac:Funding>
 								<!--id": "BT-5010-Lot", "name": "EU Funds Financing Identifier"-->
 								<efbc:FinancingIdentifier>2021/5678</efbc:FinancingIdentifier>

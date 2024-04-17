@@ -20,6 +20,37 @@
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343NonDisclosureAgreementTermTT87XZ7rfCixVuS4Z9trMH
+  a epo:NonDisclosureAgreementTerm;
+  epo:isNonDisclosureAgreementRequired true;
+  dct:description "Non Disclosure Agreement Description ---"@en .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343SecurityClearanceTerm8y8GPfmPvSRdBcci6WWcSi
+  a epo:SecurityClearanceTerm;
+  epo:hasDeadline "2023-05-23+02:00"^^xsd:date .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343SecurityClearanceTermPuAZ93vcjRYhKiN4rMvUZg
+  a epo:SecurityClearanceTerm;
+  epo:isSecurityClearanceRequired true;
+  dct:description "Security Clearance Description ---"@en .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343SecurityClearanceTermTT87XZ7rfCixVuS4Z9trMH
+  a epo:SecurityClearanceTerm;
+  epo:isSecurityClearanceRequired true;
+  dct:description "Security Clearance Description ---"@en .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343SecurityClearanceTermdaUDPcwCUoxbJRjGb7tKNQ
+  a epo:SecurityClearanceTerm;
+  epo:hasDeadline "2023-05-23+02:00"^^xsd:date .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343SubmissionTermPuAZ93vcjRYhKiN4rMvUZg a
+    epo:SubmissionTerm;
+  epo:isAdvancedElectronicSignatureRequired true .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343SubmissionTermTT87XZ7rfCixVuS4Z9trMH a
+    epo:SubmissionTerm;
+  epo:isAdvancedElectronicSignatureRequired true .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_8y8GPfmPvSRdBcci6WWcSi a epo:AccessTerm;
   epo:hasAdditionalInformationDeadline "2023-05-20T20:59:32+01:00"^^xsd:dateTime .
 
@@ -226,6 +257,24 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_btiykpkF9yYEWFnDmvR
   epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
   locn:address epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedurePlacePerformance_btiykpkF9yYEWFnDmvRf6a .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_8y8GPfmPvSRdBcci6WWcSi a
+    epo:ContractTerm;
+  epo:hasEInvoicingPermission <http://publications.europa.eu/resource/authority/permission/required>;
+  epo:hasEOrdering true;
+  epo:hasEPayment true;
+  epo:hasPaymentArrangement "Terms Financial ---"@en;
+  epo:hasPerformanceConditions "Terms Performance ---"@en;
+  epo:hasReservedExecution <http://publications.europa.eu/resource/authority/applicability/yes> .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_daUDPcwCUoxbJRjGb7tKNQ a
+    epo:ContractTerm;
+  epo:hasEInvoicingPermission <http://publications.europa.eu/resource/authority/permission/required>;
+  epo:hasEOrdering true;
+  epo:hasEPayment true;
+  epo:hasPaymentArrangement "Terms Financial ---"@en;
+  epo:hasPerformanceConditions "Terms Performance ---"@en;
+  epo:hasReservedExecution <http://publications.europa.eu/resource/authority/applicability/yes> .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_DesignContestRegimeTerm_PuAZ93vcjRYhKiN4rMvUZg
   a epo:DesignContestRegimeTerm;
   epo:definesPrize epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Prize_cvGnw3hJYztkzCgnhrJDWV;
@@ -370,21 +419,27 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotIdentifier_daUDPcwCUoxbJRjGb7tKNQ
   skos:notation "LOT-0001" .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001 a epo:Lot;
-  epo:foreseesContractSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardEvaluationTerm_GRsFFxbT394C6sb7Mtao4r;
+  epo:foreseesContractSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardEvaluationTerm_GRsFFxbT394C6sb7Mtao4r,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_daUDPcwCUoxbJRjGb7tKNQ;
   epo:isCoveredByGPA true;
-  epo:isSubjectToLotSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_daUDPcwCUoxbJRjGb7tKNQ,
+  epo:isSubjectToLotSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343NonDisclosureAgreementTermTT87XZ7rfCixVuS4Z9trMH,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343SecurityClearanceTermTT87XZ7rfCixVuS4Z9trMH,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343SecurityClearanceTermdaUDPcwCUoxbJRjGb7tKNQ,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343SubmissionTermTT87XZ7rfCixVuS4Z9trMH, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_daUDPcwCUoxbJRjGb7tKNQ,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_DesignContestRegimeTerm_PuAZ93vcjRYhKiN4rMvUZg,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_DesignContestRegimeTerm_TT87XZ7rfCixVuS4Z9trMH,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTechnicalUsage_4qCitbxYVRfdbqxnYtJTZF,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTerm_SsJtj5DGjqxKj6eVgR4GbT,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MultipleStageProcedureTerm_daUDPcwCUoxbJRjGb7tKNQ,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OpeningTerm_QuUbCTvwqkE5rYfeGgqExM, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_daUDPcwCUoxbJRjGb7tKNQ;
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OpeningTerm_QuUbCTvwqkE5rYfeGgqExM, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_TT87XZ7rfCixVuS4Z9trMH,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_daUDPcwCUoxbJRjGb7tKNQ;
   epo:isUsingEUFunds true;
   epo:specifiesProcurementCriterion epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_4cgbfPEuSgC4MeB6X9HTss,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_G2XvSSebd6Tc4bHMenwxLy,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_RtqRrBZ3dxX7mYeZep98iG,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_W4UrXsPnHKbLazLXVF3G5c,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MultipleStageProcedureTerm_daUDPcwCUoxbJRjGb7tKNQ,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementCriterion_daUDPcwCUoxbJRjGb7tKNQ,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_9xGCswiFAKWwQgitqGWSQv,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_Bkpcxn7EFoAsBBzSiUjcX2,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_LPqCAx6u8AHZs68SmxnK7p;
@@ -395,24 +450,30 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001 a epo:Lot;
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotIdentifier_daUDPcwCUoxbJRjGb7tKNQ .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002 a epo:Lot;
-  epo:foreseesContractSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardEvaluationTerm_LgGjsfgz3hNSB7W5hu4Wmi;
+  epo:foreseesContractSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardEvaluationTerm_LgGjsfgz3hNSB7W5hu4Wmi,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_8y8GPfmPvSRdBcci6WWcSi, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubContractTerm_8y8GPfmPvSRdBcci6WWcSi;
   epo:hasRecurrenceDescription "......."@fr;
   epo:isCoveredByGPA true;
   epo:isFundedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotFund_UQnAwfk3ERwvnj7e2sbo39;
   epo:isRecurrent false;
-  epo:isSubjectToLotSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_8y8GPfmPvSRdBcci6WWcSi,
+  epo:isSubjectToLotSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343SecurityClearanceTerm8y8GPfmPvSRdBcci6WWcSi,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343SecurityClearanceTermPuAZ93vcjRYhKiN4rMvUZg,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343SubmissionTermPuAZ93vcjRYhKiN4rMvUZg, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_8y8GPfmPvSRdBcci6WWcSi,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_DesignContestRegimeTerm_PuAZ93vcjRYhKiN4rMvUZg,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_DesignContestRegimeTerm_TT87XZ7rfCixVuS4Z9trMH,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTechnicalUsage_8APvjTVZXX8CxGPVJZoBww,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTerm_4pryWpjZoJQ6k9AhEGANFB,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MultipleStageProcedureTerm_8y8GPfmPvSRdBcci6WWcSi,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_8y8GPfmPvSRdBcci6WWcSi;
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_28qA6sXPPZP6NSvA8FovHj,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_8y8GPfmPvSRdBcci6WWcSi,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_PuAZ93vcjRYhKiN4rMvUZg;
   epo:isUsingEUFunds true;
   epo:specifiesProcurementCriterion epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_97HxGZ4fzH7Eko9fChnkRN,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_G2XvSSebd6Tc4bHMenwxLy,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_X2bXeDWsNBm6LwVnXR8H5n,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_cvGnw3hJYztkzCgnhrJDWV,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MultipleStageProcedureTerm_8y8GPfmPvSRdBcci6WWcSi,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementCriterion_8y8GPfmPvSRdBcci6WWcSi,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_2Y8NzdfvWC5GNYLbHsuq2F,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_bxHGbwwHUP9MfJv6P8NaFL,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_j76qWqsuJdCtjNmRv3MK5T;
@@ -639,6 +700,14 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_eySzap22e3jkZr3f7VXYNj a e
   epo:hasAdditionalClassification <http://data.europa.eu/cpv/cpv/79720000>;
   epo:hasMainClassification <http://data.europa.eu/cpv/cpv/79710000> .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementCriterion_8y8GPfmPvSRdBcci6WWcSi
+  a epo:ProcurementCriterion;
+  epo:hasPerformingStaffQualificationInformation <http://publications.europa.eu/resource/authority/requirement-stage/t-requ> .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementCriterion_daUDPcwCUoxbJRjGb7tKNQ
+  a epo:ProcurementCriterion;
+  epo:hasPerformingStaffQualificationInformation <http://publications.europa.eu/resource/authority/requirement-stage/t-requ> .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProcessInformation_Bh5qwhngs3Hc9wnu7VDUTo
   a epo:ProcurementProcessInformation;
   epo:concernsProcedure epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_MnX8qyREnFMNLeS5MJAX9K;
@@ -796,10 +865,19 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_j76qWqsuJdCtjNmRv3MK5T
   dct:description "Selection Criteria Description ---"@en;
   skos:prefLabel "Name of the selection criteria---"@en .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubContractTerm_8y8GPfmPvSRdBcci6WWcSi
+  a epo:SubcontractTerm;
+  epo:hasSubcontractingObligation <http://publications.europa.eu/resource/authority/subcontracting-obligation/none> .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_28qA6sXPPZP6NSvA8FovHj
+  a epo:SubmissionTerm;
+  epo:hasTenderSubcontractingInformation <http://publications.europa.eu/resource/authority/subcontracting-indication/none> .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_8y8GPfmPvSRdBcci6WWcSi
   a epo:SubmissionTerm;
   epo:hasEAuctionURL "https://electronic-auction.com"^^xsd:anyURI;
   epo:hasESubmissionPermission <http://publications.europa.eu/resource/authority/permission/not-allowed>;
+  epo:hasLanguage "ENG", "FRA";
   epo:hasLateSubmissionInformationDescription "Later tender information description ---"@en;
   epo:hasLateSubmissionPermission <http://publications.europa.eu/resource/authority/missing-info-submission/late-all>;
   epo:hasNonElectronicSubmissionDescription "Nonelectronic Submission Description ---"@en;
@@ -808,10 +886,22 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_8y8GPfmPvSRdBcci6WWcS
   epo:hasVariantPermission <http://publications.europa.eu/resource/authority/permission/not-allowed>;
   epo:isMultipleTenderSubmissionAllowed true .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_PuAZ93vcjRYhKiN4rMvUZg
+  a epo:SubmissionTerm;
+  epo:hasGuaranteeDescription "Guarantee Required Description ---"@en;
+  epo:isGuaranteeRequired true .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_TT87XZ7rfCixVuS4Z9trMH
+  a epo:SubmissionTerm;
+  epo:hasGuaranteeDescription "Guarantee Required Description ---"@en;
+  epo:hasSubmissionURL <http://tender-submit.fin-adm.com/esubmission>;
+  epo:isGuaranteeRequired true .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_daUDPcwCUoxbJRjGb7tKNQ
   a epo:SubmissionTerm;
   epo:hasEAuctionURL "https://electronic-auction.com"^^xsd:anyURI;
   epo:hasESubmissionPermission <http://publications.europa.eu/resource/authority/permission/required>;
+  epo:hasLanguage "ENG", "FRA";
   epo:hasLateSubmissionInformationDescription "Later tender information description ---"@en;
   epo:hasLateSubmissionPermission <http://publications.europa.eu/resource/authority/missing-info-submission/late-all>;
   epo:hasReceiptParticipationRequestDeadline "2020-05-07T23:55:00+01:00"^^xsd:dateTime;

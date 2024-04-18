@@ -10,6 +10,8 @@ is not expected to be updated while the RML rules are in development. Feel free
 to take test data files from this package and dump them in the minimal package
 to create a bigger test package with the developmental RML rules.
 
+## Development Workflow
+
 For collaboration, create branches with a three-fragment scheme
 `feature/{internal-ticket-id}/{understandable-short-label}` where
 `{internal-ticket-id}` could be a JIRA ticket ID, and
@@ -19,8 +21,11 @@ optionally hyphen-suffixed with relevant component/concept names (e.g. `-Lot`
 yielding the ending branch segment `part1-Lot`).
 
 Please note that feature branches are bound to change often and therefore
-collaborators may need to run `git reset --hard origin/{feature-branch-name}`
-instead of `git pull`, or always use `git pull --rebase` to ensure local
-changes come on top (and to check whether or not the local changes conflict).
-Feature branches should also always be rebased against `main` whenever possible
-so as to reduce surprises (and is why they are "bound to change").
+collaborators (on the same branch) may need to run `git reset --hard
+origin/{feature-branch-name}` instead of `git pull`, OR, _always_ use `git pull
+--rebase` to ensure local changes come on top (and to check whether or not the
+local changes conflict).
+
+Otherwise, feature branches should also always merge in _main_ (or whatever the
+parent is) whenever possible so as to reduce surprises (avoid rebases against
+parents as that can cause frustration not worth the clean history pursuit).

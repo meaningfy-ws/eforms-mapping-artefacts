@@ -904,6 +904,8 @@
 					</ext:UBLExtension>
 				</ext:UBLExtensions>
 				<cbc:ID>Doc1</cbc:ID>
+				<!--BT-707-->
+				<cbc:DocumentTypeCode listName="communication-justification">tdf-non-av</cbc:DocumentTypeCode>
 				<!--BT-14-->
 				<cbc:DocumentType>non-restricted-document</cbc:DocumentType>
 				<cac:Attachment>

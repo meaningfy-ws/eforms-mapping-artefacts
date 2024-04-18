@@ -54,8 +54,37 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343SubmissionTermTT87XZ7rfCixVuS4Z9trMH 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_8y8GPfmPvSRdBcci6WWcSi a epo:AccessTerm;
   epo:hasAdditionalInformationDeadline "2023-05-20T20:59:32+01:00"^^xsd:dateTime .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_Aim3sQTrJD92cok54ZhnWW a epo:AccessTerm;
+  epo:involvesProcurementDocument epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_Vjs29dgiAbe2XRF7igFLkf,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_ZWf84H4L9hbeZqssyQfeSH,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_cgmRJsg28az2TZoWgS4zio;
+  epo:isProcurementDocumentRestricted "restricted-document"^^xsd:boolean .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_SUjgiTfthNR3jeStaMcRex a epo:AccessTerm;
+  epo:hasPublicAccessURL "http://nonrestricteddocuments.com"^^xsd:anyURI;
+  epo:hasRestrictedAccessURL "http://nonrestricteddocuments.com"^^xsd:anyURI;
+  epo:involvesProcurementDocument epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_J3fJ8kKLVQrfgxy2n7VGnZ,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_Lcq2FkDqxdUr5CahCwMxhR,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_hJ9mBfzmK5WedaRecbJ7Dp;
+  epo:isProcurementDocumentRestricted "non-restricted-document"^^xsd:boolean .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_XnxqfcRqzA7sngzwrWyL3G a epo:AccessTerm;
+  epo:hasDocumentRestrictionJustification <http://publications.europa.eu/resource/authority/communication-justification/tdf-non-av>;
+  epo:hasPublicAccessURL "http://nonrestricteddocuments.com"^^xsd:anyURI;
+  epo:hasRestrictedAccessURL "http://nonrestricteddocuments.com"^^xsd:anyURI;
+  epo:involvesProcurementDocument epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_PV7SYMGxxcD4wVCJ32qdiJ,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_VF7Ldp4buhZfPHGCgwZPMD,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_h3Q3UzfGJyBe7QrtFQcSgi;
+  epo:isProcurementDocumentRestricted "non-restricted-document"^^xsd:boolean .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_daUDPcwCUoxbJRjGb7tKNQ a epo:AccessTerm;
   epo:hasAdditionalInformationDeadline "2023-05-20T20:59:32+01:00"^^xsd:dateTime .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_fHHa5zNc2jy5cUXFhDq6nM a epo:AccessTerm;
+  epo:involvesProcurementDocument epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_FmFjqFdQHZDCpsWdURmF3u,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_fKRWezzrhi8NNNohozFQAe,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_gX4iK3g3PnKLpCVENjgq2i;
+  epo:isProcurementDocumentRestricted "restricted-document"^^xsd:boolean .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AcquiringCentralPurchasingBody_TftBQ7CiqCcyirLAwhsyEn
   a epo:AcquiringCentralPurchasingBody;
@@ -247,6 +276,54 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyContactPoint_dxvvStPQ7ekRVg6x
   cccev:email "esender@esendcorp.lu";
   cccev:telephone "+352 123456789" .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constrain_ALkBdU6DUVGQjGaBxVKxrs a cccev:Constraint;
+  epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/max-pass>;
+  epo:hasThresholdValue 3.0 .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constrain_E9HbFRFmAYvtgELes4wHf2 a cccev:Constraint;
+  epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/min-score>;
+  epo:hasThresholdValue 3.0 .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constrain_HUx9CExQBWkrce4vqV7Wkg a cccev:Constraint;
+  epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/max-pass>;
+  epo:hasThresholdValue 3.0 .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constrain_LKeBCmZMuGEzgAFGuK3tmF a cccev:Constraint;
+  epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/min-score>;
+  epo:hasThresholdValue 3.0 .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constrain_S65zMGfHi8GrHsbz4tEFZJ a cccev:Constraint;
+  epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/max-pass>;
+  epo:hasThresholdValue 3.0 .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constrain_UboKtLfWMDPTeedX7G9Jj7 a cccev:Constraint;
+  epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/min-score>;
+  epo:hasThresholdValue 3.0 .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constrain_ZJQeB6XSAAiMd7wbsht64X a cccev:Constraint;
+  epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/min-score>;
+  epo:hasThresholdValue 3.0 .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constrain_bBNJn8mrLioKfy7sx9PaWi a cccev:Constraint;
+  epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/min-score>;
+  epo:hasThresholdValue 3.0 .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constrain_hpcDhFsANoBzRR9uDDJxnt a cccev:Constraint;
+  epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/max-pass>;
+  epo:hasThresholdValue 3.0 .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constrain_mrZZo6ZRTw7EZzqh2Xn6xa a cccev:Constraint;
+  epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/max-pass>;
+  epo:hasThresholdValue 3.0 .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constrain_ncrUJebheR6Q2qJFiiVscf a cccev:Constraint;
+  epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/max-pass>;
+  epo:hasThresholdValue 3.0 .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constrain_nxePuFH9i25oYGdwmceAuJ a cccev:Constraint;
+  epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/min-score>;
+  epo:hasThresholdValue 3.0 .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_RxWyYo5p6B6QKE6kAx4iDD
   a dct:Location;
   locn:address epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedurePlacePerformance_RxWyYo5p6B6QKE6kAx4iDD .
@@ -425,13 +502,15 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001 a epo:Lot;
   epo:isSubjectToLotSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343NonDisclosureAgreementTermTT87XZ7rfCixVuS4Z9trMH,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343SecurityClearanceTermTT87XZ7rfCixVuS4Z9trMH,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343SecurityClearanceTermdaUDPcwCUoxbJRjGb7tKNQ,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343SubmissionTermTT87XZ7rfCixVuS4Z9trMH, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_daUDPcwCUoxbJRjGb7tKNQ,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343SubmissionTermTT87XZ7rfCixVuS4Z9trMH, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_XnxqfcRqzA7sngzwrWyL3G,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_daUDPcwCUoxbJRjGb7tKNQ, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_fHHa5zNc2jy5cUXFhDq6nM,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_DesignContestRegimeTerm_PuAZ93vcjRYhKiN4rMvUZg,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_DesignContestRegimeTerm_TT87XZ7rfCixVuS4Z9trMH,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTechnicalUsage_4qCitbxYVRfdbqxnYtJTZF,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTerm_SsJtj5DGjqxKj6eVgR4GbT,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MultipleStageProcedureTerm_daUDPcwCUoxbJRjGb7tKNQ,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OpeningTerm_QuUbCTvwqkE5rYfeGgqExM, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_TT87XZ7rfCixVuS4Z9trMH,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OpeningTerm_QuUbCTvwqkE5rYfeGgqExM, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_VZxmrBG8UMc3RvpZcKCpvE,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_TT87XZ7rfCixVuS4Z9trMH,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_daUDPcwCUoxbJRjGb7tKNQ;
   epo:isUsingEUFunds true;
   epo:specifiesProcurementCriterion epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_4cgbfPEuSgC4MeB6X9HTss,
@@ -459,12 +538,13 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002 a epo:Lot;
   epo:isSubjectToLotSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343SecurityClearanceTerm8y8GPfmPvSRdBcci6WWcSi,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343SecurityClearanceTermPuAZ93vcjRYhKiN4rMvUZg,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343SubmissionTermPuAZ93vcjRYhKiN4rMvUZg, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_8y8GPfmPvSRdBcci6WWcSi,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_Aim3sQTrJD92cok54ZhnWW, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_SUjgiTfthNR3jeStaMcRex,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_DesignContestRegimeTerm_PuAZ93vcjRYhKiN4rMvUZg,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_DesignContestRegimeTerm_TT87XZ7rfCixVuS4Z9trMH,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTechnicalUsage_8APvjTVZXX8CxGPVJZoBww,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTerm_4pryWpjZoJQ6k9AhEGANFB,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MultipleStageProcedureTerm_8y8GPfmPvSRdBcci6WWcSi,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_28qA6sXPPZP6NSvA8FovHj,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_bpDJYehUZE5dpNtnagJd4V, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_28qA6sXPPZP6NSvA8FovHj,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_8y8GPfmPvSRdBcci6WWcSi,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_PuAZ93vcjRYhKiN4rMvUZg;
   epo:isUsingEUFunds true;
@@ -708,6 +788,54 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementCriterion_daUDPcwCUoxbJRj
   a epo:ProcurementCriterion;
   epo:hasPerformingStaffQualificationInformation <http://publications.europa.eu/resource/authority/requirement-stage/t-requ> .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_FmFjqFdQHZDCpsWdURmF3u
+  a epo:ProcurementDocument;
+  epo:hasUnofficialLanguage <http://publications.europa.eu/resource/authority/language/DEU> .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_J3fJ8kKLVQrfgxy2n7VGnZ
+  a epo:ProcurementDocument;
+  epo:hasUnofficialLanguage <http://publications.europa.eu/resource/authority/language/CAT> .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_Lcq2FkDqxdUr5CahCwMxhR
+  a epo:ProcurementDocument;
+  epo:hasOfficialLanguage <http://publications.europa.eu/resource/authority/language/ENG> .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_PV7SYMGxxcD4wVCJ32qdiJ
+  a epo:ProcurementDocument;
+  epo:hasUnofficialLanguage <http://publications.europa.eu/resource/authority/language/CAT> .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_VF7Ldp4buhZfPHGCgwZPMD
+  a epo:ProcurementDocument;
+  epo:hasOfficialLanguage <http://publications.europa.eu/resource/authority/language/ENG> .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_Vjs29dgiAbe2XRF7igFLkf
+  a epo:ProcurementDocument;
+  epo:hasUnofficialLanguage <http://publications.europa.eu/resource/authority/language/DEU> .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_ZWf84H4L9hbeZqssyQfeSH
+  a epo:ProcurementDocument;
+  epo:hasOfficialLanguage <http://publications.europa.eu/resource/authority/language/FRA> .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_cgmRJsg28az2TZoWgS4zio
+  a epo:ProcurementDocument;
+  epo:hasOfficialLanguage <http://publications.europa.eu/resource/authority/language/ENG> .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_fKRWezzrhi8NNNohozFQAe
+  a epo:ProcurementDocument;
+  epo:hasOfficialLanguage <http://publications.europa.eu/resource/authority/language/ENG> .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_gX4iK3g3PnKLpCVENjgq2i
+  a epo:ProcurementDocument;
+  epo:hasOfficialLanguage <http://publications.europa.eu/resource/authority/language/FRA> .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_h3Q3UzfGJyBe7QrtFQcSgi
+  a epo:ProcurementDocument;
+  epo:hasOfficialLanguage <http://publications.europa.eu/resource/authority/language/FRA> .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_hJ9mBfzmK5WedaRecbJ7Dp
+  a epo:ProcurementDocument;
+  epo:hasOfficialLanguage <http://publications.europa.eu/resource/authority/language/FRA> .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProcessInformation_Bh5qwhngs3Hc9wnu7VDUTo
   a epo:ProcurementProcessInformation;
   epo:concernsProcedure epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_MnX8qyREnFMNLeS5MJAX9K;
@@ -745,70 +873,14 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementServiceProvider_f7UuQ7S8i
   epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0007;
   dct:description "ted-esen" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTermConstrain_ALkBdU6DUVGQjGaBxVKxrs
-  a cccev:Constraint;
-  epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/max-pass>;
-  epo:hasThresholdValue 3.0 .
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_VZxmrBG8UMc3RvpZcKCpvE a epo:ReviewTerm;
+  epo:hasReviewDeadlineInformation "Review Deadline Description ---"@en .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTermConstrain_E9HbFRFmAYvtgELes4wHf2
-  a cccev:Constraint;
-  epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/min-score>;
-  epo:hasThresholdValue 3.0 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTermConstrain_HUx9CExQBWkrce4vqV7Wkg
-  a cccev:Constraint;
-  epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/max-pass>;
-  epo:hasThresholdValue 3.0 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTermConstrain_LKeBCmZMuGEzgAFGuK3tmF
-  a cccev:Constraint;
-  epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/min-score>;
-  epo:hasThresholdValue 3.0 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTermConstrain_S65zMGfHi8GrHsbz4tEFZJ
-  a cccev:Constraint;
-  epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/max-pass>;
-  epo:hasThresholdValue 3.0 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTermConstrain_UboKtLfWMDPTeedX7G9Jj7
-  a cccev:Constraint;
-  epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/min-score>;
-  epo:hasThresholdValue 3.0 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTermConstrain_ZJQeB6XSAAiMd7wbsht64X
-  a cccev:Constraint;
-  epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/min-score>;
-  epo:hasThresholdValue 3.0 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTermConstrain_bBNJn8mrLioKfy7sx9PaWi
-  a cccev:Constraint;
-  epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/min-score>;
-  epo:hasThresholdValue 3.0 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTermConstrain_hpcDhFsANoBzRR9uDDJxnt
-  a cccev:Constraint;
-  epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/max-pass>;
-  epo:hasThresholdValue 3.0 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTermConstrain_mrZZo6ZRTw7EZzqh2Xn6xa
-  a cccev:Constraint;
-  epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/max-pass>;
-  epo:hasThresholdValue 3.0 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTermConstrain_ncrUJebheR6Q2qJFiiVscf
-  a cccev:Constraint;
-  epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/max-pass>;
-  epo:hasThresholdValue 3.0 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTermConstrain_nxePuFH9i25oYGdwmceAuJ
-  a cccev:Constraint;
-  epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/min-score>;
-  epo:hasThresholdValue 3.0 .
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_bpDJYehUZE5dpNtnagJd4V a epo:ReviewTerm;
+  epo:hasReviewDeadlineInformation "Review Deadline Description ---"@en .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_2Y8NzdfvWC5GNYLbHsuq2F a
     epo:SelectionCriterion;
-  epo:hasConstraint epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTermConstrain_HUx9CExQBWkrce4vqV7Wkg,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTermConstrain_bBNJn8mrLioKfy7sx9PaWi;
   epo:hasSelectionCriteriaUsage "used";
   epo:hasSelectionCriterionType "tp-abil";
   epo:isUsedForCandidateRestriction true;
@@ -817,8 +889,6 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_2Y8NzdfvWC5GNYLbHsuq2F
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_9xGCswiFAKWwQgitqGWSQv a
     epo:SelectionCriterion;
-  epo:hasConstraint epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTermConstrain_S65zMGfHi8GrHsbz4tEFZJ,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTermConstrain_ZJQeB6XSAAiMd7wbsht64X;
   epo:hasSelectionCriteriaUsage "used";
   epo:hasSelectionCriterionType "tp-abil";
   epo:isUsedForCandidateRestriction true;
@@ -827,8 +897,6 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_9xGCswiFAKWwQgitqGWSQv
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_Bkpcxn7EFoAsBBzSiUjcX2 a
     epo:SelectionCriterion;
-  epo:hasConstraint epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTermConstrain_UboKtLfWMDPTeedX7G9Jj7,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTermConstrain_hpcDhFsANoBzRR9uDDJxnt;
   epo:hasSelectionCriteriaUsage "used";
   epo:hasSelectionCriterionType "sui-act";
   epo:isUsedForCandidateRestriction true;
@@ -837,8 +905,6 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_Bkpcxn7EFoAsBBzSiUjcX2
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_LPqCAx6u8AHZs68SmxnK7p a
     epo:SelectionCriterion;
-  epo:hasConstraint epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTermConstrain_ALkBdU6DUVGQjGaBxVKxrs,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTermConstrain_E9HbFRFmAYvtgELes4wHf2;
   epo:hasSelectionCriteriaUsage "used";
   epo:hasSelectionCriterionType "ef-stand";
   epo:isUsedForCandidateRestriction true;
@@ -847,8 +913,6 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_LPqCAx6u8AHZs68SmxnK7p
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_bxHGbwwHUP9MfJv6P8NaFL a
     epo:SelectionCriterion;
-  epo:hasConstraint epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTermConstrain_ncrUJebheR6Q2qJFiiVscf,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTermConstrain_nxePuFH9i25oYGdwmceAuJ;
   epo:hasSelectionCriteriaUsage "used";
   epo:hasSelectionCriterionType "ef-stand";
   epo:isUsedForCandidateRestriction true;
@@ -857,8 +921,6 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_bxHGbwwHUP9MfJv6P8NaFL
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_j76qWqsuJdCtjNmRv3MK5T a
     epo:SelectionCriterion;
-  epo:hasConstraint epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTermConstrain_LKeBCmZMuGEzgAFGuK3tmF,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTermConstrain_mrZZo6ZRTw7EZzqh2Xn6xa;
   epo:hasSelectionCriteriaUsage "used";
   epo:hasSelectionCriterionType "sui-act";
   epo:isUsedForCandidateRestriction true;

@@ -79,6 +79,32 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
         ];
       rr:predicateObjectMap
         [
+            rdfs:label "BT-708-Lot, BT-615-Lot, BT-15-Lot, BT-14-Lot, BT-737-Lot, BT-707-Lot";
+            rr:predicate epo:isSubjectToLotSpecificTerm ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-AccessTerm-isSubjectToLotSpecificTerm-Lot_ND-LotProcurementDocument;
+                    rr:joinCondition [
+                        rr:child "path(.)";
+                        rr:parent "path(../..)";
+                    ];
+                ] ;
+        ];
+      rr:predicateObjectMap
+        [
+            rdfs:label "BT-99-Lot";
+            rr:predicate epo:isSubjectToLotSpecificTerm ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-ReviewTerm-isSubjectToLotSpecificTerm-Lot_ND-ReviewPresentationPeriod ;
+                    rr:joinCondition [
+                        rr:child "path(.)";
+                        rr:parent "path(../../..)";
+                    ];
+                ] ;
+        ];
+      rr:predicateObjectMap
+        [
             rdfs:label "BT-63-Lot";
             rr:predicate epo:isSubjectToLotSpecificTerm ;
             rr:objectMap
@@ -1774,6 +1800,7 @@ tedm:MG-SelectionCriterion-specifiesProcurementCriterion-Lot_ND-SelectionCriteri
         ];
      rr:predicateObjectMap
         [
+           # TODO fix Joint condition
             rdfs:label "BT-7532-Lot";
             rr:predicate epo:hasConstraint ;
             rr:objectMap
@@ -1816,16 +1843,16 @@ tedm:MG-SelectionCriterion-specifiesProcurementCriterion-Lot_ND-SecondStageWeigh
         ] ;
     rr:predicateObjectMap
         [
-            # TODO ro be added to source in previous test data is in AwardCriterionParameter not in CriterionParameter
+            # TODO to be added to source in previous test data is in AwardCriterionParameter not in CriterionParameter
             # TODO min SDK 1.9.1
+            # TODO min SDK 1.3 max SDK 1.8
             rdfs:label "BT-7531-Lot";
             rdfs:comment "Selection Criteria Second Stage Invite Number Weight of MG-SelectionCriterion under ND-SecondStageCriterionParameter";
             rr:predicate epo:hasWeightValueType ;
             rr:objectMap
                 [
-#                    rml:reference "if (exists(efbc:ParameterCode[@listName='number-weight'])) then(efbc:ParameterCode[@listName='number-weight']) else null";
-#                    rml:reference "efbc:ParameterCode";
-                   rdfs:label ":at-voc:number-weight" ;
+#                   rml:reference "efbc:ParameterCode";
+                    rdfs:label ":at-voc:number-weight" ;
                     rr:parentTriplesMap tedm:number-weight ;
                     rr:joinCondition [
                         rr:child "efbc:ParameterCode" ;
@@ -1889,7 +1916,7 @@ tedm:MG-Constraint-hasConstraint-SelectionCriterion-specifiesProcurementCriterio
     rr:subjectMap
         [
             rdfs:label "ND-SecondStageThresholdCriterionParameter";
-            rml:reference "if (exists(efbc:ParameterCode[@listName='number-threshold'])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_SelectionTermConstrain_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
+            rml:reference "if (exists(efbc:ParameterCode[@listName='number-threshold'])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_Constrain_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
             rr:class cccev:Constraint
         ] ;
     rr:predicateObjectMap
@@ -2113,10 +2140,22 @@ tedm:MG-Constraint-hasConstraint-AwardCriterion-specifiesProcurementCriterion-Lo
         ] ;
     rr:predicateObjectMap
         [
-            # TODO min SDK 1.3 max SDK 1.8
-            #  TODO min SDK 1.9.1
+            # TODO min SDK 1.8
             #TODO to be added to resource. it is even not in existing data
             rdfs:label  "BT-5423-Lot";
+            rdfs:comment "Award Criterion Number Threshold of MG-Constraint under ND-LotAwardThresholdCriterionParameter";
+            rr:predicate epo:hasThresholdValue ;
+            rr:objectMap
+                [
+                    rml:reference "efbc:ParameterNumeric";
+                    rr:datatype xsd:decimal;
+                ]
+            ] ;
+     rr:predicateObjectMap
+        [
+
+            #TODO to be added to resource. it is even not in existing data
+            rdfs:label  "BT-541-Lot-ThresholdNumber";
             rdfs:comment "Award Criterion Number Threshold of MG-Constraint under ND-LotAwardThresholdCriterionParameter";
             rr:predicate epo:hasThresholdType ;
             rr:objectMap
@@ -3210,3 +3249,215 @@ tedm:MG-SubmissionTerm-isSubjectToLotSpecificTerm-Lot_ND-TenderRecipient a rr:Tr
                 ] ;
         ];
 .
+
+tedm:MG-ProcurementDocument-involvesProcurementDocument-AccessTerm-isSubjectToLotSpecificTerm-Lot_ND-LotDocOfficialLanguage a rr:TriplesMap ;
+    rdfs:label "MG-ProcurementDocument";
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:OfficialLanguages/cac:Language";
+            rml:referenceFormulation ql:XPath
+        ];
+    rr:subjectMap
+        [
+            rdfs:label "ND-LotDocOfficialLanguage";
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ProcurementDocument_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rr:class epo:ProcurementDocument
+        ] ;
+    rr:predicateObjectMap
+        [
+            #  TODO min SDK 1.9.1
+            # TODO min SDK 1.3 max SDK 1.7
+            #  TODO min SDK 1.8 max SDK 1.8
+            rdfs:label "BT-708-Lot";
+            rdfs:comment "Documents Official Language of MG-ProcurementDocument under ND-LotDocOfficialLanguage";
+            rr:predicate epo:hasOfficialLanguage  ;
+            rr:objectMap
+                [
+#                   rml:reference "cbc:ID";
+                    rdfs:label "at-voc:language" ;
+                    rdfs:comment "Documents Official Language of MG-ProcurementDocument under ND-LotDocOfficialLanguage";
+                    rr:parentTriplesMap tedm:language ;
+                    rr:joinCondition [
+                       rr:child "'http://publications.europa.eu/resource/authority/language/' || cbc:ID" ;
+                       rr:parent "conceptURI" ;
+                    ] ;
+                ] ;
+        ] ;
+.
+
+tedm:MG-AccessTerm-isSubjectToLotSpecificTerm-Lot_ND-LotProcurementDocument a rr:TriplesMap ;
+    rdfs:label "MG-AccessTerm";
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:CallForTendersDocumentReference";
+            rml:referenceFormulation ql:XPath
+        ];
+    rr:subjectMap
+        [
+            rdfs:label "ND-LotProcurementDocument";
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_AccessTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rr:class epo:AccessTerm
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-708-Lot";
+            rdfs:comment "Documents Official Language of MG-AccessTerm under ND-LotProcurementDocument";
+            rr:predicate epo:involvesProcurementDocument;
+            rr:objectMap
+                [
+                   rr:parentTriplesMap tedm:MG-ProcurementDocument-involvesProcurementDocument-AccessTerm-isSubjectToLotSpecificTerm-Lot_ND-LotDocOfficialLanguage ;
+                    rr:joinCondition [
+                        rr:child "path(.)";
+                        rr:parent "path(../../../../../..)";
+                    ];
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-737-Lot";
+            rdfs:comment "Documents Unofficial Language of MG-AccessTerm under ND-LotDocAllOfficialLanguages";
+            rr:predicate epo:involvesProcurementDocument;
+            rr:objectMap
+                [
+                   rr:parentTriplesMap tedm:MG-ProcurementDocument-involvesProcurementDocument-AccessTerm-isSubjectToLotSpecificTerm-Lot_ND-LotDocAllNonOfficialLanguages ;
+                    rr:joinCondition [
+                        rr:child "path(.)";
+                        rr:parent "path(../../../../../..)";
+                    ];
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-14-Lot";
+            rdfs:comment "Documents Restricted of MG-AccessTerm under ND-LotProcurementDocument";
+            rr:predicate epo:isProcurementDocumentRestricted  ;
+            rr:objectMap
+                [
+                    rml:reference "cbc:DocumentType";
+                    rr:datatype xsd:boolean
+                ] ;
+        ] ;
+     rr:predicateObjectMap
+        [
+            #  TODO min SDK 1.7
+            # TODO min SDK 1.3 max SDK 1.7
+            rdfs:label "BT-707-Lot";
+            rdfs:comment "communication-justification of MG-AccessTerm under ND-LotProcurementDocument";
+            rr:predicate epo:hasDocumentRestrictionJustification  ;
+            rr:objectMap
+                [
+#                    rml:reference "descendant::cbc:DocumentTypeCode";
+                    rdfs:label "at-voc:communication-justification" ;
+                    rr:parentTriplesMap tedm:communication-justification ;
+                    rr:joinCondition [
+                        rr:child "cbc:DocumentTypeCode";
+                        rr:parent "code.value" ;
+                    ] ;
+                ] ;
+        ] ;
+     rr:predicateObjectMap
+        [
+            # TODO min SDK 1.8
+            # TODO min SDK 1.3 max SDK 1.6
+            # TODO min SDK 1.7 max SDK 1.7
+            rdfs:label "BT-15-Lot";
+            rdfs:comment "Documents URL of MG-AccessTerm under ND-LotProcurementDocument";
+            rr:predicate epo:hasPublicAccessURL  ;
+            rr:objectMap
+                [
+                    rml:reference "cac:Attachment[../cbc:DocumentType/text()='non-restricted-document']/cac:ExternalReference/cbc:URI";
+                    rr:datatype xsd:anyURI;
+                ] ;
+        ];
+
+    rr:predicateObjectMap
+        [
+            # TODO min SDK 1.3 max SDK 1.6
+            # TODO min SDK 1.7 max SDK 1.7
+            rdfs:label "BT-615-Lot";
+            rdfs:comment "Documents URL of MG-AccessTerm under ND-LotProcurementDocument";
+            rr:predicate epo:hasRestrictedAccessURL  ;
+            rr:objectMap
+                [
+                    rml:reference "cac:Attachment[not(../cbc:DocumentType/text()='restricted-document')]/cac:ExternalReference/cbc:URI";
+                    rr:datatype xsd:anyURI;
+                ] ;
+        ]
+.
+
+tedm:MG-ProcurementDocument-involvesProcurementDocument-AccessTerm-isSubjectToLotSpecificTerm-Lot_ND-LotDocAllNonOfficialLanguages a rr:TriplesMap ;
+    rdfs:label "MG-ProcurementDocument";
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NonOfficialLanguages/cac:Language";
+            rml:referenceFormulation ql:XPath
+        ];
+    rr:subjectMap
+        [
+            rdfs:label "ND-LotDocAllNonOfficialLanguages";
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ProcurementDocument_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rr:class epo:ProcurementDocument
+        ] ;
+     rr:predicateObjectMap
+        [
+            #  TODO min SDK 1.9.1
+            # TODO min SDK 1.3 max SDK 1.8
+            rdfs:label "BT-737-Lot";
+            rr:predicate epo:hasUnofficialLanguage  ;
+            rr:objectMap
+                [
+                    rdfs:label "at-voc:language" ;
+                    rr:parentTriplesMap tedm:language ;
+                    rr:joinCondition [
+                       rr:child "'http://publications.europa.eu/resource/authority/language/' || cbc:ID" ;
+                       rr:parent "conceptURI" ;
+                    ] ;
+#                    rml:reference "if(exists(cbc:LanguageID[../cbc:DocumentStatusCode/text()='non-official'])) then cbc:LanguageID else null";
+
+                ] ;
+        ] ;
+.
+
+tedm:MG-ReviewTerm-isSubjectToLotSpecificTerm-Lot_ND-ReviewPresentationPeriod a rr:TriplesMap ;
+    rdfs:label   "MG-ReviewTerm";
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:AppealTerms/cac:PresentationPeriod";
+            rml:referenceFormulation ql:XPath
+        ];
+    rr:subjectMap
+        [
+            rdfs:label   "ND-ReviewPresentationPeriod";
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ReviewTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rr:class epo:ReviewTerm
+        ] ;
+    rr:predicateObjectMap
+        [
+            #  TODO min SDK 1.4
+            # TODO min SDK 1.3 max SDK 1.3
+            rdfs:label "BT-99-Lot";
+            rdfs:comment "Review Deadline Description of MG-ReviewTerm under ND-ReviewPresentationPeriod";
+            rr:predicate epo:hasReviewDeadlineInformation ;
+            rr:objectMap
+                [
+                    rml:reference "cbc:Description";
+                    rml:languageMap [
+                        fnml:functionValue [
+                            rr:predicateObjectMap [
+                                rr:predicate idlab-fn:str ;
+                                rr:objectMap [ rml:reference "'http://publications.europa.eu/resource/authority/language/' || cbc:Description/@languageID" ]
+                            ] ,
+                            tedm:idlab-fn_executes_lookup ,
+                            tedm:idlab-fn_inputFile_language ,
+                            tedm:idlab-fn_fromColumn_0 ,
+                            tedm:idlab-fn_toColumn_1
+                        ]
+                    ] ;
+                ] ;
+        ] ;
+.
+

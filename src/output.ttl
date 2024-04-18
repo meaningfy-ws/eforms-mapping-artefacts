@@ -513,16 +513,12 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_MnX8qyREnFMNLeS5MJAX9K a e
     "Loi modifiée du 8 juillet 2018 sur les concessions"@fr;
   epo:hasMainFeature "Description of the procedure  ---"@en;
   epo:hasProcedureType <http://publications.europa.eu/resource/authority/procurement-procedure-type/neg-w-call>;
-  epo:hasPurpose epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_eySzap22e3jkZr3f7VXYNj;
+  epo:hasPurpose epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Purpose_eySzap22e3jkZr3f7VXYNj;
   epo:isAccelerated true;
   epo:isSubjectToProcedureSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_5ePSyM3yjeKrNdoLehDe7g,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_BniuuBzYtT7voNxpkh6A9M;
   dct:description "Description ---"@en;
   dct:title "Procurement Title ---"@en .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_eySzap22e3jkZr3f7VXYNj a epo:Purpose;
-  epo:hasAdditionalClassification <http://data.europa.eu/cpv/cpv/79720000>;
-  epo:hasMainClassification <http://data.europa.eu/cpv/cpv/79710000> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProcessInformation_Bh5qwhngs3Hc9wnu7VDUTo
   a epo:ProcurementProcessInformation;
@@ -560,6 +556,10 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementServiceProvider_f7UuQ7S8i
   epo:actsOnBehalfOf epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Buyer_MT3gdCnJ9BA7aEqaGqKxAh;
   epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0007;
   dct:description "ted-esen" .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Purpose_eySzap22e3jkZr3f7VXYNj a epo:Purpose;
+  epo:hasAdditionalClassification <http://data.europa.eu/cpv/cpv/79720000>;
+  epo:hasMainClassification <http://data.europa.eu/cpv/cpv/79710000> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_8y8GPfmPvSRdBcci6WWcSi
   a epo:SubmissionTerm;

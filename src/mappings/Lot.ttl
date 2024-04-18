@@ -255,6 +255,10 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
             rr:objectMap
                 [
                     rr:parentTriplesMap tedm:MG-Identifier-identifier-Lot_ND-Lot ;
+                    rr:joinCondition [
+                        rr:child "cbc:ID";
+                        rr:parent "cbc:ID";
+                    ];
                 ] ;
         ]
 .

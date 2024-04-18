@@ -3330,13 +3330,14 @@ tedm:MG-AccessTerm-isSubjectToLotSpecificTerm-Lot_ND-LotProcurementDocument a rr
         ] ;
     rr:predicateObjectMap
         [
+            # TODO check the datatype with the values
             rdfs:label "BT-14-Lot";
             rdfs:comment "Documents Restricted of MG-AccessTerm under ND-LotProcurementDocument";
             rr:predicate epo:isProcurementDocumentRestricted  ;
             rr:objectMap
                 [
                     rml:reference "cbc:DocumentType";
-                    rr:datatype xsd:boolean
+#                    rr:datatype xsd:boolean
                 ] ;
         ] ;
      rr:predicateObjectMap

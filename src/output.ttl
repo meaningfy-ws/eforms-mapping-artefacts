@@ -58,7 +58,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_Aim3sQTrJD92cok54ZhnWW a 
   epo:involvesProcurementDocument epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_Vjs29dgiAbe2XRF7igFLkf,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_ZWf84H4L9hbeZqssyQfeSH,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_cgmRJsg28az2TZoWgS4zio;
-  epo:isProcurementDocumentRestricted "restricted-document"^^xsd:boolean .
+  epo:isProcurementDocumentRestricted "restricted-document" .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_SUjgiTfthNR3jeStaMcRex a epo:AccessTerm;
   epo:hasPublicAccessURL "http://nonrestricteddocuments.com"^^xsd:anyURI;
@@ -66,7 +66,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_SUjgiTfthNR3jeStaMcRex a 
   epo:involvesProcurementDocument epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_J3fJ8kKLVQrfgxy2n7VGnZ,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_Lcq2FkDqxdUr5CahCwMxhR,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_hJ9mBfzmK5WedaRecbJ7Dp;
-  epo:isProcurementDocumentRestricted "non-restricted-document"^^xsd:boolean .
+  epo:isProcurementDocumentRestricted "non-restricted-document" .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_XnxqfcRqzA7sngzwrWyL3G a epo:AccessTerm;
   epo:hasDocumentRestrictionJustification <http://publications.europa.eu/resource/authority/communication-justification/tdf-non-av>;
@@ -75,7 +75,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_XnxqfcRqzA7sngzwrWyL3G a 
   epo:involvesProcurementDocument epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_PV7SYMGxxcD4wVCJ32qdiJ,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_VF7Ldp4buhZfPHGCgwZPMD,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_h3Q3UzfGJyBe7QrtFQcSgi;
-  epo:isProcurementDocumentRestricted "non-restricted-document"^^xsd:boolean .
+  epo:isProcurementDocumentRestricted "non-restricted-document" .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_daUDPcwCUoxbJRjGb7tKNQ a epo:AccessTerm;
   epo:hasAdditionalInformationDeadline "2023-05-20T20:59:32+01:00"^^xsd:dateTime .
@@ -84,7 +84,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_fHHa5zNc2jy5cUXFhDq6nM a 
   epo:involvesProcurementDocument epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_FmFjqFdQHZDCpsWdURmF3u,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_fKRWezzrhi8NNNohozFQAe,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_gX4iK3g3PnKLpCVENjgq2i;
-  epo:isProcurementDocumentRestricted "restricted-document"^^xsd:boolean .
+  epo:isProcurementDocumentRestricted "restricted-document" .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AcquiringCentralPurchasingBody_TftBQ7CiqCcyirLAwhsyEn
   a epo:AcquiringCentralPurchasingBody;

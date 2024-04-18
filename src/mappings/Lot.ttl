@@ -427,7 +427,7 @@ tedm:MG-Identifier-identifier-PlannedProcurementPart-announcesPlannedProcurement
     rr:subjectMap
         [
             rdfs:label "ND-LotPreviousPlanning";
-            # we hash on the ID instead as it is bound to be unique (this internal address is not)
+            # we hash on the ID at the end and not the path as the iterator is repeating
             rml:reference "if (exists(cbc:ReferencedDocumentInternalAddress)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(cbc:ID, ' ', '-' ), '/' , '-') || '_PlannedProcurementPartIdentifier_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(cbc:ID) || '?response_type=raw') else null" ;
             rr:class adms:Identifier
         ] ;

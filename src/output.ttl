@@ -479,19 +479,19 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedurePlacePerformance_btiykpkF9y
   locn:postCode "N1 9FL";
   locn:postName "London" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_MnX8qyREnFMNLeS5MJAX9K a
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_5ePSyM3yjeKrNdoLehDe7g a
     epo:ProcedureTerm;
-  epo:isSubmissionForAllLotsRequired true .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerms_5ePSyM3yjeKrNdoLehDe7g
-  a epo:ProcedureTerm;
   epo:hasCrossBorderLaw "Cross border law description ---"@en .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerms_BniuuBzYtT7voNxpkh6A9M
-  a epo:ProcedureTerm;
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_BniuuBzYtT7voNxpkh6A9M a
+    epo:ProcedureTerm;
   epo:definesLotGroup epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroup_GLO-0001;
   epo:hasMaximumLotSubmissionAllowed 2;
   epo:hasMaximumNumberOfLotsToBeAwarded 2 .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_MnX8qyREnFMNLeS5MJAX9K a
+    epo:ProcedureTerm;
+  epo:isSubmissionForAllLotsRequired true .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureValueEstimateExtension_9thMAaeveYJRewotgDGorG
   a epo:MonetaryValue;
@@ -515,8 +515,8 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_MnX8qyREnFMNLeS5MJAX9K a e
   epo:hasProcedureType <http://publications.europa.eu/resource/authority/procurement-procedure-type/neg-w-call>;
   epo:hasPurpose epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_eySzap22e3jkZr3f7VXYNj;
   epo:isAccelerated true;
-  epo:isSubjectToProcedureSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerms_5ePSyM3yjeKrNdoLehDe7g,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerms_BniuuBzYtT7voNxpkh6A9M;
+  epo:isSubjectToProcedureSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_5ePSyM3yjeKrNdoLehDe7g,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_BniuuBzYtT7voNxpkh6A9M;
   dct:description "Description ---"@en;
   dct:title "Procurement Title ---"@en .
 

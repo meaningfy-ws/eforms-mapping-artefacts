@@ -39,22 +39,33 @@ tedm:MG-ProcurementServiceProvider_ND-ServiceProviderParty a rr:TriplesMap ;
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ProcurementServiceProvider_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
             rr:class epo:ProcurementServiceProvider
         ] ;
-    # rr:predicateObjectMap
-    #     [
-    #         rdfs:label "OPT-300-Procedure-SProvider" ;
-    #         rr:predicate epo:playedBy ;
-    #         rr:objectMap
-    #             [
-    #                 rr:parentTriplesMap tedm:ND-ProviderParty ;
-    #             ] ;
-    #     ] ;
     rr:predicateObjectMap
         [
+            rdfs:label "OPT-300-Procedure-SProvider" ;
+            rdfs:comment "Service Provider Technical Identifier Reference of MG-Organization-playedBy-ProcurementServiceProvider under ND-ServiceProviderParty" ;
+            rr:predicate epo:playedBy ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-Organization_ND-Company ;
+                    rr:joinCondition [
+                        rr:child "cac:Party/cac:PartyIdentification/cbc:ID" ;
+                        rr:parent "cac:PartyIdentification/cbc:ID" ;
+                    ] ;
+                    # alternative: associated object linked through explicit template with deterministic IRI
+                    # rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Organization_{cac:Party/cac:PartyIdentification/cbc:ID}" ;
+                    # rr:termType rr:IRI ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            # TODO min SDK 1.10
             rr:predicate epo:actsOnBehalfOf ;
             rr:objectMap
                 [
+                    tedm:minSDKVersion "1.3" ;
+                    tedm:maxSDKVersion "1.9.1" ;
                     rr:parentTriplesMap tedm:MG-Buyer_ND-ContractingParty ;
-                    # TODO: Why is this needed if this is linkage in the same source?
+                    # TODO: Check if a join is actually needed and whether absolute or relative child should be used
                     # rr:joinCondition [
                     #     rr:child "path(/*/cac:ContractingParty)" ;
                     #     rr:parent "path(.)" ;
@@ -68,7 +79,7 @@ tedm:MG-ProcurementServiceProvider_ND-ServiceProviderParty a rr:TriplesMap ;
             rr:predicate dct:description ;
             rr:objectMap
                 [
-                    rml:reference "if(/*/cac:ContractingParty/cac:Party/cac:ServiceProviderParty/cbc:ServiceTypeCode[@listName='organisation-role']/text()='ted-esen') then cbc:ServiceTypeCode else null" ;
+                    rml:reference "if(cbc:ServiceTypeCode[@listName='organisation-role']/text()='ted-esen') then cbc:ServiceTypeCode else null" ;
                 ] ;
         ] ;
 .

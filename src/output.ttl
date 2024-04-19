@@ -167,10 +167,6 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyContactPoint_dxvvStPQ7ekRVg6x
   cccev:email "esender@esendcorp.lu";
   cccev:telephone "+352 123456789" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_RxWyYo5p6B6QKE6kAx4iDD
-  a dct:Location;
-  locn:address epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedurePlacePerformance_RxWyYo5p6B6QKE6kAx4iDD .
-
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_btiykpkF9yYEWFnDmvRf6a
   a dct:Location;
   epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
@@ -467,10 +463,6 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureIdentifier_eySzap22e3jkZr3f
   epo:hasScheme "InternalID";
   skos:notation "2023-P-0001" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedurePlacePerformance_RxWyYo5p6B6QKE6kAx4iDD
-  a locn:Address;
-  locn:fullAddress "" .
-
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedurePlacePerformance_btiykpkF9yYEWFnDmvRf6a
   a locn:Address;
   epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
@@ -544,7 +536,6 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_QmFgW
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_RxWyYo5p6B6QKE6kAx4iDD
   a epo:ContractTerm;
-  epo:definesSpecificPlaceOfPerformance epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_RxWyYo5p6B6QKE6kAx4iDD;
   epo:hasBroadPlaceOfPerformance <http://publications.europa.eu/resource/authority/other-place-service/anyw-eea> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_btiykpkF9yYEWFnDmvRf6a

@@ -895,9 +895,8 @@ tedm:MG-Address-address-Location-definesSpecificPlaceOfPerformance-ContractTerm-
     rr:subjectMap
         [
             rdfs:label "ND-ProcedurePlacePerformance";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ProcedurePlacePerformance_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
-#            rml:reference "if (exists(cbc:StreetName) or exists(cbc:AdditionalStreetName) or exists(cac:AddressLine/cbc:Line) or exists(cbc:CityName) or exists(cbc:PostalZone)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_ProcurementProjectContractAddress_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
-#            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_AddressandLocation_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            # WARNING this does not work in conjunction w/ a joinCondition in rmlmapper v6.3+, likely related to the null case
+            rml:reference "if(exists(cbc:StreetName) or exists(cbc:AdditionalStreetName) or exists(cac:AddressLine/cbc:Line) or exists(cbc:CityName) or exists(cbc:PostalZone) or exists(cac:Country/cbc:IdentificationCode)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_ProcedurePlacePerformance_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
             rr:class locn:Address
         ] ;
     rr:predicateObjectMap
@@ -967,24 +966,25 @@ tedm:MG-Location-definesSpecificPlaceOfPerformance-ContractTerm-foreseesContract
     rml:logicalSource
         [
             rml:source "data/source.xml" ;
-#            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:ProcurementProject/cac:RealizedLocation";
             rml:iterator "/*/cac:ProcurementProject/cac:RealizedLocation/cac:Address";
             rml:referenceFormulation ql:XPath
         ];
     rr:subjectMap
         [
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ContractLocation_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            # we check for the elements of a linked Address as otherwise this Location should not be instantiated either
+            rml:reference "if (exists(cbc:StreetName) or exists(cbc:AdditionalStreetName) or exists(cac:AddressLine/cbc:Line) or exists(cbc:CityName) or exists(cbc:PostalZone) or exists(cac:Country/cbc:IdentificationCode)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_ContractLocation_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
             rr:class dct:Location
         ] ;
     rr:predicateObjectMap
         [
-            rdfs:label "BT-5101(a)-Procedure, BT-5101(b)-Procedure, BT-5101(c)-Procedure, BT-5131-Procedure and BT-5121-Procedure";
+            rdfs:label "BT-5101(a|b|c)-, BT-5131-, BT-5121-Procedure";
+            rdfs:comment "Address of Location" ;
             rr:predicate locn:address ;
             rr:objectMap
                 [
                     rr:parentTriplesMap tedm:MG-Address-address-Location-definesSpecificPlaceOfPerformance-ContractTerm-foreseesContractSpecificTerm-Procedure_ND-ProcedurePlacePerformance;
+                    # WARNING this does not work in conjunction w/ the parent's conditional reference in rmlmapper v6.3+
                     rr:joinCondition [
-                        # TODO check the joint condition
                         rr:child "path(.)";
                         rr:parent "path(.)";
                     ];
@@ -998,7 +998,6 @@ tedm:MG-Location-definesSpecificPlaceOfPerformance-ContractTerm-foreseesContract
             rr:objectMap
                 [
                     rdfs:label "at-voc:country" ;
-                    # rml:reference "descendant::cbc:IdentificationCode" ;
                     rr:parentTriplesMap tedm:country ;
                     rr:joinCondition [
                         rr:child "cac:Country/cbc:IdentificationCode" ;
@@ -1020,7 +1019,6 @@ tedm:MG-Location-definesSpecificPlaceOfPerformance-ContractTerm-foreseesContract
                         rr:parent "code.value" ;
                     ] ;
                 ] ;
-
         ]
 .
 
@@ -1029,20 +1027,24 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-Procedure_ND-ProcedurePlacePer
      rml:logicalSource
         [
             rml:source "data/source.xml" ;
-#           rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:ProcurementProject";
+            # TODO we need to decide on the right iterator for ContractTerms, should not be on Location/Address
+            # rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:ProcurementProject";
             rml:iterator "/*/cac:ProcurementProject/cac:RealizedLocation/cac:Address";
             rml:referenceFormulation ql:XPath
         ];
     rr:subjectMap
         [
             rdfs:label "ND-ProcedurePlacePerformance";
+            # TODO check if the path hash should be on the current or parent
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ProcurementProjectContractTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
-#           rml:reference "if (exists(cbc:ProcurementTypeCode[@listName='contract-nature']) or exists(descendant::cbc:ProcurementTypeCode[@listName='contract-nature'])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_ContractTerm_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw') else null" ;
-            rr:class  epo:ContractTerm;
+            # TODO check if we need these conditions to instantiate a ContractTerm
+            # rml:reference "if (exists(cbc:ProcurementTypeCode[@listName='contract-nature']) or exists(descendant::cbc:ProcurementTypeCode[@listName='contract-nature'])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_ContractTerm_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw') else null" ;
+            rr:class epo:ContractTerm;
         ] ;
     rr:predicateObjectMap
         [
-            rdfs:label "BT-5101(a)-Procedure, BT-5101(b)-Procedure, BT-5101(c)-Procedure, BT-5131-Procedure and BT-5121-Procedure";
+            rdfs:label "BT-5101(a|b|c)-Procedure-, BT-5131-, BT-5121-Procedure";
+            rdfs:comment "Location of ContractTerm";
             rr:predicate epo:definesSpecificPlaceOfPerformance ;
             rr:objectMap
                 [
@@ -1066,7 +1068,6 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-Procedure_ND-ProcedurePlacePer
                         rr:child "cbc:Region" ;
                         rr:parent "code.value" ;
                     ] ;
-#                    rml:reference "cbc:Region";
                 ] ;
         ] ;
 #    rr:predicateObjectMap

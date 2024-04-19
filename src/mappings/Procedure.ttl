@@ -902,87 +902,24 @@ tedm:MG-Address-address-Location-definesSpecificPlaceOfPerformance-ContractTerm-
         ] ;
     rr:predicateObjectMap
         [
-            rdfs:label "BT-5101(a|b|c),BT-5121,BT-5131,5141" ;
-            rdfs:comment "Aggregate of Department, Street, Streetline 1, Streetline 2,  City,  Post Code,  Country Code" ;
+            rdfs:label "BT-5101(a|b|c)-, BT-5121-, BT-5131-, 5141-Procedure" ;
+            rdfs:comment "Place Performance Street, Place Performance Streetline 1, Place Performance Streetline 2, Place Performance City, Place Performance Post Code, Place Performance Country Code" ;
             rr:predicate locn:fullAddress ;
             rr:objectMap
                 [
-                    rml:reference "normalize-space(cbc:Department || ' ' || cbc:StreetName || ' ' || cbc:AdditionalStreetName || ' ' || cbc:Line || ' ' || cbc:CityName || ' ' || cbc:PostalZone || ' ' || cac:Country/cbc:IdentificationCode)" ;
-#                rml:languageMap [
-#                        fnml:functionValue [
-#                            rr:predicateObjectMap [
-#                                rr:predicate idlab-fn:str ;
-#                                rr:objectMap [ rml:reference "'http://publications.europa.eu/resource/authority/language/' || cbc:Description/@languageID" ]
-#                            ] ,
-#                            tedm:idlab-fn_executes_lookup ,
-#                            tedm:idlab-fn_inputFile_language ,
-#                            tedm:idlab-fn_fromColumn_0 ,
-#                            tedm:idlab-fn_toColumn_1
-#                        ]
-#                    ] ;
+                    rml:reference "replace(replace(cbc:StreetName || ', ' || cbc:AdditionalStreetName || ', ' || cac:AddressLine/cbc:Line || ', ' || cbc:CityName || ', ' || cbc:PostalZone || ', ' || cac:Country/cbc:IdentificationCode, '(, )+', ', '),  '^, |, $', '')" ;
                 ] ;
-
         ] ;
-#    rr:predicateObjectMap
-#        [
-#            rdfs:label "BT-5101(a)-Procedure";
-#            rdfs:comment "Place Performance Street of MG-Address under ND-ProcedurePlacePerformance";
-#            rr:predicate locn:fullAddress ;
-#            rr:objectMap
-#                [
-#                    rml:reference "cbc:StreetName";
-#                ] ;
-#        ] ;
-#    rr:predicateObjectMap
-#        [
-#            rdfs:label "BT-5101(b)-Procedure";
-#            rdfs:comment "Place Performance Streetline 1 of MG-Address under ND-ProcedurePlacePerformance";
-#            rr:predicate locn:fullAddress  ;
-#            rr:objectMap
-#                [
-#                    rml:reference "cbc:AdditionalStreetName";
-#                ] ;
-#        ] ;
-#    rr:predicateObjectMap
-#        [
-#            rdfs:label "BT-5101(c)-Procedure";
-#            rdfs:comment "Place Performance Streetline 2 of MG-Address under ND-ProcedurePlacePerformance";
-#            rr:predicate locn:fullAddress  ;
-#            rr:objectMap
-#                [
-#                    rml:reference "descendant::cbc:Line";
-#                ] ;
-#        ] ;
-#    rr:predicateObjectMap
-#        [
-#            rdfs:label "BT-5131-Procedure";
-#            rdfs:comment "Place Performance City of MG-Address under ND-ProcedurePlacePerformance";
-#            rr:predicate locn:fullAddress  ;
-#            rr:objectMap
-#                [
-#                    rml:reference "cbc:CityName";
-#                    #                ] ;
-#        ] ;
     rr:predicateObjectMap
         [
             rdfs:label "BT-5131-Procedure";
             rdfs:comment "Place Performance City of MG-Address under ND-ProcedurePlacePerformance";
-            rr:predicate  locn:postName  ;
+            rr:predicate locn:postName  ;
             rr:objectMap
                 [
                     rml:reference "cbc:CityName";
                 ] ;
         ] ;
-#    rr:predicateObjectMap
-#        [
-#            rdfs:label "BT-5121-Procedure";
-#            rdfs:comment "Place Performance Post Code of MG-Address under ND-ProcedurePlacePerformance";
-#            rr:predicate locn:fullAddress ;
-#            rr:objectMap
-#                [
-#                    rml:reference "cbc:PostalZone";
-#                ] ;
-#        ];
     rr:predicateObjectMap
         [
             rdfs:label "BT-5121-Procedure";
@@ -991,7 +928,7 @@ tedm:MG-Address-address-Location-definesSpecificPlaceOfPerformance-ContractTerm-
             rr:objectMap
                 [
                     rml:reference "cbc:PostalZone";
-                  ] ;
+                ] ;
         ];
       rr:predicateObjectMap
         [
@@ -1015,7 +952,6 @@ tedm:MG-Address-address-Location-definesSpecificPlaceOfPerformance-ContractTerm-
             rr:objectMap
                 [
                     rdfs:label "at-voc:country" ;
-                    # rml:reference "descendant::cbc:IdentificationCode" ;
                     rr:parentTriplesMap tedm:country ;
                     rr:joinCondition [
                         rr:child "cac:Country/cbc:IdentificationCode" ;

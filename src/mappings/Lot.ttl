@@ -260,7 +260,17 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                         rr:parent "cbc:ID";
                     ];
                 ] ;
-        ]
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "ND-ExclusionGrounds";
+            rr:predicate epo:specifiesProcurementCriterion ;
+            rr:objectMap
+                [
+                    # this is an example of a relationship for all occurences of a subject, therefore not needing a joinCondition
+                    rr:parentTriplesMap tedm:MG-ExclusionGround-specifiesProcurementCriterion-Lot_ND-ExclusionGrounds ;
+                ]
+        ] ;
 .
 
 tedm:MG-Identifier-identifier-Lot_ND-Lot a rr:TriplesMap ;
@@ -1152,4 +1162,61 @@ tedm:MG-AdHocChannel-usesChannel-Lot_ND-LotTenderingProcess a rr:TriplesMap ;
                     rr:datatype xsd:anyURI
                 ] ;
         ]
+.
+
+# this is an example of an object referred to by multiple top-level subjects (all Lots) at orthogonal XPaths
+tedm:MG-ExclusionGround-specifiesProcurementCriterion-Lot_ND-ExclusionGrounds a rr:TriplesMap ;
+    rdfs:label "MG-ExclusionGround";
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/cac:TenderingTerms/cac:TendererQualificationRequest/cac:SpecificTendererRequirement";
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-ExclusionGrounds";
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ExclusionGround_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rr:class epo:ExclusionGround
+
+        ] ;
+   rr:predicateObjectMap
+        [
+            rdfs:label "BT-67(a)-Procedure";
+            rdfs:comment "Exclusion Grounds of MG-ExclusionGround under ND-ExclusionGrounds";
+            rr:predicate dct:type;
+            rr:objectMap
+                [
+                    rml:reference "cbc:TendererRequirementTypeCode[@listName='exclusion-ground']";
+                    rdfs:label "at-voc:criterion" ;
+                    # TODO resource
+                    # rr:parentTriplesMap tedm:criterion ;
+                    # rr:joinCondition [
+                    #     rr:child "cbc:TendererRequirementTypeCode[@listName='exclusion-ground']" ;
+                    #     rr:parent "code.value" ;
+                    # ] ;
+                ] ;
+        ] ;
+   rr:predicateObjectMap
+        [
+            rdfs:label "BT-67(b)-Procedure";
+            rdfs:comment "Exclusion Grounds of MG-ExclusionGround under ND-ExclusionGrounds";
+            rr:predicate dct:descrition;
+            rr:objectMap
+                [
+                    rml:reference "cbc:Description";
+                    rml:languageMap [
+                        fnml:functionValue [
+                            rr:predicateObjectMap [
+                                rr:predicate idlab-fn:str ;
+                                rr:objectMap [ rml:reference "'http://publications.europa.eu/resource/authority/language/' || cbc:Description/@languageID" ]
+                            ] ,
+                            tedm:idlab-fn_executes_lookup ,
+                            tedm:idlab-fn_inputFile_language ,
+                            tedm:idlab-fn_fromColumn_0 ,
+                            tedm:idlab-fn_toColumn_1
+                        ]
+                    ] ;
+                ] ;
+        ] ;
 .

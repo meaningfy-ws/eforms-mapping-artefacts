@@ -669,19 +669,6 @@ tedm:MG-Procedure_ND-ProcedureTenderingProcess a rr:TriplesMap ;
     #     ]   ;
     # rr:predicateObjectMap
     #     [
-    #         rdfs:label "ND-ExclusionGrounds";
-    #         rr:predicate epo:specifiesExclusionGround ;
-    #         rr:objectMap
-    #             [
-    #                 rr:parentTriplesMap tedm:ND-ExclusionGrounds;#/*/cac:TenderingTerms/cac:TendererQualificationRequest/cac:SpecificTendererRequirement
-    #                 rr:joinCondition [
-    #                     rr:child "path(..)";
-    #                     rr:parent "path(../../..)";
-    #                 ];
-    #             ]
-    #     ];
-    # rr:predicateObjectMap
-    #     [
     #         rdfs:label "BT-09(b)-Procedure";
     #         rr:predicate epo:refersToProcedure ;
     #         rr:objectMap
@@ -1163,43 +1150,6 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-Procedure_ND-ProcedurePlacePer
 
                 ] ;
         ] ;
-.
-
-tedm:MG-ExclusionGround-specifiesExclusionGround-Procedure_ND-ExclusionGrounds a rr:TriplesMap ;
-    rdfs:label "MG-ExclusionGround";
-    rml:logicalSource
-        [
-            rml:source "data/source.xml" ;
-            rml:iterator "/*/cac:TenderingTerms/cac:TendererQualificationRequest/cac:SpecificTendererRequirement";
-            rml:referenceFormulation ql:XPath
-        ] ;
-    rr:subjectMap
-        [
-            rdfs:label "ND-ExclusionGrounds";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ExtensionGroup_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
-            rr:class epo:ExclusionGround
-
-        ] ;
-#    rr:predicateObjectMap
-#        [
-#            rdfs:label "BT-67(a)-Procedure";
-#            rdfs:comment "Exclusion Grounds of MG-ExclusionGround under ND-ExclusionGrounds";
-#            rr:predicate  dct:type  ;
-#            rr:objectMap
-#                [
-#                    rml:reference "cbc:TendererRequirementTypeCode[@listName='exclusion-ground']";
-#                ] ;
-#        ] ;
-#    rr:predicateObjectMap
-#        [
-#            rdfs:label "BT-67(b)-Procedure";
-#            rdfs:comment "Exclusion Grounds of MG-ExclusionGround under ND-ExclusionGrounds";
-#            rr:predicate  dct:descrition  ;
-#            rr:objectMap
-#                [
-#                    rml:reference "cbc:Description";
-#                ] ;
-#        ]
 .
 
 tedm:MG-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-CrossBorderLaw a rr:TriplesMap ;

@@ -623,6 +623,20 @@ tedm:MG-Procedure_ND-ProcedureTenderingProcess a rr:TriplesMap ;
                     ] ;
                 ] ;
         ]  ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "ProcedureTerm";
+            rdfs:comment "Composition relationship between Procedure and ProcedureTerm";
+            rr:predicate epo:isSubjectToProcedureSpecificTerm ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-ProcedureTerm_ND-ProcedureTenderingProcess;
+                    rr:joinCondition [
+                        rr:child "path(.)";
+                        rr:parent "path(.)";
+                    ];
+                ]
+        ] ;
     # rr:predicateObjectMap
     #     [
     #         rdfs:label "BT-01-notice and BT-01(c)-notice and BT-01(d)-notice";

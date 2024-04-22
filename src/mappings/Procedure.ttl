@@ -34,7 +34,6 @@ tedm:MG-Procedure_ND-LocalLegalBasisWithID a rr:TriplesMap ;
         ] ;
     rr:subjectMap
         [
-            #This one maps to the parent path
             rdfs:label "ND-LocalLegalBasisWithID";
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Procedure_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(../..)) || '?response_type=raw')}" ;
             rr:class epo:Procedure
@@ -88,7 +87,6 @@ tedm:MG-Procedure_ND-LocalLegalBasisNoID a rr:TriplesMap ;
         ] ;
     rr:subjectMap
         [
-            #This one maps to the parent path
             rdfs:label "ND-LocalLegalBasisNoID";
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Procedure_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(../..)) || '?response_type=raw')}" ;
             rr:class epo:Procedure
@@ -319,8 +317,6 @@ tedm:MG-Procedure_ND-ProcedureProcurementScope a rr:TriplesMap ;
         ] ;
     rr:subjectMap
         [
-            #This one maps to the parent path
-            # TODO what does that mean?
             rdfs:label "ND-ProcedureProcurementScope" ;
             rdfs:comment "Primary type declaration for MG-Procedure under ND-ProcedureProcurementScope" ;
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Procedure_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
@@ -402,24 +398,6 @@ tedm:MG-Procedure_ND-ProcedureProcurementScope a rr:TriplesMap ;
                     ] ;
                 ] ;
         ] ;
-#    rr:predicateObjectMap
-#        [
-#            rdfs:label "BT-26(a)-Procedure and BT-263-Procedure";
-#            rr:predicate epo:hasAdditionalClassification  ;
-#            rr:objectMap
-#                [
-#                    rml:reference "if(exists(descendant::cbc:ItemClassificationCode) and exists(descendant::cbc:ItemClassificationCode/@listName)) then concat(cbc:ItemClassificationCode, ':', cbc:ItemClassificationCode/@listName) else null";
-#                ] ;
-#        ] ;
-#    rr:predicateObjectMap
-#        [
-#            rdfs:label "BT-26(m)-Procedure and BT-262-Procedure";
-#            rr:predicate epo:hasMainClassification  ;
-#            rr:objectMap
-#                [
-#                    rml:reference "if(exists(descendant::cbc:ItemClassificationCode) and exists(descendant::cbc:ItemClassificationCode/@listName)) then concat(cbc:ItemClassificationCode, ':', cbc:ItemClassificationCode/@listName) else null";
-#                ] ;
-#        ] ;
     rr:predicateObjectMap
         [
             rr:predicate epo:foreseesContractSpecificTerm ;
@@ -637,49 +615,6 @@ tedm:MG-Procedure_ND-ProcedureTenderingProcess a rr:TriplesMap ;
                     ];
                 ]
         ] ;
-    # rr:predicateObjectMap
-    #     [
-    #         rdfs:label "BT-01-notice and BT-01(c)-notice and BT-01(d)-notice";
-    #         rr:predicate  epo:hasLegalBasis  ;
-    #         rr:objectMap
-    #             [
-    #                 rml:reference "if(exists(/*/cbc:RegulatoryDomain) or exists(cac:ProcurementLegislationDocumentReference[not(cbc:ID/text()=('CrossBorderLaw','LocalLegalBasis'))]/cbc:ID[not(text()=('CrossBorderLaw','LocalLegalBasis'))]) or exists(cac:ProcurementLegislationDocumentReference[not(cbc:ID/text()=('CrossBorderLaw','LocalLegalBasis'))]/cbc:DocumentDescription)) then concat(/*/cbc:RegulatoryDomain, ' ',concat(cac:ProcurementLegislationDocumentReference[not(cbc:ID/text()=('CrossBorderLaw','LocalLegalBasis'))]/cbc:ID[not(text()=('CrossBorderLaw','LocalLegalBasis'))], ' ', cac:ProcurementLegislationDocumentReference[not(cbc:ID/text()=('CrossBorderLaw','LocalLegalBasis'))]/cbc:DocumentDescription)) else null";
-    #                 rr:datatype xsd:string
-    #             ] ;
-    #     ] ;
-    # rr:predicateObjectMap
-    #     [
-    #         rdfs:label "BT-106-Procedure";
-    #         rr:predicate   epo:isAccelerated  ;
-    #         rr:objectMap
-    #             [
-    #                 rml:reference "descendant::cbc:ProcessReasonCode[@listName='accelerated-procedure']";
-    #                 rr:datatype xsd:boolean
-    #             ] ;
-    #     ] ;
-    # rr:predicateObjectMap
-    #     [
-    #         rdfs:label "BT-1351-Procedure";
-    #         rr:predicate   epo:hasAcceleratedProcedureJustification  ;
-    #         rr:objectMap
-    #             [
-    #                 rml:reference "descendant::cbc:ProcessReason";
-    #                 rr:datatype xsd:string
-    #             ] ;
-    #     ]   ;
-    # rr:predicateObjectMap
-    #     [
-    #         rdfs:label "BT-09(b)-Procedure";
-    #         rr:predicate epo:refersToProcedure ;
-    #         rr:objectMap
-    #             [
-    #                 rr:parentTriplesMap tedm:ND-ProcedureTenderingProcess;
-    #                 rr:joinCondition [
-    #                     rr:child "path(/*/cac:TenderingProcess)";
-    #                     rr:parent "path(.)";
-    #                 ];
-    #             ]
-    #     ]
 .
 
 # this is an example of a TMap which has the same subject IRI as two others (tedm:MG-Procedure_ND-ProcedureProcurementScope and tedm:MG-Procedure_ND-TenderingProcess)
@@ -693,7 +628,6 @@ tedm:MG-Procedure_ND-AcceleratedProcedure a rr:TriplesMap ;
         ] ;
     rr:subjectMap
         [
-            #This one maps to the parent path
             # this is an example of a subject IRI with a hash on the grandparent
             rdfs:label "ND-AcceleratedProcedure" ;
             rdfs:comment "Type declaration for MG-Procedure under ND-AcceleratedProcedure" ;
@@ -829,7 +763,6 @@ tedm:MG-Purpose-hasPurpose-Procedure_ND-ProcedureMainClassificationCode a rr:Tri
         ] ;
     rr:subjectMap
         [
-            #This one maps to the parent path
             rdfs:label "ND-ProcedureMainClassificationCode" ;
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Purpose_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
             rr:class epo:Purpose
@@ -862,7 +795,6 @@ tedm:MG-Purpose-hasPurpose-Procedure_ND-ProcedureAdditionalCommodityClassificati
         ] ;
     rr:subjectMap
         [
-            #This one maps to the parent path
             rdfs:label "ND-ProcedureMainClassificationCode" ;
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Purpose_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
             rr:class epo:Purpose
@@ -1071,34 +1003,6 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-Procedure_ND-ProcedurePlacePer
                     ] ;
                 ] ;
         ] ;
-#    rr:predicateObjectMap
-#        [
-#            rdfs:label "BT-728-Procedure";
-#            rr:predicate epo:hasPlaceOfPerformanceAdditionalInformation ;
-#            rr:objectMap
-#                [
-#                    rml:reference "descendant::cbc:Description";
-#                    rr:datatype xsd:string;
-#                ] ;
-#        ] ;
-#    rr:predicateObjectMap
-#        [
-#            rdfs:label "BT-531-Procedure";
-#            rr:predicate  epo:hasAdditionalContractNature;
-#            rr:objectMap
-#                [
-#                    rml:reference "descendant::cbc:ProcurementTypeCode[not(@listName='transport-service')]";
-#                ] ;
-#        ] ;
-#    rr:predicateObjectMap
-#        [
-#            rdfs:label "BT-23-Procedure";
-#            rr:predicate  epo:hasContractNatureType;
-#            rr:objectMap
-#                [
-#                    rml:reference "../cbc:ProcurementTypeCode";
-#                ] ;
-#        ]
 .
 
 tedm:MG-ContractTerm-foreseesContractSpecificTerm-Procedure_ND-ProcedurePlacePerformanceAdditionalInformation a rr:TriplesMap ;
@@ -1115,18 +1019,6 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-Procedure_ND-ProcedurePlacePer
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ProcurementProjectContractTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
             rr:class epo:ContractTerm
         ] ;
-#    rr:predicateObjectMap
-#        [
-#            rr:predicate epo:definesSpecificPlaceOfPerformance ;
-#            rr:objectMap
-#                [
-#                    rr:parentTriplesMap tedm:MG-Location-definesSpecificPlaceOfPerformance-ContractTerm-foreseesContractSpecificTerm-Procedure_ND-ProcedurePlacePerformance;
-#                    rr:joinCondition [
-#                        rr:child "path(.)";
-#                        rr:parent "path(.)";
-#                    ];
-#                ]
-#        ] ;
     rr:predicateObjectMap
         [
             rdfs:label "BT-728-Procedure";

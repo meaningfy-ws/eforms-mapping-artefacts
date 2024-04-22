@@ -39,39 +39,7 @@ tedm:MG-ContractTerm_ND-ProcedurePlacePerformanceAdditionalInformation a rr:Trip
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ProcurementProjectContractTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
             rr:class epo:ContractTerm
         ] ;
-    # rr:predicateObjectMap
-    #     [
-    #         rr:predicate epo:definesSpecificPlaceOfPerformance ;
-    #         rr:objectMap
-    #             [
-    #                 rr:parentTriplesMap tedm:ProcurementProjectContractLocation;
-    #                 rr:joinCondition [
-    #                     rr:child "path(.)";
-    #                     rr:parent "path(.)";
-    #                 ];
-    #             ]
-    #     ] ;
-    # rr:predicateObjectMap
-    #     [
-    #         rdfs:label "BT-727-Procedure";
-    #         rr:predicate epo:hasBroadPlaceOfPerformance ;
-    #         rr:objectMap
-    #             [
-    #                 rml:reference "descendant::cbc:Region";
-    #                 rr:datatype xsd:string;
-    #             ] ;
-    #     ] ;
-    # rr:predicateObjectMap
-    #     [
-    #         rdfs:label "BT-728-Procedure";
-    #         rr:predicate epo:hasPlaceOfPerformanceAdditionalInformation ;
-    #         rr:objectMap
-    #             [
-    #                 rml:reference "descendant::cbc:Description";
-    #                 rr:datatype xsd:string;
-    #             ] ;
-    #     ] ;
-    # this is an example of a predicate with value from a complex ancestor XPath
+    # this is an example of a predicate with value from a deep ancestor XPath
     rr:predicateObjectMap
         [
             # TODO min SDK 1.3 max SDK 1.7

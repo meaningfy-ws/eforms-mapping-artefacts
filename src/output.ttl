@@ -544,9 +544,9 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureValueEstimateExtension_9thM
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_MnX8qyREnFMNLeS5MJAX9K a epo:Procedure;
   epo:foreseesContractSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_67o9ur9Jjef9htMoaQhdxm,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_ChbDn9FPCaVS9rL2SaVQpw,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_QmFgWdHMQiunuxrdtntYZx,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_RxWyYo5p6B6QKE6kAx4iDD,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_btiykpkF9yYEWFnDmvRf6a;
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_eySzap22e3jkZr3f7VXYNj;
   epo:hasAcceleratedProcedureJustification "Procedure Accelerated Justification ---"@en;
   epo:hasAdditionalInformation "Additional information ---"@en;
   epo:hasEstimatedValue epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValueLot_BaGzsXLuGR4tRgDAxRPwS8;
@@ -577,23 +577,21 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProcessInformation_Teea8W
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_67o9ur9Jjef9htMoaQhdxm
   a epo:ContractTerm;
-  epo:hasAdditionalContractNature <http://publications.europa.eu/resource/authority/contract-nature/works>;
-  epo:hasContractNatureType <http://publications.europa.eu/resource/authority/contract-nature/services>;
+  epo:hasBroadPlaceOfPerformance <http://publications.europa.eu/resource/authority/other-place-service/anyw-eea>;
   epo:hasPlaceOfPerformanceAdditionalInformation "Additional information ---"@en .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_ChbDn9FPCaVS9rL2SaVQpw
+  a epo:ContractTerm;
+  epo:hasAdditionalContractNature <http://publications.europa.eu/resource/authority/contract-nature/works> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_QmFgWdHMQiunuxrdtntYZx
   a epo:ContractTerm;
-  epo:hasAdditionalContractNature <http://publications.europa.eu/resource/authority/contract-nature/works>;
-  epo:hasContractNatureType <http://publications.europa.eu/resource/authority/contract-nature/services>;
+  epo:definesSpecificPlaceOfPerformance epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_btiykpkF9yYEWFnDmvRf6a;
   epo:hasPlaceOfPerformanceAdditionalInformation "The main location is ..."@en .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_RxWyYo5p6B6QKE6kAx4iDD
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_eySzap22e3jkZr3f7VXYNj
   a epo:ContractTerm;
-  epo:hasBroadPlaceOfPerformance <http://publications.europa.eu/resource/authority/other-place-service/anyw-eea> .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_btiykpkF9yYEWFnDmvRf6a
-  a epo:ContractTerm;
-  epo:definesSpecificPlaceOfPerformance epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_btiykpkF9yYEWFnDmvRf6a .
+  epo:hasContractNatureType <http://publications.europa.eu/resource/authority/contract-nature/services> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementServiceProvider_f7UuQ7S8iGMkM7gCN4x35m
   a epo:ProcurementServiceProvider;

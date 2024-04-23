@@ -12,6 +12,7 @@ TEST_QUERY_RESULTS_FORMAT = CSV
 package_minimal:
 	@ cp -rv src/mappings mappings/$(MINIMAL_PACKAGE)/transformation/
 	@ cp -rv src/transformation mappings/$(MINIMAL_PACKAGE)/
+	@ cp -rv src/validation mappings/$(MINIMAL_PACKAGE)/
 
 setup-jena-tools:
 	@ echo "Installing Apache Jena CLI tools locally"

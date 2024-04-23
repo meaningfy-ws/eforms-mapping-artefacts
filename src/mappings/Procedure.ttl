@@ -406,7 +406,7 @@ tedm:MG-Procedure_ND-ProcedureProcurementScope a rr:TriplesMap ;
             rr:objectMap
                 [
                     rr:parentTriplesMap tedm:MG-ContractTerm-foreseesContractSpecificTerm-Procedure_ND-ProcedureProcurementScope ;
-                    # we do not need a joinCondition as the parent and child are one-to-one at the same level
+                    # no joinCondition needed as the parent and child iterator XPaths do not repeat
                     # rr:joinCondition [
                     #     rr:child "path(.)" ;
                     #     rr:parent "path(.)" ;
@@ -554,7 +554,7 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-Procedure_ND-ProcedureContract
         [
             rdfs:label "ND-ProcedureProcurementScope" ;
             rdfs:comment "Primary type declaration for MG-ContractTerm under ND-ProcedureProcurementScope" ;
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ProcurementProjectContractTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ProcurementProjectContractTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
             rr:class epo:ContractTerm
         ] ;
     rr:predicateObjectMap

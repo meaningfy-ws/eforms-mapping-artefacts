@@ -860,7 +860,7 @@ tedm:MG-SubmissionTerm-isSubjectToLotSpecificTerm-Lot_ND-SubmissionDeadline a rr
             rr:predicate epo:hasReceiptTenderDeadline ;
             rr:objectMap
                 [
-                    rml:reference "if(exists(cbc:EndDate) and exists(cbc:EndTime) and contains(cbc:EndDate, '+')) then substring-before(cbc:EndDate, '+') || 'T' || cbc:EndTime else if(exists(cbc:EndDate) and exists(cbc:EndTime)) then cbc:EndDate || 'T' || cbc:EndTime else if(exists(cbc:EndDate)) then cbc:EndDate else null";
+                    rml:reference "if(exists(cbc:EndDate) and exists(cbc:EndTime) and matches(cbc:EndDate, '[+\\-]\\d\\d:\\d\\d|Z')) then replace(cbc:EndDate, '...:..|Z', '') || 'T' || cbc:EndTime else if(exists(cbc:EndDate) and exists(cbc:EndTime)) then cbc:EndDate || 'T' || cbc:EndTime else if(exists(cbc:EndDate)) then cbc:EndDate else null" ;
                     rr:datatype xsd:dateTime;
                 ] ;
         ]
@@ -887,7 +887,7 @@ rr:predicateObjectMap
             rr:predicate epo:hasAdditionalInformationDeadline ;
             rr:objectMap
                 [
-                    rml:reference "if(exists(cbc:EndDate) and exists(cbc:EndTime) and contains(cbc:EndDate, '+')) then substring-before(cbc:EndDate, '+') || 'T' || cbc:EndTime else if(exists(cbc:EndDate) and exists(cbc:EndTime)) then cbc:EndDate || 'T' || cbc:EndTime else if(exists(cbc:EndDate)) then cbc:EndDate else null";
+                    rml:reference "if(exists(cbc:EndDate) and exists(cbc:EndTime) and matches(cbc:EndDate, '[+\\-]\\d\\d:\\d\\d|Z')) then replace(cbc:EndDate, '...:..|Z', '') || 'T' || cbc:EndTime else if(exists(cbc:EndDate) and exists(cbc:EndTime)) then cbc:EndDate || 'T' || cbc:EndTime else if(exists(cbc:EndDate)) then cbc:EndDate else null" ;
                     rr:datatype xsd:dateTime;
                 ] ;
         ]
@@ -914,7 +914,7 @@ tedm:MG-SubmissionTerm-isSubjectToLotSpecificTerm-Lot_ND-ParticipationRequestPer
             rr:predicate epo:hasReceiptParticipationRequestDeadline ;
             rr:objectMap
                 [
-                    rml:reference "if(exists(cbc:EndDate) and exists(cbc:EndTime) and contains(cbc:EndDate, '+')) then substring-before(cbc:EndDate, '+') || 'T' || cbc:EndTime else if(exists(cbc:EndDate) and exists(cbc:EndTime)) then cbc:EndDate || 'T' || cbc:EndTime else if(exists(cbc:EndDate)) then cbc:EndDate else null";
+                    rml:reference "if(exists(cbc:EndDate) and exists(cbc:EndTime) and matches(cbc:EndDate, '[+\\-]\\d\\d:\\d\\d|Z')) then replace(cbc:EndDate, '...:..|Z', '') || 'T' || cbc:EndTime else if(exists(cbc:EndDate) and exists(cbc:EndTime)) then cbc:EndDate || 'T' || cbc:EndTime else if(exists(cbc:EndDate)) then cbc:EndDate else null" ;
                     rr:datatype xsd:dateTime;
                 ] ;
         ]
@@ -963,7 +963,7 @@ tedm:MG-OpeningTerm-isSubjectToLotSpecificTerm-Lot_ND-PublicOpening a rr:Triples
             rr:predicate epo:hasOpeningDateTime ;
             rr:objectMap
                 [
-                    rml:reference "if(exists(cbc:OccurrenceDate) and exists(cbc:OccurrenceTime) and contains(cbc:OccurrenceDate, '+')) then substring-before(cbc:OccurrenceDate, '+') || 'T' || cbc:OccurrenceTime else if(exists(cbc:OccurrenceDate) and exists(cbc:OccurrenceTime)) then cbc:OccurrenceDate || 'T' || cbc:OccurrenceTime else if(exists(cbc:OccurrenceDate)) then cbc:OccurrenceDate else null";
+                    rml:reference "if(exists(cbc:OccurrenceDate) and exists(cbc:OccurrenceTime) and matches(cbc:OccurrenceDate, '[+\\-]\\d\\d:\\d\\d|Z')) then replace(cbc:OccurrenceDate, '...:..|Z', '') || 'T' || cbc:OccurrenceTime else if(exists(cbc:OccurrenceDate) and exists(cbc:OccurrenceTime)) then cbc:OccurrenceDate || 'T' || cbc:OccurrenceTime else if(exists(cbc:OccurrenceDate)) then cbc:OccurrenceDate else null" ;
                     rr:datatype xsd:dateTime;
                 ] ;
         ];

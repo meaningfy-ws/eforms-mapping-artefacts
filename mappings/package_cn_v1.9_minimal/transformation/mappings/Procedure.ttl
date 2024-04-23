@@ -16,7 +16,7 @@
 @prefix cccev: <http://data.europa.eu/m8g/> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix cpov: <http://data.europa.eu/m8g/> .
-@prefix	foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix time: <http://www.w3.org/2006/time#>.
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -63,12 +63,12 @@ tedm:MG-Procedure_ND-ProcedureProcurementScope a rr:TriplesMap ;
                         fnml:functionValue [
                             rr:predicateObjectMap [
                                 rr:predicate idlab-fn:str ;
-                                rr:objectMap [ rml:reference "cbc:Name/@languageID" ]
-                                ] ,
-                                tedm:idlab-fn_executes_lookup ,
-                                tedm:idlab-fn_inputFile_language ,
-                                tedm:idlab-fn_fromColumn_0 ,
-                                tedm:idlab-fn_toColumn_1
+                                rr:objectMap [ rml:reference "'http://publications.europa.eu/resource/authority/language/' || cbc:Name/@languageID" ]
+                            ] ,
+                            tedm:idlab-fn_executes_lookup ,
+                            tedm:idlab-fn_inputFile_language ,
+                            tedm:idlab-fn_fromColumn_0 ,
+                            tedm:idlab-fn_toColumn_1
                         ]
                     ] ;
                 ] ;
@@ -82,7 +82,16 @@ tedm:MG-Procedure_ND-ProcedureProcurementScope a rr:TriplesMap ;
                 [
                     rml:reference "cbc:Description" ;
                     rml:languageMap [
-                        rml:reference "lower-case(cbc:Description/@languageID)"
+                        fnml:functionValue [
+                            rr:predicateObjectMap [
+                                rr:predicate idlab-fn:str ;
+                                rr:objectMap [ rml:reference "'http://publications.europa.eu/resource/authority/language/' || cbc:Description/@languageID" ]
+                                ] ,
+                                tedm:idlab-fn_executes_lookup ,
+                                tedm:idlab-fn_inputFile_language ,
+                                tedm:idlab-fn_fromColumn_0 ,
+                                tedm:idlab-fn_toColumn_1
+                        ]
                     ] ;
                 ] ;
         ] ;
@@ -95,7 +104,16 @@ tedm:MG-Procedure_ND-ProcedureProcurementScope a rr:TriplesMap ;
                 [
                     rml:reference "cbc:Note";
                     rml:languageMap [
-                        rml:reference "lower-case(cbc:Note/@languageID)"
+                        fnml:functionValue [
+                            rr:predicateObjectMap [
+                                rr:predicate idlab-fn:str ;
+                                rr:objectMap [ rml:reference "'http://publications.europa.eu/resource/authority/language/' || cbc:Note/@languageID" ]
+                            ] ,
+                            tedm:idlab-fn_executes_lookup ,
+                            tedm:idlab-fn_inputFile_language ,
+                            tedm:idlab-fn_fromColumn_0 ,
+                            tedm:idlab-fn_toColumn_1
+                        ]
                     ] ;
                 ] ;
         ] ;
@@ -123,7 +141,7 @@ tedm:MG-Procedure_ND-ProcedureProcurementScope a rr:TriplesMap ;
             rr:objectMap
                 [
                     rr:parentTriplesMap tedm:MG-ContractTerm_ND-ProcedurePlacePerformanceAdditionalInformation ;
-                    # TODO why do this?
+                    # TODO check if this is needed
                     # rr:joinCondition [
                     #     rr:child "path(.)";
                     #     rr:parent "path(../.)";
@@ -193,22 +211,12 @@ tedm:MG-Procedure_ND-ProcedureTenderingProcess a rr:TriplesMap ;
         ] ;
     rr:subjectMap
         [
-            #This one maps to the parent path
-            # TODO why?
+            # this is an example of a template/IRI that hashes on the parent path
             rdfs:label "ND-ProcedureTenderingProcess" ;
             rdfs:comment "Type declaration for MG-Procedure under ND-ProcedureTenderingProcess" ;
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Procedure_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
             rr:class epo:Procedure
         ] ;
-    #  rr:predicateObjectMap
-    #     [
-    #         rdfs:label "ND-Lot";#add in cm line that this goes from procedure to lot
-    #         rr:predicate epo:hasProcurementScopeDividedIntoLot ;
-    #         rr:objectMap
-    #             [
-    #                 rr:parentTriplesMap tedm:ND-Lot;
-    #             ]
-    #     ] ;
     rr:predicateObjectMap
         [
             rdfs:label "BT-88-Procedure" ;
@@ -218,7 +226,16 @@ tedm:MG-Procedure_ND-ProcedureTenderingProcess a rr:TriplesMap ;
                 [
                     rml:reference "cbc:Description" ;
                     rml:languageMap [
-                        rml:reference "lower-case(cbc:Description/@languageID)"
+                        fnml:functionValue [
+                            rr:predicateObjectMap [
+                                rr:predicate idlab-fn:str ;
+                                rr:objectMap [ rml:reference "'http://publications.europa.eu/resource/authority/language/' || cbc:Description/@languageID" ]
+                            ] ,
+                            tedm:idlab-fn_executes_lookup ,
+                            tedm:idlab-fn_inputFile_language ,
+                            tedm:idlab-fn_fromColumn_0 ,
+                            tedm:idlab-fn_toColumn_1
+                        ]
                     ] ;
                 ] ;
         ] ;
@@ -229,9 +246,7 @@ tedm:MG-Procedure_ND-ProcedureTenderingProcess a rr:TriplesMap ;
             rr:predicate epo:hasProcedureType ;
             rr:objectMap
                 [
-                    # TODO at-voc
                     rdfs:label "at-voc:procurement-procedure-type" ;
-                    # rml:reference "cbc:ProcedureCode" ;
                     rr:parentTriplesMap tedm:procurement-procedure-type ;
                     rr:joinCondition [
                         rr:child "cbc:ProcedureCode" ;
@@ -239,16 +254,22 @@ tedm:MG-Procedure_ND-ProcedureTenderingProcess a rr:TriplesMap ;
                     ] ;
                 ] ;
         ] ;
-    # rr:predicateObjectMap
-    #     [
-    #         rdfs:label "BT-01-notice and BT-01(e)-notice and BT-01(f)-notice";
-    #         rr:predicate  epo:hasLegalBasis  ;
-    #         rr:objectMap
-    #             [
-    #                 rml:reference "if(exists(/*/cbc:RegulatoryDomain) or exists(cac:ProcurementLegislationDocumentReference[cbc:ID/text()='LocalLegalBasis']/cbc:ID[text()='LocalLegalBasis']) or exists(cac:ProcurementLegislationDocumentReference[cbc:ID/text()='LocalLegalBasis']/cbc:DocumentDescription)) then concat(/*/cbc:RegulatoryDomain, ' ',concat(cac:ProcurementLegislationDocumentReference[cbc:ID/text()='LocalLegalBasis']/cbc:ID[text()='LocalLegalBasis'], ' ', cac:ProcurementLegislationDocumentReference[cbc:ID/text()='LocalLegalBasis']/cbc:DocumentDescription)) else null";
-    #                 rr:datatype xsd:string
-    #             ] ;
-    #     ]  ;
+    # TODO bring this into another TMap to align w/ MG+Node?
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-01-notice" ;
+            rdfs:comment "Procedure Legal Basis of MG-Procedure under ND-Root" ;
+            rr:predicate epo:hasLegalBasis ;
+            rr:objectMap
+                [
+                    rdfs:label "at-voc:legal-basis" ;
+                    rr:parentTriplesMap tedm:legal-basis ;
+                    rr:joinCondition [
+                        rr:child "/*/cbc:RegulatoryDomain" ;
+                        rr:parent "code.value" ;
+                    ] ;
+                ] ;
+        ]  ;
     # rr:predicateObjectMap
     #     [
     #         rdfs:label "BT-01-notice and BT-01(c)-notice and BT-01(d)-notice";
@@ -341,16 +362,19 @@ tedm:MG-Procedure_ND-AcceleratedProcedure a rr:TriplesMap ;
         ] ;
     rr:predicateObjectMap
         [
+            # TODO min SDK 1.3 max SDK 1.4
+            # TODO min SDK 1.5.12 max SDK 1.7
             rdfs:label "BT-106-Procedure" ;
             rdfs:comment "Procedure Accelerated of MG-Procedure under ND-AcceleratedProcedure" ;
             rr:predicate epo:isAccelerated ;
             rr:objectMap
-                [
-                    tedm:minSDKVersion "1.5.12" ;
-                    tedm:maxSDKVersion "1.7" ;
-                    rml:reference "cbc:ProcessReasonCode[@listName='accelerated-procedure']" ;
-                    rr:datatype xsd:boolean
-                ] ,
+            #     [
+            #         tedm:minSDKVersion "1.5.12" ;
+            #         tedm:maxSDKVersion "1.7" ;
+            #         rml:reference "cbc:ProcessReasonCode[@listName='accelerated-procedure']" ;
+            #         rr:datatype xsd:boolean
+            #     ]
+            #     ,
                 [
                     # this is an example of a version-specific assertion that has no difference
                     # with its other counterparts due to simple changes in the XPath only
@@ -369,7 +393,16 @@ tedm:MG-Procedure_ND-AcceleratedProcedure a rr:TriplesMap ;
                 [
                     rml:reference "cbc:ProcessReason" ;
                     rml:languageMap [
-                        rml:reference "lower-case(cbc:ProcessReason/@languageID)"
+                        fnml:functionValue [
+                            rr:predicateObjectMap [
+                                rr:predicate idlab-fn:str ;
+                                rr:objectMap [ rml:reference "'http://publications.europa.eu/resource/authority/language/' || cbc:ProcessReason/@languageID" ]
+                            ] ,
+                            tedm:idlab-fn_executes_lookup ,
+                            tedm:idlab-fn_inputFile_language ,
+                            tedm:idlab-fn_fromColumn_0 ,
+                            tedm:idlab-fn_toColumn_1
+                        ]
                     ] ;
                 ] ;
         ]   ;

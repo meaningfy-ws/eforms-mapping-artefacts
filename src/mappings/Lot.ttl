@@ -834,6 +834,7 @@ tedm:MG-MultipleStageProcedureTerm-isSubjectToLotSpecificTerm-Lot_ND-SecondStage
             rr:objectMap
                 [
                     rml:reference "cbc:MinimumQuantity";
+                    rr:datatype xsd:integer;
                 ] ;
         ]
 .

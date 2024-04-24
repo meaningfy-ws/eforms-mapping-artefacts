@@ -402,3 +402,30 @@ tedm:subcontracting-obligation a rr:TriplesMap ;
                 "conceptURI.value" ;
         ]
 .
+
+tedm:cvd-contract-type a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/cvd-contract-type.json" ;
+            rml:iterator "$.results.bindings[*]" ;
+            rml:referenceFormulation ql:JSONPath
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference
+                "conceptURI.value" ;
+        ]
+.
+
+tedm:temporal_unit a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/temporal_unit.csv" ;
+            rml:referenceFormulation ql:CSV
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference
+                "conceptURI" ;
+        ]
+.

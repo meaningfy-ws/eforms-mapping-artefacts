@@ -743,6 +743,9 @@
 				<ext:UBLExtension>
 					<ext:ExtensionContent>
 						<efext:EformsExtension>
+							 <efac:StrategicProcurement>
+                        <efbc:ApplicableLegalBasis listName="cvd-scope">false</efbc:ApplicableLegalBasis>
+                     </efac:StrategicProcurement>
 							<efac:SelectionCriteria>
 								<!--BT-747-->
 								<cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
@@ -1322,6 +1325,10 @@
 	<cac:ProcurementProjectLot>
 		<cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
 		<cac:TenderingTerms>
+			<cac:TenderValidityPeriod>
+				<cbc:DurationMeasure unitCode="MONTH">6</cbc:DurationMeasure>
+				<cbc:DurationMeasure unitCode="Day">3</cbc:DurationMeasure>
+			</cac:TenderValidityPeriod>
 			<cac:AllowedSubcontractTerms>
 				<cbc:SubcontractingConditionsCode listName="subcontracting-obligation">none</cbc:SubcontractingConditionsCode>
 			</cac:AllowedSubcontractTerms>
@@ -1596,6 +1603,9 @@
 				<cbc:ExecutionRequirementCode listName="esignature-submission">true</cbc:ExecutionRequirementCode>
 			</cac:ContractExecutionRequirement>
 			<cac:AwardingTerms>
+				<cac:TechnicalCommitteePerson>
+               <cbc:FamilyName>arch. Andrzej Bulanda – Przewodniczący Sądu Konkurs.; arch. Maria Saloni-Sadowska –Sędzia referent; arch. Bartosz Lewandowski – Asystent Sędziego referenta; Robert Widz –Członek Sądu Konkurs.; Agnieszka Zubala – Członek Sądu Konkurs.; arch. Kinga Socha –Członek Sądu Konkurs.; arch. Piotr Piętka – Członek Sądu Konkurs.; arch. Rafał Sieraczyński –Członek Sądu Konkurs.; Rafał Mroczkowski - Sekretarz</cbc:FamilyName>
+            </cac:TechnicalCommitteePerson>
 				<cac:Prize>
 					<cbc:RankCode>1</cbc:RankCode>
 					<cbc:ValueAmount currencyID="EUR">10000</cbc:ValueAmount>

@@ -129,7 +129,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ] ;
         ];
-    rr:predicateObjectMap
+      rr:predicateObjectMap
         [
             rdfs:label "BT-765-Lot";
             rr:predicate epo:isSubjectToLotSpecificTerm ;
@@ -142,7 +142,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ] ;
         ];
-    rr:predicateObjectMap
+      rr:predicateObjectMap
         [
             rdfs:label "BT-751-Lot, BT-75-Lot";
             rr:predicate epo:isSubjectToLotSpecificTerm ;
@@ -155,7 +155,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ] ;
         ];
-        rr:predicateObjectMap
+      rr:predicateObjectMap
         [
             rdfs:label "BT-113-Lot, BT-109-Lot";
             rr:predicate epo:isSubjectToLotSpecificTerm ;
@@ -168,7 +168,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ] ;
         ];
-        rr:predicateObjectMap
+      rr:predicateObjectMap
         [
             rdfs:label "BT-111-Lot";
             rr:predicate epo:isSubjectToLotSpecificTerm ;
@@ -181,7 +181,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ] ;
         ];
-        rr:predicateObjectMap
+      rr:predicateObjectMap
         [
             rdfs:label "BT-18-Lot";
             rr:predicate epo:isSubjectToLotSpecificTerm ;
@@ -194,7 +194,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ] ;
         ];
-        rr:predicateObjectMap
+      rr:predicateObjectMap
         [
             rdfs:label "BT-52-Lot, BT-130-Lot, BT-631-Lot";
             rr:predicate epo:isSubjectToLotSpecificTerm ;
@@ -207,7 +207,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ] ;
         ];
-        rr:predicateObjectMap
+      rr:predicateObjectMap
         [
             rdfs:label "BT-51-Lot and BT-50-Lot";
             rr:predicate epo:isSubjectToLotSpecificTerm ;
@@ -220,7 +220,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ] ;
         ];
-        rr:predicateObjectMap
+      rr:predicateObjectMap
         [
             rdfs:label "BT-131(d)-Lot and BT-131(t)-Lot";
             rr:predicate epo:isSubjectToLotSpecificTerm ;
@@ -233,7 +233,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ] ;
         ];
-        rr:predicateObjectMap
+      rr:predicateObjectMap
         [
             rdfs:label "BT-13(d)-Lot and BT-13(t)-Lot";
             rr:predicate epo:isSubjectToLotSpecificTerm ;
@@ -246,7 +246,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ] ;
         ];
-        rr:predicateObjectMap
+      rr:predicateObjectMap
         [
             rdfs:label "BT-1311(d)-Lot and BT-1311(t)-Lot";
             rr:predicate epo:isSubjectToLotSpecificTerm ;
@@ -259,7 +259,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ] ;
         ];
-        rr:predicateObjectMap
+      rr:predicateObjectMap
         [
             rdfs:label "BT-134-Lot, BT-132(d)-Lot, BT-132(t)-Lot and BT-133-Lot";
             rr:predicate epo:isSubjectToLotSpecificTerm ;
@@ -272,7 +272,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ] ;
         ];
-        rr:predicateObjectMap
+      rr:predicateObjectMap
         [
             rdfs:label "BT-133-Lot";
             rr:predicate epo:isSubjectToLotSpecificTerm ;
@@ -285,7 +285,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ] ;
         ];
-        rr:predicateObjectMap
+      rr:predicateObjectMap
         [
             rdfs:label "BT-17-Lot";
             rr:predicate epo:isSubjectToLotSpecificTerm ;
@@ -324,20 +324,8 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ] ;
         ];
-#    rr:predicateObjectMap
-#        [
-#            rdfs:label "BT-45-Lot";
-#            rr:predicate epo:isSubjectToLotSpecificTerm ;
-#            rr:objectMap
-#                [
-#                    rr:parentTriplesMap tedm:MG-DesignContestRegimeTerm-isSubjectToLotSpecificTerm-Lot_ND-Prize;
-#                    rr:joinCondition [
-#                        rr:child "path(.)";
-#                        rr:parent "path(../..)";
-#                    ];
-#                ] ;
-#        ];
-        rr:predicateObjectMap
+
+      rr:predicateObjectMap
         [
             rdfs:label "BT-124-Lot";
         rr:predicate epo:usesChannel ;
@@ -350,7 +338,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ] ;
         ];
-         rr:predicateObjectMap
+      rr:predicateObjectMap
         [
             rdfs:label "BT-632-Lot";
         rr:predicate epo:usesChannel ;
@@ -363,7 +351,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ] ;
         ];
-        rr:predicateObjectMap
+      rr:predicateObjectMap
         [
             rdfs:label "BT-137-Lot" ;
             rdfs:comment "Purpose Lot Identifier of MG-Lot under ND-Lot" ;
@@ -373,7 +361,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     rr:parentTriplesMap tedm:MG-Identifier-identifier-Lot_ND-Lot ;
                 ] ;
         ];
-    rr:predicateObjectMap
+      rr:predicateObjectMap
         [
             rdfs:label "BT-7220-Lot and BT-5010-Lot";
             rr:predicate epo:isFundedBy ;
@@ -386,23 +374,8 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ] ;
         ];
-#      rr:predicateObjectMap
-#        [
-#            # TODO min SDK 1.9.1
-#            rdfs:label "BT-5010-Lot";
-#            rdfs:comment "EUFundsFinancingIdentifier of MG-Identifierunder ND-Funding";
-#            rr:predicate epo:isFundedBy ;
-#            rr:objectMap
-#                [
-#
-#                    rr:parentTriplesMap tedm:MG-Fund-isFundedBy-Lot_ND-Funding;
-##                    rr:joinCondition [
-##                        rr:child "cbc:ID";
-##                        rr:parent "../../../../../../cbc:ID";
-##                    ];
-#                ] ;
-#        ] ;
-   rr:predicateObjectMap
+
+      rr:predicateObjectMap
         [
             rdfs:label "BT-747-Lot, BT-749-Lot, BT-748-Lot, BT-40-Lot and BT-750-Lot ";
             rr:predicate epo:specifiesProcurementCriterion;
@@ -415,20 +388,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ] ;
         ];
-#    rr:predicateObjectMap
-#        [
-#            rdfs:label "BT-7531-Lot";
-#            rr:predicate epo:specifiesProcurementCriterion;
-#            rr:objectMap
-#                [
-#                    rr:parentTriplesMap tedm:MG-SelectionCriterion-specifiesProcurementCriterion-Lot_ND-SelectionCriteria ;
-#                    rr:joinCondition [
-#                        rr:child "path(.)";
-#                        rr:parent "path(../../../../../../..)";
-#                    ];
-#                ] ;
-#        ];
-    rr:predicateObjectMap
+      rr:predicateObjectMap
         [
             rdfs:label "BT-7532-Lot";
             rr:predicate epo:specifiesProcurementCriterion;
@@ -441,7 +401,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ] ;
         ];
-        rr:predicateObjectMap
+      rr:predicateObjectMap
         [
             rdfs:label "BT-752-Lot-WeightNumber";
             rr:predicate epo:specifiesProcurementCriterion;
@@ -454,7 +414,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ] ;
         ];
-    rr:predicateObjectMap
+      rr:predicateObjectMap
         [
             rdfs:label "BT-539-Lot, BT-540-Lot and BT-734-Lot";
             rr:predicate epo:specifiesProcurementCriterion;
@@ -467,7 +427,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ] ;
         ];
-   rr:predicateObjectMap
+      rr:predicateObjectMap
         [
             rdfs:label "BT-5421 and BT-541";
             rr:predicate epo:specifiesProcurementCriterion;
@@ -480,7 +440,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ] ;
         ];
-    rr:predicateObjectMap
+      rr:predicateObjectMap
         [
             rdfs:label "BT-5422-Lot and BT-541-Lot-FixedNumber";
             rr:predicate epo:specifiesProcurementCriterion;
@@ -493,7 +453,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ] ;
         ];
-    rr:predicateObjectMap
+      rr:predicateObjectMap
         [
             rdfs:label "BT-543-Lot";
             rr:predicate epo:specifiesProcurementCriterion;
@@ -506,7 +466,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ] ;
         ];
-    rr:predicateObjectMap
+      rr:predicateObjectMap
         [
             rdfs:label "BT-71-Lot";
             rr:predicate epo:specifiesProcurementCriterion;
@@ -520,7 +480,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ] ;
         ];
- rr:predicateObjectMap
+      rr:predicateObjectMap
         [
            # TODO fix the path
             rdfs:label "BT-733-Lot";
@@ -534,7 +494,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ] ;
         ] ;
-     rr:predicateObjectMap
+      rr:predicateObjectMap
         [
             rdfs:label "BT-120-Lot";
             rr:predicate epo:specifiesProcurementCriterion;
@@ -560,7 +520,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ] ;
         ];
-    rr:predicateObjectMap
+      rr:predicateObjectMap
         [
             rdfs:label "BT-17-Lot";
             rr:predicate epo:isSubjectToLotSpecificTerm ;
@@ -575,7 +535,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                 ] ;
         ];
 
-     rr:predicateObjectMap
+      rr:predicateObjectMap
         [
             rdfs:label   "ND-LotReviewTerms";
             rdfs:comment "ND-LotReviewTerms of MG-Lot under LotTenderingTerms ";
@@ -589,7 +549,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ] ;
         ];
-     rr:predicateObjectMap
+      rr:predicateObjectMap
         [
              rdfs:label "BT-736-Lot";
             rr:predicate epo:foreseesContractSpecificTerm ;
@@ -602,7 +562,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ]
         ] ;
-    rr:predicateObjectMap
+      rr:predicateObjectMap
         [
              rdfs:label "BT-743-Lot";
             rr:predicate epo:foreseesContractSpecificTerm ;
@@ -615,7 +575,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ]
         ] ;
-    rr:predicateObjectMap
+      rr:predicateObjectMap
         [
              rdfs:label "BT-70-Lot";
             rr:predicate epo:foreseesContractSpecificTerm ;
@@ -628,7 +588,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ]
         ] ;
-     rr:predicateObjectMap
+      rr:predicateObjectMap
         [
              rdfs:label "BT-77-Lot";
             rr:predicate epo:foreseesContractSpecificTerm ;
@@ -641,7 +601,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ]
         ] ;
-     rr:predicateObjectMap
+      rr:predicateObjectMap
         [
              rdfs:label "BT-92-Lot, BT-93-Lot";
             rr:predicate epo:foreseesContractSpecificTerm ;
@@ -654,7 +614,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ]
         ] ;
-       rr:predicateObjectMap
+      rr:predicateObjectMap
         [
              rdfs:label "BT-65-Lot, BT-64-Lot and BT-729-Lot";
             rr:predicate epo:foreseesContractSpecificTerm ;
@@ -667,7 +627,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ]
         ] ;
-    rr:predicateObjectMap
+      rr:predicateObjectMap
         [
              rdfs:label "BT-78-Lot";
             rr:predicate epo:isSubjectToLotSpecificTerm  ;
@@ -680,7 +640,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ]
         ] ;
-     rr:predicateObjectMap
+      rr:predicateObjectMap
         [
              rdfs:label "BT-587-Lot";
             rr:predicate epo:isSubjectToLotSpecificTerm  ;
@@ -693,7 +653,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ]
         ] ;
-     rr:predicateObjectMap
+      rr:predicateObjectMap
         [
              rdfs:label "BT-801-Lot, BT-802-Lot ";
             rr:predicate epo:isSubjectToLotSpecificTerm  ;
@@ -706,7 +666,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ]
         ] ;
-    rr:predicateObjectMap
+      rr:predicateObjectMap
         [
              rdfs:label "BT-744-Lot ";
             rr:predicate epo:isSubjectToLotSpecificTerm  ;
@@ -719,7 +679,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ]
         ] ;
-    rr:predicateObjectMap
+      rr:predicateObjectMap
         [
              rdfs:label "BT-651-Lot ";
             rr:predicate epo:isSubjectToLotSpecificTerm  ;
@@ -732,7 +692,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ]
         ] ;
-    rr:predicateObjectMap
+      rr:predicateObjectMap
         [
              rdfs:label "BT-79-Lot";
             rr:predicate epo:specifiesProcurementCriterion ;
@@ -745,7 +705,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ]
         ] ;
-    rr:predicateObjectMap
+      rr:predicateObjectMap
         [
             rdfs:label "BT-717-Lot";
             rr:predicate epo:fulfillsStrategicProcurement ;
@@ -758,7 +718,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ] ;
         ];
-    rr:predicateObjectMap
+      rr:predicateObjectMap
         [
             rdfs:label "BT-717-Lot";
             rr:predicate epo:fulfillsStrategicProcurement ;

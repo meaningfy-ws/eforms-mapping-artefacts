@@ -1,18 +1,43 @@
-BUILD_PRINT = \e[1;34mSTEP: \e[0m
-MINIMAL_PACKAGE = package_cn_v1.9_minimal
+MAPPINGS_DIR = mappings
+OUTPUT_DIR = output
+DEFAULT_PACKAGE = package_cn_v1.9
+MINIMAL_PACKAGE = $(DEFAULT_PACKAGE)_minimal
+SDK_NAME = eforms-sdk
+DEFAULT_SDK_VERSION = 1.9
+SDK_DATA_NAME = sdk_examples_cn
+SAMPLES_CN_NAME = sampling_20231001-20240311
+ROOT_CONCEPTS_GREPFILTER = "_Organization_|_TouchPoint_|_Notice|_ProcurementProcessInformation_|_Lot_"
+TEST_QUERY_RESULTS_FORMAT = CSV
+
+CANONICAL_TEST_OUTPUT = src/output.ttl
+CANONICAL_RML_DIR = src/mappings
+TEST_DATA_DIR = test_data
+TEST_QUERIES_DIR = test_queries
+
 JENA_TOOLS_DIR = $(shell test ! -z ${JENA_HOME} && echo ${JENA_HOME} || echo `pwd`/jena)
 JENA_TOOLS_RIOT = $(JENA_TOOLS_DIR)/bin/riot
 JENA_TOOLS_ARQ = $(JENA_TOOLS_DIR)/bin/arq
-CANONICAL_TEST_OUTPUT = src/output.ttl
-CANONICAL_RML_DIR = src/mappings
-TEST_QUERIES_DIR = test_queries
-ROOT_CONCEPTS_GREPFILTER = "_Organization_|_TouchPoint_|_Notice|_ProcurementProcessInformation_|_Lot_"
-TEST_QUERY_RESULTS_FORMAT = CSV
+
+BUILD_PRINT = \e[1;34mSTEP: \e[0m
+SDK_DATA_DIR = $(MAPPINGS_DIR)/$(DEFAULT_PACKAGE)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME)
+SAMPLES_CN_DIR = $(TEST_DATA_DIR)/$(SAMPLES_CN_NAME)
 
 package_minimal:
 	@ cp -rv src/mappings mappings/$(MINIMAL_PACKAGE)/transformation/
 	@ cp -rv src/transformation mappings/$(MINIMAL_PACKAGE)/
 	@ cp -rv src/validation mappings/$(MINIMAL_PACKAGE)/
+
+package_sdk_examples:
+	@ mkdir -p $(OUTPUT_DIR)
+	@ $(eval PKG_DIR := $(OUTPUT_DIR)/$(DEFAULT_PACKAGE)_allExamples)
+	@ cp -rv mappings/$(MINIMAL_PACKAGE) $(PKG_DIR)
+	@ cp -rv $(SDK_DATA_DIR) $(PKG_DIR)/test_data
+
+package_cn_samples:
+	@ mkdir -p $(OUTPUT_DIR)
+	@ $(eval PKG_DIR := $(OUTPUT_DIR)/$(DEFAULT_PACKAGE)_allSamples)
+	@ cp -rv mappings/$(MINIMAL_PACKAGE) $(PKG_DIR)
+	@ cp -rv $(SAMPLES_CN_DIR)/$(SDK_NAME)-$(DEFAULT_SDK_VERSION) $(PKG_DIR)/test_data
 
 setup-jena-tools:
 	@ echo "Installing Apache Jena CLI tools locally"
@@ -51,4 +76,5 @@ test_output:
 	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_suspect_iri_name.rq --data $(CANONICAL_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
 
 clean:
-	@ rm -v jena.zip
+	@ rm -fv jena.zip
+	@ rm -rfv output

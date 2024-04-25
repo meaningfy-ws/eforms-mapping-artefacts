@@ -2,12 +2,19 @@
 
 To create/update the minimal test package `package_cn_v1.9_minimal` from the
 contents in `src` (latest developmental RML rules), simply run `make`, which
-resolves to the default (and currently only) Make target `package_minimal`.
+resolves to the default (first) Make target `package_minimal`.
 
 The package `package_cn_v1.9` is kept for reference with old RML file(s), but
 will be updated with the RML rules in development. In the meantime, feel free
-to take test data files from this package and dump them in the minimal package
-to create a bigger test package with the developmental RML rules.
+to create derived packages with more or less data. Some helper Make commands
+are provided for this:
+
+```
+make package_sdk_examples # all example data of SDK v1.9
+make package_cn_samples # all sample data for SDK v1.9
+```
+
+These will output temporary packages in an `output` folder.
 
 ## Testing
 

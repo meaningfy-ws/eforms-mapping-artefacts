@@ -531,12 +531,12 @@ tedm:MG-EAuctionTechnique-usesTechnique-Lot_ND-AuctionTerms a rr:TriplesMap ;
                         fnml:functionValue [
                             rr:predicateObjectMap [
                                 rr:predicate idlab-fn:str ;
-                                rr:objectMap [ rml:reference "'http://publications.europa.eu/resource/authority/language/' || cbc:Description/@languageID" ]
+                                rr:objectMap [ rml:reference "cbc:Description/@languageID" ]
                             ] ,
                             tedm:idlab-fn_executes_lookup ,
                             tedm:idlab-fn_inputFile_language ,
-                            tedm:idlab-fn_fromColumn_0 ,
-                            tedm:idlab-fn_toColumn_1
+                            tedm:idlab-fn_fromColumn_code ,
+                            tedm:idlab-fn_toColumn_code
                         ]
                     ] ;
                 ] ;
@@ -701,12 +701,12 @@ tedm:MG-FrameworkAgreementTerm-isSubjectToLotSpecificTerm-Lot_ND-FA a rr:Triples
                         fnml:functionValue [
                             rr:predicateObjectMap [
                                 rr:predicate idlab-fn:str ;
-                                rr:objectMap [ rml:reference "'http://publications.europa.eu/resource/authority/language/' || cbc:Justification/@languageID" ]
+                                rr:objectMap [ rml:reference "cbc:Justification/@languageID" ]
                             ] ,
                             tedm:idlab-fn_executes_lookup ,
                             tedm:idlab-fn_inputFile_language ,
-                            tedm:idlab-fn_fromColumn_0 ,
-                            tedm:idlab-fn_toColumn_1
+                            tedm:idlab-fn_fromColumn_code ,
+                            tedm:idlab-fn_toColumn_code
                         ]
                     ] ;
                 ] ;
@@ -739,12 +739,12 @@ tedm:MG-FrameworkAgreementTerm-isSubjectToLotSpecificTerm-Lot_ND-FABuyerCategori
                         fnml:functionValue [
                             rr:predicateObjectMap [
                                 rr:predicate idlab-fn:str ;
-                                rr:objectMap [ rml:reference "'http://publications.europa.eu/resource/authority/language/' || cbc:Description/@languageID" ]
+                                rr:objectMap [ rml:reference "cbc:Description/@languageID" ]
                             ] ,
                             tedm:idlab-fn_executes_lookup ,
                             tedm:idlab-fn_inputFile_language ,
-                            tedm:idlab-fn_fromColumn_0 ,
-                            tedm:idlab-fn_toColumn_1
+                            tedm:idlab-fn_fromColumn_code ,
+                            tedm:idlab-fn_toColumn_code
                         ]
                     ] ;
                 ] ;
@@ -946,12 +946,12 @@ tedm:MG-OpeningTerm-isSubjectToLotSpecificTerm-Lot_ND-PublicOpening a rr:Triples
                         fnml:functionValue [
                             rr:predicateObjectMap [
                                 rr:predicate idlab-fn:str ;
-                                rr:objectMap [ rml:reference "'http://publications.europa.eu/resource/authority/language/' || cbc:Description/@languageID" ]
+                                rr:objectMap [ rml:reference "cbc:Description/@languageID" ]
                             ] ,
                             tedm:idlab-fn_executes_lookup ,
                             tedm:idlab-fn_inputFile_language ,
-                            tedm:idlab-fn_fromColumn_0 ,
-                            tedm:idlab-fn_toColumn_1
+                            tedm:idlab-fn_fromColumn_code ,
+                            tedm:idlab-fn_toColumn_code
                         ]
                     ] ;
                 ] ;
@@ -1011,12 +1011,12 @@ tedm:MG-Address-definesOpeningPlace-OpeningTerm-isSubjectToLotSpecificTerm-Lot_N
                         fnml:functionValue [
                             rr:predicateObjectMap [
                                 rr:predicate idlab-fn:str ;
-                                rr:objectMap [ rml:reference "'http://publications.europa.eu/resource/authority/language/' || cbc:Description/@languageID" ]
+                                rr:objectMap [ rml:reference "cbc:Description/@languageID" ]
                             ] ,
                             tedm:idlab-fn_executes_lookup ,
                             tedm:idlab-fn_inputFile_language ,
-                            tedm:idlab-fn_fromColumn_0 ,
-                            tedm:idlab-fn_toColumn_1
+                            tedm:idlab-fn_fromColumn_code ,
+                            tedm:idlab-fn_toColumn_code
                         ]
                     ] ;
                 ] ;
@@ -1099,12 +1099,12 @@ tedm:MG-SubmissionTerm-isSubjectToLotSpecificTerm-Lot_ND-NoESubmission a rr:Trip
                         fnml:functionValue [
                             rr:predicateObjectMap [
                                 rr:predicate idlab-fn:str ;
-                                rr:objectMap [ rml:reference "'http://publications.europa.eu/resource/authority/language/' || cbc:Description/@languageID" ]
+                                rr:objectMap [ rml:reference "cbc:Description/@languageID" ]
                             ] ,
                             tedm:idlab-fn_executes_lookup ,
                             tedm:idlab-fn_inputFile_language ,
-                            tedm:idlab-fn_fromColumn_0 ,
-                            tedm:idlab-fn_toColumn_1
+                            tedm:idlab-fn_fromColumn_code ,
+                            tedm:idlab-fn_toColumn_code
                         ]
                     ] ;
                 ] ;
@@ -1209,12 +1209,12 @@ tedm:MG-ExclusionGround-specifiesProcurementCriterion-Lot_ND-ExclusionGrounds a 
                         fnml:functionValue [
                             rr:predicateObjectMap [
                                 rr:predicate idlab-fn:str ;
-                                rr:objectMap [ rml:reference "'http://publications.europa.eu/resource/authority/language/' || cbc:Description/@languageID" ]
+                                rr:objectMap [ rml:reference "cbc:Description/@languageID" ]
                             ] ,
                             tedm:idlab-fn_executes_lookup ,
                             tedm:idlab-fn_inputFile_language ,
-                            tedm:idlab-fn_fromColumn_0 ,
-                            tedm:idlab-fn_toColumn_1
+                            tedm:idlab-fn_fromColumn_code ,
+                            tedm:idlab-fn_toColumn_code
                         ]
                     ] ;
                 ] ;

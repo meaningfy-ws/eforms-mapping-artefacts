@@ -654,7 +654,7 @@ tedm:MG-DynamicPurchaseSystemTechnique-usesTechnique-Lot_ND-LotTenderingProcess 
             rr:objectMap
                 [
                     rdfs:label "at-voc:dps-usage" ;
-                    rr:parentTriplesMap tedm:fdps-usage ;
+                    rr:parentTriplesMap tedm:dps-usage ;
                     rr:joinCondition [
                         rr:child "cac:ContractingSystem/cbc:ContractingSystemTypeCode[@listName='dps-usage']";
                         rr:parent "code.value" ;

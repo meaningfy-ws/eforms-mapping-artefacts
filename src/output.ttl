@@ -319,10 +319,6 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constrain_nxePuFH9i25oYGdwmceAuJ a c
   epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/min-score>;
   epo:hasThresholdValue 3.0 .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_RxWyYo5p6B6QKE6kAx4iDD
-  a dct:Location;
-  locn:address epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedurePlacePerformance_RxWyYo5p6B6QKE6kAx4iDD .
-
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_btiykpkF9yYEWFnDmvRf6a
   a dct:Location;
   epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
@@ -389,44 +385,70 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EnvironmentalProtectionInformationPr
   a epo:EnvironmentalProtectionInformationProvider;
   epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001 .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExtensionGroup_65B5ieqPopJApHPkYdhiAi
-  a epo:ExclusionGround .
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_65B5ieqPopJApHPkYdhiAi
+  a epo:ExclusionGround;
+  dct:descrition "Exclusion Ground description ---"@en;
+  dct:type "socsec-pay" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExtensionGroup_BpL5yyeW3cMvEHbh6b4ScW
-  a epo:ExclusionGround .
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_BpL5yyeW3cMvEHbh6b4ScW
+  a epo:ExclusionGround;
+  dct:descrition "Exclusion Ground description ---"@en;
+  dct:type "terr-offence" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExtensionGroup_LGVLo87ArD4HobVYoAGR5B
-  a epo:ExclusionGround .
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_LGVLo87ArD4HobVYoAGR5B
+  a epo:ExclusionGround;
+  dct:descrition "Exclusion Ground description ---"@en;
+  dct:type "human-traffic" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExtensionGroup_SGPTD68m84zt8Q9GNUnuFA
-  a epo:ExclusionGround .
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_SGPTD68m84zt8Q9GNUnuFA
+  a epo:ExclusionGround;
+  dct:descrition "Other Exclusion Ground description ---"@en;
+  dct:type "nati-ground" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExtensionGroup_T2q43pjq3JHuJtvxjmL6vf
-  a epo:ExclusionGround .
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_T2q43pjq3JHuJtvxjmL6vf
+  a epo:ExclusionGround;
+  dct:descrition "Exclusion Ground description ---"@en;
+  dct:type "finan-laund" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExtensionGroup_TTD43oQXgzgzeUvR3mf5zL
-  a epo:ExclusionGround .
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_TTD43oQXgzgzeUvR3mf5zL
+  a epo:ExclusionGround;
+  dct:descrition "Exclusion Ground description ---"@en;
+  dct:type "corruption" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExtensionGroup_TTUy3kEUkWQjLYAVZE4jQa
-  a epo:ExclusionGround .
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_TTUy3kEUkWQjLYAVZE4jQa
+  a epo:ExclusionGround;
+  dct:descrition "Exclusion Ground description ---"@en;
+  dct:type "envir-law" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExtensionGroup_TyUFN5TJLPnpNx9yoZf5Ti
-  a epo:ExclusionGround .
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_TyUFN5TJLPnpNx9yoZf5Ti
+  a epo:ExclusionGround;
+  dct:descrition "Exclusion Ground description ---"@en;
+  dct:type "tax-pay" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExtensionGroup_ZY3SnQBRXooC6NjbRDS9an
-  a epo:ExclusionGround .
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_ZY3SnQBRXooC6NjbRDS9an
+  a epo:ExclusionGround;
+  dct:descrition "Exclusion Ground description ---"@en;
+  dct:type "crime-org" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExtensionGroup_bm6uSwy7hkcan8rVF5YHgR
-  a epo:ExclusionGround .
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_bm6uSwy7hkcan8rVF5YHgR
+  a epo:ExclusionGround;
+  dct:descrition "Exclusion Ground description ---"@en;
+  dct:type "fraud" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExtensionGroup_eE9UGyZshPCAPa9HY5m3SS
-  a epo:ExclusionGround .
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_eE9UGyZshPCAPa9HY5m3SS
+  a epo:ExclusionGround;
+  dct:descrition "Exclusion Ground description ---"@en;
+  dct:type "insolvency" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExtensionGroup_gsqwnkSxN5gKbqYWRFqTmc
-  a epo:ExclusionGround .
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_gsqwnkSxN5gKbqYWRFqTmc
+  a epo:ExclusionGround;
+  dct:descrition "Exclusion Ground description ---"@en;
+  dct:type "socsec-law" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExtensionGroup_hqawu5kJC8i3dxZ99zexxB
-  a epo:ExclusionGround .
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_hqawu5kJC8i3dxZ99zexxB
+  a epo:ExclusionGround;
+  dct:descrition "Exclusion Ground description ---"@en;
+  dct:type "labour-law" .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTechnicalUsage_4qCitbxYVRfdbqxnYtJTZF
   a epo:FrameworkAgreementTerm;
@@ -540,6 +562,19 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001 a epo:Lot;
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_G2XvSSebd6Tc4bHMenwxLy,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_RtqRrBZ3dxX7mYeZep98iG,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_W4UrXsPnHKbLazLXVF3G5c,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_65B5ieqPopJApHPkYdhiAi,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_BpL5yyeW3cMvEHbh6b4ScW,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_LGVLo87ArD4HobVYoAGR5B,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_SGPTD68m84zt8Q9GNUnuFA,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_T2q43pjq3JHuJtvxjmL6vf,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_TTD43oQXgzgzeUvR3mf5zL,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_TTUy3kEUkWQjLYAVZE4jQa,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_TyUFN5TJLPnpNx9yoZf5Ti,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_ZY3SnQBRXooC6NjbRDS9an,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_bm6uSwy7hkcan8rVF5YHgR,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_eE9UGyZshPCAPa9HY5m3SS,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_gsqwnkSxN5gKbqYWRFqTmc,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_hqawu5kJC8i3dxZ99zexxB,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MultipleStageProcedureTerm_daUDPcwCUoxbJRjGb7tKNQ,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ParticipationCondition_LRt2DdjrrLdsYp7yMz2y3n,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementCriterion_daUDPcwCUoxbJRjGb7tKNQ,
@@ -549,8 +584,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001 a epo:Lot;
   epo:usesChannel epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Channel_4qCitbxYVRfdbqxnYtJTZF;
   epo:usesTechnique epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AuctionTerms_fEtfKJVcbukziY28mGZdui,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_DynamicPurchaseSystemTechnicalUsage_4qCitbxYVRfdbqxnYtJTZF;
-  adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotIdentifier_8y8GPfmPvSRdBcci6WWcSi,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotIdentifier_daUDPcwCUoxbJRjGb7tKNQ .
+  adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotIdentifier_daUDPcwCUoxbJRjGb7tKNQ .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002 a epo:Lot;
   epo:foreseesContractSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_8y8GPfmPvSRdBcci6WWcSi,
@@ -577,6 +611,19 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002 a epo:Lot;
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_G2XvSSebd6Tc4bHMenwxLy,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_X2bXeDWsNBm6LwVnXR8H5n,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_cvGnw3hJYztkzCgnhrJDWV,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_65B5ieqPopJApHPkYdhiAi,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_BpL5yyeW3cMvEHbh6b4ScW,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_LGVLo87ArD4HobVYoAGR5B,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_SGPTD68m84zt8Q9GNUnuFA,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_T2q43pjq3JHuJtvxjmL6vf,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_TTD43oQXgzgzeUvR3mf5zL,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_TTUy3kEUkWQjLYAVZE4jQa,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_TyUFN5TJLPnpNx9yoZf5Ti,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_ZY3SnQBRXooC6NjbRDS9an,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_bm6uSwy7hkcan8rVF5YHgR,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_eE9UGyZshPCAPa9HY5m3SS,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_gsqwnkSxN5gKbqYWRFqTmc,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_hqawu5kJC8i3dxZ99zexxB,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MultipleStageProcedureTerm_8y8GPfmPvSRdBcci6WWcSi,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ParticipationCondition_n8e85pxdcT7ZJ2rmjZQqjA,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementCriterion_8y8GPfmPvSRdBcci6WWcSi,
@@ -586,8 +633,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002 a epo:Lot;
   epo:usesChannel epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Channel_8APvjTVZXX8CxGPVJZoBww;
   epo:usesTechnique epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AuctionTerms_a3YxuhxVZtuVM6PB6isrBc,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_DynamicPurchaseSystemTechnicalUsage_8APvjTVZXX8CxGPVJZoBww;
-  adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotIdentifier_8y8GPfmPvSRdBcci6WWcSi,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotIdentifier_daUDPcwCUoxbJRjGb7tKNQ .
+  adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotIdentifier_8y8GPfmPvSRdBcci6WWcSi .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotsGroupIdentifier_246rmGzZvwFBcxRNZTXjTW
   a adms:Identifier;
@@ -756,31 +802,27 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureIdentifier_eySzap22e3jkZr3f
   epo:hasScheme "InternalID";
   skos:notation "2023-P-0001" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedurePlacePerformance_RxWyYo5p6B6QKE6kAx4iDD
-  a locn:Address;
-  locn:fullAddress "" .
-
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedurePlacePerformance_btiykpkF9yYEWFnDmvRf6a
   a locn:Address;
   epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
   epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
-  locn:fullAddress "Bruce Wayne House 2 Gotham Street London N1 9FL GBR";
+  locn:fullAddress "Bruce Wayne House, 2 Gotham Street, London, N1 9FL, GBR";
   locn:postCode "N1 9FL";
   locn:postName "London" .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_5ePSyM3yjeKrNdoLehDe7g a
+    epo:ProcedureTerm;
+  epo:hasCrossBorderLaw "Cross border law description ---"@en .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_BniuuBzYtT7voNxpkh6A9M a
+    epo:ProcedureTerm;
+  epo:definesLotGroup epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroup_GLO-0001;
+  epo:hasMaximumLotSubmissionAllowed 2;
+  epo:hasMaximumNumberOfLotsToBeAwarded 2 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_MnX8qyREnFMNLeS5MJAX9K a
     epo:ProcedureTerm;
   epo:isSubmissionForAllLotsRequired true .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerms_5ePSyM3yjeKrNdoLehDe7g
-  a epo:ProcedureTerm;
-  epo:hasCrossBorderLaw "Cross border law description ---"@en .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerms_BniuuBzYtT7voNxpkh6A9M
-  a epo:ProcedureTerm;
-  epo:definesLotGroup epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroup_GLO-0001;
-  epo:hasMaximumLotSubmissionAllowed 2;
-  epo:hasMaximumNumberOfLotsToBeAwarded 2 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureValueEstimateExtension_9thMAaeveYJRewotgDGorG
   a epo:MonetaryValue;
@@ -790,8 +832,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureValueEstimateExtension_9thM
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_MnX8qyREnFMNLeS5MJAX9K a epo:Procedure;
   epo:foreseesContractSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_67o9ur9Jjef9htMoaQhdxm,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_QmFgWdHMQiunuxrdtntYZx,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_RxWyYo5p6B6QKE6kAx4iDD,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_btiykpkF9yYEWFnDmvRf6a;
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_eySzap22e3jkZr3f7VXYNj;
   epo:hasAcceleratedProcedureJustification "Procedure Accelerated Justification ---"@en;
   epo:hasAdditionalInformation "Additional information ---"@en;
   epo:hasEstimatedValue epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValueLot_BaGzsXLuGR4tRgDAxRPwS8;
@@ -802,16 +843,13 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_MnX8qyREnFMNLeS5MJAX9K a e
     "Loi modifiée du 8 juillet 2018 sur les concessions"@fr;
   epo:hasMainFeature "Description of the procedure  ---"@en;
   epo:hasProcedureType <http://publications.europa.eu/resource/authority/procurement-procedure-type/neg-w-call>;
-  epo:hasPurpose epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_eySzap22e3jkZr3f7VXYNj;
+  epo:hasPurpose epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Purpose_eySzap22e3jkZr3f7VXYNj;
   epo:isAccelerated true;
-  epo:isSubjectToProcedureSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerms_5ePSyM3yjeKrNdoLehDe7g,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerms_BniuuBzYtT7voNxpkh6A9M;
+  epo:isSubjectToProcedureSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_5ePSyM3yjeKrNdoLehDe7g,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_BniuuBzYtT7voNxpkh6A9M,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_MnX8qyREnFMNLeS5MJAX9K;
   dct:description "Description ---"@en;
   dct:title "Procurement Title ---"@en .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_eySzap22e3jkZr3f7VXYNj a epo:Purpose;
-  epo:hasAdditionalClassification <http://data.europa.eu/cpv/cpv/79720000>;
-  epo:hasMainClassification <http://data.europa.eu/cpv/cpv/79710000> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementCriterion_8y8GPfmPvSRdBcci6WWcSi
   a epo:ProcurementCriterion;
@@ -865,30 +903,28 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProcessInformation_Teea8W
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_67o9ur9Jjef9htMoaQhdxm
   a epo:ContractTerm;
-  epo:hasAdditionalContractNature <http://publications.europa.eu/resource/authority/contract-nature/works>;
-  epo:hasContractNatureType <http://publications.europa.eu/resource/authority/contract-nature/services>;
+  epo:hasBroadPlaceOfPerformance <http://publications.europa.eu/resource/authority/other-place-service/anyw-eea>;
   epo:hasPlaceOfPerformanceAdditionalInformation "Additional information ---"@en .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_QmFgWdHMQiunuxrdtntYZx
   a epo:ContractTerm;
-  epo:hasAdditionalContractNature <http://publications.europa.eu/resource/authority/contract-nature/works>;
-  epo:hasContractNatureType <http://publications.europa.eu/resource/authority/contract-nature/services>;
+  epo:definesSpecificPlaceOfPerformance epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_btiykpkF9yYEWFnDmvRf6a;
   epo:hasPlaceOfPerformanceAdditionalInformation "The main location is ..."@en .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_RxWyYo5p6B6QKE6kAx4iDD
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_eySzap22e3jkZr3f7VXYNj
   a epo:ContractTerm;
-  epo:definesSpecificPlaceOfPerformance epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_RxWyYo5p6B6QKE6kAx4iDD;
-  epo:hasBroadPlaceOfPerformance <http://publications.europa.eu/resource/authority/other-place-service/anyw-eea> .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_btiykpkF9yYEWFnDmvRf6a
-  a epo:ContractTerm;
-  epo:definesSpecificPlaceOfPerformance epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_btiykpkF9yYEWFnDmvRf6a .
+  epo:hasAdditionalContractNature <http://publications.europa.eu/resource/authority/contract-nature/works>;
+  epo:hasContractNatureType <http://publications.europa.eu/resource/authority/contract-nature/services> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementServiceProvider_f7UuQ7S8iGMkM7gCN4x35m
   a epo:ProcurementServiceProvider;
   epo:actsOnBehalfOf epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Buyer_MT3gdCnJ9BA7aEqaGqKxAh;
   epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0007;
   dct:description "ted-esen" .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Purpose_eySzap22e3jkZr3f7VXYNj a epo:Purpose;
+  epo:hasAdditionalClassification <http://data.europa.eu/cpv/cpv/79720000>;
+  epo:hasMainClassification <http://data.europa.eu/cpv/cpv/79710000> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_PuAZ93vcjRYhKiN4rMvUZg a epo:ReviewTerm .
 

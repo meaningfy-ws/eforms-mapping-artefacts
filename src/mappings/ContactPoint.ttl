@@ -154,12 +154,12 @@ tedm:MG-Address-address-ContactPoint_ND-TouchpointAddress a rr:TriplesMap ;
         ] ;
     rr:predicateObjectMap
         [
-            rdfs:label "BT-16,BT-510(a|b|c),BT-512,BT-513,514-Organization-Touchpoint" ;
-            rdfs:comment "Department, Street, Streetline 1, Streetline 2, Organisation City, Organisation Post Code, Organisation Country Code" ;
+            rdfs:label "BT-16, BT-510(a|b|c), BT-512, BT-513, 514-Organization-Touchpoint" ;
+            rdfs:comment "Part Name, Street, Streetline 1, Streetline 2, City, Post Code, Country Code" ;
             rr:predicate locn:fullAddress ;
             rr:objectMap
                 [
-                    rml:reference "replace(replace(cbc:Department || ', ' || cbc:StreetName || ', ' || cbc:AdditionalStreetName || ', ' || cbc:Line || ', ' || cbc:CityName || ', ' || cbc:PostalZone || ', ' || cac:Country/cbc:IdentificationCode, '(, )+', ', '),  '^, |, $', '')" ;
+                    rml:reference "replace(replace(cbc:Department || ', ' || cbc:StreetName || ', ' || cbc:AdditionalStreetName || ', ' || cac:AddressLine/cbc:Line || ', ' || cbc:CityName || ', ' || cbc:PostalZone || ', ' || cac:Country/cbc:IdentificationCode, '(, )+', ', '),  '^, |, $', '')" ;
                 ] ;
         ] ;
     rr:predicateObjectMap

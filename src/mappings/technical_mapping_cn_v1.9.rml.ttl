@@ -265,7 +265,7 @@ tedm:MG-Notice_ND-Root
                     # here we combine values across (relative) XPaths/fields stripping out the time zone from the first
                     # it handles the case where there is no time zone indicated in the date time, just in case validation failed on a notice
                     # however, it won't handle the case if there are other malformations
-                    rml:reference "if(exists(cbc:IssueDate) and exists(cbc:IssueTime) and contains(cbc:IssueDate, '+')) then substring-before(cbc:IssueDate, '+') || 'T' || cbc:IssueTime else if(exists(cbc:IssueDate) and exists(cbc:IssueTime)) then cbc:IssueDate || 'T' || cbc:IssueTime else if(exists(cbc:IssueDate)) then cbc:IssueDate else null" ;
+                    rml:reference "if(exists(cbc:IssueDate) and exists(cbc:IssueTime) and matches(cbc:IssueDate, '[+\\-]\\d\\d:\\d\\d|Z')) then replace(cbc:IssueDate, '...:..|Z', '') || 'T' || cbc:IssueTime else if(exists(cbc:IssueDate) and exists(cbc:IssueTime)) then cbc:IssueDate || 'T' || cbc:IssueTime else if(exists(cbc:IssueDate)) then cbc:IssueDate else null" ;
                     rr:datatype xsd:dateTime ;
                 ] ;
         ] ;

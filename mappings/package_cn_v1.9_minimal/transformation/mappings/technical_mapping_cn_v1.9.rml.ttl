@@ -63,12 +63,55 @@ tedm:MG-CompetitionNotice_ND-Root
         ] ;
     rr:predicateObjectMap
         [
+            # TODO min SDK 1.10
             rdfs:label "MG-ProcurementServiceProvider-announcesRole-CompetitionNotice" ;
             rdfs:comment "MG-ProcurementServiceProvider-announcesRole-CompetitionNotice under ND-ServiceProviderParty" ;
             rr:predicate epo-not:announcesRole ;
             rr:objectMap
                 [
+                    tedm:minSDKVersion "1.3" ;
+                    tedm:maxSDKVersion "1.9.1" ;
                     rr:parentTriplesMap tedm:MG-ProcurementServiceProvider_ND-ServiceProviderParty
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "MG-LeadBuyer-announcesRole-CompetitionNotice" ;
+            rdfs:comment "MG-LeadBuyer-announcesRole-CompetitionNotice under ND-Organization" ;
+            rr:predicate epo-not:announcesRole ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-LeadBuyer_ND-Organization
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "MG-AwardingCentralPurchasingBody-announcesRole-CompetitionNotice" ;
+            rdfs:comment "MG-AwardingCentralPurchasingBody-announcesRole-CompetitionNotice under ND-Organization" ;
+            rr:predicate epo-not:announcesRole ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-AwardingCentralPurchasingBody_ND-Organization
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "MG-AcquiringCentralPurchasingBody-announcesRole-CompetitionNotice" ;
+            rdfs:comment "MG-AcquiringCentralPurchasingBody-announcesRole-CompetitionNotice under ND-Organization" ;
+            rr:predicate epo-not:announcesRole ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-AcquiringCentralPurchasingBody_ND-Organization
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "MG-Lot-announcesLot-CompetitionNotice" ;
+            rdfs:comment "MG-Lot-announcesLot-CompetitionNotice under ND-Lot" ;
+            rr:predicate epo:announcesLot ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-Lot_ND-Lot
                 ] ;
         ] ;
 .
@@ -96,7 +139,6 @@ tedm:MG-Notice_ND-Root
             rr:objectMap
                 [
                     rdfs:label "at-voc:notice-type" ;
-                    # rml:reference "cbc:NoticeTypeCode" ;
                     rr:parentTriplesMap tedm:notice-type ;
                     rr:joinCondition [
                         rr:child "cbc:NoticeTypeCode" ;
@@ -112,7 +154,6 @@ tedm:MG-Notice_ND-Root
             rr:objectMap
                 [
                     rdfs:label "at-voc:form-type" ;
-                    # rml:reference "cbc:NoticeTypeCode/@listName" ;
                     rr:parentTriplesMap tedm:form-type ;
                     rr:joinCondition [
                         rr:child "cbc:NoticeTypeCode/@listName" ;
@@ -122,7 +163,17 @@ tedm:MG-Notice_ND-Root
         ] ;
     rr:predicateObjectMap
         [
-            rdfs:comment "The identifier of a notice" ;
+            rdfs:label "BT-04-notice" ;
+            rdfs:comment "Procedure Identifier of MG-Procedure-refersToProcedure-Notice under ND-Root" ;
+            rr:predicate epo:refersToProcedure ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-Procedure_ND-ProcedureProcurementScope
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:comment "The identifier of MG-Notice under ND-Root" ;
             rr:predicate adms:identifier ;
             rr:objectMap
                 [
@@ -148,37 +199,52 @@ tedm:MG-Notice_ND-Root
             rr:objectMap
                 [
                     rdfs:label "at-voc:language" ;
-                    rml:reference "cbc:NoticeLanguageCode" ;
-                    # rr:parentTriplesMap tedm:language ;
-                    # rr:joinCondition [
-                        # rr:child "cbc:NoticeLanguageCode" ;
-                        # rr:parent "code.value" ;
-                    # ] ;
+                    rr:parentTriplesMap tedm:language ;
+                    # we look up as complete IRI for full coverage -- if we don't find one we don't map
+                    rr:joinCondition [
+                        rr:child "'http://publications.europa.eu/resource/authority/language/' || cbc:NoticeLanguageCode" ;
+                        rr:parent "conceptURI" ;
+                    ] ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-702(b)-notice" ;
+            rdfs:comment "Notice Official Language of MG-Notice under ND-Root" ;
+            rr:predicate epo:hasOfficialLanguage ;
+            rr:objectMap
+                [
+                    rdfs:label "at-voc:language" ;
+                    rr:parentTriplesMap tedm:language ;
+                    rr:joinCondition [
+                        rr:child "'http://publications.europa.eu/resource/authority/language/' || cac:AdditionalNoticeLanguage/cbc:ID" ;
+                        rr:parent "conceptURI" ;
+                    ] ;
                 ] ;
         ] ;
     rr:predicateObjectMap
         [
             rdfs:label "BT-05(a)-notice and BT-05(b)-notice" ;
             rdfs:comment "Notice Dispatch Date and Notice Dispatch Time of MG-Notice under ND-Root" ;
-            rr:predicate epo:hasDispatchDate ;
+            rr:predicate epo:hasEsenderDispatchDate ;
             rr:objectMap
                 [
                     # here we combine values across (relative) XPaths/fields stripping out the time zone from the first
                     # it handles the case where there is no time zone indicated in the date time, just in case validation failed on a notice
                     # however, it won't handle the case if there are other malformations
-                    rml:reference "if(exists(cbc:IssueDate) and exists(cbc:IssueTime) and contains(cbc:IssueDate, '+')) then substring-before(cbc:IssueDate, '+') || 'T' || cbc:IssueTime else if(exists(cbc:IssueDate) and exists(cbc:IssueTime)) then cbc:IssueDate || 'T' || cbc:IssueTime else if(exists(cbc:IssueDate)) then cbc:IssueDate else null" ;
+                    rml:reference "if(exists(cbc:IssueDate) and exists(cbc:IssueTime) and matches(cbc:IssueDate, '[+\\-]\\d\\d:\\d\\d|Z')) then replace(cbc:IssueDate, '...:..|Z', '') || 'T' || cbc:IssueTime else if(exists(cbc:IssueDate) and exists(cbc:IssueTime)) then cbc:IssueDate || 'T' || cbc:IssueTime else if(exists(cbc:IssueDate)) then cbc:IssueDate else null" ;
                     rr:datatype xsd:dateTime ;
                 ] ;
         ] ;
-    # this is an example of a predicate which has an orthogonal XPath compared to its subject
     rr:predicateObjectMap
         [
             rdfs:label "OPP-070-notice" ;
             rdfs:comment "Notice Subtype of MG-Notice under ND-Root" ;
-            rr:predicate epo:hasEFormsSubtype ;
+            rr:predicate rdf:type ;
             rr:objectMap
                 [
-                    rml:reference "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeSubType/cbc:SubTypeCode" ;
+                    rml:reference "'http://data.europa.eu/a4g/ontology#Notice' || ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeSubType/cbc:SubTypeCode" ;
+                    rr:termType rr:IRI ;
                 ] ;
         ] ;
     rr:predicateObjectMap
@@ -188,7 +254,7 @@ tedm:MG-Notice_ND-Root
             rr:predicate epo:hasNoticePublicationNumber ;
             rr:objectMap
                 [
-                    rml:reference "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Publication/efbc:NoticePublicationID[@schemeName='ojs-notice-id']" ;
+                    rml:reference "ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Publication/efbc:NoticePublicationID[@schemeName='ojs-notice-id']" ;
                 ] ;
         ] ;
     rr:predicateObjectMap
@@ -198,7 +264,7 @@ tedm:MG-Notice_ND-Root
             rr:predicate epo:hasOJSIssueNumber ;
             rr:objectMap
                 [
-                    rml:reference "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Publication/efbc:GazetteID[@schemeName='ojs-id']" ;
+                    rml:reference "ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Publication/efbc:GazetteID[@schemeName='ojs-id']" ;
                 ] ;
         ] ;
     rr:predicateObjectMap
@@ -208,7 +274,7 @@ tedm:MG-Notice_ND-Root
             rr:predicate epo:hasPublicationDate ;
             rr:objectMap
                 [
-                    rml:reference "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Publication/efbc:PublicationDate" ;
+                    rml:reference "ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Publication/efbc:PublicationDate" ;
                     rr:datatype xsd:date ;
                 ] ;
         ] ;

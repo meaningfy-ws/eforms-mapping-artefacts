@@ -37,7 +37,8 @@ package_cn_samples:
 	@ mkdir -p $(OUTPUT_DIR)
 	@ $(eval PKG_DIR := $(OUTPUT_DIR)/$(DEFAULT_PACKAGE)_allSamples)
 	@ cp -rv mappings/$(MINIMAL_PACKAGE) $(PKG_DIR)
-	@ cp -rv $(SAMPLES_CN_DIR)/$(SDK_NAME)-$(DEFAULT_SDK_VERSION) $(PKG_DIR)/test_data
+	@ mkdir -p $(PKG_DIR)/$(SAMPLES_CN_DIR)
+	@ cp -rv $(SAMPLES_CN_DIR)/$(SDK_NAME)-$(DEFAULT_SDK_VERSION) $(PKG_DIR)/$(SAMPLES_CN_DIR)
 
 setup-jena-tools:
 	@ echo "Installing Apache Jena CLI tools locally"

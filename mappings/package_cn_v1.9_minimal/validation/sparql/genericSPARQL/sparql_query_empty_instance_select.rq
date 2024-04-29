@@ -1,5 +1,6 @@
 #title: Select SPARQL query for empty instances
 #description: This query selects all the instances that have only one property rdf:type and are instances of a class in ePO.
+#xpath: None
 
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX epd: <http://data.europa.eu/a4g/resource/>

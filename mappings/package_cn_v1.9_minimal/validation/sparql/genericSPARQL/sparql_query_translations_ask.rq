@@ -1,5 +1,6 @@
 #title: Ask SPARQL query for translations
 #description: A query that asks if there is translation to a specific language for any given property value, there should be a translation to that language for all property values that have a language tag
+#xpath: None
 
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX epo: <http://data.europa.eu/a4g/ontology#>

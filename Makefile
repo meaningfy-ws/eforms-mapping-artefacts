@@ -27,16 +27,32 @@ package_minimal:
 	@ cp -rv src/transformation mappings/$(MINIMAL_PACKAGE)/
 	@ cp -rv src/validation mappings/$(MINIMAL_PACKAGE)/
 
-package_sdk_examples:
+package_sdk_examples: package_minimal
 	@ mkdir -p $(OUTPUT_DIR)
 	@ $(eval PKG_DIR := $(OUTPUT_DIR)/$(DEFAULT_PACKAGE)_allExamples)
 	@ cp -rv mappings/$(MINIMAL_PACKAGE) $(PKG_DIR)
+	@ echo "Including SDK example data"
 	@ cp -rv $(SDK_DATA_DIR) $(PKG_DIR)/test_data
+	@ echo "Removing large file cn_24_maximal_100_lots.xml"
+	@ find $(PKG_DIR) -name "cn_24_maximal_100_lots.xml" -exec rm -v {} \;
 
-package_cn_samples:
+package_cn_samples: package_minimal
 	@ mkdir -p $(OUTPUT_DIR)
 	@ $(eval PKG_DIR := $(OUTPUT_DIR)/$(DEFAULT_PACKAGE)_allSamples)
 	@ cp -rv mappings/$(MINIMAL_PACKAGE) $(PKG_DIR)
+	@ echo "Including EF10-24 sample data"
+	@ mkdir -p $(PKG_DIR)/$(SAMPLES_CN_DIR)
+	@ cp -rv $(SAMPLES_CN_DIR)/$(SDK_NAME)-$(DEFAULT_SDK_VERSION) $(PKG_DIR)/$(SAMPLES_CN_DIR)
+	@ echo "Removing large file cn_24_maximal_100_lots.xml"
+	@ find $(PKG_DIR) -name "cn_24_maximal_100_lots.xml" -exec rm -v {} \;
+
+package_cn_maximal: package_minimal
+	@ mkdir -p $(OUTPUT_DIR)
+	@ $(eval PKG_DIR := $(OUTPUT_DIR)/$(DEFAULT_PACKAGE)_allData)
+	@ cp -rv mappings/$(MINIMAL_PACKAGE) $(PKG_DIR)
+	@ echo "Including SDK example data"
+	@ cp -rv $(SDK_DATA_DIR) $(PKG_DIR)/test_data
+	@ echo "Including EF10-24 sample data"
 	@ mkdir -p $(PKG_DIR)/$(SAMPLES_CN_DIR)
 	@ cp -rv $(SAMPLES_CN_DIR)/$(SDK_NAME)-$(DEFAULT_SDK_VERSION) $(PKG_DIR)/$(SAMPLES_CN_DIR)
 

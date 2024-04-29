@@ -532,20 +532,20 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ] ;
         ];
-    rr:predicateObjectMap
-        [
-            rdfs:label "BT-17-Lot";
-            rr:predicate epo:isSubjectToLotSpecificTerm ;
-            rr:objectMap
-                [
-                    rr:parentTriplesMap tedm:MG-DesignContestRegimeTerm-isSubjectToLotSpecificTerm-Lot_ND-AwardingTerms;
-                   # TODO fix the path
+#    rr:predicateObjectMap
+#        [
+#            rdfs:label "BT-44-Lot";
+#            rr:predicate epo:isSubjectToLotSpecificTerm ;
+#            rr:objectMap
+#                [
+#                    rr:parentTriplesMap tedm:MG-DesignContestRegimeTerm-isSubjectToLotSpecificTerm-Lot_ND-AwardingTerms;
+#                   # TODO fix the path
 #                    rr:joinCondition [
 #                         rr:child "path(.)";
 #                        rr:parent "path(../../..)";
 #                    ];
-                ] ;
-        ];
+#                ] ;
+#        ];
     rr:predicateObjectMap
         [
             rdfs:label   "ND-LotReviewTerms";
@@ -1634,6 +1634,7 @@ tedm:MG-AdHocChannel-usesChannel-Lot_ND-LotTenderingProcess a rr:TriplesMap ;
                 ] ;
         ]
 .
+
 tedm:MG-Fund-isFundedBy-Lot_ND-Funding a rr:TriplesMap ;
     rdfs:label "MG-Fund";
     rml:logicalSource
@@ -1706,6 +1707,7 @@ tedm:MG-Fund-isFundedBy-Lot_ND-Funding a rr:TriplesMap ;
                 ] ;
         ];
 .
+
 tedm:MG-Identifier-identifier-Fund-isFundedBy-Lot_ND-Funding a rr:TriplesMap ;
     rdfs:label "MG-Identifier";
     rml:logicalSource
@@ -1736,6 +1738,7 @@ tedm:MG-Identifier-identifier-Fund-isFundedBy-Lot_ND-Funding a rr:TriplesMap ;
                 ] ;
         ];
 .
+
 tedm:MG-SelectionCriterion-specifiesProcurementCriterion-Lot_ND-SelectionCriteria a rr:TriplesMap ;
     rdfs:label "MG-SelectionCriterion";
     rml:logicalSource
@@ -1852,6 +1855,7 @@ rr:predicateObjectMap
         ]
 
 .
+
 tedm:MG-SelectionCriterion-specifiesProcurementCriterion-Lot_ND-SecondStageWeightCriterionParameter a rr:TriplesMap ;
     rdfs:label "MG-SelectionCriterion";
     rml:logicalSource
@@ -1901,35 +1905,7 @@ tedm:MG-SelectionCriterion-specifiesProcurementCriterion-Lot_ND-SecondStageWeigh
         ]
 
 .
-#tedm:MG-SelectionCriterion-specifiesProcurementCriterion-Lot_ND-SecondStageCriterionParameter a rr:TriplesMap ;
-#    rdfs:label "MG-SelectionCriterion";
-#    rml:logicalSource
-#        [
-#            rml:source "data/source.xml" ;
-#            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:SelectionCriteria/efac:CriterionParameter";
-#            rml:referenceFormulation ql:XPath
-#        ];
-#    rr:subjectMap
-#        [
-#            rdfs:label "ND-SecondStageCriterionParameter";
-#            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_SelectionTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
-#            rr:class epo:SelectionCriterion
-#        ] ;
-#
-#    rr:predicateObjectMap
-#        [
-#            rdfs:label "BT-7532-Lot";
-#            rr:predicate epo:hasConstraint ;
-#            rr:objectMap
-#                [
-#                    rr:parentTriplesMap tedm:MG-Constraint-hasConstraint-SelectionCriterion-specifiesProcurementCriterion-Lot_ND-SecondStageCriterionParameter ;
-#                    rr:joinCondition [
-#                        rr:child "path(.)";
-#                        rr:parent "path(.)";
-#                    ];
-#                ] ;
-#        ]
-#.
+
 tedm:MG-Constraint-hasConstraint-SelectionCriterion-specifiesProcurementCriterion-Lot_ND-SecondStageThresholdCriterionParameter a rr:TriplesMap ;
     rdfs:label "MG-Constraint";
     rml:logicalSource
@@ -1975,6 +1951,7 @@ tedm:MG-Constraint-hasConstraint-SelectionCriterion-specifiesProcurementCriterio
                 ] ;
         ]
 .
+
 tedm:MG-AwardCriterion-specifiesProcurementCriterion-Lot_ND-LotAwardCriterion a rr:TriplesMap ;
     rdfs:label "MG-AwardCriterion";
     rml:logicalSource
@@ -2653,7 +2630,6 @@ tedm:MG-Lot_ND-LotTenderingTerms a rr:TriplesMap ;
         [
             rdfs:comment "ND-LotTenderingTerms";
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Lot_{cbc:ID}" ;
-#           rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_SubmissionTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
             rr:class epo:Lot
         ] ;
       rr:predicateObjectMap
@@ -3097,6 +3073,7 @@ tedm:MG-SubmissionTerm-isSubjectToLotSpecificTerm-Lot_ND-SubcontractingIndicatio
                 ] ;
         ] ;
 .
+
 tedm:MG-SubcontractTerm-foreseesContractSpecificTerm-Lot_ND-SubcontractingObligation a rr:TriplesMap ;
     rdfs:label "MG-ContractTerm";
     rml:logicalSource

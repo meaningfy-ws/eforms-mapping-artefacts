@@ -58,9 +58,9 @@ package_cn_samples: package_minimal
 	@ cp -rv mappings/$(MINIMAL_PACKAGE) $(PKG_DIR)
 	@ echo "Including EF10-24 sample data"
 	@ mkdir -p $(PKG_DIR)/$(SAMPLES_CN_DIR)
-	@ cp -rv $(SAMPLES_CN_DIR)/$(SDK_NAME)-$(DEFAULT_SDK_VERSION) $(PKG_DIR)/$(SAMPLES_CN_DIR)
-	@ echo "Removing large file cn_24_maximal_100_lots.xml"
-	@ find $(PKG_DIR) -name "cn_24_maximal_100_lots.xml" -exec rm -v {} \;
+	@ find $(SAMPLES_CN_DIR)/$(SDK_NAME)-$(DEFAULT_SDK_VERSION)/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_CN_DIR) \;
+	@ echo "Removing any SDK examples"
+	@ rm -rv $(PKG_DIR)/$(SDK_DATA_DIR)
 	@ echo "Modifying Identifier in the CM and replacing XLSX"
 	@ mkdir -p $(PKG_TMP) && unzip $(PKG_DIR)/$(CM_FILE) -d $(PKG_TMP)
 	@ rm -v $(PKG_DIR)/$(CM_FILE)
@@ -79,7 +79,7 @@ package_cn_maximal: package_minimal
 	@ cp -rv $(SDK_DATA_DIR) $(PKG_DIR)/test_data
 	@ echo "Including EF10-24 sample data"
 	@ mkdir -p $(PKG_DIR)/$(SAMPLES_CN_DIR)
-	@ cp -rv $(SAMPLES_CN_DIR)/$(SDK_NAME)-$(DEFAULT_SDK_VERSION) $(PKG_DIR)/$(SAMPLES_CN_DIR)
+	@ find $(SAMPLES_CN_DIR)/$(SDK_NAME)-$(DEFAULT_SDK_VERSION)/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_CN_DIR) \;
 	@ echo "Modifying Identifier in the CM and replacing XLSX"
 	@ mkdir -p $(PKG_TMP) && unzip $(PKG_DIR)/$(CM_FILE) -d $(PKG_TMP)
 	@ rm -v $(PKG_DIR)/$(CM_FILE)

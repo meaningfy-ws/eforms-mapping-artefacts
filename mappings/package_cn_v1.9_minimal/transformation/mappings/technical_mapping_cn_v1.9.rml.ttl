@@ -202,8 +202,8 @@ tedm:MG-Notice_ND-Root
                     rr:parentTriplesMap tedm:language ;
                     # we look up as complete IRI for full coverage -- if we don't find one we don't map
                     rr:joinCondition [
-                        rr:child "'http://publications.europa.eu/resource/authority/language/' || cbc:NoticeLanguageCode" ;
-                        rr:parent "conceptURI" ;
+                        rr:child "cbc:NoticeLanguageCode" ;
+                        rr:parent "op_code" ;
                     ] ;
                 ] ;
         ] ;
@@ -217,8 +217,8 @@ tedm:MG-Notice_ND-Root
                     rdfs:label "at-voc:language" ;
                     rr:parentTriplesMap tedm:language ;
                     rr:joinCondition [
-                        rr:child "'http://publications.europa.eu/resource/authority/language/' || cac:AdditionalNoticeLanguage/cbc:ID" ;
-                        rr:parent "conceptURI" ;
+                        rr:child "cac:AdditionalNoticeLanguage/cbc:ID" ;
+                        rr:parent "op_code" ;
                     ] ;
                 ] ;
         ] ;
@@ -324,5 +324,5 @@ tedm:MG-Identifier-identifier-Notice_ND-Root a rr:TriplesMap ;
 
 tedm:idlab-fn_executes_lookup rr:predicate fno:executes ; rr:objectMap [ rr:constant idlab-fn:lookup ] .
 tedm:idlab-fn_inputFile_language rr:predicate idlab-fn:inputFile ; rr:objectMap [ rr:constant "transformation/resources/language.csv" ] .
-tedm:idlab-fn_fromColumn_0 rr:predicate idlab-fn:fromColumn ; rr:objectMap [ rr:constant "0" ] .
-tedm:idlab-fn_toColumn_1 rr:predicate idlab-fn:toColumn ; rr:objectMap [ rr:constant "1" ] .
+tedm:idlab-fn_fromColumn_code rr:predicate idlab-fn:fromColumn ; rr:objectMap [ rr:constant "3" ] . # op_code
+tedm:idlab-fn_toColumn_code rr:predicate idlab-fn:toColumn ; rr:objectMap [ rr:constant "1" ] . # code_ted

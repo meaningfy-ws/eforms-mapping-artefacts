@@ -473,6 +473,10 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FundIdentifier_UQnAwfk3ERwvnj7e2sbo3
   a adms:Identifier;
   skos:notation "2021/5678" .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_GreenProcurement_6gHfSxSpgNRXavjTJCiAJv
+  a epo:GreenProcurement;
+  epo:usesCleanVehicleDirective false .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0001 a epo:Identifier;
   epo:hasScheme "organization";
   skos:notation "ORG-0001" .
@@ -542,7 +546,8 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotIdentifier_daUDPcwCUoxbJRjGb7tKNQ
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001 a epo:Lot;
   epo:foreseesContractSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_GRsFFxbT394C6sb7Mtao4r,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_daUDPcwCUoxbJRjGb7tKNQ;
-  epo:fulfillsStrategicProcurement epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_StrategicProcurement_6gHfSxSpgNRXavjTJCiAJv;
+  epo:fulfillsStrategicProcurement epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_GreenProcurement_6gHfSxSpgNRXavjTJCiAJv,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_StrategicProcurement_6gHfSxSpgNRXavjTJCiAJv;
   epo:isCoveredByGPA true;
   epo:isSubjectToLotSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343NonDisclosureAgreementTermTT87XZ7rfCixVuS4Z9trMH,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343SecurityClearanceTermTT87XZ7rfCixVuS4Z9trMH,
@@ -596,6 +601,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002 a epo:Lot;
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343SecurityClearanceTermPuAZ93vcjRYhKiN4rMvUZg,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343SubmissionTermPuAZ93vcjRYhKiN4rMvUZg, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_8y8GPfmPvSRdBcci6WWcSi,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_Aim3sQTrJD92cok54ZhnWW, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_SUjgiTfthNR3jeStaMcRex,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardEvaluationTerm_g9BZcQVSEYMdC6doz2wnjx,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_DesignContestRegimeTerm_PuAZ93vcjRYhKiN4rMvUZg,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTechnicalUsage_8APvjTVZXX8CxGPVJZoBww,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTerm_4pryWpjZoJQ6k9AhEGANFB,
@@ -1000,8 +1006,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SpecificDuration_MnX8qyREnFMNLeS5MJA
   time:unitType "3", "6" .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_StrategicProcurement_6gHfSxSpgNRXavjTJCiAJv
-  a epo:GreenProcurement, epo:StrategicProcurement;
-  epo:usesCleanVehicleDirective false .
+  a epo:StrategicProcurement .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubContractTerm_8y8GPfmPvSRdBcci6WWcSi
   a epo:SubcontractTerm;

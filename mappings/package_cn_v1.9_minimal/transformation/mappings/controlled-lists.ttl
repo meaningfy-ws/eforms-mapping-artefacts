@@ -187,7 +187,7 @@ tedm:framework-agreement a rr:TriplesMap ;
                 "conceptURI.value" ;
         ]
 .
-tedm:fdps-usage a rr:TriplesMap ;
+tedm:dps-usage a rr:TriplesMap ;
     rml:logicalSource
         [
             rml:source "transformation/resources/dps-usage.json" ;

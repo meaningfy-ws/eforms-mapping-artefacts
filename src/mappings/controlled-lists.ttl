@@ -417,6 +417,20 @@ tedm:cvd-contract-type a rr:TriplesMap ;
         ]
 .
 
+tedm:measurement-unit a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/measurement-unit.json" ;
+            rml:iterator "$.results.bindings[*]" ;
+            rml:referenceFormulation ql:JSONPath
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference
+                "conceptURI.value" ;
+        ]
+.
+
 tedm:temporal_unit a rr:TriplesMap ;
     rml:logicalSource
         [
@@ -427,5 +441,33 @@ tedm:temporal_unit a rr:TriplesMap ;
         [
             rml:reference
                 "conceptURI" ;
+        ]
+.
+
+tedm:green-public-procurement-criteria a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/green-public-procurement-criteria.json" ;
+            rml:iterator "$.results.bindings[*]" ;
+            rml:referenceFormulation ql:JSONPath
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference
+                "conceptURI.value" ;
+        ]
+.
+
+tedm:accessibility a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/accessibility.json" ;
+            rml:iterator "$.results.bindings[*]" ;
+            rml:referenceFormulation ql:JSONPath
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference
+                "conceptURI.value" ;
         ]
 .

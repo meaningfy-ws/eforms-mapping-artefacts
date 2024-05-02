@@ -279,6 +279,12 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_nxePuFH9i25oYGdwmceAuJ a 
   epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/min-score>;
   epo:hasThresholdValue 3.0 .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractDuration_JNctcsx6JXdNkzdL4P6dek
+  a epo:SpecificDuration .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractDuration_SwK8Z4wjBuauCWAoBTPk4Z
+  a epo:SpecificDuration .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocationAddress_6pwBpb8FW5caR7TKqg7TvM
   a locn:Address;
   locn:fullAddress "2 Gotham Street", "Bruce Wayne House", "London", "N1 9FL";
@@ -331,6 +337,8 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_8y8GPfmPvSRdBcci6WWcSi 
   epo:hasEInvoicingPermission <http://publications.europa.eu/resource/authority/permission/required>;
   epo:hasEOrdering true;
   epo:hasEPayment true;
+  epo:hasMaximumNumberOfRenewals 3;
+  epo:hasOptionsDescription "Options description ---"@en;
   epo:hasPaymentArrangement "Terms Financial ---"@en;
   epo:hasPerformanceConditions "Terms Performance ---"@en;
   epo:hasPlaceOfPerformanceAdditionalInformation "Additional information ---"@en, "The main location is ..."@en;
@@ -350,6 +358,8 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_LgGjsfgz3hNSB7W5hu4Wmi 
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_MnX8qyREnFMNLeS5MJAX9K a
     epo:ContractTerm;
+  epo:definesContractDuration epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractDuration_JNctcsx6JXdNkzdL4P6dek,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractDuration_SwK8Z4wjBuauCWAoBTPk4Z;
   epo:hasContractNatureType <http://publications.europa.eu/resource/authority/contract-nature/services>;
   locn:address epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_6pwBpb8FW5caR7TKqg7TvM,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_TfeqsbtZz7bnSaeLJEmaKZ,
@@ -366,6 +376,8 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_daUDPcwCUoxbJRjGb7tKNQ 
   epo:hasEInvoicingPermission <http://publications.europa.eu/resource/authority/permission/required>;
   epo:hasEOrdering true;
   epo:hasEPayment true;
+  epo:hasMaximumNumberOfRenewals 3;
+  epo:hasOptionsDescription "Options description ---"@en;
   epo:hasPaymentArrangement "Terms Financial ---"@en;
   epo:hasPerformanceConditions "Terms Performance ---"@en;
   epo:hasPlaceOfPerformanceAdditionalInformation "Additional information ---"@en, "The main location is ..."@en;
@@ -570,6 +582,11 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotInternalIdentifier_QRFEJSYy7fATJo
   epo:hasScheme "InternalID";
   skos:notation "Object Reference Number---" .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotValueEstimateExtension_fhpEAkeAi2DhcGZP8Nqr2u
+  a epo:MonetaryValue;
+  epo:hasAmountValue 247547.0;
+  epo:hasCurrency "BSD" .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001 a epo:Lot;
   epo:foreseesContractSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_BDTC4WRLKSCg4KipkdMxR8,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_GRsFFxbT394C6sb7Mtao4r, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_MnX8qyREnFMNLeS5MJAX9K,
@@ -577,8 +594,10 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001 a epo:Lot;
   epo:fulfillsStrategicProcurement epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_GreenProcurement_6gHfSxSpgNRXavjTJCiAJv,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_StrategicProcurement_6gHfSxSpgNRXavjTJCiAJv,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_StrategicProcurement_Xb7ADxt2QhzBynPpXk4tjW;
+  epo:hasAdditionalInformation "Additional information for GLO-0001 ProcurementProject ---"@en;
   epo:hasAmountValue epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValueLot_WdC3kBS9amJ4en7K2hRKUQ;
   epo:hasInternalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotInternalIdentifier_BDTC4WRLKSCg4KipkdMxR8;
+  epo:hasLaunchFrameworkAgreementMaximumValue epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotValueEstimateExtension_fhpEAkeAi2DhcGZP8Nqr2u;
   epo:hasPurpose epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Purpose_MnX8qyREnFMNLeS5MJAX9K;
   epo:isCoveredByGPA true;
   epo:isSMESuitable true;
@@ -628,6 +647,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002 a epo:Lot;
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_LgGjsfgz3hNSB7W5hu4Wmi, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_MnX8qyREnFMNLeS5MJAX9K,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_QRFEJSYy7fATJoZShoDC4D, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubcontractTerm_8y8GPfmPvSRdBcci6WWcSi;
   epo:fulfillsStrategicProcurement epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_StrategicProcurement_aJZpohKJoPEWi3EuVgFgPb;
+  epo:hasAdditionalInformation "Additional information for GLO-0001 ProcurementProject ---"@en;
   epo:hasAmountValue epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValueLot_evidV3nok82ih2xWwJYg9n;
   epo:hasInternalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotInternalIdentifier_QRFEJSYy7fATJoZShoDC4D;
   epo:hasPurpose epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Purpose_MnX8qyREnFMNLeS5MJAX9K;

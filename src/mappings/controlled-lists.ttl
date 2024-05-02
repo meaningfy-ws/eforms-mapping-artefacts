@@ -471,3 +471,17 @@ tedm:accessibility a rr:TriplesMap ;
                 "conceptURI.value" ;
         ]
 .
+
+tedm:timeperiod a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/timeperiod.json" ;
+            rml:iterator "$.results.bindings[*]" ;
+            rml:referenceFormulation ql:JSONPath
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference
+                "conceptURI.value" ;
+        ]
+.

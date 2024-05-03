@@ -113,6 +113,28 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Buyer_MT3gdCnJ9BA7aEqaGqKxAh a epo:B
   epo:isContractingEntity true;
   epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0001 .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ChangedSectionIdentifier_EPWB6UEFjdJjxFFtj7fVJy
+  a adms:Identifier;
+  skos:notation "LOT-0000" .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ChangedSectionIdentifier_ETHEvsJnaqfcB7dgGANFyw
+  a adms:Identifier;
+  skos:notation "PROCEDURE" .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ChangesIdentifier_ec9tbJ8ui7TUpJPbEsk6fj
+  a adms:Identifier;
+  skos:notation "6bc75979-ce6c-46eb-81a6-eee543697dec-01" .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Changes_ec9tbJ8ui7TUpJPbEsk6fj a epo:ChangeInformation;
+  epo:hasChangeDescription "Description of the procurement modified"@en, "Short description modified"@en;
+  epo:hasChangeJustification <http://publications.europa.eu/resource/authority/change-corrig-justification/cor-buy>;
+  epo:hasChangeReasonDescription "Change number of suppliers envisaged."@en;
+  epo:hasProcurementDocumentChangeDate "2020-04-14+02:00"^^xsd:dateTime;
+  epo:isProcurementDocumentChanged true;
+  epo:refersToPreviousNotice epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Notice;
+  epo:relatesToEFormSectionIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ChangedSectionIdentifier_EPWB6UEFjdJjxFFtj7fVJy,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ChangedSectionIdentifier_ETHEvsJnaqfcB7dgGANFyw .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Channel_4qCitbxYVRfdbqxnYtJTZF a epo:AdHocChannel;
   epo:hasAddressURL "https://www.the-chest.org.uk/"^^xsd:anyURI;
   dct:description "Access tool ---" .
@@ -331,6 +353,16 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_es3GJHPAww7U8q366gS
   epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
   locn:address epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocationAddress_es3GJHPAww7U8q366gSYas .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractPeriod_JNctcsx6JXdNkzdL4P6dek
+  a epo:Period;
+  epo:hasBeginning "2023-01-01+01:00"^^xsd:dateTime;
+  epo:hasEnd "2023-05-23+01:00"^^xsd:dateTime .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractPeriod_SwK8Z4wjBuauCWAoBTPk4Z
+  a epo:Period;
+  epo:hasBeginning "2023-01-01+01:00"^^xsd:dateTime;
+  epo:hasEnd "2023-05-23+02:00"^^xsd:dateTime .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_8y8GPfmPvSRdBcci6WWcSi a
     epo:ContractTerm;
   epo:hasAdditionalContractNature <http://publications.europa.eu/resource/authority/contract-nature/works>;
@@ -359,7 +391,9 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_LgGjsfgz3hNSB7W5hu4Wmi 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_MnX8qyREnFMNLeS5MJAX9K a
     epo:ContractTerm;
   epo:definesContractDuration epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractDuration_JNctcsx6JXdNkzdL4P6dek,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractDuration_SwK8Z4wjBuauCWAoBTPk4Z;
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractDuration_SwK8Z4wjBuauCWAoBTPk4Z,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractPeriod_JNctcsx6JXdNkzdL4P6dek,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractPeriod_SwK8Z4wjBuauCWAoBTPk4Z;
   epo:hasContractNatureType <http://publications.europa.eu/resource/authority/contract-nature/services>;
   locn:address epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_6pwBpb8FW5caR7TKqg7TvM,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_TfeqsbtZz7bnSaeLJEmaKZ,
@@ -506,6 +540,14 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_GreenProcurement_6gHfSxSpgNRXavjTJCi
   a epo:GreenProcurement;
   epo:usesCleanVehicleDirective false .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_GreenProcurement_YnBjYVCB47Lh3T4W9D8off
+  a epo:GreenProcurement;
+  epo:fulfillsRequirement <http://publications.europa.eu/resource/authority/environmental-impact/clim-mitig> .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_GreenProcurement_dfeMpbQbaBY6WfVozDLEGf
+  a epo:GreenProcurement;
+  epo:fulfillsRequirement <http://publications.europa.eu/resource/authority/environmental-impact/clim-mitig> .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0001 a adms:Identifier;
   epo:hasScheme "organization";
   skos:notation "ORG-0001" .
@@ -546,6 +588,14 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_TPO-0003 a epo:Identifier
   epo:hasScheme "touchpoint";
   skos:notation "TPO-0003" .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_InnovativeProcurement_2yjckcDCeZgS5m5tUcZ68p
+  a epo:InnovativeProcurement;
+  epo:fulfillsRequirement <http://publications.europa.eu/resource/authority/innovative-acquisition/proc-innov> .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_InnovativeProcurement_cLKYnTLDZb6RpEv6sHGwFG
+  a epo:InnovativeProcurement;
+  epo:fulfillsRequirement <http://publications.europa.eu/resource/authority/innovative-acquisition/proc-innov> .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_JuryMember_cvGnw3hJYztkzCgnhrJDWV a epo:JuryMember;
   epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Person_cvGnw3hJYztkzCgnhrJDWV .
 
@@ -557,9 +607,23 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotFund_UQnAwfk3ERwvnj7e2sbo39 a epo
   dct:description "Recovery Fund"@en;
   adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FundIdentifier_UQnAwfk3ERwvnj7e2sbo39 .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroupAwardCriterion_Ed82rH3bQh5UFtUqt5RqUi
+  a epo:AwardCriterion .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroupAwardInformation_gLuU9xVSAhVSewi2MZNMhW
+  a epo:LotGroupAwardInformation;
+  epo:describesLotGroup epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroup_GLO-0001;
+  epo:hasGroupFrameworkAgreementMaximumValue epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ND-LotsGroupFA_gLuU9xVSAhVSewi2MZNMhW .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroup_GLO-0001 a epo:LotGroup;
+  epo:hasEstimatedValue epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_PurposeLotGroupEstimatedValue_EgMjw2pg9jruQvYxRQ9GAr;
+  epo:hasInternalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotInternalIdentifier_BboGPQkCpLeHXdXL8io8wo;
+  epo:hasLaunchFrameworkAgreementMaximumValue epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotsGroupValueEstimateExtension_ZoH93rHLWdKDPCSNvWx8rE;
   epo:setsGroupingContextForLot epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
+  epo:specifiesProcurementCriterion epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroupAwardCriterion_Ed82rH3bQh5UFtUqt5RqUi;
+  dct:description "Description ---"@en;
+  dct:title "Title ---"@en;
   adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotsGroupIdentifier_246rmGzZvwFBcxRNZTXjTW .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotIdentifier_8y8GPfmPvSRdBcci6WWcSi a
@@ -573,6 +637,11 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotIdentifier_daUDPcwCUoxbJRjGb7tKNQ
   skos:notation "LOT-0001" .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotInternalIdentifier_BDTC4WRLKSCg4KipkdMxR8
+  a adms:Identifier;
+  epo:hasScheme "InternalID";
+  skos:notation "Object Reference Number---" .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotInternalIdentifier_BboGPQkCpLeHXdXL8io8wo
   a adms:Identifier;
   epo:hasScheme "InternalID";
   skos:notation "Object Reference Number---" .
@@ -592,6 +661,9 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001 a epo:Lot;
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_GRsFFxbT394C6sb7Mtao4r, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_MnX8qyREnFMNLeS5MJAX9K,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_daUDPcwCUoxbJRjGb7tKNQ;
   epo:fulfillsStrategicProcurement epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_GreenProcurement_6gHfSxSpgNRXavjTJCiAJv,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_GreenProcurement_YnBjYVCB47Lh3T4W9D8off,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_InnovativeProcurement_cLKYnTLDZb6RpEv6sHGwFG,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SocialProcurement_AyeF96vKsfhzrt5AYeKRTv,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_StrategicProcurement_6gHfSxSpgNRXavjTJCiAJv,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_StrategicProcurement_Xb7ADxt2QhzBynPpXk4tjW;
   epo:hasAdditionalInformation "Additional information for GLO-0001 ProcurementProject ---"@en;
@@ -646,7 +718,10 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002 a epo:Lot;
   epo:foreseesContractSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_8y8GPfmPvSRdBcci6WWcSi,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_LgGjsfgz3hNSB7W5hu4Wmi, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_MnX8qyREnFMNLeS5MJAX9K,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_QRFEJSYy7fATJoZShoDC4D, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubcontractTerm_8y8GPfmPvSRdBcci6WWcSi;
-  epo:fulfillsStrategicProcurement epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_StrategicProcurement_aJZpohKJoPEWi3EuVgFgPb;
+  epo:fulfillsStrategicProcurement epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_GreenProcurement_dfeMpbQbaBY6WfVozDLEGf,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_InnovativeProcurement_2yjckcDCeZgS5m5tUcZ68p,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SocialProcurement_GB54RbhU2jfyPCJLbcWmfB,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_StrategicProcurement_aJZpohKJoPEWi3EuVgFgPb;
   epo:hasAdditionalInformation "Additional information for GLO-0001 ProcurementProject ---"@en;
   epo:hasAmountValue epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValueLot_evidV3nok82ih2xWwJYg9n;
   epo:hasInternalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotInternalIdentifier_QRFEJSYy7fATJoZShoDC4D;
@@ -703,6 +778,11 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotsGroupIdentifier_246rmGzZvwFBcxRN
   epo:hasScheme "LotsGroup";
   skos:notation "GLO-0001" .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotsGroupValueEstimateExtension_ZoH93rHLWdKDPCSNvWx8rE
+  a epo:MonetaryValue;
+  epo:hasAmountValue 247547.0;
+  epo:hasCurrency "BSD" .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValueLot_BaGzsXLuGR4tRgDAxRPwS8
   a epo:MonetaryValue;
   epo:hasAmountValue 9999999.99;
@@ -738,6 +818,11 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MultipleStageProcedureTerm_daUDPcwCU
   epo:hasNoNegotiationNecessary false;
   epo:hasSuccessiveReduction true .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ND-LotsGroupFA_gLuU9xVSAhVSewi2MZNMhW
+  a epo:MonetaryValue;
+  epo:hasAmountValue 10000.0;
+  epo:hasCurrency "EUR" .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_NonDisclosureAgreementTerm_TT87XZ7rfCixVuS4Z9trMH
   a epo:NonDisclosureAgreementTerm;
   epo:isNonDisclosureAgreementRequired true;
@@ -767,7 +852,8 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Notice a epo:CompetitionNotice, epo:
   epo:hasVersion "03";
   epo:refersToPrevious epd:id_9c0fd704-64d3-4294-a3b6-6df45911ab9f-01_Notice;
   epo:refersToProcedure epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_MnX8qyREnFMNLeS5MJAX9K;
-  adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_NoticeIdentifier_cMBzh6pL4JRkiaCd4DWjT2 .
+  adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ChangesIdentifier_ec9tbJ8ui7TUpJPbEsk6fj,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_NoticeIdentifier_cMBzh6pL4JRkiaCd4DWjT2 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_NoticeIdentifier_cMBzh6pL4JRkiaCd4DWjT2
   a adms:Identifier;
@@ -1021,6 +1107,11 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementServiceProvider_f7UuQ7S8i
   epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0007;
   dct:description "ted-esen" .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_PurposeLotGroupEstimatedValue_EgMjw2pg9jruQvYxRQ9GAr
+  a epo:MonetaryValue;
+  epo:hasAmountValue 9999999.99;
+  epo:hasCurrency "EUR" .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Purpose_FnAKvBz2xRkJi3ke3cKnZS a epo:Purpose .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Purpose_MnX8qyREnFMNLeS5MJAX9K a epo:Purpose;
@@ -1115,6 +1206,14 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_j76qWqsuJdCtjNmRv3MK5T
   epo:isUsedForCandidateRestriction true;
   dct:description "Selection Criteria Description ---"@en;
   skos:prefLabel "Name of the selection criteria---"@en .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SocialProcurement_AyeF96vKsfhzrt5AYeKRTv
+  a epo:SocialProcurement;
+  epo:fulfillsRequirement <http://publications.europa.eu/resource/authority/social-objective/acc-all> .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SocialProcurement_GB54RbhU2jfyPCJLbcWmfB
+  a epo:SocialProcurement;
+  epo:fulfillsRequirement <http://publications.europa.eu/resource/authority/social-objective/acc-all> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SpecificDuration_5FkLTeSLMGuVhyxZY2piu9
   a epo:SpecificDuration;

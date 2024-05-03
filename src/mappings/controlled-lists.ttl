@@ -485,3 +485,59 @@ tedm:timeperiod a rr:TriplesMap ;
                 "conceptURI.value" ;
         ]
 .
+
+tedm:social-objective a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/social-objective.json" ;
+            rml:iterator "$.results.bindings[*]" ;
+            rml:referenceFormulation ql:JSONPath
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference
+                "conceptURI.value" ;
+        ]
+.
+
+tedm:change-corrig-justification a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/change-corrig-justification.json" ;
+            rml:iterator "$.results.bindings[*]" ;
+            rml:referenceFormulation ql:JSONPath
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference
+                "conceptURI.value" ;
+        ]
+.
+
+tedm:innovative-acquisition a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/innovative-acquisition.json" ;
+            rml:iterator "$.results.bindings[*]" ;
+            rml:referenceFormulation ql:JSONPath
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference
+                "conceptURI.value" ;
+        ]
+.
+
+tedm:environmental-impact a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/environmental-impact.json" ;
+            rml:iterator "$.results.bindings[*]" ;
+            rml:referenceFormulation ql:JSONPath
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference
+                "conceptURI.value" ;
+        ]
+.

@@ -93,12 +93,12 @@ tedm:MG-Organization_ND-Company a rr:TriplesMap ;
                         fnml:functionValue [
                             rr:predicateObjectMap [
                                 rr:predicate idlab-fn:str ;
-                                rr:objectMap [ rml:reference "'http://publications.europa.eu/resource/authority/language/' || cac:PartyName/cbc:Name/@languageID" ]
+                                rr:objectMap [ rml:reference "cac:PartyName/cbc:Name/@languageID" ]
                             ] ,
                             tedm:idlab-fn_executes_lookup ,
                             tedm:idlab-fn_inputFile_language ,
-                            tedm:idlab-fn_fromColumn_0 ,
-                            tedm:idlab-fn_toColumn_1
+                            tedm:idlab-fn_fromColumn_code ,
+                            tedm:idlab-fn_toColumn_code
                         ]
                     ] ;
                 ] ;
@@ -130,7 +130,7 @@ tedm:MG-Organization_ND-Company a rr:TriplesMap ;
                     rr:parentTriplesMap tedm:MG-Identifier-hasLegalIdentifier-Organization_ND-Company ;
                     rr:joinCondition [
                         rr:child "path(.)" ;
-                        rr:parent "path(.)" ;
+                        rr:parent "path(..)" ;
                     ] ;
                 ]
         ] ;
@@ -178,13 +178,13 @@ tedm:MG-Identifier-hasLegalIdentifier-Organization_ND-Company a rr:TriplesMap ;
     rml:logicalSource
         [
             rml:source "data/source.xml" ;
-            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Organizations/efac:Organization/efac:Company" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Organizations/efac:Organization/efac:Company/cac:PartyLegalEntity" ;
             rml:referenceFormulation ql:XPath
         ];
     rr:subjectMap
         [
             rdfs:label "ND-Company" ;
-            rml:reference "if (exists(cac:PartyLegalEntity/cbc:CompanyID)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_OrganisationIdentifier_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(cac:PartyLegalEntity/cbc:CompanyID)) || '?response_type=raw') else null" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_OrganisationIdentifier_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(cbc:CompanyID)) || '?response_type=raw')}" ;
             rr:class epo:Identifier
         ] ;
     rr:predicateObjectMap
@@ -193,7 +193,7 @@ tedm:MG-Identifier-hasLegalIdentifier-Organization_ND-Company a rr:TriplesMap ;
             rr:predicate skos:notation ;
             rr:objectMap
                 [
-                    rml:reference "cac:PartyLegalEntity/cbc:CompanyID" ;
+                    rml:reference "cbc:CompanyID" ;
                 ] ;
         ] ;
 .
@@ -216,12 +216,12 @@ tedm:MG-Address-registeredAddress-Organization_ND-CompanyAddress a rr:TriplesMap
         ] ;
     rr:predicateObjectMap
         [
-            rdfs:label "BT-16,BT-510(a|b|c),BT-512,BT-513,514-Organization-Company" ;
-            rdfs:comment "Aggregate of Department, Street, Streetline 1, Streetline 2, Organisation City, Organisation Post Code, Organisation Country Code" ;
+            rdfs:label "BT-16, BT-510(a|b|c), BT-512, BT-513, 514-Organization-Company" ;
+            rdfs:comment "Organisation Part Name, Street, Streetline 1, Streetline 2, Organisation City, Organisation Post Code, Organisation Country Code" ;
             rr:predicate locn:fullAddress ;
             rr:objectMap
                 [
-                    rml:reference "replace(replace(cbc:Department || ', ' || cbc:StreetName || ', ' || cbc:AdditionalStreetName || ', ' || cbc:Line || ', ' || cbc:CityName || ', ' || cbc:PostalZone || ', ' || cac:Country/cbc:IdentificationCode, '(, )+', ', '),  '^, |, $', '')" ;
+                    rml:reference "replace(replace(cbc:Department || ', ' || cbc:StreetName || ', ' || cbc:AdditionalStreetName || ', ' || cac:AddressLine/cbc:Line || ', ' || cbc:CityName || ', ' || cbc:PostalZone || ', ' || cac:Country/cbc:IdentificationCode, '(, )+', ', '),  '^, |, $', '')" ;
                 ] ;
         ] ;
     rr:predicateObjectMap

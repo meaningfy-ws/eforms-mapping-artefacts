@@ -24,10 +24,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 # likely an outlier, except in certain cases (roles playedBy orgs in ePO).
 
 SELECT DISTINCT ?s (?p0 AS ?rel) {
-    ?s ?p ?o .
+    ?s ?p ?o ;
+        a ?what .
     ?s0 ?p0 ?s .
     ?s1 ?p0 ?s .
     FILTER(isIRI(?s))
     FILTER(?s0 != ?s1)
     FILTER(?p0 not in (epo:playedBy))
+    FILTER (?what not in (epo:ExclusionGround))
 }

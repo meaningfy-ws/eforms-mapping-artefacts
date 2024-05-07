@@ -486,6 +486,16 @@
 		</cac:Party>
 	</cac:ContractingParty>
 	<cac:TenderingTerms>
+		<!--BT-01(c|d) [alt. to BT-01(e|f)]-->
+		<cac:ProcurementLegislationDocumentReference>
+			<cbc:ID schemeName="thisAlmostNeverOccurs">art. 410 ust. 1 ustawy z dnia 11 września 2019 r. - Prawo zamówień publicznych (Dz. U. z 2023r. poz. 1605 t.j.)</cbc:ID>
+			<cbc:DocumentDescription languageID="ENG">legal base description ---</cbc:DocumentDescription>
+		 </cac:ProcurementLegislationDocumentReference>
+		<!--BT-01(e|f) [alt. to BT-01(c|d)]-->
+		 <cac:ProcurementLegislationDocumentReference>
+			<cbc:ID>LocalLegalBasis</cbc:ID>
+			<cbc:DocumentDescription languageID="FRA">Loi modifiée du 8 juillet 2018 sur les concessions</cbc:DocumentDescription>
+		</cac:ProcurementLegislationDocumentReference>
 		<!--BT-09-->
 		<cac:ProcurementLegislationDocumentReference>
 			<cbc:ID>CrossBorderLaw</cbc:ID>
@@ -601,6 +611,15 @@
 			<cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
 		</cac:ProcurementAdditionalType>
 		<cac:RequestedTenderTotal>
+			<ext:UBLExtensions>
+				<ext:UBLExtension>
+					<ext:ExtensionContent>
+						<efext:EformsExtension>
+							<efbc:FrameworkMaximumAmount currencyID="BSD">247547</efbc:FrameworkMaximumAmount>
+						</efext:EformsExtension>
+					</ext:ExtensionContent>
+				</ext:UBLExtension>
+			</ext:UBLExtensions>
 			<!--BT-27-->
 			<cbc:EstimatedOverallContractAmount currencyID="EUR">9999999.99</cbc:EstimatedOverallContractAmount>
 		</cac:RequestedTenderTotal>
@@ -1103,10 +1122,30 @@
 			</cac:SecurityClearanceTerm>
 		</cac:TenderingTerms>
 		<cac:TenderingProcess>
+			<cac:InvitationSubmissionPeriod>
+				<cbc:StartDate>2020-05-22+02:00</cbc:StartDate>
+			</cac:InvitationSubmissionPeriod>
+			<cac:ParticipationInvitationPeriod>
+				<cbc:StartDate>2023-12-12+01:00</cbc:StartDate>
+			</cac:ParticipationInvitationPeriod>
+			<cac:ParticipationRequestReceptionPeriod>
+				<cbc:EndDate>2020-05-07+01:00</cbc:EndDate>
+				<cbc:EndTime>23:55:00+01:00</cbc:EndTime>
+			</cac:ParticipationRequestReceptionPeriod>
+			<cbc:AccessToolsURI>https://www.the-chest.org.uk/</cbc:AccessToolsURI>
+			<cac:OpenTenderEvent>
+				<cbc:OccurrenceDate>2020-06-12+01:00</cbc:OccurrenceDate>
+				<cbc:OccurrenceTime>14:00:00+01:00</cbc:OccurrenceTime>
+				<cbc:Description languageID="ENG">Strictly by invitation only.</cbc:Description>
+				<cac:OccurenceLocation>
+					<cbc:Description languageID="ENG">Renfrewshire House, Cotton Street, Paisley.</cbc:Description>
+				</cac:OccurenceLocation>
+			</cac:OpenTenderEvent>
 			<ext:UBLExtensions>
 				<ext:UBLExtension>
 					<ext:ExtensionContent>
 						<efext:EformsExtension>
+							<efbc:ProcedureRelaunchIndicator>false</efbc:ProcedureRelaunchIndicator>
 							<!--BT-632-->
 							<efbc:AccessToolName>Access tool ---</efbc:AccessToolName>
 						</efext:EformsExtension>
@@ -1152,6 +1191,8 @@
 				<cbc:AuctionURI>https://electronic-auction.com</cbc:AuctionURI>
 			</cac:AuctionTerms>
 			<cac:FrameworkAgreement>
+				<!-- BT-109-Lot -->
+				<cbc:Justification languageID="ENG">Framwork duration justification ---</cbc:Justification>
 				<!--BT-113-->
 				<cbc:MaximumOperatorQuantity>10</cbc:MaximumOperatorQuantity>
 				<!--BT-157-->
@@ -1216,6 +1257,7 @@
 				<cbc:ProcurementType languageID="ENG">Accessibility Justification ---</cbc:ProcurementType>
 			</cac:ProcurementAdditionalType>
 			<cac:RequestedTenderTotal>
+
 				<!--BT-27-->
 				<cbc:EstimatedOverallContractAmount currencyID="EUR">9999999.99</cbc:EstimatedOverallContractAmount>
 			</cac:RequestedTenderTotal>
@@ -1780,6 +1822,7 @@
 				<cbc:ProcurementType languageID="ENG">Accessibility Justification ---</cbc:ProcurementType>
 			</cac:ProcurementAdditionalType>
 			<cac:RequestedTenderTotal>
+
 				<!--BT-27-->
 				<cbc:EstimatedOverallContractAmount currencyID="EUR">9999999.99</cbc:EstimatedOverallContractAmount>
 			</cac:RequestedTenderTotal>

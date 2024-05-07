@@ -2,13 +2,39 @@
 
 To create/update the minimal test package `package_cn_v1.9_minimal` from the
 contents in `src` (latest developmental RML rules), simply run `make`, which
-resolves to the default (and currently only) Make target `package_minimal`.
-Make can be installed on Windows via Chocolatey (`choco install make`).
+resolves to the default (first) Make target `package_minimal`.
 
 The package `package_cn_v1.9` is kept for reference with old RML file(s), but
-is not expected to be updated while the RML rules are in development. Feel free
-to take test data files from this package and dump them in the minimal package
-to create a bigger test package with the developmental RML rules.
+will be updated with the RML rules in development. In the meantime, feel free
+to create derived packages with more or less data. Some helper Make commands
+are provided for this:
+
+```
+make package_sdk_examples # all example data of SDK v1.9
+make package_cn_samples # all sample data for SDK v1.9
+```
+
+These will output temporary packages in an `output` folder.
+
+## Testing
+
+There are semi-automated tests which are mainly for _checking_ and
+investigating, run with `make test_output` (uses Apache Jena `arq` to run some
+queries). Otherwise, there is GitHub Actions CI integration for validating RDF
+files using Jena's `riot` tool.
+
+## Requirements
+
+Users need only to install the following external software tools, libraries
+and/or runtimes if developing and testing the RML mapping:
+
+- Java 11
+- RMLMapper-Java==v6.2.2
+- A UNIX-compatible environment w/ `make`, `curl`, etc.
+- Apache Jena 4.10 (for the command-line tools `arq` and `riot`)
+
+Make, cURL and other UNIX/Bash tools may be accessible on Windows via
+Chocolatey (e.g. `choco install make`).
 
 ## Development Workflow
 

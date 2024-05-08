@@ -1,20 +1,30 @@
 # eForms Mapping Artefacts
 
-To create/update the minimal test package `package_cn_v1.9_minimal` from the
+To update the minimal test package `package_cn_v1.9_minimal` from the
 contents in `src` (latest developmental RML rules), simply run `make`, which
-resolves to the default (first) Make target `package_minimal`.
+resolves to the default (first) Make target `package_sync`.
 
 The package `package_cn_v1.9` is kept for reference with old RML file(s), but
-will be updated with the RML rules in development. In the meantime, feel free
-to create derived packages with more or less data. Some helper Make commands
-are provided for this:
+will be updated with the new RML rules in development at one point. In the
+meantime, feel free to create derived packages with more or less data. Some
+helper Make commands are provided for this:
 
 ```
-make package_sdk_examples # all example data of SDK v1.9
-make package_cn_samples # all sample data for SDK v1.9
+make package_cn_all_variants
+make export_cn_all_variants
 ```
 
-These will output temporary packages in an `output` folder.
+These will output temporary packages in an `output` folder, along with their
+ZIP archive files. Currently, they are based around the following variants of
+_EF10-24 (CN), SDK v1.9_:
+
+- **minimal** One SDK example only, `cn_24_maximal.xml`
+- **examples** All SDK examples, _except_ `cn_24_maximal_100_lots.xml`
+- **samples** All sample data, no SDK example
+- **maximal** All SDK examples and all sample data, _including_ `cn_24_maximal_100_lots.xml`
+
+You are free to modify any package and rerun the relevant export Make target,
+e.g. `make export_cn_minimal`.
 
 ## Testing
 
@@ -28,13 +38,17 @@ files using Jena's `riot` tool.
 Users need only to install the following external software tools, libraries
 and/or runtimes if developing and testing the RML mapping:
 
-- Java 11
+- Java 11+ (tested up to 17)
 - RMLMapper-Java==v6.2.2
-- A UNIX-compatible environment w/ `make`, `curl`, etc.
+- A UNIX-compatible environment w/ `make`, `curl`, `zip`, etc.
 - Apache Jena 4.10 (for the command-line tools `arq` and `riot`)
 
-Make, cURL and other UNIX/Bash tools may be accessible on Windows via
+Make, cURL, ZIP and other UNIX/Bash tools may be accessible on Windows via
 Chocolatey (e.g. `choco install make`).
+
+RMLMapper is currently tied to v6.2.2 because of an
+[issue with conditional
+instantiation](https://github.com/RMLio/rmlmapper-java/issues/236).
 
 ## Development Workflow
 

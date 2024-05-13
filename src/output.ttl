@@ -545,8 +545,8 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001 a epo:Lot;
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTechnicalUsage_4qCitbxYVRfdbqxnYtJTZF,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTerm_SsJtj5DGjqxKj6eVgR4GbT,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MultipleStageProcedureTerm_daUDPcwCUoxbJRjGb7tKNQ,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OpeningTerm_QuUbCTvwqkE5rYfeGgqExM, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_TT87XZ7rfCixVuS4Z9trMH,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_VZxmrBG8UMc3RvpZcKCpvE, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_TT87XZ7rfCixVuS4Z9trMH,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OpeningTerm_QuUbCTvwqkE5rYfeGgqExM, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_VZxmrBG8UMc3RvpZcKCpvE,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_TT87XZ7rfCixVuS4Z9trMH,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_daUDPcwCUoxbJRjGb7tKNQ;
   epo:isUsingEUFunds true;
   epo:specifiesProcurementCriterion epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_4cgbfPEuSgC4MeB6X9HTss,
@@ -592,8 +592,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002 a epo:Lot;
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTechnicalUsage_8APvjTVZXX8CxGPVJZoBww,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTerm_4pryWpjZoJQ6k9AhEGANFB,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MultipleStageProcedureTerm_8y8GPfmPvSRdBcci6WWcSi,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_PuAZ93vcjRYhKiN4rMvUZg, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_bpDJYehUZE5dpNtnagJd4V,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_28qA6sXPPZP6NSvA8FovHj,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_bpDJYehUZE5dpNtnagJd4V, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_28qA6sXPPZP6NSvA8FovHj,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_8y8GPfmPvSRdBcci6WWcSi,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_PuAZ93vcjRYhKiN4rMvUZg;
   epo:isUsingEUFunds true;
@@ -915,10 +914,6 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementServiceProvider_f7UuQ7S8i
   epo:actsOnBehalfOf epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Buyer_MT3gdCnJ9BA7aEqaGqKxAh;
   epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0007;
   dct:description "ted-esen" .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_PuAZ93vcjRYhKiN4rMvUZg a epo:ReviewTerm .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_TT87XZ7rfCixVuS4Z9trMH a epo:ReviewTerm .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_VZxmrBG8UMc3RvpZcKCpvE a epo:ReviewTerm;
   epo:hasReviewDeadlineInformation "Review Deadline Description ---"@en .

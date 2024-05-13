@@ -547,20 +547,20 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
 #                    ];
 #                ] ;
 #        ];
-    rr:predicateObjectMap
-        [
-            rdfs:label   "ND-LotReviewTerms";
-            rdfs:comment "ND-LotReviewTerms of MG-Lot under LotTenderingTerms ";
-            rr:predicate epo:isSubjectToLotSpecificTerm ;
-            rr:objectMap
-                [
-                    rr:parentTriplesMap tedm:MG-ReviewTerm-isSubjectToLotSpecificTerm-Lot_ND-LotTenderingTerms;
-                    rr:joinCondition [
-                         rr:child "path(.)";
-                        rr:parent "path(../.)";
-                    ];
-                ] ;
-        ];
+    # rr:predicateObjectMap
+    #     [
+    #         rdfs:label   "ND-LotReviewTerms";
+    #         rdfs:comment "ND-LotReviewTerms of MG-Lot under LotTenderingTerms ";
+    #         rr:predicate epo:isSubjectToLotSpecificTerm ;
+    #         rr:objectMap
+    #             [
+    #                 rr:parentTriplesMap tedm:MG-ReviewTerm-isSubjectToLotSpecificTerm-Lot_ND-LotTenderingTerms;
+    #                 rr:joinCondition [
+    #                      rr:child "path(.)";
+    #                     rr:parent "path(../.)";
+    #                 ];
+    #             ] ;
+    #     ];
     rr:predicateObjectMap
         [
             rdfs:label "BT-736-Lot";
@@ -3562,22 +3562,23 @@ rdfs:label "MG-SpecificDuration";
         ]
 .
 
-tedm:MG-ReviewTerm-isSubjectToLotSpecificTerm-Lot_ND-LotTenderingTerms a rr:TriplesMap ;
-    rdfs:label  "MG-ReviewTerm";
-    rml:logicalSource
-        [
-            rml:source "data/source.xml" ;
-            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms";
-            rml:referenceFormulation ql:XPath
-        ];
-    rr:subjectMap
-        [
-            rdfs:label   "ND-LotReviewTerms";
-            rdfs:comment "ND-LotReviewTerms of MG-ReviewTerm under LotTenderingTerms ";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ReviewTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
-            rr:class epo:ReviewTerm
-        ] ;
-.
+# TODO this does not appear to be necessary even if in the CM it is expressed at the node (it is a composition)
+# tedm:MG-ReviewTerm-isSubjectToLotSpecificTerm-Lot_ND-LotTenderingTerms a rr:TriplesMap ;
+#     rdfs:label  "MG-ReviewTerm";
+#     rml:logicalSource
+#         [
+#             rml:source "data/source.xml" ;
+#             rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms";
+#             rml:referenceFormulation ql:XPath
+#         ];
+#     rr:subjectMap
+#         [
+#             rdfs:label   "ND-LotReviewTerms";
+#             rdfs:comment "ND-LotReviewTerms of MG-ReviewTerm under LotTenderingTerms ";
+#             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ReviewTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+#             rr:class epo:ReviewTerm
+#         ] ;
+# .
 
 # this is an example of an object referred to by multiple top-level subjects (all Lots) at orthogonal XPaths
 tedm:MG-ExclusionGround-specifiesProcurementCriterion-Lot_ND-ExclusionGrounds a rr:TriplesMap ;

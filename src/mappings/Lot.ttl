@@ -465,19 +465,20 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ] ;
         ];
-    rr:predicateObjectMap
-        [
-            rdfs:label "BT-543-Lot";
-            rr:predicate epo:specifiesProcurementCriterion;
-            rr:objectMap
-                [
-                    rr:parentTriplesMap tedm:MG-AwardCriterion-specifiesProcurementCriterion-Lot_ND-LotAwardCriteria;
-                    rr:joinCondition [
-                        rr:child "path(.)";
-                        rr:parent "path(../../..)";
-                    ];
-                ] ;
-        ];
+    # BT-543-Lot has feedback/change requested, subject to discussion
+    # rr:predicateObjectMap
+    #     [
+    #         rdfs:label "BT-543-Lot";
+    #         rr:predicate epo:specifiesProcurementCriterion;
+    #         rr:objectMap
+    #             [
+    #                 rr:parentTriplesMap tedm:MG-AwardCriterion-specifiesProcurementCriterion-Lot_ND-LotAwardCriteria;
+    #                 rr:joinCondition [
+    #                     rr:child "path(.)";
+    #                     rr:parent "path(../../..)";
+    #                 ];
+    #             ] ;
+    #     ];
     rr:predicateObjectMap
         [
             rdfs:label "BT-71-Lot";
@@ -2171,33 +2172,33 @@ tedm:MG-Constraint-hasConstraint-AwardCriterion-specifiesProcurementCriterion-Lo
             ] ;
 .
 
-tedm:MG-AwardCriterion-specifiesProcurementCriterion-Lot_ND-LotAwardCriteria a rr:TriplesMap ;
-    rdfs:label "MG-AwardCriterion";
-    rml:logicalSource
-        [
-            rml:source "data/source.xml" ;
-            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:AwardingTerms/cac:AwardingCriterion";
-            rml:referenceFormulation ql:XPath
-        ];
-    rr:subjectMap
-        [
-            rdfs:label "ND-LotAwardCriteria";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_AwardCriterion_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(ancestor::node()[7])) || '?response_type=raw')}" ;
-            rr:class epo:AwardCriterion
-        ] ;
-   rr:predicateObjectMap
-        [
-            # TODO to be added to resource
-            rdfs:label "BT-543-Lot";
-            rdfs:comment " Award Criteria Complicated of G-AwardCriterion under ND-LotAwardCriteria ";
-            rr:predicate epo:hasAwardCriteriaEvaluationFormula  ;
-            rr:objectMap
-                [
-                    rml:reference "if(exists(cbc:CalculationExpression)) then cbc:CalculationExpression else null";
-
-                ] ;
-        ] ;
-.
+# BT-543-Lot has feedback/change requested, subject to discussion
+# tedm:MG-AwardCriterion-specifiesProcurementCriterion-Lot_ND-LotAwardCriteria a rr:TriplesMap ;
+#     rdfs:label "MG-AwardCriterion";
+#     rml:logicalSource
+#         [
+#             rml:source "data/source.xml" ;
+#             rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:AwardingTerms/cac:AwardingCriterion";
+#             rml:referenceFormulation ql:XPath
+#         ];
+#     rr:subjectMap
+#         [
+#             rdfs:label "ND-LotAwardCriteria";
+#             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_AwardCriterion_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(ancestor::node()[7])) || '?response_type=raw')}" ;
+#             rr:class epo:AwardCriterion
+#         ] ;
+#    rr:predicateObjectMap
+#         [
+#             # TODO to be added to resource
+#             rdfs:label "BT-543-Lot";
+#             rdfs:comment " Award Criteria Complicated of G-AwardCriterion under ND-LotAwardCriteria ";
+#             rr:predicate epo:hasAwardCriteriaEvaluationFormula  ;
+#             rr:objectMap
+#                 [
+#                     rml:reference "if(exists(cbc:CalculationExpression)) then cbc:CalculationExpression else null";
+#                 ] ;
+#         ] ;
+# .
 
 tedm:MG-AwardEvaluationTerm-isSubjectToLotSpecificTerm-Lot_ND-LotAwardCriteria a rr:TriplesMap ;
     rdfs:label "MG-AwardEvaluationTerm";

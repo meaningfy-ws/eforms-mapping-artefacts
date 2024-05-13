@@ -9,7 +9,7 @@ SAMPLES_CN_NAME = sampling_20231001-20240311
 ROOT_CONCEPTS_GREPFILTER = "_Organization_|_TouchPoint_|_Notice|_ProcurementProcessInformation_|_Lot_"
 TEST_QUERY_RESULTS_FORMAT = CSV
 XLSX_STRDATA = xl/sharedStrings.xml
-DEFAULT_CM_ID = package_eforms_10-24_v1.9
+DEFAULT_CM_ID = package_eforms_10-24_v1.9_M1-M2
 
 CANONICAL_TEST_OUTPUT = src/output.ttl
 CANONICAL_RML_DIR = src/mappings
@@ -27,12 +27,30 @@ SDK_DATA_DIR = $(TEST_DATA_DIR)/$(SDK_DATA_NAME)
 SAMPLES_CN_DIR = $(TEST_DATA_DIR)/$(SAMPLES_CN_NAME)
 CM_FILE = $(TX_DIR)/$(CM_FILENAME)
 
-package_minimal:
+package_sync:
 	@ cp -rv src/mappings mappings/$(MINIMAL_PACKAGE)/$(TX_DIR)/
 	@ cp -rv src/$(TX_DIR) mappings/$(MINIMAL_PACKAGE)/
 	@ cp -rv src/validation mappings/$(MINIMAL_PACKAGE)/
 
-package_sdk_examples: package_minimal
+package_cn_minimal: package_sync
+	@ mkdir -p $(OUTPUT_DIR)
+	@ $(eval PKG_NAME := $(MINIMAL_PACKAGE))
+	@ $(eval PKG_DIR := $(OUTPUT_DIR)/$(PKG_NAME))
+	@ $(eval PKG_TMP := tmp/$(PKG_NAME))
+	@ cp -rv mappings/$(MINIMAL_PACKAGE) $(PKG_DIR)
+	@ echo "Modifying Identifier in the CM and replacing XLSX"
+	@ mkdir -p $(PKG_TMP) && unzip $(PKG_DIR)/$(CM_FILE) -d $(PKG_TMP)
+	@ rm -v $(PKG_DIR)/$(CM_FILE)
+	@ sed -i "s|<t>$(DEFAULT_CM_ID)</t>|<t>$(DEFAULT_CM_ID)_minimal</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
+	@ cd $(PKG_TMP) && zip -r tmp.xlsx * && mv -v tmp.xlsx ../../$(PKG_DIR)/$(CM_FILE) && cd ../.. && rm -r $(PKG_TMP)
+	@ echo "Removing outdated metadata"
+	@ rm -fv $(PKG_DIR)/metadata.json
+
+export_cn_minimal:
+	@ cd $(OUTPUT_DIR) && zip -r $(MINIMAL_PACKAGE).zip $(MINIMAL_PACKAGE)
+	@ echo "Minimal package exported to $(OUTPUT_DIR)/$(MINIMAL_PACKAGE).zip"
+
+package_cn_examples: package_sync
 	@ mkdir -p $(OUTPUT_DIR)
 	@ $(eval PKG_NAME := $(DEFAULT_PACKAGE)_allExamples)
 	@ $(eval PKG_DIR := $(OUTPUT_DIR)/$(PKG_NAME))
@@ -45,12 +63,17 @@ package_sdk_examples: package_minimal
 	@ echo "Modifying Identifier in the CM and replacing XLSX"
 	@ mkdir -p $(PKG_TMP) && unzip $(PKG_DIR)/$(CM_FILE) -d $(PKG_TMP)
 	@ rm -v $(PKG_DIR)/$(CM_FILE)
-	@ sed -i "s|<t>$(DEFAULT_CM_ID)</t>|<t>$(DEFAULT_CM_ID)-allExamples</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
+	@ sed -i "s|<t>$(DEFAULT_CM_ID)</t>|<t>$(DEFAULT_CM_ID)_allExamples</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
 	@ cd $(PKG_TMP) && zip -r tmp.xlsx * && mv -v tmp.xlsx ../../$(PKG_DIR)/$(CM_FILE) && cd ../.. && rm -r $(PKG_TMP)
 	@ echo "Removing outdated metadata"
-	@ rm -v $(PKG_DIR)/metadata.json
+	@ rm -fv $(PKG_DIR)/metadata.json
 
-package_cn_samples: package_minimal
+export_cn_examples:
+	@ $(eval PKG_NAME := $(DEFAULT_PACKAGE)_allExamples)
+	@ cd $(OUTPUT_DIR) && zip -r $(PKG_NAME).zip $(PKG_NAME)
+	@ echo "SDK examples package exported to $(PKG_DIR).zip"
+
+package_cn_samples: package_sync
 	@ mkdir -p $(OUTPUT_DIR)
 	@ $(eval PKG_NAME := $(DEFAULT_PACKAGE)_allSamples)
 	@ $(eval PKG_DIR := $(OUTPUT_DIR)/$(PKG_NAME))
@@ -60,16 +83,21 @@ package_cn_samples: package_minimal
 	@ mkdir -p $(PKG_DIR)/$(SAMPLES_CN_DIR)
 	@ find $(SAMPLES_CN_DIR)/$(SDK_NAME)-$(DEFAULT_SDK_VERSION)/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_CN_DIR) \;
 	@ echo "Removing any SDK examples"
-	@ rm -rv $(PKG_DIR)/$(SDK_DATA_DIR)
+	@ rm -rfv $(PKG_DIR)/$(SDK_DATA_DIR)
 	@ echo "Modifying Identifier in the CM and replacing XLSX"
 	@ mkdir -p $(PKG_TMP) && unzip $(PKG_DIR)/$(CM_FILE) -d $(PKG_TMP)
 	@ rm -v $(PKG_DIR)/$(CM_FILE)
-	@ sed -i "s|<t>$(DEFAULT_CM_ID)</t>|<t>$(DEFAULT_CM_ID)-allSamples</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
+	@ sed -i "s|<t>$(DEFAULT_CM_ID)</t>|<t>$(DEFAULT_CM_ID)_allSamples</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
 	@ cd $(PKG_TMP) && zip -r tmp.xlsx * && mv -v tmp.xlsx ../../$(PKG_DIR)/$(CM_FILE) && cd ../.. && rm -r $(PKG_TMP)
 	@ echo "Removing outdated metadata"
-	@ rm -v $(PKG_DIR)/metadata.json
+	@ rm -fv $(PKG_DIR)/metadata.json
 
-package_cn_maximal: package_minimal
+export_cn_samples:
+	@ $(eval PKG_NAME := $(DEFAULT_PACKAGE)_allSamples)
+	@ cd $(OUTPUT_DIR) && zip -r $(PKG_NAME).zip $(PKG_NAME)
+	@ echo "Samples package exported to $(PKG_DIR).zip"
+
+package_cn_maximal: package_sync
 	@ mkdir -p $(OUTPUT_DIR)
 	@ $(eval PKG_NAME := $(DEFAULT_PACKAGE)_allData)
 	@ $(eval PKG_DIR := $(OUTPUT_DIR)/$(PKG_NAME))
@@ -83,10 +111,19 @@ package_cn_maximal: package_minimal
 	@ echo "Modifying Identifier in the CM and replacing XLSX"
 	@ mkdir -p $(PKG_TMP) && unzip $(PKG_DIR)/$(CM_FILE) -d $(PKG_TMP)
 	@ rm -v $(PKG_DIR)/$(CM_FILE)
-	@ sed -i "s|<t>$(DEFAULT_CM_ID)</t>|<t>$(DEFAULT_CM_ID)-allData</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
+	@ sed -i "s|<t>$(DEFAULT_CM_ID)</t>|<t>$(DEFAULT_CM_ID)_allData</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
 	@ cd $(PKG_TMP) && zip -r tmp.xlsx * && mv -v tmp.xlsx ../../$(PKG_DIR)/$(CM_FILE) && cd ../.. && rm -r $(PKG_TMP)
 	@ echo "Removing outdated metadata"
-	@ rm -v $(PKG_DIR)/metadata.json
+	@ rm -fv $(PKG_DIR)/metadata.json
+
+export_cn_maximal:
+	@ $(eval PKG_NAME := $(DEFAULT_PACKAGE)_allData)
+	@ cd $(OUTPUT_DIR) && zip -r $(PKG_NAME).zip $(PKG_NAME)
+	@ echo "Maximal package exported to $(PKG_DIR).zip"
+
+package_cn_all_variants: package_cn_minimal package_cn_examples package_cn_samples package_cn_maximal
+
+export_cn_all_variants: export_cn_minimal export_cn_examples export_cn_samples export_cn_maximal
 
 setup-jena-tools:
 	@ echo "Installing Apache Jena CLI tools locally"

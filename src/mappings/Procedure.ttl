@@ -59,7 +59,7 @@ tedm:MG-Procedure_ND-LocalLegalBasisWithID a rr:TriplesMap ;
             rr:predicate epo:hasLegalBasisDescription  ;
             rr:objectMap
                 [
-                    rml:reference "normalize-space(cbc:ID || ' ' || cbc:ID/@schemeName || ' ' || cbc:DocumentDescription)";
+                    rml:reference "if(exists(cbc:DocumentDescription)) then (if(exists(cbc:ID)) then cbc:ID || (if(exists(cbc:ID/@schemeName)) then ' [' || cbc:ID/@schemeName || ']' else '') || ' / ' else '') || cbc:DocumentDescription else null";
                     # rml:reference "cbc:DocumentDescription";
                     rml:languageMap [
                         fnml:functionValue [
@@ -73,6 +73,10 @@ tedm:MG-Procedure_ND-LocalLegalBasisWithID a rr:TriplesMap ;
                             tedm:idlab-fn_toColumn_code
                         ]
                     ] ;
+                ] ;
+            rr:objectMap
+                [
+                    rml:reference "if(not(exists(cbc:DocumentDescription))) then (if(exists(cbc:ID)) then cbc:ID || (if(exists(cbc:ID/@schemeName)) then ' [' || cbc:ID/@schemeName || ']' else '') else null) else null";
                 ] ;
         ]
 .

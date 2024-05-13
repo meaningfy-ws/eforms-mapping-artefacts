@@ -1917,7 +1917,7 @@ tedm:MG-Constraint-hasConstraint-SelectionCriterion-specifiesProcurementCriterio
     rr:subjectMap
         [
             rdfs:label "ND-SecondStageThresholdCriterionParameter";
-            rml:reference "if (exists(efbc:ParameterCode[@listName='number-threshold'])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_Constrain_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
+            rml:reference "if (exists(efbc:ParameterCode[@listName='number-threshold'])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_Constraint_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
             rr:class cccev:Constraint
         ] ;
     rr:predicateObjectMap
@@ -2137,7 +2137,7 @@ tedm:MG-Constraint-hasConstraint-AwardCriterion-specifiesProcurementCriterion-Lo
     rr:subjectMap
         [
             rdfs:label "ND-LotAwardThresholdCriterionParameter";
-            rml:reference "if (exists(efbc:ParameterCode[@listName='number-threshold'])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_SelectionTermConstrain_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
+            rml:reference "if (exists(efbc:ParameterCode[@listName='number-threshold'])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_SelectionTermConstraint_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
             rr:class cccev:Constraint
         ] ;
     rr:predicateObjectMap
@@ -2838,7 +2838,7 @@ tedm:MG-SecurityClearanceTerm-isSubjectToLotSpecificTerm-Lot_ND-LotTenderingTerm
         [
             rdfs:label "ND-LotTenderingTerms";
 #            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Lot_{cbc:ID}" ;
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}SecurityClearanceTerm{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_SecurityClearanceTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
             rr:class epo:SecurityClearanceTerm
         ] ;
       rr:predicateObjectMap
@@ -2866,7 +2866,7 @@ tedm:MG-SecurityClearanceTerm-isSubjectToLotSpecificTerm-Lot_ND-SecurityClearanc
     rr:subjectMap
         [
             rdfs:label "ND-SecurityClearanceTerms";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}SecurityClearanceTerm{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_SecurityClearanceTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
             rr:class epo:SecurityClearanceTerm
         ] ;
       rr:predicateObjectMap
@@ -2918,7 +2918,7 @@ tedm:MG-NonDisclosureAgreementTerm-isSubjectToLotSpecificTerm-Lot_ND-NDA a rr:Tr
         [
             rdfs:label "ND-NDA";
 #            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Lot_{cbc:ID}" ;
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}NonDisclosureAgreementTerm{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_NonDisclosureAgreementTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
             rr:class epo:NonDisclosureAgreementTerm
         ] ;
       rr:predicateObjectMap
@@ -2973,7 +2973,7 @@ tedm:MG-SubmissionTerm-isSubjectToLotSpecificTerm-Lot_ND-LotESignature a rr:Trip
         [
             rdfs:label "ND-LotESignature";
 #            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Lot_{cbc:ID}" ;
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}SubmissionTerm{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_SubmissionTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
             rr:class epo:SubmissionTerm
         ] ;
       rr:predicateObjectMap
@@ -3078,7 +3078,7 @@ tedm:MG-SubcontractTerm-foreseesContractSpecificTerm-Lot_ND-SubcontractingObliga
     rr:subjectMap
         [
             rdfs:label "ND-SubcontractingObligation";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_SubContractTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(../..)) || '?response_type=raw')}";
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_SubcontractTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(../..)) || '?response_type=raw')}";
             rr:class epo:SubcontractTerm
         ] ;
       rr:predicateObjectMap

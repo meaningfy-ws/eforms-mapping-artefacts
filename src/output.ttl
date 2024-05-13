@@ -665,6 +665,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001 a epo:Lot;
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_InnovativeProcurement_cLKYnTLDZb6RpEv6sHGwFG,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SocialProcurement_AyeF96vKsfhzrt5AYeKRTv,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_StrategicProcurement_6gHfSxSpgNRXavjTJCiAJv,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_StrategicProcurement_Wj9gx3dGgPeHcrkfPnxbfg,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_StrategicProcurement_Xb7ADxt2QhzBynPpXk4tjW;
   epo:hasAdditionalInformation "Additional information for GLO-0001 ProcurementProject ---"@en;
   epo:hasAmountValue epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValueLot_WdC3kBS9amJ4en7K2hRKUQ;
@@ -721,6 +722,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002 a epo:Lot;
   epo:fulfillsStrategicProcurement epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_GreenProcurement_dfeMpbQbaBY6WfVozDLEGf,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_InnovativeProcurement_2yjckcDCeZgS5m5tUcZ68p,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SocialProcurement_GB54RbhU2jfyPCJLbcWmfB,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_StrategicProcurement_AV9BoppTAddYZDEikLyWUv,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_StrategicProcurement_aJZpohKJoPEWi3EuVgFgPb;
   epo:hasAdditionalInformation "Additional information for GLO-0001 ProcurementProject ---"@en;
   epo:hasAmountValue epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValueLot_evidV3nok82ih2xWwJYg9n;
@@ -1222,6 +1224,14 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SpecificDuration_5FkLTeSLMGuVhyxZY2p
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_StrategicProcurement_6gHfSxSpgNRXavjTJCiAJv
   a epo:StrategicProcurement .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_StrategicProcurement_AV9BoppTAddYZDEikLyWUv
+  a epo:StrategicProcurement;
+  epo:hasStrategicProcurementDescription "Strategic procurement description ---"@en .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_StrategicProcurement_Wj9gx3dGgPeHcrkfPnxbfg
+  a epo:StrategicProcurement;
+  epo:hasStrategicProcurementDescription "Strategic procurement description ---"@en .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_StrategicProcurement_Xb7ADxt2QhzBynPpXk4tjW
   a epo:StrategicProcurement;

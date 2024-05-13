@@ -824,6 +824,19 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
         ];
     rr:predicateObjectMap
         [
+            rdfs:label "BT-777-Lot";
+            rr:predicate epo:fulfillsStrategicProcurement ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-StrategicProcurement-fulfillsStrategicProcurement-Lot_ND-StrategicProcurementType ;
+                    rr:joinCondition [
+                        rr:child "path(.)";
+                        rr:parent "path(../..)";
+                    ];
+                ] ;
+        ];
+    rr:predicateObjectMap
+        [
             rdfs:label "BT-754-Lot";
             rr:predicate epo:fulfillsStrategicProcurement ;
             rr:objectMap
@@ -3983,6 +3996,55 @@ rdfs:label  "MG-StrategicProcurement";
         ] ;
 .
 
+tedm:MG-StrategicProcurement-fulfillsStrategicProcurement-Lot_ND-StrategicProcurementType a rr:TriplesMap;
+rdfs:label  "MG-StrategicProcurement";
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:ProcurementProject/cac:ProcurementAdditionalType[cbc:ProcurementTypeCode/@listName='strategic-procurement']";
+            rml:referenceFormulation ql:XPath
+        ];
+    rr:subjectMap
+        [
+            rdfs:label   "ND-StrategicProcurementType";
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_StrategicProcurement_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rr:class epo:StrategicProcurement
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-777-Lot";
+            rdfs:comment "Strategic Procurement Description MG-StrategicProcurement under ND-StrategicProcurementType";
+            rr:predicate epo:hasStrategicProcurementDescription  ;
+            rr:objectMap
+                [
+                    rml:reference "cbc:ProcurementType";
+                    rml:languageMap [
+                        fnml:functionValue [
+                            rr:predicateObjectMap [
+                                rr:predicate idlab-fn:str ;
+                                rr:objectMap [ rml:reference "cbc:ProcurementType/@languageID" ]
+                            ] ,
+                            tedm:idlab-fn_executes_lookup ,
+                            tedm:idlab-fn_inputFile_language ,
+                            tedm:idlab-fn_fromColumn_code ,
+                            tedm:idlab-fn_toColumn_code
+                        ]
+                    ] ;
+                ] ;
+        ] ;
+#     rr:predicateObjectMap
+#        [
+#            # TODO min SDK 1.9.1
+#            rdfs:label "BT-06-Lot";
+#            rdfs:comment " Strategic Procurement e of MG-StrategicProcurement under ND-StrategicProcurementType";
+#            rr:predicate epo:hasStrategicProcurementDescription  ;
+#            rr:objectMap
+#                [
+#                    rml:reference "";
+#                ] ;
+#        ]
+.
+
 tedm:MG-GreenProcurement-fulfillsStrategicProcurement-Lot_ND-StrategicProcurementLot a rr:TriplesMap;
 rdfs:label  "MG-GreenProcurement";
     rml:logicalSource
@@ -4248,13 +4310,12 @@ tedm:MG-Purpose-hasPurpose-Lot_ND-LotMainClassification a rr:TriplesMap ;
             rr:predicate epo:hasMainClassification  ;
             rr:objectMap
                 [
-                    # TODO XPATH Condition
                     rdfs:label "BT-262-Lot";
                     rdfs:comment "Main Classification Code of MG-Purpose under ND-LotMainClassification";
                     rdfs:label "at-voc:cpv";
                     rr:parentTriplesMap tedm:cpv ;
                     rr:joinCondition [
-                        rr:child  "cbc:ItemClassificationCode";
+                        rr:child  "if (/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:ProcurementProject/cac:MainCommodityClassification/cbc:ItemClassificationCode[@listName='cpv']) then cbc:ItemClassificationCode else null";
                         rr:parent "code.value" ;
                     ] ;
 #                    rml:reference "cbc:ItemClassificationCode";
@@ -4281,13 +4342,12 @@ tedm:MG-Purpose-hasPurpose-Lot_ND-LotAdditionalClassification a rr:TriplesMap ;
             rr:predicate epo:hasAdditionalClassification   ;
             rr:objectMap
                 [
-                    # TODO XPATH Condition
                     rdfs:label "BT-262-Lot";
                     rdfs:comment "Additional Classification Code of MG-Purpose under ND-LotAdditionalClassification";
                     rdfs:label "at-voc:cpv";
                     rr:parentTriplesMap tedm:cpv ;
                     rr:joinCondition [
-                        rr:child  "cbc:ItemClassificationCode";
+                        rr:child  " if (/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:ProcurementProject/cac:AdditionalCommodityClassification/cbc:ItemClassificationCode[@listName='cpv']) then cbc:ItemClassificationCode else null";
                         rr:parent "code.value" ;
                     ] ;
 #                    rml:reference "cbc:ItemClassificationCode";
@@ -4314,13 +4374,12 @@ tedm:MG-SocialProcurement-fulfillsStrategicProcurement-Lot_ND-LotSocialObjective
             rr:predicate epo:fulfillsRequirement ;
             rr:objectMap
                 [
-                    # TODO XPATH Condition
                     rdfs:label "BT-775-Lot";
                     rdfs:comment "Social Procurement of MG-SocialProcurement under ND-LotSocialObjectiveType";
                     rdfs:label "at-voc:social-objective";
                     rr:parentTriplesMap tedm:social-objective ;
                     rr:joinCondition [
-                        rr:child  "cbc:ProcurementTypeCode";
+                        rr:child  "if (/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:ProcurementProject/cac:ProcurementAdditionalType[cbc:ProcurementTypeCode/@listName='social-objective']/cbc:ProcurementTypeCode[@listName='social-objective']) then cbc:ProcurementTypeCode else null";
                         rr:parent "code.value" ;
                     ] ;
 #                    rml:reference "cbc:ProcurementTypeCode";
@@ -4347,13 +4406,12 @@ tedm:MG-InnovativeProcurement-fulfillsStrategicProcurement-Lot_ND-LotInnovativeA
             rr:predicate epo:fulfillsRequirement ;
             rr:objectMap
                 [
-                    # TODO XPATH Condition
                     rdfs:label "BT-776-Lot";
                     rdfs:comment "Procurement of Innovation of MG-InnovativeProcurement under ND-LotInnovativeAcquisitionType";
                     rdfs:label "at-voc:innovative-acquisition";
                     rr:parentTriplesMap tedm:innovative-acquisition ;
                     rr:joinCondition [
-                        rr:child  "cbc:ProcurementTypeCode";
+                        rr:child  "if (/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:ProcurementProject/cac:ProcurementAdditionalType[cbc:ProcurementTypeCode/@listName='innovative-acquisition']/cbc:ProcurementTypeCode[@listName='innovative-acquisition']) then cbc:ProcurementTypeCode else null";
                         rr:parent "code.value" ;
                     ] ;
 #                    rml:reference "cbc:ProcurementTypeCode";
@@ -4380,13 +4438,12 @@ tedm:MG-GreenProcurement-fulfillsStrategicProcurement-Lot_ND-LotEnvironmentalImp
             rr:predicate epo:fulfillsRequirement ;
             rr:objectMap
                 [
-                    # TODO XPATH Condition
                     rdfs:label "BT-774-Lot";
                     rdfs:comment "GreenProcurement of MG-GreenProcurement under ND-LotEnvironmentalImpactType";
                     rdfs:label "at-voc:innovative-acquisition";
                     rr:parentTriplesMap tedm:environmental-impact ;
                     rr:joinCondition [
-                        rr:child  "cbc:ProcurementTypeCode";
+                        rr:child  "if (/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:ProcurementProject/cac:ProcurementAdditionalType/cbc:ProcurementTypeCode[@listName='environmental-impact']) then cbc:ProcurementTypeCode else null";
                         rr:parent "code.value" ;
                     ] ;
 #                    rml:reference "cbc:ProcurementTypeCode";

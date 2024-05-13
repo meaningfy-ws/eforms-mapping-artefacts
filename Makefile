@@ -15,6 +15,7 @@ CANONICAL_TEST_OUTPUT = src/output.ttl
 CANONICAL_RML_DIR = src/mappings
 TEST_DATA_DIR = test_data
 TEST_QUERIES_DIR = test_queries
+TEST_SCRIPTS_DIR = test_scripts
 TX_DIR = transformation
 CM_FILENAME = conceptual_mappings.xlsx
 
@@ -160,6 +161,15 @@ test_output:
 	@ echo
 	@ echo "==> Test output suspect iri name"
 	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_suspect_iri_name.rq --data $(CANONICAL_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ echo
+	@ echo "==> Test RML predicate mapping coverage"
+	@ $(TEST_SCRIPTS_DIR)/test_predicate_coverage.sh $(CANONICAL_RML_DIR) $(CANONICAL_TEST_OUTPUT)
+	@ echo
+	@ echo "==> Test RML subject reference coverage"
+	@ $(TEST_SCRIPTS_DIR)/test_reference_coverage.sh $(CANONICAL_RML_DIR) $(CANONICAL_TEST_OUTPUT)	
+	@ echo
+	@ echo "==> Test RML subject template coverage"
+	@ $(TEST_SCRIPTS_DIR)/test_template_coverage.sh $(CANONICAL_RML_DIR) $(CANONICAL_TEST_OUTPUT)
 
 clean:
 	@ rm -fv jena.zip

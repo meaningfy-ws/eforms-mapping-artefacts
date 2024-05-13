@@ -533,20 +533,6 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ] ;
         ];
-#    rr:predicateObjectMap
-#        [
-#            rdfs:label "BT-44-Lot";
-#            rr:predicate epo:isSubjectToLotSpecificTerm ;
-#            rr:objectMap
-#                [
-#                    rr:parentTriplesMap tedm:MG-DesignContestRegimeTerm-isSubjectToLotSpecificTerm-Lot_ND-AwardingTerms;
-#                   # TODO fix the path
-#                    rr:joinCondition [
-#                         rr:child "path(.)";
-#                        rr:parent "path(../../..)";
-#                    ];
-#                ] ;
-#        ];
     # rr:predicateObjectMap
     #     [
     #         rdfs:label   "ND-LotReviewTerms";

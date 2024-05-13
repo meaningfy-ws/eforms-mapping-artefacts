@@ -24,37 +24,41 @@
 @prefix idlab-fn: <http://example.com/idlab/function/> .
 @prefix tedm: <http://data.europa.eu/a4g/mapping/sf-rml/> .
 
-tedm:MG-AwardCriterion_ND-LotAwardCriteria a rr:TriplesMap ;
-    rdfs:label "MG-AwardCriterion";
-    rml:logicalSource
-        [
-            rml:source "data/source.xml" ;
-            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:AwardingTerms/cac:AwardingCriterion";
-            rml:referenceFormulation ql:XPath
-        ];
-    rr:subjectMap
-        [
-            rdfs:label  "ND-LotAwardCriteria";
-            rdfs:comment "MG-AwardCriterion under ND-LotAwardCriteria";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_AwardCriterion_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
-            rr:class epo:AwardCriterion
-        ] ;
-.
+# are these required? they are from the node in the CM
+# but it looks like a composition relationship
+# (must be in a relationship to a parent)
 
-tedm:MG-AwardCriterion_ND-AwardingTerms a rr:TriplesMap ;
-    rdfs:label "MG-AwardCriterion";
-    rml:logicalSource
-        [
-            rml:source "data/source.xml" ;
-            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:AwardingTerms";
-            rml:referenceFormulation ql:XPath
-        ];
-    rr:subjectMap
-        [
-            # TODO min sdk 1.7
-            rdfs:label  "ND-AwardingTerms";
-            rdfs:comment "MG-AwardCriterion under ND-AwardingTerms";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_AwardCriterion_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
-            rr:class epo:AwardCriterion
-        ] ;
-.
+# tedm:MG-AwardCriterion_ND-LotAwardCriteria a rr:TriplesMap ;
+#     rdfs:label "MG-AwardCriterion";
+#     rml:logicalSource
+#         [
+#             rml:source "data/source.xml" ;
+#             rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:AwardingTerms/cac:AwardingCriterion";
+#             rml:referenceFormulation ql:XPath
+#         ];
+#     rr:subjectMap
+#         [
+#             rdfs:label  "ND-LotAwardCriteria";
+#             rdfs:comment "MG-AwardCriterion under ND-LotAwardCriteria";
+#             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_AwardCriterion_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
+#             rr:class epo:AwardCriterion
+#         ] ;
+# .
+
+# tedm:MG-AwardCriterion_ND-AwardingTerms a rr:TriplesMap ;
+#     rdfs:label "MG-AwardCriterion";
+#     rml:logicalSource
+#         [
+#             rml:source "data/source.xml" ;
+#             rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:AwardingTerms";
+#             rml:referenceFormulation ql:XPath
+#         ];
+#     rr:subjectMap
+#         [
+#             # TODO min sdk 1.7
+#             rdfs:label  "ND-AwardingTerms";
+#             rdfs:comment "MG-AwardCriterion under ND-AwardingTerms";
+#             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_AwardCriterion_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
+#             rr:class epo:AwardCriterion
+#         ] ;
+# .

@@ -973,9 +973,10 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_j76qWqsuJdCtjNmRv3MK5T
   dct:description "Selection Criteria Description ---"@en;
   skos:prefLabel "Name of the selection criteria---"@en .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SpecificDuration_MnX8qyREnFMNLeS5MJAX9K
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SpecificDuration_5FkLTeSLMGuVhyxZY2piu9
   a epo:SpecificDuration;
-  time:unitType "3", "6" .
+  time:numericDuration "6";
+  time:unitType time:unitMonth .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_StrategicProcurement_6gHfSxSpgNRXavjTJCiAJv
   a epo:StrategicProcurement .
@@ -999,6 +1000,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_8y8GPfmPvSRdBcci6WWcS
   epo:hasNonElectronicSubmissionDescription "Nonelectronic Submission Description ---"@en;
   epo:hasNonElectronicSubmissionJustification <http://publications.europa.eu/resource/authority/communication-justification/ipr-iss>;
   epo:hasReceiptTenderDeadline "2023-05-22T20:59:32+01:00"^^xsd:dateTime;
+  epo:hasTenderValidityDuration epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SpecificDuration_5FkLTeSLMGuVhyxZY2piu9;
   epo:hasVariantPermission <http://publications.europa.eu/resource/authority/permission/not-allowed>;
   epo:isMultipleTenderSubmissionAllowed true .
 

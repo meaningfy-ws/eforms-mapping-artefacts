@@ -1327,7 +1327,6 @@
 		<cac:TenderingTerms>
 			<cac:TenderValidityPeriod>
 				<cbc:DurationMeasure unitCode="MONTH">6</cbc:DurationMeasure>
-				<cbc:DurationMeasure unitCode="Day">3</cbc:DurationMeasure>
 			</cac:TenderValidityPeriod>
 			<cac:AllowedSubcontractTerms>
 				<cbc:SubcontractingConditionsCode listName="subcontracting-obligation">none</cbc:SubcontractingConditionsCode>

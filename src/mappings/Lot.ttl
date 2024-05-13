@@ -2546,14 +2546,13 @@ tedm:MG-SubmissionTerm-isSubjectToLotSpecificTerm-Lot_ND-LotTenderingTerms a rr:
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_SubmissionTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
             rr:class epo:SubmissionTerm
         ] ;
-      rr:predicateObjectMap
+    rr:predicateObjectMap
         [
             rdfs:label "BT-63-Lot";
             rdfs:comment "Variants of MG-SubmissionTerm under ND-LotTenderingTerms";
             rr:predicate epo:hasVariantPermission ;
             rr:objectMap
                 [
-#                    rml:reference "cbc:VariantConstraintCode";
                     rdfs:label "at-voc:permission" ;
                     rr:parentTriplesMap tedm:permission ;
                     rr:joinCondition [
@@ -2590,17 +2589,30 @@ tedm:MG-SubmissionTerm-isSubjectToLotSpecificTerm-Lot_ND-LotTenderingTerms a rr:
             rr:predicate epo:hasLanguage  ;
             rr:objectMap
                 [
-                    # TODO language.json doesn't work
+                    # TODO CSV issue due to RML bug, use JSON
                     rdfs:label "at-voc:language" ;
-                     rml:reference "cac:Language/cbc:ID" ;
-#                    rr:parentTriplesMap tedm:language ;
-#                    rr:joinCondition [
-#                        rr:child "cac:Language/cbc:ID" ;
-#                        rr:parent "code.value" ;
-#                    ] ;
+                    rml:reference "cac:Language/cbc:ID" ;
+                #     rr:parentTriplesMap tedm:language ;
+                #     rr:joinCondition [
+                #         rr:child "cac:Language/cbc:ID" ;
+                #         rr:parent "op_code" ;
+                #    ] ;
                 ] ;
         ] ;
-
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-98-Lot (object)";
+            rdfs:comment "Connection of MG-SubmissionTerm to MG-SpecificDuration under ND-LotTenderingTerms";
+            rr:predicate epo:hasTenderValidityDuration ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-SpecificDuration-hasTenderValidityDuration-SubmissionTerm-isSubjectToLotSpecificTerm-Lot_ND-LotTenderingTerms ;
+                    rr:joinCondition [
+                        rr:child "path(.)";
+                        rr:parent "path(..)";
+                    ] ;
+                ] ;
+        ] ;
 .
 
 tedm:MG-Lot_ND-LotTenderingTerms a rr:TriplesMap ;
@@ -3519,31 +3531,40 @@ rdfs:label "MG-SpecificDuration";
     rml:logicalSource
         [
             rml:source "data/source.xml" ;
-            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms";
+            # TODO departure from CM MG iterator to instantiate at the right level
+            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:TenderValidityPeriod";
             rml:referenceFormulation ql:XPath
         ];
     rr:subjectMap
         [
             rdfs:label "ND-LotTenderingTerms";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_SpecificDuration_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(../..)) || '?response_type=raw')}" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_SpecificDuration_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
             rr:class epo:SpecificDuration
         ] ;
     rr:predicateObjectMap
         [
-            rdfs:label "BT-94-Lot";
+            rdfs:label "BT-98-Lot (value)";
+            rdfs:comment "Tender Validity Deadline of MG-SpecificDuration under ND-LotTenderingTerms";
+            rr:predicate time:numericDuration ;
+            rr:objectMap
+                [
+                    rml:reference "cbc:DurationMeasure";
+                    rr:dataType xsd:decimal ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-98-Lot (unit)";
             rdfs:comment "Tender Validity Deadline of MG-SpecificDuration under ND-LotTenderingTerms";
             rr:predicate time:unitType ;
             rr:objectMap
                 [
-                    rml:reference "cac:TenderValidityPeriod/cbc:DurationMeasure";
-                    rr:dataType xsd:decimal ;
-                    rdfs:label "at-voc:temporal_unit" ;
-                    # rr:parentTriplesMap tedm:temporal_unit ;
-                    # rr:joinCondition [
-                    #     rr:child "cac:TenderValidityPeriod/cbc:DurationMeasure" ;
-                    #     # rr:parent "conceptURI" ;
-                    #     rr:parent "xmlElement" ;
-                    # ] ;
+                    rdfs:label "time:TemporalUnit" ;
+                    rr:parentTriplesMap tedm:temporal_unit ;
+                    rr:joinCondition [
+                        rr:child "cbc:DurationMeasure/@unitCode" ;
+                        rr:parent "xmlElement" ;
+                    ] ;
                 ] ;
         ]
 .

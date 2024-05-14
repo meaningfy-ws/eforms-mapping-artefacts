@@ -1053,17 +1053,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_ZDibsmqh6XaKEG4Wjj
   locn:postCode "N1 9FL";
   locn:postName "London" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_3PD5XH69rqe5ksKERcWv5s a cccev:ContactPoint;
-  epo:hasContactName "Evaluation Dpt";
-  epo:hasFax "+44 1234567779";
-  epo:hasInternetAddress "http://tender-evaluation.fin-adm.com"^^xsd:anyURI;
-  cccev:email "proc-eval@fin-adm.com";
-  cccev:telephone "+44 123456777";
-  dct:description "Tenders Evaluation Committee"@en;
-  adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_TPO-0003;
-  locn:address epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_9saVKYT6LaLiq7HmXaeWEQ .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_Ud9UCKnRE7Ktx8vDgbsqmm a cccev:ContactPoint;
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0001 a cccev:ContactPoint;
   epo:hasContactName "Head of Procurement Department";
   epo:hasFax "+123 456789";
   epo:hasInternetAddress "http://tender-submit.fin-adm.com"^^xsd:anyURI;
@@ -1073,7 +1063,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_Ud9UCKnRE7Ktx8vDgbsqmm a 
   adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_TPO-0001;
   locn:address epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_DQ3D2nHojn4VijYMYRtvzY .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_VrhSdfx4KsPjDwzxKDzs5A a cccev:ContactPoint;
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0002 a cccev:ContactPoint;
   epo:hasContactName "Proc Archives Dpt Lead";
   epo:hasFax "+44 1234567769";
   epo:hasInternetAddress "http://archives.fin-adm.com"^^xsd:anyURI;
@@ -1082,6 +1072,16 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_VrhSdfx4KsPjDwzxKDzs5A a 
   dct:description "Fin Adm Archives"@en;
   adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_TPO-0002;
   locn:address epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_ZDibsmqh6XaKEG4WjjfUDb .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0003 a cccev:ContactPoint;
+  epo:hasContactName "Evaluation Dpt";
+  epo:hasFax "+44 1234567779";
+  epo:hasInternetAddress "http://tender-evaluation.fin-adm.com"^^xsd:anyURI;
+  cccev:email "proc-eval@fin-adm.com";
+  cccev:telephone "+44 123456777";
+  dct:description "Tenders Evaluation Committee"@en;
+  adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_TPO-0003;
+  locn:address epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_9saVKYT6LaLiq7HmXaeWEQ .
 
 epd:id_9c0fd704-64d3-4294-a3b6-6df45911ab9f-01_Notice a epo:PlanningNotice;
   epo:announcesPlannedProcurementPart epd:id_9c0fd704-64d3-4294-a3b6-6df45911ab9f-01_PlannedProcurementPart_K53mu54F9PCk4RoVqcWwaL;

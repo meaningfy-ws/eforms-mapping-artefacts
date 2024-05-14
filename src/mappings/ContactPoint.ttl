@@ -36,7 +36,7 @@ tedm:MG-ContactPoint_ND-Touchpoint a rr:TriplesMap ;
         [
             rdfs:label "ND-Touchpoint" ;
             rdfs:comment "Primary type declaration for MG-ContactPoint under ND-Touchpoint" ;
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_TouchPoint_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_TouchPoint_{cac:PartyIdentification/cbc:ID}" ;
             rr:class cpov:ContactPoint
         ] ;
         rr:predicateObjectMap
@@ -216,7 +216,7 @@ tedm:MG-Address-address-ContactPoint_ND-TouchpointAddress a rr:TriplesMap ;
 .
 
 # this is an example of a TMap with the same IRI as another (tedm:MG-ContactPoint_ND-Touchpoint)
-# (this could alternatively all go into the other TMap instead)
+# TODO do we need this at all or can it all go into the primary?
 tedm:MG-ContactPoint_ND-TouchpointContact a rr:TriplesMap ;
     rdfs:label "MG-ContactPoint" ;
     rml:logicalSource
@@ -229,8 +229,7 @@ tedm:MG-ContactPoint_ND-TouchpointContact a rr:TriplesMap ;
         [
             rdfs:label "ND-TouchpointContact" ;
             rdfs:comment "Primary type declaration for MG-ContactPoint under ND-TouchpointContact" ;
-            # this is an example of an IRI reference with a parent path and the type name not matching the parent node but of the ancestor
-            rml:reference "if(exists(cbc:Name) or exists(cbc:ElectronicMail) or exists(cbc:Telephone) or exists(cbc:Telefax)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_TouchPoint_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw') else null" ;
+            rml:reference "if(exists(cbc:Name) or exists(cbc:ElectronicMail) or exists(cbc:Telephone) or exists(cbc:Telefax)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_TouchPoint_' || ../cac:PartyIdentification/cbc:ID else null" ;
             rr:class cpov:ContactPoint
         ] ;
     rr:predicateObjectMap

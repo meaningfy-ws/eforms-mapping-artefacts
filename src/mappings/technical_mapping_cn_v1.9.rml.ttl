@@ -106,6 +106,18 @@ tedm:MG-CompetitionNotice_ND-Root
         ] ;
     rr:predicateObjectMap
         [
+            # we don't need to add the condition from OPT-301-Lot-FiscalLegis
+            # as the role will always be there (only the predicates of the role are conditioned)
+            rdfs:label "MG-TaxInformationProvider-announcesRole-CompetitionNotice" ;
+            rdfs:comment "MG-TaxInformationProvider-announcesRole-CompetitionNotice under ND-LotFiscalLegislation" ;
+            rr:predicate epo:announcesRole ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-TaxInformationProvider_ND-LotFiscalLegislation ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
             rdfs:label "MG-Lot-announcesLot-CompetitionNotice" ;
             rdfs:comment "MG-Lot-announcesLot-CompetitionNotice under ND-Lot" ;
             rr:predicate epo:announcesLot ;
@@ -412,17 +424,15 @@ rdfs:label "MG-Person";
             rr:class person:Person;
 
         ] ;
-
      rr:predicateObjectMap
         [
             # TODO min SDK 1.8
             rdfs:label "BT-46-Lot" ;
             rdfs:comment "JuryMemberName of MG-Person under ND-AwardingTermsJuryMember" ;
-            rr:predicate  foaf:familyName   ;
+            rr:predicate foaf:familyName ;
             rr:objectMap
                 [
-               rml:reference "cbc:FamilyName";
-
+                    rml:reference "cbc:FamilyName";
                 ] ;
         ] ;
 .
@@ -442,14 +452,13 @@ rdfs:label "MG-JuryMember";
             rr:class epo:JuryMember;
 
         ] ;
-
      rr:predicateObjectMap
         [
             # TODO min SDK 1.8
             rdfs:label "BT-46-Lot" ;
             rdfs:comment "JuryMemberName of MG-JuryMember under ND-AwardingTermsJuryMember" ;
             rr:predicate  epo:playedBy    ;
-           rr:objectMap
+            rr:objectMap
                 [
                     rr:parentTriplesMap tedm:MG-Person-playedBy-JuryMember-announcesRole-CompetitionNotice_ND-AwardingTermsJuryMember;
                     rr:joinCondition [

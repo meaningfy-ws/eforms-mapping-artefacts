@@ -69,7 +69,6 @@ tedm:MG-ContactPoint_ND-Touchpoint a rr:TriplesMap ;
             rr:objectMap
                 [
                     rr:parentTriplesMap tedm:MG-Identifier-identifier-ContactPoint_ND-Touchpoint ;
-                    # TODO: how does this work?
                     rr:joinCondition [
                         rr:child "path(.)" ;
                         rr:parent "path(../.)" ;
@@ -82,7 +81,6 @@ tedm:MG-ContactPoint_ND-Touchpoint a rr:TriplesMap ;
             rr:objectMap
                 [
                     rr:parentTriplesMap tedm:MG-Address-address-ContactPoint_ND-TouchpointAddress ;
-                    # TODO how does this work?
                     rr:joinCondition [
                         rr:child "path(.)" ;
                         rr:parent "path(../.)" ;

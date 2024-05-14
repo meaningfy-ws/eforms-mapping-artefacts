@@ -4315,7 +4315,7 @@ tedm:MG-Purpose-hasPurpose-Lot_ND-LotMainClassification a rr:TriplesMap ;
                     rdfs:label "at-voc:cpv";
                     rr:parentTriplesMap tedm:cpv ;
                     rr:joinCondition [
-                        rr:child  "if (/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:ProcurementProject/cac:MainCommodityClassification/cbc:ItemClassificationCode[@listName='cpv']) then cbc:ItemClassificationCode else null";
+                        rr:child  "if (cbc:ItemClassificationCode[@listName='cpv']) then cbc:ItemClassificationCode else null";
                         rr:parent "code.value" ;
                     ] ;
 #                    rml:reference "cbc:ItemClassificationCode";
@@ -4342,12 +4342,12 @@ tedm:MG-Purpose-hasPurpose-Lot_ND-LotAdditionalClassification a rr:TriplesMap ;
             rr:predicate epo:hasAdditionalClassification   ;
             rr:objectMap
                 [
-                    rdfs:label "BT-262-Lot";
+                    rdfs:label "BT-263-Lot";
                     rdfs:comment "Additional Classification Code of MG-Purpose under ND-LotAdditionalClassification";
                     rdfs:label "at-voc:cpv";
                     rr:parentTriplesMap tedm:cpv ;
                     rr:joinCondition [
-                        rr:child  " if (/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:ProcurementProject/cac:AdditionalCommodityClassification/cbc:ItemClassificationCode[@listName='cpv']) then cbc:ItemClassificationCode else null";
+                        rr:child  " if (cbc:ItemClassificationCode[@listName='cpv']) then cbc:ItemClassificationCode else null";
                         rr:parent "code.value" ;
                     ] ;
 #                    rml:reference "cbc:ItemClassificationCode";
@@ -4379,7 +4379,7 @@ tedm:MG-SocialProcurement-fulfillsStrategicProcurement-Lot_ND-LotSocialObjective
                     rdfs:label "at-voc:social-objective";
                     rr:parentTriplesMap tedm:social-objective ;
                     rr:joinCondition [
-                        rr:child  "if (/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:ProcurementProject/cac:ProcurementAdditionalType[cbc:ProcurementTypeCode/@listName='social-objective']/cbc:ProcurementTypeCode[@listName='social-objective']) then cbc:ProcurementTypeCode else null";
+                        rr:child  "if (cbc:ProcurementTypeCode[@listName='social-objective']) then cbc:ProcurementTypeCode else null";
                         rr:parent "code.value" ;
                     ] ;
 #                    rml:reference "cbc:ProcurementTypeCode";
@@ -4443,7 +4443,7 @@ tedm:MG-GreenProcurement-fulfillsStrategicProcurement-Lot_ND-LotEnvironmentalImp
                     rdfs:label "at-voc:innovative-acquisition";
                     rr:parentTriplesMap tedm:environmental-impact ;
                     rr:joinCondition [
-                        rr:child  "if (/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:ProcurementProject/cac:ProcurementAdditionalType/cbc:ProcurementTypeCode[@listName='environmental-impact']) then cbc:ProcurementTypeCode else null";
+                        rr:child  "if (cbc:ProcurementTypeCode[@listName='environmental-impact']) then cbc:ProcurementTypeCode else null";
                         rr:parent "code.value" ;
                     ] ;
 #                    rml:reference "cbc:ProcurementTypeCode";

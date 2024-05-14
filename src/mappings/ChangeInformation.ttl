@@ -161,7 +161,7 @@ tedm:MG-ChangeInformation_ND-Change  a rr:TriplesMap ;
             rr:objectMap
                 [
                     rml:reference "efbc:ProcurementDocumentsChangeDate";
-                    rr:datatype xsd:dateTime ;
+                    rr:datatype xsd:date ;
                 ] ;
         ]
 .

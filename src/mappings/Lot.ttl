@@ -4841,7 +4841,7 @@ tedm:MG-Period-definesContractPeriod-ContractTerm-foreseesContractSpecificTerm-L
             rr:objectMap
                 [
                     rml:reference "cbc:StartDate";
-                    rr:datatype xsd:dateTime;
+                    rr:datatype xsd:date;
                 ] ;
         ] ;
     rr:predicateObjectMap
@@ -4852,7 +4852,7 @@ tedm:MG-Period-definesContractPeriod-ContractTerm-foreseesContractSpecificTerm-L
             rr:objectMap
                 [
                     rml:reference "cbc:EndDate";
-                    rr:datatype xsd:dateTime;
+                    rr:datatype xsd:date;
                 ] ;
         ];
     rr:predicateObjectMap

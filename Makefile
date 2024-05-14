@@ -134,9 +134,10 @@ setup-jena-tools:
 	@ echo "Done installing Jena tools, accessible at $(JENA_TOOLS_DIR)/bin"
 
 test:
+	@ echo "Using $(JENA_TOOLS_RIOT)"
 	@ echo "Validating RML files"
 	@ $(JENA_TOOLS_RIOT) --validate $(CANONICAL_RML_DIR)/*
-	@ echo "Validating test output w/ $(JENA_TOOLS_RIOT)"
+	@ echo "Validating test output"
 	@ $(JENA_TOOLS_RIOT) --validate $(CANONICAL_TEST_OUTPUT)
 
 test_output:

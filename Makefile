@@ -163,6 +163,7 @@ test_output:
 	@ echo "==> Test output suspect iri name"
 	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_suspect_iri_name.rq --data $(CANONICAL_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
 	@ echo
+	@ echo "Testing mapping rules coverage against output"
 	@ echo "==> Test RML predicate mapping coverage"
 	@ $(TEST_SCRIPTS_DIR)/test_predicate_coverage.sh $(CANONICAL_RML_DIR) $(CANONICAL_TEST_OUTPUT)
 	@ echo

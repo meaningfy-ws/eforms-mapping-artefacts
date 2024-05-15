@@ -309,21 +309,23 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractDuration_SwK8Z4wjBuauCWAoBTP
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocationAddress_6pwBpb8FW5caR7TKqg7TvM
   a locn:Address;
-  locn:fullAddress "2 Gotham Street", "Bruce Wayne House", "London", "N1 9FL";
+  locn:fullAddress "2 Gotham Street", "Bruce Wayne House", "GBR", "London", "N1 9FL";
   locn:postCode "N1 9FL";
   locn:postName "London" .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocationAddress_TfeqsbtZz7bnSaeLJEmaKZ
   a locn:Address;
-  locn:fullAddress "2 Gotham Street", "Bruce Wayne House", "London", "N1 9FL";
+  locn:fullAddress "2 Gotham Street", "Bruce Wayne House", "GBR", "London", "N1 9FL";
   locn:postCode "N1 9FL";
   locn:postName "London" .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocationAddress_e4BUCegaReE8NKq7sHcoAX
-  a locn:Address .
+  a locn:Address;
+  locn:fullAddress "GBR" .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocationAddress_es3GJHPAww7U8q366gSYas
-  a locn:Address .
+  a locn:Address;
+  locn:fullAddress "GBR" .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_6pwBpb8FW5caR7TKqg7TvM
   a dct:Location;
@@ -618,7 +620,8 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroupAwardInformation_gLuU9xVSAhV
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroup_GLO-0001 a epo:LotGroup;
   epo:hasEstimatedValue epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_PurposeLotGroupEstimatedValue_EgMjw2pg9jruQvYxRQ9GAr;
   epo:hasInternalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotInternalIdentifier_BboGPQkCpLeHXdXL8io8wo;
-  epo:hasLaunchFrameworkAgreementMaximumValue epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotsGroupValueEstimateExtension_ZoH93rHLWdKDPCSNvWx8rE;
+  epo:hasLaunchFrameworkAgreementMaximumValue epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotsGroupValueEstimateExtension_ZoH93rHLWdKDPCSNvWx8rE,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotsGroupValueMaximum_gLuU9xVSAhVSewi2MZNMhW;
   epo:setsGroupingContextForLot epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
   epo:specifiesProcurementCriterion epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroupAwardCriterion_Ed82rH3bQh5UFtUqt5RqUi;
@@ -784,6 +787,11 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotsGroupValueEstimateExtension_ZoH9
   a epo:MonetaryValue;
   epo:hasAmountValue 247547.0;
   epo:hasCurrency "BSD" .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotsGroupValueMaximum_gLuU9xVSAhVSewi2MZNMhW
+  a epo:MonetaryValue;
+  epo:hasAmountValue 10000.0;
+  epo:hasCurrency "EUR" .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValueLot_BaGzsXLuGR4tRgDAxRPwS8
   a epo:MonetaryValue;

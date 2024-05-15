@@ -58,11 +58,11 @@ tedm:MG-ChangeInformation_ND-ChangeReason  a rr:TriplesMap ;
     rr:predicateObjectMap
         [
             rdfs:label "BT-762-notice";
-            # TODO min SDK 1.4
             rdfs:comment "Change Reason Description of MG-ChangeInformation under ND-ChangeReason";
             rr:predicate epo:hasChangeReasonDescription ;
             rr:objectMap
                 [
+                     tedm:minSDKVersion "1.4" ;
                     rml:reference "efbc:ReasonDescription";
                     rml:languageMap [
                         fnml:functionValue [
@@ -235,12 +235,12 @@ tedm:MG-Identifier-relatesToEFormSectionIdentifier-ChangeInformation_ND-ChangedS
     rr:predicateObjectMap
         [
             # TODO min SDK 1.3 max SDK 1.6
-            # TODO min SDK 1.7
             rdfs:label "BBT-13716-notice";
             rdfs:comment "Change Notice Section Identifier of MG-Identifier under ND-ChangedSection";
             rr:predicate skos:notation  ;
             rr:objectMap
                 [
+                    tedm:minSDKVersion "1.7" ;
                     rml:reference "efbc:ChangedSectionIdentifier";
                 ] ;
         ];

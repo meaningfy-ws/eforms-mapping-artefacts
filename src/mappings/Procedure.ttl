@@ -881,7 +881,7 @@ tedm:MG-MonetaryValue-hasLaunchFrameworkAgreementMaximumValue-Procedure_ND-Proce
         ] ;
     rr:predicateObjectMap
         [
-            # TODO min SDK 1.5.12
+            tedm:minSDKVersion "1.5.12" ;
             rdfs:label "BT-271-Procedure";
             rdfs:comment "Framework Maximum Value of MG-MonetaryValue under ND-ProcedureValueEstimateExtension";
             rr:predicate epo:hasAmountValue ;

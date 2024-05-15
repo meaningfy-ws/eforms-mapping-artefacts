@@ -39,7 +39,7 @@ tedm:MG-ContactPoint_ND-Touchpoint a rr:TriplesMap ;
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_TouchPoint_{cac:PartyIdentification/cbc:ID}" ;
             rr:class cpov:ContactPoint
         ] ;
-        rr:predicateObjectMap
+    rr:predicateObjectMap
         [
             rdfs:label "BT-500-Organization-TouchPoint" ;
             rdfs:comment "Name" ;
@@ -61,7 +61,7 @@ tedm:MG-ContactPoint_ND-Touchpoint a rr:TriplesMap ;
                     ] ;
                 ] ;
         ] ;
-        rr:predicateObjectMap
+    rr:predicateObjectMap
         [
             rdfs:label "OPT-201-Organization-TouchPoint" ;
             rdfs:comment "TouchPoint Technical Identifier" ;
@@ -75,7 +75,7 @@ tedm:MG-ContactPoint_ND-Touchpoint a rr:TriplesMap ;
                     ] ;
                 ]
         ] ;
-        rr:predicateObjectMap
+    rr:predicateObjectMap
         [
             rr:predicate locn:address ;
             rr:objectMap
@@ -87,7 +87,7 @@ tedm:MG-ContactPoint_ND-Touchpoint a rr:TriplesMap ;
                     ] ;
                 ]
         ] ;
-        rr:predicateObjectMap
+    rr:predicateObjectMap
         [
             rdfs:label "BT-505-Organization-TouchPoint";
             rr:predicate epo:hasInternetAddress ;
@@ -114,7 +114,7 @@ tedm:MG-Identifier-identifier-ContactPoint_ND-Touchpoint a rr:TriplesMap ;
             rml:reference "if (exists(cbc:ID)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_Identifier_' || cbc:ID else null" ;
             rr:class epo:Identifier
         ] ;
-        rr:predicateObjectMap
+    rr:predicateObjectMap
         [
             rdfs:label "identifier";
             rr:predicate skos:notation ;
@@ -240,7 +240,7 @@ tedm:MG-ContactPoint_ND-TouchpointContact a rr:TriplesMap ;
                     rml:reference "cbc:Name" ;
                 ] ;
         ] ;
-        rr:predicateObjectMap
+    rr:predicateObjectMap
         [
             rdfs:label "BT-506-Organization-TouchPoint" ;
             rdfs:comment "Contact Email Address" ;
@@ -250,7 +250,7 @@ tedm:MG-ContactPoint_ND-TouchpointContact a rr:TriplesMap ;
                     rml:reference "cbc:ElectronicMail" ;
                 ] ;
         ] ;
-        rr:predicateObjectMap
+    rr:predicateObjectMap
         [
             rdfs:label "BT-503-Organization-TouchPoint" ;
             rdfs:comment "Contact Telephone Number" ;
@@ -260,7 +260,7 @@ tedm:MG-ContactPoint_ND-TouchpointContact a rr:TriplesMap ;
                     rml:reference "cbc:Telephone" ;
                 ] ;
         ] ;
-        rr:predicateObjectMap
+    rr:predicateObjectMap
         [
             rdfs:label "BT-739-Organization-TouchPoint" ;
             rdfs:comment "Contact Fax" ;

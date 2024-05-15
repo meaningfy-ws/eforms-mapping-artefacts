@@ -1034,21 +1034,12 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_daUDPcwCUoxbJRjGb7tKN
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TaxInformationProvider_UyJLB5UdNE5RM2ZpQVeTCV
   a epo:TaxInformationProvider;
   epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001;
-  epo:hasContactPointInRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0002;
-  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0001 .
+  epo:hasContactPointInRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0002 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TaxInformationProvider_j5VcAZZjswFkX9mLn9opDA
   a epo:TaxInformationProvider;
   epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
-  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0002 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_9saVKYT6LaLiq7HmXaeWEQ
-  a locn:Address;
-  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
-  epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
-  locn:fullAddress "Tenders Evaluation Committee, Bruce Wayne House, 2 Gotham Street, London, N1 9FL, GBR";
-  locn:postCode "N1 9FL";
-  locn:postName "London" .
+  epo:hasContactPointInRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0001 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_DQ3D2nHojn4VijYMYRtvzY
   a locn:Address;
@@ -1059,6 +1050,14 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_DQ3D2nHojn4VijYMYR
   locn:postName "London" .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_ZDibsmqh6XaKEG4WjjfUDb
+  a locn:Address;
+  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
+  epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
+  locn:fullAddress "Tenders Evaluation Committee, Bruce Wayne House, 2 Gotham Street, London, N1 9FL, GBR";
+  locn:postCode "N1 9FL";
+  locn:postName "London" .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_h9nNgdx6iKqoLeHmAXWn7m
   a locn:Address;
   epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
   epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
@@ -1084,7 +1083,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0002 a cccev:ContactP
   cccev:telephone "+44 123456776";
   dct:description "Fin Adm Archives"@en;
   adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_TPO-0002;
-  locn:address epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_ZDibsmqh6XaKEG4WjjfUDb .
+  locn:address epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_h9nNgdx6iKqoLeHmAXWn7m .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0003 a cccev:ContactPoint;
   epo:hasContactName "Evaluation Dpt";
@@ -1094,7 +1093,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0003 a cccev:ContactP
   cccev:telephone "+44 123456777";
   dct:description "Tenders Evaluation Committee"@en;
   adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_TPO-0003;
-  locn:address epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_9saVKYT6LaLiq7HmXaeWEQ .
+  locn:address epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_ZDibsmqh6XaKEG4WjjfUDb .
 
 epd:id_9c0fd704-64d3-4294-a3b6-6df45911ab9f-01_Notice a epo:PlanningNotice;
   epo:announcesPlannedProcurementPart epd:id_9c0fd704-64d3-4294-a3b6-6df45911ab9f-01_PlannedProcurementPart_K53mu54F9PCk4RoVqcWwaL;

@@ -16,6 +16,7 @@ CANONICAL_RML_DIR = src/mappings
 TEST_DATA_DIR = test_data
 TEST_QUERIES_DIR = test_queries
 TEST_SCRIPTS_DIR = test_scripts
+POST_SCRIPTS_DIR = src/scripts
 TX_DIR = transformation
 CM_FILENAME = conceptual_mappings.xlsx
 
@@ -163,6 +164,9 @@ test_output:
 	@ echo "==> Test output suspect iri name"
 	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_suspect_iri_name.rq --data $(CANONICAL_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
 	@ echo
+	@ echo "==> Test output missing playedBy"
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_missing_playedBy.rq --data $(CANONICAL_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ echo
 	@ echo "Testing mapping rules coverage against output"
 	@ echo "==> Test RML predicate mapping coverage"
 	@ $(TEST_SCRIPTS_DIR)/test_predicate_coverage.sh $(CANONICAL_RML_DIR) $(CANONICAL_TEST_OUTPUT)
@@ -172,6 +176,14 @@ test_output:
 	@ echo
 	@ echo "==> Test RML subject template coverage"
 	@ $(TEST_SCRIPTS_DIR)/test_template_coverage.sh $(CANONICAL_RML_DIR) $(CANONICAL_TEST_OUTPUT)
+
+test_output_postproc:
+	@ echo "Testing output post-processing scripts"
+	@ echo "==> Test link role playedBy"
+	@ $(POST_SCRIPTS_DIR)/link_role_playedBy.sh
+	@ echo
+	@ echo "==> Test output missing playedBy"
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_missing_playedBy.rq --data $(CANONICAL_TEST_OUTPUT) --data output/source/link_role_playedBy.ttl --results=$(TEST_QUERY_RESULTS_FORMAT)
 
 clean:
 	@ rm -fv jena.zip

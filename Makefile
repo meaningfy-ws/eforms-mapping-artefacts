@@ -9,7 +9,7 @@ SAMPLES_CN_NAME = sampling_20231001-20240311
 ROOT_CONCEPTS_GREPFILTER = "_Organization_|_TouchPoint_|_Notice|_ProcurementProcessInformation_|_Lot_"
 TEST_QUERY_RESULTS_FORMAT = CSV
 XLSX_STRDATA = xl/sharedStrings.xml
-DEFAULT_CM_ID = package_eforms_10-24_v1.9_M1-M2
+DEFAULT_CM_ID = package_eforms_10-24_v1.9_M1-M3
 
 CANONICAL_TEST_OUTPUT = src/output.ttl
 CANONICAL_RML_DIR = src/mappings

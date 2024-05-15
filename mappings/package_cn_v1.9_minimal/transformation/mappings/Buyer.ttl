@@ -58,6 +58,7 @@ tedm:MG-Buyer_ND-ContractingParty a rr:TriplesMap ;
     rr:predicateObjectMap
         [
             # this is an example of a conditioned attribute where neither type, legalType or ePO type are the same
+            # TODO move both conditional cases under one pOMap
             rdfs:label "BT-740-Procedure-Buyer (cont-ent)" ;
             rdfs:comment "Is BuyerContractingEntity of MG-Buyer under ND-ContractingParty, TRUE case" ;
             rr:predicate epo:isContractingEntity ;

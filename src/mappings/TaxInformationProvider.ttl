@@ -43,10 +43,12 @@ tedm:MG-TaxInformationProvider_ND-LotFiscalLegislation a rr:TriplesMap ;
         ] ;
     rr:predicateObjectMap
         [
+            rdfs:label "OPT-301-Lot-FiscalLegis" ;
+            rdfs:comment "Connection between AgentInRole and Organization OR ContactPoint" ;
             rr:predicate epo:playedBy ;
             rr:objectMap
                 [
-                    rdfs:label "OPT-301-Lot-FiscalLegis ORG (playedBy)" ;
+                    rdfs:label "ORG (playedBy)" ;
                     rdfs:comment "Connection where IssuerParty is an Organization" ;
                     rr:parentTriplesMap tedm:MG-Organization_ND-Company ;
                     rr:joinCondition [
@@ -56,23 +58,19 @@ tedm:MG-TaxInformationProvider_ND-LotFiscalLegislation a rr:TriplesMap ;
                 ]
                 ,
                 [
-                    rdfs:label "OPT-301-Lot-FiscalLegis TPO (playedBy)" ;
+                    rdfs:label "TPO (playedBy)" ;
                     rdfs:comment "Connection where IssuerParty is a TouchPoint" ;
-                    rr:parentTriplesMap tedm:MG-Organization_ND-Company ;
-                    # TODO min SDK 1.3 max SDK 1.4 (recheck if complex lookup w/ absolute XPath doesn't cause defects)
-                    rr:joinCondition [
-                        rr:child "if(cac:IssuerParty/cac:PartyIdentification/cbc:ID/@schemeName='touchpoint' or exists(cac:IssuerParty/cac:PartyIdentification/cbc:ID[starts-with(text(), 'TPO-')])) then /*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Organizations/efac:Organization[efac:TouchPoint/cac:PartyIdentification/cbc:ID[/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:FiscalLegislationDocumentReference/cac:IssuerParty/cac:PartyIdentification/cbc:ID]]/efac:Company/cac:PartyIdentification/cbc:ID else null" ;
-                        rr:parent "cac:PartyIdentification/cbc:ID" ;
-                    ] ;
+                    # we create a deterministic IRI which is the same as that instantiated alongside the ContactPoint and rely on the sameAs link
+                    rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Organization_{cac:IssuerParty/cac:PartyIdentification/cbc:ID}" ;
                 ] ;
         ] ;
     rr:predicateObjectMap
         [
+            rdfs:label "OPT-301-Lot-FiscalLegis TPO (hasContactPointInRole)" ;
+            rdfs:comment "Connection where IssuerParty is a TouchPoint" ;
             rr:predicate epo:hasContactPointInRole ;
             rr:objectMap
                 [
-                    rdfs:label "OPT-301-Lot-FiscalLegis TPO (hasContactPointInRole)" ;
-                    rdfs:comment "Connection where IssuerParty is a TouchPoint" ;
                     rr:parentTriplesMap tedm:MG-ContactPoint_ND-Touchpoint ;
                     rr:joinCondition [
                         rr:child "if(cac:IssuerParty/cac:PartyIdentification/cbc:ID/@schemeName='touchpoint' or exists(cac:IssuerParty/cac:PartyIdentification/cbc:ID[starts-with(text(), 'TPO-')])) then cac:IssuerParty/cac:PartyIdentification/cbc:ID else null" ;
@@ -82,10 +80,10 @@ tedm:MG-TaxInformationProvider_ND-LotFiscalLegislation a rr:TriplesMap ;
         ] ;
     rr:predicateObjectMap
         [
+            rdfs:label "OPT-301-Lot-FiscalLegis (contextualisedBy)" ;
             rr:predicate epo:contextualisedBy ;
             rr:objectMap
                 [
-                    rdfs:label "OPT-301-Lot-FiscalLegis (contextualisedBy)" ;
                     rr:parentTriplesMap tedm:MG-Lot_ND-Lot ;
                     rr:joinCondition [
                         rr:child "../../cbc:ID" ;

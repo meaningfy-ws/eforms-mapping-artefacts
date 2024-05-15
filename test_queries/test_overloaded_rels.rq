@@ -30,6 +30,6 @@ SELECT DISTINCT ?s (?p0 AS ?rel) {
     ?s1 ?p0 ?s .
     FILTER(isIRI(?s))
     FILTER(?s0 != ?s1)
-    FILTER(?p0 not in (epo:playedBy))
+    FILTER(?p0 not in (epo:playedBy, owl:sameAs))
     FILTER (?what not in (epo:ExclusionGround))
 }

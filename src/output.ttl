@@ -746,6 +746,15 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0007 a org:Organiza
   cccev:registeredAddress epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_dtBY8KdbdWyJb9xZnV4Xcw;
   adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0007 .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_TPO-0001 a org:Organization;
+  owl:sameAs epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0001 .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_TPO-0002 a org:Organization;
+  owl:sameAs epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0003 .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_TPO-0003 a org:Organization;
+  owl:sameAs epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0001 .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ParticipationCondition_LRt2DdjrrLdsYp7yMz2y3n
   a epo:ParticipationCondition;
   epo:hasReservedProcurement <http://publications.europa.eu/resource/authority/reserved-procurement/res-pub-ser> .
@@ -1034,12 +1043,14 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_daUDPcwCUoxbJRjGb7tKN
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TaxInformationProvider_UyJLB5UdNE5RM2ZpQVeTCV
   a epo:TaxInformationProvider;
   epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001;
-  epo:hasContactPointInRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0002 .
+  epo:hasContactPointInRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0002;
+  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_TPO-0002 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TaxInformationProvider_j5VcAZZjswFkX9mLn9opDA
   a epo:TaxInformationProvider;
   epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
-  epo:hasContactPointInRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0001 .
+  epo:hasContactPointInRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0001;
+  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_TPO-0001 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_DQ3D2nHojn4VijYMYRtvzY
   a locn:Address;

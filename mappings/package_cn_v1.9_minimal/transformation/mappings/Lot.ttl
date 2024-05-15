@@ -3624,7 +3624,7 @@ tedm:MG-ExclusionGround-specifiesProcurementCriterion-Lot_ND-ExclusionGrounds a 
         [
             rdfs:label "BT-67(b)-Procedure";
             rdfs:comment "Exclusion Grounds of MG-ExclusionGround under ND-ExclusionGrounds";
-            rr:predicate dct:descrition;
+            rr:predicate dct:description;
             rr:objectMap
                 [
                     rml:reference "cbc:Description";

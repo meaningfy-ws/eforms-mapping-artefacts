@@ -683,7 +683,7 @@
 				<cbc:Region>anyw-eea</cbc:Region>
 			</cac:Address>
 		</cac:RealizedLocation>
-		<cac:PlannedPeriod>
+			<cac:PlannedPeriod>
 				<cbc:StartDate>2020-10-01+02:00</cbc:StartDate>
 				<cbc:DurationMeasure unitCode="MONTH">48</cbc:DurationMeasure>
 			</cac:PlannedPeriod>
@@ -1351,6 +1351,8 @@
 				<cbc:StartDate>2023-01-01+01:00</cbc:StartDate>
 				<!--BT-537-->
 				<cbc:EndDate>2023-05-23+01:00</cbc:EndDate>
+				<!-- BT-36 -->
+				<cbc:DurationMeasure unitCode="MONTH">5</cbc:DurationMeasure>
 			</cac:PlannedPeriod>
 			<cac:ContractExtension>
 				<!--BT-54-->
@@ -1941,6 +1943,8 @@
 				<cbc:StartDate>2023-01-01+01:00</cbc:StartDate>
 				<!--BT-537-->
 				<cbc:EndDate>2023-05-23+02:00</cbc:EndDate>
+				<!-- BT-36 -->
+				<cbc:DurationMeasure unitCode="MONTH">5</cbc:DurationMeasure>
 			</cac:PlannedPeriod>
 			<cac:ContractExtension>
 				<!--BT-54-->

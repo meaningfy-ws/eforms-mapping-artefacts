@@ -40,8 +40,8 @@ tedm:MG-VehicleInformation_ND-StrategicProcurementInformationLot a rr:TriplesMap
         ] ;
     rr:predicateObjectMap
         [
-            #  TODO min SDK 1.9.1
-            # TODO to be added to the source for testing
+            # TODO min SDK 1.9.1
+            # TODO test source
             rdfs:label "BT-735-Lot";
             rdfs:comment "CVDContractType of MG-VehicleInformation under ND-StrategicProcurementInformationLot";
             rr:predicate epo:specifiesCleanVehicleDirectiveContractType    ;

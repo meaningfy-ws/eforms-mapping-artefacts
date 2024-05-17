@@ -2022,13 +2022,12 @@ tedm:MG-Fund-isFundedBy-Lot_ND-Funding a rr:TriplesMap ;
         ]  ;
     rr:predicateObjectMap
         [
-            # TODO min SDK 1.9.1
-            # TODO check the rferenence ar template and check the output
             rdfs:label "BT-7220-Lot";
             rdfs:comment "EUFundsProgramme of MG-Fund under ND-Funding";
             rr:predicate  epo:hasFundProgramme ;
             rr:objectMap
                 [
+                    tedm:minSDKVersion "1.9.1" ;
                     rdfs:label "at-EU-programme" ;
                     rr:parentTriplesMap tedm:EU-programme ;
                     rr:joinCondition [
@@ -2041,14 +2040,13 @@ tedm:MG-Fund-isFundedBy-Lot_ND-Funding a rr:TriplesMap ;
         ]   ;
     rr:predicateObjectMap
         [
-            # TODO min SDK 1.9.1
-            # TODO check the rferenence ar template and check the output
             rdfs:label "BT-6140-Lot";
             rdfs:comment "EUFundsDetails of MG-Fund under ND-Funding";
             rr:predicate  dct:description  ;
             rr:objectMap
                 [
-                   rml:reference "cbc:Description";
+                   tedm:minSDKVersion "1.9.1" ;
+                    rml:reference "cbc:Description";
                    rml:languageMap [
                         fnml:functionValue [
                             rr:predicateObjectMap [
@@ -3845,7 +3843,6 @@ tedm:MG-AccessTerm-isSubjectToLotSpecificTerm-Lot_ND-LotProcurementDocument a rr
         ] ;
     rr:predicateObjectMap
         [
-            # TODO check the datatype with the values
             rdfs:label "BT-14-Lot";
             rdfs:comment "Documents Restricted of MG-AccessTerm under ND-LotProcurementDocument";
             rr:predicate epo:isProcurementDocumentRestricted  ;
@@ -3857,7 +3854,6 @@ tedm:MG-AccessTerm-isSubjectToLotSpecificTerm-Lot_ND-LotProcurementDocument a rr
         ] ;
     rr:predicateObjectMap
         [
-            # TODO min SDK 1.7
             # TODO min SDK 1.3 max SDK 1.7
             rdfs:label "BT-707-Lot";
             rdfs:comment "communication-justification of MG-AccessTerm under ND-LotProcurementDocument";

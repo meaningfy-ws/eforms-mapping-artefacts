@@ -3103,7 +3103,6 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-Lot_ND-LotEInvoicing a rr:Trip
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ContractTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(../..)) || '?response_type=raw')}";
             rr:class epo:ContractTerm
         ] ;
-
     rr:predicateObjectMap
         [
            # TODO min SDK 1.3 max SDK 1.8
@@ -3178,7 +3177,6 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-Lot_ND-LotProcurementScope a r
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ContractTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(../..)) || '?response_type=raw')}";
             rr:class epo:ContractTerm
         ] ;
-
     rr:predicateObjectMap
         [
             rdfs:label "BT-23-Lot";
@@ -3250,7 +3248,6 @@ tedm:MG-Quantity-hasTotalQuantity-Purpose-hasPurpose-Lot_ND-LotProcurementScope 
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Quantity_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(../..)) || '?response_type=raw')}";
             rr:class epo:Quantity
         ] ;
-
     rr:predicateObjectMap
         [
             rdfs:label "BT-25-Lot";
@@ -3294,7 +3291,6 @@ tedm:MG-Purpose-hasPurpose-Lot_ND-LotProcurementScope a rr:TriplesMap ;
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Purpose_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(../..)) || '?response_type=raw')}";
             rr:class epo:Purpose
         ] ;
-
     rr:predicateObjectMap
         [
             rdfs:label "BT-25-Lot, BT-625-Lot";
@@ -3614,11 +3610,9 @@ tedm:MG-SubcontractTerm-foreseesContractSpecificTerm-Lot_ND-SubcontractingObliga
                     ] ;
                 ] ;
         ] ;
-
     rr:predicateObjectMap
         [
             # TODO min SDK 1.3 max SDK 1.8
-            # TODO min SDK 1.9.1
             # TODO test source
             rdfs:label "BT-729-Lot";
             rdfs:comment "SubcontractingObligationMaximum of MG-SubcontractTerm under ND-SubcontractingObligation";
@@ -4227,7 +4221,6 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-Lot_ND-LotContractAdditionalNa
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ContractTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(../..)) || '?response_type=raw')}";
             rr:class epo:ContractTerm
         ] ;
-
     rr:predicateObjectMap
         [
             # TODO min SDK 1.3 max SDK 1.7
@@ -4736,7 +4729,6 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-Lot_ND-LotPerformanceAddress a
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ContractTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(../..)) || '?response_type=raw')}";
             rr:class epo:ContractTerm
         ] ;
-
     rr:predicateObjectMap
         [
             # TODO min SDK 1.3 max SDK 1.4

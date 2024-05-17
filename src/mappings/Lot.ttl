@@ -3767,7 +3767,7 @@ tedm:MG-ProcurementDocument-involvesProcurementDocument-AccessTerm-isSubjectToLo
     rr:subjectMap
         [
             rdfs:label "ND-LotDocOfficialLanguage";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ProcurementDocument_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ProcurementDocument_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(../..)) || '?response_type=raw')}" ;
             rr:class epo:ProcurementDocument
         ] ;
     rr:predicateObjectMap
@@ -3897,13 +3897,13 @@ tedm:MG-ProcurementDocument-involvesProcurementDocument-AccessTerm-isSubjectToLo
     rml:logicalSource
         [
             rml:source "data/source.xml" ;
-            rml:iterator "cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NonOfficialLanguages/cac:Language";
+            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NonOfficialLanguages/cac:Language";
             rml:referenceFormulation ql:XPath
         ];
     rr:subjectMap
         [
             rdfs:label "ND-LotDocAllNonOfficialLanguages";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ProcurementDocument_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ProcurementDocument_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(../..)) || '?response_type=raw')}" ;
             rr:class epo:ProcurementDocument
         ] ;
     rr:predicateObjectMap
@@ -3918,7 +3918,7 @@ tedm:MG-ProcurementDocument-involvesProcurementDocument-AccessTerm-isSubjectToLo
                     rr:parentTriplesMap tedm:language ;
                     rr:joinCondition [
                         rr:child "cbc:ID" ;
-                        rr:parent "conceptURI" ;
+                        rr:parent "op_code" ;
                     ] ;
                 ] ;
         ] ;

@@ -2065,7 +2065,6 @@ tedm:MG-Fund-isFundedBy-Lot_ND-Funding a rr:TriplesMap ;
         ]   ;
     rr:predicateObjectMap
         [
-            # TODO min SDK 1.9.1
             rdfs:label "BT-5010-Lot";
             rdfs:comment "EUFundsFinancingIdentifier of MG-Identifierunder ND-Funding";
             rr:predicate adms:identifier ;
@@ -2086,7 +2085,6 @@ tedm:MG-Identifier-identifier-Fund-isFundedBy-Lot_ND-Funding a rr:TriplesMap ;
         ];
     rr:subjectMap
         [
-            # TODO update the reference to include the ID
             rdfs:label "ND-Funding";
             rml:reference "if (exists(efbc:FinancingIdentifier)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_FundIdentifier_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
 #            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Funding_{efbc:FinancingIdentifier}" ;
@@ -2095,8 +2093,7 @@ tedm:MG-Identifier-identifier-Fund-isFundedBy-Lot_ND-Funding a rr:TriplesMap ;
         ] ;
     rr:predicateObjectMap
         [
-            # TODO min SDK 1.9.1
-            # TODO check the rferenence ar template and check the output
+            tedm:minSDKVersion "1.9.1" ;
             rdfs:label "BT-5010-Lot";
             rdfs:comment "EUFundsFinancingIdentifier of MG-Identifierunder ND-Funding";
             rr:predicate skos:notation ;
@@ -3048,7 +3045,7 @@ tedm:MG-Lot_ND-LotTenderingTerms a rr:TriplesMap ;
             rr:objectMap
                 [
                     rdfs:comment "translation of at-voc value 'eu-funds' to ePO value 'true'" ;
-                    rml:reference "if(cac:TenderingTerms/cbc:FundingProgramCode[@listName='eu-funded']/text()='eu-funds') then 'true' else null";
+                    rml:reference "if(cbc:FundingProgramCode[@listName='eu-funded']/text()='eu-funds') then 'true' else null";
                     rr:datatype xsd:boolean
                 ]
                 ,

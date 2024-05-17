@@ -925,7 +925,7 @@ tedm:MG-Purpose-hasPurpose-Procedure_ND-ProcedureMainClassificationCode a rr:Tri
                     rdfs:label "at-voc:cpv";
                     rr:parentTriplesMap tedm:cpv ;
                     rr:joinCondition [
-                        rr:child  "cbc:ItemClassificationCode";
+                        rr:child  "if(exists(cbc:ItemClassificationCode[@listName='cpv'])) then cbc:ItemClassificationCode else null";
                         rr:parent "code.value" ;
                     ] ;
 #                    rml:reference "cbc:ItemClassificationCode";

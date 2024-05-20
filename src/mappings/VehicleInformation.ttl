@@ -40,13 +40,13 @@ tedm:MG-VehicleInformation_ND-StrategicProcurementInformationLot a rr:TriplesMap
         ] ;
     rr:predicateObjectMap
         [
-            # TODO min SDK 1.9.1
             # TODO test source
             rdfs:label "BT-735-Lot";
             rdfs:comment "CVDContractType of MG-VehicleInformation under ND-StrategicProcurementInformationLot";
             rr:predicate epo:specifiesCleanVehicleDirectiveContractType    ;
             rr:objectMap
                 [
+                    tedm:minSDKVersion "1.9.1" ;
                     rdfs:label "at-voc:cvd-contract-type" ;
                     rr:parentTriplesMap tedm:cvd-contract-type;
                     rr:joinCondition [
@@ -73,7 +73,6 @@ tedm:MG-GreenProcurement-concernsGreenProcurement-VehicleInformation_ND-Strategi
         ] ;
     rr:predicateObjectMap
         [
-            #  TODO min SDK 1.9.1
             # TODO to be added to the source for testing
             rdfs:label "BT-735-Lot";
             rdfs:comment "CVDContractType of MG-GreenProcurement under ND-StrategicProcurementInformationLot";
@@ -105,7 +104,6 @@ tedm:MG-GreenProcurement-fulfillsStrategicProcurement-Lot_ND-StrategicProcuremen
         ] ;
     rr:predicateObjectMap
         [
-            #  TODO min SDK 1.9.1
             # TODO to be added to the source for testing
             rdfs:label "BT-735-Lot";
             rdfs:comment "CVDContractType of MG-GreenProcurement under ND-StrategicProcurementInformationLot";

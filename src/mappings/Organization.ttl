@@ -54,19 +54,6 @@ tedm:MG-Organization_ND-Company a rr:TriplesMap ;
                     ] ;
                 ]
         ] ;
-    # rr:predicateObjectMap
-    #     [
-    #         #The channel of ND-Company it is created for the BT-509-Organization-Company it does not correspond to a node"
-    #         rr:predicate epo:hasDeliveryGateway ;
-    #         rr:objectMap
-    #             [
-    #                 rr:parentTriplesMap tedm:ND-CompanyChannel ;
-    #                 rr:joinCondition [
-    #                     rr:child "path(.)";
-    #                     rr:parent "path(.)";
-    #                 ];
-    #             ]
-    #     ] ;
     rr:predicateObjectMap
         [
             rdfs:label "Aggregate Address" ;

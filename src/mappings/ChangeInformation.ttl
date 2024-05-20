@@ -40,13 +40,11 @@ tedm:MG-ChangeInformation_ND-ChangeReason  a rr:TriplesMap ;
         ] ;
     rr:predicateObjectMap
         [
-            # TODO min SDK 1.4
             rdfs:label "BT-140-notice";
             rdfs:comment "Change Reason Code of MG-ChangeInformation under ND-ChangeReason";
             rr:predicate epo:hasChangeJustification ;
             rr:objectMap
                 [
-#                   rml:reference "cbc:ReasonCode";
                     rdfs:label "at-voc:change-corrig-justification";
                     rr:parentTriplesMap tedm:change-corrig-justification ;
                     rr:joinCondition [
@@ -62,7 +60,7 @@ tedm:MG-ChangeInformation_ND-ChangeReason  a rr:TriplesMap ;
             rr:predicate epo:hasChangeReasonDescription ;
             rr:objectMap
                 [
-                     tedm:minSDKVersion "1.4" ;
+                    tedm:minSDKVersion "1.4" ;
                     rml:reference "efbc:ReasonDescription";
                     rml:languageMap [
                         fnml:functionValue [
@@ -203,7 +201,6 @@ tedm:MG-Notice-refersToPreviousNotice-ChangeInformation_ND-Changes a rr:TriplesM
     rr:subjectMap
         [
             rdfs:label "ND-Changes";
-#            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(efbc:ChangedNoticeIdentifier, ' ', '-' ), '/' , '-')}_Notice" ;
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Notice" ;
             rr:class epo:Notice
         ] ;

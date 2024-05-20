@@ -165,7 +165,7 @@ tedm:MG-Identifier-hasInternalIdentifier-LotGroup_ND-LotsGroupProcurementScope a
     rr:predicateObjectMap
         [
             rdfs:label "BT-22-Lot" ;
-            rdfs:comment "Internal Identifier of MG-Lot underLotProcurementScope" ;
+            rdfs:comment "Internal Identifier of MG-Lot under LotProcurementScope" ;
             rr:predicate skos:notation ;
             rr:objectMap
                 [

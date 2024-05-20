@@ -367,7 +367,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
     rr:predicateObjectMap
         [
             rdfs:label "BT-22-Lot" ;
-            rdfs:comment "Internal Identifier of MG-Lot underLotProcurementScope" ;
+            rdfs:comment "Internal Identifier of MG-Lot under ND-LotProcurementScope" ;
             rr:predicate epo:hasInternalIdentifier  ;
             rr:objectMap
                 [
@@ -888,7 +888,7 @@ tedm:MG-Lot_ND-LotProcurementScope a rr:TriplesMap ;
     rr:predicateObjectMap
         [
             rdfs:label "BT-21-Lot" ;
-            rdfs:comment "Title of MG-Lot underLotProcurementScope" ;
+            rdfs:comment "Title of MG-Lot under ND-LotProcurementScope" ;
             rr:predicate  dct:title ;
             rr:objectMap
                 [
@@ -910,7 +910,7 @@ tedm:MG-Lot_ND-LotProcurementScope a rr:TriplesMap ;
     rr:predicateObjectMap
         [
             rdfs:label "BT-24-Lot" ;
-            rdfs:comment "Description of MG-Lot underLotProcurementScope" ;
+            rdfs:comment "Description of MG-Lot under ND-LotProcurementScope" ;
             rr:predicate  dct:description  ;
             rr:objectMap
                 [
@@ -945,7 +945,7 @@ tedm:MG-Lot_ND-LotProcurementScope a rr:TriplesMap ;
     rr:predicateObjectMap
         [
             rdfs:label "BT-726-Lot";
-            rdfs:comment " Suitable For SMEs of MG-Lot underLotProcurementScope" ;
+            rdfs:comment " Suitable For SMEs of MG-Lot under ND-LotProcurementScope" ;
             rr:predicate  epo:isSMESuitable;
             rr:objectMap
                 [
@@ -957,7 +957,7 @@ tedm:MG-Lot_ND-LotProcurementScope a rr:TriplesMap ;
     rr:predicateObjectMap
         [
             rdfs:label "BT-25-Lot and BT-625-Lot";
-            rdfs:comment "Quantity of MG-Lot underLotProcurementScope";
+            rdfs:comment "Quantity of MG-Lot under ND-LotProcurementScope";
             rr:predicate epo:hasPurpose ;
             rr:objectMap
                 [
@@ -971,7 +971,7 @@ tedm:MG-Lot_ND-LotProcurementScope a rr:TriplesMap ;
     rr:predicateObjectMap
         [
             rdfs:label "BT-262-Lot";
-            rdfs:comment "Main Classification Code of MG-Lot underLotProcurementScope";
+            rdfs:comment "Main Classification Code of MG-Lot under ND-LotProcurementScope";
             rr:predicate epo:hasPurpose ;
             rr:objectMap
                 [
@@ -985,7 +985,7 @@ tedm:MG-Lot_ND-LotProcurementScope a rr:TriplesMap ;
     rr:predicateObjectMap
         [
             rdfs:label "BT-27-Lot";
-            rdfs:comment "Estimated Value of MG-Lot underLotProcurementScope";
+            rdfs:comment "Estimated Value of MG-Lot under ND-LotProcurementScope";
             rr:predicate epo:hasAmountValue  ;
             rr:objectMap
                 [
@@ -999,7 +999,7 @@ tedm:MG-Lot_ND-LotProcurementScope a rr:TriplesMap ;
     rr:predicateObjectMap
         [
             rdfs:label "BT-300-Lot";
-            rdfs:comment "Estimated Value of MG-Lot underLotProcurementScope";
+            rdfs:comment "Estimated Value of MG-Lot under ND-LotProcurementScope";
             rr:predicate  epo:hasAdditionalInformation;
             rr:objectMap
                 [
@@ -1071,7 +1071,7 @@ tedm:MG-Identifier-hasInternalIdentifier-Lot_ND-LotProcurementScope a rr:Triples
     rr:predicateObjectMap
         [
             rdfs:label "BT-22-Lot" ;
-            rdfs:comment "Internal Identifier of MG-Lot underLotProcurementScope" ;
+            rdfs:comment "Internal Identifier of MG-Lot under ND-LotProcurementScope" ;
             rr:predicate skos:notation ;
             rr:objectMap
                 [

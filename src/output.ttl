@@ -649,6 +649,14 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotInternalIdentifier_QRFEJSYy7fATJo
   epo:hasScheme "InternalID";
   skos:notation "Object Reference Number---" .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotPurpose_BDTC4WRLKSCg4KipkdMxR8 a epo:Purpose;
+  epo:hasMainClassification <http://data.europa.eu/cpv/cpv/75121000>;
+  epo:hasTotalQuantity epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Quantity_MnX8qyREnFMNLeS5MJAX9K .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotPurpose_QRFEJSYy7fATJoZShoDC4D a epo:Purpose;
+  epo:hasMainClassification <http://data.europa.eu/cpv/cpv/75121000>;
+  epo:hasTotalQuantity epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Quantity_MnX8qyREnFMNLeS5MJAX9K .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotValueEstimateExtension_fhpEAkeAi2DhcGZP8Nqr2u
   a epo:MonetaryValue;
   epo:hasAmountValue 247547.0;
@@ -668,7 +676,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001 a epo:Lot;
   epo:hasAmountValue epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValueLot_WdC3kBS9amJ4en7K2hRKUQ;
   epo:hasInternalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotInternalIdentifier_BDTC4WRLKSCg4KipkdMxR8;
   epo:hasLaunchFrameworkAgreementMaximumValue epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotValueEstimateExtension_fhpEAkeAi2DhcGZP8Nqr2u;
-  epo:hasPurpose epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Purpose_MnX8qyREnFMNLeS5MJAX9K;
+  epo:hasPurpose epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotPurpose_BDTC4WRLKSCg4KipkdMxR8;
   epo:isCoveredByGPA true;
   epo:isSMESuitable true;
   epo:isSubjectToLotSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_XnxqfcRqzA7sngzwrWyL3G,
@@ -723,7 +731,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002 a epo:Lot;
   epo:hasAdditionalInformation "Additional information for GLO-0001 ProcurementProject ---"@en;
   epo:hasAmountValue epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValueLot_evidV3nok82ih2xWwJYg9n;
   epo:hasInternalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotInternalIdentifier_QRFEJSYy7fATJoZShoDC4D;
-  epo:hasPurpose epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Purpose_MnX8qyREnFMNLeS5MJAX9K;
+  epo:hasPurpose epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotPurpose_QRFEJSYy7fATJoZShoDC4D;
   epo:hasRecurrenceDescription "......."@fr;
   epo:isCoveredByGPA true;
   epo:isFundedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotFund_UQnAwfk3ERwvnj7e2sbo39;
@@ -1100,13 +1108,6 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_PurposeLotGroupEstimatedValue_EgMjw2
   a epo:MonetaryValue;
   epo:hasAmountValue 9999999.99;
   epo:hasCurrency "EUR" .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Purpose_FnAKvBz2xRkJi3ke3cKnZS a epo:Purpose .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Purpose_MnX8qyREnFMNLeS5MJAX9K a epo:Purpose;
-  epo:hasTotalQuantity epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Quantity_MnX8qyREnFMNLeS5MJAX9K .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Purpose_mqL9BdjtuRVgUXd3FonGXh a epo:Purpose .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Quantity_MnX8qyREnFMNLeS5MJAX9K a epo:Quantity;
   epo:hasQuantityValue 1000.0;

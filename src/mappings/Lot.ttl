@@ -819,19 +819,6 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
         ];
     rr:predicateObjectMap
         [
-            rdfs:label "BT-717-Lot";
-            rr:predicate epo:fulfillsStrategicProcurement ;
-            rr:objectMap
-                [
-                    rr:parentTriplesMap tedm:MG-StrategicProcurement-fulfillsStrategicProcurement-Lot_ND-StrategicProcurementLot ;
-                    rr:joinCondition [
-                        rr:child "path(.)";
-                        rr:parent "path(../../../../../..)";
-                    ];
-                ] ;
-        ];
-    rr:predicateObjectMap
-        [
             rdfs:label "BT-262-Lot";
             rr:predicate epo:hasPurpose  ;
             rr:objectMap
@@ -3853,22 +3840,6 @@ tedm:MG-ReviewTerm-isSubjectToLotSpecificTerm-Lot_ND-ReviewPresentationPeriod a 
         ] ;
 .
 
-tedm:MG-StrategicProcurement-fulfillsStrategicProcurement-Lot_ND-StrategicProcurementLot a rr:TriplesMap;
-rdfs:label  "MG-StrategicProcurement";
-    rml:logicalSource
-        [
-            rml:source "data/source.xml" ;
-            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:StrategicProcurement";
-            rml:referenceFormulation ql:XPath
-        ];
-    rr:subjectMap
-        [
-            rdfs:label   "ND-StrategicProcurementLot";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_StrategicProcurement_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
-            rr:class epo:StrategicProcurement
-        ] ;
-.
-
 tedm:MG-StrategicProcurement-fulfillsStrategicProcurement-Lot_ND-StrategicProcurementType a rr:TriplesMap;
 rdfs:label  "MG-StrategicProcurement";
     rml:logicalSource
@@ -3879,7 +3850,7 @@ rdfs:label  "MG-StrategicProcurement";
         ];
     rr:subjectMap
         [
-            rdfs:label   "ND-StrategicProcurementType";
+            rdfs:label "ND-StrategicProcurementType";
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_StrategicProcurement_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
             rr:class epo:StrategicProcurement
         ] ;
@@ -3887,7 +3858,7 @@ rdfs:label  "MG-StrategicProcurement";
         [
             rdfs:label "BT-777-Lot";
             rdfs:comment "Strategic Procurement Description MG-StrategicProcurement under ND-StrategicProcurementType";
-            rr:predicate epo:hasStrategicProcurementDescription  ;
+            rr:predicate epo:hasStrategicProcurementDescription ;
             rr:objectMap
                 [
                     rml:reference "cbc:ProcurementType";
@@ -3905,6 +3876,30 @@ rdfs:label  "MG-StrategicProcurement";
                     ] ;
                 ] ;
         ] ;
+    rr:predicateObjectMap
+        [
+            # TODO min SDK 1.3 max SDK 1.4
+            # TODO min SDK 1.5.12 max SDK .17
+            tedm:minSDKVersion 1.8 ;
+            rdfs:label "BT-06-Lot" ;
+            rdfs:comment "Strategic Procurement of MG-StrategicProcurement under ND-StrategicProcurementType" ;
+            rr:predicate rdf:type ;
+            rr:objectMap
+                [
+                    rml:reference "if (cbc:ProcurementTypeCode/text()='env-imp') then 'http://data.europa.eu/a4g/ontology#GreenProcurement' else null" ;
+                    rr:termType rr:IRI ;
+                ] ;
+            rr:objectMap
+                [
+                    rml:reference "if (cbc:ProcurementTypeCode/text()='inn-pur') then 'http://data.europa.eu/a4g/ontology#InnovativeProcurement' else null" ;
+                    rr:termType rr:IRI ;
+                ] ;
+            rr:objectMap
+                [
+                    rml:reference "if (cbc:ProcurementTypeCode/text()='soc-obj') then 'http://data.europa.eu/a4g/ontology#SocialProcurement' else null" ;
+                    rr:termType rr:IRI ;
+                ] ;
+        ]
 .
 
 tedm:MG-GreenProcurement-fulfillsStrategicProcurement-Lot_ND-StrategicProcurementLot a rr:TriplesMap;
@@ -3917,13 +3912,12 @@ rdfs:label  "MG-GreenProcurement";
         ];
     rr:subjectMap
         [
-            rdfs:label   "ND-StrategicProcurementLot";
+            rdfs:label "ND-StrategicProcurementLot";
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_GreenProcurement_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
             rr:class epo:GreenProcurement
         ] ;
     rr:predicateObjectMap
         [
-            # TODO min SDK 1.9.1
             rdfs:label "BT-717-Lot";
             rdfs:comment " CleanVehiclesDirective of MG-GreenProcurement under ND-StrategicProcurementLot";
             rr:predicate epo:usesCleanVehicleDirective   ;

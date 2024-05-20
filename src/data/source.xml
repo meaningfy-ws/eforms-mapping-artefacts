@@ -780,8 +780,11 @@
 					<ext:ExtensionContent>
 						<efext:EformsExtension>
 							 <efac:StrategicProcurement>
-                        <efbc:ApplicableLegalBasis listName="cvd-scope">false</efbc:ApplicableLegalBasis>
-                     </efac:StrategicProcurement>
+								<efbc:ApplicableLegalBasis listName="cvd-scope">false</efbc:ApplicableLegalBasis>
+								<efac:StrategicProcurementInformation>
+									<efbc:ProcurementCategoryCode listName="cvd-contract-type">oth-serv-contr</efbc:ProcurementCategoryCode>
+								</efac:StrategicProcurementInformation>
+							</efac:StrategicProcurement>
 							<efac:SelectionCriteria>
 								<!--BT-747-->
 								<cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
@@ -1289,7 +1292,7 @@
 				<!--BT-06-->
 				<cbc:ProcurementTypeCode listName="strategic-procurement">env-imp</cbc:ProcurementTypeCode>
 				<!--BT-777-->
-				<cbc:ProcurementType languageID="ENG">Strategic procurement description ---</cbc:ProcurementType>
+				<cbc:ProcurementType languageID="ENG">Strategic procurement description green procurement ---</cbc:ProcurementType>
 			</cac:ProcurementAdditionalType>
 			<cac:ProcurementAdditionalType>
 				<!--BT-754-->
@@ -1887,9 +1890,9 @@
 			</cac:ProcurementAdditionalType>
 			<cac:ProcurementAdditionalType>
 				<!--BT-06-->
-				<cbc:ProcurementTypeCode listName="strategic-procurement">env-imp</cbc:ProcurementTypeCode>
+				<cbc:ProcurementTypeCode listName="strategic-procurement">soc-obj</cbc:ProcurementTypeCode>
 				<!--BT-777-->
-				<cbc:ProcurementType languageID="ENG">Strategic procurement description ---</cbc:ProcurementType>
+				<cbc:ProcurementType languageID="ENG">Strategic procurement description social procurement ---</cbc:ProcurementType>
 			</cac:ProcurementAdditionalType>
 			<cac:ProcurementAdditionalType>
 				<!--BT-754-->

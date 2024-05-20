@@ -3769,13 +3769,13 @@ tedm:MG-AccessTerm-isSubjectToLotSpecificTerm-Lot_ND-LotProcurementDocument a rr
     rr:predicateObjectMap
         [
             # TODO min SDK 1.3 max SDK 1.6
-            tedm:minSDKVersion "1.7" ;
             rdfs:label "BT-615-Lot";
             rdfs:comment "Documents URL of MG-AccessTerm under ND-LotProcurementDocument";
             rr:predicate epo:hasRestrictedAccessURL  ;
             rr:objectMap
                 [
-                    rml:reference "cac:Attachment[not(../cbc:DocumentType/text()='restricted-document')]/cac:ExternalReference/cbc:URI";
+                    tedm:minSDKVersion "1.7" ;
+                    rml:reference "cac:Attachment[../cbc:DocumentType/text()='restricted-document']/cac:ExternalReference/cbc:URI";
                     rr:datatype xsd:anyURI;
                 ] ;
         ]

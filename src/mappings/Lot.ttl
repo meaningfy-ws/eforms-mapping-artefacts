@@ -3731,7 +3731,7 @@ tedm:MG-AccessTerm-isSubjectToLotSpecificTerm-Lot_ND-LotProcurementDocument a rr
             rr:predicate epo:isProcurementDocumentRestricted  ;
             rr:objectMap
                 [
-                    rml:reference "cbc:DocumentType";
+                    rml:reference "if (cbc:DocumentType/text()='restricted-document') then 'true' else 'false'";
                     rr:datatype xsd:boolean
                 ] ;
         ] ;

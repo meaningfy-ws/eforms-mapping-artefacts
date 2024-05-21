@@ -1905,7 +1905,7 @@ tedm:MG-AdHocChannel-usesChannel-Lot_ND-LotTenderingProcessExtension a rr:Triple
     rr:predicateObjectMap
         [
             rdfs:label "BT-632-Lot";
-            rdfs:comment "Tool Name of MG-AdHocChannel underND-LotTenderingProcessExtension";
+            rdfs:comment "Tool Name of MG-AdHocChannel under ND-LotTenderingProcessExtension";
             rr:predicate dct:description  ;
             rr:objectMap
                 [
@@ -1931,7 +1931,7 @@ tedm:MG-AdHocChannel-usesChannel-Lot_ND-LotTenderingProcess a rr:TriplesMap ;
     rr:predicateObjectMap
         [
             rdfs:label "BT-124-Lot";
-            rdfs:comment "Tool Atypical URL of MG-AdHocChannel underND-LotTenderingProcess";
+            rdfs:comment "Tool Atypical URL of MG-AdHocChannel under ND-LotTenderingProcess";
             rr:predicate epo:hasAddressURL  ;
             rr:objectMap
                 [

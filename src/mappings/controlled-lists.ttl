@@ -135,16 +135,16 @@ tedm:form-type a rr:TriplesMap ;
 .
 
 tedm:language a rr:TriplesMap ;
-    rml:logicalSource
-        [
-            rml:source "transformation/resources/language.csv" ;
-            rml:referenceFormulation ql:CSV
-        ] ;
-    rr:subjectMap
-        [
-            rml:reference
-                "conceptURI" ;
-        ]
+   rml:logicalSource
+       [
+           rml:source "transformation/resources/language.csv" ;
+           rml:referenceFormulation ql:CSV
+       ] ;
+   rr:subjectMap
+       [
+           rml:reference
+               "conceptURI" ;
+       ]
 .
 
 tedm:legal-basis a rr:TriplesMap ;
@@ -537,6 +537,20 @@ tedm:environmental-impact a rr:TriplesMap ;
         ] ;
     rr:subjectMap
         [
+            rml:reference
+                "conceptURI.value" ;
+        ]
+.
+
+tedm:languageJSON a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/language.json" ;
+            rml:iterator "$.results.bindings[*]" ;
+            rml:referenceFormulation ql:JSONPath
+        ] ;
+    rr:subjectMap
+        [ 
             rml:reference
                 "conceptURI.value" ;
         ]

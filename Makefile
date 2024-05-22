@@ -6,7 +6,7 @@ SDK_NAME = eforms-sdk
 DEFAULT_SDK_VERSION = 1.9
 SDK_DATA_NAME = sdk_examples_cn
 SAMPLES_CN_NAME = sampling_20231001-20240311
-ROOT_CONCEPTS_GREPFILTER = "_Organization_|_TouchPoint_|_Notice|_ProcurementProcessInformation_|_Lot_|_VehicleInformation_"
+ROOT_CONCEPTS_GREPFILTER = "_Organization_|_TouchPoint_|_Notice|_ProcurementProcessInformation_|_Lot_|_VehicleInformation_|_ChangeInformation_"
 TEST_QUERY_RESULTS_FORMAT = CSV
 XLSX_STRDATA = xl/sharedStrings.xml
 DEFAULT_CM_ID = package_eforms_10-24_v1.9_M1-M3
@@ -163,6 +163,9 @@ test_output:
 	@ echo
 	@ echo "==> Test output suspect iri name"
 	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_suspect_iri_name.rq --data $(CANONICAL_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ echo
+	@ echo "==> Test output dupe identifiers"
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_dupe_identifiers.rq --data $(CANONICAL_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
 	@ echo
 	@ echo "==> Test output missing playedBy"
 	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_missing_playedBy.rq --data $(CANONICAL_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)

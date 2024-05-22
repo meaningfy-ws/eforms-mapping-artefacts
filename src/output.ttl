@@ -29,10 +29,18 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_Aim3sQTrJD92cok54ZhnWW a 
   epo:involvesProcurementDocument epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_AaPhozYKyWVKTUkgPkdu5a;
   epo:isProcurementDocumentRestricted true .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_PuAZ93vcjRYhKiN4rMvUZg a epo:AccessTerm;
+  epo:definesProcurementProcedureInformationProvider epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OfflineAccessProvider_PuAZ93vcjRYhKiN4rMvUZg,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProcedureInformationProvider_PuAZ93vcjRYhKiN4rMvUZg .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_SUjgiTfthNR3jeStaMcRex a epo:AccessTerm;
   epo:hasPublicAccessURL "http://nonrestricteddocuments.com"^^xsd:anyURI;
   epo:involvesProcurementDocument epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_WvkQRV6pWSDNxxpPkuVwUq;
   epo:isProcurementDocumentRestricted false .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_TT87XZ7rfCixVuS4Z9trMH a epo:AccessTerm;
+  epo:definesProcurementProcedureInformationProvider epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OfflineAccessProvider_TT87XZ7rfCixVuS4Z9trMH,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProcedureInformationProvider_TT87XZ7rfCixVuS4Z9trMH .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_XnxqfcRqzA7sngzwrWyL3G a epo:AccessTerm;
   epo:hasDocumentRestrictionJustification <http://publications.europa.eu/resource/authority/communication-justification/tdf-non-av>;
@@ -98,6 +106,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_cvGnw3hJYztkzCgnhrJDW
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardEvaluationTerm_g9BZcQVSEYMdC6doz2wnjx
   a epo:AwardEvaluationTerm;
+  epo:hasAwardCriteriaEvaluationFormula "See the procurement document"@en;
   epo:hasAwardCriteriaOrderJustification "........"@en .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardingCentralPurchasingBody_U3RE4hoDTRa29J56Gmq3BL
@@ -434,6 +443,11 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_DynamicPurchaseSystemTechnicalUsage_
   a epo:DynamicPurchaseSystemTechnique;
   epo:hasDPSScope <http://publications.europa.eu/resource/authority/dps-usage/none> .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EmploymentInformationProvider_LynXyp22UHq9wSHKWpaZdf
+  a epo:EmploymentInformationProvider;
+  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001;
+  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0004 .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EmploymentInformationProvider_PuAZ93vcjRYhKiN4rMvUZg
   a epo:EmploymentInformationProvider;
   epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002 .
@@ -442,6 +456,16 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EmploymentInformationProvider_TT87XZ
   a epo:EmploymentInformationProvider;
   epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002 .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EmploymentInformationProvider_jd3pLTPdR98iydFAqeHECy
+  a epo:EmploymentInformationProvider;
+  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
+  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0004 .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EnvironmentalProtectionInformationProvider_8aZfaqyXTzH7E5VKgjGRqw
+  a epo:EnvironmentalProtectionInformationProvider;
+  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001;
+  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0003 .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EnvironmentalProtectionInformationProvider_8y8GPfmPvSRdBcci6WWcSi
   a epo:EnvironmentalProtectionInformationProvider;
   epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002 .
@@ -449,6 +473,11 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EnvironmentalProtectionInformationPr
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EnvironmentalProtectionInformationProvider_daUDPcwCUoxbJRjGb7tKNQ
   a epo:EnvironmentalProtectionInformationProvider;
   epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001 .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EnvironmentalProtectionInformationProvider_kT3MmJjcypmtRETGWnDMmc
+  a epo:EnvironmentalProtectionInformationProvider;
+  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
+  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0003 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_65B5ieqPopJApHPkYdhiAi
   a epo:ExclusionGround;
@@ -679,14 +708,14 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001 a epo:Lot;
   epo:hasPurpose epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotPurpose_BDTC4WRLKSCg4KipkdMxR8;
   epo:isCoveredByGPA true;
   epo:isSMESuitable true;
-  epo:isSubjectToLotSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_XnxqfcRqzA7sngzwrWyL3G,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_daUDPcwCUoxbJRjGb7tKNQ, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_fHHa5zNc2jy5cUXFhDq6nM,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTechnicalUsage_4qCitbxYVRfdbqxnYtJTZF,
+  epo:isSubjectToLotSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_TT87XZ7rfCixVuS4Z9trMH,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_XnxqfcRqzA7sngzwrWyL3G, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_daUDPcwCUoxbJRjGb7tKNQ,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_fHHa5zNc2jy5cUXFhDq6nM, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTechnicalUsage_4qCitbxYVRfdbqxnYtJTZF,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTerm_SsJtj5DGjqxKj6eVgR4GbT,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MultipleStageProcedureTerm_daUDPcwCUoxbJRjGb7tKNQ,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_NonDisclosureAgreementTerm_TT87XZ7rfCixVuS4Z9trMH,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OpeningTerm_QuUbCTvwqkE5rYfeGgqExM, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_VZxmrBG8UMc3RvpZcKCpvE,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SecurityClearanceTerm_TT87XZ7rfCixVuS4Z9trMH,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_bMTjo7a5Ke582iB4TXZmU8, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SecurityClearanceTerm_TT87XZ7rfCixVuS4Z9trMH,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_TT87XZ7rfCixVuS4Z9trMH,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_daUDPcwCUoxbJRjGb7tKNQ;
   epo:specifiesProcurementCriterion epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_4cgbfPEuSgC4MeB6X9HTss,
@@ -737,13 +766,14 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002 a epo:Lot;
   epo:isRecurrent false;
   epo:isSMESuitable true;
   epo:isSubjectToLotSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_8y8GPfmPvSRdBcci6WWcSi,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_Aim3sQTrJD92cok54ZhnWW, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_SUjgiTfthNR3jeStaMcRex,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardEvaluationTerm_g9BZcQVSEYMdC6doz2wnjx,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_Aim3sQTrJD92cok54ZhnWW, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_PuAZ93vcjRYhKiN4rMvUZg,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_SUjgiTfthNR3jeStaMcRex, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardEvaluationTerm_g9BZcQVSEYMdC6doz2wnjx,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_DesignContestRegimeTerm_PuAZ93vcjRYhKiN4rMvUZg,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTechnicalUsage_8APvjTVZXX8CxGPVJZoBww,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTerm_4pryWpjZoJQ6k9AhEGANFB,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MultipleStageProcedureTerm_8y8GPfmPvSRdBcci6WWcSi,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_bpDJYehUZE5dpNtnagJd4V, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SecurityClearanceTerm_PuAZ93vcjRYhKiN4rMvUZg,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_FsymrRPQVzLm3zkbgk3JgA, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_bpDJYehUZE5dpNtnagJd4V,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SecurityClearanceTerm_PuAZ93vcjRYhKiN4rMvUZg,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_28qA6sXPPZP6NSvA8FovHj,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_8y8GPfmPvSRdBcci6WWcSi,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_PuAZ93vcjRYhKiN4rMvUZg;
@@ -791,6 +821,14 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotsGroupValueMaximum_gLuU9xVSAhVSew
   epo:hasAmountValue 10000.0;
   epo:hasCurrency "EUR" .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Mediator_FsymrRPQVzLm3zkbgk3JgA a epo:Mediator;
+  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
+  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0006 .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Mediator_bMTjo7a5Ke582iB4TXZmU8 a epo:Mediator;
+  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001;
+  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0006 .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValueLot_BaGzsXLuGR4tRgDAxRPwS8
   a epo:MonetaryValue;
   epo:hasAmountValue 9999999.99;
@@ -836,14 +874,30 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Notice a epo:CompetitionNotice, epo:
   epo:announcesLot epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
   epo:announcesRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AcquiringCentralPurchasingBody_TftBQ7CiqCcyirLAwhsyEn,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardingCentralPurchasingBody_U3RE4hoDTRa29J56Gmq3BL,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Buyer_MT3gdCnJ9BA7aEqaGqKxAh, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EmploymentInformationProvider_PuAZ93vcjRYhKiN4rMvUZg,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Buyer_MT3gdCnJ9BA7aEqaGqKxAh, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EmploymentInformationProvider_LynXyp22UHq9wSHKWpaZdf,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EmploymentInformationProvider_PuAZ93vcjRYhKiN4rMvUZg,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EmploymentInformationProvider_TT87XZ7rfCixVuS4Z9trMH,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EmploymentInformationProvider_jd3pLTPdR98iydFAqeHECy,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EnvironmentalProtectionInformationProvider_8aZfaqyXTzH7E5VKgjGRqw,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EnvironmentalProtectionInformationProvider_8y8GPfmPvSRdBcci6WWcSi,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EnvironmentalProtectionInformationProvider_daUDPcwCUoxbJRjGb7tKNQ,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EnvironmentalProtectionInformationProvider_kT3MmJjcypmtRETGWnDMmc,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_JuryMember_cvGnw3hJYztkzCgnhrJDWV, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LeadBuyer_N4cgMQL3K4CA88AYBBwUNn,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Mediator_FsymrRPQVzLm3zkbgk3JgA, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Mediator_bMTjo7a5Ke582iB4TXZmU8,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OfflineAccessProvider_PuAZ93vcjRYhKiN4rMvUZg,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OfflineAccessProvider_TT87XZ7rfCixVuS4Z9trMH,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProcedureInformationProvider_PuAZ93vcjRYhKiN4rMvUZg,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProcedureInformationProvider_TT87XZ7rfCixVuS4Z9trMH,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementServiceProvider_f7UuQ7S8iGMkM7gCN4x35m,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewProcedureInformationProvider_FsymrRPQVzLm3zkbgk3JgA,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewProcedureInformationProvider_bMTjo7a5Ke582iB4TXZmU8,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Reviewer_FsymrRPQVzLm3zkbgk3JgA, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Reviewer_bMTjo7a5Ke582iB4TXZmU8,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TaxInformationProvider_UyJLB5UdNE5RM2ZpQVeTCV,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TaxInformationProvider_j5VcAZZjswFkX9mLn9opDA;
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TaxInformationProvider_j5VcAZZjswFkX9mLn9opDA,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderProcessor_PuAZ93vcjRYhKiN4rMvUZg,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderProcessor_TT87XZ7rfCixVuS4Z9trMH,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderReceiver_EzgHnVsFm5yZb2op3EXTjn,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderReceiver_ZRrbuPPWyxGgmdJHy5oG8a;
   epo:hasESenderDispatchDate "2023-03-23T20:59:32+01:00"^^xsd:dateTime;
   epo:hasFormType <http://publications.europa.eu/resource/authority/form-type/competition>;
   epo:hasNoticePublicationNumber "00675564-2023";
@@ -862,6 +916,18 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_NoticeIdentifier_cMBzh6pL4JRkiaCd4DW
   a adms:Identifier;
   epo:hasScheme "notice-id";
   skos:notation "14549263-b47b-4e59-96a1-2d0d13e19343" .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OfflineAccessProvider_PuAZ93vcjRYhKiN4rMvUZg
+  a epo:OfflineAccessProvider;
+  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
+  epo:hasContactPointInRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0002;
+  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_TPO-0002 .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OfflineAccessProvider_TT87XZ7rfCixVuS4Z9trMH
+  a epo:OfflineAccessProvider;
+  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001;
+  epo:hasContactPointInRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0002;
+  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_TPO-0002 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OpenTenderEventPlace_TpCFHZDentQZiC2NomrGLF
   a locn:Address;
@@ -1011,6 +1077,20 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_MnX8qyREnFMNLeS5MJAX9K
     epo:ProcedureTerm;
   epo:isSubmissionForAllLotsRequired true .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_PuAZ93vcjRYhKiN4rMvUZg a
+    epo:ProcedureTerm;
+  epo:definesInformationProvider epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EmploymentInformationProvider_jd3pLTPdR98iydFAqeHECy,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EnvironmentalProtectionInformationProvider_kT3MmJjcypmtRETGWnDMmc,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TaxInformationProvider_j5VcAZZjswFkX9mLn9opDA;
+  epo:definesMediator epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Mediator_FsymrRPQVzLm3zkbgk3JgA .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_TT87XZ7rfCixVuS4Z9trMH a
+    epo:ProcedureTerm;
+  epo:definesInformationProvider epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EmploymentInformationProvider_LynXyp22UHq9wSHKWpaZdf,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EnvironmentalProtectionInformationProvider_8aZfaqyXTzH7E5VKgjGRqw,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TaxInformationProvider_UyJLB5UdNE5RM2ZpQVeTCV;
+  epo:definesMediator epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Mediator_bMTjo7a5Ke582iB4TXZmU8 .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureValueEstimateExtension_9thMAaeveYJRewotgDGorG
   a epo:MonetaryValue;
   epo:hasAmountValue 247547.0;
@@ -1034,7 +1114,9 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_MnX8qyREnFMNLeS5MJAX9K a e
   epo:isAccelerated true;
   epo:isSubjectToProcedureSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_5ePSyM3yjeKrNdoLehDe7g,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_BniuuBzYtT7voNxpkh6A9M,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_MnX8qyREnFMNLeS5MJAX9K;
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_MnX8qyREnFMNLeS5MJAX9K,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_PuAZ93vcjRYhKiN4rMvUZg,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_TT87XZ7rfCixVuS4Z9trMH;
   dct:description "Description ---"@en;
   dct:title "Procurement Title ---"@en;
   adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureIdentifier_MnX8qyREnFMNLeS5MJAX9K .
@@ -1070,6 +1152,18 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_ZW3q5LFba2qbfBYo
   epo:hasOfficialLanguage <http://publications.europa.eu/resource/authority/language/ENG>,
     <http://publications.europa.eu/resource/authority/language/FRA>;
   epo:hasUnofficialLanguage <http://publications.europa.eu/resource/authority/language/CAT> .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProcedureInformationProvider_PuAZ93vcjRYhKiN4rMvUZg
+  a epo:ProcurementProcedureInformationProvider;
+  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
+  epo:hasContactPointInRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0001;
+  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_TPO-0001 .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProcedureInformationProvider_TT87XZ7rfCixVuS4Z9trMH
+  a epo:ProcurementProcedureInformationProvider;
+  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001;
+  epo:hasContactPointInRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0001;
+  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_TPO-0001 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProcessInformation_Bh5qwhngs3Hc9wnu7VDUTo
   a epo:ProcurementProcessInformation;
@@ -1111,11 +1205,37 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Quantity_MnX8qyREnFMNLeS5MJAX9K a ep
   epo:hasQuantityValue 1000.0;
   epo:hasUnitCode <http://publications.europa.eu/resource/authority/measurement-unit/HUR> .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewProcedureInformationProvider_FsymrRPQVzLm3zkbgk3JgA
+  a epo:ReviewProcedureInformationProvider;
+  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
+  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_TPO-0001 .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewProcedureInformationProvider_bMTjo7a5Ke582iB4TXZmU8
+  a epo:ReviewProcedureInformationProvider;
+  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001;
+  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_TPO-0001 .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_FsymrRPQVzLm3zkbgk3JgA a epo:ReviewTerm;
+  epo:definesReviewProcedureInformationProvider epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewProcedureInformationProvider_FsymrRPQVzLm3zkbgk3JgA;
+  epo:definesReviewer epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Reviewer_FsymrRPQVzLm3zkbgk3JgA .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_VZxmrBG8UMc3RvpZcKCpvE a epo:ReviewTerm;
   epo:hasReviewDeadlineInformation "Review Deadline Description ---"@en .
 
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_bMTjo7a5Ke582iB4TXZmU8 a epo:ReviewTerm;
+  epo:definesReviewProcedureInformationProvider epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewProcedureInformationProvider_bMTjo7a5Ke582iB4TXZmU8;
+  epo:definesReviewer epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Reviewer_bMTjo7a5Ke582iB4TXZmU8 .
+
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_bpDJYehUZE5dpNtnagJd4V a epo:ReviewTerm;
   epo:hasReviewDeadlineInformation "Review Deadline Description ---"@en .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Reviewer_FsymrRPQVzLm3zkbgk3JgA a epo:Reviewer;
+  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
+  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0005 .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Reviewer_bMTjo7a5Ke582iB4TXZmU8 a epo:Reviewer;
+  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001;
+  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0005 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SecurityClearanceTerm_PuAZ93vcjRYhKiN4rMvUZg
   a epo:SecurityClearanceTerm;
@@ -1230,6 +1350,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_28qA6sXPPZP6NSvA8FovH
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_8y8GPfmPvSRdBcci6WWcSi
   a epo:SubmissionTerm;
+  epo:definesTenderProcessor epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderProcessor_PuAZ93vcjRYhKiN4rMvUZg;
   epo:hasEAuctionURL "https://electronic-auction.com"^^xsd:anyURI;
   epo:hasECataloguePermission <http://publications.europa.eu/resource/authority/permission/allowed>;
   epo:hasESubmissionPermission <http://publications.europa.eu/resource/authority/permission/not-allowed>;
@@ -1244,6 +1365,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_8y8GPfmPvSRdBcci6WWcS
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_PuAZ93vcjRYhKiN4rMvUZg
   a epo:SubmissionTerm;
+  epo:definesTenderReceiver epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderReceiver_EzgHnVsFm5yZb2op3EXTjn;
   epo:hasGuaranteeDescription "Guarantee Required Description ---"@en;
   epo:hasLanguage <http://publications.europa.eu/resource/authority/language/ENG>, <http://publications.europa.eu/resource/authority/language/FRA>;
   epo:isAdvancedElectronicSignatureRequired true;
@@ -1251,6 +1373,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_PuAZ93vcjRYhKiN4rMvUZ
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_TT87XZ7rfCixVuS4Z9trMH
   a epo:SubmissionTerm;
+  epo:definesTenderReceiver epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderReceiver_ZRrbuPPWyxGgmdJHy5oG8a;
   epo:hasGuaranteeDescription "Guarantee Required Description ---"@en;
   epo:hasLanguage <http://publications.europa.eu/resource/authority/language/ENG>, <http://publications.europa.eu/resource/authority/language/FRA>;
   epo:hasSubmissionURL "http://tender-submit.fin-adm.com/esubmission"^^xsd:anyURI;
@@ -1259,6 +1382,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_TT87XZ7rfCixVuS4Z9trM
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_daUDPcwCUoxbJRjGb7tKNQ
   a epo:SubmissionTerm;
+  epo:definesTenderProcessor epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderProcessor_TT87XZ7rfCixVuS4Z9trMH;
   epo:hasEAuctionURL "https://electronic-auction.com"^^xsd:anyURI;
   epo:hasECataloguePermission <http://publications.europa.eu/resource/authority/permission/allowed>;
   epo:hasESubmissionPermission <http://publications.europa.eu/resource/authority/permission/required>;
@@ -1277,6 +1401,30 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TaxInformationProvider_UyJLB5UdNE5RM
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TaxInformationProvider_j5VcAZZjswFkX9mLn9opDA
   a epo:TaxInformationProvider;
   epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
+  epo:hasContactPointInRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0001;
+  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_TPO-0001 .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderProcessor_PuAZ93vcjRYhKiN4rMvUZg
+  a epo:TenderProcessor;
+  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
+  epo:hasContactPointInRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0003;
+  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_TPO-0003 .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderProcessor_TT87XZ7rfCixVuS4Z9trMH
+  a epo:TenderProcessor;
+  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001;
+  epo:hasContactPointInRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0003;
+  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_TPO-0003 .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderReceiver_EzgHnVsFm5yZb2op3EXTjn
+  a epo:TenderReceiver;
+  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
+  epo:hasContactPointInRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0001;
+  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_TPO-0001 .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderReceiver_ZRrbuPPWyxGgmdJHy5oG8a
+  a epo:TenderReceiver;
+  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001;
   epo:hasContactPointInRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0001;
   epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_TPO-0001 .
 

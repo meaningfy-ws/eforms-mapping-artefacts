@@ -104,10 +104,10 @@ tedm:MG-CompetitionNotice_ND-Root
                     rr:parentTriplesMap tedm:MG-AcquiringCentralPurchasingBody_ND-Organization
                 ] ;
         ] ;
+    # we don't need to add the condition from OPT-301-Lot-*
+    # as the roles will always be there (only the predicates of the roles are conditioned)
     rr:predicateObjectMap
         [
-            # we don't need to add the condition from OPT-301-Lot-FiscalLegis
-            # as the role will always be there (only the predicates of the role are conditioned)
             rdfs:label "MG-TaxInformationProvider-announcesRole-CompetitionNotice" ;
             rdfs:comment "MG-TaxInformationProvider-announcesRole-CompetitionNotice under ND-LotFiscalLegislation" ;
             rr:predicate epo:announcesRole ;
@@ -118,6 +118,92 @@ tedm:MG-CompetitionNotice_ND-Root
         ] ;
     rr:predicateObjectMap
         [
+            rdfs:label "MG-EnvironmentalProtectionInformationProvider-announcesRole-CompetitionNotice" ;
+            rdfs:comment "MG-EnvironmentalProtectionInformationProvider-announcesRole-CompetitionNotice under ND-LotEnvironmentalLegislation" ;
+            rr:predicate epo:announcesRole ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-EnvironmentalProtectionInformationProvider_ND-LotEnvironmentalLegislation ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "MG-EmploymentInformationProvider-announcesRole-CompetitionNotice" ;
+            rdfs:comment "MG-EmploymentInformationProvider-announcesRole-CompetitionNotice under ND-LotEmploymentLegislation" ;
+            rr:predicate epo:announcesRole ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-EmploymentInformationProvider_ND-LotEmploymentLegislation ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "MG-TenderReceiver-announcesRole-CompetitionNotice" ;
+            rdfs:comment "MG-TenderReceiver-announcesRole-CompetitionNotice under ND-TenderRecipient" ;
+            rr:predicate epo:announcesRole ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-TenderReceiver_ND-TenderRecipient ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap [
+            rdfs:label   "MG-TenderProcessor-announcesRole-CompetitionNotice" ;
+            rdfs:comment "MG-TenderProcessor-announcesRole-CompetitionNotice under ND-LotTenderingTerms" ;
+            rr:predicate epo:announcesRole ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-TenderProcessor_ND-LotTenderingTerms ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap [
+            rdfs:label "MG-ProcurementProcedureInformationProvider_ND-announcesRole-CompetitionNotice" ;
+            rdfs:comment "MG-ProcurementProcedureInformationProvider_ND-announcesRole-CompetitionNotice under ND-LotTenderingTerms" ;
+            rr:predicate epo:announcesRole ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-ProcurementProcedureInformationProvider_ND-LotTenderingTerms ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap [
+            rdfs:label "MG-OfflineAccessProvider_ND-announcesRole-CompetitionNotice" ;
+            rdfs:comment "MG-OfflineAccessProvider_ND-announcesRole-CompetitionNotice under ND-LotTenderingTerms" ;
+            rr:predicate epo:announcesRole ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-OfflineAccessProvider_ND-LotTenderingTerms ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "MG-Reviewer_ND-announcesRole-CompetitionNotice" ;
+            rdfs:comment "MG-Reviewer_ND-announcesRole-CompetitionNotice under ND-LotReviewTerms" ;
+            rr:predicate epo:announcesRole ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-Reviewer_ND-LotReviewTerms ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label   "MG-ReviewProcedureInformationProvider_ND-announcesRole-CompetitionNotice" ;
+            rdfs:comment "MG-ReviewProcedureInformationProvider_ND-announcesRole-CompetitionNotice under ND-LotReviewTerms" ;
+            rr:predicate epo:announcesRole ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-ReviewProcedureInformationProvider_ND-LotReviewTerms ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "MG-Mediator_ND-announcesRole-CompetitionNotice" ;
+            rdfs:comment "MG-Mediator_ND-announcesRole-CompetitionNotice under ND-LotReviewTerms" ;
+            rr:predicate epo:announcesRole ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-Mediator_ND-LotReviewTerms ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap [
             rdfs:label "MG-Lot-announcesLot-CompetitionNotice" ;
             rdfs:comment "MG-Lot-announcesLot-CompetitionNotice under ND-Lot" ;
             rr:predicate epo:announcesLot ;
@@ -130,23 +216,23 @@ tedm:MG-CompetitionNotice_ND-Root
         [
             rdfs:label "MG-EmploymentInformationProvider-announcesRole-CompetitionNotice" ;
             rdfs:comment "MG-EmploymentInformationProvider-announcesRole-CompetitionNotice under ND-LotEmploymentLegislation" ;
-            rr:predicate epo:announcesRole    ;
+            rr:predicate epo:announcesRole ;
             rr:objectMap
                 [
                     tedm:minSDKVersion "1.5.12" ;
                     rr:parentTriplesMap tedm:MG-EmploymentInformationProvider-announcesRole-CompetitionNotice_ND-LotEmploymentLegislation;
-                 ] ;
+                ] ;
         ] ;
      rr:predicateObjectMap
         [
             rdfs:label "BT-46-Lot" ;
-            rdfs:comment "JuryMemberName of MG-CompetitionNotice  under ND-AwardingTermsJuryMember" ;
-            rr:predicate epo:announcesRole    ;
+            rdfs:comment "JuryMemberName of MG-CompetitionNotice under ND-AwardingTermsJuryMember" ;
+            rr:predicate epo:announcesRole ;
             rr:objectMap
                 [
                     tedm:minSDKVersion "1.8" ;
                     rr:parentTriplesMap tedm:MG-JuryMember-announcesRole-CompetitionNotice_ND-AwardingTermsJuryMember;
-                 ] ;
+                ] ;
         ] ;
     rr:predicateObjectMap
         [
@@ -157,7 +243,7 @@ tedm:MG-CompetitionNotice_ND-Root
                 [
                     tedm:minSDKVersion "1.5.12" ;
                     rr:parentTriplesMap tedm:MG-EnvironmentalProtectionInformationProvider-announcesRole-CompetitionNotice_ND-LotTenderingTerms;
-                 ] ;
+                ] ;
         ] ;
 .
 
@@ -408,7 +494,7 @@ tedm:MG-Lot-contextualisedBy-EmploymentInformationProvider-announcesRole-Competi
 .
 
 tedm:MG-Person-playedBy-JuryMember-announcesRole-CompetitionNotice_ND-AwardingTermsJuryMember a rr:TriplesMap ;
-rdfs:label "MG-Person";
+    rdfs:label "MG-Person";
     rml:logicalSource
         [
             rml:source "data/source.xml" ;
@@ -436,7 +522,7 @@ rdfs:label "MG-Person";
 .
 
 tedm:MG-JuryMember-announcesRole-CompetitionNotice_ND-AwardingTermsJuryMember a rr:TriplesMap ;
-rdfs:label "MG-JuryMember";
+    rdfs:label "MG-JuryMember";
     rml:logicalSource
         [
             rml:source "data/source.xml" ;

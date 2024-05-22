@@ -48,6 +48,62 @@ tedm:MG-Procedure_ND-Root a rr:TriplesMap ;
                     rr:parentTriplesMap tedm:MG-Identifier-identifier-Procedure-refersToProcedure-Notice_ND-Root ;
                 ]
         ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "ProcedureTerm" ;
+            rdfs:comment "Composition relationship between Procedure and ProcedureTerm" ;
+            rr:predicate epo:isSubjectToProcedureSpecificTerm ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-LotFiscalLegislation ;
+                    rr:joinCondition [
+                        rr:child  "path(.)" ;
+                        rr:parent "path(../../..)" ;
+                    ] ;
+                ]
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "ProcedureTerm" ;
+            rdfs:comment "Composition relationship between Procedure and ProcedureTerm" ;
+            rr:predicate epo:isSubjectToProcedureSpecificTerm ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-LotEnvironmentalLegislation ;
+                    rr:joinCondition [
+                        rr:child  "path(.)" ;
+                        rr:parent "path(../../..)" ;
+                    ] ;
+                ]
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "ProcedureTerm" ;
+            rdfs:comment "Composition relationship between Procedure and ProcedureTerm" ;
+            rr:predicate epo:isSubjectToProcedureSpecificTerm ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-LotEmploymentLegislation ;
+                    rr:joinCondition [
+                        rr:child  "path(.)" ;
+                        rr:parent "path(../../..)" ;
+                    ] ;
+                ]
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "ProcedureTerm" ;
+            rdfs:comment "Composition relationship between Procedure and ProcedureTerm" ;
+            rr:predicate epo:isSubjectToProcedureSpecificTerm ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-LotReviewTerms ;
+                    rr:joinCondition [
+                        rr:child  "path(.)" ;
+                        rr:parent "path(../../..)" ;
+                    ] ;
+                ]
+        ] ;
 .
 
 tedm:MG-Identifier-identifier-Procedure-refersToProcedure-Notice_ND-Root a rr:TriplesMap ;

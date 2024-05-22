@@ -131,7 +131,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
         ];
     rr:predicateObjectMap
         [
-            rdfs:label "BT-63-Lot";
+            rdfs:label "BT-63-Lot, BT-769-Lot, OPT-301-Lot-TenderEval connection to ProcedureTerm, BT-97-Lot, BT-98-Lot";
             rr:predicate epo:isSubjectToLotSpecificTerm ;
             rr:objectMap
                 [
@@ -196,7 +196,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
         ];
       rr:predicateObjectMap
         [
-            rdfs:label "BT-18-Lot";
+            rdfs:label "Composition relationship between Lot and SubmissionTerm";
             rr:predicate epo:isSubjectToLotSpecificTerm ;
             rr:objectMap
                 [
@@ -339,6 +339,18 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
         ];
     rr:predicateObjectMap
         [
+            rdfs:label "OPT-301-Lot-AddInfo, OPT-301-Lot-DocProvider" ;
+            rr:predicate epo:isSubjectToLotSpecificTerm ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-AccessTerm-isSubjectToLotSpecificTerm-Lot_ND-LotTenderingTerms ;
+                    rr:joinCondition [
+                            rr:child "path(.)" ;
+                            rr:parent "path(..)" ;
+                    ] ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap [
             rdfs:label "BT-124-Lot";
             rr:predicate epo:usesChannel ;
             rr:objectMap
@@ -507,7 +519,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
         ];
     rr:predicateObjectMap
         [
-            rdfs:label "BT-733-Lot";
+            rdfs:label "BT-733-Lot, BT-543-Lot" ;
             rr:predicate epo:isSubjectToLotSpecificTerm ;
             rr:objectMap
                 [
@@ -609,6 +621,19 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     ];
                 ] ;
         ];
+    rr:predicateObjectMap
+        [
+            rdfs:label "OPT-301-Lot-ReviewOrg, OPT-301-Lot-ReviewInfo" ;
+            rr:predicate epo:isSubjectToLotSpecificTerm ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-ReviewTerm-isSubjectToLotSpecificTerm-Lot_ND-LotReviewTerms ;
+                    rr:joinCondition [
+                        rr:child "path(.)" ;
+                        rr:parent "path(../..)" ;
+                    ] ;
+                ] ;
+        ] ;
     rr:predicateObjectMap
         [
             rdfs:label "BT-736-Lot";
@@ -2506,7 +2531,30 @@ tedm:MG-AwardEvaluationTerm-isSubjectToLotSpecificTerm-Lot_ND-LotAwardCriteria a
                         ]
                     ] ;
                 ] ;
-        ]
+        ] ;
+    rr:predicateObjectMap [
+            rdfs:label "BT-543-Lot" ;
+            rdfs:comment "Award Criteria Complicated of MG-AwardCriterion under ND-LotAwardCriteria" ;
+            rr:predicate epo:hasAwardCriteriaEvaluationFormula ;
+            rr:objectMap
+                [
+                    rml:reference "if(exists(cbc:CalculationExpression)) then cbc:CalculationExpression else null" ;
+                    rml:languageMap [
+                        fnml:functionValue [
+                            rr:predicateObjectMap [
+                                rr:predicate idlab-fn:str ;
+                                rr:objectMap [
+                                    rml:reference "cbc:CalculationExpression/@languageID"
+                                ]
+                            ],
+                            tedm:idlab-fn_executes_lookup,
+                            tedm:idlab-fn_inputFile_language,
+                            tedm:idlab-fn_fromColumn_code,
+                            tedm:idlab-fn_toColumn_code
+                        ]
+                    ] ;
+                ] ;
+            ] ;
 .
 
 tedm:MG-MultipleStageProcedureTerm-isSubjectToLotSpecificTerm-Lot_ND-AwardingTerms a rr:TriplesMap ;
@@ -2875,6 +2923,20 @@ tedm:MG-SubmissionTerm-isSubjectToLotSpecificTerm-Lot_ND-LotTenderingTerms a rr:
                     rr:joinCondition [
                         rr:child "path(.)";
                         rr:parent "path(..)";
+                    ] ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "OPT-301-Lot-TenderEval" ;
+            rdfs:comment "Connection of MG-SubmissionTerm to MG-TenderProcessor under ND-LotTenderingTerms" ;
+            rr:predicate epo:definesTenderProcessor ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-TenderProcessor_ND-LotTenderingTerms ;
+                    rr:joinCondition [
+                        rr:child "path(.)" ;
+                        rr:parent "path(.)" ;
                     ] ;
                 ] ;
         ] ;
@@ -3668,6 +3730,20 @@ tedm:MG-SubmissionTerm-isSubjectToLotSpecificTerm-Lot_ND-TenderRecipient a rr:Tr
                     rr:datatype xsd:anyURI;
                 ] ;
         ];
+    rr:predicateObjectMap
+        [
+            rdfs:label "OPT-301-Lot-TenderReceipt" ;
+            rdfs:comment "Connection of MG-SubmissionTerm to MG-TenderReceiver under ND-TenderRecipient" ;
+            rr:predicate epo:definesTenderReceiver ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-TenderReceiver_ND-TenderRecipient ;
+                    rr:joinCondition [
+                        rr:child "path(.)" ;
+                        rr:parent "path(.)" ;
+                    ] ;
+                ] ;
+        ] ;
 .
 
 tedm:MG-ProcurementDocument-involvesProcurementDocument-AccessTerm-isSubjectToLotSpecificTerm-Lot_ND-LotDocOfficialLanguage a rr:TriplesMap ;
@@ -4040,6 +4116,50 @@ rdfs:label "MG-SpecificDuration";
         ]
 .
 
+tedm:MG-ReviewTerm-isSubjectToLotSpecificTerm-Lot_ND-LotReviewTerms a rr:TriplesMap ;
+    rdfs:label "MG-ReviewTerm" ;
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:AppealTerms" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-LotReviewTerms" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ReviewTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rr:class epo:ReviewTerm
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "OPT-301-Lot-ReviewOrg" ;
+            rdfs:comment "Review Organization Technical Identifier Reference of MG-ReviewTerm under ND-LotReviewTerms" ;
+            rr:predicate epo:definesReviewer ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-Reviewer_ND-LotReviewTerms ;
+                    rr:joinCondition [
+                        rr:child  "path(.)" ;
+                        rr:parent "path(.)" ;
+                    ] ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "OPT-301-Lot-ReviewInfo" ;
+            rdfs:comment "Review Info Provider Technical Identifier Reference of MG-ReviewTerm under ND-LotReviewTerms" ;
+            rr:predicate epo:definesReviewProcedureInformationProvider ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-ReviewProcedureInformationProvider_ND-LotReviewTerms ;
+                    rr:joinCondition [
+                        rr:child  "path(.)" ;
+                        rr:parent "path(.)" ;
+                    ] ;
+                ] ;
+         ] ;
+.
+
 # this is an example of an object referred to by multiple top-level subjects (all Lots) at orthogonal XPaths
 tedm:MG-ExclusionGround-specifiesProcurementCriterion-Lot_ND-ExclusionGrounds a rr:TriplesMap ;
     rdfs:label "MG-ExclusionGround";
@@ -4283,6 +4403,51 @@ tedm:MG-InnovativeProcurement-fulfillsStrategicProcurement-Lot_ND-LotInnovativeA
                     rr:joinCondition [
                         rr:child  "if (/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:ProcurementProject/cac:ProcurementAdditionalType[cbc:ProcurementTypeCode/@listName='innovative-acquisition']/cbc:ProcurementTypeCode[@listName='innovative-acquisition']) then cbc:ProcurementTypeCode else null";
                         rr:parent "code.value" ;
+                    ] ;
+                ] ;
+        ] ;
+.
+
+tedm:MG-AccessTerm-isSubjectToLotSpecificTerm-Lot_ND-LotTenderingTerms a rr:TriplesMap ;
+    rdfs:label "MG-AccessTerm" ;
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-LotTenderingTerms" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_AccessTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rr:class epo:AccessTerm
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "OPT-301-Lot-AddInfo" ;
+            rdfs:comment "Additional Info Provider Technical Identifier Reference of MG-AccessTerm under ND-LotTenderingTerms" ;
+            rr:predicate epo:definesProcurementProcedureInformationProvider ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-ProcurementProcedureInformationProvider_ND-LotTenderingTerms ;
+                    rr:joinCondition [
+                        rr:child  "path(.)" ;
+                        rr:parent "path(.)" ;
+                    ] ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label   "OPT-301-Lot-DocProvider" ;
+            rdfs:comment "Document Provider Technical Identifier Reference of MG-AccessTerm under ND-LotTenderingTerms" ;
+            rr:predicate epo:definesProcurementProcedureInformationProvider ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-OfflineAccessProvider_ND-LotTenderingTerms ;
+                    rr:joinCondition
+                     [
+                        rr:child  "path(.)" ;
+                        rr:parent "path(.)" ;
                     ] ;
                 ] ;
         ] ;

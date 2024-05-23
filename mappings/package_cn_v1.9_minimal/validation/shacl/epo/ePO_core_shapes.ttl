@@ -1497,28 +1497,28 @@ core-shape:time-Duration a sh:NodeShape ;
 
 core-shape:adms-Identifier-adms-schemaAgency a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The name of the agency that issued the identifier." ;
     sh:name "Schema agency" ;
     sh:path adms:schemaAgency .
 
 core-shape:adms-Identifier-epo-hasScheme a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The name of the identification scheme." ;
     sh:name "Has scheme" ;
     sh:path :hasScheme .
 
 core-shape:adms-Identifier-epo-hasSchemeVersion a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The version of the identification scheme." ;
     sh:name "Has scheme version" ;
     sh:path :hasSchemeVersion .
 
 core-shape:adms-Identifier-skos-notation a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The literal identifying an entity, like a person or an object." ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
@@ -1533,7 +1533,7 @@ core-shape:cccev-Constraint-cccev-constrains a sh:PropertyShape ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/m8g/constrains> ?that . ?that <http://data.europa.eu/m8g/constrains> ?this .}" ] .
 
 core-shape:cccev-Constraint-epo-hasThresholdType a sh:PropertyShape ;
-    sh:class at-voc:number-threshold ;
+    sh:nodeKind sh:IRI ;
     sh:description "The method to interpret the threshold value as minimum or a maximum. WG Approval 17/09/2019" ;
     sh:name "Has threshold type" ;
     sh:path :hasThresholdType .
@@ -1565,21 +1565,21 @@ core-shape:cccev-Criterion-cccev-weight a sh:PropertyShape ;
 
 core-shape:cccev-Criterion-cccev-weightingConsiderationDescription a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "Explanation of how the weighting of a Criterion is to be used. Additional Information: This description gives the view of the creator of the Criterion weights on how to interpret and use them during the evaluation process." ;
     sh:maxCount 1 ;
     sh:name "Weighting consideration description" ;
     sh:path cccev:weightingConsiderationDescription .
 
 core-shape:cccev-Criterion-dct-type a sh:PropertyShape ;
-    sh:class at-voc:criterion ;
+    sh:nodeKind sh:IRI ;
     sh:description "Category to which the Requirement belongs." ;
     sh:maxCount 1 ;
     sh:name "Type" ;
     sh:path dcterms:type .
 
 core-shape:cccev-Evidence-cccev-confidentialityLevelType a sh:PropertyShape ;
-    sh:class at-voc:confidentiality-level ;
+    sh:nodeKind sh:IRI ;
     sh:description "Security classification assigned to an Evidence e.g. classified, sensitive, public. Additional Information: Classifications should be defined by an organisation/country as an outcome of a security assessment." ;
     sh:maxCount 1 ;
     sh:name "Confidentiality level type" ;
@@ -1617,14 +1617,14 @@ core-shape:cccev-InformationConcept-adms-identifier a sh:PropertyShape ;
 
 core-shape:cccev-InformationConcept-dct-description a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. WG Approval 30/05/2023" ;
     sh:name "Description" ;
     sh:path dcterms:description .
 
 core-shape:cccev-InformationConcept-skos-prefLabel a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The preferred lexical label for a resource, in a given language. WG approval 30/05/2023" ;
     sh:name "Pref label" ;
     sh:path skos:prefLabel .
@@ -1646,7 +1646,7 @@ core-shape:cccev-Requirement-cccev-hasRequirement a sh:PropertyShape ;
 
 core-shape:cccev-Requirement-dct-description a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. WG Approval 30/05/2023" ;
     sh:maxCount 1 ;
     sh:name "Description" ;
@@ -1654,7 +1654,7 @@ core-shape:cccev-Requirement-dct-description a sh:PropertyShape ;
 
 core-shape:cccev-Requirement-skos-prefLabel a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The preferred lexical label for a resource, in a given language. WG approval 30/05/2023" ;
     sh:maxCount 1 ;
     sh:name "Pref label" ;
@@ -1662,28 +1662,28 @@ core-shape:cccev-Requirement-skos-prefLabel a sh:PropertyShape ;
 
 core-shape:cpov-ContactPoint-cpov-email a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The email of the Organisation." ;
     sh:name "Email" ;
     sh:path cccev:email .
 
 core-shape:cpov-ContactPoint-cpov-telephone a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "A telephone number through which the Contact Point can be contacted." ;
     sh:name "Telephone" ;
     sh:path cccev:telephone .
 
 core-shape:cpov-ContactPoint-dct-description a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. WG Approval 30/05/2023" ;
     sh:name "Description" ;
     sh:path dcterms:description .
 
 core-shape:cpov-ContactPoint-epo-hasContactName a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "A short text by which a contact is known or referred to. WG Approval: 27/01/2022" ;
     sh:maxCount 1 ;
     sh:name "Has contact name" ;
@@ -1691,7 +1691,7 @@ core-shape:cpov-ContactPoint-epo-hasContactName a sh:PropertyShape ;
 
 core-shape:cpov-ContactPoint-epo-hasFax a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The fax number used to reach a person or an organisation." ;
     sh:name "Has fax" ;
     sh:path :hasFax .
@@ -1714,7 +1714,7 @@ core-shape:cpov-ContactPoint-locn-address a sh:PropertyShape ;
 
 core-shape:cv-Channel-dct-description a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. WG Approval 30/05/2023" ;
     sh:maxCount 1 ;
     sh:name "Description" ;
@@ -1742,13 +1742,13 @@ core-shape:dct-Location-adms-identifier a sh:PropertyShape ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://www.w3.org/ns/adms#identifier> ?that . ?that <http://www.w3.org/ns/adms#identifier> ?this .}" ] .
 
 core-shape:dct-Location-epo-hasCountryCode a sh:PropertyShape ;
-    sh:class at-voc:country ;
+    sh:nodeKind sh:IRI ;
     sh:maxCount 1 ;
     sh:name "Has country code" ;
     sh:path :hasCountryCode .
 
 core-shape:dct-Location-epo-hasNutsCode a sh:PropertyShape ;
-    sh:class at-voc:nuts ;
+    sh:nodeKind sh:IRI ;
     sh:maxCount 1 ;
     sh:name "Has nuts code" ;
     sh:path :hasNutsCode .
@@ -1770,7 +1770,7 @@ core-shape:dct-Location-locn-geographicIdentifier a sh:PropertyShape ;
 
 core-shape:dct-Location-locn-geographicName a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "A textual description for a Location. Additional Information: The INSPIRE Data Specification on Geographical Names provides a detailed model for describing a 'named place', including methods for providing multiple names in multiple scripts. This is beyond what is necessary for the Core Location Vocabulary but, importantly, the concept of a geographic name used here is consistent. A geographic name is a proper noun applied to a spatial object. Taking the example used in the INSPIRE document (page 15), the following are all valid geographic names for the Greek capital: - \"Aθnνa\"@gr-Grek (the Greek endonym written in the Greek script) - \"Ath&#237;na\"@gr-Latn (the standard Romanisation of the endonym) - \"Athens\"@en (the English language exonym) INSPIRE has a detailed (XML-based) method of providing metadata about a geographic name and in XML-data sets that may be the most appropriate method to follow. When using the Core Location Vocabulary in data sets that are not focussed on environmental/geographical data (the use case for INSPIRE), the Code datatype or a simple language identifier may be used to provide such metadata. The country codes defined in ISO 3166 may be used as geographic names and these are generally preferred over either the long form or short form of a country's name (as they are less error prone). The Publications Office of the European Union recommends the use of ISO 3166-1 codes for countries in all cases except two: - use 'UK' in preference to the ISO 3166 code GB for the United Kingdom; - use 'EL' in preference to the ISO 3166 code GR for Greece. Where a country has changed its name or no longer exists (such as Czechoslovakia, Yugoslavia etc.) use the ISO 3166-3 code." ;
     sh:maxCount 1 ;
     sh:name "Geographic name" ;
@@ -1822,7 +1822,7 @@ core-shape:epo-AccessTerm-epo-hasAdditionalInformationDeadline a sh:PropertyShap
     sh:path :hasAdditionalInformationDeadline .
 
 core-shape:epo-AccessTerm-epo-hasDocumentRestrictionJustification a sh:PropertyShape ;
-    sh:class at-voc:communication-justification ;
+    sh:nodeKind sh:IRI ;
     sh:description "An explanation about the reasons why some procurement documents are restricted. Additional Information: This corresponds in eForms to BT-707 Documents Restricted Justification. WG Approval 09/03/2021" ;
     sh:maxCount 1 ;
     sh:name "Has document restriction justification" ;
@@ -1867,14 +1867,14 @@ core-shape:epo-AccessTerm-epo-refersToPlannedPart a sh:PropertyShape ;
 
 core-shape:epo-AgentInRole-dct-description a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. WG Approval 30/05/2023" ;
     sh:name "Description" ;
     sh:path dcterms:description .
 
 core-shape:epo-AgentInRole-dct-title a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "A name given to the resource. WG approval 30/05/2023" ;
     sh:name "Title" ;
     sh:path dcterms:title .
@@ -1915,7 +1915,7 @@ core-shape:epo-AwardCriterion-epo-hasAwardCriteriaStatedInProcurementDocuments a
     sh:path :hasAwardCriteriaStatedInProcurementDocuments .
 
 core-shape:epo-AwardCriterion-epo-hasAwardCriterionType a sh:PropertyShape ;
-    sh:class at-voc:award-criterion-type ;
+    sh:nodeKind sh:IRI ;
     sh:description "Category of award criterion." ;
     sh:maxCount 1 ;
     sh:name "Has award criterion type" ;
@@ -1930,7 +1930,7 @@ core-shape:epo-AwardCriterion-epo-hasFixedValue a sh:PropertyShape ;
     sh:path :hasFixedValue .
 
 core-shape:epo-AwardCriterion-epo-hasFixedValueType a sh:PropertyShape ;
-    sh:class at-voc:number-fixed ;
+    sh:nodeKind sh:IRI ;
     sh:description "The method to interpret the fixed value as pertaining to a total or unit. WG Approval 17/09/2019" ;
     sh:maxCount 1 ;
     sh:name "Has fixed value type" ;
@@ -1945,7 +1945,7 @@ core-shape:epo-AwardDecision-epo-comprisesAwardOutcome a sh:PropertyShape ;
 
 core-shape:epo-AwardDecision-epo-hasAdditionalNonAwardJustification a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "Further justification for the non award . Additional information: This is generally used when the non award reason code is set to \"Other\". WG: 18/01/2022" ;
     sh:maxCount 1 ;
     sh:name "Has additional non award justification" ;
@@ -1961,14 +1961,14 @@ core-shape:epo-AwardDecision-epo-hasAwardDecisionDate a sh:PropertyShape ;
 
 core-shape:epo-AwardEvaluationTerm-epo-hasAwardCriteriaEvaluationFormula a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The mathematical equation or any other description used for complicated weighing of criteria (e.g. non-linear weighing, the analytic hierarchy process) when a weighing cannot be expressed per criterion. Additional Information: This corresponds in eForms to BT-543 Award Criteria Complicated." ;
     sh:name "Has award criteria evaluation formula" ;
     sh:path :hasAwardCriteriaEvaluationFormula .
 
 core-shape:epo-AwardEvaluationTerm-epo-hasAwardCriteriaOrderJustification a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The justification for only indicating the award criteria's order of importance, not their weighing. Additional Information: This corresponds in eForms to BT-733 Award Criteria Order Justification." ;
     sh:maxCount 1 ;
     sh:name "Has award criteria order justification" ;
@@ -2006,7 +2006,7 @@ core-shape:epo-AwardOutcome-epo-comprisesTenderAwardOutcome a sh:PropertyShape ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#comprisesTenderAwardOutcome> ?that . ?that <http://data.europa.eu/a4g/ontology#comprisesTenderAwardOutcome> ?this .}" ] .
 
 core-shape:epo-AwardOutcome-epo-hasAwardStatus a sh:PropertyShape ;
-    sh:class at-voc:winner-selection-status ;
+    sh:nodeKind sh:IRI ;
     sh:description "Indicates whether the lot is awarded, not awarded or still open. WG Approval 03/12/2019" ;
     sh:maxCount 1 ;
     sh:name "Has award status" ;
@@ -2030,7 +2030,7 @@ core-shape:epo-AwardOutcome-epo-hasBargainPrice a sh:PropertyShape ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#hasBargainPrice> ?that . ?that <http://data.europa.eu/a4g/ontology#hasBargainPrice> ?this .}" ] .
 
 core-shape:epo-AwardOutcome-epo-hasNonAwardJustification a sh:PropertyShape ;
-    sh:class at-voc:non-award-justification ;
+    sh:nodeKind sh:IRI ;
     sh:description "On hold; Enumeration." ;
     sh:maxCount 1 ;
     sh:name "Has non award justification" ;
@@ -2044,7 +2044,7 @@ core-shape:epo-Business-epo-hasBeneficialOwner a sh:PropertyShape ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#hasBeneficialOwner> ?that . ?that <http://data.europa.eu/a4g/ontology#hasBeneficialOwner> ?this .}" ] .
 
 core-shape:epo-Business-epo-hasBusinessSize a sh:PropertyShape ;
-    sh:class at-voc:economic-operator-size ;
+    sh:nodeKind sh:IRI ;
     sh:description "The category of the business depending on number of employees and turnover. Additional information: See Commission Recommendation of 6 May 2003 concerning the definition of micro, small and medium-sized enterprises. WG Approval 28/05/2020" ;
     sh:maxCount 1 ;
     sh:name "Has business size" ;
@@ -2073,7 +2073,7 @@ core-shape:epo-Buyer-epo-exposesInvoiceeChannel a sh:PropertyShape ;
 
 core-shape:epo-Buyer-epo-hasActivityDescription a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "In the ePO ontology a taxonomy with all activities, based on different classifications (COFOG, UTILITIES, NACE), will be provided. In ePO this field is to be used exclusively to complement the definition attached to the MainActivityCode. However, in eForms there is the code \"other\" to cover undefined activities. For mapping to this eForms feature one could also use this property." ;
     sh:name "Has activity description" ;
     sh:path :hasActivityDescription .
@@ -2117,7 +2117,7 @@ core-shape:epo-Certificate-epo-attestedByLabel a sh:PropertyShape ;
 
 core-shape:epo-Certificate-epo-hasCertificationNumber a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The unique identifier of the certificate. WG approval 26/07/2022" ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
@@ -2165,7 +2165,7 @@ core-shape:epo-ChangeInformation-epo-concernsNotice a sh:PropertyShape ;
 
 core-shape:epo-ChangeInformation-epo-hasAdditionalInformation a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "Supplementary data about the instance of the concept. WG Approval 15/10/2019" ;
     sh:maxCount 1 ;
     sh:name "Has additional information" ;
@@ -2173,13 +2173,13 @@ core-shape:epo-ChangeInformation-epo-hasAdditionalInformation a sh:PropertyShape
 
 core-shape:epo-ChangeInformation-epo-hasChangeDescription a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "Explanatory text about the instance of the concept. WG Approval 30/09/2019" ;
     sh:name "Has change description" ;
     sh:path :hasChangeDescription .
 
 core-shape:epo-ChangeInformation-epo-hasChangeJustification a sh:PropertyShape ;
-    sh:class at-voc:change-corrig-justification ;
+    sh:nodeKind sh:IRI ;
     sh:description "The motives for the change. WG 5/11/2019 The codelist to be used is at-voc:change-corrig-justification which is available at http://publications.europa.eu/resource/dataset/change-corrig-justification" ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
@@ -2188,7 +2188,7 @@ core-shape:epo-ChangeInformation-epo-hasChangeJustification a sh:PropertyShape ;
 
 core-shape:epo-ChangeInformation-epo-hasChangeReasonDescription a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "Explanatory text about why the element is altered. Additional information: This corresponds in eForms to BT-762 Change Reason Description." ;
     sh:name "Has change reason description" ;
     sh:path :hasChangeReasonDescription .
@@ -2227,7 +2227,7 @@ core-shape:epo-ChangeInformation-epo-relatesToEFormSectionIdentifier a sh:Proper
 
 core-shape:epo-ConcessionEstimate-epo-hasCalculationMethod a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "Formula for obtaining values. Additional Information: The possible values are monetary values, ranking scores, criterion weighting. WG Approval 25/05/2018" ;
     sh:maxCount 1 ;
     sh:name "Has calculation method" ;
@@ -2357,7 +2357,7 @@ core-shape:epo-ContractLotCompletionInformation-epo-describesLotCompletion a sh:
 
 core-shape:epo-ContractLotCompletionInformation-epo-hasPaymentValueDiscrepancyJustification a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:maxCount 1 ;
     sh:name "Has payment value discrepancy justification" ;
     sh:path :hasPaymentValueDiscrepancyJustification .
@@ -2426,20 +2426,20 @@ core-shape:epo-ContractTerm-epo-definesSubcontractingTerm a sh:PropertyShape ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#definesSubcontractingTerm> ?that . ?that <http://data.europa.eu/a4g/ontology#definesSubcontractingTerm> ?this .}" ] .
 
 core-shape:epo-ContractTerm-epo-hasAdditionalContractNature a sh:PropertyShape ;
-    sh:class at-voc:contract-nature ;
+    sh:nodeKind sh:IRI ;
     sh:description "Additional type of acquisition taken into consideration in the contract. WG Approval 11/06/2020" ;
     sh:name "Has additional contract nature" ;
     sh:path :hasAdditionalContractNature .
 
 core-shape:epo-ContractTerm-epo-hasBroadPlaceOfPerformance a sh:PropertyShape ;
-    sh:class at-voc:other-place-service ;
+    sh:nodeKind sh:IRI ;
     sh:description "Geopolitical zone where the contract can be executed. Additional Information Used for setting restrictions that cannot be established with one country code or a geographical zone identifier (like NUTS), because they have a broader scope (geographical, economic, political, other)." ;
     sh:maxCount 1 ;
     sh:name "Has broad place of performance" ;
     sh:path :hasBroadPlaceOfPerformance .
 
 core-shape:epo-ContractTerm-epo-hasContractNatureType a sh:PropertyShape ;
-    sh:class at-voc:contract-nature ;
+    sh:nodeKind sh:IRI ;
     sh:description "Subject of the acquisition. WG Approval 11/06/2020" ;
     sh:maxCount 1 ;
     sh:name "Has contract nature type" ;
@@ -2454,7 +2454,7 @@ core-shape:epo-ContractTerm-epo-hasEInvoicing a sh:PropertyShape ;
     sh:path :hasEInvoicing .
 
 core-shape:epo-ContractTerm-epo-hasEInvoicingPermission a sh:PropertyShape ;
-    sh:class at-voc:permission ;
+    sh:nodeKind sh:IRI ;
     sh:maxCount 1 ;
     sh:name "Has e invoicing permission" ;
     sh:path :hasEInvoicingPermission .
@@ -2477,7 +2477,7 @@ core-shape:epo-ContractTerm-epo-hasEPayment a sh:PropertyShape ;
 
 core-shape:epo-ContractTerm-epo-hasLegalFormRequirement a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The legal form to be taken by a Contractor. Additional Information: Generally, this is defined to cover the case where an Organisation Group is involved. Note that the codelist provided at national level should be used." ;
     sh:maxCount 1 ;
     sh:name "Has legal form requirement" ;
@@ -2501,41 +2501,41 @@ core-shape:epo-ContractTerm-epo-hasOptions a sh:PropertyShape ;
 
 core-shape:epo-ContractTerm-epo-hasOptionsDescription a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The motivation and details about additional purchases that the buyer may undertake while the contract is valid. WG Approval 09/04/2019" ;
     sh:name "Has options description" ;
     sh:path :hasOptionsDescription .
 
 core-shape:epo-ContractTerm-epo-hasPaymentArrangement a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "Information about financial clauses that will govern some economic aspects of the execution of the contract. Additional Information: These clauses usually refer to financial and payment provisions. This type of information should be structured instead of a free text in order to reuse it an ideal world. Unfortunately this is an information that in the real life no one is willing to provide pro-actively. WG Pending of discussion with eForms" ;
     sh:name "Has payment arrangement" ;
     sh:path :hasPaymentArrangement .
 
 core-shape:epo-ContractTerm-epo-hasPerformanceConditions a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The particular conditions and additional information related to the execution of the contract. Additional Information: For example, specific information about the place of performance, intermediary deliverables, compensation for damages, intellectual property rights. WG approval 15-01-2019" ;
     sh:name "Has performance conditions" ;
     sh:path :hasPerformanceConditions .
 
 core-shape:epo-ContractTerm-epo-hasPlaceOfPerformanceAdditionalInformation a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "Further details on the location of the execution of the contract. WG Approval 30/07/2019" ;
     sh:name "Has place of performance additional information" ;
     sh:path :hasPlaceOfPerformanceAdditionalInformation .
 
 core-shape:epo-ContractTerm-epo-hasRenewalDescription a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "Any other information about the renewal(s). WG approval 16/04/2019" ;
     sh:name "Has renewal description" ;
     sh:path :hasRenewalDescription .
 
 core-shape:epo-ContractTerm-epo-hasReservedExecution a sh:PropertyShape ;
-    sh:class at-voc:applicability ;
+    sh:nodeKind sh:IRI ;
     sh:maxCount 1 ;
     sh:name "Has reserved execution" ;
     sh:path :hasReservedExecution .
@@ -2565,7 +2565,7 @@ core-shape:epo-DesignContestRegimeTerm-epo-definesPrize a sh:PropertyShape ;
 
 core-shape:epo-DesignContestRegimeTerm-epo-hasDescriptionOfPrizes a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:maxCount 1 ;
     sh:name "Has description of prizes" ;
     sh:path :hasDescriptionOfPrizes .
@@ -2580,14 +2580,14 @@ core-shape:epo-DesignContestRegimeTerm-epo-hasFollowupContract a sh:PropertyShap
 
 core-shape:epo-DesignContestRegimeTerm-epo-hasFollowupContractInformation a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "Further information about follow-up contracts, prizes and payments (for example non-monetary prizes, payments given for participation). WG Approval 03/09/2019" ;
     sh:name "Has followup contract information" ;
     sh:path :hasFollowupContractInformation .
 
 core-shape:epo-DesignContestRegimeTerm-epo-hasParticipationPayment a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "Details on payments to participants WG Approval 09/11/2021" ;
     sh:maxCount 1 ;
     sh:name "Has participation payment" ;
@@ -2602,7 +2602,7 @@ core-shape:epo-DesignContestRegimeTerm-epo-isJuryDecisionBinding a sh:PropertySh
     sh:path :isJuryDecisionBinding .
 
 core-shape:epo-DirectAwardTerm-epo-hasDirectAwardJustification a sh:PropertyShape ;
-    sh:class at-voc:direct-award-justification ;
+    sh:nodeKind sh:IRI ;
     sh:description "List of reasons for using a procedure which allows awarding contracts directly without publishing a notice. WG Approval 28/05/2020" ;
     sh:maxCount 1 ;
     sh:name "Has direct award justification" ;
@@ -2610,7 +2610,7 @@ core-shape:epo-DirectAwardTerm-epo-hasDirectAwardJustification a sh:PropertyShap
 
 core-shape:epo-DirectAwardTerm-epo-hasJustification a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "An explanation about the reasons for using the concept. WG Approval 5/11/2019" ;
     sh:name "Has justification" ;
     sh:path :hasJustification .
@@ -2645,7 +2645,7 @@ core-shape:epo-Document-adms-identifier a sh:PropertyShape ;
 
 core-shape:epo-Document-dct-description a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. WG Approval 30/05/2023" ;
     sh:maxCount 1 ;
     sh:name "Description" ;
@@ -2661,7 +2661,7 @@ core-shape:epo-Document-dct-issued a sh:PropertyShape ;
 
 core-shape:epo-Document-dct-title a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "A name given to the resource. WG approval 30/05/2023" ;
     sh:maxCount 1 ;
     sh:name "Title" ;
@@ -2702,7 +2702,7 @@ core-shape:epo-Document-epo-hasElectronicSignature a sh:PropertyShape ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#hasElectronicSignature> ?that . ?that <http://data.europa.eu/a4g/ontology#hasElectronicSignature> ?this .}" ] .
 
 core-shape:epo-Document-epo-hasOfficialLanguage a sh:PropertyShape ;
-    sh:class at-voc:language ;
+    sh:nodeKind sh:IRI ;
     sh:description "The language(s) in which the instances of the given concepts are officially available. These linguistic versions are equally legally valid. WG Approval 03/10/2019" ;
     sh:minCount 1 ;
     sh:name "Has official language" ;
@@ -2733,14 +2733,14 @@ core-shape:epo-Document-epo-hasUUID a sh:PropertyShape ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#hasUUID> ?that . ?that <http://data.europa.eu/a4g/ontology#hasUUID> ?this .}" ] .
 
 core-shape:epo-Document-epo-hasUnofficialLanguage a sh:PropertyShape ;
-    sh:class at-voc:language ;
+    sh:nodeKind sh:IRI ;
     sh:description "The language translation(s) in which the instances of the given concepts are available. These linguistic versions are not an official translation, they are provided only for information. WG Approval 03/10/2019" ;
     sh:name "Has unofficial language" ;
     sh:path :hasUnofficialLanguage .
 
 core-shape:epo-Document-epo-hasVersion a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "A number that identifies a specific state of a document. WG approval: 18/11/2021" ;
     sh:maxCount 1 ;
     sh:name "Has version" ;
@@ -2753,7 +2753,7 @@ core-shape:epo-Document-epo-refersToPrevious a sh:PropertyShape ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#refersToPrevious> ?that . ?that <http://data.europa.eu/a4g/ontology#refersToPrevious> ?this .}" ] .
 
 core-shape:epo-DynamicPurchaseSystemTechnique-epo-hasDPSScope a sh:PropertyShape ;
-    sh:class at-voc:dps-usage ;
+    sh:nodeKind sh:IRI ;
     sh:description "Explanation as to whether a dps is used and by whom. WG Approval 09/11/2021 The codelist to be used is at-voc:dps-usage which is available at http://publications.europa.eu/resource/dataset/dps-usage" ;
     sh:maxCount 1 ;
     sh:name "Has d p s scope" ;
@@ -2761,7 +2761,7 @@ core-shape:epo-DynamicPurchaseSystemTechnique-epo-hasDPSScope a sh:PropertyShape
 
 core-shape:epo-ElectronicSignature-dct-description a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. WG Approval 30/05/2023" ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
@@ -2776,21 +2776,21 @@ core-shape:epo-FrameworkAgreement-epo-resultsFromLotAwardOutcome a sh:PropertySh
 
 core-shape:epo-FrameworkAgreementTerm-epo-hasBuyerCategoryDescription a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "A classification of buyers participating in a framework agreement. Additional Information: Buyers that can use the Framework Agreement not mentioned by name. For example, the classification \"all hospitals in the Tuscany region\" is used instead of naming each individual buyer. This corresponds in eForms to BT-111 Framework Buyer Categories. WG Approval 2019-05-06" ;
     sh:name "Has buyer category description" ;
     sh:path :hasBuyerCategoryDescription .
 
 core-shape:epo-FrameworkAgreementTerm-epo-hasDurationExtensionJustification a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The explanation of the reason why the framework agreement has an extended duration. Additional Information: This corresponds in eForms to BT-109 Framework Duration Justification. The justification for exceptional cases when the duration of the framework agreement exceeds the legal limits. Four years in the case of the general procurement Directive, seven years in the case of the defence Directive, and eight years in the case of the sectoral Directive. WG Approval 26/09/2019" ;
     sh:maxCount 1 ;
     sh:name "Has duration extension justification" ;
     sh:path :hasDurationExtensionJustification .
 
 core-shape:epo-FrameworkAgreementTerm-epo-hasFrameworkAgreementType a sh:PropertyShape ;
-    sh:class at-voc:framework-agreement ;
+    sh:nodeKind sh:IRI ;
     sh:description "The form of framework agreement used in a procurement procedure. Addition information: A concept to distinguish the different types of framework agreement, which are: 1. Framework agreement without reopening of competition, 2. Framework agreement with reopening of competition, or 3. Framework agreement partly without reopening of competition. WG Approval 19/09/2019" ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
@@ -2815,20 +2815,20 @@ core-shape:epo-Fund-adms-identifier a sh:PropertyShape ;
 
 core-shape:epo-Fund-dct-description a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. WG Approval 30/05/2023" ;
     sh:name "Description" ;
     sh:path dcterms:description .
 
 core-shape:epo-Fund-dct-title a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "A name given to the resource. WG approval 30/05/2023" ;
     sh:name "Title" ;
     sh:path dcterms:title .
 
 core-shape:epo-Fund-epo-hasFundProgramme a sh:PropertyShape ;
-    sh:class at-voc:EU-programme ;
+    sh:nodeKind sh:IRI ;
     sh:maxCount 1 ;
     sh:name "Has fund programme" ;
     sh:path :hasFundProgramme .
@@ -2857,7 +2857,7 @@ core-shape:epo-GreenProcurement-epo-usesCleanVehicleDirective a sh:PropertyShape
     sh:path :usesCleanVehicleDirective .
 
 core-shape:epo-InnovativeProcurement-epo-fulfillsRequirement a sh:PropertyShape ;
-    sh:class at-voc:innovative-acquisition ;
+    sh:nodeKind sh:IRI ;
     sh:description "The requirement to which the concept meets. WG Approval 09/11/2021" ;
     sh:name "Fulfills requirement" ;
     sh:path :fulfillsRequirement .
@@ -2907,7 +2907,7 @@ core-shape:epo-LotAwardOutcome-epo-hasFrameworkAgreementMaximumValue a sh:Proper
 
 core-shape:epo-LotAwardOutcome-epo-hasNonAwardedContractNumber a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The number the contract would have had if it had been awarded. Additional information: This field is provided to support the data provided in the TED Standard Forms, and it should be discontinued in the future. WG agreement: 06/09/2022" ;
     sh:maxCount 1 ;
     sh:name "Has non awarded contract number" ;
@@ -2915,7 +2915,7 @@ core-shape:epo-LotAwardOutcome-epo-hasNonAwardedContractNumber a sh:PropertyShap
 
 core-shape:epo-LotAwardOutcome-epo-hasNonAwardedContractTitle a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The title the contract would have had if it had been awarded. Additional information: This field is provided to support the data provided in the TED Standard Forms, and it should be discontinued in the future. WG agreement: 06/09/2022" ;
     sh:maxCount 1 ;
     sh:name "Has non awarded contract title" ;
@@ -2931,14 +2931,14 @@ core-shape:epo-LotGroup-adms-identifier a sh:PropertyShape ;
 
 core-shape:epo-LotGroup-dct-description a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. WG Approval 30/05/2023" ;
     sh:name "Description" ;
     sh:path dcterms:description .
 
 core-shape:epo-LotGroup-dct-title a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "A name given to the resource. WG approval 30/05/2023" ;
     sh:name "Title" ;
     sh:path dcterms:title .
@@ -3010,7 +3010,7 @@ core-shape:epo-MonetaryValue-epo-hasAmountValue a sh:PropertyShape ;
     sh:path :hasAmountValue .
 
 core-shape:epo-MonetaryValue-epo-hasCurrency a sh:PropertyShape ;
-    sh:class at-voc:currency ;
+    sh:nodeKind sh:IRI ;
     sh:description "The identifier of the currency as in the standard code list used." ;
     sh:maxCount 1 ;
     sh:name "Has currency" ;
@@ -3018,21 +3018,21 @@ core-shape:epo-MonetaryValue-epo-hasCurrency a sh:PropertyShape ;
 
 core-shape:epo-MonetaryValue-epo-hasCurrencyCodeListAgencyID a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "Identifier of the agency that maintains the currency code list used. WG approval 13/04/2021" ;
     sh:name "Has currency code list agency i d" ;
     sh:path :hasCurrencyCodeListAgencyID .
 
 core-shape:epo-MonetaryValue-epo-hasCurrencyCodeListAgencyName a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "Name of the agency that maintains the currency code list used. WG approval 13/04/2021" ;
     sh:name "Has currency code list agency name" ;
     sh:path :hasCurrencyCodeListAgencyName .
 
 core-shape:epo-MonetaryValue-epo-hasCurrencyCodeListID a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "Concept scheme URI used for the currency code list. WG approval 13/04/2021" ;
     sh:name "Has currency code list i d" ;
     sh:path :hasCurrencyCodeListID .
@@ -3086,7 +3086,7 @@ core-shape:epo-MultipleStageProcedureTerm-epo-hasQualificationSystemDuration a s
 
 core-shape:epo-MultipleStageProcedureTerm-epo-hasQualificationSystemRenewalDescription a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:maxCount 1 ;
     sh:name "Has qualification system renewal description" ;
     sh:path :hasQualificationSystemRenewalDescription .
@@ -3101,7 +3101,7 @@ core-shape:epo-MultipleStageProcedureTerm-epo-hasSuccessiveReduction a sh:Proper
 
 core-shape:epo-NonDisclosureAgreementTerm-dct-description a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. WG Approval 30/05/2023" ;
     sh:maxCount 1 ;
     sh:name "Description" ;
@@ -3132,14 +3132,14 @@ core-shape:epo-NonPublishedInformation-epo-hasAccessibilityDate a sh:PropertySha
 
 core-shape:epo-NonPublishedInformation-epo-hasConfidentialityJustification a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "A narrative explanation of why data is not published. Additional Information: This element is generally used when the non-publication-justification code chosen is \"other\". WG Approval 09/11/2021" ;
     sh:maxCount 1 ;
     sh:name "Has confidentiality justification" ;
     sh:path :hasConfidentialityJustification .
 
 core-shape:epo-NonPublishedInformation-epo-hasNonPublicationJustification a sh:PropertyShape ;
-    sh:class at-voc:non-publication-justification ;
+    sh:nodeKind sh:IRI ;
     sh:description "The reason why data is not published. WG Approval 11/06/2020" ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
@@ -3154,14 +3154,14 @@ core-shape:epo-NonPublishedInformation-epo-relatesToEFormSectionIdentifier a sh:
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#relatesToEFormSectionIdentifier> ?that . ?that <http://data.europa.eu/a4g/ontology#relatesToEFormSectionIdentifier> ?this .}" ] .
 
 core-shape:epo-Notice-epo-conformsToLegalBasis a sh:PropertyShape ;
-    sh:class at-voc:legal-basis ;
+    sh:nodeKind sh:IRI ;
     sh:description "The Notice was designed in accordance with the given legal basis. Additional Information: This Notice can be used for Procedures which do not have the same legal basis. This holds for standard forms." ;
     sh:name "Conforms to legal basis" ;
     sh:path :conformsToLegalBasis .
 
 core-shape:epo-Notice-epo-hasAdditionalInformation a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "Supplementary data about the instance of the concept. WG Approval 15/10/2019" ;
     sh:maxCount 1 ;
     sh:name "Has additional information" ;
@@ -3184,13 +3184,13 @@ core-shape:epo-Notice-epo-hasESenderDispatchDate a sh:PropertyShape ;
 
 core-shape:epo-Notice-epo-hasFormNumber a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:maxCount 1 ;
     sh:name "Has form number" ;
     sh:path :hasFormNumber .
 
 core-shape:epo-Notice-epo-hasFormType a sh:PropertyShape ;
-    sh:class at-voc:form-type ;
+    sh:nodeKind sh:IRI ;
     sh:description "A categorisation of the steps in which the Notice is used. WG Approval 12/05/2020" ;
     sh:maxCount 1 ;
     sh:name "Has form type" ;
@@ -3198,13 +3198,13 @@ core-shape:epo-Notice-epo-hasFormType a sh:PropertyShape ;
 
 core-shape:epo-Notice-epo-hasNoticePublicationNumber a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:maxCount 1 ;
     sh:name "Has notice publication number" ;
     sh:path :hasNoticePublicationNumber .
 
 core-shape:epo-Notice-epo-hasNoticeType a sh:PropertyShape ;
-    sh:class at-voc:notice-type ;
+    sh:nodeKind sh:IRI ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Has notice type" ;
@@ -3219,13 +3219,13 @@ core-shape:epo-Notice-epo-hasOJSIssueNumber a sh:PropertyShape ;
 
 core-shape:epo-Notice-epo-hasOJSType a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:maxCount 1 ;
     sh:name "Has o j s type" ;
     sh:path :hasOJSType .
 
 core-shape:epo-Notice-epo-isBasedOnImplementingRegulation a sh:PropertyShape ;
-    sh:class at-voc:legal-basis ;
+    sh:nodeKind sh:IRI ;
     sh:description "Indicates under which regulation a notice is created. WG Acceptance 06/09/2022" ;
     sh:maxCount 1 ;
     sh:name "Is based on implementing regulation" ;
@@ -3318,7 +3318,7 @@ core-shape:epo-OpeningTerm-epo-hasOpeningDateTime a sh:PropertyShape ;
 
 core-shape:epo-OpeningTerm-epo-hasOpeningDescription a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "Further information about the opening of tenders. Additional Information For example, who may participate in the opening and whether any authorization is needed. WG Approval 12/03/2019" ;
     sh:name "Has opening description" ;
     sh:path :hasOpeningDescription .
@@ -3333,7 +3333,7 @@ core-shape:epo-OpeningTerm-epo-hasOpeningURL a sh:PropertyShape ;
 
 core-shape:epo-OrganisationGroup-epo-hasGroupType a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "Form of collaboration agreement between organisations. Additional Information: This is not a legal type; not to be mistaken with epo:hasLegalFormType which may also be used for Organisation Groups. WG Approval 09/11/2021" ;
     sh:name "Has group type" ;
     sh:path :hasGroupType .
@@ -3353,27 +3353,27 @@ core-shape:epo-OrganisationGroup-epo-leadBy a sh:PropertyShape ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#leadBy> ?that . ?that <http://data.europa.eu/a4g/ontology#leadBy> ?this .}" ] .
 
 core-shape:epo-ParticipationCondition-epo-hasReservedProcurement a sh:PropertyShape ;
-    sh:class at-voc:reserved-procurement ;
+    sh:nodeKind sh:IRI ;
     sh:description "Explanation as to whether a procurement may be reserved for the participation of certain types of organisation. Additional information: This property corresponds in eForms to the BT-71 WG Approval 09/11/2021" ;
     sh:name "Has reserved procurement" ;
     sh:path :hasReservedProcurement .
 
 core-shape:epo-ParticipationConditionsSummary-epo-describesObjectiveParticipationRules a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:maxCount 1 ;
     sh:name "Describes objective participation rules" ;
     sh:path :describesObjectiveParticipationRules .
 
 core-shape:epo-ParticipationConditionsSummary-epo-describesVerificationMethod a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:maxCount 1 ;
     sh:name "Describes verification method" ;
     sh:path :describesVerificationMethod .
 
 core-shape:epo-ParticipationConditionsSummary-epo-hasReservedProcurement a sh:PropertyShape ;
-    sh:class at-voc:reserved-procurement ;
+    sh:nodeKind sh:IRI ;
     sh:description "Explanation as to whether a procurement may be reserved for the participation of certain types of organisation. Additional information: This property corresponds in eForms to the BT-71 WG Approval 09/11/2021" ;
     sh:name "Has reserved procurement" ;
     sh:path :hasReservedProcurement .
@@ -3411,7 +3411,7 @@ core-shape:epo-Period-epo-hasEnd a sh:PropertyShape ;
     sh:path :hasEnd .
 
 core-shape:epo-Period-epo-hasTimePeriod a sh:PropertyShape ;
-    sh:class at-voc:timeperiod ;
+    sh:nodeKind sh:IRI ;
     sh:description "" ;
     sh:minCount 1 ;
     sh:name "Has time period" ;
@@ -3463,20 +3463,20 @@ core-shape:epo-Prize-epo-hasPrizeValue a sh:PropertyShape ;
 
 core-shape:epo-Procedure-epo-hasAcceleratedProcedureJustification a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The reasons why the procedure is accelerated. Additional Information: A procedure is accelerated to cover needs of extraordinary circumstances ie earthquake relief. WG Approval 09/06/2020" ;
     sh:name "Has accelerated procedure justification" ;
     sh:path :hasAcceleratedProcedureJustification .
 
 core-shape:epo-Procedure-epo-hasMainFeature a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "Main features of the procedure and information about where the full rules for the procedure can be found. Additional Information: This information should be given when the procedure is not one of those mentioned in the procurement directives. This can be the case for example for concessions, for social and other specific services, and in case of voluntary publication of procurement procedures below the EU procurement thresholds." ;
     sh:name "Has main feature" ;
     sh:path :hasMainFeature .
 
 core-shape:epo-Procedure-epo-hasProcedureType a sh:PropertyShape ;
-    sh:class at-voc:procurement-procedure-type ;
+    sh:nodeKind sh:IRI ;
     sh:description "Identification of the Procedure used. WG Approval 09/06/2020" ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
@@ -3579,21 +3579,21 @@ core-shape:epo-ProcedureTerm-epo-definesMediator a sh:PropertyShape ;
 
 core-shape:epo-ProcedureTerm-epo-hasCrossBorderLaw a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The applicable law when buyers from different countries procure together within one procurement procedure. Additional Information: This corresponds in eForms to BT-09 Cross Border Law." ;
     sh:name "Has cross border law" ;
     sh:path :hasCrossBorderLaw .
 
 core-shape:epo-ProcedureTerm-epo-hasGroupLotEvaluationMethod a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "Description of how lots and groups of lots are evaluated against one another in the procedure." ;
     sh:name "Has group lot evaluation method" ;
     sh:path :hasGroupLotEvaluationMethod .
 
 core-shape:epo-ProcedureTerm-epo-hasLotAwardCombination a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The contracting authority reserves the right to award contracts combining lots or groups of lots. Additional Information: This property contains information about the Lots concerned. This property is required by the regulation (EU)-2015-1986 (modeled in the TED Standard Forms). WG approval 23/08/2022" ;
     sh:maxCount 1 ;
     sh:name "Has lot award combination" ;
@@ -3684,20 +3684,20 @@ core-shape:epo-ProcurementCriterion-epo-hasConstraint a sh:PropertyShape ;
 
 core-shape:epo-ProcurementCriterion-epo-hasFormula a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The mathematical equation or any other description used for complicated weighing of criteria (e.g. non-linear weighing, the analytic hierarchy process) when a weighing cannot be expressed per criterion. Additional Information: This corresponds in eForms to BT-543." ;
     sh:maxCount 1 ;
     sh:name "Has formula" ;
     sh:path :hasFormula .
 
 core-shape:epo-ProcurementCriterion-epo-hasPerformingStaffQualificationInformation a sh:PropertyShape ;
-    sh:class at-voc:requirement-stage ;
+    sh:nodeKind sh:IRI ;
     sh:description "Explanation as to if and/or when information of the persons to carry out the contract is to be provided. WG Approval 09/11/2021 The codelist to be used is at-voc:requirement-stage which is available at http://publications.europa.eu/resource/dataset/requirement-stage" ;
     sh:name "Has performing staff qualification information" ;
     sh:path :hasPerformingStaffQualificationInformation .
 
 core-shape:epo-ProcurementCriterion-epo-hasWeightValueType a sh:PropertyShape ;
-    sh:class at-voc:number-weight ;
+    sh:nodeKind sh:IRI ;
     sh:description "No definition. Waiting on CCCEV alignment." ;
     sh:maxCount 1 ;
     sh:name "Has weight value type" ;
@@ -3714,14 +3714,14 @@ core-shape:epo-ProcurementElement-adms-identifier a sh:PropertyShape ;
 
 core-shape:epo-ProcurementElement-dct-description a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. WG Approval 30/05/2023" ;
     sh:name "Description" ;
     sh:path dcterms:description .
 
 core-shape:epo-ProcurementElement-dct-title a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "A name given to the resource. WG approval 30/05/2023" ;
     sh:name "Title" ;
     sh:path dcterms:title .
@@ -3767,7 +3767,7 @@ core-shape:epo-ProcurementObject-epo-fulfillsStrategicProcurement a sh:PropertyS
 
 core-shape:epo-ProcurementObject-epo-hasAdditionalInformation a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "Supplementary data about the instance of the concept. WG Approval 15/10/2019" ;
     sh:name "Has additional information" ;
     sh:path :hasAdditionalInformation .
@@ -3780,14 +3780,14 @@ core-shape:epo-ProcurementObject-epo-hasLaunchFrameworkAgreementMaximumValue a s
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#hasLaunchFrameworkAgreementMaximumValue> ?that . ?that <http://data.europa.eu/a4g/ontology#hasLaunchFrameworkAgreementMaximumValue> ?this .}" ] .
 
 core-shape:epo-ProcurementObject-epo-hasLegalBasis a sh:PropertyShape ;
-    sh:class at-voc:legal-basis ;
+    sh:nodeKind sh:IRI ;
     sh:description "The legal basis under which the procurement procedure takes place. Additional Information: For example European Directives or Regulations, national law WG 09/11/2021 The codelist to be used is at-voc:legal-basis which is available at http://publications.europa.eu/resource/dataset/legal-basis" ;
     sh:name "Has legal basis" ;
     sh:path :hasLegalBasis .
 
 core-shape:epo-ProcurementObject-epo-hasLegalBasisDescription a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:name "Has legal basis description" ;
     sh:path :hasLegalBasisDescription .
 
@@ -3801,7 +3801,7 @@ core-shape:epo-ProcurementObject-epo-hasPurpose a sh:PropertyShape ;
 
 core-shape:epo-ProcurementObject-epo-hasRecurrenceDescription a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "Any additional information about the recurrence of the Procurement. Additional Information: For example estimated timing of the Procedure. This corresponds in eForms to BT-95 Recurrence Description. (WG approval 2019-01-16)" ;
     sh:maxCount 1 ;
     sh:name "Has recurrence description" ;
@@ -3908,14 +3908,14 @@ core-shape:epo-ProcurementServiceProvider-epo-actsOnBehalfOf a sh:PropertyShape 
 
 core-shape:epo-ProfessionalSuitabilitySummary-epo-describesProfession a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:maxCount 1 ;
     sh:name "Describes profession" ;
     sh:path :describesProfession .
 
 core-shape:epo-ProfessionalSuitabilitySummary-epo-describesProfessionRelevantLaw a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:maxCount 1 ;
     sh:name "Describes profession relevant law" ;
     sh:path :describesProfessionRelevantLaw .
@@ -3950,12 +3950,12 @@ core-shape:epo-PurchaseContract-epo-resultsFromMiniCompetitionAwardOutcome a sh:
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#resultsFromMiniCompetitionAwardOutcome> ?that . ?that <http://data.europa.eu/a4g/ontology#resultsFromMiniCompetitionAwardOutcome> ?this .}" ] .
 
 core-shape:epo-Purpose-epo-hasAdditionalClassification a sh:PropertyShape ;
-    sh:class at-voc:cpv ;
+    sh:nodeKind sh:IRI ;
     sh:name "Has additional classification" ;
     sh:path :hasAdditionalClassification .
 
 core-shape:epo-Purpose-epo-hasMainClassification a sh:PropertyShape ;
-    sh:class at-voc:cpv ;
+    sh:nodeKind sh:IRI ;
     sh:minCount 1 ;
     sh:name "Has main classification" ;
     sh:path :hasMainClassification .
@@ -3970,13 +3970,13 @@ core-shape:epo-Purpose-epo-hasTotalQuantity a sh:PropertyShape ;
 
 core-shape:epo-QualificationCriteriaSummary-epo-hasConditionVerificationMethod a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:name "Has condition verification method" ;
     sh:path :hasConditionVerificationMethod .
 
 core-shape:epo-QualificationCriteriaSummary-epo-hasQualificationCondition a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:name "Has qualification condition" ;
     sh:path :hasQualificationCondition .
 
@@ -3990,7 +3990,7 @@ core-shape:epo-Quantity-epo-hasQuantityValue a sh:PropertyShape ;
     sh:path :hasQuantityValue .
 
 core-shape:epo-Quantity-epo-hasUnitCode a sh:PropertyShape ;
-    sh:class at-voc:measurement-unit ;
+    sh:nodeKind sh:IRI ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Has unit code" ;
@@ -3998,13 +3998,13 @@ core-shape:epo-Quantity-epo-hasUnitCode a sh:PropertyShape ;
 
 core-shape:epo-Quantity-epo-hasUnitDescription a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "A narrative explanation defining the units of items being counted Additional information: This could be for example individual items or pack or two. WG Approval 09/11/2021" ;
     sh:name "Has unit description" ;
     sh:path :hasUnitDescription .
 
 core-shape:epo-ReviewDecision-epo-hasConfirmedIrregularityType a sh:PropertyShape ;
-    sh:class at-voc:irregularity-type ;
+    sh:nodeKind sh:IRI ;
     sh:description "Additional information: This relation corresponds in eForms to BT-791 Review Irregularity Type" ;
     sh:name "Has confirmed irregularity type" ;
     sh:path :hasConfirmedIrregularityType .
@@ -4026,13 +4026,13 @@ core-shape:epo-ReviewDecision-epo-hasRemedyValue a sh:PropertyShape ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#hasRemedyValue> ?that . ?that <http://data.europa.eu/a4g/ontology#hasRemedyValue> ?this .}" ] .
 
 core-shape:epo-ReviewDecision-epo-hasReviewDecisionType a sh:PropertyShape ;
-    sh:class at-voc:review-decision-type ;
+    sh:nodeKind sh:IRI ;
     sh:description "Additional information: This relation corresponds in eForms to BT-790 Review Decision Type." ;
     sh:name "Has review decision type" ;
     sh:path :hasReviewDecisionType .
 
 core-shape:epo-ReviewDecision-epo-providesRulingOnRemedy a sh:PropertyShape ;
-    sh:class at-voc:remedy-type ;
+    sh:nodeKind sh:IRI ;
     sh:description "States the measures to be taken after a review procedure." ;
     sh:name "Provides ruling on remedy" ;
     sh:path :providesRulingOnRemedy .
@@ -4046,7 +4046,7 @@ core-shape:epo-ReviewDecision-epo-resolvesReviewRequest a sh:PropertyShape ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#resolvesReviewRequest> ?that . ?that <http://data.europa.eu/a4g/ontology#resolvesReviewRequest> ?this .}" ] .
 
 core-shape:epo-ReviewIrregularitySummary-epo-hasIrregularityType a sh:PropertyShape ;
-    sh:class at-voc:irregularity-type ;
+    sh:nodeKind sh:IRI ;
     sh:description "Additional information: This relation corresponds in eForms to BT-636 Buyer Review Requests Irregularity Type" ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
@@ -4086,7 +4086,7 @@ core-shape:epo-ReviewObject-epo-refersToPreviousReview a sh:PropertyShape ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#refersToPreviousReview> ?that . ?that <http://data.europa.eu/a4g/ontology#refersToPreviousReview> ?this .}" ] .
 
 core-shape:epo-ReviewRequest-epo-hasAllegedIrregularityType a sh:PropertyShape ;
-    sh:class at-voc:irregularity-type ;
+    sh:nodeKind sh:IRI ;
     sh:description "Additional information: This relation corresponds in eForms to BT-791 Review Irregularity Type" ;
     sh:minCount 1 ;
     sh:name "Has alleged irregularity type" ;
@@ -4127,7 +4127,7 @@ core-shape:epo-ReviewRequest-epo-hasWithdrawalDate a sh:PropertyShape ;
 
 core-shape:epo-ReviewRequest-epo-hasWithdrawalReason a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The explanation for withdrawing the request for review. Additional information: This attribute corresponds in eForms to BT-798 Review Request Withdrawn Reasons" ;
     sh:maxCount 1 ;
     sh:name "Has withdrawal reason" ;
@@ -4142,7 +4142,7 @@ core-shape:epo-ReviewRequest-epo-isWithdrawn a sh:PropertyShape ;
     sh:path :isWithdrawn .
 
 core-shape:epo-ReviewRequest-epo-requestsRemedyType a sh:PropertyShape ;
-    sh:class at-voc:remedy-type ;
+    sh:nodeKind sh:IRI ;
     sh:description "Additional information: This relation corresponds in eForms to BT-792 Review Remedy Type" ;
     sh:name "Requests remedy type" ;
     sh:path :requestsRemedyType .
@@ -4196,26 +4196,26 @@ core-shape:epo-ReviewTerm-epo-hasReviewDeadline a sh:PropertyShape ;
 
 core-shape:epo-ReviewTerm-epo-hasReviewDeadlineInformation a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The description of the time limits for review procedures. WG Approval 01/10/2019" ;
     sh:name "Has review deadline information" ;
     sh:path :hasReviewDeadlineInformation .
 
 core-shape:epo-ReviewTerm-epo-hasReviewProcedure a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The description of the method used to request the verification that the procedure has been carried out correctly. WG Approval 09/11/2021" ;
     sh:name "Has review procedure" ;
     sh:path :hasReviewProcedure .
 
 core-shape:epo-Reviewer-epo-hasReviewBodyType a sh:PropertyShape ;
-    sh:class at-voc:review-body-type ;
+    sh:nodeKind sh:IRI ;
     sh:name "Has review body type" ;
     sh:path :hasReviewBodyType .
 
 core-shape:epo-SecurityClearanceTerm-dct-description a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. WG Approval 30/05/2023" ;
     sh:name "Description" ;
     sh:path dcterms:description .
@@ -4250,7 +4250,7 @@ core-shape:epo-SelectedCandidateList-epo-hasStartDate a sh:PropertyShape ;
 
 core-shape:epo-SelectionCriteriaSummary-epo-describesMinimumLevelOfStandards a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:maxCount 1 ;
     sh:name "Describes minimum level of standards" ;
     sh:path :describesMinimumLevelOfStandards .
@@ -4263,14 +4263,14 @@ core-shape:epo-SelectionCriteriaSummary-epo-hasSelectionCriteriaStatedInProcurem
     sh:path :hasSelectionCriteriaStatedInProcurementDocuments .
 
 core-shape:epo-SelectionCriterion-epo-hasSelectionCriteriaUsage a sh:PropertyShape ;
-    sh:class at-voc:usage ;
+    sh:nodeKind sh:IRI ;
     sh:description "Additional Information: This corresponds in eForms to BT-748 Selection Criteria Used." ;
     sh:maxCount 1 ;
     sh:name "Has selection criteria usage" ;
     sh:path :hasSelectionCriteriaUsage .
 
 core-shape:epo-SelectionCriterion-epo-hasSelectionCriterionType a sh:PropertyShape ;
-    sh:class at-voc:selection-criterion ;
+    sh:nodeKind sh:IRI ;
     sh:description "The classification of the selection criteria. Additional Information: This corresponds in eForms to BT-747 Selection Criteria Type. WG Approval 09/11/2021" ;
     sh:maxCount 1 ;
     sh:name "Has selection criterion type" ;
@@ -4285,7 +4285,7 @@ core-shape:epo-SelectionCriterion-epo-isUsedForCandidateRestriction a sh:Propert
     sh:path :isUsedForCandidateRestriction .
 
 core-shape:epo-SocialProcurement-epo-fulfillsRequirement a sh:PropertyShape ;
-    sh:class at-voc:social-objective ;
+    sh:nodeKind sh:IRI ;
     sh:description "The requirement to which the concept meets. WG Approval 09/11/2021" ;
     sh:name "Fulfills requirement" ;
     sh:path :fulfillsRequirement .
@@ -4308,27 +4308,27 @@ core-shape:epo-SpecificDuration-time-unitType a sh:PropertyShape ;
 
 core-shape:epo-StrategicProcurement-epo-hasNonAccessibilityCriterionJustification a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "Reason for not applying accessibility criteria. Additional information: This corresponds in eForma to BT-755 Accessibility Justification. WG Approval 05/03/2019" ;
     sh:name "Has non accessibility criterion justification" ;
     sh:path :hasNonAccessibilityCriterionJustification .
 
 core-shape:epo-StrategicProcurement-epo-hasStrategicProcurementDescription a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "Self-explanatory text about a concept." ;
     sh:name "Has strategic procurement description" ;
     sh:path :hasStrategicProcurementDescription .
 
 core-shape:epo-StrategicProcurement-epo-includesAccessibilityCriterion a sh:PropertyShape ;
-    sh:class at-voc:accessibility ;
+    sh:nodeKind sh:IRI ;
     sh:description "Explanation as to whether accessibility Criterion are used or not. WG Approval 09/11/2021" ;
     sh:name "Includes accessibility criterion" ;
     sh:path :includesAccessibilityCriterion .
 
 core-shape:epo-SubcontractTerm-dct-description a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. WG Approval 30/05/2023" ;
     sh:name "Description" ;
     sh:path dcterms:description .
@@ -4366,7 +4366,7 @@ core-shape:epo-SubcontractTerm-epo-hasSubcontractingInvolved a sh:PropertyShape 
     sh:path :hasSubcontractingInvolved .
 
 core-shape:epo-SubcontractTerm-epo-hasSubcontractingObligation a sh:PropertyShape ;
-    sh:class at-voc:subcontracting-obligation ;
+    sh:nodeKind sh:IRI ;
     sh:description "The requirement the tender must meet with regard to subcontracting parts of the contract. WG Approval 09/11/2021" ;
     sh:name "Has subcontracting obligation" ;
     sh:path :hasSubcontractingObligation .
@@ -4381,7 +4381,7 @@ core-shape:epo-SubcontractTerm-epo-hasSubcontractorsProposedAboveObligation a sh
 
 core-shape:epo-SubcontractingEstimate-dct-description a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. WG Approval 30/05/2023" ;
     sh:name "Description" ;
     sh:path dcterms:description .
@@ -4404,7 +4404,7 @@ core-shape:epo-SubcontractingEstimate-epo-hasSubcontractingEstimatedValue a sh:P
 
 core-shape:epo-SubcontractingEstimate-epo-hasSubjectMatter a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "Description of the share of the contract that is to be subcontracted. Additional infromation: This can be an aggregate of several subcontracts. WG Approval 09/11/2021" ;
     sh:name "Has subject matter" ;
     sh:path :hasSubjectMatter .
@@ -4537,7 +4537,7 @@ core-shape:epo-SubmissionStatisticalInformation-epo-hasReceivedSmallTenders a sh
     sh:path :hasReceivedSmallTenders .
 
 core-shape:epo-SubmissionStatisticalInformation-epo-hasReceivedSubmissionType a sh:PropertyShape ;
-    sh:class at-voc:received-submission-type ;
+    sh:nodeKind sh:IRI ;
     sh:maxCount 1 ;
     sh:name "Has received submission type" ;
     sh:path :hasReceivedSubmissionType .
@@ -4600,14 +4600,14 @@ core-shape:epo-SubmissionTerm-epo-hasEAuctionURL a sh:PropertyShape ;
     sh:path :hasEAuctionURL .
 
 core-shape:epo-SubmissionTerm-epo-hasECataloguePermission a sh:PropertyShape ;
-    sh:class at-voc:permission ;
+    sh:nodeKind sh:IRI ;
     sh:description "The extent to which electronic catalogues may be used in tenders. WG Approval 03/10/2019" ;
     sh:maxCount 1 ;
     sh:name "Has e catalogue permission" ;
     sh:path :hasECataloguePermission .
 
 core-shape:epo-SubmissionTerm-epo-hasESubmissionPermission a sh:PropertyShape ;
-    sh:class at-voc:permission ;
+    sh:nodeKind sh:IRI ;
     sh:description "The requirements as to what extent electronic submission is allowed. WG Approval 03/10/2019" ;
     sh:maxCount 1 ;
     sh:name "Has e submission permission" ;
@@ -4615,26 +4615,26 @@ core-shape:epo-SubmissionTerm-epo-hasESubmissionPermission a sh:PropertyShape ;
 
 core-shape:epo-SubmissionTerm-epo-hasGuaranteeDescription a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "Information on the financial commitment required from the economic operator. Additional Information: 1. This information may include the amount and the way of delivering of the guarantee 2. The financial commitment may be retained by the buyer in the case the tenderer withdraws the submitted information (i.e. tender, expression of interest and request for participation, but not request for clarifications) before the award of the contract or does not sign the contract. 3. Usual modalities are bonds, cheques, loans, other. WG Approval 21/07/20" ;
     sh:name "Has guarantee description" ;
     sh:path :hasGuaranteeDescription .
 
 core-shape:epo-SubmissionTerm-epo-hasLanguage a sh:PropertyShape ;
-    sh:class at-voc:language ;
+    sh:nodeKind sh:IRI ;
     sh:description "Language in which the submitted information is to be expressed. WG Approval 21/07/2020" ;
     sh:name "Has language" ;
     sh:path :hasLanguage .
 
 core-shape:epo-SubmissionTerm-epo-hasLateSubmissionInformationDescription a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "A narrative text explaining the content of the economic operator information that can be submitted late. Additional Information This does not apply to requests for clarifications." ;
     sh:name "Has late submission information description" ;
     sh:path :hasLateSubmissionInformationDescription .
 
 core-shape:epo-SubmissionTerm-epo-hasLateSubmissionPermission a sh:PropertyShape ;
-    sh:class at-voc:missing-info-submission ;
+    sh:nodeKind sh:IRI ;
     sh:description "Whether economic operator-related information can be supplemented even after the submission deadline. Additional Information This is specific to the information on the economic operator and not the actual offer. This does not apply to the requests for clarification. WG Approval 21/07/2020" ;
     sh:maxCount 1 ;
     sh:name "Has late submission permission" ;
@@ -4642,13 +4642,13 @@ core-shape:epo-SubmissionTerm-epo-hasLateSubmissionPermission a sh:PropertyShape
 
 core-shape:epo-SubmissionTerm-epo-hasNonElectronicSubmissionDescription a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "Textual explanation of how non-electronic information is to be presented. WG Approval 21/07/2020" ;
     sh:name "Has non electronic submission description" ;
     sh:path :hasNonElectronicSubmissionDescription .
 
 core-shape:epo-SubmissionTerm-epo-hasNonElectronicSubmissionJustification a sh:PropertyShape ;
-    sh:class at-voc:communication-justification ;
+    sh:nodeKind sh:IRI ;
     sh:description "Reason for not accepting electronic information. WG Approval 21/07/2020" ;
     sh:name "Has non electronic submission justification" ;
     sh:path :hasNonElectronicSubmissionJustification .
@@ -4698,7 +4698,7 @@ core-shape:epo-SubmissionTerm-epo-hasSubmissionURL a sh:PropertyShape ;
     sh:path :hasSubmissionURL .
 
 core-shape:epo-SubmissionTerm-epo-hasTenderSubcontractingInformation a sh:PropertyShape ;
-    sh:class at-voc:subcontracting-indication ;
+    sh:nodeKind sh:IRI ;
     sh:description "The information about subcontracting that must be indicated in the tender. WG Approval 10/10/2019" ;
     sh:name "Has tender subcontracting information" ;
     sh:path :hasTenderSubcontractingInformation .
@@ -4719,7 +4719,7 @@ core-shape:epo-SubmissionTerm-epo-hasTenderValidityPeriod a sh:PropertyShape ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#hasTenderValidityPeriod> ?that . ?that <http://data.europa.eu/a4g/ontology#hasTenderValidityPeriod> ?this .}" ] .
 
 core-shape:epo-SubmissionTerm-epo-hasVariantPermission a sh:PropertyShape ;
-    sh:class at-voc:permission ;
+    sh:nodeKind sh:IRI ;
     sh:description "The obligation or possibility for tenderers to submit variants or not. Additional Information: Variants are alternative ways to fulfil the buyer's needs as opposed to solutions indicated in the procurement documents. eForms: Whether tenderers are required, allowed or forbidden to submit tenders which fulfil the buyer's needs differently than as proposed in the procurement documents. Additional Information: Further conditions for submitting variant tenders are in the procurement documents." ;
     sh:maxCount 1 ;
     sh:name "Has variant permission" ;
@@ -4751,7 +4751,7 @@ core-shape:epo-SubmissionTerm-epo-isMultipleTenderSubmissionAllowed a sh:Propert
 
 core-shape:epo-System-dct-description a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. WG Approval 30/05/2023" ;
     sh:name "Description" ;
     sh:path dcterms:description .
@@ -4765,13 +4765,13 @@ core-shape:epo-System-epo-isOwnedByAgent a sh:PropertyShape ;
 
 core-shape:epo-Technique-dct-description a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. WG Approval 30/05/2023" ;
     sh:name "Description" ;
     sh:path dcterms:description .
 
 core-shape:epo-Technique-epo-hasUsage a sh:PropertyShape ;
-    sh:class at-voc:usage ;
+    sh:nodeKind sh:IRI ;
     sh:description "The codelist to be used is at-voc:usage which is available at http://publications.europa.eu/resource/dataset/usage" ;
     sh:maxCount 1 ;
     sh:name "Has usage" ;
@@ -4815,13 +4815,13 @@ core-shape:epo-Tender-epo-hasFinancialOfferValue a sh:PropertyShape ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#hasFinancialOfferValue> ?that . ?that <http://data.europa.eu/a4g/ontology#hasFinancialOfferValue> ?this .}" ] .
 
 core-shape:epo-Tender-epo-hasItemCountryOfOrigin a sh:PropertyShape ;
-    sh:class at-voc:country ;
+    sh:nodeKind sh:IRI ;
     sh:description "The source country of the product or service. Additional Information: The country of origin can be provided by the buyer as a requirement or by the tenderer information of the item to be provided. WG Approval 07/01/2020 The codelist to be used is at-voc:country which is available at http://publications.europa.eu/resource/dataset/country" ;
     sh:name "Has item country of origin" ;
     sh:path :hasItemCountryOfOrigin .
 
 core-shape:epo-Tender-epo-hasSubcontracting a sh:PropertyShape ;
-    sh:class at-voc:applicability ;
+    sh:nodeKind sh:IRI ;
     sh:maxCount 1 ;
     sh:name "Has subcontracting" ;
     sh:path :hasSubcontracting .
@@ -4897,14 +4897,14 @@ core-shape:epo-TenderGroup-adms-identifier a sh:PropertyShape ;
 
 core-shape:epo-TenderGroup-dct-description a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. WG Approval 30/05/2023" ;
     sh:name "Description" ;
     sh:path dcterms:description .
 
 core-shape:epo-TenderGroup-dct-title a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "A name given to the resource. WG approval 30/05/2023" ;
     sh:name "Title" ;
     sh:path dcterms:title .
@@ -4972,13 +4972,13 @@ core-shape:epo-VehicleInformation-epo-hasZeroEmissionVehicles a sh:PropertyShape
     sh:path :hasZeroEmissionVehicles .
 
 core-shape:epo-VehicleInformation-epo-specifiesCleanVehicleDirectiveContractType a sh:PropertyShape ;
-    sh:class at-voc:cvd-contract-type ;
+    sh:nodeKind sh:IRI ;
     sh:maxCount 1 ;
     sh:name "Specifies clean vehicle directive contract type" ;
     sh:path :specifiesCleanVehicleDirectiveContractType .
 
 core-shape:epo-VehicleInformation-epo-specifiesCleanVehicleDirectiveVehicleCategory a sh:PropertyShape ;
-    sh:class at-voc:vehicle-category ;
+    sh:nodeKind sh:IRI ;
     sh:maxCount 1 ;
     sh:name "Specifies clean vehicle directive vehicle category" ;
     sh:path :specifiesCleanVehicleDirectiveVehicleCategory .
@@ -5000,14 +5000,14 @@ core-shape:foaf-Agent-adms-identifier a sh:PropertyShape ;
 
 core-shape:foaf-Agent-dct-title a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "A name given to the resource. WG approval 30/05/2023" ;
     sh:name "Title" ;
     sh:path dcterms:title .
 
 core-shape:foaf-Agent-epo-hasAlias a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "Acronym or alternative name of the Agent. WG Approval 25/03/2021" ;
     sh:name "Has alias" ;
     sh:path :hasAlias .
@@ -5026,21 +5026,21 @@ core-shape:foaf-Person-epo-hasCertification a sh:PropertyShape ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#hasCertification> ?that . ?that <http://data.europa.eu/a4g/ontology#hasCertification> ?this .}" ] .
 
 core-shape:locn-Address-epo-hasCountryCode a sh:PropertyShape ;
-    sh:class at-voc:country ;
+    sh:nodeKind sh:IRI ;
     sh:description "" ;
     sh:maxCount 1 ;
     sh:name "Has country code" ;
     sh:path :hasCountryCode .
 
 core-shape:locn-Address-epo-hasNutsCode a sh:PropertyShape ;
-    sh:class at-voc:nuts ;
+    sh:nodeKind sh:IRI ;
     sh:maxCount 1 ;
     sh:name "Has nuts code" ;
     sh:path :hasNutsCode .
 
 core-shape:locn-Address-locn-addressArea a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The name or names of a geographic area or locality that groups a number of addressable objects for addressing purposes, without being an administrative unit. Additional Information: This would typically be part of a city, a neighbourhood or village, e.g. Montmartre." ;
     sh:maxCount 1 ;
     sh:name "Address area" ;
@@ -5056,7 +5056,7 @@ core-shape:locn-Address-locn-addressID a sh:PropertyShape ;
 
 core-shape:locn-Address-locn-adminUnitL1 a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The name or names of a unit of administration related to the exercise of jurisdictional rights, for local, regional and national governance. Level 1 refers to the uppermost administrative unit for the address, almost always a country. Additional Information: Best practice is to use the ISO 3166-1 code but if this is inappropriate for the context, country names should be provided in a consistent manner to reduce ambiguity. For example, either write 'France' or 'FRA' consistently throughout the dataset and avoid mixing the two. The Country controlled vocabulary from the Publications Office can be reused for this." ;
     sh:maxCount 1 ;
     sh:name "Admin unit l1" ;
@@ -5064,7 +5064,7 @@ core-shape:locn-Address-locn-adminUnitL1 a sh:PropertyShape ;
 
 core-shape:locn-Address-locn-adminUnitL2 a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The name or names of a unit of administration related to the exercise of jurisdictional rights, for local, regional and national governance. Level 2 refers to the region of the address, usually a county, state or other such area that typically encompasses several localities. Additional Information: Some recommended codelists from the EU Publications Office include: Administrative Territorial Units (ATU), NUTS and Local Administrative Units (LAU). The first arrondissement of Paris is for example expressed as \"http://publications.europa.eu/resource/authority/atu/FRA_AR_PAR01\" in the ATU controlled vocabulary." ;
     sh:maxCount 1 ;
     sh:name "Admin unit l2" ;
@@ -5072,7 +5072,7 @@ core-shape:locn-Address-locn-adminUnitL2 a sh:PropertyShape ;
 
 core-shape:locn-Address-locn-fullAddress a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The complete address written as a formatted string. Additional Information: Use of this property is recommended as it will not suffer any misunderstandings that might arise through the breaking up of an address into its component parts. This property is analogous to vCard's label property but with two important differences: (1) formatting is not assumed so that, unlike vCard label, it may not be suitable to print this on an address label, (2) vCard's label property has a domain of vCard Address; the fullAddress property has no such restriction. An example of a full address is \"Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France\"." ;
     sh:maxCount 1 ;
     sh:name "Full address" ;
@@ -5080,7 +5080,7 @@ core-shape:locn-Address-locn-fullAddress a sh:PropertyShape ;
 
 core-shape:locn-Address-locn-locatorDesignator a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "A number or a sequence of characters which allows a user or an application to interpret, parse and format the locator within the relevant scope. A locator may include more locator designators. Additional Information: In simpler terms, this is the building number, apartment number, etc. For an address such as \"Flat 3, 17 Bridge Street\", the locator is \"flat 3, 17\"." ;
     sh:maxCount 1 ;
     sh:name "Locator designator" ;
@@ -5088,7 +5088,7 @@ core-shape:locn-Address-locn-locatorDesignator a sh:PropertyShape ;
 
 core-shape:locn-Address-locn-locatorName a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "Proper noun(s) applied to the real world entity identified by the locator. Additional Information: The locator name could be the name of the property or complex, of the building or part of the building, or it could be the name of a room inside a building. The key difference between a locator and a locator name is that the latter is a proper name and is unlikely to include digits. For example, \"Shumann, Berlaymont\" is a meeting room within the European Commission headquarters for which locator name is more appropriate than locator." ;
     sh:maxCount 1 ;
     sh:name "Locator name" ;
@@ -5096,7 +5096,7 @@ core-shape:locn-Address-locn-locatorName a sh:PropertyShape ;
 
 core-shape:locn-Address-locn-postCode a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The post/zip code of an address. (INSPIRE's definition is \"A code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.\") Additional Information: Post codes are common elements in many countries' postal address systems. One of the many post codes of Paris is for example \"75000\"." ;
     sh:maxCount 1 ;
     sh:name "Post code" ;
@@ -5104,7 +5104,7 @@ core-shape:locn-Address-locn-postCode a sh:PropertyShape ;
 
 core-shape:locn-Address-locn-postName a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The key postal division of the address, usually the city. (INSPIRE's definition is \"One or more names created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.) For example, \"Paris\"." ;
     sh:maxCount 1 ;
     sh:name "Post name" ;
@@ -5112,7 +5112,7 @@ core-shape:locn-Address-locn-postName a sh:PropertyShape ;
 
 core-shape:locn-Address-locn-thoroughfare a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "An address component that represents the name or names of a passage or way through from one location to another. A thoroughfare is not necessarily a road, it might be a waterway or some other feature. Additional Information: For example, \"Avenue des Champs-&#201;lys&#233;es\"." ;
     sh:maxCount 1 ;
     sh:name "Thoroughfare" ;
@@ -5120,21 +5120,21 @@ core-shape:locn-Address-locn-thoroughfare a sh:PropertyShape ;
 
 core-shape:locn-Geometry-cv-coordinates a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The coordinate list." ;
     sh:name "Coordinates" ;
     sh:path cccev:coordinates .
 
 core-shape:locn-Geometry-cv-latitude a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The latitude." ;
     sh:name "Latitude" ;
     sh:path cccev:latitude .
 
 core-shape:locn-Geometry-cv-longitude a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The longitude." ;
     sh:name "Longitude" ;
     sh:path cccev:longitude .
@@ -5148,7 +5148,7 @@ core-shape:org-Organization-cv-registeredAddress a sh:PropertyShape ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/m8g/registeredAddress> ?that . ?that <http://data.europa.eu/m8g/registeredAddress> ?this .}" ] .
 
 core-shape:org-Organization-epo-hasBuyerLegalType a sh:PropertyShape ;
-    sh:class at-voc:buyer-legal-type ;
+    sh:nodeKind sh:IRI ;
     sh:description "A category that indicates the right of an Organisation to play the role of a buyer. Additional Information: The category also effects the rules that the buyer has to abide to within the public procurement procedure. WG 07/09/2021" ;
     sh:maxCount 1 ;
     sh:name "Has buyer legal type" ;
@@ -5156,7 +5156,7 @@ core-shape:org-Organization-epo-hasBuyerLegalType a sh:PropertyShape ;
 
 core-shape:org-Organization-epo-hasBuyerLegalTypeDescription a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "Self-explanatory text about the Buyer Legal Type. Additional information: This field is used when the Buyer Legal Type is not available in the controlled list at-voc:buyer-legal-type . This is necessary in to cover data provided in the TED Standard Forms. It shall be deprecated in the future. WG Approval 06/09/2022" ;
     sh:maxCount 1 ;
     sh:name "Has buyer legal type description" ;
@@ -5178,7 +5178,7 @@ core-shape:org-Organization-epo-hasInternetAddress a sh:PropertyShape ;
 
 core-shape:org-Organization-epo-hasLegalFormType a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The classification of an Organisation according to legislation. Additional Information: Generally, this is defined for Tenderers who want to submit as an Organisation Group. Note that the codelist provided at national level should be used." ;
     sh:maxCount 1 ;
     sh:name "Has legal form type" ;
@@ -5192,13 +5192,13 @@ core-shape:org-Organization-epo-hasLegalIdentifier a sh:PropertyShape ;
 
 core-shape:org-Organization-epo-hasLegalName a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The officially registered name of an organisation. WG Approval 10/01/2023" ;
     sh:name "Has legal name" ;
     sh:path :hasLegalName .
 
 core-shape:org-Organization-epo-hasMainActivity a sh:PropertyShape ;
-    sh:class at-voc:main-activity ;
+    sh:nodeKind sh:IRI ;
     sh:description "The principal sectoral area in which an organisation operates. Additional information: The activities associated with buyers are derived from the top level of the Classification of the functions of the government (COFOG) from the United Nations Statistics Division. The activities associated with buyer are derived from sectors explicitly falling within the sectoral directive (2014/25/EU Art. 8 - Art. 14). WG Approval 05/05/2020" ;
     sh:maxCount 1 ;
     sh:name "Has main activity" ;
@@ -5206,7 +5206,7 @@ core-shape:org-Organization-epo-hasMainActivity a sh:PropertyShape ;
 
 core-shape:org-Organization-epo-hasMainActivityDescription a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "Self-explanatory text about the Main Activity . Additional information: This field is used when the Main Activity is not available in the controlled list at-voc:main-activity-type . This is necessary in to cover data provided in the TED Standard Forms. It shall be deprecated in the future. WG Approval 06/09/2022" ;
     sh:maxCount 1 ;
     sh:name "Has main activity description" ;
@@ -5219,7 +5219,7 @@ core-shape:org-Organization-epo-hasPrimaryContactPoint a sh:PropertyShape ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#hasPrimaryContactPoint> ?that . ?that <http://data.europa.eu/a4g/ontology#hasPrimaryContactPoint> ?this .}" ] .
 
 core-shape:org-Organization-epo-hasRegistrationCountry a sh:PropertyShape ;
-    sh:class at-voc:country ;
+    sh:nodeKind sh:IRI ;
     sh:maxCount 1 ;
     sh:name "Has registration country" ;
     sh:path :hasRegistrationCountry .
@@ -5262,20 +5262,20 @@ core-shape:person-Person-cv-registeredAddress a sh:PropertyShape ;
 
 core-shape:person-Person-dct-alternative a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "Any name by which an individual is known other than their full name. WG 09/11/2021" ;
     sh:name "Alternative" ;
     sh:path dcterms:alternative .
 
 core-shape:person-Person-epo-hasCountryOfBirth a sh:PropertyShape ;
-    sh:class at-voc:country ;
+    sh:nodeKind sh:IRI ;
     sh:description "The country in which the Person was born." ;
     sh:maxCount 1 ;
     sh:name "Has country of birth" ;
     sh:path :hasCountryOfBirth .
 
 core-shape:person-Person-epo-hasNationality a sh:PropertyShape ;
-    sh:class at-voc:country ;
+    sh:nodeKind sh:IRI ;
     sh:description "" ;
     sh:name "Has nationality" ;
     sh:path :hasNationality .
@@ -5289,35 +5289,35 @@ core-shape:person-Person-epo-isBeneficialOwnerOf a sh:PropertyShape ;
 
 core-shape:person-Person-foaf-familyName a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The hereditary surname of a family." ;
     sh:name "Family name" ;
     sh:path foaf:familyName .
 
 core-shape:person-Person-foaf-givenName a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The name(s) that identify the Person within a family with a common surname." ;
     sh:name "Given name" ;
     sh:path foaf:givenName .
 
 core-shape:person-Person-foaf-name a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "The complete name of the Person as one string." ;
     sh:name "Name" ;
     sh:path foaf:name .
 
 core-shape:person-Person-person-birthName a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "Family name of the Person given upon their birth. WG Approval 09/11/2021" ;
     sh:name "Birth name" ;
     sh:path person:birthName .
 
 core-shape:person-Person-person-patronymicName a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
-    sh:datatype rdf:PlainLiteral ;
+    #sh:datatype rdf:PlainLiteral ;
     sh:description "Name based on the given name of the Person's father. WG Approval 09/11/2021" ;
     sh:name "Patronymic name" ;
     sh:path person:patronymicName .

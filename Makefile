@@ -9,7 +9,8 @@ SAMPLES_CN_NAME = sampling_20231001-20240311
 ROOT_CONCEPTS_GREPFILTER = "_Organization_|_TouchPoint_|_Notice|_ProcurementProcessInformation_|_Lot_|_VehicleInformation_|_ChangeInformation_"
 TEST_QUERY_RESULTS_FORMAT = CSV
 XLSX_STRDATA = xl/sharedStrings.xml
-DEFAULT_CM_ID = package_eforms_10-24_v1.9_M1-M3
+DEFAULT_CM_ID = package_eforms_10-24_v1.9
+TRIM_DOWN_SHACL = 1
 
 CANONICAL_TEST_OUTPUT = src/output.ttl
 CANONICAL_RML_DIR = src/mappings
@@ -19,6 +20,8 @@ TEST_SCRIPTS_DIR = test_scripts
 POST_SCRIPTS_DIR = src/scripts
 TX_DIR = transformation
 CM_FILENAME = conceptual_mappings.xlsx
+SHACL_FILE_EPO = ePO_core_shapes.ttl
+SHACL_PATH_EPO = validation/shacl/epo/$(SHACL_FILE_EPO)
 
 JENA_TOOLS_DIR = $(shell test ! -z ${JENA_HOME} && echo ${JENA_HOME} || echo `pwd`/jena)
 JENA_TOOLS_RIOT = $(JENA_TOOLS_DIR)/bin/riot
@@ -33,6 +36,12 @@ package_sync:
 	@ cp -rv src/mappings mappings/$(MINIMAL_PACKAGE)/$(TX_DIR)/
 	@ cp -rv src/$(TX_DIR) mappings/$(MINIMAL_PACKAGE)/
 	@ cp -rv src/validation mappings/$(MINIMAL_PACKAGE)/
+ifeq ($(TRIM_DOWN_SHACL), 1)
+	@ echo "Modifying ePO SHACL file to suppress rdf:PlainLiteral violations"
+	@ sed -i 's/sh:datatype rdf:PlainLiteral/#sh:datatype rdf:PlainLiteral/' mappings/$(MINIMAL_PACKAGE)/$(SHACL_PATH_EPO)
+	@ echo "Modifying ePO SHACL file to subtitute at-voc constraint with IRI"
+	@ sed -i 's/sh:class at-voc:.*;/sh:nodeKind sh:IRI ;/' mappings/$(MINIMAL_PACKAGE)/$(SHACL_PATH_EPO)
+endif
 
 package_cn_minimal: package_sync
 	@ mkdir -p $(OUTPUT_DIR)
@@ -175,7 +184,7 @@ test_output:
 	@ $(TEST_SCRIPTS_DIR)/test_predicate_coverage.sh $(CANONICAL_RML_DIR) $(CANONICAL_TEST_OUTPUT)
 	@ echo
 	@ echo "==> Test RML subject reference coverage"
-	@ $(TEST_SCRIPTS_DIR)/test_reference_coverage.sh $(CANONICAL_RML_DIR) $(CANONICAL_TEST_OUTPUT)	
+	@ $(TEST_SCRIPTS_DIR)/test_reference_coverage.sh $(CANONICAL_RML_DIR) $(CANONICAL_TEST_OUTPUT)
 	@ echo
 	@ echo "==> Test RML subject template coverage"
 	@ $(TEST_SCRIPTS_DIR)/test_template_coverage.sh $(CANONICAL_RML_DIR) $(CANONICAL_TEST_OUTPUT)

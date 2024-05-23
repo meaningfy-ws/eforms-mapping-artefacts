@@ -6,11 +6,14 @@ SDK_NAME = eforms-sdk
 DEFAULT_SDK_VERSION = 1.9
 SDK_DATA_NAME = sdk_examples_cn
 SAMPLES_CN_NAME = sampling_20231001-20240311
+SAMPLES_RANDOM_NAME = sampling_random
 ROOT_CONCEPTS_GREPFILTER = "_Organization_|_TouchPoint_|_Notice|_ProcurementProcessInformation_|_Lot_|_VehicleInformation_|_ChangeInformation_"
 TEST_QUERY_RESULTS_FORMAT = CSV
 XLSX_STRDATA = xl/sharedStrings.xml
 DEFAULT_CM_ID = package_eforms_10-24_v1.9
 TRIM_DOWN_SHACL = 1
+EXCLUDE_INEFFICIENT_VALIDATIONS = 1
+INCLUDE_RANDOM_SAMPLES = 0
 
 CANONICAL_TEST_OUTPUT = src/output.ttl
 CANONICAL_RML_DIR = src/mappings
@@ -33,6 +36,7 @@ OWLCLI_CMD = java -jar ~/.rmlmapper/owl-cli.jar write --indentSize 4
 BUILD_PRINT = \e[1;34mSTEP: \e[0m
 SDK_DATA_DIR = $(TEST_DATA_DIR)/$(SDK_DATA_NAME)
 SAMPLES_CN_DIR = $(TEST_DATA_DIR)/$(SAMPLES_CN_NAME)
+SAMPLES_RANDOM_DIR = $(TEST_DATA_DIR)/$(SAMPLES_RANDOM_NAME)
 CM_FILE = $(TX_DIR)/$(CM_FILENAME)
 
 package_sync:
@@ -63,6 +67,10 @@ package_cn_minimal: package_sync
 	@ cd $(PKG_TMP) && zip -r tmp.xlsx * && mv -v tmp.xlsx ../../$(PKG_DIR)/$(CM_FILE) && cd ../.. && rm -r $(PKG_TMP)
 	@ echo "Removing outdated metadata"
 	@ rm -fv $(PKG_DIR)/metadata.json
+ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
+	@ echo "Removing inefficient generic validations"
+	@ rm -rfv $(PKG_DIR)/validation/sparql/generic* -v
+endif
 
 export_cn_minimal:
 	@ cd $(OUTPUT_DIR) && zip -r $(MINIMAL_PACKAGE).zip $(MINIMAL_PACKAGE)
@@ -85,6 +93,10 @@ package_cn_examples: package_sync
 	@ cd $(PKG_TMP) && zip -r tmp.xlsx * && mv -v tmp.xlsx ../../$(PKG_DIR)/$(CM_FILE) && cd ../.. && rm -r $(PKG_TMP)
 	@ echo "Removing outdated metadata"
 	@ rm -fv $(PKG_DIR)/metadata.json
+ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
+	@ echo "Removing inefficient generic validations"
+	@ rm -rfv $(PKG_DIR)/validation/sparql/generic* -v
+endif
 
 export_cn_examples:
 	@ $(eval PKG_NAME := $(DEFAULT_PACKAGE)_allExamples)
@@ -100,6 +112,10 @@ package_cn_samples: package_sync
 	@ echo "Including EF10-24 sample data"
 	@ mkdir -p $(PKG_DIR)/$(SAMPLES_CN_DIR)
 	@ find $(SAMPLES_CN_DIR)/$(SDK_NAME)-$(DEFAULT_SDK_VERSION)/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_CN_DIR) \;
+ifeq ($(INCLUDE_RANDOM_SAMPLES), 1)
+	@ mkdir -p $(PKG_DIR)/$(SAMPLES_RANDOM_DIR)
+	@ find $(SAMPLES_RANDOM_DIR)/eforms_sdk_v$(DEFAULT_SDK_VERSION)/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_RANDOM_DIR) \;
+endif
 	@ echo "Removing any SDK examples"
 	@ rm -rfv $(PKG_DIR)/$(SDK_DATA_DIR)
 	@ echo "Modifying Identifier in the CM and replacing XLSX"
@@ -109,6 +125,10 @@ package_cn_samples: package_sync
 	@ cd $(PKG_TMP) && zip -r tmp.xlsx * && mv -v tmp.xlsx ../../$(PKG_DIR)/$(CM_FILE) && cd ../.. && rm -r $(PKG_TMP)
 	@ echo "Removing outdated metadata"
 	@ rm -fv $(PKG_DIR)/metadata.json
+ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
+	@ echo "Removing inefficient generic validations"
+	@ rm -rfv $(PKG_DIR)/validation/sparql/generic* -v
+endif
 
 export_cn_samples:
 	@ $(eval PKG_NAME := $(DEFAULT_PACKAGE)_allSamples)
@@ -126,13 +146,16 @@ package_cn_maximal: package_sync
 	@ echo "Including EF10-24 sample data"
 	@ mkdir -p $(PKG_DIR)/$(SAMPLES_CN_DIR)
 	@ find $(SAMPLES_CN_DIR)/$(SDK_NAME)-$(DEFAULT_SDK_VERSION)/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_CN_DIR) \;
-	@ echo "Modifying Identifier in the CM and replacing XLSX"
-	@ mkdir -p $(PKG_TMP) && unzip $(PKG_DIR)/$(CM_FILE) -d $(PKG_TMP)
-	@ rm -v $(PKG_DIR)/$(CM_FILE)
-	@ sed -i "s|<t>$(DEFAULT_CM_ID)</t>|<t>$(DEFAULT_CM_ID)_allData</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
-	@ cd $(PKG_TMP) && zip -r tmp.xlsx * && mv -v tmp.xlsx ../../$(PKG_DIR)/$(CM_FILE) && cd ../.. && rm -r $(PKG_TMP)
+ifeq ($(INCLUDE_RANDOM_SAMPLES), 1)
+	@ mkdir -p $(PKG_DIR)/$(SAMPLES_RANDOM_DIR)
+	@ find $(SAMPLES_RANDOM_DIR)/eforms_sdk_v$(DEFAULT_SDK_VERSION)/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_RANDOM_DIR) \;
+endif
 	@ echo "Removing outdated metadata"
 	@ rm -fv $(PKG_DIR)/metadata.json
+ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
+	@ echo "Removing inefficient generic validations"
+	@ rm -rfv $(PKG_DIR)/validation/sparql/generic* -v
+endif
 
 export_cn_maximal:
 	@ $(eval PKG_NAME := $(DEFAULT_PACKAGE)_allData)

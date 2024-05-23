@@ -3171,7 +3171,7 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-Lot_ND-LotProcurementScope a r
     rr:predicateObjectMap
         [
             rdfs:label "BT-5101(a)-Lot, BT-5101(b)-Lot, BT-5101(s)-Lot, BT-5131-Lot, BT-5121-Lot, BT-5071-Lot, BT-5141-Lot ";
-            rr:predicate locn:address ;
+            rr:predicate epo:definesSpecificPlaceOfPerformance ;
             rr:objectMap
                 [
                     rr:parentTriplesMap tedm:Location-definesSpecificPlaceOfPerformance-ContractTerm-foreseesContractSpecificTerm-Lot_ND-LotPerformanceAddress ;
@@ -3197,7 +3197,7 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-Lot_ND-LotProcurementScope a r
     rr:predicateObjectMap
         [
             rdfs:label "BT-536-Lot, BT-537-Lot and BT-538-Lot";
-            rr:predicate epo:definesContractDuration ;
+            rr:predicate epo:definesContractPeriod ;
             rr:objectMap
                 [
                     rr:parentTriplesMap tedm:MG-Period-definesContractPeriod-ContractTerm-foreseesContractSpecificTerm-Lot_ND-LotDuration ;

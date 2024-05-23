@@ -2605,7 +2605,7 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-Lot_ND-TendererLegalForm a rr:
             rr:predicate epo:hasLegalFormRequirement ;
             rr:objectMap
                 [
-                    rml:reference "cbc:CompanyLegalForm";
+                    rml:reference "if (cbc:CompanyLegalFormCode[@listName='required' and text()='true']) then cbc:CompanyLegalForm else null";
                     rml:languageMap [
                         fnml:functionValue [
                             rr:predicateObjectMap [
@@ -2896,7 +2896,7 @@ tedm:MG-SubmissionTerm-isSubjectToLotSpecificTerm-Lot_ND-LotTenderingTerms a rr:
             rr:objectMap
                 [
                     rdfs:comment "translation of at-voc value 'allowed' to ePO value 'true'";
-                    rml:reference "if(cbc:MultipleTendersCode/text()='allowed') then 'true' else null";
+                    rml:reference "if(cbc:MultipleTendersCode/text()='allowed' or cbc:MultipleTendersCode/text()='required') then 'true' else null";
                     rr:datatype xsd:boolean;
                 ]
                 ,
@@ -2905,12 +2905,6 @@ tedm:MG-SubmissionTerm-isSubjectToLotSpecificTerm-Lot_ND-LotTenderingTerms a rr:
                     rml:reference "if(cbc:MultipleTendersCode/text()='not-allowed') then 'false' else null";
                     rr:datatype xsd:boolean;
                 ]
-                ,
-                [
-                    rdfs:comment "translation of at-voc value 'required' to ePO value 'true'";
-                    rml:reference "if(cbc:MultipleTendersCode/text()='required') then 'true' else null";
-                    rr:datatype xsd:boolean;
-                ] ;
         ];
     rr:predicateObjectMap
         [

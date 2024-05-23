@@ -102,19 +102,15 @@ tedm:MG-LotGroup_ND-LotsGroup a rr:TriplesMap ;
                 ] ;
         ]   ;
     rr:predicateObjectMap
-        [
-            rdfs:label "BT-539-LotsGroup, BT-540-LotGroup, and ND-LotsGroupAwardCriterion" ;
+        [ rdfs:label "BT-539-LotsGroup, BT-540-LotGroup, and ND-LotsGroupAwardCriterion" ;
             rr:predicate epo:specifiesProcurementCriterion   ;
             rr:objectMap
                 [
                     rr:parentTriplesMap tedm:MG-AwardCriterion-specifiesProcurementCriterion-LotGroup_ND-LotsGroupAwardCriterion ;
                     rr:joinCondition [
                         rr:child "path(.)";
-                        rr:parent "path(../../../..)" ;
-                        ] ;
-                ] ;
-        ] ;
-      rr:predicateObjectMap [ rdfs:label   "BT-541-LotsGroup-WeightNumber" ;
+                        rr:parent "path(../../../..)" ; ] ; ] ; ] ;
+                              rr:predicateObjectMap [ rdfs:label   "BT-541-LotsGroup-WeightNumber" ;
                                                       rr:predicate epo:specifiesProcurementCriterion ;
                                                       rr:objectMap [ rr:parentTriplesMap
                                                                                       tedm:MG-AwardCriterion-specifiesProcurementCriterion-LotGroup_ND-LotsGroupAwardWeightCriterionParameter ;

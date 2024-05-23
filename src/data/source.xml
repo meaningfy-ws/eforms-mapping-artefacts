@@ -704,6 +704,11 @@
 											<!--BT-541-->
 											<efbc:ParameterNumeric>60</efbc:ParameterNumeric>
 										</efac:AwardCriterionParameter>
+										<efac:AwardCriterionParameter>
+											<!--BT-5422-->
+											<efbc:ParameterCode listName="number-fixed">fix-tot</efbc:ParameterCode>
+											<efbc:ParameterNumeric>50</efbc:ParameterNumeric>
+										</efac:AwardCriterionParameter>
 									</efext:EformsExtension>
 								</ext:ExtensionContent>
 							</ext:UBLExtension>

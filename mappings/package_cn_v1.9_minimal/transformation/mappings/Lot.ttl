@@ -409,7 +409,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
             rr:predicate epo:specifiesProcurementCriterion ;
             rr:objectMap
                 [
-                    # this is an example of a relationship for all occurences of a subject, therefore not needing a joinCondition
+                    # this is an example of a relationship for all occurrences of a subject, therefore not needing a joinCondition
                     rr:parentTriplesMap tedm:MG-ExclusionGround-specifiesProcurementCriterion-Lot_ND-ExclusionGrounds ;
                 ]
         ] ;
@@ -1254,7 +1254,6 @@ tedm:MG-Identifier-identifier-PlannedProcurementPart-announcesPlannedProcurement
     rr:subjectMap
         [
             rdfs:label "ND-LotPreviousPlanning";
-            # we hash on the ID instead as it is bound to be unique (this internal address is not)
             rml:reference "if (exists(cbc:ReferencedDocumentInternalAddress)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(cbc:ID, ' ', '-' ), '/' , '-') || '_PlannedProcurementPartIdentifier_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(cbc:ID) || '?response_type=raw') else null" ;
             rr:class adms:Identifier
         ] ;
@@ -2172,15 +2171,14 @@ tedm:MG-SelectionCriterion-specifiesProcurementCriterion-Lot_ND-SelectionCriteri
                 ] ;
         ];
 rr:predicateObjectMap
-        [
-            rdfs:label "BT-5423-Lot";
+        [ rdfs:label "BT-5423-Lot,BT-541-Lot-ThresholdNumber" ;
             rr:predicate epo:hasConstraint ;
             rr:objectMap
                 [
                     rr:parentTriplesMap tedm:MG-Constraint-hasConstraint-AwardCriterion-specifiesProcurementCriterion-Lot_ND-LotAwardThresholdCriterionParameter ;
                     rr:joinCondition [
                         rr:child "path(.)";
-                        rr:parent "path(..)";
+                        rr:parent "path(../../../../../../../../..)" ;
                     ];
                 ] ;
         ]
@@ -2460,12 +2458,12 @@ tedm:MG-Constraint-hasConstraint-AwardCriterion-specifiesProcurementCriterion-Lo
     rr:subjectMap
         [
             rdfs:label "ND-LotAwardThresholdCriterionParameter";
-            rml:reference "if (exists(efbc:ParameterCode[@listName='number-threshold'])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_SelectionTermConstraint_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
+            rml:reference
+                    "if (exists(efbc:ParameterCode[@listName='number-threshold'])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_LotConstraint_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
             rr:class cccev:Constraint
         ] ;
     rr:predicateObjectMap
         [
-            # TODO min SDK 1.8
             #TODO test source
             rdfs:label  "BT-5423-Lot";
             rdfs:comment "Award Criterion Number Threshold of MG-Constraint under ND-LotAwardThresholdCriterionParameter";
@@ -2479,7 +2477,6 @@ tedm:MG-Constraint-hasConstraint-AwardCriterion-specifiesProcurementCriterion-Lo
             ] ;
      rr:predicateObjectMap
         [
-
             #TODO test source
             rdfs:label  "BT-541-Lot-ThresholdNumber";
             rdfs:comment "Award Criterion Number Threshold of MG-Constraint under ND-LotAwardThresholdCriterionParameter";
@@ -2605,7 +2602,7 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-Lot_ND-TendererLegalForm a rr:
             rr:predicate epo:hasLegalFormRequirement ;
             rr:objectMap
                 [
-                    rml:reference "cbc:CompanyLegalForm";
+                    rml:reference "if (cbc:CompanyLegalFormCode[@listName='required' and text()='true']) then cbc:CompanyLegalForm else null";
                     rml:languageMap [
                         fnml:functionValue [
                             rr:predicateObjectMap [
@@ -2896,7 +2893,7 @@ tedm:MG-SubmissionTerm-isSubjectToLotSpecificTerm-Lot_ND-LotTenderingTerms a rr:
             rr:objectMap
                 [
                     rdfs:comment "translation of at-voc value 'allowed' to ePO value 'true'";
-                    rml:reference "if(cbc:MultipleTendersCode/text()='allowed') then 'true' else null";
+                    rml:reference "if(cbc:MultipleTendersCode/text()='allowed' or cbc:MultipleTendersCode/text()='required') then 'true' else null";
                     rr:datatype xsd:boolean;
                 ]
                 ,
@@ -2905,12 +2902,6 @@ tedm:MG-SubmissionTerm-isSubjectToLotSpecificTerm-Lot_ND-LotTenderingTerms a rr:
                     rml:reference "if(cbc:MultipleTendersCode/text()='not-allowed') then 'false' else null";
                     rr:datatype xsd:boolean;
                 ]
-                ,
-                [
-                    rdfs:comment "translation of at-voc value 'required' to ePO value 'true'";
-                    rml:reference "if(cbc:MultipleTendersCode/text()='required') then 'true' else null";
-                    rr:datatype xsd:boolean;
-                ] ;
         ];
     rr:predicateObjectMap
         [
@@ -3898,6 +3889,7 @@ tedm:MG-ProcurementDocument-involvesProcurementDocument-AccessTerm-isSubjectToLo
         [
             # TODO min SDK 1.3 max SDK 1.8
             rdfs:label "BT-737-Lot";
+            rdfs:comment "Documents Unofficial Language of MG-ProcurementDocument under ND-LotDocAllNonOfficialLanguages";
             rr:predicate epo:hasUnofficialLanguage  ;
             rr:objectMap
                 [
@@ -4538,7 +4530,7 @@ tedm:MG-StrategicProcurement-fulfillsStrategicProcurement-Lot-Lot_ND-Accessibili
             rr:predicate epo:includesAccessibilityCriterion ;
             rr:objectMap
                 [
-                    # TODO add to source
+                    # TODO test source
                     # TODO min SDK 1.5.12 max SDK 1.7
                     tedm:minSDKVersionn "1.8" ;
                     rdfs:label "at-voc:accessibility";
@@ -4834,7 +4826,6 @@ tedm:MG-SpecificDuration-definesContractDuration-ContractTerm-foreseesContractSp
         ] ;
     rr:predicateObjectMap
         [
-            # TODO does not work correctly (no output)
             rdfs:label "BT-36-Lot (value)";
             rdfs:comment "Duration Period of MG-SpecificDuration under ND-LotDuration";
             rr:predicate  time:numericDuration;
@@ -4901,13 +4892,13 @@ tedm:MG-Period-definesContractPeriod-ContractTerm-foreseesContractSpecificTerm-L
         [
             # TODO test source
             # TODO min SDK 1.3 max SDK 1.7
-            # TODO min SDK 1.8
             rdfs:label "BT-538-Lot";
             rdfs:comment "Duration Other of MG-SpecificDuration under ND-LotDuration";
             rr:predicate  epo:hasTimePeriod;
             rr:objectMap
                 [
-                    rdfs:label "  at-voc:timeperiod";
+                    tedm:minSDKVersion "1.8" ;
+                    rdfs:label "at-voc:timeperiod";
                     rr:parentTriplesMap tedm:timeperiod ;
                     rr:joinCondition [
                         rr:child "cbc:DescriptionCode" ;

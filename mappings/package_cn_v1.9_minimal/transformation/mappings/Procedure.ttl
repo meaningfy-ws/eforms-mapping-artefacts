@@ -50,6 +50,17 @@ tedm:MG-Procedure_ND-Root a rr:TriplesMap ;
         ] ;
     rr:predicateObjectMap
         [
+            # TODO: To be revisited for Result Notices. Perhaps we will need an XPath condition.
+            rdfs:label "ND-Lot" ;
+            rdfs:comment "Aggregation relationship between Procedure and Lot" ;
+            rr:predicate epo:hasProcurementScopeDividedIntoLot ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-Lot_ND-Lot ;
+                ]
+        ] ;
+    rr:predicateObjectMap
+        [
             rdfs:label "ProcedureTerm" ;
             rdfs:comment "Composition relationship between Procedure and ProcedureTerm" ;
             rr:predicate epo:isSubjectToProcedureSpecificTerm ;
@@ -527,11 +538,6 @@ tedm:MG-Procedure_ND-ProcedureProcurementScope a rr:TriplesMap ;
             rr:objectMap
                 [
                     rr:parentTriplesMap tedm:MG-ContractTerm-foreseesContractSpecificTerm-Procedure_ND-ProcedureProcurementScope ;
-                    # no joinCondition needed as the parent and child iterator XPaths do not repeat
-                    # rr:joinCondition [
-                    #     rr:child "path(.)" ;
-                    #     rr:parent "path(.)" ;
-                    # ] ;
                 ]
         ] ;
     rr:predicateObjectMap

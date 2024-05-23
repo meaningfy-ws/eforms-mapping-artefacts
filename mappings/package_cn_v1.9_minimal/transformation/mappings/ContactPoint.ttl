@@ -229,9 +229,6 @@ tedm:MG-Address-address-ContactPoint_ND-TouchpointAddress a rr:TriplesMap ;
             rr:objectMap
                 [
                     rdfs:label "at-voc:country" ;
-                    # alternative: instantiate vocabulary IRIs instead of mapping to a vocabulary parent resource
-                    # rml:reference "'http://publications.europa.eu/resource/authority/country/' || cac:Country/cbc:IdentificationCode" ;
-                    # rr:termType rr:IRI ;
                     rr:parentTriplesMap tedm:country ;
                     rr:joinCondition [
                         rr:child "cac:Country/cbc:IdentificationCode" ;

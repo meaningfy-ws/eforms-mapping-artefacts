@@ -538,11 +538,6 @@ tedm:MG-Procedure_ND-ProcedureProcurementScope a rr:TriplesMap ;
             rr:objectMap
                 [
                     rr:parentTriplesMap tedm:MG-ContractTerm-foreseesContractSpecificTerm-Procedure_ND-ProcedureProcurementScope ;
-                    # no joinCondition needed as the parent and child iterator XPaths do not repeat
-                    # rr:joinCondition [
-                    #     rr:child "path(.)" ;
-                    #     rr:parent "path(.)" ;
-                    # ] ;
                 ]
         ] ;
     rr:predicateObjectMap

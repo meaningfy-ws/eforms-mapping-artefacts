@@ -44,14 +44,12 @@ tedm:MG-Buyer_ND-ContractingParty a rr:TriplesMap ;
     # TODO should this be another TMap, since it is under ND-ServiceProvider node instead of ND-ContractingParty?
     rr:predicateObjectMap
         [
-            # TODO min SDK 1.10
             rdfs:label "OPT-300-Procedure-Buyer" ;
             rdfs:comment "Buyer Technical Identifier Reference" ;
             rr:predicate epo:playedBy ;
             rr:objectMap
                 [
-                    tedm:minSDKVersion "1.3" ;
-                    tedm:maxSDKVersion "1.9.1" ;
+                    # TODO min SDK 1.3 max SDK 1.9.1
                     rr:parentTriplesMap tedm:MG-Organization-playedBy-Buyer_ND-ServiceProvider ;
                 ] ;
         ] ;

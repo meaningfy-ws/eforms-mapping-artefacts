@@ -190,6 +190,31 @@ tedm:MG-Identifier-identifier-Notice-refersToPreviousNotice-ChangeInformation_ND
         ]
 .
 
+tedm:MG-Notice-concernsNotice-ChangeInformation_ND-Changes a rr:TriplesMap ;
+    rdfs:label "MG-Notice";
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Changes" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-Change";
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ChangeInformation_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rr:class epo:ChangeInformation
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "ND-Changes";
+            rr:predicate epo:concernsNotice ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-Notice_ND-Root ;
+                ] ;
+        ]
+.
+
 tedm:MG-Notice-refersToPreviousNotice-ChangeInformation_ND-Changes a rr:TriplesMap ;
     rdfs:label "MG-Notice";
     rml:logicalSource

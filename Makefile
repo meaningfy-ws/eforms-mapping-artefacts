@@ -26,6 +26,9 @@ SHACL_PATH_EPO = validation/shacl/epo/$(SHACL_FILE_EPO)
 JENA_TOOLS_DIR = $(shell test ! -z ${JENA_HOME} && echo ${JENA_HOME} || echo `pwd`/jena)
 JENA_TOOLS_RIOT = $(JENA_TOOLS_DIR)/bin/riot
 JENA_TOOLS_ARQ = $(JENA_TOOLS_DIR)/bin/arq
+OWLCLI_DIR = $(shell test ! -z ${OWLCLI_HOME} && echo ${OWLCLI_HOME} || echo `pwd`/owlcli)
+OWLCLI_BIN = OWLCLI_DIR/owl-cli.jar
+OWLCLI_CMD = java -jar ~/.rmlmapper/owl-cli.jar write --indentSize 4
 
 BUILD_PRINT = \e[1;34mSTEP: \e[0m
 SDK_DATA_DIR = $(TEST_DATA_DIR)/$(SDK_DATA_NAME)
@@ -42,6 +45,10 @@ ifeq ($(TRIM_DOWN_SHACL), 1)
 	@ echo "Modifying ePO SHACL file to subtitute at-voc constraint with IRI"
 	@ sed -i 's/sh:class at-voc:.*;/sh:nodeKind sh:IRI ;/' mappings/$(MINIMAL_PACKAGE)/$(SHACL_PATH_EPO)
 endif
+
+reformat_package_cn:
+	@ echo "Reformatting RML files for packaging $(MINIMAL_PACKAGE), with $(OWLCLI_BIN)"
+	for i in `find mappings/$(MINIMAL_PACKAGE)/$(TX_DIR)/mappings -type f`; do mv $$i $$i.bak && $(OWLCLI_CMD) $$i.bak $$i && rm -v $$i.bak; done
 
 package_cn_minimal: package_sync
 	@ mkdir -p $(OUTPUT_DIR)
@@ -142,6 +149,12 @@ setup-jena-tools:
 	@ unzip jena.zip
 	@ mv apache-jena-4.10.0 jena
 	@ echo "Done installing Jena tools, accessible at $(JENA_TOOLS_DIR)/bin"
+
+setup-owl-cli:
+	@ echo "Installing OWL CLI tool locally"
+	@ mkdir -p owlcli
+	@ curl -L "https://github.com/atextor/owl-cli/releases/download/snapshot/owl-cli-snapshot.jar" -o owlcli/owl-cli.jar
+	@ echo "Done installing OWL CLI tool, accessible at $(OWLCLI_DIR)/owl-cli.jar"
 
 test:
 	@ echo "Using $(JENA_TOOLS_RIOT)"

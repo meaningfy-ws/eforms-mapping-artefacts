@@ -628,8 +628,27 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotFund_UQnAwfk3ERwvnj7e2sbo39 a epo
   dct:description "Recovery Fund"@en;
   adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FundIdentifier_UQnAwfk3ERwvnj7e2sbo39 .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroupAwardCriterion_Ed82rH3bQh5UFtUqt5RqUi
-  a epo:AwardCriterion .
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroupAwardCriterion_83TR8A3HiWh9GmZEyyQGjQ
+    a                         epo:AwardCriterion ;
+    epo:hasAwardCriterionType <http://publications.europa.eu/resource/authority/award-criterion-type/quality> ;
+    dct:description           "AC Description ---"@en ;
+    skos:prefLabel            "Name of AC ---"@en .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroupAwardCriterion_AdQ99ZtFwmVjXcjtXZ5Ltw
+    a                      epo:AwardCriterion ;
+    epo:hasWeightValueType <http://publications.europa.eu/resource/authority/number-weight/per-exa> ;
+    cccev:weight           60.0 .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroupAwardCriterion_L4DUqwYp7JsgSHbLPpDQRo
+    a                      epo:AwardCriterion ;
+    epo:hasWeightValueType <http://publications.europa.eu/resource/authority/number-weight/per-exa> ;
+    cccev:weight           40.0 .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroupAwardCriterion_MGJNUreXVLg5AkPswtTpQ5
+    a                         epo:AwardCriterion ;
+    epo:hasAwardCriterionType <http://publications.europa.eu/resource/authority/award-criterion-type/cost> ;
+    dct:description           "AC Description ---"@en ;
+    skos:prefLabel            "name of AC ---"@en .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroup_GLO-0001 a epo:LotGroup;
   epo:hasEstimatedValue epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_PurposeLotGroupEstimatedValue_EgMjw2pg9jruQvYxRQ9GAr;
@@ -638,7 +657,11 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroup_GLO-0001 a epo:LotGroup;
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotsGroupValueMaximum_gLuU9xVSAhVSewi2MZNMhW;
   epo:setsGroupingContextForLot epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
-  epo:specifiesProcurementCriterion epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroupAwardCriterion_Ed82rH3bQh5UFtUqt5RqUi;
+                                                              epo:specifiesProcurementCriterion
+                                                                      epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroupAwardCriterion_83TR8A3HiWh9GmZEyyQGjQ,
+                                                                      epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroupAwardCriterion_AdQ99ZtFwmVjXcjtXZ5Ltw,
+                                                                      epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroupAwardCriterion_L4DUqwYp7JsgSHbLPpDQRo,
+                                                                      epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroupAwardCriterion_MGJNUreXVLg5AkPswtTpQ5 ;
   dct:description "Description ---"@en;
   dct:title "Title ---"@en;
   adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotsGroupIdentifier_246rmGzZvwFBcxRNZTXjTW .
@@ -1346,12 +1369,12 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_28qA6sXPPZP6NSvA8FovH
   epo:hasTenderSubcontractingInformation <http://publications.europa.eu/resource/authority/subcontracting-indication/none> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_8y8GPfmPvSRdBcci6WWcSi
-  a epo:SubmissionTerm;
   epo:definesTenderProcessor epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderProcessor_PuAZ93vcjRYhKiN4rMvUZg;
   epo:hasEAuctionURL "https://electronic-auction.com"^^xsd:anyURI;
   epo:hasECataloguePermission <http://publications.europa.eu/resource/authority/permission/allowed>;
   epo:hasESubmissionPermission <http://publications.europa.eu/resource/authority/permission/not-allowed>;
   epo:hasLateSubmissionInformationDescription "Later tender information description ---"@en;
+  a epo:SubmissionTerm ;
   epo:hasLateSubmissionPermission <http://publications.europa.eu/resource/authority/missing-info-submission/late-all>;
   epo:hasNonElectronicSubmissionDescription "Nonelectronic Submission Description ---"@en;
   epo:hasNonElectronicSubmissionJustification <http://publications.europa.eu/resource/authority/communication-justification/ipr-iss>;
@@ -1369,8 +1392,8 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_PuAZ93vcjRYhKiN4rMvUZ
   epo:isGuaranteeRequired true .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_TT87XZ7rfCixVuS4Z9trMH
+    a epo:SubmissionTerm ;
   epo:definesTenderReceiver epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderReceiver_ZRrbuPPWyxGgmdJHy5oG8a;
-  a epo:SubmissionTerm;
   epo:hasGuaranteeDescription "Guarantee Required Description ---"@en;
   epo:hasLanguage <http://publications.europa.eu/resource/authority/language/ENG>, <http://publications.europa.eu/resource/authority/language/FRA>;
   epo:hasSubmissionURL "http://tender-submit.fin-adm.com/esubmission"^^xsd:anyURI;

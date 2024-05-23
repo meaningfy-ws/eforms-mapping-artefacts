@@ -2172,15 +2172,14 @@ tedm:MG-SelectionCriterion-specifiesProcurementCriterion-Lot_ND-SelectionCriteri
                 ] ;
         ];
 rr:predicateObjectMap
-        [
-            rdfs:label "BT-5423-Lot";
+        [ rdfs:label "BT-5423-Lot,BT-541-Lot-ThresholdNumber" ;
             rr:predicate epo:hasConstraint ;
             rr:objectMap
                 [
                     rr:parentTriplesMap tedm:MG-Constraint-hasConstraint-AwardCriterion-specifiesProcurementCriterion-Lot_ND-LotAwardThresholdCriterionParameter ;
                     rr:joinCondition [
                         rr:child "path(.)";
-                        rr:parent "path(..)";
+                        rr:parent "path(../../../../../../../../..)" ;
                     ];
                 ] ;
         ]
@@ -2460,12 +2459,12 @@ tedm:MG-Constraint-hasConstraint-AwardCriterion-specifiesProcurementCriterion-Lo
     rr:subjectMap
         [
             rdfs:label "ND-LotAwardThresholdCriterionParameter";
-            rml:reference "if (exists(efbc:ParameterCode[@listName='number-threshold'])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_SelectionTermConstraint_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
+            rml:reference
+                    "if (exists(efbc:ParameterCode[@listName='number-threshold'])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_LotConstraint_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
             rr:class cccev:Constraint
         ] ;
     rr:predicateObjectMap
         [
-            # TODO min SDK 1.8
             #TODO test source
             rdfs:label  "BT-5423-Lot";
             rdfs:comment "Award Criterion Number Threshold of MG-Constraint under ND-LotAwardThresholdCriterionParameter";
@@ -2479,7 +2478,6 @@ tedm:MG-Constraint-hasConstraint-AwardCriterion-specifiesProcurementCriterion-Lo
             ] ;
      rr:predicateObjectMap
         [
-
             #TODO test source
             rdfs:label  "BT-541-Lot-ThresholdNumber";
             rdfs:comment "Award Criterion Number Threshold of MG-Constraint under ND-LotAwardThresholdCriterionParameter";

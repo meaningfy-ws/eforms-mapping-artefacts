@@ -4440,7 +4440,7 @@ tedm:MG-AccessTerm-isSubjectToLotSpecificTerm-Lot_ND-LotTenderingTerms a rr:Trip
         [
             rdfs:label   "OPT-301-Lot-DocProvider" ;
             rdfs:comment "Document Provider Technical Identifier Reference of MG-AccessTerm under ND-LotTenderingTerms" ;
-            rr:predicate epo:definesProcurementProcedureInformationProvider ;
+            rr:predicate epo:definesOfflineAccessProvider ;
             rr:objectMap
                 [
                     rr:parentTriplesMap tedm:MG-OfflineAccessProvider_ND-LotTenderingTerms ;

@@ -4583,37 +4583,12 @@ tedm:MG-Address-address-Location-definesSpecificPlaceOfPerformance-ContractTerm-
     rr:predicateObjectMap
         [
             # TODO min SDK 1.3 max SDK 1.4
-            rdfs:label "BT-5101(a)-Lot";
-            rdfs:comment "Place Performance Street of MG-Address under NND-LotPerformanceAddress";
+            rdfs:label "BT-5101(a|b|c)-, BT-5121-, BT-5131-, 5141-lot" ;
+            rdfs:comment "Place Performance Street, Place Performance Streetline 1, Place Performance Streetline 2, Place Performance City, Place Performance Post Code, Place Performance Country Code" ;
             rr:predicate locn:fullAddress ;
             rr:objectMap
                 [
-                    tedm:minSDKVersion "1.5.12" ;
-                    rml:reference "cbc:StreetName";
-                ] ;
-        ] ;
-    rr:predicateObjectMap
-        [
-            # TODO min SDK 1.3 max SDK 1.4
-            rdfs:label "BT-5101(b)-Lot";
-            rdfs:comment "Place Performance Streetline 1 of MG-Address under ND-LotPerformanceAddress";
-            rr:predicate  locn:fullAddress  ;
-            rr:objectMap
-                [
-                    tedm:minSDKVersion "1.5.12" ;
-                    rml:reference "cbc:AdditionalStreetName";
-                ] ;
-        ] ;
-    rr:predicateObjectMap
-        [
-            # TODO min SDK 1.3 max SDK 1.4
-            rdfs:label "BT-5101(c)-Lot";
-            rdfs:comment "Place Performance Streetline 2 of MG-Address under ND-LotPerformanceAddress";
-            rr:predicate locn:fullAddress ;
-            rr:objectMap
-                [
-                    tedm:minSDKVersion "1.5.12" ;
-                    rml:reference "cac:AddressLine/cbc:Line";
+                    rml:reference "replace(replace(cbc:StreetName || ', ' || cbc:AdditionalStreetName || ', ' || cac:AddressLine/cbc:Line || ', ' || cbc:CityName || ', ' || cbc:PostalZone || ', ' || cac:Country/cbc:IdentificationCode, '(, )+', ', '),  '^, |, $', '')" ;
                 ] ;
         ] ;
     rr:predicateObjectMap
@@ -4631,49 +4606,13 @@ tedm:MG-Address-address-Location-definesSpecificPlaceOfPerformance-ContractTerm-
     rr:predicateObjectMap
         [
             # TODO min SDK 1.3 max SDK 1.4
-            rdfs:label "BT-5131-Lot";
-            rdfs:comment "Place Performance City of MG-Address under ND-LotPerformanceAddress";
-            rr:predicate  locn:fullAddress ;
-            rr:objectMap
-                [
-                    tedm:minSDKVersion "1.5.12" ;
-                    rml:reference "cbc:CityName";
-                ] ;
-        ] ;
-    rr:predicateObjectMap
-        [
-            # TODO min SDK 1.3 max SDK 1.4
             rdfs:label "BT-5121-Lot";
-            rdfs:comment "Place Performance  Post Code of MG-Address under ND-LotPerformanceAddress";
+            rdfs:comment "Place Performance Post Code of MG-Address under ND-LotPerformanceAddress";
             rr:predicate locn:postCode ;
             rr:objectMap
                 [
                     tedm:minSDKVersion "1.5.12" ;
                     rml:reference "cbc:PostalZone";
-                ] ;
-        ] ;
-    rr:predicateObjectMap
-        [
-            # TODO min SDK 1.3 max SDK 1.4
-            rdfs:label "BT-5121-Lot";
-            rdfs:comment "Place Performance  Post Code of MG-Address under ND-LotPerformanceAddress";
-            rr:predicate locn:fullAddress ;
-            rr:objectMap
-                [
-                    tedm:minSDKVersion "1.5.12" ;
-                    rml:reference "cbc:PostalZone";
-                ] ;
-        ] ;
-    rr:predicateObjectMap
-        [
-            # TODO min SDK 1.3 max SDK 1.4
-            rdfs:label "BT-5141-Lot";
-            rdfs:comment "Place Performance Country Code of MG-Address under ND-LotPerformanceAddress";
-            rr:predicate locn:fullAddress ;
-            rr:objectMap
-                [
-                    tedm:minSDKVersion "1.5.12" ;
-                    rml:reference "cac:Country/cbc:IdentificationCode";
                 ] ;
         ] ;
 .

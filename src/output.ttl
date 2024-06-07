@@ -392,14 +392,14 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_LgGjsfgz3hNSB7W5hu4Wmi 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_MnX8qyREnFMNLeS5MJAX9K a
     epo:ContractTerm;
   epo:definesContractDuration epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractDuration_JNctcsx6JXdNkzdL4P6dek,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractDuration_SwK8Z4wjBuauCWAoBTPk4Z,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractPeriod_JNctcsx6JXdNkzdL4P6dek,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractDuration_SwK8Z4wjBuauCWAoBTPk4Z;
+  epo:definesContractPeriod epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractPeriod_JNctcsx6JXdNkzdL4P6dek,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractPeriod_SwK8Z4wjBuauCWAoBTPk4Z;
-  epo:hasContractNatureType <http://publications.europa.eu/resource/authority/contract-nature/services>;
-  locn:address epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_6pwBpb8FW5caR7TKqg7TvM,
+  epo:definesSpecificPlaceOfPerformance epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_6pwBpb8FW5caR7TKqg7TvM,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_TfeqsbtZz7bnSaeLJEmaKZ,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_e4BUCegaReE8NKq7sHcoAX,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_es3GJHPAww7U8q366gSYas .
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_es3GJHPAww7U8q366gSYas;
+  epo:hasContractNatureType <http://publications.europa.eu/resource/authority/contract-nature/services> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_QRFEJSYy7fATJoZShoDC4D a
     epo:ContractTerm;

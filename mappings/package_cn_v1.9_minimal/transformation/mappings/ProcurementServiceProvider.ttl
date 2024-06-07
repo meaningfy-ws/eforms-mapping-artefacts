@@ -62,8 +62,7 @@ tedm:MG-ProcurementServiceProvider_ND-ServiceProviderParty a rr:TriplesMap ;
             rr:predicate epo:actsOnBehalfOf ;
             rr:objectMap
                 [
-                    tedm:minSDKVersion "1.3" ;
-                    tedm:maxSDKVersion "1.9.1" ;
+                    tedm:minSDKVersion "1.3" ; ;
                     rr:parentTriplesMap tedm:MG-Buyer_ND-ContractingParty ;
                     # TODO: Check if a join is actually needed and whether absolute or relative child should be used
                     # rr:joinCondition [

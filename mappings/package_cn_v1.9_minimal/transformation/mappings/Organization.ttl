@@ -29,7 +29,6 @@ tedm:MG-Organization_ND-Company a rr:TriplesMap ;
     rml:logicalSource
         [
             rml:source "data/source.xml" ;
-            # TODO why do we not iterate one level up on Organization?
             rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:Organizations/efac:Organization/efac:Company" ;
             rml:referenceFormulation ql:XPath
         ] ;
@@ -47,26 +46,12 @@ tedm:MG-Organization_ND-Company a rr:TriplesMap ;
                 [
                     rdfs:label "ND-CompanyContact" ;
                     rr:parentTriplesMap tedm:MG-ContactPoint-hasPrimaryContactPoint-Organization_ND-CompanyContact ;
-                    # TODO how does this work?
                     rr:joinCondition [
                         rr:child "path(.)" ;
                         rr:parent "path(../.)" ;
                     ] ;
                 ]
         ] ;
-    # rr:predicateObjectMap
-    #     [
-    #         #The channel of ND-Company it is created for the BT-509-Organization-Company it does not correspond to a node"
-    #         rr:predicate epo:hasDeliveryGateway ;
-    #         rr:objectMap
-    #             [
-    #                 rr:parentTriplesMap tedm:ND-CompanyChannel ;
-    #                 rr:joinCondition [
-    #                     rr:child "path(.)";
-    #                     rr:parent "path(.)";
-    #                 ];
-    #             ]
-    #     ] ;
     rr:predicateObjectMap
         [
             rdfs:label "Aggregate Address" ;
@@ -111,7 +96,6 @@ tedm:MG-Organization_ND-Company a rr:TriplesMap ;
             rr:objectMap
                 [
                     rr:parentTriplesMap tedm:MG-Identifier-identifier-Organization_ND-Company ;
-                    # TODO how does this work?
                     rr:joinCondition [
                         rr:child "path(.)" ;
                         rr:parent "path(.)" ;

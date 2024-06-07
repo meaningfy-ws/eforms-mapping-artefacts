@@ -63,7 +63,7 @@ tedm:MG-CompetitionNotice_ND-Root
         ] ;
     rr:predicateObjectMap
         [
-            # TODO min SDK 1.10
+           # TODO min SDK 1.10
             rdfs:label "MG-ProcurementServiceProvider-announcesRole-CompetitionNotice" ;
             rdfs:comment "MG-ProcurementServiceProvider-announcesRole-CompetitionNotice under ND-ServiceProviderParty" ;
             rr:predicate epo-not:announcesRole ;
@@ -214,34 +214,34 @@ tedm:MG-CompetitionNotice_ND-Root
         ] ;
      rr:predicateObjectMap
         [
-            # TODO min SDK 1.5.12
             rdfs:label "MG-EmploymentInformationProvider-announcesRole-CompetitionNotice" ;
             rdfs:comment "MG-EmploymentInformationProvider-announcesRole-CompetitionNotice under ND-LotEmploymentLegislation" ;
             rr:predicate epo:announcesRole ;
             rr:objectMap
                 [
+                    tedm:minSDKVersion "1.5.12" ;
                     rr:parentTriplesMap tedm:MG-EmploymentInformationProvider-announcesRole-CompetitionNotice_ND-LotEmploymentLegislation;
                 ] ;
         ] ;
      rr:predicateObjectMap
         [
-            # TODO min SDK 1.8
             rdfs:label "BT-46-Lot" ;
             rdfs:comment "JuryMemberName of MG-CompetitionNotice under ND-AwardingTermsJuryMember" ;
             rr:predicate epo:announcesRole ;
             rr:objectMap
                 [
+                    tedm:minSDKVersion "1.8" ;
                     rr:parentTriplesMap tedm:MG-JuryMember-announcesRole-CompetitionNotice_ND-AwardingTermsJuryMember;
                 ] ;
         ] ;
     rr:predicateObjectMap
         [
-            # TODO min SDK 1.5.12
             rdfs:label "ND-LotEnvironmentalLegislationt" ;
             rdfs:comment "LotEnvironmentalLegislationt of MG-CompetitionNotice  under ND-AwardingTerms" ;
             rr:predicate epo:announcesRole    ;
             rr:objectMap
                 [
+                    tedm:minSDKVersion "1.5.12" ;
                     rr:parentTriplesMap tedm:MG-EnvironmentalProtectionInformationProvider-announcesRole-CompetitionNotice_ND-LotTenderingTerms;
                 ] ;
         ] ;
@@ -427,7 +427,6 @@ tedm:MG-Identifier-identifier-Notice_ND-Root a rr:TriplesMap ;
             rdfs:label "BT-701-notice" ;
             # TODO can this become a template since the iterator is already on the required element?
             rml:reference "if (exists(/*/cbc:ID[@schemeName='notice-id'])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_NoticeIdentifier_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
-            # rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_NoticeIdentifier_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
             rr:class adms:Identifier
         ] ;
     rr:predicateObjectMap
@@ -465,15 +464,14 @@ tedm:MG-EmploymentInformationProvider-announcesRole-CompetitionNotice_ND-LotEmpl
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_EmploymentInformationProvider_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
             rr:class epo:EmploymentInformationProvider
         ] ;
-
     rr:predicateObjectMap
         [
-            # TODO min SDK 1.5.12
             rdfs:label "MG-Buyer-announcesRole-CompetitionNotice" ;
             rdfs:comment "MG-EmploymentInformationProvider-announcesRole-CompetitionNotice under ND-LotEmploymentLegislation" ;
             rr:predicate epo:contextualisedBy    ;
             rr:objectMap
                 [
+                    tedm:minSDKVersion "1.5.12" ;
                     rr:parentTriplesMap tedm:MG-Lot-contextualisedBy-EmploymentInformationProvider-announcesRole-CompetitionNotice_ND-LotEmploymentLegislation
                 ] ;
         ] ;
@@ -512,12 +510,12 @@ tedm:MG-Person-playedBy-JuryMember-announcesRole-CompetitionNotice_ND-AwardingTe
         ] ;
      rr:predicateObjectMap
         [
-            # TODO min SDK 1.8
             rdfs:label "BT-46-Lot" ;
             rdfs:comment "JuryMemberName of MG-Person under ND-AwardingTermsJuryMember" ;
             rr:predicate foaf:familyName ;
             rr:objectMap
                 [
+                    tedm:minSDKVersion "1.8" ;
                     rml:reference "cbc:FamilyName";
                 ] ;
         ] ;
@@ -540,7 +538,6 @@ tedm:MG-JuryMember-announcesRole-CompetitionNotice_ND-AwardingTermsJuryMember a 
         ] ;
      rr:predicateObjectMap
         [
-            # TODO min SDK 1.8
             rdfs:label "BT-46-Lot" ;
             rdfs:comment "JuryMemberName of MG-JuryMember under ND-AwardingTermsJuryMember" ;
             rr:predicate  epo:playedBy    ;
@@ -589,12 +586,12 @@ tedm:MG-EnvironmentalProtectionInformationProvider-announcesRole-CompetitionNoti
         ] ;
     rr:predicateObjectMap
         [
-            # TODO min SDK 1.5.12
             rdfs:label "ND-LotEnvironmentalLegislationt" ;
             rdfs:comment "LotEnvironmentalLegislationt of MG-CompetitionNotice  under ND-AwardingTerms" ;
             rr:predicate  epo:contextualisedBy    ;
            rr:objectMap
                 [
+                    tedm:minSDKVersion "1.5.12" ;
                     rr:parentTriplesMap tedm:MG-Lot-contextualisedBy-EnvironmentalProtectionInformationProvider-announcesRole-CompetitionNotice_ND-LotTenderingTerms;
                     rr:joinCondition [
                         rr:child "path(.)";

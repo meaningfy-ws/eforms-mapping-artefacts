@@ -40,13 +40,13 @@ tedm:MG-VehicleInformation_ND-StrategicProcurementInformationLot a rr:TriplesMap
         ] ;
     rr:predicateObjectMap
         [
-            #  TODO min SDK 1.9.1
-            # TODO to be added to the source for testing
+            # TODO test source
             rdfs:label "BT-735-Lot";
             rdfs:comment "CVDContractType of MG-VehicleInformation under ND-StrategicProcurementInformationLot";
             rr:predicate epo:specifiesCleanVehicleDirectiveContractType    ;
             rr:objectMap
                 [
+                    tedm:minSDKVersion "1.9.1" ;
                     rdfs:label "at-voc:cvd-contract-type" ;
                     rr:parentTriplesMap tedm:cvd-contract-type;
                     rr:joinCondition [
@@ -55,66 +55,17 @@ tedm:MG-VehicleInformation_ND-StrategicProcurementInformationLot a rr:TriplesMap
                     ] ;
                 ] ;
         ] ;
-.
-
-tedm:MG-GreenProcurement-concernsGreenProcurement-VehicleInformation_ND-StrategicProcurementInformationLot a rr:TriplesMap ;
-    rdfs:label "MG-GreenProcurement";
-    rml:logicalSource
-        [
-            rml:source "data/source.xml" ;
-            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:StrategicProcurement/efac:StrategicProcurementInformation";
-            rml:referenceFormulation ql:XPath
-        ];
-    rr:subjectMap
-        [
-            rdfs:label  "ND-StrategicProcurementInformationLot";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_VehicleInformation_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
-            rr:class epo:GreenProcurement
-        ] ;
     rr:predicateObjectMap
         [
-            #  TODO min SDK 1.9.1
-            # TODO to be added to the source for testing
+            # TODO test source
             rdfs:label "BT-735-Lot";
             rdfs:comment "CVDContractType of MG-GreenProcurement under ND-StrategicProcurementInformationLot";
             rr:predicate epo:concernsGreenProcurement     ;
             rr:objectMap
                 [
-                    rr:parentTriplesMap tedm:MG-VehicleInformation_ND-StrategicProcurementInformationLot;
+                    rr:parentTriplesMap tedm:MG-GreenProcurement-fulfillsStrategicProcurement-Lot_ND-StrategicProcurementLot;
                      rr:joinCondition [
-                        rr:child "path(.)";
-                        rr:parent "path(.)";
-                    ];
-                ] ;
-        ] ;
-.
-
-tedm:MG-GreenProcurement-fulfillsStrategicProcurement-Lot_ND-StrategicProcurementInformationLot a rr:TriplesMap ;
-    rdfs:label "MG-GreenProcurement";
-    rml:logicalSource
-        [
-            rml:source "data/source.xml" ;
-            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:StrategicProcurement/efac:StrategicProcurementInformation";
-            rml:referenceFormulation ql:XPath
-        ];
-    rr:subjectMap
-        [
-            rdfs:label  "ND-StrategicProcurementInformationLot";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_VehicleInformation_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
-            rr:class epo:GreenProcurement
-        ] ;
-    rr:predicateObjectMap
-        [
-            #  TODO min SDK 1.9.1
-            # TODO to be added to the source for testing
-            rdfs:label "BT-735-Lot";
-            rdfs:comment "CVDContractType of MG-GreenProcurement under ND-StrategicProcurementInformationLot";
-            rr:predicate epo:fulfillsStrategicProcurement      ;
-            rr:objectMap
-                [
-                    rr:parentTriplesMap tedm:MG-Lot_ND-Lot;
-                    rr:joinCondition [
-                       rr:child "path(../../../../../../..)";
+                        rr:child "path(..)";
                         rr:parent "path(.)";
                     ];
                 ] ;

@@ -50,6 +50,17 @@ tedm:MG-Procedure_ND-Root a rr:TriplesMap ;
         ] ;
     rr:predicateObjectMap
         [
+            # TODO: To be revisited for Result Notices. Perhaps we will need an XPath condition.
+            rdfs:label "ND-Lot" ;
+            rdfs:comment "Aggregation relationship between Procedure and Lot" ;
+            rr:predicate epo:hasProcurementScopeDividedIntoLot ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-Lot_ND-Lot ;
+                ]
+        ] ;
+    rr:predicateObjectMap
+        [
             rdfs:label "ProcedureTerm" ;
             rdfs:comment "Composition relationship between Procedure and ProcedureTerm" ;
             rr:predicate epo:isSubjectToProcedureSpecificTerm ;
@@ -178,7 +189,6 @@ tedm:MG-Procedure_ND-LocalLegalBasisWithID a rr:TriplesMap ;
             rr:objectMap
                 [
                     rml:reference "if(exists(cbc:DocumentDescription)) then (if(exists(cbc:ID)) then cbc:ID || (if(exists(cbc:ID/@schemeName)) then ' [' || cbc:ID/@schemeName || ']' else '') || ' / ' else '') || cbc:DocumentDescription else null";
-                    # rml:reference "cbc:DocumentDescription";
                     rml:languageMap [
                         fnml:functionValue [
                             rr:predicateObjectMap [
@@ -528,11 +538,6 @@ tedm:MG-Procedure_ND-ProcedureProcurementScope a rr:TriplesMap ;
             rr:objectMap
                 [
                     rr:parentTriplesMap tedm:MG-ContractTerm-foreseesContractSpecificTerm-Procedure_ND-ProcedureProcurementScope ;
-                    # no joinCondition needed as the parent and child iterator XPaths do not repeat
-                    # rr:joinCondition [
-                    #     rr:child "path(.)" ;
-                    #     rr:parent "path(.)" ;
-                    # ] ;
                 ]
         ] ;
     rr:predicateObjectMap
@@ -846,13 +851,6 @@ tedm:MG-Procedure_ND-AcceleratedProcedure a rr:TriplesMap ;
             rdfs:comment "Procedure Accelerated of MG-Procedure under ND-AcceleratedProcedure" ;
             rr:predicate epo:isAccelerated ;
             rr:objectMap
-            #     [
-            #         tedm:minSDKVersion "1.5.12" ;
-            #         tedm:maxSDKVersion "1.7" ;
-            #         rml:reference "cbc:ProcessReasonCode[@listName='accelerated-procedure']" ;
-            #         rr:datatype xsd:boolean
-            #     ]
-            #     ,
                 [
                     # this is an example of a version-specific assertion that has no difference
                     # with its other counterparts due to simple changes in the XPath only
@@ -937,7 +935,7 @@ tedm:MG-MonetaryValue-hasLaunchFrameworkAgreementMaximumValue-Procedure_ND-Proce
         ] ;
     rr:predicateObjectMap
         [
-            # TODO min SDK 1.5.12
+            tedm:minSDKVersion "1.5.12" ;
             rdfs:label "BT-271-Procedure";
             rdfs:comment "Framework Maximum Value of MG-MonetaryValue under ND-ProcedureValueEstimateExtension";
             rr:predicate epo:hasAmountValue ;
@@ -981,10 +979,9 @@ tedm:MG-Purpose-hasPurpose-Procedure_ND-ProcedureMainClassificationCode a rr:Tri
                     rdfs:label "at-voc:cpv";
                     rr:parentTriplesMap tedm:cpv ;
                     rr:joinCondition [
-                        rr:child  "cbc:ItemClassificationCode";
+                        rr:child  "if(exists(cbc:ItemClassificationCode[@listName='cpv'])) then cbc:ItemClassificationCode else null";
                         rr:parent "code.value" ;
                     ] ;
-#                    rml:reference "cbc:ItemClassificationCode";
                 ] ;
         ] ;
 .
@@ -1013,10 +1010,9 @@ tedm:MG-Purpose-hasPurpose-Procedure_ND-ProcedureAdditionalCommodityClassificati
                     rdfs:label "at-voc:cpv";
                     rr:parentTriplesMap tedm:cpv ;
                     rr:joinCondition [
-                        rr:child  "cbc:ItemClassificationCode";
+                        rr:child  "if(exists(cbc:ItemClassificationCode[@listName='cpv'])) then cbc:ItemClassificationCode else null";
                         rr:parent "code.value" ;
                     ] ;
-#                    rml:reference "cbc:ItemClassificationCode";
                 ] ;
         ] ;
 .
@@ -1256,7 +1252,6 @@ tedm:MG-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-CrossBorderL
         [
             rdfs:label "ND-CrossBorderLaw";
             rdfs:comment "Primary type declaration of MG-ProcedureTerm under ND-CrossBorderLaw";
-            # rml:reference "if (exists(cac:ProcurementLegislationDocumentReference[cbc:ID/text()='CrossBorderLaw']/cbc:ID[text()='CrossBorderLaw'])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_ProcedureTerm_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ProcedureTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
             rr:class epo:ProcedureTerm
         ] ;

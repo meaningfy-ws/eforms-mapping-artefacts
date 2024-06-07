@@ -107,9 +107,6 @@ tedm:MG-ProcurementProcessInformation_ND-LotTenderingProcessExtension a rr:Tripl
                        rr:child "path(../../../../..)";
                         rr:parent "path(.)";
                     ];
-#            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Lot_{../../../../../cbc:ID}" ;
-#            rr:termType rr:IRI;
-
             ];
         ]
 .

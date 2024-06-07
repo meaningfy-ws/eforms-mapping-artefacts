@@ -252,3 +252,180 @@ tedm:other-place-service a rr:TriplesMap ;
                 "conceptURI.value" ;
         ]
 .
+tedm:EU-programme a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/EU-programme.json" ;
+            rml:iterator "$.results.bindings[*]" ;
+            rml:referenceFormulation ql:JSONPath
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference
+                "conceptURI.value" ;
+        ]
+.
+tedm:number-weight a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/number-weight.json" ;
+            rml:iterator "$.results.bindings[*]" ;
+            rml:referenceFormulation ql:JSONPath
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference
+                "conceptURI.value" ;
+        ]
+.
+tedm:number-threshold a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/number-threshold.json" ;
+            rml:iterator "$.results.bindings[*]" ;
+            rml:referenceFormulation ql:JSONPath
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference
+                "conceptURI.value" ;
+        ]
+.
+tedm:award-criterion-type a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/award-criterion-type.json" ;
+            rml:iterator "$.results.bindings[*]" ;
+            rml:referenceFormulation ql:JSONPath
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference
+                "conceptURI.value" ;
+        ]
+.
+
+tedm:number-fixed a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/number-fixed.json" ;
+            rml:iterator "$.results.bindings[*]" ;
+            rml:referenceFormulation ql:JSONPath
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference
+                "conceptURI.value" ;
+        ]
+.
+
+tedm:missing-info-submission a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/missing-info-submission.json" ;
+            rml:iterator "$.results.bindings[*]" ;
+            rml:referenceFormulation ql:JSONPath
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference
+                "conceptURI.value" ;
+        ]
+.
+
+tedm:reserved-procurement a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/reserved-procurement.json" ;
+            rml:iterator "$.results.bindings[*]" ;
+            rml:referenceFormulation ql:JSONPath
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference
+                "conceptURI.value" ;
+        ]
+.
+
+tedm:applicability a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/applicability.json" ;
+            rml:iterator "$.results.bindings[*]" ;
+            rml:referenceFormulation ql:JSONPath
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference
+                "conceptURI.value" ;
+        ]
+.
+
+tedm:requirement-stage a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/requirement-stage.json" ;
+            rml:iterator "$.results.bindings[*]" ;
+            rml:referenceFormulation ql:JSONPath
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference
+                "conceptURI.value" ;
+        ]
+.
+
+tedm:subcontracting-indication a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/subcontracting-indication.json" ;
+            rml:iterator "$.results.bindings[*]" ;
+            rml:referenceFormulation ql:JSONPath
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference
+                "conceptURI.value" ;
+        ]
+.
+
+tedm:subcontracting-obligation a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/subcontracting-obligation.json" ;
+            rml:iterator "$.results.bindings[*]" ;
+            rml:referenceFormulation ql:JSONPath
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference
+                "conceptURI.value" ;
+        ]
+.
+
+tedm:cvd-contract-type a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/cvd-contract-type.json" ;
+            rml:iterator "$.results.bindings[*]" ;
+            rml:referenceFormulation ql:JSONPath
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference
+                "conceptURI.value" ;
+        ]
+.
+
+tedm:temporal_unit a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "transformation/resources/temporal_unit.csv" ;
+            rml:referenceFormulation ql:CSV
+        ] ;
+    rr:subjectMap
+        [
+            rml:reference
+                "conceptURI" ;
+        ]
+.

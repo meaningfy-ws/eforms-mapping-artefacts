@@ -95,42 +95,6 @@
 								</cac:Contact>
 							</efac:TouchPoint>
 							<efac:TouchPoint>
-								<cbc:WebsiteURI>http://archives.fin-adm.com</cbc:WebsiteURI>
-								<cac:PartyIdentification>
-									<cbc:ID schemeName="touchpoint">TPO-0002</cbc:ID>
-								</cac:PartyIdentification>
-								<cac:PartyName>
-									<cbc:Name languageID="ENG">Fin Adm Archives</cbc:Name>
-								</cac:PartyName>
-								<cac:PostalAddress>
-									<!--BT-510-->
-									<cbc:StreetName>Bruce Wayne House</cbc:StreetName>
-									<cbc:AdditionalStreetName>2 Gotham Street</cbc:AdditionalStreetName>
-									<!--BT-16-->
-									<cbc:Department>Fin Adm Archives Dpt</cbc:Department>
-									<!--BT-513-->
-									<cbc:CityName>London</cbc:CityName>
-									<!--BT-512-->
-									<cbc:PostalZone>N1 9FL</cbc:PostalZone>
-									<!--BT-507-->
-									<cbc:CountrySubentityCode listName="nuts">UKI62</cbc:CountrySubentityCode>
-									<!--BT-514-->
-									<cac:Country>
-										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
-									</cac:Country>
-								</cac:PostalAddress>
-								<cac:Contact>
-									<!--BT-502-->
-									<cbc:Name>Proc Archives Dpt Lead</cbc:Name>
-									<!--BT-503-->
-									<cbc:Telephone>+44 123456776</cbc:Telephone>
-									<!--BT-739-->
-									<cbc:Telefax>+44 1234567769</cbc:Telefax>
-									<!--BT-506-->
-									<cbc:ElectronicMail>proc-archi@fin-adm.com</cbc:ElectronicMail>
-								</cac:Contact>
-							</efac:TouchPoint>
-							<efac:TouchPoint>
 								<cbc:WebsiteURI>http://tender-evaluation.fin-adm.com</cbc:WebsiteURI>
 								<cac:PartyIdentification>
 									<cbc:ID schemeName="touchpoint">TPO-0003</cbc:ID>
@@ -257,6 +221,42 @@
 									<cbc:ElectronicMail>info@env-dpt.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
+							<efac:TouchPoint>
+								<cbc:WebsiteURI>http://archives.fin-adm.com</cbc:WebsiteURI>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="touchpoint">TPO-0002</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">Fin Adm Archives</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<!--BT-510-->
+									<cbc:StreetName>Bruce Wayne House</cbc:StreetName>
+									<cbc:AdditionalStreetName>2 Gotham Street</cbc:AdditionalStreetName>
+									<!--BT-16-->
+									<cbc:Department>Fin Adm Archives Dpt</cbc:Department>
+									<!--BT-513-->
+									<cbc:CityName>London</cbc:CityName>
+									<!--BT-512-->
+									<cbc:PostalZone>N1 9FL</cbc:PostalZone>
+									<!--BT-507-->
+									<cbc:CountrySubentityCode listName="nuts">UKI62</cbc:CountrySubentityCode>
+									<!--BT-514-->
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:Contact>
+									<!--BT-502-->
+									<cbc:Name>Proc Archives Dpt Lead</cbc:Name>
+									<!--BT-503-->
+									<cbc:Telephone>+44 123456776</cbc:Telephone>
+									<!--BT-739-->
+									<cbc:Telefax>+44 1234567769</cbc:Telefax>
+									<!--BT-506-->
+									<cbc:ElectronicMail>proc-archi@fin-adm.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:TouchPoint>
 						</efac:Organization>
 						<efac:Organization>
 							<efbc:AcquiringCPBIndicator>true</efbc:AcquiringCPBIndicator>
@@ -743,6 +743,9 @@
 				<ext:UBLExtension>
 					<ext:ExtensionContent>
 						<efext:EformsExtension>
+							 <efac:StrategicProcurement>
+                        <efbc:ApplicableLegalBasis listName="cvd-scope">false</efbc:ApplicableLegalBasis>
+                     </efac:StrategicProcurement>
 							<efac:SelectionCriteria>
 								<!--BT-747-->
 								<cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
@@ -844,7 +847,7 @@
 				<cac:IssuerParty>
 					<cac:PartyIdentification>
 						<!--OPT-301-->
-						<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+						<cbc:ID schemeName="touchpoint">TPO-0002</cbc:ID>
 					</cac:PartyIdentification>
 				</cac:IssuerParty>
 			</cac:FiscalLegislationDocumentReference>
@@ -904,6 +907,8 @@
 					</ext:UBLExtension>
 				</ext:UBLExtensions>
 				<cbc:ID>Doc1</cbc:ID>
+				<!--BT-707-->
+				<cbc:DocumentTypeCode listName="communication-justification">tdf-non-av</cbc:DocumentTypeCode>
 				<!--BT-14-->
 				<cbc:DocumentType>non-restricted-document</cbc:DocumentType>
 				<cac:Attachment>
@@ -1320,10 +1325,22 @@
 	<cac:ProcurementProjectLot>
 		<cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
 		<cac:TenderingTerms>
+			<cac:TenderValidityPeriod>
+				<cbc:DurationMeasure unitCode="MONTH">6</cbc:DurationMeasure>
+			</cac:TenderValidityPeriod>
+			<cac:AllowedSubcontractTerms>
+				<cbc:SubcontractingConditionsCode listName="subcontracting-obligation">none</cbc:SubcontractingConditionsCode>
+			</cac:AllowedSubcontractTerms>
+			<cbc:RecurringProcurementIndicator>false</cbc:RecurringProcurementIndicator>
+			<cbc:RecurringProcurementDescription languageID="FRA">.......</cbc:RecurringProcurementDescription>
+			<cbc:VariantConstraintCode listName="permission">not-allowed</cbc:VariantConstraintCode>
 			<ext:UBLExtensions>
 				<ext:UBLExtension>
 					<ext:ExtensionContent>
 						<efext:EformsExtension>
+							<efac:TenderSubcontractingRequirements>
+								<efbc:TenderSubcontractingRequirementsCode listName="subcontracting-indication">none</efbc:TenderSubcontractingRequirementsCode>
+							</efac:TenderSubcontractingRequirements>
 							<efac:Funding>
 								<!--id": "BT-5010-Lot", "name": "EU Funds Financing Identifier"-->
 								<efbc:FinancingIdentifier>2021/5678</efbc:FinancingIdentifier>
@@ -1349,6 +1366,7 @@
 									<!--BT-752-->
 									<efbc:ParameterNumeric>3</efbc:ParameterNumeric>
 								</efac:CriterionParameter>
+
 								<efac:CriterionParameter>
 									<!--BT-7532-->
 									<efbc:ParameterCode listName="number-threshold">min-score</efbc:ParameterCode>
@@ -1433,7 +1451,7 @@
 				<cac:IssuerParty>
 					<cac:PartyIdentification>
 						<!--OPT-301-->
-						<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+						<cbc:ID schemeName="organization">TPO-0001</cbc:ID>
 					</cac:PartyIdentification>
 				</cac:IssuerParty>
 			</cac:FiscalLegislationDocumentReference>
@@ -1584,6 +1602,16 @@
 				<cbc:ExecutionRequirementCode listName="esignature-submission">true</cbc:ExecutionRequirementCode>
 			</cac:ContractExecutionRequirement>
 			<cac:AwardingTerms>
+				<cac:TechnicalCommitteePerson>
+               <cbc:FamilyName>arch. Andrzej Bulanda – Przewodniczący Sądu Konkurs.; arch. Maria Saloni-Sadowska –Sędzia referent; arch. Bartosz Lewandowski – Asystent Sędziego referenta; Robert Widz –Członek Sądu Konkurs.; Agnieszka Zubala – Członek Sądu Konkurs.; arch. Kinga Socha –Członek Sądu Konkurs.; arch. Piotr Piętka – Członek Sądu Konkurs.; arch. Rafał Sieraczyński –Członek Sądu Konkurs.; Rafał Mroczkowski - Sekretarz</cbc:FamilyName>
+            </cac:TechnicalCommitteePerson>
+				<cac:Prize>
+					<cbc:RankCode>1</cbc:RankCode>
+					<cbc:ValueAmount currencyID="EUR">10000</cbc:ValueAmount>
+					<cbc:Description languageID="FRA">Une indemnité forfaitaire d'un montant identique à celui versé aux concurrents non retenus sera payée à l'équipe lauréate sous forme d'avance sur le marché de maîtrise d'œuvre dès l'issue du concours; cette somme étant à valoir sur le montant des honoraires à percevoir ultérieurement au titre du marché de maîtrise d'œuvre.</cbc:Description>
+				</cac:Prize>
+			    <cbc:FollowupContractIndicator>true</cbc:FollowupContractIndicator>
+				<cbc:BindingOnBuyerIndicator>true</cbc:BindingOnBuyerIndicator>
 				<!--BT-120-->
 				<cbc:NoFurtherNegotiationIndicator>false</cbc:NoFurtherNegotiationIndicator>
 				<cac:AwardingCriterion>
@@ -1598,6 +1626,7 @@
 											<!--BT-541-->
 											<efbc:ParameterNumeric>60</efbc:ParameterNumeric>
 										</efac:AwardCriterionParameter>
+
 									</efext:EformsExtension>
 								</ext:ExtensionContent>
 							</ext:UBLExtension>
@@ -1631,6 +1660,8 @@
 						<!--BT-540-->
 						<cbc:Description languageID="ENG">AC Description ---</cbc:Description>
 					</cac:SubordinateAwardingCriterion>
+					<cbc:Description languageID="ENG">........</cbc:Description>
+					<cbc:CalculationExpression languageID="ENG">See the procurement document</cbc:CalculationExpression>
 				</cac:AwardingCriterion>
 			</cac:AwardingTerms>
 			<cac:AdditionalInformationParty>

@@ -9,12 +9,14 @@ SAMPLES_CN_NAME = sampling_20231001-20240311
 ROOT_CONCEPTS_GREPFILTER = "_Organization_|_TouchPoint_|_Notice|_ProcurementProcessInformation_|_Lot_"
 TEST_QUERY_RESULTS_FORMAT = CSV
 XLSX_STRDATA = xl/sharedStrings.xml
-DEFAULT_CM_ID = package_eforms_10-24_v1.9_M1-M2
+DEFAULT_CM_ID = package_eforms_10-24_v1.9_M1-M3
 
 CANONICAL_TEST_OUTPUT = src/output.ttl
 CANONICAL_RML_DIR = src/mappings
 TEST_DATA_DIR = test_data
 TEST_QUERIES_DIR = test_queries
+TEST_SCRIPTS_DIR = test_scripts
+POST_SCRIPTS_DIR = src/scripts
 TX_DIR = transformation
 CM_FILENAME = conceptual_mappings.xlsx
 
@@ -161,6 +163,27 @@ test_output:
 	@ echo
 	@ echo "==> Test output suspect iri name"
 	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_suspect_iri_name.rq --data $(CANONICAL_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ echo
+	@ echo "==> Test output missing playedBy"
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_missing_playedBy.rq --data $(CANONICAL_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ echo
+	@ echo "Testing mapping rules coverage against output"
+	@ echo "==> Test RML predicate mapping coverage"
+	@ $(TEST_SCRIPTS_DIR)/test_predicate_coverage.sh $(CANONICAL_RML_DIR) $(CANONICAL_TEST_OUTPUT)
+	@ echo
+	@ echo "==> Test RML subject reference coverage"
+	@ $(TEST_SCRIPTS_DIR)/test_reference_coverage.sh $(CANONICAL_RML_DIR) $(CANONICAL_TEST_OUTPUT)	
+	@ echo
+	@ echo "==> Test RML subject template coverage"
+	@ $(TEST_SCRIPTS_DIR)/test_template_coverage.sh $(CANONICAL_RML_DIR) $(CANONICAL_TEST_OUTPUT)
+
+test_output_postproc:
+	@ echo "Testing output post-processing scripts"
+	@ echo "==> Test link role playedBy"
+	@ $(POST_SCRIPTS_DIR)/link_role_playedBy.sh
+	@ echo
+	@ echo "==> Test output missing playedBy"
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_missing_playedBy.rq --data $(CANONICAL_TEST_OUTPUT) --data output/source/link_role_playedBy.ttl --results=$(TEST_QUERY_RESULTS_FORMAT)
 
 clean:
 	@ rm -fv jena.zip

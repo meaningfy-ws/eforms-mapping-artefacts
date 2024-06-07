@@ -20,16 +20,13 @@ PREFIX tedm: <http://data.europa.eu/a4g/mapping/sf-rml/>
 PREFIX time: <http://www.w3.org/2006/time#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-# A resource that has more than one incoming relationship of the same type is
-# likely an outlier, except in certain cases (roles playedBy orgs in ePO).
+# This query facilitates looking up roles which link to a contactpoint but do
+# not have a playedBy link to an organization (of that contactpoint)
 
-SELECT DISTINCT ?s (?p0 AS ?rel) {
-    ?s ?p ?o ;
-        a ?what .
-    ?s0 ?p0 ?s .
-    ?s1 ?p0 ?s .
-    FILTER(isIRI(?s))
-    FILTER(?s0 != ?s1)
-    FILTER(?p0 not in (epo:playedBy, owl:sameAs))
-    FILTER (?what not in (epo:ExclusionGround))
+SELECT DISTINCT ?s ?tpo_id {
+    ?s epo:hasContactPointInRole ?tpo .
+    ?tpo adms:identifier/skos:notation ?tpo_id .
+    FILTER NOT EXISTS {
+        ?s epo:playedBy ?org .
+    }
 }

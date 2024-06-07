@@ -48,9 +48,128 @@ tedm:MG-ProcedureTerm_ND-ProcedureTenderingProcess a rr:TriplesMap ;
             rr:predicate epo:isSubmissionForAllLotsRequired ;
             rr:objectMap
                 [
+                    # this needs no inverse mapping for false as there is only one value in the voc
                     tedm:minSDKVersion "1.9.1" ;
                     rml:reference "if(cbc:PartPresentationCode/text()='all') then 'true' else null" ;
                     rr:datatype xsd:boolean ;
                 ]
+        ] ;
+.
+
+tedm:MG-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-LotFiscalLegislation a rr:TriplesMap ;
+    rdfs:label "MG-ProcedureTerm" ;
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:FiscalLegislationDocumentReference" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-LotFiscalLegislation" ;
+            rdfs:comment "Primary type declaration for MG-Procedure under ND-LotFiscalLegislation" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ProcedureTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
+            rr:class epo:ProcedureTerm
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "OPT-301-Lot-FiscalLegis" ;
+            rr:predicate epo:definesInformationProvider ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-TaxInformationProvider_ND-LotFiscalLegislation ;
+                    rr:joinCondition [
+                        rr:child  "path(.)" ;
+                        rr:parent "path(.)" ;
+                    ] ;
+                ] ;
+        ] ;
+.
+
+tedm:MG-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-LotEnvironmentalLegislation a rr:TriplesMap ;
+    rdfs:label "MG-ProcedureTerm" ;
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:EnvironmentalLegislationDocumentReference" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-LotFiscalLegislation" ;
+            rdfs:comment "Primary type declaration for MG-Procedure under ND-LotEnvironmentalLegislation" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ProcedureTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
+            rr:class epo:ProcedureTerm
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "OPT-301-Lot-EnvironLegis" ;
+            rr:predicate epo:definesInformationProvider ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-EnvironmentalProtectionInformationProvider_ND-LotEnvironmentalLegislation ;
+                    rr:joinCondition [
+                        rr:child "path(.)" ;
+                        rr:parent "path(.)" ;
+                    ] ;
+                ] ;
+        ] ;
+.
+
+tedm:MG-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-LotEmploymentLegislation a rr:TriplesMap ;
+    rdfs:label "MG-ProcedureTerm" ;
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:EmploymentLegislationDocumentReference" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-LotEmploymentLegislation" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ProcedureTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
+            rr:class epo:ProcedureTerm
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "OPT-301-Lot-EmployLegis" ;
+            rr:predicate epo:definesInformationProvider ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-EmploymentInformationProvider_ND-LotEmploymentLegislation ;
+                    rr:joinCondition [
+                        rr:child  "path(.)" ;
+                        rr:parent "path(.)" ;
+                    ] ;
+                ] ;
+        ] ;
+.
+
+tedm:MG-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-LotReviewTerms a rr:TriplesMap ;
+    rdfs:label "MG-ProcedureTerm" ;
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:AppealTerms" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-LotReviewTerms" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ProcedureTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
+            rr:class epo:ProcedureTerm
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "OPT-301-Lot-Mediator" ;
+            rr:predicate epo:definesMediator ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-Mediator_ND-LotReviewTerms ;
+                    rr:joinCondition [
+                        rr:child  "path(.)" ;
+                        rr:parent "path(.)" ;
+                    ] ;
+                ] ;
         ] ;
 .

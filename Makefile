@@ -183,8 +183,9 @@ test:
 	@ echo "Using $(JENA_TOOLS_RIOT)"
 	@ echo "Validating RML files"
 	@ $(JENA_TOOLS_RIOT) --validate $(CANONICAL_RML_DIR)/*
-	@ echo "Validating test output"
+	@ echo -n "Validating test output.."
 	@ $(JENA_TOOLS_RIOT) --validate $(CANONICAL_TEST_OUTPUT)
+	@ echo "done"
 
 test_output:
 	@ echo "Testing output w/ $(JENA_TOOLS_ARQ) in $(TEST_QUERY_RESULTS_FORMAT) format"

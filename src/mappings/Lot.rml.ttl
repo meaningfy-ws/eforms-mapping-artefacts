@@ -2092,7 +2092,12 @@ tedm:MG-SelectionCriterion-specifiesProcurementCriterion-Lot_ND-SelectionCriteri
             rr:predicate epo:hasSelectionCriterionType ;
             rr:objectMap
                 [
-                    rml:reference "cbc:CriterionTypeCode[@listName='selection-criterion']";
+                    rdfs:label "at-voc:selection-criterion" ;
+                    rr:parentTriplesMap tedm:selection-criterion ;
+                    rr:joinCondition [
+                        rr:child "cbc:CriterionTypeCode[@listName='selection-criterion']" ;
+                        rr:parent "code.value"
+                    ];
                 ] ;
         ] ;
     rr:predicateObjectMap

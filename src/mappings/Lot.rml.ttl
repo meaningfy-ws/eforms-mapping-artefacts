@@ -4068,7 +4068,7 @@ rdfs:label "MG-SpecificDuration";
             rr:objectMap
                 [
                     rml:reference "cbc:DurationMeasure";
-                    rr:dataType xsd:decimal ;
+                    rr:datatype xsd:decimal;
                 ] ;
         ] ;
     rr:predicateObjectMap

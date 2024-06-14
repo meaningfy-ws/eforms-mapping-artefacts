@@ -597,18 +597,6 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0007 a adms:Identifie
   epo:hasScheme "organization";
   skos:notation "ORG-0007" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_TPO-0001 a epo:Identifier;
-  epo:hasScheme "touchpoint";
-  skos:notation "TPO-0001" .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_TPO-0002 a epo:Identifier;
-  epo:hasScheme "touchpoint";
-  skos:notation "TPO-0002" .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_TPO-0003 a epo:Identifier;
-  epo:hasScheme "touchpoint";
-  skos:notation "TPO-0003" .
-
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_InnovativeProcurement_2yjckcDCeZgS5m5tUcZ68p
   a epo:InnovativeProcurement;
   epo:fulfillsRequirement <http://publications.europa.eu/resource/authority/innovative-acquisition/proc-innov> .
@@ -1376,6 +1364,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_28qA6sXPPZP6NSvA8FovH
   epo:hasTenderSubcontractingInformation <http://publications.europa.eu/resource/authority/subcontracting-indication/none> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_8y8GPfmPvSRdBcci6WWcSi
+  a epo:SubmissionTerm;
   epo:definesTenderProcessor epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderProcessor_PuAZ93vcjRYhKiN4rMvUZg;
   epo:hasEAuctionURL "https://electronic-auction.com"^^xsd:anyURI;
   epo:hasECataloguePermission <http://publications.europa.eu/resource/authority/permission/allowed>;
@@ -1383,7 +1372,6 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_8y8GPfmPvSRdBcci6WWcS
   epo:hasLateSubmissionInformationDescription "Later tender information description ---"@en;
   epo:hasLateSubmissionPermission <http://publications.europa.eu/resource/authority/missing-info-submission/late-all>;
   epo:hasNonElectronicSubmissionDescription "Nonelectronic Submission Description ---"@en;
-  a epo:SubmissionTerm;
   epo:hasNonElectronicSubmissionJustification <http://publications.europa.eu/resource/authority/communication-justification/ipr-iss>;
   epo:hasReceiptTenderDeadline "2023-05-22T20:59:32+01:00"^^xsd:dateTime;
   epo:hasTenderValidityDuration epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SpecificDuration_5FkLTeSLMGuVhyxZY2piu9;
@@ -1391,10 +1379,11 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_8y8GPfmPvSRdBcci6WWcS
   epo:isMultipleTenderSubmissionAllowed true .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_PuAZ93vcjRYhKiN4rMvUZg
-  a epo:SubmissionTerm;
   epo:definesTenderReceiver epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderReceiver_EzgHnVsFm5yZb2op3EXTjn;
   epo:hasGuaranteeDescription "Guarantee Required Description ---"@en;
-  epo:hasLanguage <http://publications.europa.eu/resource/authority/language/ENG>, <http://publications.europa.eu/resource/authority/language/FRA>;
+  epo:hasLanguage <http://publications.europa.eu/resource/authority/language/ENG>;
+  a epo:SubmissionTerm;
+  epo:hasLanguage <http://publications.europa.eu/resource/authority/language/FRA>;
   epo:isAdvancedElectronicSignatureRequired true;
   epo:isGuaranteeRequired true .
 
@@ -1486,7 +1475,6 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0001 a cccev:ContactP
   cccev:email "proc-info@fin-adm.com";
   cccev:telephone "+123 45678";
   dct:description "Procurement Department"@en;
-  adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_TPO-0001;
   locn:address epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_DQ3D2nHojn4VijYMYRtvzY .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0002 a cccev:ContactPoint;
@@ -1496,7 +1484,6 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0002 a cccev:ContactP
   cccev:email "proc-archi@fin-adm.com";
   cccev:telephone "+44 123456776";
   dct:description "Fin Adm Archives"@en;
-  adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_TPO-0002;
   locn:address epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_h9nNgdx6iKqoLeHmAXWn7m .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0003 a cccev:ContactPoint;
@@ -1506,7 +1493,6 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0003 a cccev:ContactP
   cccev:email "proc-eval@fin-adm.com";
   cccev:telephone "+44 123456777";
   dct:description "Tenders Evaluation Committee"@en;
-  adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_TPO-0003;
   locn:address epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_ZDibsmqh6XaKEG4WjjfUDb .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_VehicleInformation_6gHfSxSpgNRXavjTJCiAJv

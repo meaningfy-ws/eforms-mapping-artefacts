@@ -1657,14 +1657,23 @@
 			</cac:ContractExecutionRequirement>
 			<cac:AwardingTerms>
 				<cac:TechnicalCommitteePerson>
-               <cbc:FamilyName>arch. Andrzej Bulanda – Przewodniczący Sądu Konkurs.; arch. Maria Saloni-Sadowska –Sędzia referent; arch. Bartosz Lewandowski – Asystent Sędziego referenta; Robert Widz –Członek Sądu Konkurs.; Agnieszka Zubala – Członek Sądu Konkurs.; arch. Kinga Socha –Członek Sądu Konkurs.; arch. Piotr Piętka – Członek Sądu Konkurs.; arch. Rafał Sieraczyński –Członek Sądu Konkurs.; Rafał Mroczkowski - Sekretarz</cbc:FamilyName>
-            </cac:TechnicalCommitteePerson>
+					<cbc:FamilyName>arch. Andrzej Bulanda – Przewodniczący Sądu Konkurs.; arch. Maria Saloni-Sadowska –Sędzia referent; arch. Bartosz Lewandowski – Asystent Sędziego referenta; Robert Widz –Członek Sądu Konkurs.; Agnieszka Zubala – Członek Sądu Konkurs.; arch. Kinga Socha –Członek Sądu Konkurs.; arch. Piotr Piętka – Członek Sądu Konkurs.; arch. Rafał Sieraczyński –Członek Sądu Konkurs.; Rafał Mroczkowski - Sekretarz</cbc:FamilyName>
+				</cac:TechnicalCommitteePerson>
 				<cac:Prize>
 					<cbc:RankCode>1</cbc:RankCode>
 					<cbc:ValueAmount currencyID="EUR">10000</cbc:ValueAmount>
 					<cbc:Description languageID="FRA">Une indemnité forfaitaire d'un montant identique à celui versé aux concurrents non retenus sera payée à l'équipe lauréate sous forme d'avance sur le marché de maîtrise d'œuvre dès l'issue du concours; cette somme étant à valoir sur le montant des honoraires à percevoir ultérieurement au titre du marché de maîtrise d'œuvre.</cbc:Description>
 				</cac:Prize>
-			    <cbc:FollowupContractIndicator>true</cbc:FollowupContractIndicator>
+				<cac:Prize>
+					<cbc:RankCode>2</cbc:RankCode>
+					<cbc:ValueAmount currencyID="EUR">20000</cbc:ValueAmount>
+					<cbc:Description languageID="FRA">Une indemnité forfaitaire d'un montant
+						identique à celui versé aux concurrents non retenus sera payée à l'équipe
+						lauréate sous forme d'avance sur le marché de maîtrise d'œuvre dès l'issue
+						du concours; cette somme étant à valoir sur le montant des honoraires à
+						percevoir ultérieurement au titre du marché de maîtrise d'œuvre.</cbc:Description>
+				</cac:Prize>
+				<cbc:FollowupContractIndicator>true</cbc:FollowupContractIndicator>
 				<cbc:BindingOnBuyerIndicator>true</cbc:BindingOnBuyerIndicator>
 				<!--BT-120-->
 				<cbc:NoFurtherNegotiationIndicator>false</cbc:NoFurtherNegotiationIndicator>

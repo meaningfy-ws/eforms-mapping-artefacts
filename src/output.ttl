@@ -420,9 +420,9 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_daUDPcwCUoxbJRjGb7tKNQ 
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_DesignContestRegimeTerm_PuAZ93vcjRYhKiN4rMvUZg
   a epo:DesignContestRegimeTerm;
-  epo:definesPrize epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Prize_cvGnw3hJYztkzCgnhrJDWV;
+  epo:definesPrize epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Prize_W3WEhLqsTnuQGFepVs9sA7,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Prize_kB8mzufhJfCu7QSJVs6cLZ;
   epo:hasFollowupContract true;
-  epo:hasFollowupContractInformation "Une indemnité forfaitaire d'un montant identique à celui versé aux concurrents non retenus sera payée à l'équipe lauréate sous forme d'avance sur le marché de maîtrise d'œuvre dès l'issue du concours; cette somme étant à valoir sur le montant des honoraires à percevoir ultérieurement au titre du marché de maîtrise d'œuvre."@fr;
   epo:isJuryDecisionBinding true .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_DynamicPurchaseSystemTechnicalUsage_4qCitbxYVRfdbqxnYtJTZF
@@ -850,9 +850,13 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValueLot_evidV3nok82ih2xWwJY
   epo:hasAmountValue 9999999.99;
   epo:hasCurrency "EUR" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValue_cvGnw3hJYztkzCgnhrJDWV a
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValue_W3WEhLqsTnuQGFepVs9sA7 a
     epo:MonetaryValue;
   epo:hasAmountValue 10000.0 .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValue_kB8mzufhJfCu7QSJVs6cLZ a
+    epo:MonetaryValue;
+  epo:hasAmountValue 20000.0 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MultipleStageProcedureTerm_8y8GPfmPvSRdBcci6WWcSi
   a epo:MultipleStageProcedureTerm;
@@ -1046,9 +1050,13 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ParticipationCondition_n8e85pxdcT7ZJ
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Person_cvGnw3hJYztkzCgnhrJDWV a person:Person;
   foaf:familyName "arch. Andrzej Bulanda – Przewodniczący Sądu Konkurs.; arch. Maria Saloni-Sadowska –Sędzia referent; arch. Bartosz Lewandowski – Asystent Sędziego referenta; Robert Widz –Członek Sądu Konkurs.; Agnieszka Zubala – Członek Sądu Konkurs.; arch. Kinga Socha –Członek Sądu Konkurs.; arch. Piotr Piętka – Członek Sądu Konkurs.; arch. Rafał Sieraczyński –Członek Sądu Konkurs.; Rafał Mroczkowski - Sekretarz" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Prize_cvGnw3hJYztkzCgnhrJDWV a epo:Prize;
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Prize_W3WEhLqsTnuQGFepVs9sA7 a epo:Prize;
   epo:hasPrizeRank 1;
-  epo:hasPrizeValue epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValue_cvGnw3hJYztkzCgnhrJDWV .
+  epo:hasPrizeValue epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValue_W3WEhLqsTnuQGFepVs9sA7 .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Prize_kB8mzufhJfCu7QSJVs6cLZ a epo:Prize;
+  epo:hasPrizeRank 2;
+  epo:hasPrizeValue epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValue_kB8mzufhJfCu7QSJVs6cLZ .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureIdentifier_MnX8qyREnFMNLeS5MJAX9K
   a adms:Identifier;
@@ -1364,7 +1372,6 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_28qA6sXPPZP6NSvA8FovH
   epo:hasTenderSubcontractingInformation <http://publications.europa.eu/resource/authority/subcontracting-indication/none> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_8y8GPfmPvSRdBcci6WWcSi
-  a epo:SubmissionTerm;
   epo:definesTenderProcessor epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderProcessor_PuAZ93vcjRYhKiN4rMvUZg;
   epo:hasEAuctionURL "https://electronic-auction.com"^^xsd:anyURI;
   epo:hasECataloguePermission <http://publications.europa.eu/resource/authority/permission/allowed>;
@@ -1376,14 +1383,14 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_8y8GPfmPvSRdBcci6WWcS
   epo:hasReceiptTenderDeadline "2023-05-22T20:59:32+01:00"^^xsd:dateTime;
   epo:hasTenderValidityDuration epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SpecificDuration_5FkLTeSLMGuVhyxZY2piu9;
   epo:hasVariantPermission <http://publications.europa.eu/resource/authority/permission/not-allowed>;
+  a epo:SubmissionTerm;
   epo:isMultipleTenderSubmissionAllowed true .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_PuAZ93vcjRYhKiN4rMvUZg
+  a epo:SubmissionTerm;
   epo:definesTenderReceiver epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderReceiver_EzgHnVsFm5yZb2op3EXTjn;
   epo:hasGuaranteeDescription "Guarantee Required Description ---"@en;
-  epo:hasLanguage <http://publications.europa.eu/resource/authority/language/ENG>;
-  a epo:SubmissionTerm;
-  epo:hasLanguage <http://publications.europa.eu/resource/authority/language/FRA>;
+  epo:hasLanguage <http://publications.europa.eu/resource/authority/language/ENG>, <http://publications.europa.eu/resource/authority/language/FRA>;
   epo:isAdvancedElectronicSignatureRequired true;
   epo:isGuaranteeRequired true .
 

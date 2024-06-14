@@ -2670,29 +2670,6 @@ tedm:MG-DesignContestRegimeTerm-isSubjectToLotSpecificTerm-Lot_ND-AwardingTerms 
                     ];
                 ] ;
         ];
-    rr:predicateObjectMap
-        [
-            rdfs:label "BT-45-Lot";
-            rdfs:comment "RewardsOther of MG-DesignContestRegimeTerm under ND-Prize";
-            rr:predicate  epo:hasFollowupContractInformation ;
-
-            rr:objectMap
-                [
-                   rml:reference "cac:Prize/cbc:Description";
-                   rml:languageMap [
-                        fnml:functionValue [
-                            rr:predicateObjectMap [
-                                rr:predicate idlab-fn:str ;
-                                rr:objectMap [ rml:reference "cac:Prize/cbc:Description/@languageID" ]
-                                ] ,
-                                tedm:idlab-fn_executes_lookup ,
-                                tedm:idlab-fn_inputFile_language ,
-                                tedm:idlab-fn_fromColumn_code ,
-                                tedm:idlab-fn_toColumn_code
-                        ]
-                    ] ;
-                ] ;
-        ];
 .
 
 tedm:MG-Prize-definesPrize-DesignContestRegimeTerm-isSubjectToLotSpecificTerm-Lot_ND-Prize a rr:TriplesMap ;
@@ -2706,33 +2683,31 @@ tedm:MG-Prize-definesPrize-DesignContestRegimeTerm-isSubjectToLotSpecificTerm-Lo
     rr:subjectMap
         [
             rdfs:label  "ND-Prize";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Prize_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Prize_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
             rr:class epo:Prize
         ] ;
     rr:predicateObjectMap
         [
             rdfs:label "BT-44-Lot";
             rdfs:comment "PrizeRank of MG-Prize under ND-Prize";
-            rr:predicate  epo:hasPrizeRank;
-
+            rr:predicate epo:hasPrizeRank;
             rr:objectMap
                 [
                     rml:reference "cbc:RankCode";
-                   rr:datatype xsd:integer;
+                    rr:datatype xsd:integer;
                 ] ;
         ];
     rr:predicateObjectMap
         [
             rdfs:label "BT-644-Lot";
             rdfs:comment "PrizeValue of MG-Prize under ND-Prize";
-            rr:predicate  epo:hasPrizeValue ;
-
+            rr:predicate epo:hasPrizeValue ;
             rr:objectMap
                 [
                    rr:parentTriplesMap tedm:MG-MonetaryValue-hasPrizeValue-Prize-definesPrize-DesignContestRegimeTerm-isSubjectToLotSpecificTerm-Lot_ND-Prize ;
-                    rr:joinCondition[
+                    rr:joinCondition [
                         rr:child "path(.)";
-                        rr:parent "path(.)"
+                        rr:parent "path(.)";
                     ];
                 ] ;
         ];
@@ -2749,15 +2724,14 @@ tedm:MG-MonetaryValue-hasPrizeValue-Prize-definesPrize-DesignContestRegimeTerm-i
     rr:subjectMap
         [
             rdfs:label  "ND-Prize";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_MonetaryValue_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_MonetaryValue_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
             rr:class epo:MonetaryValue
         ] ;
     rr:predicateObjectMap
         [
             rdfs:label "BT-644-Lot";
             rdfs:comment "PrizeValue of MG-MonetaryValue under ND-Prize";
-            rr:predicate  epo:hasAmountValue ;
-
+            rr:predicate epo:hasAmountValue ;
             rr:objectMap
                 [
                    rml:reference "cbc:ValueAmount";

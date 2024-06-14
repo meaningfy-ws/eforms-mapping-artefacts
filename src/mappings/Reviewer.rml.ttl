@@ -71,7 +71,7 @@ tedm:MG-Reviewer_ND-LotReviewTerms a rr:TriplesMap ;
                 [
                     rr:parentTriplesMap tedm:MG-ContactPoint_ND-Touchpoint ;
                     rr:joinCondition [
-                        rr:child "if(cac:AdditionalInformationParty/cac:PartyIdentification/cbc:ID/@schemeName='touchpoint' or exists(cac:IssuerParty/cac:PartyIdentification/cbc:ID[starts-with(text(), 'TPO-')])) then cac:AppealReceiverParty/cac:PartyIdentification/cbc:ID else null" ;
+                        rr:child "if(cac:AppealReceiverParty/cac:PartyIdentification/cbc:ID/@schemeName='touchpoint' or exists(cac:AppealReceiverParty/cac:PartyIdentification/cbc:ID[starts-with(text(), 'TPO-')])) then cac:AppealReceiverParty/cac:PartyIdentification/cbc:ID else null" ;
                         rr:parent "cac:PartyIdentification/cbc:ID" ;
                     ] ;
                 ] ;

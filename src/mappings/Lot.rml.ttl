@@ -3200,7 +3200,7 @@ tedm:MG-Quantity-hasTotalQuantity-Purpose-hasPurpose-Lot_ND-LotProcurementScope 
     rr:subjectMap
         [
             rdfs:label "ND-LotProcurementScope";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Quantity_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}";
+            rml:reference "if(exists(cbc:EstimatedOverallContractQuantity)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_Quantity_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null";
             rr:class epo:Quantity
         ] ;
     rr:predicateObjectMap
@@ -3242,7 +3242,7 @@ tedm:MG-Purpose-hasPurpose-Lot_ND-LotProcurementScope a rr:TriplesMap ;
     rr:subjectMap
         [
             rdfs:label "ND-LotProcurementScope";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_LotPurpose_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}";
+            rml:reference "if(exists(cbc:EstimatedOverallContractQuantity)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_LotPurpose_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null";
             rr:class epo:Purpose
         ] ;
     rr:predicateObjectMap

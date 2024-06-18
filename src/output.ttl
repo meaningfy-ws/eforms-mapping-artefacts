@@ -307,21 +307,27 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractDuration_SwK8Z4wjBuauCWAoBTP
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocationAddress_6pwBpb8FW5caR7TKqg7TvM
   a locn:Address;
+  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
+  epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
   locn:fullAddress "Bruce Wayne House, 2 Gotham Street, London, N1 9FL, GBR";
   locn:postCode "N1 9FL";
   locn:postName "London" .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocationAddress_TfeqsbtZz7bnSaeLJEmaKZ
   a locn:Address;
+  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
+  epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
   locn:fullAddress "Bruce Wayne House, 2 Gotham Street, London, N1 9FL, GBR";
   locn:postCode "N1 9FL";
   locn:postName "London" .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocationAddress_e4BUCegaReE8NKq7sHcoAX
-  a locn:Address .
+  a locn:Address;
+  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocationAddress_es3GJHPAww7U8q366gSYas
-  a locn:Address .
+  a locn:Address;
+  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_6pwBpb8FW5caR7TKqg7TvM
   a dct:Location;
@@ -1369,7 +1375,6 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_28qA6sXPPZP6NSvA8FovH
   epo:hasTenderSubcontractingInformation <http://publications.europa.eu/resource/authority/subcontracting-indication/none> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_8y8GPfmPvSRdBcci6WWcSi
-  a epo:SubmissionTerm;
   epo:definesTenderProcessor epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderProcessor_PuAZ93vcjRYhKiN4rMvUZg;
   epo:hasEAuctionURL "https://electronic-auction.com"^^xsd:anyURI;
   epo:hasECataloguePermission <http://publications.europa.eu/resource/authority/permission/allowed>;
@@ -1378,14 +1383,15 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_8y8GPfmPvSRdBcci6WWcS
   epo:hasLateSubmissionPermission <http://publications.europa.eu/resource/authority/missing-info-submission/late-all>;
   epo:hasNonElectronicSubmissionDescription "Nonelectronic Submission Description ---"@en;
   epo:hasNonElectronicSubmissionJustification <http://publications.europa.eu/resource/authority/communication-justification/ipr-iss>;
+  a epo:SubmissionTerm;
   epo:hasReceiptTenderDeadline "2023-05-22T20:59:32+01:00"^^xsd:dateTime;
   epo:hasTenderValidityDuration epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SpecificDuration_5FkLTeSLMGuVhyxZY2piu9;
   epo:hasVariantPermission <http://publications.europa.eu/resource/authority/permission/not-allowed>;
   epo:isMultipleTenderSubmissionAllowed true .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_PuAZ93vcjRYhKiN4rMvUZg
-  epo:definesTenderReceiver epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderReceiver_EzgHnVsFm5yZb2op3EXTjn;
   a epo:SubmissionTerm;
+  epo:definesTenderReceiver epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderReceiver_EzgHnVsFm5yZb2op3EXTjn;
   epo:hasGuaranteeDescription "Guarantee Required Description ---"@en;
   epo:hasLanguage <http://publications.europa.eu/resource/authority/language/ENG>, <http://publications.europa.eu/resource/authority/language/FRA>;
   epo:isAdvancedElectronicSignatureRequired true;

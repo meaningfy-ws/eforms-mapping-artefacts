@@ -369,56 +369,44 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractPeriod_SwK8Z4wjBuauCWAoBTPk4
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_8y8GPfmPvSRdBcci6WWcSi a
     epo:ContractTerm;
+  epo:definesContractDuration epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractDuration_SwK8Z4wjBuauCWAoBTPk4Z;
+  epo:definesContractPeriod epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractPeriod_SwK8Z4wjBuauCWAoBTPk4Z;
+  epo:definesSpecificPlaceOfPerformance epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_6pwBpb8FW5caR7TKqg7TvM,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_es3GJHPAww7U8q366gSYas;
   epo:hasAdditionalContractNature <http://publications.europa.eu/resource/authority/contract-nature/works>;
+  epo:hasBroadPlaceOfPerformance <http://publications.europa.eu/resource/authority/other-place-service/anyw-cou>;
+  epo:hasContractNatureType <http://publications.europa.eu/resource/authority/contract-nature/services>;
   epo:hasEInvoicingPermission <http://publications.europa.eu/resource/authority/permission/required>;
   epo:hasEOrdering true;
   epo:hasEPayment true;
+  epo:hasLegalFormRequirement "Tenderer Legal Form Description ---"@en;
   epo:hasMaximumNumberOfRenewals 3;
   epo:hasOptionsDescription "Options description ---"@en;
   epo:hasPaymentArrangement "Terms Financial ---"@en;
   epo:hasPerformanceConditions "Terms Performance ---"@en;
   epo:hasPlaceOfPerformanceAdditionalInformation "Additional information ---"@en, "The main location is ..."@en;
+  epo:hasRenewalDescription "Renewal description ---"@en;
   epo:hasReservedExecution <http://publications.europa.eu/resource/authority/applicability/yes> .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_BDTC4WRLKSCg4KipkdMxR8 a
-    epo:ContractTerm;
-  epo:hasBroadPlaceOfPerformance <http://publications.europa.eu/resource/authority/other-place-service/anyw-cou> .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_GRsFFxbT394C6sb7Mtao4r a
-    epo:ContractTerm;
-  epo:hasLegalFormRequirement "Tenderer Legal Form Description ---"@en .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_LgGjsfgz3hNSB7W5hu4Wmi a
-    epo:ContractTerm;
-  epo:hasLegalFormRequirement "Tenderer Legal Form Description ---"@en .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_MnX8qyREnFMNLeS5MJAX9K a
-    epo:ContractTerm;
-  epo:definesContractDuration epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractDuration_JNctcsx6JXdNkzdL4P6dek,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractDuration_SwK8Z4wjBuauCWAoBTPk4Z;
-  epo:definesContractPeriod epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractPeriod_JNctcsx6JXdNkzdL4P6dek,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractPeriod_SwK8Z4wjBuauCWAoBTPk4Z;
-  epo:definesSpecificPlaceOfPerformance epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_6pwBpb8FW5caR7TKqg7TvM,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_TfeqsbtZz7bnSaeLJEmaKZ,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_e4BUCegaReE8NKq7sHcoAX,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_es3GJHPAww7U8q366gSYas;
-  epo:hasContractNatureType <http://publications.europa.eu/resource/authority/contract-nature/services> .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_QRFEJSYy7fATJoZShoDC4D a
-    epo:ContractTerm;
-  epo:hasBroadPlaceOfPerformance <http://publications.europa.eu/resource/authority/other-place-service/anyw-cou> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_daUDPcwCUoxbJRjGb7tKNQ a
     epo:ContractTerm;
+  epo:definesContractDuration epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractDuration_JNctcsx6JXdNkzdL4P6dek;
+  epo:definesContractPeriod epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractPeriod_JNctcsx6JXdNkzdL4P6dek;
+  epo:definesSpecificPlaceOfPerformance epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_TfeqsbtZz7bnSaeLJEmaKZ,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_e4BUCegaReE8NKq7sHcoAX;
   epo:hasAdditionalContractNature <http://publications.europa.eu/resource/authority/contract-nature/works>;
+  epo:hasBroadPlaceOfPerformance <http://publications.europa.eu/resource/authority/other-place-service/anyw-cou>;
+  epo:hasContractNatureType <http://publications.europa.eu/resource/authority/contract-nature/services>;
   epo:hasEInvoicingPermission <http://publications.europa.eu/resource/authority/permission/required>;
   epo:hasEOrdering true;
   epo:hasEPayment true;
+  epo:hasLegalFormRequirement "Tenderer Legal Form Description ---"@en;
   epo:hasMaximumNumberOfRenewals 3;
   epo:hasOptionsDescription "Options description ---"@en;
   epo:hasPaymentArrangement "Terms Financial ---"@en;
   epo:hasPerformanceConditions "Terms Performance ---"@en;
   epo:hasPlaceOfPerformanceAdditionalInformation "Additional information ---"@en, "The main location is ..."@en;
+  epo:hasRenewalDescription "Renewal description ---"@en;
   epo:hasReservedExecution <http://publications.europa.eu/resource/authority/applicability/yes> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_DesignContestRegimeTerm_PuAZ93vcjRYhKiN4rMvUZg
@@ -701,9 +689,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotValueEstimateExtension_fhpEAkeAi2
   epo:hasCurrency "BSD" .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001 a epo:Lot;
-  epo:foreseesContractSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_BDTC4WRLKSCg4KipkdMxR8,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_GRsFFxbT394C6sb7Mtao4r, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_MnX8qyREnFMNLeS5MJAX9K,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_daUDPcwCUoxbJRjGb7tKNQ;
+  epo:foreseesContractSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_daUDPcwCUoxbJRjGb7tKNQ;
   epo:fulfillsStrategicProcurement epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_GreenProcurement_6gHfSxSpgNRXavjTJCiAJv,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_GreenProcurement_YnBjYVCB47Lh3T4W9D8off,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_InnovativeProcurement_cLKYnTLDZb6RpEv6sHGwFG,
@@ -758,8 +744,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001 a epo:Lot;
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002 a epo:Lot;
   epo:foreseesContractSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_8y8GPfmPvSRdBcci6WWcSi,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_LgGjsfgz3hNSB7W5hu4Wmi, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_MnX8qyREnFMNLeS5MJAX9K,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_QRFEJSYy7fATJoZShoDC4D, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubcontractTerm_8y8GPfmPvSRdBcci6WWcSi;
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubcontractTerm_8y8GPfmPvSRdBcci6WWcSi;
   epo:fulfillsStrategicProcurement epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_GreenProcurement_dfeMpbQbaBY6WfVozDLEGf,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_InnovativeProcurement_2yjckcDCeZgS5m5tUcZ68p,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SocialProcurement_GB54RbhU2jfyPCJLbcWmfB,
@@ -1375,6 +1360,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_28qA6sXPPZP6NSvA8FovH
   epo:hasTenderSubcontractingInformation <http://publications.europa.eu/resource/authority/subcontracting-indication/none> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_8y8GPfmPvSRdBcci6WWcSi
+  a epo:SubmissionTerm;
   epo:definesTenderProcessor epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderProcessor_PuAZ93vcjRYhKiN4rMvUZg;
   epo:hasEAuctionURL "https://electronic-auction.com"^^xsd:anyURI;
   epo:hasECataloguePermission <http://publications.europa.eu/resource/authority/permission/allowed>;
@@ -1383,17 +1369,17 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_8y8GPfmPvSRdBcci6WWcS
   epo:hasLateSubmissionPermission <http://publications.europa.eu/resource/authority/missing-info-submission/late-all>;
   epo:hasNonElectronicSubmissionDescription "Nonelectronic Submission Description ---"@en;
   epo:hasNonElectronicSubmissionJustification <http://publications.europa.eu/resource/authority/communication-justification/ipr-iss>;
-  a epo:SubmissionTerm;
   epo:hasReceiptTenderDeadline "2023-05-22T20:59:32+01:00"^^xsd:dateTime;
   epo:hasTenderValidityDuration epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SpecificDuration_5FkLTeSLMGuVhyxZY2piu9;
   epo:hasVariantPermission <http://publications.europa.eu/resource/authority/permission/not-allowed>;
   epo:isMultipleTenderSubmissionAllowed true .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_PuAZ93vcjRYhKiN4rMvUZg
-  a epo:SubmissionTerm;
   epo:definesTenderReceiver epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderReceiver_EzgHnVsFm5yZb2op3EXTjn;
   epo:hasGuaranteeDescription "Guarantee Required Description ---"@en;
-  epo:hasLanguage <http://publications.europa.eu/resource/authority/language/ENG>, <http://publications.europa.eu/resource/authority/language/FRA>;
+  epo:hasLanguage <http://publications.europa.eu/resource/authority/language/ENG>;
+  a epo:SubmissionTerm;
+  epo:hasLanguage <http://publications.europa.eu/resource/authority/language/FRA>;
   epo:isAdvancedElectronicSignatureRequired true;
   epo:isGuaranteeRequired true .
 

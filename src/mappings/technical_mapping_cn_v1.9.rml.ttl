@@ -581,7 +581,7 @@ tedm:MG-EnvironmentalProtectionInformationProvider-announcesRole-CompetitionNoti
         [
             rdfs:label "ND-LotEmploymentLegislation" ;
             rdfs:comment "ND-LotEnvironmentalLegislation";
-            rml:reference "if(exists(cac:IssuerParty/cac:PartyIdentification/cbc:ID)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_EnvironmentalProtectionInformationProvider_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null";
+            rml:reference "if(exists(cac:EnvironmentalLegislationDocumentReference/cac:IssuerParty/cac:PartyIdentification/cbc:ID)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_EnvironmentalProtectionInformationProvider_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null";
             rr:class epo:EnvironmentalProtectionInformationProvider
 
         ] ;

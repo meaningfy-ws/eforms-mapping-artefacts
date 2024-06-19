@@ -2510,7 +2510,7 @@ tedm:MG-AwardEvaluationTerm-isSubjectToLotSpecificTerm-Lot_ND-LotAwardCriteria a
     rr:subjectMap
         [
             rdfs:label "ND-LotAwardCriteria";
-            rml:reference "if(exists(cbc:Description)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_AwardEvaluationTerm_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
+            rml:reference "if((exists(cbc:Description)) or (exists(cbc:CalculationExpression)) ) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_AwardEvaluationTerm_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
             rr:class epo:AwardEvaluationTerm
         ] ;
     rr:predicateObjectMap
@@ -2598,7 +2598,7 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-Lot_ND-TendererLegalForm a rr:
     rr:subjectMap
         [
             rdfs:label  "ND-TendererLegalForm";
-            rml:reference "if(exists(cbc:CompanyLegalForm)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_ContractTerm_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
+            rml:reference "if(exists(cbc:CompanyLegalForm)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_ContractTerm_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(../..)) || '?response_type=raw') else null" ;
             rr:class  epo:ContractTerm
         ] ;
     rr:predicateObjectMap
@@ -3130,7 +3130,7 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-Lot_ND-LotProcurementScope a r
     rr:subjectMap
         [
             rdfs:label "ND-LotProcurementScope";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ContractTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(../..)) || '?response_type=raw')}";
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ContractTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}";
             rr:class epo:ContractTerm
         ] ;
     rr:predicateObjectMap
@@ -3200,7 +3200,7 @@ tedm:MG-Quantity-hasTotalQuantity-Purpose-hasPurpose-Lot_ND-LotProcurementScope 
     rr:subjectMap
         [
             rdfs:label "ND-LotProcurementScope";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Quantity_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}";
+            rml:reference "if(exists(cbc:EstimatedOverallContractQuantity)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_Quantity_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null";
             rr:class epo:Quantity
         ] ;
     rr:predicateObjectMap
@@ -3242,7 +3242,7 @@ tedm:MG-Purpose-hasPurpose-Lot_ND-LotProcurementScope a rr:TriplesMap ;
     rr:subjectMap
         [
             rdfs:label "ND-LotProcurementScope";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_LotPurpose_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}";
+            rml:reference "if(exists(cbc:EstimatedOverallContractQuantity)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_LotPurpose_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null";
             rr:class epo:Purpose
         ] ;
     rr:predicateObjectMap
@@ -4555,7 +4555,7 @@ tedm:MG-Address-address-Location-definesSpecificPlaceOfPerformance-ContractTerm-
     rr:subjectMap
         [
             rdfs:comment "ND-LotPerformanceAddress";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ContractLocationAddress_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rml:reference "if(exists(cbc:StreetName) or exists(cbc:AdditionalStreetName) or exists(cac:AddressLine/cbc:Line) or exists(cbc:CityName) or exists(cbc:PostalZone) or exists(cac:Country/cbc:IdentificationCode)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_ContractLocationAddress_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
             rr:class locn:Address
         ] ;
     rr:predicateObjectMap
@@ -4566,7 +4566,8 @@ tedm:MG-Address-address-Location-definesSpecificPlaceOfPerformance-ContractTerm-
             rr:predicate locn:fullAddress ;
             rr:objectMap
                 [
-                    rml:reference "replace(replace(cbc:StreetName || ', ' || cbc:AdditionalStreetName || ', ' || cac:AddressLine/cbc:Line || ', ' || cbc:CityName || ', ' || cbc:PostalZone || ', ' || cac:Country/cbc:IdentificationCode, '(, )+', ', '),  '^, |, $', '')" ;
+                   rml:reference  "if ((exists(cbc:StreetName))or (exists(cbc:AdditionalStreetName )) or (exists(cac:AddressLine/cbc:Line ))) then replace(replace(cbc:StreetName || ', ' || cbc:AdditionalStreetName || ', ' || cac:AddressLine/cbc:Line || ', ' || cbc:CityName || ', ' || cbc:PostalZone || ', ' || cac:Country/cbc:IdentificationCode, '(, )+', ', '),  '^, |, $', '') else null" ;
+
                 ] ;
         ] ;
     rr:predicateObjectMap
@@ -4591,6 +4592,35 @@ tedm:MG-Address-address-Location-definesSpecificPlaceOfPerformance-ContractTerm-
                 [
                     tedm:minSDKVersion "1.5.12" ;
                     rml:reference "cbc:PostalZone";
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+           rdfs:label "BT-5071-lot";
+            rdfs:comment "Place Performance Country Subdivision of MG-Location under ND-LotPerformanceAddress";
+            rr:predicate epo:hasNutsCode ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:nuts ;
+                    rr:joinCondition [
+                        rr:child "cbc:CountrySubentityCode" ;
+                        rr:parent "code.value" ;
+                    ] ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-5141-lot of MG-Address under ND-LotPerformanceAddress";
+            rdfs:comment "Place Performance Country Code";
+            rr:predicate epo:hasCountryCode ;
+            rr:objectMap
+                [
+                    rdfs:label "at-voc:country" ;
+                    rr:parentTriplesMap tedm:country ;
+                    rr:joinCondition [
+                        rr:child "cac:Country/cbc:IdentificationCode" ;
+                        rr:parent "code.value" ;
+                    ] ;
                 ] ;
         ] ;
 .
@@ -4668,7 +4698,7 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-Lot_ND-LotPerformanceAddress a
     rr:subjectMap
         [
             rdfs:label "ND-LotPerformanceAddress";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ContractTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(../..)) || '?response_type=raw')}";
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ContractTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(../../..)) || '?response_type=raw')}";
             rr:class epo:ContractTerm
         ] ;
     rr:predicateObjectMap
@@ -4837,7 +4867,7 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-Lot_ND-OptionsAndRenewals a rr
     rr:subjectMap
         [
             rdfs:label "ND-OptionsAndRenewals";
-            rml:reference "if (exists(descendant::cbc:OptionsDescription) or exists(descendant::cbc:MaximumNumberNumeric) or exists(cbc:ProcurementTypeCode[@listName='contract-nature'])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_ContractTerm_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(../..)) || '?response_type=raw') else null" ;
+            rml:reference "if (exists(cbc:OptionsDescription) or exists(cbc:MaximumNumberNumeric))  then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_ContractTerm_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(../..)) || '?response_type=raw') else null" ;
             rr:class  epo:ContractTerm;
         ] ;
     rr:predicateObjectMap
@@ -4888,7 +4918,7 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-Lot_ND-OptionsDescription a rr
     rr:subjectMap
         [
             rdfs:label "ND-OptionsAndRenewals";
-            rml:reference "if (exists(descendant::cbc:OptionsDescription) or exists(descendant::cbc:MaximumNumberNumeric) or exists(cbc:ProcurementTypeCode[@listName='contract-nature'])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_ContractTerm_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(../..)) || '?response_type=raw') else null" ;
+            rml:reference "if (exists(cbc:Description)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_ContractTerm_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(../../../..)) || '?response_type=raw') else null" ;
             rr:class  epo:ContractTerm;
         ] ;
     rr:predicateObjectMap

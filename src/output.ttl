@@ -426,20 +426,12 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_DynamicPurchaseSystemTechnicalUsage_
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EmploymentInformationProvider_LynXyp22UHq9wSHKWpaZdf
   a epo:EmploymentInformationProvider;
-  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001;
+  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
   epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0004 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EmploymentInformationProvider_PuAZ93vcjRYhKiN4rMvUZg
-  a epo:EmploymentInformationProvider;
-  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EmploymentInformationProvider_TT87XZ7rfCixVuS4Z9trMH
-  a epo:EmploymentInformationProvider;
-  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EmploymentInformationProvider_jd3pLTPdR98iydFAqeHECy
   a epo:EmploymentInformationProvider;
-  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
+  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
   epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0004 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EnvironmentalProtectionInformationProvider_PuAZ93vcjRYhKiN4rMvUZg
@@ -865,8 +857,6 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Notice a epo:CompetitionNotice, epo:
   epo:announcesRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AcquiringCentralPurchasingBody_TftBQ7CiqCcyirLAwhsyEn,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardingCentralPurchasingBody_U3RE4hoDTRa29J56Gmq3BL,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Buyer_MT3gdCnJ9BA7aEqaGqKxAh, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EmploymentInformationProvider_LynXyp22UHq9wSHKWpaZdf,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EmploymentInformationProvider_PuAZ93vcjRYhKiN4rMvUZg,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EmploymentInformationProvider_TT87XZ7rfCixVuS4Z9trMH,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EmploymentInformationProvider_jd3pLTPdR98iydFAqeHECy,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EnvironmentalProtectionInformationProvider_PuAZ93vcjRYhKiN4rMvUZg,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EnvironmentalProtectionInformationProvider_TT87XZ7rfCixVuS4Z9trMH,
@@ -1373,9 +1363,9 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_PuAZ93vcjRYhKiN4rMvUZ
   epo:isGuaranteeRequired true .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_TT87XZ7rfCixVuS4Z9trMH
+  a epo:SubmissionTerm;
   epo:definesTenderReceiver epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderReceiver_ZRrbuPPWyxGgmdJHy5oG8a;
   epo:hasGuaranteeDescription "Guarantee Required Description ---"@en;
-  a epo:SubmissionTerm;
   epo:hasLanguage <http://publications.europa.eu/resource/authority/language/ENG>, <http://publications.europa.eu/resource/authority/language/FRA>;
   epo:hasSubmissionURL "http://tender-submit.fin-adm.com/esubmission"^^xsd:anyURI;
   epo:isAdvancedElectronicSignatureRequired true;

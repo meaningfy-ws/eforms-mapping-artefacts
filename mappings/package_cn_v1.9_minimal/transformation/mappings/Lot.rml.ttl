@@ -1423,7 +1423,7 @@ tedm:MG-FrameworkAgreementTerm-isSubjectToLotSpecificTerm-Lot_ND-LotTenderingPro
     rr:subjectMap
         [
             rdfs:label "ND-LotTenderingProcess";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_FrameworkAgreementTechnicalUsage_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rml:reference "if(exists(cac:ContractingSystem/cbc:ContractingSystemTypeCode[@listName='framework-agreement'])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_FrameworkAgreementTerm_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null";
             rr:class  epo:FrameworkAgreementTerm
         ] ;
     rr:predicateObjectMap
@@ -1489,7 +1489,7 @@ tedm:MG-FrameworkAgreementTerm-isSubjectToLotSpecificTerm-Lot_ND-FA a rr:Triples
     rr:subjectMap
         [
             rdfs:label "ND-FA";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_FrameworkAgreementTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rml:reference "if((exists(cbc:MaximumOperatorQuantity)) or(exists(cbc:Justification))) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_FrameworkAgreementTerm_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null";
             rr:class epo:FrameworkAgreementTerm
         ] ;
     rr:predicateObjectMap
@@ -1539,7 +1539,7 @@ tedm:MG-FrameworkAgreementTerm-isSubjectToLotSpecificTerm-Lot_ND-FABuyerCategori
     rr:subjectMap
         [
             rdfs:label "ND-FABuyerCategories";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_FrameworkAgreementTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
+            rml:reference "if(exists(cbc:Description)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_FrameworkAgreementTerm_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw') else null";
             rr:class epo:FrameworkAgreementTerm
         ] ;
     rr:predicateObjectMap

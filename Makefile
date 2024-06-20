@@ -84,9 +84,12 @@ package_cn_examples: package_sync
 	@ $(eval PKG_DIR := $(OUTPUT_DIR)/$(PKG_NAME))
 	@ $(eval PKG_TMP := tmp/$(PKG_NAME))
 	@ cp -rv mappings/$(MINIMAL_PACKAGE) $(PKG_DIR)
-	@ echo "Including SDK example data"
+	@ echo "Including CN SDK example data"
 	@ cp -rv $(SDK_DATA_DIR) $(PKG_DIR)/test_data
 	@ cp -rv $(SDK_DATA_DIR)_invalid $(PKG_DIR)/test_data
+	@ echo "Including CN OP test data"
+	@ cp -rv $(TEST_DATA_DIR)/op_test_cn_d2.1 $(PKG_DIR)/test_data
+	@ cp -rv $(TEST_DATA_DIR)/op_test_cn_gh_issues $(PKG_DIR)/test_data
 	@ echo "Removing large file cn_24_maximal_100_lots.xml"
 	@ find $(PKG_DIR) -name "cn_24_maximal_100_lots.xml" -exec rm -v {} \;
 	@ echo "Modifying Identifier in the CM and replacing XLSX"

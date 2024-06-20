@@ -45,9 +45,11 @@ package_sync:
 	@ cp -rv src/validation mappings/$(MINIMAL_PACKAGE)/
 ifeq ($(TRIM_DOWN_SHACL), 1)
 	@ echo "Modifying ePO SHACL file to suppress rdf:PlainLiteral violations"
-	@ sed -i 's/sh:datatype rdf:PlainLiteral/#sh:datatype rdf:PlainLiteral/' mappings/$(MINIMAL_PACKAGE)/$(SHACL_PATH_EPO)
-	@ echo "Modifying ePO SHACL file to subtitute at-voc constraint with IRI"
-	@ sed -i 's/sh:class at-voc:.*;/sh:nodeKind sh:IRI ;/' mappings/$(MINIMAL_PACKAGE)/$(SHACL_PATH_EPO)
+	@ sed -i 's/sh:datatype rdf:PlainLiteral/sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] )/' mappings/$(MINIMAL_PACKAGE)/$(SHACL_PATH_EPO)
+	@ echo "Modifying ePO SHACL file to substitute at-voc constraint with IRI"
+	@ sed -i 's/sh:class at-voc.*;/sh:nodeKind sh:IRI ;/' mappings/$(MINIMAL_PACKAGE)/$(SHACL_PATH_EPO)
+	@ sed -i 's/sh:class at-voc:environmental-impact,/sh:nodeKind sh:IRI ;/' mappings/$(MINIMAL_PACKAGE)/$(SHACL_PATH_EPO)
+	@ sed -i '/.*at-voc:green-public-procurement-criteria ;/d' mappings/$(MINIMAL_PACKAGE)/$(SHACL_PATH_EPO)
 endif
 
 reformat_package_cn:

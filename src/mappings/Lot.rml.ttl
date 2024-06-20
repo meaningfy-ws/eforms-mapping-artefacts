@@ -533,7 +533,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
     rr:predicateObjectMap
         [
             rdfs:label "BT-120-Lot";
-            rr:predicate epo:specifiesProcurementCriterion;
+            rr:predicate epo:isSubjectToLotSpecificTerm;
             rr:objectMap
                 [
                     rr:parentTriplesMap tedm:MG-MultipleStageProcedureTerm-isSubjectToLotSpecificTerm-Lot_ND-AwardingTerms;

@@ -828,6 +828,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_NonDisclosureAgreementTerm_TT87XZ7rf
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Notice a epo:CompetitionNotice, epo:Notice,
     epo:Notice16;
   epo:announcesLot epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
+  epo:announcesProcedure epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_MnX8qyREnFMNLeS5MJAX9K;
   epo:announcesRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AcquiringCentralPurchasingBody_TftBQ7CiqCcyirLAwhsyEn,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardingCentralPurchasingBody_U3RE4hoDTRa29J56Gmq3BL,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Buyer_MT3gdCnJ9BA7aEqaGqKxAh, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EmploymentInformationProvider_LynXyp22UHq9wSHKWpaZdf,
@@ -859,6 +860,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Notice a epo:CompetitionNotice, epo:
     <http://publications.europa.eu/resource/authority/language/ENG>;
   epo:hasPublicationDate "2023-11-07Z"^^xsd:date;
   epo:hasVersion "03";
+  epo:refersToLot epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
   epo:refersToPrevious epd:id_9c0fd704-64d3-4294-a3b6-6df45911ab9f-01_Notice;
   epo:refersToProcedure epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_MnX8qyREnFMNLeS5MJAX9K;
   adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_NoticeIdentifier_cMBzh6pL4JRkiaCd4DWjT2 .
@@ -1346,7 +1348,6 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_TT87XZ7rfCixVuS4Z9trM
   epo:isGuaranteeRequired true .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_daUDPcwCUoxbJRjGb7tKNQ
-  a epo:SubmissionTerm;
   epo:definesTenderProcessor epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderProcessor_TT87XZ7rfCixVuS4Z9trMH;
   epo:hasEAuctionURL "https://electronic-auction.com"^^xsd:anyURI;
   epo:hasECataloguePermission <http://publications.europa.eu/resource/authority/permission/allowed>;
@@ -1355,12 +1356,13 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_daUDPcwCUoxbJRjGb7tKN
   epo:hasLateSubmissionPermission <http://publications.europa.eu/resource/authority/missing-info-submission/late-all>;
   epo:hasReceiptParticipationRequestDeadline "2020-05-07T23:55:00+01:00"^^xsd:dateTime;
   epo:hasReceiptTenderDeadline "2023-05-22T20:59:32+01:00"^^xsd:dateTime;
-  epo:isMultipleTenderSubmissionAllowed true .
+  epo:isMultipleTenderSubmissionAllowed true;
+  a epo:SubmissionTerm .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TaxInformationProvider_UyJLB5UdNE5RM2ZpQVeTCV
+  a epo:TaxInformationProvider;
   epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001;
   epo:hasContactPointInRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0002;
-  a epo:TaxInformationProvider;
   epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_TPO-0002 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TaxInformationProvider_j5VcAZZjswFkX9mLn9opDA

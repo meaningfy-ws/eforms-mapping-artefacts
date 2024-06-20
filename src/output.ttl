@@ -1175,11 +1175,13 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Quantity_QRFEJSYy7fATJoZShoDC4D a ep
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewProcedureInformationProvider_FsymrRPQVzLm3zkbgk3JgA
   a epo:ReviewProcedureInformationProvider;
   epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
+  epo:hasContactPointInRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0001;
   epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_TPO-0001 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewProcedureInformationProvider_bMTjo7a5Ke582iB4TXZmU8
   a epo:ReviewProcedureInformationProvider;
   epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001;
+  epo:hasContactPointInRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0001;
   epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_TPO-0001 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_FsymrRPQVzLm3zkbgk3JgA a epo:ReviewTerm;
@@ -1355,9 +1357,9 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_daUDPcwCUoxbJRjGb7tKN
   epo:hasLateSubmissionInformationDescription "Later tender information description ---"@en;
   epo:hasLateSubmissionPermission <http://publications.europa.eu/resource/authority/missing-info-submission/late-all>;
   epo:hasReceiptParticipationRequestDeadline "2020-05-07T23:55:00+01:00"^^xsd:dateTime;
+  a epo:SubmissionTerm;
   epo:hasReceiptTenderDeadline "2023-05-22T20:59:32+01:00"^^xsd:dateTime;
-  epo:isMultipleTenderSubmissionAllowed true;
-  a epo:SubmissionTerm .
+  epo:isMultipleTenderSubmissionAllowed true .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TaxInformationProvider_UyJLB5UdNE5RM2ZpQVeTCV
   a epo:TaxInformationProvider;

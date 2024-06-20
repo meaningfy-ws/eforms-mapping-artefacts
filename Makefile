@@ -86,6 +86,7 @@ package_cn_examples: package_sync
 	@ cp -rv mappings/$(MINIMAL_PACKAGE) $(PKG_DIR)
 	@ echo "Including SDK example data"
 	@ cp -rv $(SDK_DATA_DIR) $(PKG_DIR)/test_data
+	@ cp -rv $(SDK_DATA_DIR)_invalid $(PKG_DIR)/test_data
 	@ echo "Removing large file cn_24_maximal_100_lots.xml"
 	@ find $(PKG_DIR) -name "cn_24_maximal_100_lots.xml" -exec rm -v {} \;
 	@ echo "Modifying Identifier in the CM and replacing XLSX"

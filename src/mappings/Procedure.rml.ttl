@@ -914,7 +914,12 @@ tedm:MG-MonetaryValue-hasEstimatedValue-Procedure_ND-ProcedureValueEstimate a rr
             rr:predicate epo:hasCurrency ;
             rr:objectMap
                 [
-                    rml:reference "cbc:EstimatedOverallContractAmount/@currencyID";
+                    rdfs:label "at-voc:currency" ;
+                    rr:parentTriplesMap tedm:currency ;
+                    rr:joinCondition [
+                        rr:child "cbc:EstimatedOverallContractAmount/@currencyID" ;
+                        rr:parent "code.value" ;
+                    ] ;
                 ] ;
         ]
 .
@@ -950,7 +955,12 @@ tedm:MG-MonetaryValue-hasLaunchFrameworkAgreementMaximumValue-Procedure_ND-Proce
             rr:predicate epo:hasCurrency ;
             rr:objectMap
                 [
-                    rml:reference "efbc:FrameworkMaximumAmount/@currencyID";
+                    rdfs:label "at-voc:currency" ;
+                    rr:parentTriplesMap tedm:currency ;
+                    rr:joinCondition [
+                        rr:child "efbc:FrameworkMaximumAmount/@currencyID" ;
+                        rr:parent "code.value" ;
+                    ] ;
                 ] ;
         ]
  .

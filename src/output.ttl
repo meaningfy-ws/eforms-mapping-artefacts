@@ -650,7 +650,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotPurpose_QRFEJSYy7fATJoZShoDC4D a 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotValueEstimateExtension_fhpEAkeAi2DhcGZP8Nqr2u
   a epo:MonetaryValue;
   epo:hasAmountValue 247547.0;
-  epo:hasCurrency "BSD" .
+  epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/BSD> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001 a epo:Lot;
   epo:foreseesContractSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_daUDPcwCUoxbJRjGb7tKNQ;
@@ -766,12 +766,12 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotsGroupIdentifier_246rmGzZvwFBcxRN
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotsGroupValueEstimateExtension_ZoH93rHLWdKDPCSNvWx8rE
   a epo:MonetaryValue;
   epo:hasAmountValue 247547.0;
-  epo:hasCurrency "BSD" .
+  epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/BSD> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotsGroupValueMaximum_gLuU9xVSAhVSewi2MZNMhW
   a epo:MonetaryValue;
   epo:hasAmountValue 10000.0;
-  epo:hasCurrency "EUR" .
+  epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Mediator_FsymrRPQVzLm3zkbgk3JgA a epo:Mediator;
   epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
@@ -784,17 +784,17 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Mediator_bMTjo7a5Ke582iB4TXZmU8 a ep
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValueLot_BaGzsXLuGR4tRgDAxRPwS8
   a epo:MonetaryValue;
   epo:hasAmountValue 9999999.99;
-  epo:hasCurrency "EUR" .
+  epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValueLot_WdC3kBS9amJ4en7K2hRKUQ
   a epo:MonetaryValue;
   epo:hasAmountValue 9999999.99;
-  epo:hasCurrency "EUR" .
+  epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValueLot_evidV3nok82ih2xWwJYg9n
   a epo:MonetaryValue;
   epo:hasAmountValue 9999999.99;
-  epo:hasCurrency "EUR" .
+  epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValue_W3WEhLqsTnuQGFepVs9sA7 a
     epo:MonetaryValue;
@@ -1055,7 +1055,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_TT87XZ7rfCixVuS4Z9trMH
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureValueEstimateExtension_9thMAaeveYJRewotgDGorG
   a epo:MonetaryValue;
   epo:hasAmountValue 247547.0;
-  epo:hasCurrency "BSD" .
+  epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/BSD> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_MnX8qyREnFMNLeS5MJAX9K a epo:Procedure;
   epo:foreseesContractSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_67o9ur9Jjef9htMoaQhdxm,
@@ -1162,7 +1162,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementServiceProvider_f7UuQ7S8i
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_PurposeLotGroupEstimatedValue_EgMjw2pg9jruQvYxRQ9GAr
   a epo:MonetaryValue;
   epo:hasAmountValue 9999999.99;
-  epo:hasCurrency "EUR" .
+  epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Quantity_BDTC4WRLKSCg4KipkdMxR8 a epo:Quantity;
   epo:hasQuantityValue 1000.0;
@@ -1222,7 +1222,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_2Y8NzdfvWC5GNYLbHsuq2F
     epo:SelectionCriterion;
   epo:hasConstraint epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_HUx9CExQBWkrce4vqV7Wkg,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_bBNJn8mrLioKfy7sx9PaWi;
-  epo:hasSelectionCriteriaUsage "used";
+  epo:hasSelectionCriteriaUsage <http://publications.europa.eu/resource/authority/usage/used>;
   epo:hasSelectionCriterionType <http://publications.europa.eu/resource/authority/selection-criterion/tp-abil>;
   epo:isUsedForCandidateRestriction true;
   dct:description "Selection Criteria Description ---"@en;
@@ -1232,7 +1232,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_9xGCswiFAKWwQgitqGWSQv
     epo:SelectionCriterion;
   epo:hasConstraint epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_S65zMGfHi8GrHsbz4tEFZJ,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_ZJQeB6XSAAiMd7wbsht64X;
-  epo:hasSelectionCriteriaUsage "used";
+  epo:hasSelectionCriteriaUsage <http://publications.europa.eu/resource/authority/usage/used>;
   epo:hasSelectionCriterionType <http://publications.europa.eu/resource/authority/selection-criterion/tp-abil>;
   epo:isUsedForCandidateRestriction true;
   dct:description "Selection Criteria Description ---"@en;
@@ -1242,7 +1242,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_Bkpcxn7EFoAsBBzSiUjcX2
     epo:SelectionCriterion;
   epo:hasConstraint epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_UboKtLfWMDPTeedX7G9Jj7,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_hpcDhFsANoBzRR9uDDJxnt;
-  epo:hasSelectionCriteriaUsage "used";
+  epo:hasSelectionCriteriaUsage <http://publications.europa.eu/resource/authority/usage/used>;
   epo:hasSelectionCriterionType <http://publications.europa.eu/resource/authority/selection-criterion/sui-act>;
   epo:isUsedForCandidateRestriction true;
   dct:description "Selection Criteria Description ---"@en;
@@ -1252,7 +1252,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_LPqCAx6u8AHZs68SmxnK7p
     epo:SelectionCriterion;
   epo:hasConstraint epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_ALkBdU6DUVGQjGaBxVKxrs,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_E9HbFRFmAYvtgELes4wHf2;
-  epo:hasSelectionCriteriaUsage "used";
+  epo:hasSelectionCriteriaUsage <http://publications.europa.eu/resource/authority/usage/used>;
   epo:hasSelectionCriterionType <http://publications.europa.eu/resource/authority/selection-criterion/ef-stand>;
   epo:isUsedForCandidateRestriction true;
   dct:description "Selection Criteria Description ---"@en;
@@ -1262,7 +1262,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_bxHGbwwHUP9MfJv6P8NaFL
     epo:SelectionCriterion;
   epo:hasConstraint epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_ncrUJebheR6Q2qJFiiVscf,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_nxePuFH9i25oYGdwmceAuJ;
-  epo:hasSelectionCriteriaUsage "used";
+  epo:hasSelectionCriteriaUsage <http://publications.europa.eu/resource/authority/usage/used>;
   epo:hasSelectionCriterionType <http://publications.europa.eu/resource/authority/selection-criterion/ef-stand>;
   epo:isUsedForCandidateRestriction true;
   dct:description "Selection Criteria Description ---"@en;
@@ -1272,7 +1272,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_j76qWqsuJdCtjNmRv3MK5T
     epo:SelectionCriterion;
   epo:hasConstraint epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_LKeBCmZMuGEzgAFGuK3tmF,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_mrZZo6ZRTw7EZzqh2Xn6xa;
-  epo:hasSelectionCriteriaUsage "used";
+  epo:hasSelectionCriteriaUsage <http://publications.europa.eu/resource/authority/usage/used>;
   epo:hasSelectionCriterionType <http://publications.europa.eu/resource/authority/selection-criterion/sui-act>;
   epo:isUsedForCandidateRestriction true;
   dct:description "Selection Criteria Description ---"@en;

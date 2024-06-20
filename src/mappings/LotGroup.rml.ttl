@@ -325,8 +325,12 @@ tedm:MG-MonetaryValue-hasEstimatedValue-LotGroup_ND-LotsGroupValueEstimate  a rr
             rr:predicate epo:hasCurrency ;
             rr:objectMap
                 [
-                    rml:reference "cbc:EstimatedOverallContractAmount/@currencyID";
-                    rr:datatype xsd:string;
+                    rdfs:label "at-voc:currency" ;
+                    rr:parentTriplesMap tedm:currency ;
+                    rr:joinCondition [
+                        rr:child "cbc:EstimatedOverallContractAmount/@currencyID" ;
+                        rr:parent "code.value" ;
+                    ] ;
                 ] ;
         ]
 .
@@ -362,7 +366,12 @@ tedm:MG-MonetaryValue-hasLaunchFrameworkAgreementMaximumValue-LotGroup_ND-LotsGr
             rr:predicate epo:hasCurrency ;
             rr:objectMap
                 [
-                    rml:reference "efbc:FrameworkMaximumAmount/@currencyID";
+                    rdfs:label "at-voc:currency" ;
+                    rr:parentTriplesMap tedm:currency ;
+                    rr:joinCondition [
+                        rr:child "efbc:FrameworkMaximumAmount/@currencyID" ;
+                        rr:parent "code.value" ;
+                    ] ;
                 ] ;
         ]
 .
@@ -399,7 +408,12 @@ tedm:MG-MonetaryValue-hasLaunchFrameworkAgreementMaximumValue-LotGroup_ND-LotsGr
             rr:predicate epo:hasCurrency ;
             rr:objectMap
                 [
-                    rml:reference "cbc:EstimatedMaximumValueAmount/@currencyID";
+                    rdfs:label "at-voc:currency" ;
+                    rr:parentTriplesMap tedm:currency ;
+                    rr:joinCondition [
+                        rr:child "cbc:EstimatedMaximumValueAmount/@currencyID" ;
+                        rr:parent "code.value" ;
+                    ] ;
                 ] ;
         ]
 .

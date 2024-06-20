@@ -864,7 +864,7 @@ tedm:MG-Lot_ND-Lot a rr:TriplesMap ;
                     rr:parentTriplesMap tedm:MG-Purpose-hasPurpose-Lot_ND-LotAdditionalClassification ;
                     rr:joinCondition [
                        rr:child "path(.)";
-                         rr:parent "path(../..)";
+                       rr:parent "path(..)";
                     ];
                 ] ;
         ] ;
@@ -1016,7 +1016,7 @@ tedm:MG-Lot_ND-LotProcurementScope a rr:TriplesMap ;
                     rr:parentTriplesMap tedm:MG-Purpose-hasPurpose-Lot_ND-LotMainClassification;
                     rr:joinCondition [
                         rr:child "path(.)";
-                        rr:parent "path(../../../..)";
+                        rr:parent "path(..)";
                     ];
                 ] ;
         ];

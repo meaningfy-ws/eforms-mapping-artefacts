@@ -2150,7 +2150,13 @@ tedm:MG-SelectionCriterion-specifiesProcurementCriterion-Lot_ND-SelectionCriteri
             rr:predicate epo:hasSelectionCriteriaUsage ;
             rr:objectMap
                 [
-                    rml:reference "cbc:CalculationExpressionCode[@listName='usage']";
+#                    rml:reference "cbc:CalculationExpressionCode[@listName='usage']";
+                    rdfs:label ":at-voc:usage" ;
+                    rr:parentTriplesMap tedm:usage ;
+                    rr:joinCondition [
+                        rr:child "cbc:CalculationExpressionCode[@listName='usage']" ;
+                        rr:parent "code.value" ;
+                    ] ;
                 ] ;
         ] ;
     rr:predicateObjectMap
@@ -4250,7 +4256,12 @@ tedm:MG-MonetaryValue-hasEstimatedValue-Lot_ND-LotValueEstimate a rr:TriplesMap 
             rr:predicate epo:hasCurrency ;
             rr:objectMap
                 [
-                    rml:reference "cbc:EstimatedOverallContractAmount/@currencyID";
+                    rdfs:label "at-voc:currency" ;
+                    rr:parentTriplesMap tedm:currency ;
+                    rr:joinCondition [
+                        rr:child "cbc:EstimatedOverallContractAmount/@currencyID" ;
+                        rr:parent "code.value" ;
+                    ] ;
                 ] ;
         ]
 .
@@ -4978,7 +4989,12 @@ tedm:MG-MonetaryValue-hasLaunchFrameworkAgreementMaximumValue-Lot_ND-LotValueEst
             rr:predicate epo:hasCurrency ;
             rr:objectMap
                 [
-                    rml:reference "efbc:FrameworkMaximumAmount/@currencyID";
+                    rdfs:label "at-voc:currency" ;
+                    rr:parentTriplesMap tedm:currency ;
+                    rr:joinCondition [
+                        rr:child "efbc:FrameworkMaximumAmount/@currencyID" ;
+                        rr:parent "code.value" ;
+                    ] ;
                 ] ;
         ]
 .

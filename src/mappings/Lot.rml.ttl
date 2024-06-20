@@ -1180,7 +1180,7 @@ tedm:MG-PlanningNotice-refersToPrevious-Notice_ND-LotPreviousPlanning a rr:Tripl
             rdfs:label "ND-LotPreviousPlanning";
             # we use the ID at this level to create an IRI with the pattern of a Notice
             rml:reference "if (exists(cbc:ID)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(cbc:ID, ' ', '-' ), '/' , '-') || '_Notice' else null" ;
-            rr:class epo:PlanningNotice
+            rr:class epo-not:PlanningNotice
         ] ;
     rr:predicateObjectMap
         [

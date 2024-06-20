@@ -489,7 +489,7 @@ tedm:MG-AwardCriterion-specifiesProcurementCriterion-LotGroup_ND-LotsGroupAwardF
     rr:subjectMap
         [
             rdfs:label  "ND-LotsGroupAwardCriterion";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_LotGroupAwardCriterion_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_LotGroupAwardCriterion_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(../../../../..)) || '?response_type=raw')}" ;
             rr:class epo:AwardCriterion
         ] ;
     rr:predicateObjectMap
@@ -537,7 +537,7 @@ tedm:MG-AwardCriterion-specifiesProcurementCriterion-LotGroup_ND-LotsGroupAwardW
     rr:subjectMap
         [
             rdfs:label  "ND-LotsGroupAwardCriterion";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_LotGroupAwardCriterion_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_LotGroupAwardCriterion_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(../../../../..)) || '?response_type=raw')}" ;
             rr:class epo:AwardCriterion
         ] ;
     rr:predicateObjectMap
@@ -582,7 +582,7 @@ tedm:MG-Constraint-hasConstraint-AwardCriterion-specifiesProcurementCriterion-Lo
     rr:subjectMap
         [
             rdfs:label "ND-LotsGroupAwardThresholdCriterionParameter";
-            rml:reference "if (exists(efbc:ParameterCode[@listName='number-threshold'])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_LotGroupConstraint_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
+            rml:reference "if (exists(efbc:ParameterCode[@listName='number-threshold'])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_LotGroupConstraint_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(../../../../..)) || '?response_type=raw') else null" ;
             rr:class cccev:Constraint
         ] ;
     rr:predicateObjectMap

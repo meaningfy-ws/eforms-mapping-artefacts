@@ -70,37 +70,35 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AuctionTerms_fEtfKJVcbukziY28mGZdui 
   epo:hasUsage <http://publications.europa.eu/resource/authority/usage/used>;
   dct:description "Electronic auction description ---"@en .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_4cgbfPEuSgC4MeB6X9HTss
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_39TpnFPzm9mQHb8KWyccgF
   a epo:AwardCriterion;
-  epo:hasAwardCriterionType <http://publications.europa.eu/resource/authority/award-criterion-type/cost>,
-    <http://publications.europa.eu/resource/authority/award-criterion-type/quality>;
+  epo:hasAwardCriterionType <http://publications.europa.eu/resource/authority/award-criterion-type/cost>;
+  epo:hasWeightValueType <http://publications.europa.eu/resource/authority/number-weight/per-exa>;
+  cccev:weight 60.0;
   dct:description "AC Description ---"@en;
   skos:prefLabel "Name of AC ---"@en .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_97HxGZ4fzH7Eko9fChnkRN
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_Ee3JXqpmik8eG35Uay4dJk
   a epo:AwardCriterion;
+  epo:hasAwardCriterionType <http://publications.europa.eu/resource/authority/award-criterion-type/cost>;
   epo:hasWeightValueType <http://publications.europa.eu/resource/authority/number-weight/per-exa>;
-  cccev:weight 60.0 .
+  cccev:weight 60.0;
+  dct:description "AC Description ---"@en;
+  skos:prefLabel "Name of AC ---"@en .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_RtqRrBZ3dxX7mYeZep98iG
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_JXVZRgb5g8CzzdmWDdr5QZ
   a epo:AwardCriterion;
+  epo:hasAwardCriterionType <http://publications.europa.eu/resource/authority/award-criterion-type/quality>;
   epo:hasWeightValueType <http://publications.europa.eu/resource/authority/number-weight/per-exa>;
-  cccev:weight 60.0 .
+  cccev:weight 40.0;
+  dct:description "AC Description ---"@en;
+  skos:prefLabel "Name of AC ---"@en .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_W4UrXsPnHKbLazLXVF3G5c
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_QaDZD9SvbXf8nLh2wqBGkh
   a epo:AwardCriterion;
+  epo:hasAwardCriterionType <http://publications.europa.eu/resource/authority/award-criterion-type/quality>;
   epo:hasWeightValueType <http://publications.europa.eu/resource/authority/number-weight/per-exa>;
-  cccev:weight 40.0 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_X2bXeDWsNBm6LwVnXR8H5n
-  a epo:AwardCriterion;
-  epo:hasWeightValueType <http://publications.europa.eu/resource/authority/number-weight/per-exa>;
-  cccev:weight 40.0 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_cvGnw3hJYztkzCgnhrJDWV
-  a epo:AwardCriterion;
-  epo:hasAwardCriterionType <http://publications.europa.eu/resource/authority/award-criterion-type/cost>,
-    <http://publications.europa.eu/resource/authority/award-criterion-type/quality>;
+  cccev:weight 40.0;
   dct:description "AC Description ---"@en;
   skos:prefLabel "Name of AC ---"@en .
 
@@ -588,29 +586,20 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotFund_UQnAwfk3ERwvnj7e2sbo39 a epo
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroupAwardCriterion_83TR8A3HiWh9GmZEyyQGjQ
   a epo:AwardCriterion;
   epo:hasAwardCriterionType <http://publications.europa.eu/resource/authority/award-criterion-type/quality>;
+  epo:hasWeightValueType <http://publications.europa.eu/resource/authority/number-weight/per-exa>;
+  cccev:weight 40.0;
   dct:description "AC Description ---"@en;
   skos:prefLabel "Name of AC ---"@en .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroupAwardCriterion_AdQ99ZtFwmVjXcjtXZ5Ltw
-  a epo:AwardCriterion;
-  epo:hasWeightValueType <http://publications.europa.eu/resource/authority/number-weight/per-exa>;
-  cccev:weight 60.0 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroupAwardCriterion_L4DUqwYp7JsgSHbLPpDQRo
-  a epo:AwardCriterion;
-  epo:hasWeightValueType <http://publications.europa.eu/resource/authority/number-weight/per-exa>;
-  cccev:weight 40.0 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroupAwardCriterion_MGJNUreXVLg5AkPswtTpQ5
   a epo:AwardCriterion;
   epo:hasAwardCriterionType <http://publications.europa.eu/resource/authority/award-criterion-type/cost>;
+  epo:hasFixedValue 50.0;
+  epo:hasFixedValueType <http://publications.europa.eu/resource/authority/number-fixed/fix-tot>;
+  epo:hasWeightValueType <http://publications.europa.eu/resource/authority/number-weight/per-exa>;
+  cccev:weight 60.0;
   dct:description "AC Description ---"@en;
   skos:prefLabel "name of AC ---"@en .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroupAwardCriterion_dXdRqwiJyHFjLS6PNTp9cJ
-  a epo:AwardCriterion;
-  epo:hasFixedValue 50.0;
-  epo:hasFixedValueType <http://publications.europa.eu/resource/authority/number-fixed/fix-tot> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroup_GLO-0001 a epo:LotGroup;
   epo:hasEstimatedValue epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_PurposeLotGroupEstimatedValue_EgMjw2pg9jruQvYxRQ9GAr;
@@ -620,10 +609,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroup_GLO-0001 a epo:LotGroup;
   epo:setsGroupingContextForLot epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
   epo:specifiesProcurementCriterion epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroupAwardCriterion_83TR8A3HiWh9GmZEyyQGjQ,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroupAwardCriterion_AdQ99ZtFwmVjXcjtXZ5Ltw,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroupAwardCriterion_L4DUqwYp7JsgSHbLPpDQRo,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroupAwardCriterion_MGJNUreXVLg5AkPswtTpQ5,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroupAwardCriterion_dXdRqwiJyHFjLS6PNTp9cJ;
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroupAwardCriterion_MGJNUreXVLg5AkPswtTpQ5;
   dct:description "Description ---"@en;
   dct:title "Title ---"@en;
   adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotsGroupIdentifier_246rmGzZvwFBcxRNZTXjTW .
@@ -690,9 +676,8 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001 a epo:Lot;
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_bMTjo7a5Ke582iB4TXZmU8, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SecurityClearanceTerm_TT87XZ7rfCixVuS4Z9trMH,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_TT87XZ7rfCixVuS4Z9trMH,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_daUDPcwCUoxbJRjGb7tKNQ;
-  epo:specifiesProcurementCriterion epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_4cgbfPEuSgC4MeB6X9HTss,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_RtqRrBZ3dxX7mYeZep98iG,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_W4UrXsPnHKbLazLXVF3G5c,
+  epo:specifiesProcurementCriterion epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_Ee3JXqpmik8eG35Uay4dJk,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_QaDZD9SvbXf8nLh2wqBGkh,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_65B5ieqPopJApHPkYdhiAi,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_BpL5yyeW3cMvEHbh6b4ScW,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_LGVLo87ArD4HobVYoAGR5B,
@@ -746,9 +731,8 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002 a epo:Lot;
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_28qA6sXPPZP6NSvA8FovHj,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_8y8GPfmPvSRdBcci6WWcSi,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_PuAZ93vcjRYhKiN4rMvUZg;
-  epo:specifiesProcurementCriterion epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_97HxGZ4fzH7Eko9fChnkRN,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_X2bXeDWsNBm6LwVnXR8H5n,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_cvGnw3hJYztkzCgnhrJDWV,
+  epo:specifiesProcurementCriterion epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_39TpnFPzm9mQHb8KWyccgF,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_JXVZRgb5g8CzzdmWDdr5QZ,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_65B5ieqPopJApHPkYdhiAi,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_BpL5yyeW3cMvEHbh6b4ScW,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_LGVLo87ArD4HobVYoAGR5B,
@@ -1364,21 +1348,21 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_TT87XZ7rfCixVuS4Z9trM
   epo:isGuaranteeRequired true .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_daUDPcwCUoxbJRjGb7tKNQ
+  a epo:SubmissionTerm;
   epo:definesTenderProcessor epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderProcessor_TT87XZ7rfCixVuS4Z9trMH;
   epo:hasEAuctionURL "https://electronic-auction.com"^^xsd:anyURI;
   epo:hasECataloguePermission <http://publications.europa.eu/resource/authority/permission/allowed>;
   epo:hasESubmissionPermission <http://publications.europa.eu/resource/authority/permission/required>;
   epo:hasLateSubmissionInformationDescription "Later tender information description ---"@en;
   epo:hasLateSubmissionPermission <http://publications.europa.eu/resource/authority/missing-info-submission/late-all>;
-  a epo:SubmissionTerm;
   epo:hasReceiptParticipationRequestDeadline "2020-05-07T23:55:00+01:00"^^xsd:dateTime;
   epo:hasReceiptTenderDeadline "2023-05-22T20:59:32+01:00"^^xsd:dateTime;
   epo:isMultipleTenderSubmissionAllowed true .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TaxInformationProvider_UyJLB5UdNE5RM2ZpQVeTCV
-  a epo:TaxInformationProvider;
   epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001;
   epo:hasContactPointInRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0002;
+  a epo:TaxInformationProvider;
   epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_TPO-0002 .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TaxInformationProvider_j5VcAZZjswFkX9mLn9opDA

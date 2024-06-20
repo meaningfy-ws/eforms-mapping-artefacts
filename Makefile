@@ -13,7 +13,8 @@ XLSX_STRDATA = xl/sharedStrings.xml
 DEFAULT_CM_ID = package_eforms_10-24_v1.9
 TRIM_DOWN_SHACL = 1
 EXCLUDE_INEFFICIENT_VALIDATIONS = 1
-INCLUDE_RANDOM_SAMPLES = 0
+INCLUDE_RANDOM_SAMPLES = 1
+EXCLUDE_PROBLEM_SAMPLES = 1
 
 CANONICAL_TEST_OUTPUT = src/output.ttl
 CANONICAL_RML_DIR = src/mappings
@@ -119,8 +120,13 @@ package_cn_samples: package_sync
 	@ mkdir -p $(PKG_DIR)/$(SAMPLES_CN_DIR)
 	@ find $(SAMPLES_CN_DIR)/$(SDK_NAME)-$(DEFAULT_SDK_VERSION)/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_CN_DIR) \;
 ifeq ($(INCLUDE_RANDOM_SAMPLES), 1)
+	@ echo "Including random sampling data"
 	@ mkdir -p $(PKG_DIR)/$(SAMPLES_RANDOM_DIR)
 	@ find $(SAMPLES_RANDOM_DIR)/eforms_sdk_v$(DEFAULT_SDK_VERSION)/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_RANDOM_DIR) \;
+endif
+ifeq ($(EXCLUDE_PROBLEM_SAMPLES), 1)
+	@ echo "Removing problematic random sample notice 665610-2023"
+	@ find $(PKG_DIR)/$(SAMPLES_RANDOM_DIR) -name 665610-2023.xml -exec rm -fv {} \;
 endif
 	@ echo "Removing any SDK examples"
 	@ rm -rfv $(PKG_DIR)/$(SDK_DATA_DIR)
@@ -147,14 +153,23 @@ package_cn_maximal: package_sync
 	@ $(eval PKG_DIR := $(OUTPUT_DIR)/$(PKG_NAME))
 	@ $(eval PKG_TMP := tmp/$(PKG_NAME))
 	@ cp -rv mappings/$(MINIMAL_PACKAGE) $(PKG_DIR)
-	@ echo "Including SDK example data"
+	@ echo "Including CN SDK example data"
 	@ cp -rv $(SDK_DATA_DIR) $(PKG_DIR)/test_data
+	@ cp -rv $(SDK_DATA_DIR)_invalid $(PKG_DIR)/test_data
+	@ echo "Including CN OP test data"
+	@ cp -rv $(TEST_DATA_DIR)/op_test_cn_d2.1 $(PKG_DIR)/test_data
+	@ cp -rv $(TEST_DATA_DIR)/op_test_cn_gh_issues $(PKG_DIR)/test_data
 	@ echo "Including EF10-24 sample data"
 	@ mkdir -p $(PKG_DIR)/$(SAMPLES_CN_DIR)
 	@ find $(SAMPLES_CN_DIR)/$(SDK_NAME)-$(DEFAULT_SDK_VERSION)/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_CN_DIR) \;
 ifeq ($(INCLUDE_RANDOM_SAMPLES), 1)
+	@ echo "Including random sampling data"
 	@ mkdir -p $(PKG_DIR)/$(SAMPLES_RANDOM_DIR)
 	@ find $(SAMPLES_RANDOM_DIR)/eforms_sdk_v$(DEFAULT_SDK_VERSION)/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_RANDOM_DIR) \;
+endif
+ifeq ($(EXCLUDE_PROBLEM_SAMPLES), 1)
+	@ echo "Removing problematic random sample notice 665610-2023"
+	@ find $(PKG_DIR)/$(SAMPLES_RANDOM_DIR) -name 665610-2023.xml -exec rm -fv {} \;
 endif
 	@ echo "Removing outdated metadata"
 	@ rm -fv $(PKG_DIR)/metadata.json

@@ -190,6 +190,20 @@ tedm:MG-ResultNotice_ND-NoticeResult a rr:TriplesMap ;
                     ];
                 ] ;
         ]   ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "OPT-210-Tenderer" ;
+            rdfs:comment "TenderingPartyID of MG-Tenderer under ND-TenderingParty" ;
+            rr:predicate  epo::announcesRole   ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap  tedm:MG-Tenderer-announcesRole-ResultNotice_ND-TenderingParty;
+                    rr:joinCondition [
+                        rr:child "path(.)";
+                        rr:parent "path(..)";
+                    ];
+                ] ;
+        ] ;
 .
 
 tedm:MG-Notice_ND-Root
@@ -708,6 +722,7 @@ tedm:MG-LotGroupAwardInformation-announcesLotGroupAwardInformation-ResultNotice_
             rr:class epo:LotGroupAwardInformation
         ] ;
 .
+
 
 
 ##--- Function Parameters ---

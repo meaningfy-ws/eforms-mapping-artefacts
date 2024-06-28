@@ -257,7 +257,6 @@ epd:id_27f7b908-0974-4001-b7de-13bce42fd695_Lot_LOT-0001 a epo:Lot;
     epd:id_27f7b908-0974-4001-b7de-13bce42fd695_ExclusionGround_gsqwnkSxN5gKbqYWRFqTmc,
     epd:id_27f7b908-0974-4001-b7de-13bce42fd695_ExclusionGround_hqawu5kJC8i3dxZ99zexxB,
     epd:id_27f7b908-0974-4001-b7de-13bce42fd695_ParticipationCondition_Wbukq4uv37BmR2FRZxpHbN,
-    epd:id_27f7b908-0974-4001-b7de-13bce42fd695_ProcurementCriterion_246rmGzZvwFBcxRNZTXjTW,
     epd:id_27f7b908-0974-4001-b7de-13bce42fd695_SelectionTerm_F2EkrTHhwGTB3ZRA69q4nd;
   epo:usesTechnique epd:id_27f7b908-0974-4001-b7de-13bce42fd695_AuctionTerms_Y7WNjU2HSM4HNny2xZsabR,
     epd:id_27f7b908-0974-4001-b7de-13bce42fd695_DynamicPurchaseSystemTechnicalUsage_bq3rWUnhLReULR3Pe8QxDZ;
@@ -290,7 +289,6 @@ epd:id_27f7b908-0974-4001-b7de-13bce42fd695_Lot_LOT-0002 a epo:Lot;
     epd:id_27f7b908-0974-4001-b7de-13bce42fd695_ExclusionGround_gsqwnkSxN5gKbqYWRFqTmc,
     epd:id_27f7b908-0974-4001-b7de-13bce42fd695_ExclusionGround_hqawu5kJC8i3dxZ99zexxB,
     epd:id_27f7b908-0974-4001-b7de-13bce42fd695_ParticipationCondition_LRt2DdjrrLdsYp7yMz2y3n,
-    epd:id_27f7b908-0974-4001-b7de-13bce42fd695_ProcurementCriterion_daUDPcwCUoxbJRjGb7tKNQ,
     epd:id_27f7b908-0974-4001-b7de-13bce42fd695_SelectionTerm_Bkpcxn7EFoAsBBzSiUjcX2;
   epo:usesTechnique epd:id_27f7b908-0974-4001-b7de-13bce42fd695_AuctionTerms_fEtfKJVcbukziY28mGZdui,
     epd:id_27f7b908-0974-4001-b7de-13bce42fd695_DynamicPurchaseSystemTechnicalUsage_4qCitbxYVRfdbqxnYtJTZF;
@@ -399,12 +397,6 @@ epd:id_27f7b908-0974-4001-b7de-13bce42fd695_Procedure_MnX8qyREnFMNLeS5MJAX9K a e
   dct:description "Przedmiotem  zamówienia  jest  dostawa energii elektrycznej dla budynków IRZiBŻ PAN w Olsztynie przy ul. Tuwima 10, przy ul. Bydgoskiej 7 ( część I) oraz ośmiu miejsc poboru w Oddziale w Popielnie (część II).  Dostawa  energii  elektrycznej  musi  odbywać się zgodnie  z  przepisami ustawy  z  dnia  10  kwietnia  1997  r.  Prawo  Energetyczne  (t.j. Dz. U. z 2022 r. poz. 1385 z późn. zm)  oraz  aktów wykonawczych do ustawy. Postępowanie zostało podzielone na dwie części. Zamawiający dopuszcza w postępowaniu składanie ofert częściowych.  "@pl;
   dct:title "Dostawa energii elektrycznej dla budynków IRZiBŻ PAN w Olsztynie przy ul. Tuwima 10, przy ul. Bydgoskiej 7 oraz ośmiu miejsc poboru w Oddziale w Popielnie"@pl;
   adms:identifier epd:id_27f7b908-0974-4001-b7de-13bce42fd695_ProcedureIdentifier_MnX8qyREnFMNLeS5MJAX9K .
-
-epd:id_27f7b908-0974-4001-b7de-13bce42fd695_ProcurementCriterion_246rmGzZvwFBcxRNZTXjTW
-  a epo:ProcurementCriterion .
-
-epd:id_27f7b908-0974-4001-b7de-13bce42fd695_ProcurementCriterion_daUDPcwCUoxbJRjGb7tKNQ
-  a epo:ProcurementCriterion .
 
 epd:id_27f7b908-0974-4001-b7de-13bce42fd695_ProcurementDocument_A3HpgnSgKFXuKwBgEzM5Zb
   a epo:ProcurementDocument;

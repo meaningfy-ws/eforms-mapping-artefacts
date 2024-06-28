@@ -33,7 +33,7 @@ ver_between() {
 }
 
 # Define the source directory (replace with your actual path)
-source_dir="mappings"
+source_dir="mappings-versioned"
 
 # Define the target directory prefix (no trailing slash)
 target_dir_prefix="mappings"

@@ -259,3 +259,4 @@ clean:
 	@ rm -fv jena.zip
 	@ rm -rfv output
 	@ rm -rfv tmp
+	@ rm -rfv src/mappings-1*

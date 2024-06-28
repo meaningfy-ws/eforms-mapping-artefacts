@@ -396,7 +396,7 @@ tedm:MG-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-LotDistribut
         ] ;
     rr:predicateObjectMap
         [
-            # TODO min SDK 1.3 max SDK 1.5.12
+            # min SDK 1.3 max SDK 1.5.12 type was broader 'number'; data and xsd type still compatible
             rdfs:label "BT-31-Procedure";
             rdfs:comment "Lots Max Allowed of MG-ProcedureTerm under ND-LotDistribution";
             rr:predicate epo:hasMaximumLotSubmissionAllowed ;
@@ -409,7 +409,7 @@ tedm:MG-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-LotDistribut
         ] ;
     rr:predicateObjectMap
         [
-            # TODO min SDK 1.3 max SDK 1.5.12
+            # min SDK 1.3 max SDK 1.5.12 type was broader 'number'; data and xsd type still compatible
             rdfs:label "BT-33-Procedure";
             rdfs:comment "Lots Max Awarded of MG-ProcedureTerm under ND-LotDistribution";
             rr:predicate epo:hasMaximumNumberOfLotsToBeAwarded ;

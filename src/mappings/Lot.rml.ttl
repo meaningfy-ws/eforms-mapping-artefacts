@@ -4849,8 +4849,7 @@ tedm:MG-Period-definesContractPeriod-ContractTerm-foreseesContractSpecificTerm-L
         ];
     rr:predicateObjectMap
         [
-            # TODO test source
-            # TODO min SDK 1.3 max SDK 1.7
+            # min SDK 1.3 max SDK 1.7 no mapping-relevant changes
             rdfs:label "BT-538-Lot";
             rdfs:comment "Duration Other of MG-SpecificDuration under ND-LotDuration";
             rr:predicate  epo:hasTimePeriod;
@@ -4905,7 +4904,7 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-Lot_ND-OptionsAndRenewals a rr
         ] ;
     rr:predicateObjectMap
         [
-            # TODO min SDK 1.3 max SDK 1.7
+            # min SDK 1.3 max SDK 1.7 no mapping-relevant changes
             rdfs:label "BT-58-Lot";
             rdfs:comment "Renewal Maximum of MG-ContractTerm under ND-OptionsAndRenewals";
             rr:predicate epo:hasMaximumNumberOfRenewals ;

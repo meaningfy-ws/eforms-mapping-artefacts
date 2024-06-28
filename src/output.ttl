@@ -123,16 +123,9 @@ epd:id_27f7b908-0974-4001-b7de-13bce42fd695_ContractLocation_btiykpkF9yYEWFnDmvR
   epo:hasNutsCode <http://data.europa.eu/nuts/code/PL622>;
   locn:address epd:id_27f7b908-0974-4001-b7de-13bce42fd695_ProcedurePlacePerformance_btiykpkF9yYEWFnDmvRf6a .
 
-epd:id_27f7b908-0974-4001-b7de-13bce42fd695_ContractPeriod_DW9uu9Ka9v6eCrwhU9MmBC
-  a epo:Period .
-
-epd:id_27f7b908-0974-4001-b7de-13bce42fd695_ContractPeriod_JNctcsx6JXdNkzdL4P6dek
-  a epo:Period .
-
 epd:id_27f7b908-0974-4001-b7de-13bce42fd695_ContractTerm_246rmGzZvwFBcxRNZTXjTW a
     epo:ContractTerm;
   epo:definesContractDuration epd:id_27f7b908-0974-4001-b7de-13bce42fd695_ContractDuration_DW9uu9Ka9v6eCrwhU9MmBC;
-  epo:definesContractPeriod epd:id_27f7b908-0974-4001-b7de-13bce42fd695_ContractPeriod_DW9uu9Ka9v6eCrwhU9MmBC;
   epo:definesSpecificPlaceOfPerformance epd:id_27f7b908-0974-4001-b7de-13bce42fd695_ContractLocation_6KLSiuR7u4upEUz8ykdzrc;
   epo:hasContractNatureType <http://publications.europa.eu/resource/authority/contract-nature/supplies>;
   epo:hasEInvoicingPermission <http://publications.europa.eu/resource/authority/permission/allowed>;
@@ -144,7 +137,6 @@ epd:id_27f7b908-0974-4001-b7de-13bce42fd695_ContractTerm_246rmGzZvwFBcxRNZTXjTW 
 epd:id_27f7b908-0974-4001-b7de-13bce42fd695_ContractTerm_daUDPcwCUoxbJRjGb7tKNQ a
     epo:ContractTerm;
   epo:definesContractDuration epd:id_27f7b908-0974-4001-b7de-13bce42fd695_ContractDuration_JNctcsx6JXdNkzdL4P6dek;
-  epo:definesContractPeriod epd:id_27f7b908-0974-4001-b7de-13bce42fd695_ContractPeriod_JNctcsx6JXdNkzdL4P6dek;
   epo:definesSpecificPlaceOfPerformance epd:id_27f7b908-0974-4001-b7de-13bce42fd695_ContractLocation_TfeqsbtZz7bnSaeLJEmaKZ;
   epo:hasContractNatureType <http://publications.europa.eu/resource/authority/contract-nature/supplies>;
   epo:hasEInvoicingPermission <http://publications.europa.eu/resource/authority/permission/allowed>;

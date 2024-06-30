@@ -367,12 +367,6 @@ epd:id_27f7b908-0974-4001-b7de-13bce42fd695_ProcedurePurpose_eySzap22e3jkZr3f7VX
   a epo:Purpose;
   epo:hasMainClassification <http://data.europa.eu/cpv/cpv/09310000> .
 
-epd:id_27f7b908-0974-4001-b7de-13bce42fd695_ProcedureTerm_TT87XZ7rfCixVuS4Z9trMH a
-    epo:ProcedureTerm .
-
-epd:id_27f7b908-0974-4001-b7de-13bce42fd695_ProcedureTerm_YWMCGu6i5HBxweh3xaUekn a
-    epo:ProcedureTerm .
-
 epd:id_27f7b908-0974-4001-b7de-13bce42fd695_Procedure_MnX8qyREnFMNLeS5MJAX9K a epo:Procedure;
   epo:foreseesContractSpecificTerm epd:id_27f7b908-0974-4001-b7de-13bce42fd695_ProcurementProjectContractTerm_QmFgWdHMQiunuxrdtntYZx,
     epd:id_27f7b908-0974-4001-b7de-13bce42fd695_ProcurementProjectContractTerm_eySzap22e3jkZr3f7VXYNj;
@@ -382,8 +376,6 @@ epd:id_27f7b908-0974-4001-b7de-13bce42fd695_Procedure_MnX8qyREnFMNLeS5MJAX9K a e
   epo:hasProcurementScopeDividedIntoLot epd:id_27f7b908-0974-4001-b7de-13bce42fd695_Lot_LOT-0001,
     epd:id_27f7b908-0974-4001-b7de-13bce42fd695_Lot_LOT-0002;
   epo:hasPurpose epd:id_27f7b908-0974-4001-b7de-13bce42fd695_ProcedurePurpose_eySzap22e3jkZr3f7VXYNj;
-  epo:isSubjectToProcedureSpecificTerm epd:id_27f7b908-0974-4001-b7de-13bce42fd695_ProcedureTerm_TT87XZ7rfCixVuS4Z9trMH,
-    epd:id_27f7b908-0974-4001-b7de-13bce42fd695_ProcedureTerm_YWMCGu6i5HBxweh3xaUekn;
   dct:description "Przedmiotem  zamówienia  jest  dostawa energii elektrycznej dla budynków IRZiBŻ PAN w Olsztynie przy ul. Tuwima 10, przy ul. Bydgoskiej 7 ( część I) oraz ośmiu miejsc poboru w Oddziale w Popielnie (część II).  Dostawa  energii  elektrycznej  musi  odbywać się zgodnie  z  przepisami ustawy  z  dnia  10  kwietnia  1997  r.  Prawo  Energetyczne  (t.j. Dz. U. z 2022 r. poz. 1385 z późn. zm)  oraz  aktów wykonawczych do ustawy. Postępowanie zostało podzielone na dwie części. Zamawiający dopuszcza w postępowaniu składanie ofert częściowych.  "@pl;
   dct:title "Dostawa energii elektrycznej dla budynków IRZiBŻ PAN w Olsztynie przy ul. Tuwima 10, przy ul. Bydgoskiej 7 oraz ośmiu miejsc poboru w Oddziale w Popielnie"@pl;
   adms:identifier epd:id_27f7b908-0974-4001-b7de-13bce42fd695_ProcedureIdentifier_MnX8qyREnFMNLeS5MJAX9K .

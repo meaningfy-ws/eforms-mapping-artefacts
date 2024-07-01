@@ -6,22 +6,22 @@
 # and the max against the reference.
 
 # eForms SDK folder (as it is checked out from GitHub)
-SDK_DIR=../eForms-SDK # relative to this project root
+[[ -z $SDK_DIR ]] && SDK_DIR=../eForms-SDK # relative path to the root of the eForms-SDK Git project
 
-# $1: BT ID, $2: Min SDK Version, $3: Max SDK Version (optional)
+# $1: eForms Node ID, $2: Min SDK Version, $3: Max SDK Version (optional)
 eforms_node_diff() {
-    [[ -z $1 || -z $2 ]] && echo "usage: <bt> <minver> [maxver]" && return 1
+    [[ -z $1 || -z $2 ]] && echo "usage: <nodeID> <minver> [maxver]" && return 1
     bt=$1; min=$2; max=$3; ref=1.9.1
     earliest=$(git tag -l | grep $min | head -n1)
-    old=$(git co -q $earliest && cat fields/fields.json | jq -r --arg ID "$bt" '.xmlStructure[] | select(.id == $ID)')
-    new=$(git co -q 1.9.1 && cat fields/fields.json | jq -r --arg ID "$bt" '.xmlStructure[] | select(.id == $ID)')
+    old=$(git checkout $earliest && cat fields/fields.json | jq -r --arg ID "$bt" '.xmlStructure[] | select(.id == $ID)')
+    new=$(git checkout 1.9.1 && cat fields/fields.json | jq -r --arg ID "$bt" '.xmlStructure[] | select(.id == $ID)')
     echo "==> Diff of earliest min $min ($earliest) vs. reference 1.9.1"
     echo
     diff -u --color <(echo "$old") <(echo "$new")
     echo
     if [[ -n $3 ]]; then
         latest=$(git tag -l | grep $max | tail -n1)
-        mid=$(git co -q $latest && cat fields/fields.json | jq -r --arg ID "$bt" '.xmlStructure[] | select(.id == $ID)')
+        mid=$(git checkout $latest && cat fields/fields.json | jq -r --arg ID "$bt" '.xmlStructure[] | select(.id == $ID)')
         echo "==> Diff of latest max $max ($latest) vs. reference 1.9.1"
         echo
         diff -u --color <(echo "$mid") <(echo "$new")

@@ -241,7 +241,6 @@ tedm:MG-CompetitionNotice_ND-Root
             rr:predicate epo:announcesRole ;
             rr:objectMap
                 [
-                    tedm:minSDKVersion "1.8" ;
                     rr:parentTriplesMap tedm:MG-JuryMember-announcesRole-CompetitionNotice_ND-AwardingTermsJuryMember;
                 ] ;
         ] ;
@@ -531,12 +530,13 @@ tedm:MG-Person-playedBy-JuryMember-announcesRole-CompetitionNotice_ND-AwardingTe
         ] ;
      rr:predicateObjectMap
         [
+            # Differences across versions are practically superficial and have little to no functional effect on this mapping even though different iterators can be interpreted
+            # VERINFO: SDK v1.8 from v1.3-1.7 contains rel XPath change within the same abs XPath due to node change, along with repeatable=false
             rdfs:label "BT-46-Lot" ;
-            rdfs:comment "JuryMemberName of MG-Person under ND-AwardingTermsJuryMember" ;
+            rdfs:comment "JuryMemberName of MG-Person under ND-AwardingTermsJuryMember (v1.8+), ND-AwardingTerms (v1.3-1.7)" ;
             rr:predicate foaf:familyName ;
             rr:objectMap
                 [
-                    tedm:minSDKVersion "1.8" ;
                     rml:reference "cbc:FamilyName";
                 ] ;
         ] ;
@@ -561,7 +561,7 @@ tedm:MG-JuryMember-announcesRole-CompetitionNotice_ND-AwardingTermsJuryMember a 
         [
             rdfs:label "BT-46-Lot" ;
             rdfs:comment "JuryMemberName of MG-JuryMember under ND-AwardingTermsJuryMember" ;
-            rr:predicate  epo:playedBy    ;
+            rr:predicate epo:playedBy ;
             rr:objectMap
                 [
                     rr:parentTriplesMap tedm:MG-Person-playedBy-JuryMember-announcesRole-CompetitionNotice_ND-AwardingTermsJuryMember;

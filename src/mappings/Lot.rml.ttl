@@ -4291,8 +4291,12 @@ tedm:MG-InnovativeProcurement-fulfillsStrategicProcurement-Lot_ND-LotInnovativeA
             rr:predicate epo:fulfillsRequirement ;
             rr:objectMap
                 [
+                    # Differences across versions are practically superficial and have little to no functional effect on this mapping even though different iterators can be interpreted
+                    # VERINFO: SDK v1.6 from v1.3-1.5 contains field name change only
+                    # VERINFO: SDK v1.8 from v1.6-1.7 contains only node change with stylistic XPath changes yielding the same effective XPaths, along with repeatable=false and introduction of List attribute
                     rdfs:label "BT-776-Lot";
-                    rdfs:comment "Procurement of Innovation of MG-InnovativeProcurement under ND-LotInnovativeAcquisitionType";
+                    rdfs:comment "Procurement of Innovation (v1.6+) of MG-InnovativeProcurement under ND-LotInnovativeAcquisitionType (v1.8+), ND-LotProcurementScope (v1.3-1.7)";
+                    rdfs:comment "Innovative Procurement (v1.3-1.5) of MG-InnovativeProcurement under ND-LotProcurementScope (v1.3-1.7)";
                     rdfs:label "at-voc:innovative-acquisition";
                     rr:parentTriplesMap tedm:innovative-acquisition ;
                     rr:joinCondition [

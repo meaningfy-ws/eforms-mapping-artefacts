@@ -61,7 +61,8 @@ tedm:MG-SubmissionTerm-isSubjectToLotSpecificTerm-Lot_ND-LateTendererInformation
             rr:predicate epo:hasLateSubmissionPermission;
             rr:objectMap
                 [
-                    tedm:minSDKVersion "1.8" ;
+                    tedm:minSDKVersion "1.3" ;
+                    tedm:maxSDKVersion "1.7" ;
                     rdfs:label "at-voc:missing-info-submission " ;
                     rr:parentTriplesMap tedm:missing-info-submission ;
                     rr:joinCondition [

@@ -4500,25 +4500,25 @@ tedm:MG-Address-address-Location-definesSpecificPlaceOfPerformance-ContractTerm-
         ] ;
     rr:predicateObjectMap
         [
-            # TODO min SDK 1.3 max SDK 1.4
+            # Differences across versions are practically superficial and have little to no functional effect on this mapping even though different iterators can be interpreted
+            # VERINFO: SDK v1.5 from v1.3-1.4 contains rel XPath change within the same abs XPath due to node change, along with other mapping-irrelevant changes
             rdfs:label "BT-5131-Lot";
-            rdfs:comment "Place Performance City of MG-Address under ND-LotPerformanceAddress";
+            rdfs:comment "Place Performance City of MG-Address under ND-LotPerformanceAddress (v1.5+), ND-LotPlacePerformance (v1.3-1.4)";
             rr:predicate locn:postName ;
             rr:objectMap
                 [
-                    tedm:minSDKVersion "1.5.12" ;
                     rml:reference "cbc:CityName";
                 ] ;
         ] ;
     rr:predicateObjectMap
         [
-            # TODO min SDK 1.3 max SDK 1.4
+            # Differences across versions are practically superficial and have little to no functional effect on this mapping even though different iterators can be interpreted
+            # VERINFO: SDK v1.5 from v1.3-1.4 contains rel XPath change within the same abs XPath due to node change, along with other mapping-irrelevant changes
             rdfs:label "BT-5121-Lot";
-            rdfs:comment "Place Performance Post Code of MG-Address under ND-LotPerformanceAddress";
+            rdfs:comment "Place Performance Post Code of MG-Address under ND-LotPerformanceAddress (v1.5+), ND-LotPlacePerformance (v1.3-1.4)";
             rr:predicate locn:postCode ;
             rr:objectMap
                 [
-                    tedm:minSDKVersion "1.5.12" ;
                     rml:reference "cbc:PostalZone";
                 ] ;
         ] ;

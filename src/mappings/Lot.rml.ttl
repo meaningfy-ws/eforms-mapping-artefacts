@@ -2760,6 +2760,9 @@ tedm:MG-SubmissionTerm-isSubjectToLotSpecificTerm-Lot_ND-LateTendererInformation
     rr:subjectMap
         [
             rdfs:label "ND-LateTendererInformation";
+            # v1.3-1.7 might create an empty instance as this is not guarded against a loosely filtered iterator
+            # with exists(cbc:TendererRequirementTypeCode/@listName='missing-info-submission'),
+            # which is implicitly done in the iterator for v1.8+
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_SubmissionTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(../../..)) || '?response_type=raw')}" ;
             rr:class epo:SubmissionTerm
         ] ;

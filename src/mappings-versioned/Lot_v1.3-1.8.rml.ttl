@@ -74,3 +74,95 @@ tedm:MG-SubcontractTerm-foreseesContractSpecificTerm-Lot_ND-SubcontractingObliga
                 ] ;
         ]
 .
+
+tedm:MG-SelectionCriterion-specifiesProcurementCriterion-Lot_ND-SelectionCriteria a rr:TriplesMap ;
+     rr:predicateObjectMap
+        [
+            rdfs:label "BT-7532-Lot, BT-752-Lot (threshold)";
+            rr:predicate epo:hasConstraint ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-Constraint-hasConstraint-SelectionCriterion-specifiesProcurementCriterion-Lot_ND-SecondStageCriterionParameter ;
+                    rr:joinCondition [
+                        rr:child "path(.)";
+                        rr:parent "path(..)";
+                    ];
+                ] ;
+        ];
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-7531-Lot";
+            rdfs:comment "Selection Criteria Second Stage Invite Number Weight of MG-SelectionCriterion under ND-SecondStageCriterionParameter";
+            rr:predicate epo:hasWeightValueType ;
+            rr:objectMap
+                [
+                    tedm:minSDKVersion "1.3" ;
+                    tedm:maxSDKVersion "1.8" ;
+                    rdfs:label ":at-voc:number-weight" ;
+                    rr:parentTriplesMap tedm:number-weight ;
+                    rr:joinCondition [
+                        rr:child "efbc:ParameterCode[@listName='number-weight']" ;
+                        rr:parent "code.value" ;
+                    ] ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-752-Lot (weight)" ; # BT-752-Lot-WeightNumber in v1.9+
+            rdfs:comment "Selection Criteria Second Stage Invite Number (weight) of MG-Constraint under ND-SecondStageThresholdCriterionParameter ";
+            rr:predicate cccev:weight;
+            rr:objectMap
+                [
+                    tedm:minSDKVersion "1.3" ;
+                    tedm:maxSDKVersion "1.8" ;
+                    rml:reference "if (exists(efbc:ParameterCode/@listName='number-weight')) then efbc:ParameterNumeric else null";
+                    rr:datatype xsd:decimal;
+                ] ;
+        ] ;
+.
+
+tedm:MG-Constraint-hasConstraint-SelectionCriterion-specifiesProcurementCriterion-Lot_ND-SecondStageCriterionParameter a rr:TriplesMap ;
+    rdfs:label "MG-Constraint";
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:SelectionCriteria/efac:CriterionParameter";
+            rml:referenceFormulation ql:XPath
+        ];
+    rr:subjectMap
+        [
+            rdfs:label "ND-SecondStageThresholdCriterionParameter";
+            rml:reference "'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_Constraint_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')" ;
+            rr:class cccev:Constraint
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label  "BT-7532-Lot";
+            rdfs:comment "Selection Criteria Second Stage Invite Number of MG-Constraint under ND-SecondStageThresholdCriterionParameter";
+            rr:predicate epo:hasThresholdType ;
+            rr:objectMap
+                [
+                    tedm:minSDKVersion "1.3" ;
+                    tedm:maxSDKVersion "1.8" ;
+                    rdfs:label "at-voc:number-threshold" ;
+                    rr:parentTriplesMap tedm:number-threshold ;
+                    rr:joinCondition [
+                        rr:child "efbc:ParameterCode[@listName='number-threshold']" ;
+                        rr:parent "code.value"
+                    ] ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-752-Lot (threshold)" ; # BT-752-Lot-ThresholdNumber in v1.9+
+            rdfs:comment "Selection Criteria Second Stage Invite Number (threshold) of MG-Constraint under ND-SecondStageThresholdCriterionParameter ";
+            rr:predicate epo:hasThresholdValue ;
+            rr:objectMap
+                [
+                    tedm:minSDKVersion "1.3" ;
+                    tedm:maxSDKVersion "1.8" ;
+                    rml:reference "if (exists(efbc:ParameterCode/@listName='number-threshold')) then efbc:ParameterNumeric else null";
+                    rr:datatype xsd:decimal;
+                ] ;
+        ] ;
+.

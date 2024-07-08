@@ -2157,7 +2157,7 @@ tedm:MG-SelectionCriterion-specifiesProcurementCriterion-Lot_ND-SelectionCriteri
                 ] ;
         ];
     rr:predicateObjectMap
-        [ 
+        [
             rdfs:label "BT-5423-Lot,BT-541-Lot-ThresholdNumber" ;
             rr:predicate epo:hasConstraint ;
             rr:objectMap
@@ -3764,11 +3764,11 @@ rdfs:label  "MG-StrategicProcurement";
         ] ;
     rr:predicateObjectMap
         [
-            # TODO min SDK 1.3 max SDK 1.4
-            # TODO min SDK 1.5.12 max SDK .17
-            tedm:minSDKVersion 1.8 ;
+            # Differences across versions are practically superficial and have little to no functional effect on this mapping even though different iterators can be interpreted
+            # VERINFO: SDK v1.5 from v1.3-1.4 contains only node change with stylistic XPath changes yielding the same effective XPaths, along with repeatable=false and other mapping-irrelevant changes
+            # VERINFO: SDK v1.8+ from v1.5-1.7 contains only stylistic XPath changes (removing redundant predicate) and introduction of List attribute
             rdfs:label "BT-06-Lot" ;
-            rdfs:comment "Strategic Procurement of MG-StrategicProcurement under ND-StrategicProcurementType" ;
+            rdfs:comment "Strategic Procurement of MG-StrategicProcurement under ND-StrategicProcurementType (v1.5+), ND-LotProcurementScope (v1.3-1.4)" ;
             rr:predicate rdf:type ;
             rr:objectMap
                 [

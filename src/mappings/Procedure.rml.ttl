@@ -845,17 +845,16 @@ tedm:MG-Procedure_ND-AcceleratedProcedure a rr:TriplesMap ;
         ] ;
     rr:predicateObjectMap
         [
-            # TODO min SDK 1.3 max SDK 1.4
-            # TODO min SDK 1.5.12 max SDK 1.7
+            # Differences across versions are practically superficial and have little to no functional effect on this mapping even though different iterators can be interpreted
+            # VERINFO: SDK v1.6 from v1.3-1.5 contains only node change with stylistic XPath changes yielding the same effective XPaths
+            # VERINFO: SDK v1.8+ from 1.7 contain only stylistic XPath changes (removing redundant predicate), introduction of List attribute and other mapping-irrelevant changes
             rdfs:label "BT-106-Procedure" ;
-            rdfs:comment "Procedure Accelerated of MG-Procedure under ND-AcceleratedProcedure" ;
+            rdfs:comment "Procedure Accelerated of MG-Procedure under ND-AcceleratedProcedure (v1.6+), ND-AcceleratedProcedureJustification (v1.3-1.5)" ;
             rr:predicate epo:isAccelerated ;
             rr:objectMap
                 [
-                    # this is an example of a version-specific assertion that has no difference
-                    # with its other counterparts due to simple changes in the XPath only
-                    # i.e. one could've chosen to ignore this, but we choose to be consistent
-                    tedm:minSDKVersion "1.8" ;
+                    # this is an example of a version-specific mapping that has no difference
+                    # with its other counterparts due to non-functional changes in the XPath
                     rml:reference "cbc:ProcessReasonCode" ;
                     rr:datatype xsd:boolean
                 ] ;

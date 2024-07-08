@@ -42,14 +42,14 @@ tedm:MG-ProcedureTerm_ND-ProcedureTenderingProcess a rr:TriplesMap ;
         ] ;
     rr:predicateObjectMap
         [
-            # TODO min SDK 1.3 max SDK 1.8
+            # Differences across versions have no functional effect on this mapping
+            # VERINFO: SDK v1.9 from v1.3-1.8 contains only introduction of List attribute and other mapping-irrelevant changes
             rdfs:label "BT-763-Procedure" ;
             rdfs:comment "Lots All Required of MG-ProcedureTerm under ND-ProcedureProcurementScope" ;
             rr:predicate epo:isSubmissionForAllLotsRequired ;
             rr:objectMap
                 [
                     # this needs no inverse mapping for false as there is only one value in the voc
-                    tedm:minSDKVersion "1.9.1" ;
                     rml:reference "if(cbc:PartPresentationCode/text()='all') then 'true' else null" ;
                     rr:datatype xsd:boolean ;
                 ]

@@ -35,3 +35,23 @@ _Mapping Groups_ (MGs) that share such a root class (the final segment of an MG
 name). An MG represents a logical grouping of related instances/resources (like
 a `foaf:Person` with all of its properties _and_ relationships together with
 the instances of those relationships).
+
+## Replacing `rr:template` with `rml:reference` for conditional subject creation
+```
+
+rr:template "
+rml:reference "if (exists(REL_XPATH_1) or exists(REL_XPATH_2)) then '
+
+{
+' || 
+
+}
+ || '
+
+
+{
+' || 
+
+}"
+ else null"
+```

@@ -4183,7 +4183,7 @@ tedm:MG-InnovativeProcurement-fulfillsStrategicProcurement-Lot_ND-LotInnovativeA
                     rdfs:label "at-voc:innovative-acquisition";
                     rr:parentTriplesMap tedm:innovative-acquisition ;
                     rr:joinCondition [
-                        rr:child  "if (/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:ProcurementProject/cac:ProcurementAdditionalType[cbc:ProcurementTypeCode/@listName='innovative-acquisition']/cbc:ProcurementTypeCode[@listName='innovative-acquisition']) then cbc:ProcurementTypeCode else null";
+                        rr:child "if (cbc:ProcurementTypeCode[@listName='innovative-acquisition']) then cbc:ProcurementTypeCode else null";
                         rr:parent "code.value" ;
                     ] ;
                 ] ;

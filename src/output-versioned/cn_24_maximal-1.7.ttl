@@ -277,12 +277,6 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_nxePuFH9i25oYGdwmceAuJ a 
   epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/min-score>;
   epo:hasThresholdValue 3.0 .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractDuration_JNctcsx6JXdNkzdL4P6dek
-  a epo:SpecificDuration .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractDuration_SwK8Z4wjBuauCWAoBTPk4Z
-  a epo:SpecificDuration .
-
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocationAddress_6pwBpb8FW5caR7TKqg7TvM
   a locn:Address;
   epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
@@ -347,7 +341,6 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractPeriod_SwK8Z4wjBuauCWAoBTPk4
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_8y8GPfmPvSRdBcci6WWcSi a
     epo:ContractTerm;
-  epo:definesContractDuration epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractDuration_SwK8Z4wjBuauCWAoBTPk4Z;
   epo:definesContractPeriod epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractPeriod_SwK8Z4wjBuauCWAoBTPk4Z;
   epo:definesSpecificPlaceOfPerformance epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_6pwBpb8FW5caR7TKqg7TvM,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_es3GJHPAww7U8q366gSYas;
@@ -368,7 +361,6 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_8y8GPfmPvSRdBcci6WWcSi 
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_daUDPcwCUoxbJRjGb7tKNQ a
     epo:ContractTerm;
-  epo:definesContractDuration epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractDuration_JNctcsx6JXdNkzdL4P6dek;
   epo:definesContractPeriod epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractPeriod_JNctcsx6JXdNkzdL4P6dek;
   epo:definesSpecificPlaceOfPerformance epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_TfeqsbtZz7bnSaeLJEmaKZ,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_e4BUCegaReE8NKq7sHcoAX;

@@ -2277,13 +2277,13 @@ tedm:MG-AwardCriterion-specifiesProcurementCriterion-Lot_ND-LotAwardWeightCriter
         ];
      rr:predicateObjectMap
         [
-            # TODO min SDK 1.3 and Max SDK 1.7
+            # Differences across versions are practically superficial and have little to no functional effect on this mapping even though different iterators can be interpreted
+            # VERINFO: SDK v1.8 from v1.3-1.7 contains only node change with stylistic XPath changes yielding the same effective XPaths, along with introduction of List attribute and other mapping-irrelevant changes
             rdfs:label "BT-5421-Lot";
-            rdfs:comment "Award Criterion Number Weight of MG-AwardCriterion under ND-LotAwardWeightCriterionParameter";
+            rdfs:comment "Award Criterion Number Weight of MG-AwardCriterion under ND-LotAwardWeightCriterionParameter (v1.8+), ND-LotAwardCriterionParameter (v1.3-1.7)";
             rr:predicate epo:hasWeightValueType ;
             rr:objectMap
                 [
-                    tedm:minSDKVersion "1.8" ;
                     rdfs:label ":at-voc:number-weight" ;
                     rr:parentTriplesMap tedm:number-weight ;
                     rr:joinCondition [
@@ -2324,14 +2324,14 @@ tedm:MG-AwardCriterion-specifiesProcurementCriterion-Lot_ND-LotAwardFixedCriteri
         ];
      rr:predicateObjectMap
         [
-            # TODO min SDK 1.3 and Max SDK 1.7
             #TODO test source
+            # Differences across versions are practically superficial and have little to no functional effect on this mapping even though different iterators can be interpreted
+            # VERINFO: SDK v1.8 from v1.3-1.7 contains only node change with stylistic XPath changes yielding the same effective XPaths, along with introduction of List attribute and other mapping-irrelevant changes
             rdfs:label "BT-5422-Lot";
-            rdfs:comment "Award Criterion Number Fixed of MG-AwardCriterion under ND-LotAwardFixedCriterionParameter";
+            rdfs:comment "Award Criterion Number Fixed of MG-AwardCriterion under ND-LotAwardFixedCriterionParameter (v1.8+), ND-LotAwardCriterionParameter (v1.3-1.7)";
             rr:predicate epo:hasFixedValueType ;
             rr:objectMap
                 [
-                    tedm:minSDKVersion "1.8" ;
                     rdfs:label ":at-voc:number-fixed" ;
                     rr:parentTriplesMap tedm:number-fixed ;
                     rr:joinCondition [
@@ -2359,12 +2359,13 @@ tedm:MG-Constraint-hasConstraint-AwardCriterion-specifiesProcurementCriterion-Lo
         ] ;
     rr:predicateObjectMap
         [
+            # Differences across versions are practically superficial and have little to no functional effect on this mapping even though different iterators can be interpreted
+            # VERINFO: SDK v1.8 from v1.3-1.7 contains only node change with stylistic XPath changes yielding the same effective XPaths, along with introduction of List attribute and other mapping-irrelevant changes
             rdfs:label  "BT-5423-Lot";
-            rdfs:comment "Award Criterion Number Threshold of MG-Constraint under ND-LotAwardThresholdCriterionParameter";
+            rdfs:comment "Award Criterion Number Threshold of MG-Constraint under ND-LotAwardThresholdCriterionParameter (v1.8+), ND-LotAwardCriterionParameter (v1.3-1.7)";
             rr:predicate epo:hasThresholdValue ;
             rr:objectMap
                 [
-                    tedm:minSDKVersion "1.8" ;
                     rml:reference "efbc:ParameterNumeric";
                     rr:datatype xsd:decimal;
                 ]

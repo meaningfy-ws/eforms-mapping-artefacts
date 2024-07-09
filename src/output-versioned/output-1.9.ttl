@@ -674,6 +674,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001 a epo:Lot;
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_bMTjo7a5Ke582iB4TXZmU8, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SecurityClearanceTerm_TT87XZ7rfCixVuS4Z9trMH,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_TT87XZ7rfCixVuS4Z9trMH,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_daUDPcwCUoxbJRjGb7tKNQ;
+  epo:isUsingEUFunds true;
   epo:specifiesProcurementCriterion epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_Ee3JXqpmik8eG35Uay4dJk,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_QaDZD9SvbXf8nLh2wqBGkh,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_65B5ieqPopJApHPkYdhiAi,
@@ -729,6 +730,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002 a epo:Lot;
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_28qA6sXPPZP6NSvA8FovHj,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_8y8GPfmPvSRdBcci6WWcSi,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_PuAZ93vcjRYhKiN4rMvUZg;
+  epo:isUsingEUFunds true;
   epo:specifiesProcurementCriterion epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_39TpnFPzm9mQHb8KWyccgF,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_JXVZRgb5g8CzzdmWDdr5QZ,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_65B5ieqPopJApHPkYdhiAi,
@@ -1353,6 +1355,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_daUDPcwCUoxbJRjGb7tKN
   epo:hasECataloguePermission <http://publications.europa.eu/resource/authority/permission/allowed>;
   epo:hasESubmissionPermission <http://publications.europa.eu/resource/authority/permission/required>;
   epo:hasLateSubmissionInformationDescription "Later tender information description ---"@en;
+  a epo:SubmissionTerm;
   epo:hasLateSubmissionPermission <http://publications.europa.eu/resource/authority/missing-info-submission/late-all>;
   epo:hasReceiptParticipationRequestDeadline "2020-05-07T23:55:00+01:00"^^xsd:dateTime;
   epo:hasReceiptTenderDeadline "2023-05-22T20:59:32+01:00"^^xsd:dateTime;

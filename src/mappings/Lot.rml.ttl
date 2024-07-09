@@ -4013,13 +4013,13 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-Lot_ND-LotContractAdditionalNa
         ] ;
     rr:predicateObjectMap
         [
-            # TODO min SDK 1.3 max SDK 1.7
+            # Differences across versions are practically superficial and have little to no functional effect on this mapping even though different iterators can be interpreted
+            # VERINFO: SDK v1.8 from v1.3-1.7 contains only node change with stylistic XPath changes yielding the same effective XPaths, along with repeatable=false, introduction of List attribute and other mapping-irrelevant changes
             rdfs:label "BT-531-Lot";
-            rdfs:comment "Additional Nature (different from Main) of MG-ContractTerm under ND-LotContractAdditionalNature";
+            rdfs:comment "Additional Nature (different from Main) of MG-ContractTerm under ND-LotContractAdditionalNature (v1.8+), ND-LotProcurementScope (v1.3-1.7)";
             rr:predicate epo:hasAdditionalContractNature    ;
             rr:objectMap
                 [
-                   tedm:minSDKVersion "1.8";
                     rdfs:label "at-voc:contract-nature" ;
                     rr:parentTriplesMap tedm:contract-nature ;
                     rr:joinCondition [
@@ -4150,8 +4150,10 @@ tedm:MG-SocialProcurement-fulfillsStrategicProcurement-Lot_ND-LotSocialObjective
             rr:predicate epo:fulfillsRequirement ;
             rr:objectMap
                 [
+                    # Differences across versions are practically superficial and have little to no functional effect on this mapping even though different iterators can be interpreted
+                    # VERINFO: SDK v1.8 from v1.3-1.7 contains only node change with stylistic XPath changes yielding the same effective XPaths, along with repeatable=false, introduction of List attribute and other mapping-irrelevant changes
                     rdfs:label "BT-775-Lot";
-                    rdfs:comment "Social Procurement of MG-SocialProcurement under ND-LotSocialObjectiveType";
+                    rdfs:comment "Social Procurement of MG-SocialProcurement under ND-LotSocialObjectiveType (v1.8+), ND-LotProcurementScope (v1.3-1.7)";
                     rdfs:label "at-voc:social-objective";
                     rr:parentTriplesMap tedm:social-objective ;
                     rr:joinCondition [
@@ -4258,8 +4260,10 @@ tedm:MG-GreenProcurement-fulfillsStrategicProcurement-Lot_ND-LotEnvironmentalImp
         ] ;
     rr:predicateObjectMap
         [
+            # Differences across versions are practically superficial and have little to no functional effect on this mapping even though different iterators can be interpreted
+            # VERINFO: SDK v1.8 from v1.3-1.7 contains only node change with stylistic XPath changes yielding the same effective XPaths, along with repeatable=false, introduction of List attribute and other mapping-irrelevant changes
             rdfs:label "BT-774-Lot";
-            rdfs:comment "GreenProcurement of MG-GreenProcurement under ND-LotEnvironmentalImpactType";
+            rdfs:comment "GreenProcurement of MG-GreenProcurement under ND-LotEnvironmentalImpactType (v1.8+), ND-LotProcurementScope (v1.3-1.7)";
             rr:predicate epo:fulfillsRequirement ;
             rr:objectMap
                 [

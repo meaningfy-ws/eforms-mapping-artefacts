@@ -4382,9 +4382,10 @@ tedm:MG-Address-address-Location-definesSpecificPlaceOfPerformance-ContractTerm-
         ] ;
     rr:predicateObjectMap
         [
-            # TODO min SDK 1.3 max SDK 1.4
+            # Differences across versions are practically superficial and have little to no functional effect on this mapping even though different iterators can be interpreted
+            # VERINFO: SDK v1.5 from v1.3-1.4 contains only node change with stylistic XPath changes yielding the same effective XPaths, along with only relative XPath change and other mapping-irrelevant changes
             rdfs:label "BT-5101(a|b|c)-, BT-5121-, BT-5131-, 5141-lot" ;
-            rdfs:comment "Place Performance Street, Place Performance Streetline 1, Place Performance Streetline 2, Place Performance City, Place Performance Post Code, Place Performance Country Code" ;
+            rdfs:comment "Place Performance Street, Place Performance Streetline 1, Place Performance Streetline 2, Place Performance City, Place Performance Post Code, Place Performance Country Code under ND-LotPerformanceAddress (v1.5+), ND-LotPlacePerformance (v1.3-1.4)" ;
             rr:predicate locn:fullAddress ;
             rr:objectMap
                 [
@@ -4478,13 +4479,11 @@ tedm:Location-definesSpecificPlaceOfPerformance-ContractTerm-foreseesContractSpe
         ] ;
     rr:predicateObjectMap
         [
-            # TODO min SDK 1.3 max SDK 1.4
             rdfs:label "BT-5071-Lot" ;
-            rdfs:comment "Place Performance Country Subdivision of MG-Location under ND-LotPerformanceAddress";
+            rdfs:comment "Place Performance Country Subdivision of MG-Location under ND-LotPerformanceAddress (v1.5+), ND-LotDPSContractingSystem (v1.3-1.4)";
             rr:predicate epo:hasNutsCode ;
             rr:objectMap
                 [
-                    tedm:minSDKVersion "1.5.12" ;
                     rr:parentTriplesMap tedm:nuts ;
                     rr:joinCondition [
                         rr:child "cbc:CountrySubentityCode" ;
@@ -4494,10 +4493,8 @@ tedm:Location-definesSpecificPlaceOfPerformance-ContractTerm-foreseesContractSpe
         ] ;
     rr:predicateObjectMap
         [
-            # Differences across versions are practically superficial and have little to no functional effect on this mapping even though different iterators can be interpreted
-            # VERINFO: SDK v1.5 from v1.3-1.4 contains rel XPath change within the same abs XPath due to node change, along with introduction of List attribute and other mapping-irrelevant changes
             rdfs:label "BT-5141-Lot" ;
-            rdfs:comment "Place Performance Country Code of MG-Location under ND-LotPerformanceAddress (v1.5+), ND-LotPlacePerformance (v1.3-1.4)" ;
+            rdfs:comment "Place Performance Country Code of MG-Location under ND-LotPerformanceAddress" ;
             rr:predicate epo:hasCountryCode ;
             rr:objectMap
                 [
@@ -4527,13 +4524,13 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-Lot_ND-LotPerformanceAddress a
         ] ;
     rr:predicateObjectMap
         [
-            # TODO min SDK 1.3 max SDK 1.4
+            # Differences across versions are practically superficial and have little to no functional effect on this mapping even though different iterators can be interpreted
+            # VERINFO: SDK v1.5 from v1.3-1.4 contains only node change with stylistic XPath changes yielding the same effective XPaths, along with only relative XPath change and other mapping-irrelevant changes
             rdfs:label "BT-727-Lot";
-            rdfs:comment "Place Performance Services Other of MG-ContractTerm under ND-LotPerformanceAddress";
+            rdfs:comment "Place Performance Services Other of MG-ContractTerm under ND-LotPerformanceAddress  ND-LotPerformanceAddress (v1.5+), ND-LotPlacePerformance (v1.3-1.4)";
             rr:predicate epo:hasBroadPlaceOfPerformance     ;
             rr:objectMap
                 [
-                    tedm:minSDKVersion "1.5.12" ;
                     rdfs:label " at-voc:other-place-service";
                     rr:parentTriplesMap tedm:other-place-service ;
                     rr:joinCondition [

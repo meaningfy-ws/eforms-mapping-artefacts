@@ -3887,7 +3887,8 @@ rdfs:label "MG-SpecificDuration";
             rr:predicate time:unitType ;
             rr:objectMap
                 [
-                    rdfs:label "time:TemporalUnit" ;
+                    rdfs:label "BT-98-Lot-Unit (time:TemporalUnit)" ;
+                    rdfs:comment "Unit of MG-SpecificDuration under ND-LotTenderingTerms";
                     rr:parentTriplesMap tedm:temporal_unit ;
                     rr:joinCondition [
                         rr:child "cbc:DurationMeasure/@unitCode" ;
@@ -4613,7 +4614,8 @@ tedm:MG-SpecificDuration-definesContractDuration-ContractTerm-foreseesContractSp
             rr:predicate time:unitType ;
             rr:objectMap
                 [
-                    rdfs:label "time:TemporalUnit" ;
+                    rdfs:label "BT-36-Lot-Unit (time:TemporalUnit)" ;
+                     rdfs:comment "Unit of MG-SpecificDuration under ND-LotDuration";
                     rr:parentTriplesMap tedm:temporal_unit ;
                     rr:joinCondition [
                         rr:child "cbc:DurationMeasure/@unitCode" ;

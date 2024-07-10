@@ -322,6 +322,8 @@ tedm:MG-MonetaryValue-hasEstimatedValue-LotGroup_ND-LotsGroupValueEstimate  a rr
         ] ;
     rr:predicateObjectMap
         [
+            rdfs:label "BT-27-LotsGroup-Currency";
+            rdfs:comment "Currency of MG-MonetaryValue undr ND-LotsGroupValueEstimate";
             rr:predicate epo:hasCurrency ;
             rr:objectMap
                 [
@@ -363,6 +365,8 @@ tedm:MG-MonetaryValue-hasLaunchFrameworkAgreementMaximumValue-LotGroup_ND-LotsGr
         ];
     rr:predicateObjectMap
         [
+            rdfs:label "BT-271-LotsGroup-Currency";
+            rdfs:comment "Currency of MG-MonetaryValue under ND-LotsGroupValueEstimateExtension";
             rr:predicate epo:hasCurrency ;
             rr:objectMap
                 [
@@ -405,6 +409,8 @@ tedm:MG-MonetaryValue-hasLaunchFrameworkAgreementMaximumValue-LotGroup_ND-LotsGr
         ];
     rr:predicateObjectMap
         [
+            rdfs:label "BT-157-LotsGroup-Currency";
+            rdfs:comment "Currency of MG-MonetaryValue under ND-LotsGroupFA";
             rr:predicate epo:hasCurrency ;
             rr:objectMap
                 [

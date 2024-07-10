@@ -910,6 +910,8 @@ tedm:MG-MonetaryValue-hasEstimatedValue-Procedure_ND-ProcedureValueEstimate a rr
         ];
     rr:predicateObjectMap
         [
+            rdfs:label "BT-27-Procedure-Currency";
+            rdfs:comment  "Currency of MG-MonetaryValue under ND-ProcedureValueEstimate";
             rr:predicate epo:hasCurrency ;
             rr:objectMap
                 [
@@ -951,6 +953,8 @@ tedm:MG-MonetaryValue-hasLaunchFrameworkAgreementMaximumValue-Procedure_ND-Proce
         ];
     rr:predicateObjectMap
         [
+            rdfs:label "BT-271-Procedure-Currency";
+            rdfs:comment "Currency of MG-MonetaryValue under ND-ProcedureValueEstimateExtension";
             rr:predicate epo:hasCurrency ;
             rr:objectMap
                 [

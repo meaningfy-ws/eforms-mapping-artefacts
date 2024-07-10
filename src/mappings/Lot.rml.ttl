@@ -4051,12 +4051,15 @@ tedm:MG-MonetaryValue-hasEstimatedValue-Lot_ND-LotValueEstimate a rr:TriplesMap 
             rr:objectMap
                 [
                     rdfs:label  "BT-27-Lot";
+                    rdfs:comment "Estimated Value of MG-MonetaryValue under ND-LotValueEstimate" ;
                     rml:reference "cbc:EstimatedOverallContractAmount";
                     rr:datatype xsd:decimal;
                 ] ;
         ] ;
     rr:predicateObjectMap
         [
+            rdfs:label "BT-27-Lot-Currency" ;
+            rdfs:comment "Currency of MG-MonetaryValue under ND-LotValueEstimate" ;
             rr:predicate epo:hasCurrency ;
             rr:objectMap
                 [
@@ -4799,6 +4802,8 @@ tedm:MG-MonetaryValue-hasLaunchFrameworkAgreementMaximumValue-Lot_ND-LotValueEst
         ] ;
     rr:predicateObjectMap
         [
+            rdfs:label "BT-271-Lot-Currency";
+            rdfs:comment "Currency of MG-MonetaryValue under ND-LotValueEstimateExtension";
             rr:predicate epo:hasCurrency ;
             rr:objectMap
                 [

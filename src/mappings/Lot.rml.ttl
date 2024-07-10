@@ -2778,13 +2778,13 @@ tedm:MG-SubmissionTerm-isSubjectToLotSpecificTerm-Lot_ND-LotSubmissionLanguage a
         ] ;
     rr:predicateObjectMap
         [
-            # TODO min SDK 1.3 max SDK 1.7
+            # Differences across versions are practically superficial and have little to no functional effect on this mapping even though different iterators can be interpreted
+            # VERINFO: SDK v1.8 from v1.3-1.7 contains only node change with stylistic XPath changes yielding the same effective XPaths, along with only relative XPath change, repeatable=false and other mapping-irrelevant changes
             rdfs:label "BT-97-Lot (value)" ;
-            rdfs:comment "Submission Language of MG-SubmissionTerm under ND-LotTenderingTerms" ;
+            rdfs:comment "Submission Language of MG-SubmissionTerm under ND-LotSubmissionLanguage (v1.8+), ND-LotTenderingTerms (v1.3-1.7)" ;
             rr:predicate epo:hasLanguage ;
             rr:objectMap
                 [
-                    tedm:minSDKVersion  "1.8" ;
                     rdfs:label "at-voc:language" ;
                     rr:parentTriplesMap tedm:languageJSON ;
                     rr:joinCondition [

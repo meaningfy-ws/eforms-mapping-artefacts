@@ -1,7 +1,6 @@
 MAPPINGS_DIR = mappings
 OUTPUT_DIR = output
-DEFAULT_PACKAGE = package_cn_v1.9
-MINIMAL_PACKAGE = $(DEFAULT_PACKAGE)_minimal
+DEFAULT_PKG_PREFIX = package_cn
 SDK_NAME = eforms-sdk
 DEFAULT_SDK_VERSION = 1.9
 SDK_DATA_NAME = sdk_examples_cn
@@ -33,6 +32,7 @@ JENA_TOOLS_ARQ = $(JENA_TOOLS_DIR)/bin/arq
 OWLCLI_DIR = $(shell test ! -z ${OWLCLI_HOME} && echo ${OWLCLI_HOME} || echo `pwd`/owlcli)
 OWLCLI_BIN = OWLCLI_DIR/owl-cli.jar
 OWLCLI_CMD = java -jar ~/.rmlmapper/owl-cli.jar write --indentSize 4
+MULTIVER_SCRIPT = scripts/prep-multiver.sh
 
 BUILD_PRINT = \e[1;34mSTEP: \e[0m
 SDK_DATA_DIR = $(TEST_DATA_DIR)/$(SDK_DATA_NAME)
@@ -41,28 +41,32 @@ SAMPLES_RANDOM_DIR = $(TEST_DATA_DIR)/$(SAMPLES_RANDOM_NAME)
 CM_FILE = $(TX_DIR)/$(CM_FILENAME)
 
 package_sync:
-	@ cp -rv src/mappings mappings/$(MINIMAL_PACKAGE)/$(TX_DIR)/
-	@ cp -rv src/$(TX_DIR) mappings/$(MINIMAL_PACKAGE)/
-	@ cp -rv src/validation mappings/$(MINIMAL_PACKAGE)/
+	@ echo "Preparing versioned folders"
+	@ cd src && bash $(MULTIVER_SCRIPT)
+	@ echo "Syncing CN v1.9"
+	@ cp -rv src/mappings mappings/$(DEFAULT_PKG_PREFIX)_v1.9/$(TX_DIR)/
+	@ cp -v src/mappings-1.9/* mappings/$(DEFAULT_PKG_PREFIX)_v1.9/$(TX_DIR)/mappings/
+	@ cp -rv src/$(TX_DIR) mappings/$(DEFAULT_PKG_PREFIX)_v1.9/
+	@ cp -rv src/validation mappings/$(DEFAULT_PKG_PREFIX)_v1.9/
 ifeq ($(TRIM_DOWN_SHACL), 1)
 	@ echo "Modifying ePO SHACL file to suppress rdf:PlainLiteral violations"
-	@ sed -i 's/sh:datatype rdf:PlainLiteral/sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] )/' mappings/$(MINIMAL_PACKAGE)/$(SHACL_PATH_EPO)
+	@ sed -i 's/sh:datatype rdf:PlainLiteral/sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] )/' mappings/$(DEFAULT_PKG_PREFIX)_v1.9/$(SHACL_PATH_EPO)
 	@ echo "Modifying ePO SHACL file to substitute at-voc constraint with IRI"
-	@ sed -i 's/sh:class at-voc.*;/sh:nodeKind sh:IRI ;/' mappings/$(MINIMAL_PACKAGE)/$(SHACL_PATH_EPO)
-	@ sed -i 's/sh:class at-voc:environmental-impact,/sh:nodeKind sh:IRI ;/' mappings/$(MINIMAL_PACKAGE)/$(SHACL_PATH_EPO)
-	@ sed -i '/.*at-voc:green-public-procurement-criteria ;/d' mappings/$(MINIMAL_PACKAGE)/$(SHACL_PATH_EPO)
+	@ sed -i 's/sh:class at-voc.*;/sh:nodeKind sh:IRI ;/' mappings/$(DEFAULT_PKG_PREFIX)_v1.9/$(SHACL_PATH_EPO)
+	@ sed -i 's/sh:class at-voc:environmental-impact,/sh:nodeKind sh:IRI ;/' mappings/$(DEFAULT_PKG_PREFIX)_v1.9/$(SHACL_PATH_EPO)
+	@ sed -i '/.*at-voc:green-public-procurement-criteria ;/d' mappings/$(DEFAULT_PKG_PREFIX)_v1.9/$(SHACL_PATH_EPO)
 endif
 
 reformat_package_cn:
-	@ echo "Reformatting RML files for packaging $(MINIMAL_PACKAGE), with $(OWLCLI_BIN)"
-	for i in `find mappings/$(MINIMAL_PACKAGE)/$(TX_DIR)/mappings -type f`; do mv $$i $$i.bak && $(OWLCLI_CMD) $$i.bak $$i && rm -v $$i.bak; done
+	@ echo "Reformatting RML files for packaging $(DEFAULT_PKG_PREFIX)_v1.9, with $(OWLCLI_BIN)"
+	for i in `find mappings/$(DEFAULT_PKG_PREFIX)_v1.9/$(TX_DIR)/mappings -type f`; do mv $$i $$i.bak && $(OWLCLI_CMD) $$i.bak $$i && rm -v $$i.bak; done
 
 package_cn_minimal: package_sync
 	@ mkdir -p $(OUTPUT_DIR)
-	@ $(eval PKG_NAME := $(MINIMAL_PACKAGE))
+	@ $(eval PKG_NAME := $(DEFAULT_PKG_PREFIX)_v1.9)
 	@ $(eval PKG_DIR := $(OUTPUT_DIR)/$(PKG_NAME))
 	@ $(eval PKG_TMP := tmp/$(PKG_NAME))
-	@ cp -rv mappings/$(MINIMAL_PACKAGE) $(PKG_DIR)
+	@ cp -rv mappings/$(DEFAULT_PKG_PREFIX)_v1.9 $(PKG_DIR)
 	@ echo "Modifying Identifier in the CM and replacing XLSX"
 	@ mkdir -p $(PKG_TMP) && unzip $(PKG_DIR)/$(CM_FILE) -d $(PKG_TMP)
 	@ rm -v $(PKG_DIR)/$(CM_FILE)
@@ -76,15 +80,15 @@ ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
 endif
 
 export_cn_minimal:
-	@ cd $(OUTPUT_DIR) && zip -r $(MINIMAL_PACKAGE).zip $(MINIMAL_PACKAGE)
-	@ echo "Minimal package exported to $(OUTPUT_DIR)/$(MINIMAL_PACKAGE).zip"
+	@ cd $(OUTPUT_DIR) && zip -r $(DEFAULT_PKG_PREFIX)_v1.9.zip $(DEFAULT_PKG_PREFIX)_v1.9
+	@ echo "Minimal package exported to $(OUTPUT_DIR)/$(DEFAULT_PKG_PREFIX)_v1.9.zip"
 
 package_cn_examples: package_sync
 	@ mkdir -p $(OUTPUT_DIR)
-	@ $(eval PKG_NAME := $(DEFAULT_PACKAGE)_allExamples)
+	@ $(eval PKG_NAME := $(DEFAULT_PKG_PREFIX)_v1.9_allExamples)
 	@ $(eval PKG_DIR := $(OUTPUT_DIR)/$(PKG_NAME))
 	@ $(eval PKG_TMP := tmp/$(PKG_NAME))
-	@ cp -rv mappings/$(MINIMAL_PACKAGE) $(PKG_DIR)
+	@ cp -rv mappings/$(DEFAULT_PKG_PREFIX)_v1.9 $(PKG_DIR)
 	@ echo "Including CN SDK example data"
 	@ cp -rv $(SDK_DATA_DIR) $(PKG_DIR)/test_data
 	@ cp -rv $(SDK_DATA_DIR)_invalid $(PKG_DIR)/test_data
@@ -106,16 +110,16 @@ ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
 endif
 
 export_cn_examples:
-	@ $(eval PKG_NAME := $(DEFAULT_PACKAGE)_allExamples)
+	@ $(eval PKG_NAME := $(DEFAULT_PKG_PREFIX)_v1.9_allExamples)
 	@ cd $(OUTPUT_DIR) && zip -r $(PKG_NAME).zip $(PKG_NAME)
 	@ echo "SDK examples package exported to $(PKG_DIR).zip"
 
 package_cn_samples: package_sync
 	@ mkdir -p $(OUTPUT_DIR)
-	@ $(eval PKG_NAME := $(DEFAULT_PACKAGE)_allSamples)
+	@ $(eval PKG_NAME := $(DEFAULT_PKG_PREFIX)_v1.9_allSamples)
 	@ $(eval PKG_DIR := $(OUTPUT_DIR)/$(PKG_NAME))
 	@ $(eval PKG_TMP := tmp/$(PKG_NAME))
-	@ cp -rv mappings/$(MINIMAL_PACKAGE) $(PKG_DIR)
+	@ cp -rv mappings/$(DEFAULT_PKG_PREFIX)_v1.9 $(PKG_DIR)
 	@ echo "Including EF10-24 sample data"
 	@ mkdir -p $(PKG_DIR)/$(SAMPLES_CN_DIR)
 	@ find $(SAMPLES_CN_DIR)/$(SDK_NAME)-$(DEFAULT_SDK_VERSION)/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_CN_DIR) \;
@@ -143,16 +147,16 @@ ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
 endif
 
 export_cn_samples:
-	@ $(eval PKG_NAME := $(DEFAULT_PACKAGE)_allSamples)
+	@ $(eval PKG_NAME := $(DEFAULT_PKG_PREFIX)_v1.9_allSamples)
 	@ cd $(OUTPUT_DIR) && zip -r $(PKG_NAME).zip $(PKG_NAME)
 	@ echo "Samples package exported to $(PKG_DIR).zip"
 
 package_cn_maximal: package_sync
 	@ mkdir -p $(OUTPUT_DIR)
-	@ $(eval PKG_NAME := $(DEFAULT_PACKAGE)_allData)
+	@ $(eval PKG_NAME := $(DEFAULT_PKG_PREFIX)_v1.9_allData)
 	@ $(eval PKG_DIR := $(OUTPUT_DIR)/$(PKG_NAME))
 	@ $(eval PKG_TMP := tmp/$(PKG_NAME))
-	@ cp -rv mappings/$(MINIMAL_PACKAGE) $(PKG_DIR)
+	@ cp -rv mappings/$(DEFAULT_PKG_PREFIX)_v1.9 $(PKG_DIR)
 	@ echo "Including CN SDK example data"
 	@ cp -rv $(SDK_DATA_DIR) $(PKG_DIR)/test_data
 	@ cp -rv $(SDK_DATA_DIR)_invalid $(PKG_DIR)/test_data
@@ -179,7 +183,7 @@ ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
 endif
 
 export_cn_maximal:
-	@ $(eval PKG_NAME := $(DEFAULT_PACKAGE)_allData)
+	@ $(eval PKG_NAME := $(DEFAULT_PKG_PREFIX)_v1.9_allData)
 	@ cd $(OUTPUT_DIR) && zip -r $(PKG_NAME).zip $(PKG_NAME)
 	@ echo "Maximal package exported to $(PKG_DIR).zip"
 

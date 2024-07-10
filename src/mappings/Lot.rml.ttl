@@ -917,6 +917,8 @@ tedm:MG-Lot_ND-LotProcurementScope a rr:TriplesMap ;
             rr:predicate  dct:title ;
             rr:objectMap
                 [
+                    rdfs:label "BT-21-Lot-Language" ;
+                    rdfs:comment "Language of MG-Lot under ND-LotProcurementScope" ;
                     rml:reference "cbc:Name";
                     rml:languageMap [
                         fnml:functionValue [
@@ -939,6 +941,8 @@ tedm:MG-Lot_ND-LotProcurementScope a rr:TriplesMap ;
             rr:predicate  dct:description  ;
             rr:objectMap
                 [
+                    rdfs:label "BT-24-Lot-Language" ;
+                    rdfs:comment "Language of MG-Lot under ND-LotProcurementScope" ;
                     rml:reference "cbc:Description";
                     rml:languageMap [
                         fnml:functionValue [
@@ -1028,6 +1032,8 @@ tedm:MG-Lot_ND-LotProcurementScope a rr:TriplesMap ;
             rr:predicate  epo:hasAdditionalInformation;
             rr:objectMap
                 [
+                    rdfs:label "BT-300-Lot-Language";
+                    rdfs:comment "Language of MG-Lot under ND-LotProcurementScope";
                     rml:reference "if(exists(descendant::cbc:Note)) then descendant::cbc:Note else null";
                     rml:languageMap [
                         fnml:functionValue [
@@ -1328,6 +1334,8 @@ tedm:MG-EAuctionTechnique-usesTechnique-Lot_ND-AuctionTerms a rr:TriplesMap ;
             rr:predicate dct:description;
             rr:objectMap
                 [
+                     rdfs:label "BT-122-Lot-Language";
+                     rdfs:comment "Language of MG-EAuctionTechnique under ND-AuctionTerms ";
                     rml:reference "cbc:Description";
                     rml:languageMap [
                         fnml:functionValue [
@@ -1498,6 +1506,8 @@ tedm:MG-FrameworkAgreementTerm-isSubjectToLotSpecificTerm-Lot_ND-FA a rr:Triples
             rr:predicate epo:hasDurationExtensionJustification ;
             rr:objectMap
                 [
+                    rdfs:label "BT-109-Lot-Language";
+                    rdfs:comment "Language of MG-FrameworkAgreementTerm under ND-FA";
                     rml:reference "cbc:Justification";
                      rml:languageMap [
                         fnml:functionValue [
@@ -1536,6 +1546,8 @@ tedm:MG-FrameworkAgreementTerm-isSubjectToLotSpecificTerm-Lot_ND-FABuyerCategori
             rr:predicate epo:hasBuyerCategoryDescription ;
             rr:objectMap
                 [
+                    rdfs:label "BT-111-Lot-Language";
+                    rdfs:comment "Language of MG-FrameworkAgreementTerm under ND-FABuyerCategories";
                     rml:reference "cbc:Description";
                      rml:languageMap [
                         fnml:functionValue [
@@ -1743,6 +1755,8 @@ tedm:MG-OpeningTerm-isSubjectToLotSpecificTerm-Lot_ND-PublicOpening a rr:Triples
             rr:predicate epo:hasOpeningDescription ;
             rr:objectMap
                 [
+                    rdfs:label "BT-134-Lot-Language";
+                    rdfs:comment "Language of MG-OpeningTerm under ND-PublicOpening";
                     rml:reference "cbc:Description";
                     rml:languageMap [
                         fnml:functionValue [
@@ -1808,6 +1822,8 @@ tedm:MG-Address-definesOpeningPlace-OpeningTerm-isSubjectToLotSpecificTerm-Lot_N
             rr:predicate locn:fullAddress ;
             rr:objectMap
                 [
+                    rdfs:label "BT-133-Lot-Language";
+                    rdfs:comment "Language of MG-Address under ND-PublicOpeningPlace";
                     rml:reference "cbc:Description";
                     rml:languageMap [
                         fnml:functionValue [
@@ -1897,6 +1913,8 @@ tedm:MG-SubmissionTerm-isSubjectToLotSpecificTerm-Lot_ND-NonEsubmission a rr:Tri
             rr:predicate epo:hasNonElectronicSubmissionDescription ;
             rr:objectMap
                 [
+                    rdfs:label "BT-745-Lot-Language";
+                    rdfs:comment "Language of MG-SubmissionTerm under ND-NonEsubmission" ;
                     rml:reference "cbc:Description";
                     rml:languageMap [
                         fnml:functionValue [
@@ -2005,7 +2023,9 @@ tedm:MG-Fund-isFundedBy-Lot_ND-Funding a rr:TriplesMap ;
             rr:objectMap
                 [
                    tedm:minSDKVersion "1.9.1" ;
-                    rml:reference "cbc:Description";
+                   rdfs:label "BT-6140-Lot-Language";
+                   rdfs:comment "Language of MG-Fund under ND-Funding";
+                   rml:reference "cbc:Description";
                    rml:languageMap [
                         fnml:functionValue [
                             rr:predicateObjectMap [
@@ -2095,6 +2115,8 @@ tedm:MG-SelectionCriterion-specifiesProcurementCriterion-Lot_ND-SelectionCriteri
             rr:predicate skos:prefLabel  ;
             rr:objectMap
                 [
+                    rdfs:label "BT-749-Lot-Language";
+                    rdfs:comment "Language of MG-SelectionCriterion under ND-SelectionCriteria";
                     rml:reference "cbc:Name";
                     rml:languageMap [
                         fnml:functionValue [
@@ -2117,6 +2139,8 @@ tedm:MG-SelectionCriterion-specifiesProcurementCriterion-Lot_ND-SelectionCriteri
             rr:predicate dct:description ;
             rr:objectMap
                 [
+                    rdfs:label "BT-750-Lot-Language";
+                    rdfs:comment "Language of MG-SelectionCriterion under ND-SelectionCriteria";
                     rml:reference "cbc:Description";
                     rml:languageMap [
                         fnml:functionValue [
@@ -2205,10 +2229,12 @@ tedm:MG-AwardCriterion-specifiesProcurementCriterion-Lot_ND-LotAwardCriterion a 
     rr:predicateObjectMap
         [
             rdfs:label "BT-540-Lot";
-            rdfs:comment "Award Criterion Description of of MG-AwardCriterion under ND-LotAwardCriterion";
+            rdfs:comment "Award Criterion Description of MG-AwardCriterion under ND-LotAwardCriterion";
             rr:predicate dct:description;
             rr:objectMap
                 [
+                    rdfs:label "BT-540-Lot-Language";
+                    rdfs:comment "Language of MG-AwardCriterion under ND-LotAwardCriterion";
                     rml:reference "if(exists(descendant::cbc:Description)) then cbc:Description else null";
                     rml:languageMap [
                         fnml:functionValue [
@@ -2227,9 +2253,12 @@ tedm:MG-AwardCriterion-specifiesProcurementCriterion-Lot_ND-LotAwardCriterion a 
     rr:predicateObjectMap
         [
             rdfs:label "BT-734-Lot";
+            rdfs:comment "Award Criterion Name of MG-AwardCriterion under ND-LotAwardCriterion";
             rr:predicate  skos:prefLabel  ;
             rr:objectMap
                 [
+                    rdfs:label "BT-734-Lot-Language";
+                    rdfs:comment "Language of MG-AwardCriterion under ND-LotAwardCriterion";
                     rml:reference "if(exists(cbc:Name)) then cbc:Name else null";
                     rml:languageMap [
                         fnml:functionValue [
@@ -2408,6 +2437,8 @@ tedm:MG-AwardEvaluationTerm-isSubjectToLotSpecificTerm-Lot_ND-LotAwardCriteria a
             rr:predicate epo:hasAwardCriteriaOrderJustification ;
             rr:objectMap
                 [
+                    rdfs:label "BT-733-Lot-Language";
+                    rdfs:comment "Language of MG-AwardEvaluationTerm under ND-LotAwardCriteria";
                     rml:reference "cbc:Description";
                     rml:languageMap [
                         fnml:functionValue [
@@ -2429,6 +2460,8 @@ tedm:MG-AwardEvaluationTerm-isSubjectToLotSpecificTerm-Lot_ND-LotAwardCriteria a
             rr:predicate epo:hasAwardCriteriaEvaluationFormula ;
             rr:objectMap
                 [
+                    rdfs:label "BT-543-Lot-Language" ;
+                    rdfs:comment "Language of MG-AwardCriterion under ND-LotAwardCriteria" ;
                     rml:reference "if(exists(cbc:CalculationExpression)) then cbc:CalculationExpression else null" ;
                     rml:languageMap [
                         fnml:functionValue [
@@ -2496,6 +2529,8 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-Lot_ND-TendererLegalForm a rr:
             rr:predicate epo:hasLegalFormRequirement ;
             rr:objectMap
                 [
+                    rdfs:label "BT-76-Lot-Language";
+                    rdfs:comment "Language of MG-ContractTerm under ND-TendererLegalForm";
                     rml:reference "if (cbc:CompanyLegalFormCode[@listName='required' and text()='true']) then cbc:CompanyLegalForm else null";
                     rml:languageMap [
                         fnml:functionValue [
@@ -2823,10 +2858,12 @@ tedm:MG-Lot_ND-LotTenderingTerms a rr:TriplesMap ;
     rr:predicateObjectMap
         [
             rdfs:label "BT-95-Lot";
-            rdfs:comment "Recurrence Description MG-Lot under ND-LotTenderingTerms";
+            rdfs:comment "Recurrence Description of MG-Lot under ND-LotTenderingTerms";
             rr:predicate epo:hasRecurrenceDescription   ;
             rr:objectMap
                 [
+                    rdfs:label "BT-95-Lot-Language";
+                    rdfs:comment "Language of MG-Lot under ND-LotTenderingTerms";
                     rml:reference "cac:TenderingTerms/cbc:RecurringProcurementDescription";
                     rml:languageMap [
                         fnml:functionValue [
@@ -2952,6 +2989,8 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-Lot_ND-ExecutionRequirements a
             rr:objectMap
                 [
                     tedm:minSDKVersion "1.9.1" ;
+                    rdfs:label "BT-70-Lot-Language";
+                    rdfs:comment "Language of MG-ContractTerm under ND-ExecutionRequirements";
                     rml:reference "cbc:Description";
                     rml:languageMap [
                         fnml:functionValue [
@@ -3203,7 +3242,8 @@ tedm:MG-SecurityClearanceTerm-isSubjectToLotSpecificTerm-Lot_ND-SecurityClearanc
             rr:predicate  dct:description ;
             rr:objectMap
                 [
-
+                   rdfs:label "BT-732-Lot-Language";
+                   rdfs:comment "Language of MG-SecurityClearanceTerm under ND-SecurityClearanceTerms";
                    rml:reference "cbc:Description";
                    rml:languageMap [
                         fnml:functionValue [
@@ -3256,6 +3296,8 @@ tedm:MG-NonDisclosureAgreementTerm-isSubjectToLotSpecificTerm-Lot_ND-NDA a rr:Tr
             rr:predicate dct:description;
             rr:objectMap
                 [
+                   rdfs:label "BT-802-Lot-Language";
+                   rdfs:comment "Language of MG-NonDisclosureAgreementTerm under ND-NDA";
                    tedm:minSDKVersion "1.5.12" ;
                    rml:reference "cbc:Description";
                    rml:languageMap [
@@ -3410,11 +3452,13 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-Lot_ND-PaymentTerms a rr:Tripl
         ] ;
       rr:predicateObjectMap
         [
-            rdfs:label "BT-77-Lot";
+            rdfs:label "BT-77-Lot-";
             rdfs:comment "Terms Financial of MG-ContractTerm under ND-PaymentTerms";
             rr:predicate epo:hasPaymentArrangement  ;
             rr:objectMap
                 [
+                    rdfs:label "BT-77-Lot-Language";
+                    rdfs:comment "Language of MG-ContractTerm under ND-PaymentTerms";
                     rml:reference "cbc:Note";
                     rml:languageMap [
                         fnml:functionValue [
@@ -3466,6 +3510,8 @@ tedm:MG-SubmissionTerm-isSubjectToLotSpecificTerm-Lot_ND-FinancialGuarantee a rr
             rr:objectMap
                 [
                     tedm:minSDKVersion "1.4" ;
+                    rdfs:label "BT-75-Lot-Language";
+                    rdfs:comment "Language of MG-SubmissionTerm under ND-FinancialGuarantee";
                     rml:reference "cbc:Description";
                     rml:languageMap [
                         fnml:functionValue [
@@ -3714,6 +3760,8 @@ tedm:MG-ReviewTerm-isSubjectToLotSpecificTerm-Lot_ND-ReviewPresentationPeriod a 
             rr:predicate epo:hasReviewDeadlineInformation ;
             rr:objectMap
                 [
+                    rdfs:label "BT-99-Lot-Language";
+                    rdfs:comment "Language of MG-ReviewTerm under ND-ReviewPresentationPeriod";
                     rml:reference "cbc:Description";
                     rml:languageMap [
                         fnml:functionValue [
@@ -3748,10 +3796,12 @@ rdfs:label  "MG-StrategicProcurement";
     rr:predicateObjectMap
         [
             rdfs:label "BT-777-Lot";
-            rdfs:comment "Strategic Procurement Description MG-StrategicProcurement under ND-StrategicProcurementType";
+            rdfs:comment "Strategic Procurement Description of MG-StrategicProcurement under ND-StrategicProcurementType";
             rr:predicate epo:hasStrategicProcurementDescription ;
             rr:objectMap
                 [
+                    rdfs:label "BT-777-Lot-Language";
+                    rdfs:comment "Language of MG-StrategicProcurement under ND-StrategicProcurementType";
                     rml:reference "cbc:ProcurementType";
                     rml:languageMap [
                         fnml:functionValue [
@@ -3981,6 +4031,8 @@ tedm:MG-ExclusionGround-specifiesProcurementCriterion-Lot_ND-ExclusionGrounds a 
             rr:predicate dct:description;
             rr:objectMap
                 [
+                    rdfs:label "BT-67(b)-Procedure-Language";
+                    rdfs:comment "Language of MG-ExclusionGround under ND-ExclusionGrounds";
                     rml:reference "cbc:Description";
                     rml:languageMap [
                         fnml:functionValue [
@@ -4353,6 +4405,8 @@ tedm:MG-StrategicProcurement-fulfillsStrategicProcurement-Lot-Lot_ND-Accessibili
             rr:predicate epo:hasNonAccessibilityCriterionJustification  ;
             rr:objectMap
                 [
+                    rdfs:label "BT-755-Lot-Language";
+                    rdfs:comment "Language of MG-StrategicProcurement under ND-AccessibilityJustification";
                     rml:reference "cbc:ProcurementType";
                     rml:languageMap [
                         fnml:functionValue [
@@ -4568,6 +4622,8 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-Lot_ND-LotPlacePerformance a r
             rr:predicate epo:hasPlaceOfPerformanceAdditionalInformation ;
             rr:objectMap
                 [
+                    rdfs:label "BT-728-Lot-Language" ;
+                    rdfs:comment "Language of MG-ContractTerm under ND-LotPlacePerformance" ;
                     rml:reference "cbc:Description";
                     rml:languageMap [
                         fnml:functionValue [
@@ -4704,6 +4760,8 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-Lot_ND-OptionsAndRenewals a rr
             rr:predicate epo:hasOptionsDescription ;
             rr:objectMap
                 [
+                    rdfs:label "BT-54-Lot-Language";
+                    rdfs:comment "Language of MG-ContractTerm under ND-OptionsAndRenewals";
                     rml:reference "cbc:OptionsDescription";
                     rml:languageMap [
                         fnml:functionValue [
@@ -4757,6 +4815,8 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-Lot_ND-OptionsDescription a rr
             rr:predicate epo:hasRenewalDescription ;
             rr:objectMap
                 [
+                    rdfs:label "BT-57-Lot-Language";
+                    rdfs:comment "Language of MG-ContractTerm under ND-OptionsAndRenewals" ;
                     rml:reference "cbc:Description";
                     rml:languageMap [
                         fnml:functionValue [

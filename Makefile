@@ -9,11 +9,13 @@ SAMPLES_RANDOM_NAME = sampling_random
 ROOT_CONCEPTS_GREPFILTER = "_Organization_|_TouchPoint_|_Notice|_ProcurementProcessInformation_|_Lot_|_VehicleInformation_|_ChangeInformation_"
 TEST_QUERY_RESULTS_FORMAT = CSV
 XLSX_STRDATA = xl/sharedStrings.xml
-DEFAULT_CM_ID = package_eforms_10-24_v1.9
+DEFAULT_CM_ID_PREFIX_CN = package_eforms_10-24
+DEFAULT_CM_DESC_PREFIX_CN = Package EF10-EF24
 TRIM_DOWN_SHACL = 1
 EXCLUDE_INEFFICIENT_VALIDATIONS = 1
 INCLUDE_RANDOM_SAMPLES = 1
 EXCLUDE_PROBLEM_SAMPLES = 1
+INCLUDE_INVALID_EXAMPLES = 0
 
 CANONICAL_TEST_OUTPUT = src/output.ttl
 CANONICAL_RML_DIR = src/mappings
@@ -40,37 +42,63 @@ SAMPLES_CN_DIR = $(TEST_DATA_DIR)/$(SAMPLES_CN_NAME)
 SAMPLES_RANDOM_DIR = $(TEST_DATA_DIR)/$(SAMPLES_RANDOM_NAME)
 CM_FILE = $(TX_DIR)/$(CM_FILENAME)
 
-package_sync:
-	@ echo "Preparing versioned folders"
+VERSIONS := $(shell seq 3 10)
+VERSIONS_SAMPLES := $(3 6 7 8 9)
+
+package_sync: $(addprefix package_sync_v, $(VERSIONS))
+reformat_package_cn: $(addprefix reformat_package_cn_v, $(VERSIONS))
+package_cn_minimal: $(addprefix package_cn_minimal_v, $(VERSIONS))
+export_cn_minimal: $(addprefix export_cn_minimal_v, $(VERSIONS))
+package_cn_examples: $(addprefix package_cn_examples_v, $(VERSIONS))
+export_cn_examples: $(addprefix export_cn_examples_v, $(VERSIONS))
+package_cn_samples: $(addprefix package_cn_samples_v, $(VERSIONS))
+export_cn_samples: $(addprefix export_cn_samples_v, $(VERSIONS))
+package_cn_maximal: $(addprefix package_cn_maximal_v, $(VERSIONS))
+export_cn_maximal: $(addprefix export_cn_maximal_v, $(VERSIONS))
+
+package_prep:
+	@ echo "Staging versioned folders"
 	@ cd src && bash $(MULTIVER_SCRIPT)
-	@ echo "Syncing CN v1.9"
-	@ cp -rv src/mappings mappings/$(DEFAULT_PKG_PREFIX)_v1.9/$(TX_DIR)/
-	@ cp -v src/mappings-1.9/* mappings/$(DEFAULT_PKG_PREFIX)_v1.9/$(TX_DIR)/mappings/
-	@ cp -rv src/$(TX_DIR) mappings/$(DEFAULT_PKG_PREFIX)_v1.9/
-	@ cp -rv src/validation mappings/$(DEFAULT_PKG_PREFIX)_v1.9/
+	@ mkdir -p $(OUTPUT_DIR)
+
+# TODO: move src subfolders around to be more compatible w/ packages (mappings -> transformation)
+# we are not copying over CM for now -- leaving it under manual control
+package_sync_v%: package_prep
+	@ echo "Syncing CN v1.$*"
+	@ rm -rfv mappings/$(DEFAULT_PKG_PREFIX)_v1.$*/$(TX_DIR)/mappings*
+	@ cp -rv src/mappings mappings/$(DEFAULT_PKG_PREFIX)_v1.$*/$(TX_DIR)/
+	@ cp -v src/mappings-1.$*/* mappings/$(DEFAULT_PKG_PREFIX)_v1.$*/$(TX_DIR)/mappings/
+	@ rm -rfv mappings/$(DEFAULT_PKG_PREFIX)_v1.$*/$(TX_DIR)/resources
+	@ cp -rv src/$(TX_DIR)/resources mappings/$(DEFAULT_PKG_PREFIX)_v1.$*/$(TX_DIR)/
+	@ rm -rfv mappings/$(DEFAULT_PKG_PREFIX)_v1.$*/validation
+	@ cp -rv src/validation mappings/$(DEFAULT_PKG_PREFIX)_v1.$*/
 ifeq ($(TRIM_DOWN_SHACL), 1)
 	@ echo "Modifying ePO SHACL file to suppress rdf:PlainLiteral violations"
-	@ sed -i 's/sh:datatype rdf:PlainLiteral/sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] )/' mappings/$(DEFAULT_PKG_PREFIX)_v1.9/$(SHACL_PATH_EPO)
+	@ sed -i 's/sh:datatype rdf:PlainLiteral/sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] )/' mappings/$(DEFAULT_PKG_PREFIX)_v1.$*/$(SHACL_PATH_EPO)
 	@ echo "Modifying ePO SHACL file to substitute at-voc constraint with IRI"
-	@ sed -i 's/sh:class at-voc.*;/sh:nodeKind sh:IRI ;/' mappings/$(DEFAULT_PKG_PREFIX)_v1.9/$(SHACL_PATH_EPO)
-	@ sed -i 's/sh:class at-voc:environmental-impact,/sh:nodeKind sh:IRI ;/' mappings/$(DEFAULT_PKG_PREFIX)_v1.9/$(SHACL_PATH_EPO)
-	@ sed -i '/.*at-voc:green-public-procurement-criteria ;/d' mappings/$(DEFAULT_PKG_PREFIX)_v1.9/$(SHACL_PATH_EPO)
+	@ sed -i 's/sh:class at-voc.*;/sh:nodeKind sh:IRI ;/' mappings/$(DEFAULT_PKG_PREFIX)_v1.$*/$(SHACL_PATH_EPO)
+	@ sed -i 's/sh:class at-voc:environmental-impact,/sh:nodeKind sh:IRI ;/' mappings/$(DEFAULT_PKG_PREFIX)_v1.$*/$(SHACL_PATH_EPO)
+	@ sed -i '/.*at-voc:green-public-procurement-criteria ;/d' mappings/$(DEFAULT_PKG_PREFIX)_v1.$*/$(SHACL_PATH_EPO)
 endif
 
-reformat_package_cn:
-	@ echo "Reformatting RML files for packaging $(DEFAULT_PKG_PREFIX)_v1.9, with $(OWLCLI_BIN)"
-	for i in `find mappings/$(DEFAULT_PKG_PREFIX)_v1.9/$(TX_DIR)/mappings -type f`; do mv $$i $$i.bak && $(OWLCLI_CMD) $$i.bak $$i && rm -v $$i.bak; done
+# FIXME: don't think anyone would use it like this wholesale (but rather more selectively)
+reformat_package_cn_v%:
+	@ echo "Reformatting RML files for packaging $(DEFAULT_PKG_PREFIX)_v1.$*, with $(OWLCLI_BIN)"
+	for i in `find mappings/$(DEFAULT_PKG_PREFIX)_v1.$*/$(TX_DIR)/mappings -type f`; do mv $$i $$i.bak && $(OWLCLI_CMD) $$i.bak $$i && rm -v $$i.bak; done
 
-package_cn_minimal: package_sync
-	@ mkdir -p $(OUTPUT_DIR)
-	@ $(eval PKG_NAME := $(DEFAULT_PKG_PREFIX)_v1.9)
+# FIXME: running package targets more than once duplicates folders and messes things up -- always run make clean
+
+package_cn_minimal_v%:
+	@ echo "Preparing minimal CN package, v1.$*"
+	@ $(eval PKG_NAME := $(DEFAULT_PKG_PREFIX)_v1.$*_minimal)
 	@ $(eval PKG_DIR := $(OUTPUT_DIR)/$(PKG_NAME))
 	@ $(eval PKG_TMP := tmp/$(PKG_NAME))
-	@ cp -rv mappings/$(DEFAULT_PKG_PREFIX)_v1.9 $(PKG_DIR)
+	@ cp -rv mappings/$(DEFAULT_PKG_PREFIX)_v1.$* $(PKG_DIR)
 	@ echo "Modifying Identifier in the CM and replacing XLSX"
 	@ mkdir -p $(PKG_TMP) && unzip $(PKG_DIR)/$(CM_FILE) -d $(PKG_TMP)
 	@ rm -v $(PKG_DIR)/$(CM_FILE)
-	@ sed -i "s|<t>$(DEFAULT_CM_ID)</t>|<t>$(DEFAULT_CM_ID)_minimal</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
+	@ sed -i "s|<t>$(DEFAULT_CM_ID_PREFIX_CN)_v1.$*</t>|<t>$(DEFAULT_CM_ID_PREFIX_CN)_v1.$*_minimal</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
+	@ sed -i "s|<t>$(DEFAULT_CM_DESC_PREFIX_CN), SDK v1.$*</t>|<t>$(DEFAULT_CM_DESC_PREFIX_CN), SDK v1.$* (minimal data)</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
 	@ cd $(PKG_TMP) && zip -r tmp.xlsx * && mv -v tmp.xlsx ../../$(PKG_DIR)/$(CM_FILE) && cd ../.. && rm -r $(PKG_TMP)
 	@ echo "Removing outdated metadata"
 	@ rm -fv $(PKG_DIR)/metadata.json
@@ -79,28 +107,36 @@ ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
 	@ rm -rfv $(PKG_DIR)/validation/sparql/generic* -v
 endif
 
-export_cn_minimal:
-	@ cd $(OUTPUT_DIR) && zip -r $(DEFAULT_PKG_PREFIX)_v1.9.zip $(DEFAULT_PKG_PREFIX)_v1.9
-	@ echo "Minimal package exported to $(OUTPUT_DIR)/$(DEFAULT_PKG_PREFIX)_v1.9.zip"
+export_cn_minimal_v%:
+	@ cd $(OUTPUT_DIR) && zip -r $(DEFAULT_PKG_PREFIX)_v1.$*_minimal.zip $(DEFAULT_PKG_PREFIX)_v1.$*_minimal
+	@ echo "Minimal package exported to $(OUTPUT_DIR)/$(DEFAULT_PKG_PREFIX)_v1.$*_minimal.zip"
 
-package_cn_examples: package_sync
-	@ mkdir -p $(OUTPUT_DIR)
-	@ $(eval PKG_NAME := $(DEFAULT_PKG_PREFIX)_v1.9_allExamples)
+# we exclude large file *100_lots in this package, but include it in maximal (allData)
+package_cn_examples_v%:
+	@ echo "Preparing SDK examples CN package, v1.$*"
+	@ $(eval PKG_NAME := $(DEFAULT_PKG_PREFIX)_v1.$*_examples)
 	@ $(eval PKG_DIR := $(OUTPUT_DIR)/$(PKG_NAME))
 	@ $(eval PKG_TMP := tmp/$(PKG_NAME))
-	@ cp -rv mappings/$(DEFAULT_PKG_PREFIX)_v1.9 $(PKG_DIR)
-	@ echo "Including CN SDK example data"
-	@ cp -rv $(SDK_DATA_DIR) $(PKG_DIR)/test_data
-	@ cp -rv $(SDK_DATA_DIR)_invalid $(PKG_DIR)/test_data
-	@ echo "Including CN OP test data"
-	@ cp -rv $(TEST_DATA_DIR)/op_test_cn_d2.1 $(PKG_DIR)/test_data
-	@ cp -rv $(TEST_DATA_DIR)/op_test_cn_gh_issues $(PKG_DIR)/test_data
+	@ cp -rv mappings/$(DEFAULT_PKG_PREFIX)_v1.$* $(PKG_DIR)
+	@ echo "Including CN SDK v1.$* example data"
+	@ cp -rv $(SDK_DATA_DIR)/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME)/
+ifeq ($(INCLUDE_INVALID_EXAMPLES), 1)
+	@ echo "Including CN SDK v1.$* example data, INVALIDs"
+	@ cp -rv $(SDK_DATA_DIR)_invalid/eforms-sdk-1.$* $(PKG_DIR)/test_data/$(SDK_DATA_NAME)_invalid
+endif
+# TODO: not working, use Bash notation or bring out into separate target
+# ifeq ($($*), 9)
+# 	@ echo "Including CN OP test data"
+# 	@ cp -rv $(TEST_DATA_DIR)/op_test_cn_d2.1 $(PKG_DIR)/test_data
+# 	@ cp -rv $(TEST_DATA_DIR)/op_test_cn_gh_issues $(PKG_DIR)/test_data
+# endif
 	@ echo "Removing large file cn_24_maximal_100_lots.xml"
 	@ find $(PKG_DIR) -name "cn_24_maximal_100_lots.xml" -exec rm -v {} \;
 	@ echo "Modifying Identifier in the CM and replacing XLSX"
 	@ mkdir -p $(PKG_TMP) && unzip $(PKG_DIR)/$(CM_FILE) -d $(PKG_TMP)
 	@ rm -v $(PKG_DIR)/$(CM_FILE)
-	@ sed -i "s|<t>$(DEFAULT_CM_ID)</t>|<t>$(DEFAULT_CM_ID)_allExamples</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
+	@ sed -i "s|<t>$(DEFAULT_CM_ID_PREFIX_CN)_v1.$*</t>|<t>$(DEFAULT_CM_ID_PREFIX_CN)_v1.$*_examples</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
+	@ sed -i "s|<t>$(DEFAULT_CM_DESC_PREFIX_CN), SDK v1.$*</t>|<t>$(DEFAULT_CM_DESC_PREFIX_CN), SDK v1.$* (SDK example data)</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
 	@ cd $(PKG_TMP) && zip -r tmp.xlsx * && mv -v tmp.xlsx ../../$(PKG_DIR)/$(CM_FILE) && cd ../.. && rm -r $(PKG_TMP)
 	@ echo "Removing outdated metadata"
 	@ rm -fv $(PKG_DIR)/metadata.json
@@ -109,35 +145,36 @@ ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
 	@ rm -rfv $(PKG_DIR)/validation/sparql/generic* -v
 endif
 
-export_cn_examples:
-	@ $(eval PKG_NAME := $(DEFAULT_PKG_PREFIX)_v1.9_allExamples)
+export_cn_examples_v%:
+	@ $(eval PKG_NAME := $(DEFAULT_PKG_PREFIX)_v1.$*_examples)
 	@ cd $(OUTPUT_DIR) && zip -r $(PKG_NAME).zip $(PKG_NAME)
-	@ echo "SDK examples package exported to $(PKG_DIR).zip"
+	@ echo "SDK examples package exported to $(OUTPUT_DIR)/$(DEFAULT_PKG_PREFIX)_v1.$*_examples.zip"
 
-package_cn_samples: package_sync
-	@ mkdir -p $(OUTPUT_DIR)
-	@ $(eval PKG_NAME := $(DEFAULT_PKG_PREFIX)_v1.9_allSamples)
+package_cn_samples_v%:
+	@ echo "Preparing samples CN package, v1.$*"
+	@ $(eval PKG_NAME := $(DEFAULT_PKG_PREFIX)_v1.$*_samples)
 	@ $(eval PKG_DIR := $(OUTPUT_DIR)/$(PKG_NAME))
 	@ $(eval PKG_TMP := tmp/$(PKG_NAME))
-	@ cp -rv mappings/$(DEFAULT_PKG_PREFIX)_v1.9 $(PKG_DIR)
-	@ echo "Including EF10-24 sample data"
+	@ cp -rv mappings/$(DEFAULT_PKG_PREFIX)_v1.$* $(PKG_DIR)
+	@ echo "Including EF10-24 systematic sample data"
 	@ mkdir -p $(PKG_DIR)/$(SAMPLES_CN_DIR)
-	@ find $(SAMPLES_CN_DIR)/$(SDK_NAME)-$(DEFAULT_SDK_VERSION)/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_CN_DIR) \;
+	@ test -d $(SAMPLES_CN_DIR)/$(SDK_NAME)-1.$* && find $(SAMPLES_CN_DIR)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_CN_DIR) \; || echo "No systematic samples for v1.$*"
 ifeq ($(INCLUDE_RANDOM_SAMPLES), 1)
-	@ echo "Including random sampling data"
+	@ echo "Including EF10-24 random sampling data"
 	@ mkdir -p $(PKG_DIR)/$(SAMPLES_RANDOM_DIR)
-	@ find $(SAMPLES_RANDOM_DIR)/eforms_sdk_v$(DEFAULT_SDK_VERSION)/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_RANDOM_DIR) \;
+	@ test -d $(SAMPLES_RANDOM_DIR)/$(SDK_NAME)-1.$* && find $(SAMPLES_RANDOM_DIR)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_RANDOM_DIR) \; || echo "No random samples for v1.$*"
 endif
 ifeq ($(EXCLUDE_PROBLEM_SAMPLES), 1)
 	@ echo "Removing problematic random sample notice 665610-2023"
 	@ find $(PKG_DIR)/$(SAMPLES_RANDOM_DIR) -name 665610-2023.xml -exec rm -fv {} \;
 endif
 	@ echo "Removing any SDK examples"
-	@ rm -rfv $(PKG_DIR)/$(SDK_DATA_DIR)
+	@ rm -rfv $(PKG_DIR)/$(SDK_DATA_DIR)*
 	@ echo "Modifying Identifier in the CM and replacing XLSX"
 	@ mkdir -p $(PKG_TMP) && unzip $(PKG_DIR)/$(CM_FILE) -d $(PKG_TMP)
 	@ rm -v $(PKG_DIR)/$(CM_FILE)
-	@ sed -i "s|<t>$(DEFAULT_CM_ID)</t>|<t>$(DEFAULT_CM_ID)_allSamples</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
+	@ sed -i "s|<t>$(DEFAULT_CM_ID_PREFIX_CN)_v1.$*</t>|<t>$(DEFAULT_CM_ID_PREFIX_CN)_v1.$*_samples</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
+	@ sed -i "s|<t>$(DEFAULT_CM_DESC_PREFIX_CN), SDK v1.$*</t>|<t>$(DEFAULT_CM_DESC_PREFIX_CN), SDK v1.$* (sample data)</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
 	@ cd $(PKG_TMP) && zip -r tmp.xlsx * && mv -v tmp.xlsx ../../$(PKG_DIR)/$(CM_FILE) && cd ../.. && rm -r $(PKG_TMP)
 	@ echo "Removing outdated metadata"
 	@ rm -fv $(PKG_DIR)/metadata.json
@@ -145,31 +182,40 @@ ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
 	@ echo "Removing inefficient generic validations"
 	@ rm -rfv $(PKG_DIR)/validation/sparql/generic* -v
 endif
+# TODO: not working in any way for some reason
+# @ echo "Cleaning up invalid samples packages (no actual samples)"
+# @ [ -z `ls -A $(PKG_DIR)/$(SAMPLES_CN_DIR)` ] && rm -rfv $(PKG_DIR)
 
-export_cn_samples:
-	@ $(eval PKG_NAME := $(DEFAULT_PKG_PREFIX)_v1.9_allSamples)
+export_cn_samples_v%:
+	@ $(eval PKG_NAME := $(DEFAULT_PKG_PREFIX)_v1.$*_samples)
 	@ cd $(OUTPUT_DIR) && zip -r $(PKG_NAME).zip $(PKG_NAME)
-	@ echo "Samples package exported to $(PKG_DIR).zip"
+	@ echo "Samples package exported to $(OUTPUT_DIR)/$(DEFAULT_PKG_PREFIX)_v1.$*_examples.zip"
 
-package_cn_maximal: package_sync
-	@ mkdir -p $(OUTPUT_DIR)
-	@ $(eval PKG_NAME := $(DEFAULT_PKG_PREFIX)_v1.9_allData)
+package_cn_maximal_v%:
+	@ echo "Preparing maximal CN package, v1.$*"
+	@ $(eval PKG_NAME := $(DEFAULT_PKG_PREFIX)_v1.$*_allData)
 	@ $(eval PKG_DIR := $(OUTPUT_DIR)/$(PKG_NAME))
 	@ $(eval PKG_TMP := tmp/$(PKG_NAME))
-	@ cp -rv mappings/$(DEFAULT_PKG_PREFIX)_v1.9 $(PKG_DIR)
-	@ echo "Including CN SDK example data"
-	@ cp -rv $(SDK_DATA_DIR) $(PKG_DIR)/test_data
-	@ cp -rv $(SDK_DATA_DIR)_invalid $(PKG_DIR)/test_data
-	@ echo "Including CN OP test data"
-	@ cp -rv $(TEST_DATA_DIR)/op_test_cn_d2.1 $(PKG_DIR)/test_data
-	@ cp -rv $(TEST_DATA_DIR)/op_test_cn_gh_issues $(PKG_DIR)/test_data
-	@ echo "Including EF10-24 sample data"
+	@ cp -rv mappings/$(DEFAULT_PKG_PREFIX)_v1.$* $(PKG_DIR)
+	@ echo "Including CN SDK v1.$* example data"
+	@ cp -rv $(SDK_DATA_DIR)/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME)/
+ifeq ($(INCLUDE_INVALID_EXAMPLES), 1)
+	@ echo "Including CN SDK v1.$* example data, INVALIDs"
+	@ cp -rv $(SDK_DATA_DIR)_invalid/eforms-sdk-1.$* $(PKG_DIR)/test_data/$(SDK_DATA_NAME)_invalid
+endif
+# TODO: not working, use Bash notation or bring out into separate target
+# ifeq ($($*), 9)
+# 	@ echo "Including CN OP test data"
+# 	@ cp -rv $(TEST_DATA_DIR)/op_test_cn_d2.1 $(PKG_DIR)/test_data
+# 	@ cp -rv $(TEST_DATA_DIR)/op_test_cn_gh_issues $(PKG_DIR)/test_data
+# endif
+	@ echo "Including EF10-24 systematic sample data"
 	@ mkdir -p $(PKG_DIR)/$(SAMPLES_CN_DIR)
-	@ find $(SAMPLES_CN_DIR)/$(SDK_NAME)-$(DEFAULT_SDK_VERSION)/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_CN_DIR) \;
+	@ test -d $(SAMPLES_CN_DIR)/$(SDK_NAME)-1.$* && find $(SAMPLES_CN_DIR)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_CN_DIR) \; || echo "No systematic samples for v1.$*"
 ifeq ($(INCLUDE_RANDOM_SAMPLES), 1)
-	@ echo "Including random sampling data"
+	@ echo "Including EF10-24 random sampling data"
 	@ mkdir -p $(PKG_DIR)/$(SAMPLES_RANDOM_DIR)
-	@ find $(SAMPLES_RANDOM_DIR)/eforms_sdk_v$(DEFAULT_SDK_VERSION)/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_RANDOM_DIR) \;
+	@ test -d $(SAMPLES_RANDOM_DIR)/$(SDK_NAME)-1.$* && find $(SAMPLES_RANDOM_DIR)/eforms_sdk_v1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_RANDOM_DIR) \; || echo "No random samples for v1.$*"
 endif
 ifeq ($(EXCLUDE_PROBLEM_SAMPLES), 1)
 	@ echo "Removing problematic random sample notice 665610-2023"
@@ -182,10 +228,10 @@ ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
 	@ rm -rfv $(PKG_DIR)/validation/sparql/generic* -v
 endif
 
-export_cn_maximal:
-	@ $(eval PKG_NAME := $(DEFAULT_PKG_PREFIX)_v1.9_allData)
+export_cn_maximal_v%:
+	@ $(eval PKG_NAME := $(DEFAULT_PKG_PREFIX)_v1.$*_allData)
 	@ cd $(OUTPUT_DIR) && zip -r $(PKG_NAME).zip $(PKG_NAME)
-	@ echo "Maximal package exported to $(PKG_DIR).zip"
+	@ echo "Maximal package exported to $(OUTPUT_DIR)/$(DEFAULT_PKG_PREFIX)_v1.$*_examples.zip"
 
 package_cn_all_variants: package_cn_minimal package_cn_examples package_cn_samples package_cn_maximal
 

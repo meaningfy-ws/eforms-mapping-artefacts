@@ -24,6 +24,7 @@
 @prefix fno: <https://w3id.org/function/ontology#> .
 @prefix idlab-fn: <http://example.com/idlab/function/> .
 
+# This is a catch-all TriplesMap to map several related nodes (we group into one representative node)
 tedm:MG-Organization_ND-Company a rr:TriplesMap ;
     rdfs:label "MG-Organization" ;
     rml:logicalSource

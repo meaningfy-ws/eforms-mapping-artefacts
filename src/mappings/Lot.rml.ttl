@@ -4031,7 +4031,7 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-Lot_ND-LotContractAdditionalNa
 .
 
 tedm:MG-MonetaryValue-hasEstimatedValue-Lot_ND-LotValueEstimate a rr:TriplesMap ;
-    rdfs:labele "MonetaryValue";
+    rdfs:label "MonetaryValue";
     rml:logicalSource
         [
             rml:source "data/source.xml" ;
@@ -4070,7 +4070,7 @@ tedm:MG-MonetaryValue-hasEstimatedValue-Lot_ND-LotValueEstimate a rr:TriplesMap 
 .
 
 tedm:MG-Purpose-hasPurpose-Lot_ND-LotMainClassification a rr:TriplesMap ;
-    rdfs:labele "MG-Purpose";
+    rdfs:label "MG-Purpose";
     rml:logicalSource
         [
             rml:source "data/source.xml" ;
@@ -4101,7 +4101,7 @@ tedm:MG-Purpose-hasPurpose-Lot_ND-LotMainClassification a rr:TriplesMap ;
 .
 
 tedm:MG-Purpose-hasPurpose-Lot_ND-LotAdditionalClassification a rr:TriplesMap ;
-    rdfs:labele "MG-Purpose";
+    rdfs:label "MG-Purpose";
     rml:logicalSource
         [
             rml:source "data/source.xml" ;
@@ -4132,7 +4132,7 @@ tedm:MG-Purpose-hasPurpose-Lot_ND-LotAdditionalClassification a rr:TriplesMap ;
 .
 
 tedm:MG-SocialProcurement-fulfillsStrategicProcurement-Lot_ND-LotSocialObjectiveType a rr:TriplesMap ;
-    rdfs:labele "MG-SocialProcurement";
+    rdfs:label "MG-SocialProcurement";
     rml:logicalSource
         [
             rml:source "data/source.xml" ;
@@ -4165,7 +4165,7 @@ tedm:MG-SocialProcurement-fulfillsStrategicProcurement-Lot_ND-LotSocialObjective
 .
 
 tedm:MG-InnovativeProcurement-fulfillsStrategicProcurement-Lot_ND-LotInnovativeAcquisitionType a rr:TriplesMap ;
-    rdfs:labele "MG-InnovativeProcurement";
+    rdfs:label "MG-InnovativeProcurement";
     rml:logicalSource
         [
             rml:source "data/source.xml" ;
@@ -4245,7 +4245,7 @@ tedm:MG-AccessTerm-isSubjectToLotSpecificTerm-Lot_ND-LotTenderingTerms a rr:Trip
 .
 
 tedm:MG-GreenProcurement-fulfillsStrategicProcurement-Lot_ND-LotEnvironmentalImpactType a rr:TriplesMap ;
-    rdfs:labele "MG-GreenProcurement";
+    rdfs:label "MG-GreenProcurement";
     rml:logicalSource
         [
             rml:source "data/source.xml" ;
@@ -4278,7 +4278,7 @@ tedm:MG-GreenProcurement-fulfillsStrategicProcurement-Lot_ND-LotEnvironmentalImp
 .
 
 tedm:MG-GreenProcurement-fulfillsStrategicProcurement-Lot_ND-LotGreenCriteria a rr:TriplesMap ;
-    rdfs:labele "MG-GreenProcurement";
+    rdfs:label "MG-GreenProcurement";
     rml:logicalSource
         [
             rml:source "data/source.xml" ;
@@ -4311,7 +4311,7 @@ tedm:MG-GreenProcurement-fulfillsStrategicProcurement-Lot_ND-LotGreenCriteria a 
 .
 
 tedm:MG-StrategicProcurement-fulfillsStrategicProcurement-Lot-Lot_ND-AccessibilityJustification a rr:TriplesMap ;
-    rdfs:labele "MG-StrategicProcurement";
+    rdfs:label "MG-StrategicProcurement";
     rml:logicalSource
         [
             rml:source "data/source.xml" ;

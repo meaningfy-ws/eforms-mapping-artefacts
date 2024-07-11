@@ -670,36 +670,14 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-Procedure_ND-ProcedureProcurem
 .
 
 tedm:MG-ContractTerm-foreseesContractSpecificTerm-Procedure_ND-ProcedureContractAdditionalNature a rr:TriplesMap ;
+    # predicate mappings are in versioned files (Procedure_v1.3-1.7|1.8+)
     rdfs:label "MG-ContractTerm" ;
-    rml:logicalSource
-        [
-            rml:source "data/source.xml" ;
-            rml:iterator "/*/cac:ProcurementProject/cac:ProcurementAdditionalType[cbc:ProcurementTypeCode/@listName='contract-nature']" ;
-            rml:referenceFormulation ql:XPath
-        ] ;
     rr:subjectMap
         [
             rdfs:label "ND-ProcedureProcurementScope" ;
             rdfs:comment "Primary type declaration for MG-ContractTerm under ND-ProcedureProcurementScope" ;
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ProcurementProjectContractTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
             rr:class epo:ContractTerm
-        ] ;
-    rr:predicateObjectMap
-        [
-            # TODO min SDK 1.3 max SDK 1.7
-            rdfs:label "BT-531-Procedure (value)" ;
-            rdfs:comment "Additional Nature (different from Main) of MG-ContractTerm under ND-ProcedurePlacePerformanceAdditionalInformation" ;
-            rr:predicate epo:hasAdditionalContractNature ;
-            rr:objectMap
-                [
-                    tedm:minSDKVersion "1.8" ;
-                    rdfs:label "at-voc:contract-nature" ;
-                    rr:parentTriplesMap tedm:contract-nature ;
-                    rr:joinCondition [
-                        rr:child "cbc:ProcurementTypeCode" ;
-                        rr:parent "code.value" ;
-                    ] ;
-                ]
         ] ;
 .
 

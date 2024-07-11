@@ -2982,7 +2982,6 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-Lot_ND-ExecutionRequirements a
         ];
     rr:predicateObjectMap
         [
-            # TODO min SDK 1.3 max SDK 1.8
             rdfs:label "BT-70-Lot";
             rdfs:comment "Terms Performance of MG-ContractTerm under ND-ExecutionRequirements";
             rr:predicate epo:hasPerformanceConditions ;

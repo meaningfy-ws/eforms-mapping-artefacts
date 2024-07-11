@@ -188,6 +188,8 @@ tedm:MG-Procedure_ND-LocalLegalBasisWithID a rr:TriplesMap ;
             rr:predicate epo:hasLegalBasisDescription  ;
             rr:objectMap
                 [
+                    rdfs:label "BT-01(d)-Procedure-Language";
+                    rdfs:comment "Language of MG-Procedure under ND-LocalLegalBasisWithID ";
                     rml:reference "if(exists(cbc:DocumentDescription)) then (if(exists(cbc:ID)) then cbc:ID || (if(exists(cbc:ID/@schemeName)) then ' [' || cbc:ID/@schemeName || ']' else '') || ' / ' else '') || cbc:DocumentDescription else null";
                     rml:languageMap [
                         fnml:functionValue [
@@ -244,6 +246,8 @@ tedm:MG-Procedure_ND-LocalLegalBasisNoID a rr:TriplesMap ;
             rr:objectMap
                 [
                     tedm:minSDKVersion "1.4" ;
+                    rdfs:label "BT-01(f)-Procedure-Language";
+                    rdfs:comment "Language of MG-Procedure under ND-LocalLegalBasisNoID";
                     rml:reference "cbc:DocumentDescription";
                     rml:languageMap [
                         fnml:functionValue [
@@ -471,6 +475,8 @@ tedm:MG-Procedure_ND-ProcedureProcurementScope a rr:TriplesMap ;
             rr:predicate dct:title ;
             rr:objectMap
                 [
+                    rdfs:label "BT-21-Procedure-Language" ;
+                    rdfs:comment "Language of MG-Procedure under ND-ProcedureProcurementScope" ;
                     rml:reference "cbc:Name" ;
                     rml:languageMap [
                         fnml:functionValue [
@@ -493,6 +499,8 @@ tedm:MG-Procedure_ND-ProcedureProcurementScope a rr:TriplesMap ;
             rr:predicate dct:description ;
             rr:objectMap
                 [
+                    rdfs:label "BT-24-Procedure-Language" ;
+                    rdfs:comment "Language of MG-Procedure under ND-ProcedureProcurementScope" ;
                     rml:reference "cbc:Description" ;
                     rml:languageMap [
                         fnml:functionValue [
@@ -510,11 +518,13 @@ tedm:MG-Procedure_ND-ProcedureProcurementScope a rr:TriplesMap ;
         ] ;
     rr:predicateObjectMap
         [
-            rdfs:label "BT-300-Procedure" ;
+            rdfs:label "BT-300-Procedure-" ;
             rdfs:comment "Additional Information of MG-Procedure under ND-ProcedureProcurementScope" ;
             rr:predicate epo:hasAdditionalInformation ;
             rr:objectMap
                 [
+                    rdfs:label "BT-300-Procedure-Language" ;
+                    rdfs:comment "Language of MG-Procedure under ND-ProcedureProcurementScope" ;
                     rml:reference "cbc:Note";
                     rml:languageMap [
                         fnml:functionValue [
@@ -764,6 +774,8 @@ tedm:MG-Procedure_ND-ProcedureTenderingProcess a rr:TriplesMap ;
             rr:predicate epo:hasMainFeature ;
             rr:objectMap
                 [
+                    rdfs:label "BT-88-Procedure-Language" ;
+                    rdfs:comment "Language of MG-Procedure under ND-ProcedureTenderingProcess" ;
                     rml:reference "cbc:Description" ;
                     rml:languageMap [
                         fnml:functionValue [
@@ -866,6 +878,8 @@ tedm:MG-Procedure_ND-AcceleratedProcedure a rr:TriplesMap ;
             rr:predicate epo:hasAcceleratedProcedureJustification ;
             rr:objectMap
                 [
+                    rdfs:label "BT-1351-Procedure-Language" ;
+                    rdfs:comment "Language of MG-Procedure under ND-AcceleratedProcedure" ;
                     rml:reference "cbc:ProcessReason" ;
                     rml:languageMap [
                         fnml:functionValue [
@@ -1236,6 +1250,8 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-Procedure_ND-ProcedurePlacePer
             rr:predicate epo:hasPlaceOfPerformanceAdditionalInformation ;
             rr:objectMap
                 [
+                    rdfs:label "BT-728-Procedure-Language";
+                    rdfs:comment "Language of MG-ContractTerm under D-ProcedurePlacePerformanceAdditionalInformation";
                     rml:reference "cbc:Description";
                     rml:languageMap [
                         fnml:functionValue [
@@ -1275,6 +1291,8 @@ tedm:MG-ProcedureTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-CrossBorderL
             rr:predicate epo:hasCrossBorderLaw ;
             rr:objectMap
                 [
+                    rdfs:label "BT-09(b)-Procedure-Language";
+                    rdfs:comment "Language of MG-ProcedureTerm under ND-CrossBorderLaw";
                     rml:reference "cbc:DocumentDescription";
                     rml:languageMap [
                         fnml:functionValue [

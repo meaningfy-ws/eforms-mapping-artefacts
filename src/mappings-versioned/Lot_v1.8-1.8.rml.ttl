@@ -1,4 +1,4 @@
-#--- MG-Lot version-specific SDK v1.3-1.7 ---
+#--- MG-Lot version-specific SDK v1.8-1.8 ---
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -24,55 +24,6 @@
 @prefix fno: <https://w3id.org/function/ontology#> .
 @prefix idlab-fn: <http://example.com/idlab/function/> .
 
-tedm:MG-SubmissionTerm-isSubjectToLotSpecificTerm-Lot_ND-LateTendererInformation a rr:TriplesMap ;
-    rml:logicalSource
-        [
-            rml:source "data/source.xml" ;
-            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:TendererQualificationRequest[not(cbc:CompanyLegalFormCode)]/cac:SpecificTendererRequirement[not(cbc:TendererRequirementTypeCode[@listName='reserved-procurement'])]";
-            rml:referenceFormulation ql:XPath
-        ];
-    rr:predicateObjectMap
-        [
-            rdfs:label "BT-772-Lot";
-            rdfs:comment "Late Tenderer Information of MG-SubmissionTerm under ND-LateTendererInformation";
-            rr:predicate epo:hasLateSubmissionInformationDescription;
-            rr:objectMap
-                [
-                    tedm:minSDKVersion "1.3" ;
-                    tedm:maxSDKVersion "1.7" ;
-                    rml:reference "if(exists(cbc:TendererRequirementTypeCode/@listName='missing-info-submission')) then cbc:Description else null";
-                    rml:languageMap [
-                        fnml:functionValue [
-                            rr:predicateObjectMap [
-                                rr:predicate idlab-fn:str ;
-                                rr:objectMap [ rml:reference "cbc:Description/@languageID" ]
-                                ] ,
-                                tedm:idlab-fn_executes_lookup ,
-                                tedm:idlab-fn_inputFile_language ,
-                                tedm:idlab-fn_fromColumn_code ,
-                                tedm:idlab-fn_toColumn_code
-                        ]
-                    ] ;
-                ] ;
-        ] ;
-    rr:predicateObjectMap
-        [
-            rdfs:label "BT-771-Lot";
-            rr:predicate epo:hasLateSubmissionPermission;
-            rr:objectMap
-                [
-                    tedm:minSDKVersion "1.3" ;
-                    tedm:maxSDKVersion "1.7" ;
-                    rdfs:label "at-voc:missing-info-submission " ;
-                    rr:parentTriplesMap tedm:missing-info-submission ;
-                    rr:joinCondition [
-                        rr:child "cbc:TendererRequirementTypeCode[@listName='missing-info-submission']";
-                        rr:parent "code.value" ;
-                    ] ;
-                ] ;
-        ]
-.
-
 tedm:MG-ProcurementDocument-involvesProcurementDocument-AccessTerm-isSubjectToLotSpecificTerm-Lot_ND-LotDocOfficialLanguage a rr:TriplesMap ;
     rr:subjectMap
         [
@@ -93,15 +44,37 @@ tedm:MG-ProcurementDocument-involvesProcurementDocument-AccessTerm-isSubjectToLo
             rr:predicate epo:hasOfficialLanguage  ;
             rr:objectMap
                 [
-                    tedm:minSDKVersion "1.3" ;
-                    tedm:maxSDKVersion "1.7" ;
+                    tedm:minSDKVersion "1.8" ;
+                    tedm:maxSDKVersion "1.8" ;
                     rdfs:label "at-voc:language" ;
                     rdfs:comment "Documents Official Language of MG-ProcurementDocument under ND-LotProcurementDocument";
                     rr:parentTriplesMap tedm:languageJSON ;
                     rr:joinCondition [
-                        rr:child "cbc:LanguageID[not(../cbc:DocumentStatusCode/text()='non-official')]" ;
+                        rr:child "cbc:LanguageID[../cbc:DocumentStatusCode/text()='official']" ;
                         rr:parent "op_code.value" ;
                     ] ;
+                ] ;
+        ] ;
+.
+
+tedm:MG-AccessTerm-isSubjectToLotSpecificTerm-Lot_ND-LotProcurementDocument a rr:TriplesMap ;
+    # this is technically 1.8+ but will conflict with TriplesMap in 1.9+
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:CallForTendersDocumentReference";
+            rml:referenceFormulation ql:XPath
+        ];    
+     rr:predicateObjectMap
+        [
+            rdfs:label "BT-15-Lot";
+            rdfs:comment "Documents URL of MG-AccessTerm under ND-LotProcurementDocument";
+            rr:predicate epo:hasPublicAccessURL  ;
+            rr:objectMap
+                [
+                    tedm:minSDKVersion "1.8" ;
+                    rml:reference "cac:Attachment[../cbc:DocumentType/text()='non-restricted-document']/cac:ExternalReference/cbc:URI";
+                    rr:datatype xsd:anyURI;
                 ] ;
         ] ;
 .

@@ -1,4 +1,4 @@
-#--- MG-Lot version-specific SDK v1.3-1.6 ---
+#--- MG-Lot version-specific SDK v1.7-1.7 ---
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -28,36 +28,19 @@ tedm:MG-AccessTerm-isSubjectToLotSpecificTerm-Lot_ND-LotProcurementDocument a rr
     rml:logicalSource
         [
             rml:source "data/source.xml" ;
-            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:CallForTendersDocumentReference[cbc:DocumentType/text()='restricted-document']";
+            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:CallForTendersDocumentReference";
             rml:referenceFormulation ql:XPath
         ];
-    rr:predicateObjectMap
-        [
-            rdfs:label "BT-707-Lot";
-            rdfs:comment "Documents Restricted Justification of MG-AccessTerm under ND-LotRestrictedDocuments";
-            rr:predicate epo:hasDocumentRestrictionJustification  ;
-            rr:objectMap
-                [
-                    tedm:minSDKVersion "1.3" ;
-                    tedm:maxSDKVersion "1.6" ;
-                    rdfs:label "at-voc:communication-justification" ;
-                    rr:parentTriplesMap tedm:communication-justification ;
-                    rr:joinCondition [
-                        rr:child "cbc:DocumentTypeCode";
-                        rr:parent "code.value" ;
-                    ] ;
-                ] ;
-        ] ;
      rr:predicateObjectMap
         [
             rdfs:label "BT-15-Lot";
-            rdfs:comment "Documents URL of MG-AccessTerm under ND-LotDocumentsReference";
-            rr:predicate epo:hasPublicAccessURL  ;
+            rdfs:comment "Documents URL of MG-AccessTerm under ND-LotProcurementDocument";
+            rr:predicate epo:hasPublicAccessURL ;
             rr:objectMap
                 [
-                    tedm:minSDKVersion "1.3" ;
-                    tedm:minSDKVersion "1.6" ;
-                    rml:reference "cac:Attachment/cac:ExternalReference/cbc:URI" ;
+                    tedm:minSDKVersion "1.7" ;
+                    tedm:maxSDKVersion "1.7" ;
+                    rml:reference "cac:Attachment[not(../cbc:DocumentType/text()='restricted-document')]/cac:ExternalReference/cbc:URI";
                     rr:datatype xsd:anyURI;
                 ] ;
         ] ;

@@ -167,6 +167,7 @@ endif
 ifeq ($(EXCLUDE_PROBLEM_SAMPLES), 1)
 	@ echo "Removing problematic random sample notice 665610-2023"
 	@ find $(PKG_DIR)/$(SAMPLES_RANDOM_DIR) -name 665610-2023.xml -exec rm -fv {} \;
+	@ find $(PKG_DIR)/$(SAMPLES_CN_DIR) -name 135016-2024.xml -exec rm -fv {} \;
 endif
 	@ echo "Removing any SDK examples"
 	@ rm -rfv $(PKG_DIR)/$(SDK_DATA_DIR)*
@@ -220,6 +221,7 @@ endif
 ifeq ($(EXCLUDE_PROBLEM_SAMPLES), 1)
 	@ echo "Removing problematic random sample notice 665610-2023"
 	@ find $(PKG_DIR)/$(SAMPLES_RANDOM_DIR) -name 665610-2023.xml -exec rm -fv {} \;
+	@ find $(PKG_DIR)/$(SAMPLES_CN_DIR) -name 135016-2024.xml -exec rm -fv {} \;
 endif
 	@ echo "Removing outdated metadata"
 	@ rm -fv $(PKG_DIR)/metadata.json

@@ -41,12 +41,12 @@ tedm:MG-Buyer_ND-ContractingParty a rr:TriplesMap ;
             rr:class epo:Buyer
         ] ;
     # this is an example of an association to an independent resource (role to organization)
-    # TODO should this be another TMap, since it is under ND-ServiceProvider node instead of ND-ContractingParty?
     rr:predicateObjectMap
         [
-            # TODO min SDK 1.3 max SDK 1.9.1
+            # Differences across versions have no functional effect on this mapping
+            # VERINFO: SDK v1.10+ from 1.3-1.9 contain only node name change
             rdfs:label "OPT-300-Procedure-Buyer" ;
-            rdfs:comment "Buyer Technical Identifier Reference" ;
+            rdfs:comment "Buyer Technical Identifier Reference MG-Buyer under ND-ServiceProvider (v1.3-1.9), ND-Buyer (v1.10+)" ;
             rr:predicate epo:playedBy ;
             rr:objectMap
                 [

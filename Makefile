@@ -30,6 +30,8 @@ TX_DIR = transformation
 CM_FILENAME = conceptual_mappings.xlsx
 SHACL_FILE_EPO = ePO_core_shapes.ttl
 SHACL_PATH_EPO = validation/shacl/epo/$(SHACL_FILE_EPO)
+RELEASE_DIR = ../ted-rdf-mapping-eforms
+# override with make RELEASE_DIR=$your-dir ...
 
 JENA_TOOLS_DIR = $(shell test ! -z ${JENA_HOME} && echo ${JENA_HOME} || echo `pwd`/jena)
 JENA_TOOLS_RIOT = $(JENA_TOOLS_DIR)/bin/riot
@@ -50,6 +52,7 @@ VERSIONS := $(shell seq 3 10)
 VERSIONS_SAMPLES := $(3 6 7 8 9)
 
 package_sync: $(addprefix package_sync_v, $(VERSIONS))
+package_release: $(addprefix package_release_v, $(VERSIONS))
 reformat_package_cn: $(addprefix reformat_package_cn_v, $(VERSIONS))
 package_cn_minimal: $(addprefix package_cn_minimal_v, $(VERSIONS))
 export_cn_minimal: $(addprefix export_cn_minimal_v, $(VERSIONS))
@@ -83,6 +86,29 @@ ifeq ($(TRIM_DOWN_SHACL), 1)
 	@ sed -i 's/sh:class at-voc:environmental-impact,/sh:nodeKind sh:IRI ;/' mappings/$(DEFAULT_PKG_PREFIX)_v1.$*/$(SHACL_PATH_EPO)
 	@ sed -i '/.*at-voc:green-public-procurement-criteria ;/d' mappings/$(DEFAULT_PKG_PREFIX)_v1.$*/$(SHACL_PATH_EPO)
 endif
+
+package_release_v%: package_prep
+	@ $(eval PKG_DIR := $(RELEASE_DIR)/mappings/$(DEFAULT_PKG_PREFIX)_v1.$*)
+	@ $(eval PKG_EXISTS := $(shell test -d $(PKG_DIR) && echo yes || echo no))
+	@ if [ "$(PKG_EXISTS)" = "yes" ]; then \
+		echo "Syncing CN v1.$* to $(RELEASE_DIR)"; \
+		rm -rv $(PKG_DIR)/$(TX_DIR)/mappings ; \
+		cp -rv src/mappings $(PKG_DIR)/$(TX_DIR)/ ; \
+		cp -v src/mappings-1.$*/* $(PKG_DIR)/$(TX_DIR)/mappings/ ; \
+		rm -rv $(PKG_DIR)/$(TX_DIR)/resources ; \
+		cp -rv src/$(TX_DIR)/resources $(PKG_DIR)/$(TX_DIR)/ ; \
+	  fi
+#   @ rm -rv $(PKG_DIR)/validation
+#	@ cp -rv src/validation $(PKG_DIR)/
+# ifeq ($(TRIM_DOWN_SHACL), 1)
+# # TODO: is it better to just create and apply a patch?
+# 	@ echo "Modifying ePO SHACL file to suppress rdf:PlainLiteral violations"
+# 	@ sed -i 's/sh:datatype rdf:PlainLiteral/sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] )/' $(PKG_DIR)/$(SHACL_PATH_EPO)
+# 	@ echo "Modifying ePO SHACL file to substitute at-voc constraint with IRI"
+# 	@ sed -i 's/sh:class at-voc.*;/sh:nodeKind sh:IRI ;/' $(PKG_DIR)/$(SHACL_PATH_EPO)
+# 	@ sed -i 's/sh:class at-voc:environmental-impact,/sh:nodeKind sh:IRI ;/' $(PKG_DIR)/$(SHACL_PATH_EPO)
+# 	@ sed -i '/.*at-voc:green-public-procurement-criteria ;/d' $(PKG_DIR)/$(SHACL_PATH_EPO)
+# endif
 
 # FIXME: don't think anyone would use it like this wholesale (but rather more selectively)
 reformat_package_cn_v%:

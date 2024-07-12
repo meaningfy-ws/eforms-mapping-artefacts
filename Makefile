@@ -90,13 +90,12 @@ reformat_package_cn_v%:
 	@ echo "Reformatting RML files for packaging $(DEFAULT_PKG_PREFIX)_v1.$*, with $(OWLCLI_BIN)"
 	for i in `find mappings/$(DEFAULT_PKG_PREFIX)_v1.$*/$(TX_DIR)/mappings -type f`; do mv $$i $$i.bak && $(OWLCLI_CMD) $$i.bak $$i && rm -v $$i.bak; done
 
-# FIXME: running package targets more than once duplicates folders and messes things up -- always run make clean
-
 package_cn_minimal_v%:
 	@ echo "Preparing minimal CN package, v1.$*"
 	@ $(eval PKG_NAME := $(DEFAULT_PKG_PREFIX)_v1.$*_minimal)
 	@ $(eval PKG_DIR := $(OUTPUT_DIR)/$(PKG_NAME))
 	@ $(eval PKG_TMP := tmp/$(PKG_NAME))
+	@ rm -rfv $(PKG_DIR)
 	@ cp -rv mappings/$(DEFAULT_PKG_PREFIX)_v1.$* $(PKG_DIR)
 ifeq ($(REPLACE_CM_METADATA_ID), 1)
 	@ echo "Modifying Identifier in the CM and replacing XLSX"
@@ -123,6 +122,7 @@ package_cn_examples_v%:
 	@ $(eval PKG_NAME := $(DEFAULT_PKG_PREFIX)_v1.$*_examples)
 	@ $(eval PKG_DIR := $(OUTPUT_DIR)/$(PKG_NAME))
 	@ $(eval PKG_TMP := tmp/$(PKG_NAME))
+	@ rm -rfv $(PKG_DIR)
 	@ cp -rv mappings/$(DEFAULT_PKG_PREFIX)_v1.$* $(PKG_DIR)
 	@ echo "Including CN SDK v1.$* example data"
 	@ cp -rv $(SDK_DATA_DIR)/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME)/
@@ -165,6 +165,7 @@ package_cn_samples_v%:
 	@ $(eval PKG_NAME := $(DEFAULT_PKG_PREFIX)_v1.$*_samples)
 	@ $(eval PKG_DIR := $(OUTPUT_DIR)/$(PKG_NAME))
 	@ $(eval PKG_TMP := tmp/$(PKG_NAME))
+	@ rm -rfv $(PKG_DIR)
 	@ cp -rv mappings/$(DEFAULT_PKG_PREFIX)_v1.$* $(PKG_DIR)
 	@ echo "Including EF10-24 systematic sample data"
 	@ mkdir -p $(PKG_DIR)/$(SAMPLES_CN_DIR)
@@ -209,6 +210,7 @@ package_cn_maximal_v%:
 	@ $(eval PKG_NAME := $(DEFAULT_PKG_PREFIX)_v1.$*_allData)
 	@ $(eval PKG_DIR := $(OUTPUT_DIR)/$(PKG_NAME))
 	@ $(eval PKG_TMP := tmp/$(PKG_NAME))
+	@ rm -rfv $(PKG_DIR)
 	@ cp -rv mappings/$(DEFAULT_PKG_PREFIX)_v1.$* $(PKG_DIR)
 	@ echo "Including CN SDK v1.$* example data"
 	@ cp -rv $(SDK_DATA_DIR)/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME)/

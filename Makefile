@@ -1,5 +1,5 @@
 MAPPINGS_DIR = mappings
-OUTPUT_DIR = output
+OUTPUT_DIR = dist
 DEFAULT_PKG_PREFIX = package_cn
 SDK_NAME = eforms-sdk
 DEFAULT_SDK_VERSION = 1.9
@@ -331,6 +331,6 @@ test_output_postproc:
 
 clean:
 	@ rm -fv jena.zip
-	@ rm -rfv output
+	@ rm -rfv dist
 	@ rm -rfv tmp
 	@ rm -rfv src/mappings-1*

@@ -16,6 +16,9 @@ EXCLUDE_INEFFICIENT_VALIDATIONS = 1
 INCLUDE_RANDOM_SAMPLES = 1
 EXCLUDE_PROBLEM_SAMPLES = 1
 INCLUDE_INVALID_EXAMPLES = 0
+EXCLUDE_LARGE_EXAMPLE = 1
+REPLACE_CM_METADATA_ID = 1
+REPLACE_CM_METADATA_ID_EXAMPLES = 0
 
 CANONICAL_TEST_OUTPUT = src/output.ttl
 CANONICAL_RML_DIR = src/mappings
@@ -43,6 +46,7 @@ SAMPLES_RANDOM_DIR = $(TEST_DATA_DIR)/$(SAMPLES_RANDOM_NAME)
 CM_FILE = $(TX_DIR)/$(CM_FILENAME)
 
 VERSIONS := $(shell seq 3 10)
+# some versions don't currently have systematic and/or random samples
 VERSIONS_SAMPLES := $(3 6 7 8 9)
 
 package_sync: $(addprefix package_sync_v, $(VERSIONS))
@@ -94,12 +98,14 @@ package_cn_minimal_v%:
 	@ $(eval PKG_DIR := $(OUTPUT_DIR)/$(PKG_NAME))
 	@ $(eval PKG_TMP := tmp/$(PKG_NAME))
 	@ cp -rv mappings/$(DEFAULT_PKG_PREFIX)_v1.$* $(PKG_DIR)
+ifeq ($(REPLACE_CM_METADATA_ID), 1)
 	@ echo "Modifying Identifier in the CM and replacing XLSX"
 	@ mkdir -p $(PKG_TMP) && unzip $(PKG_DIR)/$(CM_FILE) -d $(PKG_TMP)
 	@ rm -v $(PKG_DIR)/$(CM_FILE)
 	@ sed -i "s|<t>$(DEFAULT_CM_ID_PREFIX_CN)_v1.$*</t>|<t>$(DEFAULT_CM_ID_PREFIX_CN)_v1.$*_minimal</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
 	@ sed -i "s|<t>$(DEFAULT_CM_DESC_PREFIX_CN), SDK v1.$*</t>|<t>$(DEFAULT_CM_DESC_PREFIX_CN), SDK v1.$* (minimal data)</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
 	@ cd $(PKG_TMP) && zip -r tmp.xlsx * && mv -v tmp.xlsx ../../$(PKG_DIR)/$(CM_FILE) && cd ../.. && rm -r $(PKG_TMP)
+endif
 	@ echo "Removing outdated metadata"
 	@ rm -fv $(PKG_DIR)/metadata.json
 ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
@@ -130,14 +136,18 @@ endif
 # 	@ cp -rv $(TEST_DATA_DIR)/op_test_cn_d2.1 $(PKG_DIR)/test_data
 # 	@ cp -rv $(TEST_DATA_DIR)/op_test_cn_gh_issues $(PKG_DIR)/test_data
 # endif
+ifeq ($(EXCLUDE_LARGE_EXAMPLE), 1)
 	@ echo "Removing large file cn_24_maximal_100_lots.xml"
 	@ find $(PKG_DIR) -name "cn_24_maximal_100_lots.xml" -exec rm -v {} \;
+endif
+ifeq ($(REPLACE_METADATA_ID_EXAMPLES), 1)
 	@ echo "Modifying Identifier in the CM and replacing XLSX"
 	@ mkdir -p $(PKG_TMP) && unzip $(PKG_DIR)/$(CM_FILE) -d $(PKG_TMP)
 	@ rm -v $(PKG_DIR)/$(CM_FILE)
 	@ sed -i "s|<t>$(DEFAULT_CM_ID_PREFIX_CN)_v1.$*</t>|<t>$(DEFAULT_CM_ID_PREFIX_CN)_v1.$*_examples</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
 	@ sed -i "s|<t>$(DEFAULT_CM_DESC_PREFIX_CN), SDK v1.$*</t>|<t>$(DEFAULT_CM_DESC_PREFIX_CN), SDK v1.$* (SDK example data)</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
 	@ cd $(PKG_TMP) && zip -r tmp.xlsx * && mv -v tmp.xlsx ../../$(PKG_DIR)/$(CM_FILE) && cd ../.. && rm -r $(PKG_TMP)
+endif
 	@ echo "Removing outdated metadata"
 	@ rm -fv $(PKG_DIR)/metadata.json
 ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
@@ -171,12 +181,14 @@ ifeq ($(EXCLUDE_PROBLEM_SAMPLES), 1)
 endif
 	@ echo "Removing any SDK examples"
 	@ rm -rfv $(PKG_DIR)/$(SDK_DATA_DIR)*
+ifeq ($(REPLACE_METADATA_ID), 1)
 	@ echo "Modifying Identifier in the CM and replacing XLSX"
 	@ mkdir -p $(PKG_TMP) && unzip $(PKG_DIR)/$(CM_FILE) -d $(PKG_TMP)
 	@ rm -v $(PKG_DIR)/$(CM_FILE)
 	@ sed -i "s|<t>$(DEFAULT_CM_ID_PREFIX_CN)_v1.$*</t>|<t>$(DEFAULT_CM_ID_PREFIX_CN)_v1.$*_samples</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
 	@ sed -i "s|<t>$(DEFAULT_CM_DESC_PREFIX_CN), SDK v1.$*</t>|<t>$(DEFAULT_CM_DESC_PREFIX_CN), SDK v1.$* (sample data)</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
 	@ cd $(PKG_TMP) && zip -r tmp.xlsx * && mv -v tmp.xlsx ../../$(PKG_DIR)/$(CM_FILE) && cd ../.. && rm -r $(PKG_TMP)
+endif
 	@ echo "Removing outdated metadata"
 	@ rm -fv $(PKG_DIR)/metadata.json
 ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
@@ -222,6 +234,14 @@ ifeq ($(EXCLUDE_PROBLEM_SAMPLES), 1)
 	@ echo "Removing problematic random sample notice 665610-2023"
 	@ find $(PKG_DIR)/$(SAMPLES_RANDOM_DIR) -name 665610-2023.xml -exec rm -fv {} \;
 	@ find $(PKG_DIR)/$(SAMPLES_CN_DIR) -name 135016-2024.xml -exec rm -fv {} \;
+endif
+ifeq ($(REPLACE_METADATA_ID), 1)
+	@ echo "Modifying Identifier in the CM and replacing XLSX"
+	@ mkdir -p $(PKG_TMP) && unzip $(PKG_DIR)/$(CM_FILE) -d $(PKG_TMP)
+	@ rm -v $(PKG_DIR)/$(CM_FILE)
+	@ sed -i "s|<t>$(DEFAULT_CM_ID_PREFIX_CN)_v1.$*</t>|<t>$(DEFAULT_CM_ID_PREFIX_CN)_v1.$*_maximal</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
+	@ sed -i "s|<t>$(DEFAULT_CM_DESC_PREFIX_CN), SDK v1.$*</t>|<t>$(DEFAULT_CM_DESC_PREFIX_CN), SDK v1.$* (all data)</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
+	@ cd $(PKG_TMP) && zip -r tmp.xlsx * && mv -v tmp.xlsx ../../$(PKG_DIR)/$(CM_FILE) && cd ../.. && rm -r $(PKG_TMP)
 endif
 	@ echo "Removing outdated metadata"
 	@ rm -fv $(PKG_DIR)/metadata.json

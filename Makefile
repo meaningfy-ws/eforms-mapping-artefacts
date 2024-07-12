@@ -63,7 +63,6 @@ export_cn_maximal: $(addprefix export_cn_maximal_v, $(VERSIONS))
 package_prep:
 	@ echo "Staging versioned folders"
 	@ cd src && bash $(MULTIVER_SCRIPT)
-	@ mkdir -p $(OUTPUT_DIR)
 
 # TODO: move src subfolders around to be more compatible w/ packages (mappings -> transformation)
 # we are not copying over CM for now -- leaving it under manual control
@@ -95,6 +94,7 @@ package_cn_minimal_v%:
 	@ $(eval PKG_NAME := $(DEFAULT_PKG_PREFIX)_v1.$*_minimal)
 	@ $(eval PKG_DIR := $(OUTPUT_DIR)/$(PKG_NAME))
 	@ $(eval PKG_TMP := tmp/$(PKG_NAME))
+	@ mkdir -p $(OUTPUT_DIR)
 	@ rm -rfv $(PKG_DIR)
 	@ cp -rv mappings/$(DEFAULT_PKG_PREFIX)_v1.$* $(PKG_DIR)
 ifeq ($(REPLACE_CM_METADATA_ID), 1)
@@ -122,6 +122,7 @@ package_cn_examples_v%:
 	@ $(eval PKG_NAME := $(DEFAULT_PKG_PREFIX)_v1.$*_examples)
 	@ $(eval PKG_DIR := $(OUTPUT_DIR)/$(PKG_NAME))
 	@ $(eval PKG_TMP := tmp/$(PKG_NAME))
+	@ mkdir -p $(OUTPUT_DIR)
 	@ rm -rfv $(PKG_DIR)
 	@ cp -rv mappings/$(DEFAULT_PKG_PREFIX)_v1.$* $(PKG_DIR)
 	@ echo "Including CN SDK v1.$* example data"
@@ -165,6 +166,7 @@ package_cn_samples_v%:
 	@ $(eval PKG_NAME := $(DEFAULT_PKG_PREFIX)_v1.$*_samples)
 	@ $(eval PKG_DIR := $(OUTPUT_DIR)/$(PKG_NAME))
 	@ $(eval PKG_TMP := tmp/$(PKG_NAME))
+	@ mkdir -p $(OUTPUT_DIR)
 	@ rm -rfv $(PKG_DIR)
 	@ cp -rv mappings/$(DEFAULT_PKG_PREFIX)_v1.$* $(PKG_DIR)
 	@ echo "Including EF10-24 systematic sample data"
@@ -210,6 +212,7 @@ package_cn_maximal_v%:
 	@ $(eval PKG_NAME := $(DEFAULT_PKG_PREFIX)_v1.$*_allData)
 	@ $(eval PKG_DIR := $(OUTPUT_DIR)/$(PKG_NAME))
 	@ $(eval PKG_TMP := tmp/$(PKG_NAME))
+	@ mkdir -p $(OUTPUT_DIR)
 	@ rm -rfv $(PKG_DIR)
 	@ cp -rv mappings/$(DEFAULT_PKG_PREFIX)_v1.$* $(PKG_DIR)
 	@ echo "Including CN SDK v1.$* example data"

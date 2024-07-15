@@ -260,7 +260,7 @@ endif
 ifeq ($(INCLUDE_RANDOM_SAMPLES), 1)
 	@ echo "Including EF10-24 random sampling data"
 	@ mkdir -p $(PKG_DIR)/$(SAMPLES_RANDOM_DIR)
-	@ test -d $(SAMPLES_RANDOM_DIR)/$(SDK_NAME)-1.$* && find $(SAMPLES_RANDOM_DIR)/eforms_sdk_v1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_RANDOM_DIR) \; || echo "No random samples for v1.$*"
+	@ test -d $(SAMPLES_RANDOM_DIR)/$(SDK_NAME)-1.$* && find $(SAMPLES_RANDOM_DIR)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_RANDOM_DIR) \; || echo "No random samples for v1.$*"
 endif
 ifeq ($(EXCLUDE_PROBLEM_SAMPLES), 1)
 	@ echo "Removing problematic sample notices"

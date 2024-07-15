@@ -266,7 +266,7 @@ ifeq ($(EXCLUDE_PROBLEM_SAMPLES), 1)
 	@ echo "Removing problematic sample notices"
 	@ find $(PKG_DIR)/$(SAMPLES_RANDOM_DIR) -name 665610-2023.xml -exec rm -fv {} \;
 	@ find $(PKG_DIR)/$(SAMPLES_CN_DIR) -name 135016-2024.xml -exec rm -fv {} \;
-	@ find $(PKG_DIR)/$(SAMPLES_CN_DIR) -name 725041-2023.xml -exec rm -fv {
+	@ find $(PKG_DIR)/$(SAMPLES_CN_DIR) -name 725041-2023.xml -exec rm -fv {} \;
 endif
 ifeq ($(REPLACE_METADATA_ID), 1)
 	@ echo "Modifying Identifier in the CM and replacing XLSX"

@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>eForms mapping docs :: eForms-mapping-docs</title>
-    <meta name="generator" content="Antora 3.1.8">
+    <title>TED-RDF eForms Mapping :: eForms-mapping-docs</title>
+    <meta name="generator" content="Antora 3.1.9">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
   <body class="article">
@@ -73,9 +73,76 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">eForms mapping docs</h1>
+<h1 class="page">TED-RDF eForms Mapping</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#8217;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+<p>The TED-RDF eForms Mapping project prescribes packages (or <em>suites</em>) of data transformation rules for digital public procurement notices, published on the <a href="https://ted.europa.eu/en/website">Tenders Electronic Daily (TED) website</a> by the <a href="https://op.europa.eu/en/home">Publications Office of the European Union (OP)</a>, based on the <a href="https://single-market-economy.ec.europa.eu/single-market/public-procurement/digital-procurement/eforms_en">eForms legislative standard</a>.</p>
+</div>
+<div class="paragraph">
+<p>The transformation is based on model mapping between the original XML format of the TED eForm notices, and the <a href="https://docs.ted.europa.eu/EPO/latest/index.html">eProcurement ontology (ePO)</a>, producing data in the <a href="https://www.w3.org/RDF/">RDF</a> format for <a href="https://joinup.ec.europa.eu/collection/nifo-national-interoperability-framework-observatory/solution/eif-toolbox/interoperability-layer-5-semantic-interoperability">semantic data interoperability</a>. It is the next iteration of the <a href="https://github.com/OP-TED/ted-rdf-mapping">RDF mapping initiative</a>, which was conceived for the <a href="https://ted.europa.eu/en/simap/standard-ted-schema-forms-in-pdf">"TED schema" standard forms (SF)</a>, an older notice standard that is concurrently supported by the OP.</p>
+</div>
+<div class="paragraph">
+<p>These RDF mapping projects, together with a <a href="https://github.com/OP-TED/ted-rdf-conversion-pipeline">pipeline system for automatic XML-RDF data conversion</a>, are collectively known as the <a href="https://docs.ted.europa.eu/SWS/index.html">TED Semantic Web Service (TED-SWS)</a>. As the groundwork for XML-RDF transformation was already set by the SF mapping project, much of the <a href="https://docs.ted.europa.eu/SWS/mapping_suite/index.html">existing documentation</a> is still applicable for eForms. The focus of this document, therefore, is mainly on the differences between SF and eForms mapping.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mapping_methodology"><a class="anchor" href="#_mapping_methodology"></a>Mapping Methodology</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Developing mappings for eForms still follows the <a href="https://docs.ted.europa.eu/SWS/mapping_suite/methodology.html">sound principles of conceptual agreement followed by technical implementation</a>, divided into the distinct stages of <em>conceptual mapping</em> ( CM ) using a dialect of <a href="https://www.w3.org/TR/sparql11-property-paths/">SPARQL Path</a> patterns, and <em>technical mapping</em> ( TM ) using the TOCITE[RML mapping language].</p>
+</div>
+<div class="sect2">
+<h3 id="_eforms_sdk"><a class="anchor" href="#_eforms_sdk"></a>eForms SDK</h3>
+<div class="paragraph">
+<p>In contrast to SF, which had TOCITE[XSD schemas] as the only cue for the underlying model, there is an TOCITE[eForms SDK] which prescribes eForm XML element XPaths in terms of nodes and fields, which lends an easier framework for the management and comprehension of the UBL-based XML model behind elements used across the eForm notices. The notices themselves are categorized under notice types and subtypes, such as Competition Notice, subtype 16 (EF16).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mapping_groups"><a class="anchor" href="#_mapping_groups"></a>Mapping Groups</h3>
+<div class="paragraph">
+<p>A new component introduced into the mapping methodology is the notion of a Mapping Group (MG), which is a representation of RDF connections (relationships) and subject groupings in a simple, hyphen-delimited textual notation, in the form:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">MG-{TrailingClass}-{intermediateClassAndPropertyPath}-{RootClass}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where, for example, the full path of an organisation&#8217;s address might be:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">MG-Address-hasAddress-Location-hasLocation-Organization</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This serves to provide an indication of how RDF statements are logically grouped together to form the right (connected) instances, given that data for a given subject may be spread across completely different XPaths in the source XML. That is why, in the technical mapping, MGs are used to form the subject URIs of the RML rules (TriplesMaps), suffixed with the node name (as per the SDK) where the information comes from, for example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">tedm:MG-Address-hasAddress-Location-hasLocation-Organization_ND-Company a rr:TriplesMap</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Different nodes usually require different subject templates or iterators, especially those which are located at entirely different or <em>orthogonal</em> XPaths, requiring as many RML TriplesMaps with the same MG but different node names.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_toolchain"><a class="anchor" href="#_toolchain"></a>Toolchain</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>While there is an intricate set of command-line software tools for the SF mapping project, there is no such tooling provided for the eForms mapping project. The complete transformation cycle is supported in and carried out already by the pipeline. For development, simple one-liner commands should suffice, for example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">rmlmapper -m $MAPPINGS_FOLDER/* -s turtle &gt; $OUTPUT_FILE</code></pre>
+</div>
+</div>
+</div>
 </div>
 </article>
   </div>

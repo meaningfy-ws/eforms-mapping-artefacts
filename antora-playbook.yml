@@ -5,9 +5,8 @@ content:
   edit_url: false
   sources:
     - url: https://github.com/meaningfy-ws/eforms-mapping-artefacts.git
-#    - url: /home/dude/work/ted-rdf-conversion-pipeline
       branches:
-      - feature/TED5-305 #change this to main
+      - feature/TED5-288/docs # change this to main upon/before merge
       start_path: docs/antora
 asciidoc:
   attributes:

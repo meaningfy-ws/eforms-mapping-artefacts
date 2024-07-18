@@ -77,10 +77,10 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>The TED-RDF eForms Mapping project prescribes packages (or <em>suites</em>) of data transformation rules for digital public procurement notices, published on the <a href="https://ted.europa.eu/en/website">Tenders Electronic Daily (TED) website</a> by the <a href="https://op.europa.eu/en/home">Publications Office of the European Union (OP)</a>, based on the <a href="https://single-market-economy.ec.europa.eu/single-market/public-procurement/digital-procurement/eforms_en">eForms legislative standard</a>.</p>
+<p>The TED-RDF eForms Mapping project prescribes packages (or <em>suites</em>) of data transformation rules and related artefacts, for digital public procurement notices published on the <a href="https://ted.europa.eu/en/website">Tenders Electronic Daily (TED) website</a> by the <a href="https://op.europa.eu/en/home">Publications Office of the European Union (OP)</a>, based on the <a href="https://single-market-economy.ec.europa.eu/single-market/public-procurement/digital-procurement/eforms_en">eForms legislative standard</a>.</p>
 </div>
 <div class="paragraph">
-<p>The transformation is based on model mapping between the original XML format of the TED eForm notices, and the <a href="https://docs.ted.europa.eu/EPO/latest/index.html">eProcurement ontology (ePO)</a>, producing data in the <a href="https://www.w3.org/RDF/">RDF</a> format for <a href="https://joinup.ec.europa.eu/collection/nifo-national-interoperability-framework-observatory/solution/eif-toolbox/interoperability-layer-5-semantic-interoperability">semantic data interoperability</a>. It is the next iteration of the <a href="https://github.com/OP-TED/ted-rdf-mapping">RDF mapping initiative</a>, which was conceived for the <a href="https://ted.europa.eu/en/simap/standard-ted-schema-forms-in-pdf">"TED schema" standard forms (SF)</a>, an older notice standard that is concurrently supported by the OP.</p>
+<p>The transformation is based on model mapping between the original <a href="https://www.w3.org/XML/">XML</a> format of the TED eForm notices, and the <a href="https://docs.ted.europa.eu/EPO/latest/index.html">eProcurement ontology (ePO)</a>, producing data in the <a href="https://www.w3.org/RDF/">RDF</a> format for <a href="https://joinup.ec.europa.eu/collection/nifo-national-interoperability-framework-observatory/solution/eif-toolbox/interoperability-layer-5-semantic-interoperability">semantic data interoperability</a>. It is the next iteration of the <a href="https://github.com/OP-TED/ted-rdf-mapping">RDF mapping initiative</a>, which was conceived for the <a href="https://ted.europa.eu/en/simap/standard-ted-schema-forms-in-pdf">"TED schema" standard forms (SF)</a>, an older notice standard that is concurrently supported by the OP.</p>
 </div>
 <div class="paragraph">
 <p>These RDF mapping projects, together with a <a href="https://github.com/OP-TED/ted-rdf-conversion-pipeline">pipeline system for automatic XML-RDF data conversion</a>, are collectively known as the <a href="https://docs.ted.europa.eu/SWS/index.html">TED Semantic Web Service (TED-SWS)</a>. As the groundwork for XML-RDF transformation was already set by the SF mapping project, much of the <a href="https://docs.ted.europa.eu/SWS/mapping_suite/index.html">existing documentation</a> is still applicable for eForms. The focus of this document, therefore, is mainly on the differences between SF and eForms mapping.</p>
@@ -88,21 +88,45 @@
 </div>
 </div>
 <div class="sect1">
+<h2 id="_software_requirements"><a class="anchor" href="#_software_requirements"></a>Software Requirements</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Users need only to install the following external software tools, libraries
+and/or runtimes if developing and testing the RML mappings:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Java 11+ (tested up to 17)</p>
+</li>
+<li>
+<p>RMLMapper-Java==v6.2.2</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>RMLMapper is currently tied to v6.2.2 because of an [issue with conditional
+instantiation](<a href="https://github.com/RMLio/rmlmapper-java/issues/236" class="bare">https://github.com/RMLio/rmlmapper-java/issues/236</a>) (currently
+fixed but <a href="https://github.com/RMLio/rmlmapper-java/blob/144f9b4cb1ca3c7174f9453f28ec626996c19020/CHANGELOG.md">yet unreleased</a>).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_mapping_methodology"><a class="anchor" href="#_mapping_methodology"></a>Mapping Methodology</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Developing mappings for eForms still follows the <a href="https://docs.ted.europa.eu/SWS/mapping_suite/methodology.html">sound principles of conceptual agreement followed by technical implementation</a>, divided into the distinct stages of <em>conceptual mapping</em> ( CM ) using a dialect of <a href="https://www.w3.org/TR/sparql11-property-paths/">SPARQL Path</a> patterns, and <em>technical mapping</em> ( TM ) using the TOCITE[RML mapping language].</p>
+<p>Developing mappings for eForms still follows the <a href="https://docs.ted.europa.eu/SWS/mapping_suite/methodology.html">sound principles of conceptual agreement followed by technical implementation</a>, divided into the distinct stages of <em>conceptual mapping</em> ( CM ) using a dialect of <a href="https://www.w3.org/TR/sparql11-property-paths/">SPARQL Path</a> patterns, and <em>technical mapping</em> ( TM ) using the <a href="https://rml.io/">RML mapping language</a>.</p>
 </div>
 <div class="sect2">
-<h3 id="_eforms_sdk"><a class="anchor" href="#_eforms_sdk"></a>eForms SDK</h3>
+<h3 id="_eforms_sdk_field_definitions"><a class="anchor" href="#_eforms_sdk_field_definitions"></a>eForms SDK Field Definitions</h3>
 <div class="paragraph">
-<p>In contrast to SF, which had TOCITE[XSD schemas] as the only cue for the underlying model, there is an TOCITE[eForms SDK] which prescribes eForm XML element XPaths in terms of nodes and fields, which lends an easier framework for the management and comprehension of the UBL-based XML model behind elements used across the eForm notices. The notices themselves are categorized under notice types and subtypes, such as Competition Notice, subtype 16 (EF16).</p>
+<p>In contrast to SF, which had <a href="https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tedschemas-archive">XSD schemas</a> as the only cue for the underlying model, there is an <a href="https://github.com/OP-TED/eForms-SDK">eForms SDK</a> which prescribes eForm XML element <a href="https://developer.mozilla.org/en-US/docs/Web/XPath">XPaths</a> in terms of nodes and fields, which lends an easier framework for the management and comprehension of the <a href="http://docs.oasis-open.org/ubl/os-UBL-2.3/UBL-2.3.html">UBL</a>-based XML model behind elements used across the eForm notices. The notices themselves are categorized under <a href="https://docs.ted.europa.eu/eforms/latest/schema/documents-forms-and-notices.html">document, form and notice types and subtypes</a>, such as Competition Notice, subtype 16 (EF16).</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_mapping_groups"><a class="anchor" href="#_mapping_groups"></a>Mapping Groups</h3>
 <div class="paragraph">
-<p>A new component introduced into the mapping methodology is the notion of a Mapping Group (MG), which is a representation of RDF connections (relationships) and subject groupings in a simple, hyphen-delimited textual notation, in the form:</p>
+<p>A new idea introduced into the mapping methodology is the notion of a Mapping Group (MG), which is a representation of RDF connections (relationships) and subject groupings in a simple, hyphen-delimited textual notation, in the form:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -132,14 +156,36 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_toolchain"><a class="anchor" href="#_toolchain"></a>Toolchain</h2>
+<h2 id="_mapping_suite_structure"><a class="anchor" href="#_mapping_suite_structure"></a>Mapping Suite Structure</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>While there is an intricate set of command-line software tools for the SF mapping project, there is no such tooling provided for the eForms mapping project. The complete transformation cycle is supported in and carried out already by the pipeline. For development, simple one-liner commands should suffice, for example:</p>
+<p>The term "suite" or "package" can be used interchangeably.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_toolchain"><a class="anchor" href="#_toolchain"></a>Toolchain</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_no_custom_tooling"><a class="anchor" href="#_no_custom_tooling"></a>No custom tooling</h3>
+<div class="paragraph">
+<p>While there is a comprehensive set of <a href="https://docs.ted.europa.eu/SWS/mapping_suite/toolchain.html">command-line software tools for the SF mapping project</a>, there is no such tooling provided for the eForms mapping project. The complete transformation cycle is supported in and carried out already by the <a href="https://github.com/OP-TED/ted-rdf-conversion-pipeline">pipeline</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rmlmapper_for_development"><a class="anchor" href="#_rmlmapper_for_development"></a>RMLMapper for development</h3>
+<div class="paragraph">
+<p>For development, simple <a href="https://github.com/RMLio/rmlmapper-java">RMLMapper</a> commands (which the SF tools use) can be employed directly, for example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-none hljs">rmlmapper -m $MAPPINGS_FOLDER/* -s turtle &gt; $OUTPUT_FILE</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where the <code>$MAPPING_FOLDER</code> is a folder with the right package structure, and
+<code>$OUTPUT_FILE</code> is the desired RDF output file, usually suffixed with the <code>.ttl</code>
+extension (for the Turtle serialization as provided with the <code>-s</code> argument).</p>
 </div>
 </div>
 </div>

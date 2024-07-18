@@ -313,10 +313,10 @@ tedm:MG-MonetaryValue-hasEstimatedValue-LotGroup_ND-LotsGroupValueEstimate  a rr
             rml:reference "if (exists(cbc:EstimatedOverallContractAmount)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_PurposeLotGroupEstimatedValue_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
             rr:class epo:MonetaryValue
         ] ;
-   rr:predicateObjectMap
+    rr:predicateObjectMap
         [
             rdfs:label "BT-27-LotsGroup";
-            rdfs:comment "Estimated Value of MG-MonetaryValue undr ND-LotsGroupValueEstimate";
+            rdfs:comment "Estimated Value of MG-MonetaryValue under ND-LotsGroupValueEstimate";
             rr:predicate epo:hasAmountValue ;
             rr:objectMap
                 [
@@ -327,7 +327,7 @@ tedm:MG-MonetaryValue-hasEstimatedValue-LotGroup_ND-LotsGroupValueEstimate  a rr
     rr:predicateObjectMap
         [
             rdfs:label "BT-27-LotsGroup-Currency";
-            rdfs:comment "Currency of MG-MonetaryValue undr ND-LotsGroupValueEstimate";
+            rdfs:comment "Currency of Estimated Value of MG-MonetaryValue under ND-LotsGroupValueEstimate";
             rr:predicate epo:hasCurrency ;
             rr:objectMap
                 [
@@ -338,7 +338,7 @@ tedm:MG-MonetaryValue-hasEstimatedValue-LotGroup_ND-LotsGroupValueEstimate  a rr
                         rr:parent "code.value" ;
                     ] ;
                 ] ;
-        ]
+        ] ;
 .
 
 tedm:MG-MonetaryValue-hasLaunchFrameworkAgreementMaximumValue-LotGroup_ND-LotsGroupValueEstimateExtension  a rr:TriplesMap ;
@@ -355,7 +355,7 @@ tedm:MG-MonetaryValue-hasLaunchFrameworkAgreementMaximumValue-LotGroup_ND-LotsGr
             rml:reference "if (exists(efbc:FrameworkMaximumAmount)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_LotsGroupValueEstimateExtension_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
             rr:class epo:MonetaryValue
         ] ;
-   rr:predicateObjectMap
+    rr:predicateObjectMap
         [
             rdfs:label "BT-271-LotsGroup";
             rdfs:comment "Framework Maximum Value of MG-MonetaryValue under ND-LotsGroupValueEstimateExtension";
@@ -370,7 +370,7 @@ tedm:MG-MonetaryValue-hasLaunchFrameworkAgreementMaximumValue-LotGroup_ND-LotsGr
     rr:predicateObjectMap
         [
             rdfs:label "BT-271-LotsGroup-Currency";
-            rdfs:comment "Currency of MG-MonetaryValue under ND-LotsGroupValueEstimateExtension";
+            rdfs:comment "Currency of Framework Maximum Value of MG-MonetaryValue under ND-LotsGroupValueEstimateExtension";
             rr:predicate epo:hasCurrency ;
             rr:objectMap
                 [
@@ -381,7 +381,7 @@ tedm:MG-MonetaryValue-hasLaunchFrameworkAgreementMaximumValue-LotGroup_ND-LotsGr
                         rr:parent "code.value" ;
                     ] ;
                 ] ;
-        ]
+        ] ;
 .
 
 tedm:MG-MonetaryValue-hasLaunchFrameworkAgreementMaximumValue-LotGroup_ND-LotsGroupFA  a rr:TriplesMap ;
@@ -398,7 +398,7 @@ tedm:MG-MonetaryValue-hasLaunchFrameworkAgreementMaximumValue-LotGroup_ND-LotsGr
             rml:reference "if (exists(cbc:EstimatedMaximumValueAmount)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_LotsGroupValueMaximum_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
             rr:class epo:MonetaryValue
         ] ;
-   rr:predicateObjectMap
+    rr:predicateObjectMap
         [
             # Differences across versions have no functional effect on this mapping
             # VERINFO: SDK v1.6 from v1.3-1.5 contains only field name change, along with introduction of Currency attribute and other mapping-irrelevant changes
@@ -414,7 +414,7 @@ tedm:MG-MonetaryValue-hasLaunchFrameworkAgreementMaximumValue-LotGroup_ND-LotsGr
     rr:predicateObjectMap
         [
             rdfs:label "BT-157-LotsGroup-Currency";
-            rdfs:comment "Currency of MG-MonetaryValue under ND-LotsGroupFA";
+            rdfs:comment "Currency of Group Framework Maximum Value (v1.6+), Group Framework Estimated Maximum Value (v1.3-1.5) of MG-MonetaryValue under ND-LotsGroupFA";
             rr:predicate epo:hasCurrency ;
             rr:objectMap
                 [
@@ -425,7 +425,7 @@ tedm:MG-MonetaryValue-hasLaunchFrameworkAgreementMaximumValue-LotGroup_ND-LotsGr
                         rr:parent "code.value" ;
                     ] ;
                 ] ;
-        ]
+        ] ;
 .
 
 tedm:MG-AwardCriterion-specifiesProcurementCriterion-LotGroup_ND-LotsGroupAwardCriterion a rr:TriplesMap ;

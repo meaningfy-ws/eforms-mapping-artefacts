@@ -3131,7 +3131,7 @@ tedm:MG-Quantity-hasTotalQuantity-Purpose-hasPurpose-Lot_ND-LotProcurementScope 
     rr:predicateObjectMap
         [
             rdfs:label "BT-625-Lot";
-            rdfs:comment "Unit of MG-Quantity under ND-LotProcurementScope";
+            rdfs:comment "Unit of Quantity of MG-Quantity under ND-LotProcurementScope";
             rr:predicate epo:hasUnitCode    ;
             rr:objectMap
                 [
@@ -3841,14 +3841,14 @@ rdfs:label "MG-SpecificDuration";
             rr:objectMap
                 [
                     rdfs:label "BT-98-Lot-Unit (time:TemporalUnit)" ;
-                    rdfs:comment "Unit of MG-SpecificDuration under ND-LotTenderingTerms";
+                    rdfs:comment "Unit of Tender Validity Deadline of MG-SpecificDuration under ND-LotTenderingTerms";
                     rr:parentTriplesMap tedm:temporal_unit ;
                     rr:joinCondition [
                         rr:child "cbc:DurationMeasure/@unitCode" ;
                         rr:parent "xmlElement" ;
                     ] ;
                 ] ;
-        ]
+        ] ;
 .
 
 tedm:MG-ReviewTerm-isSubjectToLotSpecificTerm-Lot_ND-LotReviewTerms a rr:TriplesMap ;
@@ -4014,7 +4014,7 @@ tedm:MG-MonetaryValue-hasEstimatedValue-Lot_ND-LotValueEstimate a rr:TriplesMap 
     rr:predicateObjectMap
         [
             rdfs:label "BT-27-Lot-Currency" ;
-            rdfs:comment "Currency of MG-MonetaryValue under ND-LotValueEstimate" ;
+            rdfs:comment "Currency of Estimated Value of MG-MonetaryValue under ND-LotValueEstimate" ;
             rr:predicate epo:hasCurrency ;
             rr:objectMap
                 [
@@ -4025,7 +4025,7 @@ tedm:MG-MonetaryValue-hasEstimatedValue-Lot_ND-LotValueEstimate a rr:TriplesMap 
                         rr:parent "code.value" ;
                     ] ;
                 ] ;
-        ]
+        ] ;
 .
 
 tedm:MG-Purpose-hasPurpose-Lot_ND-LotMainClassification a rr:TriplesMap ;
@@ -4577,14 +4577,14 @@ tedm:MG-SpecificDuration-definesContractDuration-ContractTerm-foreseesContractSp
             rr:objectMap
                 [
                     rdfs:label "BT-36-Lot-Unit (time:TemporalUnit)" ;
-                     rdfs:comment "Unit of MG-SpecificDuration under ND-LotDuration";
+                    rdfs:comment "Unit of Duration Period of MG-SpecificDuration under ND-LotDuration";
                     rr:parentTriplesMap tedm:temporal_unit ;
                     rr:joinCondition [
                         rr:child "cbc:DurationMeasure/@unitCode" ;
                         rr:parent "xmlElement" ;
                     ] ;
                 ] ;
-        ]
+        ] ;
 .
 
 tedm:MG-Period-definesContractPeriod-ContractTerm-foreseesContractSpecificTerm-Lot_ND-LotDuration a rr:TriplesMap ;
@@ -4766,7 +4766,7 @@ tedm:MG-MonetaryValue-hasLaunchFrameworkAgreementMaximumValue-Lot_ND-LotValueEst
     rr:predicateObjectMap
         [
             rdfs:label "BT-271-Lot-Currency";
-            rdfs:comment "Currency of MG-MonetaryValue under ND-LotValueEstimateExtension";
+            rdfs:comment "Currency of Framework Maximum Value of MG-MonetaryValue under ND-LotValueEstimateExtension";
             rr:predicate epo:hasCurrency ;
             rr:objectMap
                 [
@@ -4777,5 +4777,5 @@ tedm:MG-MonetaryValue-hasLaunchFrameworkAgreementMaximumValue-Lot_ND-LotValueEst
                         rr:parent "code.value" ;
                     ] ;
                 ] ;
-        ]
+        ] ;
 .

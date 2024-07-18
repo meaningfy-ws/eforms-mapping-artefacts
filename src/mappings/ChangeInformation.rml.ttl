@@ -62,7 +62,7 @@ tedm:MG-ChangeInformation_ND-ChangeReason  a rr:TriplesMap ;
                 [
                     tedm:minSDKVersion "1.4" ;
                     rdfs:label "BT-762-notice-Language";
-                    rdfs:comment "Language of MG-ChangeInformation under ND-ChangeReason";
+                    rdfs:comment "Language of Change Reason Description of MG-ChangeInformation under ND-ChangeReason";
                     rml:reference "efbc:ReasonDescription";
                     rml:languageMap [
                         fnml:functionValue [
@@ -77,7 +77,7 @@ tedm:MG-ChangeInformation_ND-ChangeReason  a rr:TriplesMap ;
                         ]
                     ] ;
                 ] ;
-        ];
+        ] ;
     rr:predicateObjectMap
         [
             rdfs:label "BT-758-notice";
@@ -128,7 +128,7 @@ tedm:MG-ChangeInformation_ND-Change  a rr:TriplesMap ;
             rr:objectMap
                 [
                     rdfs:label "BT-141(a)-notice-Language";
-                    rdfs:comment "Language of MG-ChangeInformation under ND-Change";
+                    rdfs:comment "Language of Change Description of MG-ChangeInformation under ND-Change";
                     rml:reference "efbc:ChangeDescription";
                     rml:languageMap [
                         fnml:functionValue [

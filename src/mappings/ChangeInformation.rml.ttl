@@ -261,7 +261,7 @@ tedm:MG-Identifier-relatesToEFormSectionIdentifier-ChangeInformation_ND-ChangedS
     rr:predicateObjectMap
         [
             # TODO min SDK 1.3 max SDK 1.6
-            rdfs:label "BBT-13716-notice";
+            rdfs:label "BT-13716-notice";
             rdfs:comment "Change Notice Section Identifier of MG-Identifier under ND-ChangedSection";
             rr:predicate skos:notation  ;
             rr:objectMap

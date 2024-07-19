@@ -26,7 +26,8 @@
 
 # NOTE MG not in CM, field MGs not used
 tedm:MG-TaxInformationProvider_ND-LotFiscalLegislation a rr:TriplesMap ;
-    tedm:minSDKVersion "1.5.12" ;
+    # Differences across versions have no functional effect on this mapping
+    # VERINFO: SDK v1.5 from v1.3-1.4 contains only the change repeatable=false
     rdfs:label "MG-TaxInformationProvider" ;
     rml:logicalSource
         [

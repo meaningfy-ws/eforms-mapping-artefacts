@@ -957,28 +957,16 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementCriterion_daUDPcwCUoxbJRj
   a epo:ProcurementCriterion;
   epo:hasPerformingStaffQualificationInformation <http://publications.europa.eu/resource/authority/requirement-stage/t-requ> .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_Aim3sQTrJD92cok54ZhnWW
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_eHSYyxcU8v8P6WH6an3Da3
   a epo:ProcurementDocument;
-  epo:hasOfficialLanguage <http://publications.europa.eu/resource/authority/language/FRA> .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_SUjgiTfthNR3jeStaMcRex
-  a epo:ProcurementDocument;
-  epo:hasOfficialLanguage <http://publications.europa.eu/resource/authority/language/ENG> .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_TTjvk4ng8FHMGggQfNMCNm
-  a epo:ProcurementDocument;
+  epo:hasOfficialLanguage <http://publications.europa.eu/resource/authority/language/ENG>,
+    <http://publications.europa.eu/resource/authority/language/FRA>;
   epo:hasUnofficialLanguage <http://publications.europa.eu/resource/authority/language/CAT> .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_XnxqfcRqzA7sngzwrWyL3G
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_oSe2HfMwU4DUDHG6JmsfEe
   a epo:ProcurementDocument;
-  epo:hasOfficialLanguage <http://publications.europa.eu/resource/authority/language/ENG> .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_fHHa5zNc2jy5cUXFhDq6nM
-  a epo:ProcurementDocument;
-  epo:hasOfficialLanguage <http://publications.europa.eu/resource/authority/language/FRA> .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_hjn5LF75s8LS7Byp6WDWeS
-  a epo:ProcurementDocument;
+  epo:hasOfficialLanguage <http://publications.europa.eu/resource/authority/language/ENG>,
+    <http://publications.europa.eu/resource/authority/language/FRA>;
   epo:hasUnofficialLanguage <http://publications.europa.eu/resource/authority/language/CAT> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProcedureInformationProvider_PuAZ93vcjRYhKiN4rMvUZg

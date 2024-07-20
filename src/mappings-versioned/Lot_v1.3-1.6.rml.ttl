@@ -52,7 +52,7 @@ tedm:MG-AccessTerm-isSubjectToLotSpecificTerm-Lot_ND-LotProcurementDocument a rr
         [
             rdfs:label "BT-15-Lot";
             rdfs:comment "Documents URL of MG-AccessTerm under ND-LotDocumentsReference";
-            rr:predicate epo:hasPublicAccessURL  ;
+            rr:predicate epo:hasRestrictedAccessURL  ;
             rr:objectMap
                 [
                     tedm:minSDKVersion "1.3" ;

@@ -21,6 +21,8 @@ REPLACE_CM_METADATA_ID = 1
 REPLACE_CM_METADATA_ID_EXAMPLES = 0
 
 CANONICAL_TEST_OUTPUT = src/output.ttl
+VERSIONED_OUTPUT_DIR = src/output-versioned
+CANONICAL_EXAMPLE = cn_24_maximal
 CANONICAL_RML_DIR = src/mappings
 TEST_DATA_DIR = test_data
 TEST_QUERIES_DIR = test_queries
@@ -62,6 +64,8 @@ package_cn_samples: $(addprefix package_cn_samples_v, $(VERSIONS))
 export_cn_samples: $(addprefix export_cn_samples_v, $(VERSIONS))
 package_cn_maximal: $(addprefix package_cn_maximal_v, $(VERSIONS))
 export_cn_maximal: $(addprefix export_cn_maximal_v, $(VERSIONS))
+test_versioned: $(addprefix test_versioned_v, $(VERSIONS))
+test_output_versioned: $(addprefix test_output_versioned_v, $(VERSIONS))
 
 package_prep:
 	@ echo "Staging versioned folders"
@@ -309,8 +313,15 @@ test:
 	@ echo "Using $(JENA_TOOLS_RIOT)"
 	@ echo "Validating RML files"
 	@ $(JENA_TOOLS_RIOT) --validate $(CANONICAL_RML_DIR)/*
-	@ echo -n "Validating test output.."
+	@ test -d $(CANONICAL_RML_DIR)-versioned && $(JENA_TOOLS_RIOT) --validate $(CANONICAL_RML_DIR)-versioned/* || echo "No versioned dir"
+	@ echo -n "Validating reference test output.."
 	@ $(JENA_TOOLS_RIOT) --validate $(CANONICAL_TEST_OUTPUT)
+	@ echo "done"
+
+test_versioned_v%: test
+# @ echo "Using $(JENA_TOOLS_RIOT)"
+	@ echo -n "Validating example test output, v1.$*.."
+	@ $(JENA_TOOLS_RIOT) --validate $(VERSIONED_OUTPUT_DIR)/$(CANONICAL_EXAMPLE)-1.$*.ttl
 	@ echo "done"
 
 test_output:
@@ -351,6 +362,37 @@ test_output:
 	@ echo
 	@ echo "==> Test RML subject template coverage"
 	@ $(TEST_SCRIPTS_DIR)/test_template_coverage.sh $(CANONICAL_RML_DIR) $(CANONICAL_TEST_OUTPUT)
+	@ echo
+
+test_output_versioned_v%:
+	@ echo "==> Test example output, v1.$*"
+	@ echo "-> Test output orphans, v1.$*"
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_orphans.rq --data $(VERSIONED_OUTPUT_DIR)/$(CANONICAL_EXAMPLE)-1.$*.ttl --results=$(TEST_QUERY_RESULTS_FORMAT) | grep -vE $(ROOT_CONCEPTS_GREPFILTER)
+	@ echo
+	@ echo "-> Test output runts, v1.$*"
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_runts.rq --data $(VERSIONED_OUTPUT_DIR)/$(CANONICAL_EXAMPLE)-1.$*.ttl --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ echo
+# @ echo "-> Test output mixed types, v1.$*"
+# @ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_mixed_types.rq --data $(VERSIONED_OUTPUT_DIR)/$(CANONICAL_EXAMPLE)-1.$*.ttl --results=$(TEST_QUERY_RESULTS_FORMAT)
+# @ echo
+# @ echo "-> Test output malformed dateTime, v1.$*"
+# @ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_malformed_dateTime.rq --data $(VERSIONED_OUTPUT_DIR)/$(CANONICAL_EXAMPLE)-1.$*.ttl --results=$(TEST_QUERY_RESULTS_FORMAT)
+# @ echo
+# @ echo "-> Test output untyped date or time, v1.$*"
+# @ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_untyped_dateOrTime.rq --data $(VERSIONED_OUTPUT_DIR)/$(CANONICAL_EXAMPLE)-1.$*.ttl --results=$(TEST_QUERY_RESULTS_FORMAT)
+# @ echo
+# @ echo "-> Test output overloaded rels, v1.$*"
+# @ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_overloaded_rels.rq --data $(VERSIONED_OUTPUT_DIR)/$(CANONICAL_EXAMPLE)-1.$*.ttl --results=$(TEST_QUERY_RESULTS_FORMAT)
+# @ echo
+# @ echo "-> Test output suspect iri name, v1.$*"
+# @ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_suspect_iri_name.rq --data $(VERSIONED_OUTPUT_DIR)/$(CANONICAL_EXAMPLE)-1.$*.ttl --results=$(TEST_QUERY_RESULTS_FORMAT)
+# @ echo
+# @ echo "-> Test output dupe identifiers, v1.$*"
+# @ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_dupe_identifiers.rq --data $(VERSIONED_OUTPUT_DIR)/$(CANONICAL_EXAMPLE)-1.$*.ttl --results=$(TEST_QUERY_RESULTS_FORMAT)
+# @ echo
+# @ echo "-> Test output missing playedBy, v1.$*"
+# @ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_missing_playedBy.rq --data $(VERSIONED_OUTPUT_DIR)/$(CANONICAL_EXAMPLE)-1.$*.ttl --results=$(TEST_QUERY_RESULTS_FORMAT)
+# @ echo
 
 test_output_postproc:
 	@ echo "Testing output post-processing scripts"

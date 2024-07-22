@@ -25,52 +25,34 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_8y8GPfmPvSRdBcci6WWcSi a 
   epo:hasAdditionalInformationDeadline "2023-05-20T20:59:32+01:00"^^xsd:dateTime .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_Aim3sQTrJD92cok54ZhnWW a epo:AccessTerm;
-  epo:hasPublicAccessURL "http://nonrestricteddocuments.com"^^xsd:anyURI;
-  epo:involvesProcurementDocument epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_oSe2HfMwU4DUDHG6JmsfEe;
-  epo:isProcurementDocumentRestricted false .
+  epo:hasRestrictedAccessURL "http://accessto.com"^^xsd:anyURI;
+  epo:involvesProcurementDocument epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_Aim3sQTrJD92cok54ZhnWW;
+  epo:isProcurementDocumentRestricted true .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_PuAZ93vcjRYhKiN4rMvUZg a epo:AccessTerm;
   epo:definesOfflineAccessProvider epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OfflineAccessProvider_PuAZ93vcjRYhKiN4rMvUZg;
   epo:definesProcurementProcedureInformationProvider epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProcedureInformationProvider_PuAZ93vcjRYhKiN4rMvUZg .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_RrRXrztPAFwoTrNhP75ZJZ a epo:AccessTerm;
-  epo:hasRestrictedAccessURL "http://accessto.com"^^xsd:anyURI;
-  epo:isProcurementDocumentRestricted true .
-
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_SUjgiTfthNR3jeStaMcRex a epo:AccessTerm;
   epo:hasPublicAccessURL "http://nonrestricteddocuments.com"^^xsd:anyURI;
-  epo:involvesProcurementDocument epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_oSe2HfMwU4DUDHG6JmsfEe;
+  epo:involvesProcurementDocument epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_SUjgiTfthNR3jeStaMcRex;
   epo:isProcurementDocumentRestricted false .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_TT87XZ7rfCixVuS4Z9trMH a epo:AccessTerm;
   epo:definesOfflineAccessProvider epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OfflineAccessProvider_TT87XZ7rfCixVuS4Z9trMH;
   epo:definesProcurementProcedureInformationProvider epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProcedureInformationProvider_TT87XZ7rfCixVuS4Z9trMH .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_TTjvk4ng8FHMGggQfNMCNm a epo:AccessTerm;
-  epo:hasPublicAccessURL "http://nonrestricteddocuments.com"^^xsd:anyURI;
-  epo:involvesProcurementDocument epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_oSe2HfMwU4DUDHG6JmsfEe;
-  epo:isProcurementDocumentRestricted false .
-
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_XnxqfcRqzA7sngzwrWyL3G a epo:AccessTerm;
   epo:hasPublicAccessURL "http://nonrestricteddocuments.com"^^xsd:anyURI;
-  epo:involvesProcurementDocument epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_eHSYyxcU8v8P6WH6an3Da3;
+  epo:involvesProcurementDocument epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_XnxqfcRqzA7sngzwrWyL3G;
   epo:isProcurementDocumentRestricted false .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_daUDPcwCUoxbJRjGb7tKNQ a epo:AccessTerm;
   epo:hasAdditionalInformationDeadline "2023-05-20T20:59:32+01:00"^^xsd:dateTime .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_fHHa5zNc2jy5cUXFhDq6nM a epo:AccessTerm;
-  epo:hasPublicAccessURL "http://nonrestricteddocuments.com"^^xsd:anyURI;
-  epo:involvesProcurementDocument epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_eHSYyxcU8v8P6WH6an3Da3;
-  epo:isProcurementDocumentRestricted false .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_hjn5LF75s8LS7Byp6WDWeS a epo:AccessTerm;
-  epo:hasPublicAccessURL "http://nonrestricteddocuments.com"^^xsd:anyURI;
-  epo:involvesProcurementDocument epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_eHSYyxcU8v8P6WH6an3Da3;
-  epo:isProcurementDocumentRestricted false .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_oUHv54SLxwtS52U2qbb7DZ a epo:AccessTerm;
   epo:hasRestrictedAccessURL "http://accessto.com"^^xsd:anyURI;
+  epo:involvesProcurementDocument epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_fHHa5zNc2jy5cUXFhDq6nM;
   epo:isProcurementDocumentRestricted true .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AuctionTerms_a3YxuhxVZtuVM6PB6isrBc a
@@ -532,11 +514,11 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0007 a adms:Identifie
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_InnovativeProcurement_2yjckcDCeZgS5m5tUcZ68p
   a epo:InnovativeProcurement;
-  epo:fulfillsRequirement <http://publications.europa.eu/resource/authority/innovative-acquisition/buy-eff> .
+  epo:fulfillsRequirement <http://publications.europa.eu/resource/authority/innovative-acquisition/proc-innov> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_InnovativeProcurement_cLKYnTLDZb6RpEv6sHGwFG
   a epo:InnovativeProcurement;
-  epo:fulfillsRequirement <http://publications.europa.eu/resource/authority/innovative-acquisition/buy-eff> .
+  epo:fulfillsRequirement <http://publications.europa.eu/resource/authority/innovative-acquisition/proc-innov> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotFund_UQnAwfk3ERwvnj7e2sbo39 a epo:Fund;
   epo:hasFundProgramme <http://publications.europa.eu/resource/authority/eu-programme/LIFE_2021>;
@@ -619,8 +601,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001 a epo:Lot;
   epo:isSMESuitable true;
   epo:isSubjectToLotSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_TT87XZ7rfCixVuS4Z9trMH,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_XnxqfcRqzA7sngzwrWyL3G, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_daUDPcwCUoxbJRjGb7tKNQ,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_fHHa5zNc2jy5cUXFhDq6nM, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_hjn5LF75s8LS7Byp6WDWeS,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_oUHv54SLxwtS52U2qbb7DZ, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTerm_4qCitbxYVRfdbqxnYtJTZF,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_fHHa5zNc2jy5cUXFhDq6nM, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTerm_4qCitbxYVRfdbqxnYtJTZF,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MultipleStageProcedureTerm_daUDPcwCUoxbJRjGb7tKNQ,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_NonDisclosureAgreementTerm_TT87XZ7rfCixVuS4Z9trMH,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_VZxmrBG8UMc3RvpZcKCpvE, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_bMTjo7a5Ke582iB4TXZmU8,
@@ -671,8 +652,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002 a epo:Lot;
   epo:isSMESuitable true;
   epo:isSubjectToLotSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_8y8GPfmPvSRdBcci6WWcSi,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_Aim3sQTrJD92cok54ZhnWW, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_PuAZ93vcjRYhKiN4rMvUZg,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_RrRXrztPAFwoTrNhP75ZJZ, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_SUjgiTfthNR3jeStaMcRex,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_TTjvk4ng8FHMGggQfNMCNm, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTerm_8APvjTVZXX8CxGPVJZoBww,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_SUjgiTfthNR3jeStaMcRex, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTerm_8APvjTVZXX8CxGPVJZoBww,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MultipleStageProcedureTerm_8y8GPfmPvSRdBcci6WWcSi,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_FsymrRPQVzLm3zkbgk3JgA, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_bpDJYehUZE5dpNtnagJd4V,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SecurityClearanceTerm_PuAZ93vcjRYhKiN4rMvUZg,
@@ -987,17 +967,29 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementCriterion_daUDPcwCUoxbJRj
   a epo:ProcurementCriterion;
   epo:hasPerformingStaffQualificationInformation <http://publications.europa.eu/resource/authority/requirement-stage/t-requ> .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_eHSYyxcU8v8P6WH6an3Da3
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_Aim3sQTrJD92cok54ZhnWW
+  a epo:ProcurementDocument;
+  epo:hasOfficialLanguage <http://publications.europa.eu/resource/authority/language/ENG>,
+    <http://publications.europa.eu/resource/authority/language/FRA>;
+  epo:hasUnofficialLanguage <http://publications.europa.eu/resource/authority/language/DEU> .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_SUjgiTfthNR3jeStaMcRex
   a epo:ProcurementDocument;
   epo:hasOfficialLanguage <http://publications.europa.eu/resource/authority/language/ENG>,
     <http://publications.europa.eu/resource/authority/language/FRA>;
   epo:hasUnofficialLanguage <http://publications.europa.eu/resource/authority/language/CAT> .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_oSe2HfMwU4DUDHG6JmsfEe
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_XnxqfcRqzA7sngzwrWyL3G
   a epo:ProcurementDocument;
   epo:hasOfficialLanguage <http://publications.europa.eu/resource/authority/language/ENG>,
     <http://publications.europa.eu/resource/authority/language/FRA>;
   epo:hasUnofficialLanguage <http://publications.europa.eu/resource/authority/language/CAT> .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_fHHa5zNc2jy5cUXFhDq6nM
+  a epo:ProcurementDocument;
+  epo:hasOfficialLanguage <http://publications.europa.eu/resource/authority/language/ENG>,
+    <http://publications.europa.eu/resource/authority/language/FRA>;
+  epo:hasUnofficialLanguage <http://publications.europa.eu/resource/authority/language/DEU> .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProcedureInformationProvider_PuAZ93vcjRYhKiN4rMvUZg
   a epo:ProcurementProcedureInformationProvider;

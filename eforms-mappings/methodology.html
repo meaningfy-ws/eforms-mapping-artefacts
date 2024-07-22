@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: eForms-mapping-docs</title>
+    <meta name="generator" content="Antora 3.1.9">
+    <link rel="stylesheet" href="../_/css/site.css">
+  </head>
+  <body class="article">
+<div class="navbar-item has-dropdown is-hoverable">
+<h1>TED-SWS</h1>
+</div><div class="body">
+<div class="nav-container" data-component="eforms-mappings" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">eForms mapping docs</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Home</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="software_requirements.html">Software Requirements</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="methodology.html">Mapping Methodology</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="package_structure.html">Mapping Suite Structure</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="toolchain.html">Toolchain</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text"><span class="separated"><strong>General References</strong></span></span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="glossary.html">Glossary</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">eForms mapping docs</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="index.html">eForms mapping docs</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">eForms mapping docs</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="methodology.html">Mapping Methodology</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="6">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="_mapping_methodology"><a class="anchor" href="#_mapping_methodology"></a>Mapping Methodology</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Developing mappings for eForms still follows the <a href="https://docs.ted.europa.eu/SWS/mapping_suite/methodology.html">sound principles of conceptual agreement followed by technical implementation</a>, divided into the distinct stages of <em>conceptual mapping</em> ( CM ) using a dialect of <a href="https://www.w3.org/TR/sparql11-property-paths/">SPARQL Path</a> patterns, and <em>technical mapping</em> ( TM ) using the <a href="https://rml.io/">RML mapping language</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="_eforms_sdk_field_definitions"><a class="anchor" href="#_eforms_sdk_field_definitions"></a>eForms SDK Field Definitions</h3>
+<div class="paragraph">
+<p>In contrast to SF, which had <a href="https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tedschemas-archive">XSD schemas</a> as the only cue for the underlying model, there is an <a href="https://github.com/OP-TED/eForms-SDK">eForms SDK</a> which prescribes eForm XML element <a href="https://developer.mozilla.org/en-US/docs/Web/XPath">XPaths</a> in terms of nodes and fields, which lends an easier framework for the management and comprehension of the <a href="http://docs.oasis-open.org/ubl/os-UBL-2.3/UBL-2.3.html">UBL</a>-based XML model behind elements used across the eForm notices. The notices themselves are categorized under <a href="https://docs.ted.europa.eu/eforms/latest/schema/documents-forms-and-notices.html">document, form and notice types and subtypes</a>, such as Competition Notice, subtype 16 (EF16).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mapping_groups"><a class="anchor" href="#_mapping_groups"></a>Mapping Groups</h3>
+<div class="paragraph">
+<p>A new idea introduced into the mapping methodology is the notion of a Mapping Group (MG), which is a representation of RDF connections (relationships) and subject groupings in a simple, hyphen-delimited textual notation, in the form:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">MG-{TrailingClass}-{intermediateClassAndPropertyPath}-{RootClass}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where, for example, the full path of an organisation&#8217;s address might be:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">MG-Address-hasAddress-Location-hasLocation-Organization</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This serves to provide an indication of how RDF statements are logically grouped together to form the right (connected) instances, given that data for a given subject may be spread across completely different XPaths in the source XML. That is why, in the technical mapping, MGs are used to form the subject URIs of the RML rules (TriplesMaps), suffixed with the node name (as per the SDK) where the information comes from, for example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">tedm:MG-Address-hasAddress-Location-hasLocation-Organization_ND-Company a rr:TriplesMap</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Different nodes usually require different subject templates or iterators, especially those which are located at entirely different or <em>orthogonal</em> XPaths, requiring as many RML TriplesMaps with the same MG but different node names.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<div>
+</div>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

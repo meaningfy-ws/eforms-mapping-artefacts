@@ -4,6 +4,8 @@
 # to a reference version (hardcoded to 1.9.1 currently).
 # Optionally, also compare the min against a max version,
 # and the max against the reference.
+#
+# Depends on Python3 script cmp_xpaths.py (requires pandas, fuzzywuzzy)
 
 # eForms SDK folder (as it is checked out from GitHub)
 [[ -z $SDK_DIR ]] && SDK_DIR=../eForms-SDK # relative path to the root of the eForms-SDK Git project
@@ -19,6 +21,9 @@
 
 # reference version (to always compare against)
 [[ -z $REFVER ]] && REFVER="1.9.1" && ref="1.9"
+
+# python string similarity script path
+[[ -z $STRSIM_SCRIPT ]] && STRSIM_SCRIPT="`dirname $0`/cmp_xpaths.py"
 
 mkdir -p $FIELDSDIR
 mkdir -p $DIFFDIR
@@ -47,6 +52,30 @@ get_fields_file_by_ver() {
     (cd $SDK_DIR && git checkout $ver && cat fields/fields.json > "$FIELDSDIR/fields_v$ver.json")
 }
 
+# $1: diff file
+get_xpath_change() {
+    diff_type=$1
+    diff_file=$2
+    if [[ $diff_type == "old" ]]; then
+        grep "^-.*xpathAbsolute" "$diff_file" | sed -e 's/.*"xpathAbsolute": //' -e 's/,//'
+    elif [[ $diff_type == "new" ]]; then
+        grep "^+.*xpathAbsolute" "$diff_file" | sed -e 's/.*"xpathAbsolute": //' -e 's/,//'
+    else # default old
+        grep "^-.*xpathAbsolute" "$diff_file" | sed -e 's/.*"xpathAbsolute": //' -e 's/,//'
+    fi
+}
+
+# TODO prepend similarity score to every diff preamble
+# $1: string1, $2: string2
+get_xpath_similarity() {
+    old_xpath=$1
+    new_xpath=$2
+    minver=$3
+    maxver=$4
+    # WARNING: remove the /dev/null pipe to debug, otherwise real errors are hidden
+    echo -n "XPath v$minver-$maxver " && python3 "$STRSIM_SCRIPT" $old_xpath $new_xpath 2> /dev/null
+}
+
 # $1: eForms Field ID, $2: Min SDK Version, $3: Max SDK Version (optional)
 eforms_field_diff() {
     [[ -z $1 || -z $2 ]] && echo "usage: <fieldID> <minver> [maxver]" && return 1
@@ -73,6 +102,10 @@ eforms_field_diff() {
     echo
     diff -u --color <(echo "$old") <(echo "$new")
     diff -u <(echo "$old") <(echo "$new") > "$DIFFDIR/${field}_v$min-$ref.diff"
+    echo
+    old_xpath=$(get_xpath_change old "$DIFFDIR/${field}_v$min-$ref.diff")
+    new_xpath=$(get_xpath_change new "$DIFFDIR/${field}_v$min-$ref.diff")
+    [[ -n $old_xpath ]] && get_xpath_similarity $old_xpath $new_xpath $min $ref || echo "No XPath changes in v$min-$ref"
     test -s "$DIFFDIR/${field}_v$min-$ref.diff" || rm "$DIFFDIR/${field}_v$min-$ref.diff"
     echo
 
@@ -81,6 +114,10 @@ eforms_field_diff() {
         echo
         diff -u --color <(echo "$mid") <(echo "$new")
         diff -u <(echo "$mid") <(echo "$new") > "$DIFFDIR/${field}_v$max-$ref.diff"
+        echo
+        old_xpath=$(get_xpath_change old "$DIFFDIR/${field}_v$max-$ref.diff")
+        new_xpath=$(get_xpath_change new "$DIFFDIR/${field}_v$max-$ref.diff")
+        [[ -n $old_xpath ]] && get_xpath_similarity $old_xpath $new_xpath $max $ref || echo "No XPath changes v$max-$ref"
         test -s "$DIFFDIR/${field}_v$max-$ref.diff" || rm "$DIFFDIR/${field}_v$max-$ref.diff"
         echo
 
@@ -88,6 +125,10 @@ eforms_field_diff() {
         echo
         diff -u --color <(echo "$old") <(echo "$mid")
         diff -u <(echo "$old") <(echo "$mid") > "$DIFFDIR/${field}_v$min-$max.diff"
+        echo
+        old_xpath=$(get_xpath_change old "$DIFFDIR/${field}_v$min-$max.diff")
+        new_xpath=$(get_xpath_change new "$DIFFDIR/${field}_v$min-$max.diff")
+        [[ -n $old_xpath ]] && get_xpath_similarity $old_xpath $new_xpath $min $max || echo "No XPath changes in v$min-$max"
         test -s "$DIFFDIR/${field}_v$min-$max.diff" || rm "$DIFFDIR/${field}_v$min-$max.diff"
     fi
 }

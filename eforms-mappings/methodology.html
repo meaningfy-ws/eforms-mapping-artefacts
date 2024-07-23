@@ -131,6 +131,97 @@
 <p>Different nodes usually require different subject templates or iterators, especially those which are located at entirely different or <em>orthogonal</em> XPaths, requiring as many RML TriplesMaps with the same MG but different node names.</p>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_rdf_uri_scheme"><a class="anchor" href="#_rdf_uri_scheme"></a>RDF URI Scheme</h3>
+<div class="paragraph">
+<p>The eForms RML mappings use the following URI scheme for the representing ePO ontology instances:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">{ns}id_{notice-id}_{concept}_{trailer}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>, where:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>{ns}</code> is a base namespace, in this case
+<code><a href="http://data.europa.eu/a4g/resource/" class="bare">http://data.europa.eu/a4g/resource/</a></code></p>
+</li>
+<li>
+<p><code>{concept}</code> is either (i) an ontology fragment label or (ii) source
+element label, with a suffix or prefix</p>
+</li>
+<li>
+<p><code>{trailer}</code> is either (i) an ID value (if the resource has one) or
+(ii) an <em>online</em> computed, deterministic hash</p>
+</li>
+<li>
+<p>Root concepts such as <code>epo:Notice</code> end up to only the <code>{concept}</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Expanding on some of the components for further clarity:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Whether a <code>concept</code> is an ontology fragment or source element label,
+and whether this label has a suffix (rarely) or prefix, depends on the
+subjective (human) evaluation of whether only having the class name is
+sufficient hint of what the URI represents.</p>
+</li>
+<li>
+<p>The trailer, when a hash, is computed (seeded) with the XPath named
+element (e.g. <code>cbc:ID</code>) or (often relative) path (e.g. <code>path(cbc:ID)</code>)
+of what is being mapped, and therefore lends a unique identity to the
+URI. This yields reproducible URIs across RML TripleMaps, in case a
+resource needed to be instantiated at different XPaths, for whatever
+purpose.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>A Lot or any other resource with an inherent ID, would simply have
+its <code>cbc:ID</code> value as the trailer, for
+e.g. <code>epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001</code>, which
+is very useful for linking purposes at orthogonal XPaths (e.g. wherever
+an <code>id-ref</code> is concerned, that ID could simply be used to produce a
+linkable URI without having to navigate XPaths).</p>
+</li>
+<li>
+<p>Any other resource where there is no inherent ID would have a hash
+that is unique to the XPath it represents, e.g. an <code>epo:Purpose</code>
+instance, if instantiated at different XPaths for associating different
+attributes, would have the same URI across those instantiations,
+resulting in one unique instance and no duplication due to multiple
+mappings.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>adms:Identifier</code>, although having an ID, may still get a hash
+instead of ID in its trailer, as it may not have a short ID that is
+sensible to use/read (however we may not have enforced this rule
+strongly)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Note:</strong> Wherever <em>URI</em> is mentioned,
+<a href="https://www.w3.org/2001/Talks/0912-IUC-IRI/paper.html#:~:text=In%20principle%2C%20the%20definition%20of,us%2Dascii%20characters%20in%20URIs">IRI</a>
+is meant. Also, the generation of hashes is done <em>online</em> against a
+remote HTTP web API endpoint offering this function, during
+transformation (which can otherwise be an offline process).</p>
+</div>
+</div>
 </div>
 </div>
 </article>

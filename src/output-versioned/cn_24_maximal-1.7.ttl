@@ -621,6 +621,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001 a epo:Lot;
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SecurityClearanceTerm_TT87XZ7rfCixVuS4Z9trMH,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_TT87XZ7rfCixVuS4Z9trMH,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_daUDPcwCUoxbJRjGb7tKNQ;
+  epo:isUsingEUFunds true;
   epo:specifiesProcurementCriterion epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_Ee3JXqpmik8eG35Uay4dJk,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_QaDZD9SvbXf8nLh2wqBGkh,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_65B5ieqPopJApHPkYdhiAi,
@@ -671,6 +672,7 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002 a epo:Lot;
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SecurityClearanceTerm_PuAZ93vcjRYhKiN4rMvUZg,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_8y8GPfmPvSRdBcci6WWcSi,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_PuAZ93vcjRYhKiN4rMvUZg;
+  epo:isUsingEUFunds true;
   epo:specifiesProcurementCriterion epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_39TpnFPzm9mQHb8KWyccgF,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_JXVZRgb5g8CzzdmWDdr5QZ,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_65B5ieqPopJApHPkYdhiAi,
@@ -978,6 +980,36 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementCriterion_8y8GPfmPvSRdBcc
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementCriterion_daUDPcwCUoxbJRjGb7tKNQ
   a epo:ProcurementCriterion;
   epo:hasPerformingStaffQualificationInformation <http://publications.europa.eu/resource/authority/requirement-stage/t-requ> .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_Aim3sQTrJD92cok54ZhnWW
+  a epo:ProcurementDocument;
+  epo:hasOfficialLanguage <http://publications.europa.eu/resource/authority/language/FRA> .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_RrRXrztPAFwoTrNhP75ZJZ
+  a epo:ProcurementDocument .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_SUjgiTfthNR3jeStaMcRex
+  a epo:ProcurementDocument;
+  epo:hasOfficialLanguage <http://publications.europa.eu/resource/authority/language/ENG> .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_TTjvk4ng8FHMGggQfNMCNm
+  a epo:ProcurementDocument;
+  epo:hasUnofficialLanguage <http://publications.europa.eu/resource/authority/language/CAT> .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_XnxqfcRqzA7sngzwrWyL3G
+  a epo:ProcurementDocument;
+  epo:hasOfficialLanguage <http://publications.europa.eu/resource/authority/language/ENG> .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_fHHa5zNc2jy5cUXFhDq6nM
+  a epo:ProcurementDocument;
+  epo:hasOfficialLanguage <http://publications.europa.eu/resource/authority/language/FRA> .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_hjn5LF75s8LS7Byp6WDWeS
+  a epo:ProcurementDocument;
+  epo:hasUnofficialLanguage <http://publications.europa.eu/resource/authority/language/CAT> .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_oUHv54SLxwtS52U2qbb7DZ
+  a epo:ProcurementDocument .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProcedureInformationProvider_PuAZ93vcjRYhKiN4rMvUZg
   a epo:ProcurementProcedureInformationProvider;

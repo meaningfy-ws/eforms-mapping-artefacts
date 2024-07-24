@@ -7,29 +7,6 @@
 		<ext:UBLExtension>
 			<ext:ExtensionContent>
 				<efext:EformsExtension>
-					<efac:Changes>
-						<efbc:ChangedNoticeIdentifier>6bc75979-ce6c-46eb-81a6-eee543697dec-01</efbc:ChangedNoticeIdentifier>
-						<efac:Change>
-							<efbc:ChangeDescription languageID="ENG">Short description modified</efbc:ChangeDescription>
-							<efbc:ProcurementDocumentsChangeDate>2020-04-14+02:00</efbc:ProcurementDocumentsChangeDate>
-							<efbc:ProcurementDocumentsChangeIndicator>true</efbc:ProcurementDocumentsChangeIndicator>
-							<efac:ChangedSection>
-								<efbc:ChangedSectionIdentifier>PROCEDURE</efbc:ChangedSectionIdentifier>
-							</efac:ChangedSection>
-						</efac:Change>
-						<efac:Change>
-							<efbc:ChangeDescription languageID="ENG">Description of the procurement modified</efbc:ChangeDescription>
-							<efbc:ProcurementDocumentsChangeDate>2020-04-14+02:00</efbc:ProcurementDocumentsChangeDate>
-							<efbc:ProcurementDocumentsChangeIndicator>true</efbc:ProcurementDocumentsChangeIndicator>
-							<efac:ChangedSection>
-								<efbc:ChangedSectionIdentifier>LOT-0000</efbc:ChangedSectionIdentifier>
-							</efac:ChangedSection>
-						</efac:Change>
-						<efac:ChangeReason>
-							<cbc:ReasonCode listName="change-corrig-justification">cor-buy</cbc:ReasonCode>
-							<efbc:ReasonDescription languageID="ENG">Change number of suppliers envisaged.</efbc:ReasonDescription>
-						</efac:ChangeReason>
-					</efac:Changes>
 					<!-- "id" : "BT-803(d)-notice", "name" : "Notice Dispatch Date eSender (date)"-->
 					<efbc:TransmissionDate>2023-03-23+01:00</efbc:TransmissionDate>
 					<!-- "id" : "BT-803(t)-notice", "name" : "Notice Dispatch Date eSender (time)"-->
@@ -39,7 +16,6 @@
 					</efac:NoticeSubType>
 					<efac:Organizations>
 						<efac:Organization>
-							<efbc:GroupLeadIndicator>true</efbc:GroupLeadIndicator>
 							<efac:Company>
 								<!--BT-505-->
 								<cbc:WebsiteURI>https://www.fin-adm.com</cbc:WebsiteURI>
@@ -115,6 +91,42 @@
 									<cbc:Telephone>+123 45678</cbc:Telephone>
 									<cbc:Telefax>+123 456789</cbc:Telefax>
 									<cbc:ElectronicMail>proc-info@fin-adm.com</cbc:ElectronicMail>
+								</cac:Contact>
+							</efac:TouchPoint>
+							<efac:TouchPoint>
+								<cbc:WebsiteURI>http://archives.fin-adm.com</cbc:WebsiteURI>
+								<cac:PartyIdentification>
+									<cbc:ID schemeName="touchpoint">TPO-0002</cbc:ID>
+								</cac:PartyIdentification>
+								<cac:PartyName>
+									<cbc:Name languageID="ENG">Fin Adm Archives</cbc:Name>
+								</cac:PartyName>
+								<cac:PostalAddress>
+									<!--BT-510-->
+									<cbc:StreetName>Bruce Wayne House</cbc:StreetName>
+									<cbc:AdditionalStreetName>2 Gotham Street</cbc:AdditionalStreetName>
+									<!--BT-16-->
+									<cbc:Department>Fin Adm Archives Dpt</cbc:Department>
+									<!--BT-513-->
+									<cbc:CityName>London</cbc:CityName>
+									<!--BT-512-->
+									<cbc:PostalZone>N1 9FL</cbc:PostalZone>
+									<!--BT-507-->
+									<cbc:CountrySubentityCode listName="nuts">UKI62</cbc:CountrySubentityCode>
+									<!--BT-514-->
+									<cac:Country>
+										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
+									</cac:Country>
+								</cac:PostalAddress>
+								<cac:Contact>
+									<!--BT-502-->
+									<cbc:Name>Proc Archives Dpt Lead</cbc:Name>
+									<!--BT-503-->
+									<cbc:Telephone>+44 123456776</cbc:Telephone>
+									<!--BT-739-->
+									<cbc:Telefax>+44 1234567769</cbc:Telefax>
+									<!--BT-506-->
+									<cbc:ElectronicMail>proc-archi@fin-adm.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:TouchPoint>
 							<efac:TouchPoint>
@@ -199,7 +211,6 @@
 							</efac:Company>
 						</efac:Organization>
 						<efac:Organization>
-							<efbc:AwardingCPBIndicator>true</efbc:AwardingCPBIndicator>
 							<efac:Company>
 								<!--BT-505-->
 								<cbc:WebsiteURI>https://www.env-dpt.com</cbc:WebsiteURI>
@@ -244,45 +255,8 @@
 									<cbc:ElectronicMail>info@env-dpt.com</cbc:ElectronicMail>
 								</cac:Contact>
 							</efac:Company>
-							<efac:TouchPoint>
-								<cbc:WebsiteURI>http://archives.fin-adm.com</cbc:WebsiteURI>
-								<cac:PartyIdentification>
-									<cbc:ID schemeName="touchpoint">TPO-0002</cbc:ID>
-								</cac:PartyIdentification>
-								<cac:PartyName>
-									<cbc:Name languageID="ENG">Fin Adm Archives</cbc:Name>
-								</cac:PartyName>
-								<cac:PostalAddress>
-									<!--BT-510-->
-									<cbc:StreetName>Bruce Wayne House</cbc:StreetName>
-									<cbc:AdditionalStreetName>2 Gotham Street</cbc:AdditionalStreetName>
-									<!--BT-16-->
-									<cbc:Department>Fin Adm Archives Dpt</cbc:Department>
-									<!--BT-513-->
-									<cbc:CityName>London</cbc:CityName>
-									<!--BT-512-->
-									<cbc:PostalZone>N1 9FL</cbc:PostalZone>
-									<!--BT-507-->
-									<cbc:CountrySubentityCode listName="nuts">UKI62</cbc:CountrySubentityCode>
-									<!--BT-514-->
-									<cac:Country>
-										<cbc:IdentificationCode listName="country">GBR</cbc:IdentificationCode>
-									</cac:Country>
-								</cac:PostalAddress>
-								<cac:Contact>
-									<!--BT-502-->
-									<cbc:Name>Proc Archives Dpt Lead</cbc:Name>
-									<!--BT-503-->
-									<cbc:Telephone>+44 123456776</cbc:Telephone>
-									<!--BT-739-->
-									<cbc:Telefax>+44 1234567769</cbc:Telefax>
-									<!--BT-506-->
-									<cbc:ElectronicMail>proc-archi@fin-adm.com</cbc:ElectronicMail>
-								</cac:Contact>
-							</efac:TouchPoint>
 						</efac:Organization>
 						<efac:Organization>
-							<efbc:AcquiringCPBIndicator>true</efbc:AcquiringCPBIndicator>
 							<!--BT-633-->
 							<efac:Company>
 								<!--BT-505-->
@@ -450,11 +424,6 @@
 							</efac:Company>
 						</efac:Organization>
 					</efac:Organizations>
-					<efac:Publication>
-						<efbc:NoticePublicationID schemeName="ojs-notice-id">00675564-2023</efbc:NoticePublicationID>
-						<efbc:GazetteID schemeName="ojs-id">214/2023</efbc:GazetteID>
-						<efbc:PublicationDate>2023-11-07Z</efbc:PublicationDate>
-					</efac:Publication>
 				</efext:EformsExtension>
 			</ext:ExtensionContent>
 		</ext:UBLExtension>
@@ -476,18 +445,12 @@
 	<cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
 	<!--BT-702-->
 	<cbc:NoticeLanguageCode>ENG</cbc:NoticeLanguageCode>
-	<cac:AdditionalNoticeLanguage>
-		<cbc:ID>BUL</cbc:ID>
-	</cac:AdditionalNoticeLanguage>
 	<cac:ContractingParty>
 		<!--BT-508-->
 		<cbc:BuyerProfileURI>https://profile.example.com</cbc:BuyerProfileURI>
 		<cac:ContractingPartyType>
 			<!--BT-11-->
 			<cbc:PartyTypeCode listName="buyer-legal-type">body-pl</cbc:PartyTypeCode>
-		</cac:ContractingPartyType>
-		<cac:ContractingPartyType>
-			<cbc:PartyTypeCode listName="buyer-contracting-type">cont-ent</cbc:PartyTypeCode>
 		</cac:ContractingPartyType>
 		<cac:ContractingActivity>
 			<!--BT-10-->
@@ -509,16 +472,6 @@
 		</cac:Party>
 	</cac:ContractingParty>
 	<cac:TenderingTerms>
-		<!--BT-01(c|d) [alt. to BT-01(e|f)]-->
-		<cac:ProcurementLegislationDocumentReference>
-			<cbc:ID schemeName="thisAlmostNeverOccurs">art. 410 ust. 1 ustawy z dnia 11 września 2019 r. - Prawo zamówień publicznych (Dz. U. z 2023r. poz. 1605 t.j.)</cbc:ID>
-			<cbc:DocumentDescription languageID="ENG">legal base description ---</cbc:DocumentDescription>
-		 </cac:ProcurementLegislationDocumentReference>
-		<!--BT-01(e|f) [alt. to BT-01(c|d)]-->
-		 <cac:ProcurementLegislationDocumentReference>
-			<cbc:ID>LocalLegalBasis</cbc:ID>
-			<cbc:DocumentDescription languageID="FRA">Loi modifiée du 8 juillet 2018 sur les concessions</cbc:DocumentDescription>
-		</cac:ProcurementLegislationDocumentReference>
 		<!--BT-09-->
 		<cac:ProcurementLegislationDocumentReference>
 			<cbc:ID>CrossBorderLaw</cbc:ID>
@@ -596,15 +549,6 @@
 		</cac:LotDistribution>
 	</cac:TenderingTerms>
 	<cac:TenderingProcess>
-		<ext:UBLExtensions>
-			<ext:UBLExtension>
-				<ext:ExtensionContent>
-					<efext:EformsExtension>
-						<efbc:ProcedureRelaunchIndicator>false</efbc:ProcedureRelaunchIndicator>
-					</efext:EformsExtension>
-				</ext:ExtensionContent>
-			</ext:UBLExtension>
-		</ext:UBLExtensions>
 		<!--BT-88-->
 		<cbc:Description languageID="ENG">Description of the procedure  ---</cbc:Description>
 		<!--BT-105-->
@@ -634,15 +578,6 @@
 			<cbc:ProcurementTypeCode listName="contract-nature">works</cbc:ProcurementTypeCode>
 		</cac:ProcurementAdditionalType>
 		<cac:RequestedTenderTotal>
-			<ext:UBLExtensions>
-				<ext:UBLExtension>
-					<ext:ExtensionContent>
-						<efext:EformsExtension>
-							<efbc:FrameworkMaximumAmount currencyID="BSD">247547</efbc:FrameworkMaximumAmount>
-						</efext:EformsExtension>
-					</ext:ExtensionContent>
-				</ext:UBLExtension>
-			</ext:UBLExtensions>
 			<!--BT-27-->
 			<cbc:EstimatedOverallContractAmount currencyID="EUR">9999999.99</cbc:EstimatedOverallContractAmount>
 		</cac:RequestedTenderTotal>
@@ -683,10 +618,6 @@
 				<cbc:Region>anyw-eea</cbc:Region>
 			</cac:Address>
 		</cac:RealizedLocation>
-			<cac:PlannedPeriod>
-				<cbc:StartDate>2020-10-01+02:00</cbc:StartDate>
-				<cbc:DurationMeasure unitCode="MONTH">48</cbc:DurationMeasure>
-			</cac:PlannedPeriod>
 	</cac:ProcurementProject>
 	<cac:ProcurementProjectLot>
 		<cbc:ID schemeName="LotsGroup">GLO-0001</cbc:ID>
@@ -703,11 +634,6 @@
 											<efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
 											<!--BT-541-->
 											<efbc:ParameterNumeric>60</efbc:ParameterNumeric>
-										</efac:AwardCriterionParameter>
-										<efac:AwardCriterionParameter>
-											<!--BT-5422-->
-											<efbc:ParameterCode listName="number-fixed">fix-tot</efbc:ParameterCode>
-											<efbc:ParameterNumeric>50</efbc:ParameterNumeric>
 										</efac:AwardCriterionParameter>
 									</efext:EformsExtension>
 								</ext:ExtensionContent>
@@ -763,15 +689,6 @@
 			<!--BT-726-->
 			<cbc:SMESuitableIndicator>true</cbc:SMESuitableIndicator>
 			<cac:RequestedTenderTotal>
-				<ext:UBLExtensions>
-				<ext:UBLExtension>
-					<ext:ExtensionContent>
-						<efext:EformsExtension>
-							<efbc:FrameworkMaximumAmount currencyID="BSD">247547</efbc:FrameworkMaximumAmount>
-						</efext:EformsExtension>
-					</ext:ExtensionContent>
-				</ext:UBLExtension>
-			</ext:UBLExtensions>
 				<!--BT-27-->
 				<cbc:EstimatedOverallContractAmount currencyID="EUR">9999999.99</cbc:EstimatedOverallContractAmount>
 			</cac:RequestedTenderTotal>
@@ -784,12 +701,6 @@
 				<ext:UBLExtension>
 					<ext:ExtensionContent>
 						<efext:EformsExtension>
-							 <efac:StrategicProcurement>
-								<efbc:ApplicableLegalBasis listName="cvd-scope">false</efbc:ApplicableLegalBasis>
-								<efac:StrategicProcurementInformation>
-									<efbc:ProcurementCategoryCode listName="cvd-contract-type">oth-serv-contr</efbc:ProcurementCategoryCode>
-								</efac:StrategicProcurementInformation>
-							</efac:StrategicProcurement>
 							<efac:SelectionCriteria>
 								<!--BT-747-->
 								<cbc:CriterionTypeCode listName="selection-criterion">sui-act</cbc:CriterionTypeCode>
@@ -891,7 +802,7 @@
 				<cac:IssuerParty>
 					<cac:PartyIdentification>
 						<!--OPT-301-->
-						<cbc:ID schemeName="touchpoint">TPO-0002</cbc:ID>
+						<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
 					</cac:PartyIdentification>
 				</cac:IssuerParty>
 			</cac:FiscalLegislationDocumentReference>
@@ -951,8 +862,6 @@
 					</ext:UBLExtension>
 				</ext:UBLExtensions>
 				<cbc:ID>Doc1</cbc:ID>
-				<!--BT-707-->
-				<cbc:DocumentTypeCode listName="communication-justification">tdf-non-av</cbc:DocumentTypeCode>
 				<!--BT-14-->
 				<cbc:DocumentType>non-restricted-document</cbc:DocumentType>
 				<cac:Attachment>
@@ -993,7 +902,7 @@
 				<cac:Attachment>
 					<cac:ExternalReference>
 						<!--BT-615-->
-						<cbc:URI>http://restrictedaccessto.com</cbc:URI>
+						<cbc:URI>http://accessto.com</cbc:URI>
 					</cac:ExternalReference>
 				</cac:Attachment>
 			</cac:CallForTendersDocumentReference>
@@ -1171,30 +1080,10 @@
 			</cac:SecurityClearanceTerm>
 		</cac:TenderingTerms>
 		<cac:TenderingProcess>
-			<cac:InvitationSubmissionPeriod>
-				<cbc:StartDate>2020-05-22+02:00</cbc:StartDate>
-			</cac:InvitationSubmissionPeriod>
-			<cac:ParticipationInvitationPeriod>
-				<cbc:StartDate>2023-12-12+01:00</cbc:StartDate>
-			</cac:ParticipationInvitationPeriod>
-			<cac:ParticipationRequestReceptionPeriod>
-				<cbc:EndDate>2020-05-07+01:00</cbc:EndDate>
-				<cbc:EndTime>23:55:00+01:00</cbc:EndTime>
-			</cac:ParticipationRequestReceptionPeriod>
-			<cbc:AccessToolsURI>https://www.the-chest.org.uk/</cbc:AccessToolsURI>
-			<cac:OpenTenderEvent>
-				<cbc:OccurrenceDate>2020-06-12+01:00</cbc:OccurrenceDate>
-				<cbc:OccurrenceTime>14:00:00+01:00</cbc:OccurrenceTime>
-				<cbc:Description languageID="ENG">Strictly by invitation only.</cbc:Description>
-				<cac:OccurenceLocation>
-					<cbc:Description languageID="ENG">Renfrewshire House, Cotton Street, Paisley.</cbc:Description>
-				</cac:OccurenceLocation>
-			</cac:OpenTenderEvent>
 			<ext:UBLExtensions>
 				<ext:UBLExtension>
 					<ext:ExtensionContent>
 						<efext:EformsExtension>
-							<efbc:ProcedureRelaunchIndicator>false</efbc:ProcedureRelaunchIndicator>
 							<!--BT-632-->
 							<efbc:AccessToolName>Access tool ---</efbc:AccessToolName>
 						</efext:EformsExtension>
@@ -1240,8 +1129,6 @@
 				<cbc:AuctionURI>https://electronic-auction.com</cbc:AuctionURI>
 			</cac:AuctionTerms>
 			<cac:FrameworkAgreement>
-				<!-- BT-109-Lot -->
-				<cbc:Justification languageID="ENG">Framwork duration justification ---</cbc:Justification>
 				<!--BT-113-->
 				<cbc:MaximumOperatorQuantity>10</cbc:MaximumOperatorQuantity>
 				<!--BT-157-->
@@ -1297,7 +1184,7 @@
 				<!--BT-06-->
 				<cbc:ProcurementTypeCode listName="strategic-procurement">env-imp</cbc:ProcurementTypeCode>
 				<!--BT-777-->
-				<cbc:ProcurementType languageID="ENG">Strategic procurement description green procurement ---</cbc:ProcurementType>
+				<cbc:ProcurementType languageID="ENG">Strategic procurement description ---</cbc:ProcurementType>
 			</cac:ProcurementAdditionalType>
 			<cac:ProcurementAdditionalType>
 				<!--BT-754-->
@@ -1306,15 +1193,6 @@
 				<cbc:ProcurementType languageID="ENG">Accessibility Justification ---</cbc:ProcurementType>
 			</cac:ProcurementAdditionalType>
 			<cac:RequestedTenderTotal>
-                 <ext:UBLExtensions>
-				<ext:UBLExtension>
-					<ext:ExtensionContent>
-						<efext:EformsExtension>
-							<efbc:FrameworkMaximumAmount currencyID="BSD">247547</efbc:FrameworkMaximumAmount>
-						</efext:EformsExtension>
-					</ext:ExtensionContent>
-				</ext:UBLExtension>
-			</ext:UBLExtensions>
 				<!--BT-27-->
 				<cbc:EstimatedOverallContractAmount currencyID="EUR">9999999.99</cbc:EstimatedOverallContractAmount>
 			</cac:RequestedTenderTotal>
@@ -1359,8 +1237,6 @@
 				<cbc:StartDate>2023-01-01+01:00</cbc:StartDate>
 				<!--BT-537-->
 				<cbc:EndDate>2023-05-23+01:00</cbc:EndDate>
-				<!-- BT-36 -->
-				<cbc:DurationMeasure unitCode="MONTH">5</cbc:DurationMeasure>
 			</cac:PlannedPeriod>
 			<cac:ContractExtension>
 				<!--BT-54-->
@@ -1379,22 +1255,10 @@
 	<cac:ProcurementProjectLot>
 		<cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
 		<cac:TenderingTerms>
-			<cac:TenderValidityPeriod>
-				<cbc:DurationMeasure unitCode="MONTH">6</cbc:DurationMeasure>
-			</cac:TenderValidityPeriod>
-			<cac:AllowedSubcontractTerms>
-				<cbc:SubcontractingConditionsCode listName="subcontracting-obligation">none</cbc:SubcontractingConditionsCode>
-			</cac:AllowedSubcontractTerms>
-			<cbc:RecurringProcurementIndicator>false</cbc:RecurringProcurementIndicator>
-			<cbc:RecurringProcurementDescription languageID="FRA">.......</cbc:RecurringProcurementDescription>
-			<cbc:VariantConstraintCode listName="permission">not-allowed</cbc:VariantConstraintCode>
 			<ext:UBLExtensions>
 				<ext:UBLExtension>
 					<ext:ExtensionContent>
 						<efext:EformsExtension>
-							<efac:TenderSubcontractingRequirements>
-								<efbc:TenderSubcontractingRequirementsCode listName="subcontracting-indication">none</efbc:TenderSubcontractingRequirementsCode>
-							</efac:TenderSubcontractingRequirements>
 							<efac:Funding>
 								<!--id": "BT-5010-Lot", "name": "EU Funds Financing Identifier"-->
 								<efbc:FinancingIdentifier>2021/5678</efbc:FinancingIdentifier>
@@ -1420,7 +1284,6 @@
 									<!--BT-752-->
 									<efbc:ParameterNumeric>3</efbc:ParameterNumeric>
 								</efac:CriterionParameter>
-
 								<efac:CriterionParameter>
 									<!--BT-7532-->
 									<efbc:ParameterCode listName="number-threshold">min-score</efbc:ParameterCode>
@@ -1505,7 +1368,7 @@
 				<cac:IssuerParty>
 					<cac:PartyIdentification>
 						<!--OPT-301-->
-						<cbc:ID schemeName="organization">TPO-0001</cbc:ID>
+						<cbc:ID schemeName="organization">ORG-0002</cbc:ID>
 					</cac:PartyIdentification>
 				</cac:IssuerParty>
 			</cac:FiscalLegislationDocumentReference>
@@ -1605,7 +1468,7 @@
 				<cac:Attachment>
 					<cac:ExternalReference>
 						<!--BT-615-->
-						<cbc:URI>http://restrictedaccessto.com</cbc:URI>
+						<cbc:URI>http://accessto.com</cbc:URI>
 					</cac:ExternalReference>
 				</cac:Attachment>
 			</cac:CallForTendersDocumentReference>
@@ -1656,25 +1519,6 @@
 				<cbc:ExecutionRequirementCode listName="esignature-submission">true</cbc:ExecutionRequirementCode>
 			</cac:ContractExecutionRequirement>
 			<cac:AwardingTerms>
-				<cac:TechnicalCommitteePerson>
-					<cbc:FamilyName>arch. Andrzej Bulanda – Przewodniczący Sądu Konkurs.; arch. Maria Saloni-Sadowska –Sędzia referent; arch. Bartosz Lewandowski – Asystent Sędziego referenta; Robert Widz –Członek Sądu Konkurs.; Agnieszka Zubala – Członek Sądu Konkurs.; arch. Kinga Socha –Członek Sądu Konkurs.; arch. Piotr Piętka – Członek Sądu Konkurs.; arch. Rafał Sieraczyński –Członek Sądu Konkurs.; Rafał Mroczkowski - Sekretarz</cbc:FamilyName>
-				</cac:TechnicalCommitteePerson>
-				<cac:Prize>
-					<cbc:RankCode>1</cbc:RankCode>
-					<cbc:ValueAmount currencyID="EUR">10000</cbc:ValueAmount>
-					<cbc:Description languageID="FRA">Une indemnité forfaitaire d'un montant identique à celui versé aux concurrents non retenus sera payée à l'équipe lauréate sous forme d'avance sur le marché de maîtrise d'œuvre dès l'issue du concours; cette somme étant à valoir sur le montant des honoraires à percevoir ultérieurement au titre du marché de maîtrise d'œuvre.</cbc:Description>
-				</cac:Prize>
-				<cac:Prize>
-					<cbc:RankCode>2</cbc:RankCode>
-					<cbc:ValueAmount currencyID="EUR">20000</cbc:ValueAmount>
-					<cbc:Description languageID="FRA">Une indemnité forfaitaire d'un montant
-						identique à celui versé aux concurrents non retenus sera payée à l'équipe
-						lauréate sous forme d'avance sur le marché de maîtrise d'œuvre dès l'issue
-						du concours; cette somme étant à valoir sur le montant des honoraires à
-						percevoir ultérieurement au titre du marché de maîtrise d'œuvre.</cbc:Description>
-				</cac:Prize>
-				<cbc:FollowupContractIndicator>true</cbc:FollowupContractIndicator>
-				<cbc:BindingOnBuyerIndicator>true</cbc:BindingOnBuyerIndicator>
 				<!--BT-120-->
 				<cbc:NoFurtherNegotiationIndicator>false</cbc:NoFurtherNegotiationIndicator>
 				<cac:AwardingCriterion>
@@ -1689,7 +1533,6 @@
 											<!--BT-541-->
 											<efbc:ParameterNumeric>60</efbc:ParameterNumeric>
 										</efac:AwardCriterionParameter>
-
 									</efext:EformsExtension>
 								</ext:ExtensionContent>
 							</ext:UBLExtension>
@@ -1723,8 +1566,6 @@
 						<!--BT-540-->
 						<cbc:Description languageID="ENG">AC Description ---</cbc:Description>
 					</cac:SubordinateAwardingCriterion>
-					<cbc:Description languageID="ENG">........</cbc:Description>
-					<cbc:CalculationExpression languageID="ENG">See the procurement document</cbc:CalculationExpression>
 				</cac:AwardingCriterion>
 			</cac:AwardingTerms>
 			<cac:AdditionalInformationParty>
@@ -1882,7 +1723,7 @@
 			<!--BT-23-->
 			<cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
 			<!--BT-25-->
-			<cbc:EstimatedOverallContractQuantity unitCode="HUR">2000</cbc:EstimatedOverallContractQuantity>
+			<cbc:EstimatedOverallContractQuantity unitCode="HUR">1000</cbc:EstimatedOverallContractQuantity>
 			<!--BT-300-->
 			<cbc:Note languageID="ENG">Additional information for GLO-0001 ProcurementProject ---</cbc:Note>
 			<!--BT-726-->
@@ -1905,9 +1746,9 @@
 			</cac:ProcurementAdditionalType>
 			<cac:ProcurementAdditionalType>
 				<!--BT-06-->
-				<cbc:ProcurementTypeCode listName="strategic-procurement">soc-obj</cbc:ProcurementTypeCode>
+				<cbc:ProcurementTypeCode listName="strategic-procurement">env-imp</cbc:ProcurementTypeCode>
 				<!--BT-777-->
-				<cbc:ProcurementType languageID="ENG">Strategic procurement description social procurement ---</cbc:ProcurementType>
+				<cbc:ProcurementType languageID="ENG">Strategic procurement description ---</cbc:ProcurementType>
 			</cac:ProcurementAdditionalType>
 			<cac:ProcurementAdditionalType>
 				<!--BT-754-->
@@ -1916,7 +1757,6 @@
 				<cbc:ProcurementType languageID="ENG">Accessibility Justification ---</cbc:ProcurementType>
 			</cac:ProcurementAdditionalType>
 			<cac:RequestedTenderTotal>
-
 				<!--BT-27-->
 				<cbc:EstimatedOverallContractAmount currencyID="EUR">9999999.99</cbc:EstimatedOverallContractAmount>
 			</cac:RequestedTenderTotal>
@@ -1961,8 +1801,6 @@
 				<cbc:StartDate>2023-01-01+01:00</cbc:StartDate>
 				<!--BT-537-->
 				<cbc:EndDate>2023-05-23+02:00</cbc:EndDate>
-				<!-- BT-36 -->
-				<cbc:DurationMeasure unitCode="MONTH">5</cbc:DurationMeasure>
 			</cac:PlannedPeriod>
 			<cac:ContractExtension>
 				<!--BT-54-->

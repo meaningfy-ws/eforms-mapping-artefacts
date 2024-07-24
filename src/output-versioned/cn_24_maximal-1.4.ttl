@@ -24,46 +24,24 @@
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_8y8GPfmPvSRdBcci6WWcSi a epo:AccessTerm;
   epo:hasAdditionalInformationDeadline "2023-05-20T20:59:32+01:00"^^xsd:dateTime .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_Aim3sQTrJD92cok54ZhnWW a epo:AccessTerm;
-  epo:hasPublicAccessURL "http://nonrestricteddocuments.com"^^xsd:anyURI;
-  epo:isProcurementDocumentRestricted false .
-
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_PuAZ93vcjRYhKiN4rMvUZg a epo:AccessTerm;
   epo:definesOfflineAccessProvider epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OfflineAccessProvider_PuAZ93vcjRYhKiN4rMvUZg;
   epo:definesProcurementProcedureInformationProvider epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProcedureInformationProvider_PuAZ93vcjRYhKiN4rMvUZg .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_RrRXrztPAFwoTrNhP75ZJZ a epo:AccessTerm;
+  epo:hasPublicAccessURL "http://accessto.com"^^xsd:anyURI;
   epo:hasRestrictedAccessURL "http://accessto.com"^^xsd:anyURI;
   epo:isProcurementDocumentRestricted true .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_SUjgiTfthNR3jeStaMcRex a epo:AccessTerm;
-  epo:hasPublicAccessURL "http://nonrestricteddocuments.com"^^xsd:anyURI;
-  epo:isProcurementDocumentRestricted false .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_TT87XZ7rfCixVuS4Z9trMH a epo:AccessTerm;
   epo:definesOfflineAccessProvider epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OfflineAccessProvider_TT87XZ7rfCixVuS4Z9trMH;
   epo:definesProcurementProcedureInformationProvider epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProcedureInformationProvider_TT87XZ7rfCixVuS4Z9trMH .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_TTjvk4ng8FHMGggQfNMCNm a epo:AccessTerm;
-  epo:hasPublicAccessURL "http://nonrestricteddocuments.com"^^xsd:anyURI;
-  epo:isProcurementDocumentRestricted false .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_XnxqfcRqzA7sngzwrWyL3G a epo:AccessTerm;
-  epo:hasPublicAccessURL "http://nonrestricteddocuments.com"^^xsd:anyURI;
-  epo:isProcurementDocumentRestricted false .
-
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_daUDPcwCUoxbJRjGb7tKNQ a epo:AccessTerm;
   epo:hasAdditionalInformationDeadline "2023-05-20T20:59:32+01:00"^^xsd:dateTime .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_fHHa5zNc2jy5cUXFhDq6nM a epo:AccessTerm;
-  epo:hasPublicAccessURL "http://nonrestricteddocuments.com"^^xsd:anyURI;
-  epo:isProcurementDocumentRestricted false .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_hjn5LF75s8LS7Byp6WDWeS a epo:AccessTerm;
-  epo:hasPublicAccessURL "http://nonrestricteddocuments.com"^^xsd:anyURI;
-  epo:isProcurementDocumentRestricted false .
-
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_oUHv54SLxwtS52U2qbb7DZ a epo:AccessTerm;
+  epo:hasPublicAccessURL "http://accessto.com"^^xsd:anyURI;
   epo:hasRestrictedAccessURL "http://accessto.com"^^xsd:anyURI;
   epo:isProcurementDocumentRestricted true .
 
@@ -612,15 +590,15 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001 a epo:Lot;
   epo:isCoveredByGPA true;
   epo:isSMESuitable true;
   epo:isSubjectToLotSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_TT87XZ7rfCixVuS4Z9trMH,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_XnxqfcRqzA7sngzwrWyL3G, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_daUDPcwCUoxbJRjGb7tKNQ,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_fHHa5zNc2jy5cUXFhDq6nM, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_hjn5LF75s8LS7Byp6WDWeS,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_oUHv54SLxwtS52U2qbb7DZ, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTerm_4qCitbxYVRfdbqxnYtJTZF,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_daUDPcwCUoxbJRjGb7tKNQ, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_oUHv54SLxwtS52U2qbb7DZ,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTerm_4qCitbxYVRfdbqxnYtJTZF,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MultipleStageProcedureTerm_daUDPcwCUoxbJRjGb7tKNQ,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_NonDisclosureAgreementTerm_TT87XZ7rfCixVuS4Z9trMH,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_VZxmrBG8UMc3RvpZcKCpvE, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_bMTjo7a5Ke582iB4TXZmU8,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SecurityClearanceTerm_TT87XZ7rfCixVuS4Z9trMH,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_TT87XZ7rfCixVuS4Z9trMH,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_daUDPcwCUoxbJRjGb7tKNQ;
+  epo:isUsingEUFunds true;
   epo:specifiesProcurementCriterion epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_Ee3JXqpmik8eG35Uay4dJk,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_QaDZD9SvbXf8nLh2wqBGkh,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_65B5ieqPopJApHPkYdhiAi,
@@ -663,14 +641,14 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002 a epo:Lot;
   epo:isFundedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotFund_UQnAwfk3ERwvnj7e2sbo39;
   epo:isSMESuitable true;
   epo:isSubjectToLotSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_8y8GPfmPvSRdBcci6WWcSi,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_Aim3sQTrJD92cok54ZhnWW, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_PuAZ93vcjRYhKiN4rMvUZg,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_RrRXrztPAFwoTrNhP75ZJZ, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_SUjgiTfthNR3jeStaMcRex,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_TTjvk4ng8FHMGggQfNMCNm, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTerm_8APvjTVZXX8CxGPVJZoBww,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_PuAZ93vcjRYhKiN4rMvUZg, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_RrRXrztPAFwoTrNhP75ZJZ,
+    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTerm_8APvjTVZXX8CxGPVJZoBww,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MultipleStageProcedureTerm_8y8GPfmPvSRdBcci6WWcSi,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_FsymrRPQVzLm3zkbgk3JgA, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_bpDJYehUZE5dpNtnagJd4V,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SecurityClearanceTerm_PuAZ93vcjRYhKiN4rMvUZg,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_8y8GPfmPvSRdBcci6WWcSi,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_PuAZ93vcjRYhKiN4rMvUZg;
+  epo:isUsingEUFunds true;
   epo:specifiesProcurementCriterion epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_39TpnFPzm9mQHb8KWyccgF,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_JXVZRgb5g8CzzdmWDdr5QZ,
     epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_65B5ieqPopJApHPkYdhiAi,
@@ -978,6 +956,36 @@ epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementCriterion_8y8GPfmPvSRdBcc
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementCriterion_daUDPcwCUoxbJRjGb7tKNQ
   a epo:ProcurementCriterion;
   epo:hasPerformingStaffQualificationInformation <http://publications.europa.eu/resource/authority/requirement-stage/t-requ> .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_Aim3sQTrJD92cok54ZhnWW
+  a epo:ProcurementDocument;
+  epo:hasOfficialLanguage <http://publications.europa.eu/resource/authority/language/FRA> .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_RrRXrztPAFwoTrNhP75ZJZ
+  a epo:ProcurementDocument .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_SUjgiTfthNR3jeStaMcRex
+  a epo:ProcurementDocument;
+  epo:hasOfficialLanguage <http://publications.europa.eu/resource/authority/language/ENG> .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_TTjvk4ng8FHMGggQfNMCNm
+  a epo:ProcurementDocument;
+  epo:hasUnofficialLanguage <http://publications.europa.eu/resource/authority/language/CAT> .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_XnxqfcRqzA7sngzwrWyL3G
+  a epo:ProcurementDocument;
+  epo:hasOfficialLanguage <http://publications.europa.eu/resource/authority/language/ENG> .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_fHHa5zNc2jy5cUXFhDq6nM
+  a epo:ProcurementDocument;
+  epo:hasOfficialLanguage <http://publications.europa.eu/resource/authority/language/FRA> .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_hjn5LF75s8LS7Byp6WDWeS
+  a epo:ProcurementDocument;
+  epo:hasUnofficialLanguage <http://publications.europa.eu/resource/authority/language/CAT> .
+
+epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_oUHv54SLxwtS52U2qbb7DZ
+  a epo:ProcurementDocument .
 
 epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProcedureInformationProvider_PuAZ93vcjRYhKiN4rMvUZg
   a epo:ProcurementProcedureInformationProvider;

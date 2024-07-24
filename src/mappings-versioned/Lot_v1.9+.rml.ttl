@@ -192,3 +192,98 @@ tedm:MG-SelectionCriterion-specifiesProcurementCriterion-Lot_ND-SecondStageWeigh
                 ] ;
         ]
 .
+
+tedm:MG-AccessTerm-isSubjectToLotSpecificTerm-Lot_ND-LotProcurementDocument a rr:TriplesMap ;
+    rdfs:label "MG-AccessTerm";
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-708-Lot (object)";
+            rdfs:comment "Documents Official Language of MG-AccessTerm under ND-LotProcurementDocument";
+            rr:predicate epo:involvesProcurementDocument;
+            rr:objectMap
+                [
+                   rr:parentTriplesMap tedm:MG-ProcurementDocument-involvesProcurementDocument-AccessTerm-isSubjectToLotSpecificTerm-Lot_ND-LotDocOfficialLanguage ;
+                    rr:joinCondition [
+                        rr:child "path(.)";
+                        rr:parent "path(../../../../../..)";
+                    ];
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-737-Lot (object)";
+            rdfs:comment "Documents Unofficial Language of MG-AccessTerm under ND-LotDocAllOfficialLanguages";
+            rr:predicate epo:involvesProcurementDocument;
+            rr:objectMap
+                [
+                   rr:parentTriplesMap tedm:MG-ProcurementDocument-involvesProcurementDocument-AccessTerm-isSubjectToLotSpecificTerm-Lot_ND-LotDocAllNonOfficialLanguages ;
+                    rr:joinCondition [
+                        rr:child "path(.)";
+                        rr:parent "path(../../../../../..)";
+                    ];
+                ] ;
+        ] ;
+.
+
+tedm:MG-ProcurementDocument-involvesProcurementDocument-AccessTerm-isSubjectToLotSpecificTerm-Lot_ND-LotDocOfficialLanguage a rr:TriplesMap ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-LotDocOfficialLanguage";
+            rml:reference "if (exists(cbc:ID)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_ProcurementDocument_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(../../../../../..)) || '?response_type=raw') else null" ;
+            rr:class epo:ProcurementDocument
+        ] ;
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:OfficialLanguages/cac:Language";
+            rml:referenceFormulation ql:XPath
+        ];
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-708-Lot (value)";
+            rdfs:comment "Documents Official Language of MG-ProcurementDocument under ND-LotDocOfficialLanguage";
+            rr:predicate epo:hasOfficialLanguage  ;
+            rr:objectMap
+                [
+                    tedm:minSDKVersion "1.9.1" ;
+                    rdfs:label "at-voc:language" ;
+                    rdfs:comment "Documents Official Language of MG-ProcurementDocument under ND-LotDocOfficialLanguage";
+                    rr:parentTriplesMap tedm:languageJSON ;
+                    rr:joinCondition [
+                        rr:child "cbc:ID" ;
+                        rr:parent "op_code.value" ;
+                    ] ;
+                ] ;
+        ] ;
+.
+
+tedm:MG-ProcurementDocument-involvesProcurementDocument-AccessTerm-isSubjectToLotSpecificTerm-Lot_ND-LotDocAllNonOfficialLanguages a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NonOfficialLanguages/cac:Language";
+            rml:referenceFormulation ql:XPath
+        ];
+    rr:subjectMap
+        [
+            rdfs:label "ND-LotDocAllNonOfficialLanguages";
+            rml:reference "if (exists(cbc:ID)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_ProcurementDocument_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(../../../../../..)) || '?response_type=raw') else null" ;
+            rr:class epo:ProcurementDocument
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-737-Lot";
+            rdfs:comment "Documents Unofficial Language of MG-ProcurementDocument under ND-LotDocAllNonOfficialLanguages";
+            rr:predicate epo:hasUnofficialLanguage  ;
+            rr:objectMap
+                [
+                    tedm:minSDKVersion "1.9.1" ;
+                    rdfs:label "at-voc:language" ;
+                    rr:parentTriplesMap tedm:languageJSON ;
+                    rr:joinCondition [
+                        rr:child "cbc:ID" ;
+                        rr:parent "op_code.value" ;
+                    ] ;
+                ] ;
+        ] ;
+.

@@ -166,3 +166,74 @@ tedm:MG-Constraint-hasConstraint-SelectionCriterion-specifiesProcurementCriterio
                 ] ;
         ] ;
 .
+
+tedm:MG-AccessTerm-isSubjectToLotSpecificTerm-Lot_ND-LotProcurementDocument a rr:TriplesMap ;
+    rdfs:label "MG-AccessTerm";
+# iterator is defined in 1.3-1.6, in 1.7-1.7 and in 1.8+  TODO remove this comment if works
+#    rml:logicalSource
+#        [
+#            rml:source "data/source.xml" ;
+#            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:CallForTendersDocumentReference";
+#            rml:referenceFormulation ql:XPath
+#        ];
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-708-Lot (object)";
+            rdfs:comment "Documents Official Language of MG-AccessTerm under ND-LotProcurementDocument";
+            rr:predicate epo:involvesProcurementDocument;
+            rr:objectMap
+                [
+                   rr:parentTriplesMap tedm:MG-ProcurementDocument-involvesProcurementDocument-AccessTerm-isSubjectToLotSpecificTerm-Lot_ND-LotDocOfficialLanguage ;
+                    rr:joinCondition [
+                        rr:child "path(.)";
+                        rr:parent "path(.)";
+                    ];
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-737-Lot (object)";
+            rdfs:comment "Documents Unofficial Language of MG-AccessTerm under ND-LotDocAllOfficialLanguages";
+            rr:predicate epo:involvesProcurementDocument;
+            rr:objectMap
+                [
+                   rr:parentTriplesMap tedm:MG-ProcurementDocument-involvesProcurementDocument-AccessTerm-isSubjectToLotSpecificTerm-Lot_ND-LotDocAllNonOfficialLanguages ;
+                    rr:joinCondition [
+                        rr:child "path(.)";
+                        rr:parent "path(.)";
+                    ];
+                ] ;
+        ] ;
+.
+
+tedm:MG-ProcurementDocument-involvesProcurementDocument-AccessTerm-isSubjectToLotSpecificTerm-Lot_ND-LotDocAllNonOfficialLanguages a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:CallForTendersDocumentReference";
+            rml:referenceFormulation ql:XPath
+        ];
+    rr:subjectMap
+        [
+            rdfs:label "ND-LotDocAllNonOfficialLanguages";
+            rml:reference "if (exists(cbc:LanguageID[../cbc:DocumentStatusCode/text()='non-official'])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_ProcurementDocument_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(concat(path(..), cbc:ID/text())) || '?response_type=raw') else null" ;
+            rr:class epo:ProcurementDocument
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-737-Lot";
+            rdfs:comment "Documents Unofficial Language of MG-ProcurementDocument under ND-LotProcurementDocument";
+            rr:predicate epo:hasUnofficialLanguage  ;
+            rr:objectMap
+                [
+                    tedm:minSDKVersion "1.3" ;
+                    tedm:maxSDKVersion "1.8" ;
+                    rdfs:label "at-voc:language" ;
+                    rr:parentTriplesMap tedm:languageJSON ;
+                    rr:joinCondition [
+                        rr:child "cbc:LanguageID[../cbc:DocumentStatusCode/text()='non-official']" ;
+                        rr:parent "op_code.value" ;
+                    ] ;
+                ] ;
+        ] ;
+.

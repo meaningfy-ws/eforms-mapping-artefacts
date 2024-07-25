@@ -1,0 +1,90 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix cccev: <http://data.europa.eu/m8g/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix epd: <http://data.europa.eu/a4g/resource/> .
+@prefix epo: <http://data.europa.eu/a4g/ontology#> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix idlab-fn: <http://example.com/idlab/function/> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <http://www.w3.org/ns/person#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tedm: <http://data.europa.eu/a4g/mapping/sf-rml/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotGroupAwardInformation_5RkUZBRon4U8t9FeNL7QSi
+  a epo:LotGroupAwardInformation;
+  epo:hasGroupFrameworkAgreementMaximumValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_5RkUZBRon4U8t9FeNL7QSi .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotGroupAwardInformation_JryEpNBTCzNfzKbsxaXwjt
+  a epo:LotGroupAwardInformation .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValueLot_JryEpNBTCzNfzKbsxaXwjt
+  a epo:MonetaryValue;
+  epo:hasAmountValue 9000000.0, 9999999.99 .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_5RkUZBRon4U8t9FeNL7QSi a
+    epo:MonetaryValue;
+  epo:hasAmountValue 10000.0;
+  epo:hasCurrency "EUR" .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Notice a epo:ResultNotice;
+  epo::announcesRole epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0001,
+    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0002;
+  epo:announcesLotGroupAwardInformation epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotGroupAwardInformation_JryEpNBTCzNfzKbsxaXwjt;
+  epo:announcesNoticeAwardInformation epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_NoticeAwardInformation_JryEpNBTCzNfzKbsxaXwjt .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_NoticeAwardInformation_JryEpNBTCzNfzKbsxaXwjt
+  a epo:NoticeAwardInformation;
+  epo:hasApproximateFrameworkAgreementValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValueLot_JryEpNBTCzNfzKbsxaXwjt;
+  epo:hasMaximumFrameworkAgreementAwardedValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValueLot_JryEpNBTCzNfzKbsxaXwjt;
+  epo:hasTotalAwardedValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValueLot_JryEpNBTCzNfzKbsxaXwjt .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_OrganisationGroup_ECUZjDvaPMUJHS4Tp5KyYK
+  a epo:OrganisationGroup;
+  epo:hasMember epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0008, epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0009 .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0008 a epo:Organization;
+  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TendererIdentifier_7rVzZwwwwKDY9vEDYu5vNr .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0009 a epo:Organization;
+  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TendererIdentifier_e2qdcoGJDPmK2UPWUzdmhi .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0011 a epo:Organization;
+  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TendererIdentifier_nek8J9435HMtiJoTn8hUVe .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TendererIdentifier_7rVzZwwwwKDY9vEDYu5vNr
+  a adms:Identifier;
+  epo:hasScheme "organization";
+  skos:notation "ORG-0008" .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TendererIdentifier_e2qdcoGJDPmK2UPWUzdmhi
+  a adms:Identifier;
+  epo:hasScheme "organization";
+  skos:notation "ORG-0009" .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TendererIdentifier_nek8J9435HMtiJoTn8hUVe
+  a adms:Identifier;
+  epo:hasScheme "organization";
+  skos:notation "ORG-0011" .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0001 a epo:Tenderer;
+  epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_OrganisationGroup_ECUZjDvaPMUJHS4Tp5KyYK,
+    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0008, epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0009,
+    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0011;
+  dct:title "Gyro and Others Consortium" .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0002 a epo:Tenderer;
+  epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_OrganisationGroup_ECUZjDvaPMUJHS4Tp5KyYK,
+    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0008, epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0009,
+    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0011;
+  dct:title "Competitor" .

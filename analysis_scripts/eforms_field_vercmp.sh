@@ -110,7 +110,7 @@ eforms_field_diff() {
     new_xpath=$(get_xpath_change new "$DIFFFILE")
     xpath_sim=$([[ -n $old_xpath ]] && [[ -n $new_xpath ]] && get_xpath_similarity $old_xpath $new_xpath $min $ref || echo "No Abs XPath changes in v$min-$ref")
     [[ -n $xpath_sim ]] && echo $xpath_sim && sed -i "1s/^/$xpath_sim\n/" "$DIFFFILE"
-    test -s "$DIFFFILE" && sed -i "1s/^/$xpath_sim\n/" "$DIFFFILE" || rm "$DIFFFILE"
+    test -s "$DIFFFILE" && echo "Saved to $DIFFFILE" || rm "$DIFFFILE"
     echo
 
     if [[ -n $3 ]]; then
@@ -124,7 +124,7 @@ eforms_field_diff() {
         new_xpath=$(get_xpath_change new "$DIFFFILE")
         xpath_sim=$([[ -n $old_xpath ]] && [[ -n $new_xpath ]] && get_xpath_similarity $old_xpath $new_xpath $max $ref || echo "No Abs XPath changes v$max-$ref")
         [[ -n $xpath_sim ]] && echo $xpath_sim && sed -i "1s/^/$xpath_sim\n/" "$DIFFFILE"
-        test -s "$DIFFFILE" || rm "$DIFFFILE"
+        test -s "$DIFFFILE" && echo "Saved to $DIFFFILE" || rm "$DIFFFILE"
         echo
 
         echo "==> Diff of earliest min $min ($earliest) vs. latest max $max ($latest)"
@@ -137,7 +137,7 @@ eforms_field_diff() {
         new_xpath=$(get_xpath_change new "$DIFFFILE")
         xpath_sim=$([[ -n $old_xpath ]] && [[ -n $new_xpath ]] && get_xpath_similarity $old_xpath $new_xpath $min $max || echo "No Abs XPath changes in v$min-$max")
         [[ -n $xpath_sim ]] && echo $xpath_sim && sed -i "1s/^/$xpath_sim\n/" "$DIFFFILE"
-        test -s "$DIFFFILE" && sed -i "1s/^/$xpath_sim\n/" "$DIFFFILE" || rm "$DIFFFILE"
+        test -s "$DIFFFILE" && echo "Saved to $DIFFFILE" || rm "$DIFFFILE"
     fi
 }
 

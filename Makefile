@@ -383,3 +383,15 @@ install-antora:
 build-site:
 	@ echo -e "$(BUILD_PRINT)Build site$(END_BUILD_PRINT)"
 	@ npx antora --fetch antora-playbook.yml
+
+# requires jq
+# credit https://unix.stackexchange.com/a/249799 by nisetama
+# TODO generate the diffs and handle different versions
+# recommended to first generate with analyse_versions.sh for a specific versioned package CM
+get_xpath_similarity_stats:
+	@ echo "Frequency of Abs XPath similarity scores" && echo && grep Score ref/eForms-SDK/diffs/* | sed 's/.*Ratio): //' | sort | uniq -c | sort -nr
+	@ echo
+	@ echo -n "Min: " && grep Score ref/eForms-SDK/diffs/* | sed 's/.*Ratio): //' | sort | jq -s min
+	@ echo -n "Max: " && grep Score ref/eForms-SDK/diffs/* | sed 's/.*Ratio): //' | sort | jq -s max
+	@ echo -n "Avg: " && grep Score ref/eForms-SDK/diffs/* | sed 's/.*Ratio): //' | sort | jq -s add/length
+	@ echo -n "Med: " && grep Score ref/eForms-SDK/diffs/* | sed 's/.*Ratio): //' | sort | jq -s 'sort|if length%2==1 then.[length/2|floor]else[.[length/2-1,length/2]]|add/2 end'

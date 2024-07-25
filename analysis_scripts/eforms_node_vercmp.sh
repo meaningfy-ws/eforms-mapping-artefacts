@@ -106,7 +106,7 @@ eforms_node_diff() {
 
     echo "==> Diff of earliest min $min ($earliest) vs. reference $REFVER"
     echo
-    DIFFFILE="$DIFFDIR/${field}_v$min-$ref.diff"
+    DIFFFILE="$DIFFDIR/${node}_v$min-$ref.diff"
     diff -u --color <(echo "$old") <(echo "$new")
     diff -u <(echo "$old") <(echo "$new") > "$DIFFFILE"
     echo
@@ -114,13 +114,13 @@ eforms_node_diff() {
     new_xpath=$(get_xpath_change new "$DIFFFILE")
     xpath_sim=$([[ -n $old_xpath ]] && [[ -n $new_xpath ]] && get_xpath_similarity $old_xpath $new_xpath $min $ref || echo "No Abs XPath changes in v$min-$ref")
     [[ -n $xpath_sim ]] && echo $xpath_sim && sed -i "1s/^/$xpath_sim\n/" "$DIFFFILE"
-    test -s "$DIFFFILE" || rm "$DIFFFILE"
+    test -s "$DIFFFILE" && echo "Saved to $DIFFFILE" || rm "$DIFFFILE"
     echo
 
     if [[ -n $3 ]]; then
         echo "==> Diff of latest max $max ($latest) vs. reference $REFVER"
         echo
-        DIFFFILE="$DIFFDIR/${field}_v$max-$ref.diff"
+        DIFFFILE="$DIFFDIR/${node}_v$max-$ref.diff"
         diff -u --color <(echo "$mid") <(echo "$new")
         diff -u <(echo "$mid") <(echo "$new") > "$DIFFFILE"
         echo
@@ -128,12 +128,12 @@ eforms_node_diff() {
         new_xpath=$(get_xpath_change new "$DIFFFILE")
         xpath_sim=$([[ -n $old_xpath ]] && [[ -n $new_xpath ]] && get_xpath_similarity $old_xpath $new_xpath $max $ref || echo "No Abs XPath changes v$max-$ref")
         [[ -n $xpath_sim ]] && echo $xpath_sim && sed -i "1s/^/$xpath_sim\n/" "$DIFFFILE"
-        test -s "$DIFFFILE" || rm "$DIFFFILE"
+        test -s "$DIFFFILE" && echo "Saved to $DIFFFILE" || rm "$DIFFFILE"
         echo
 
         echo "==> Diff of earliest min $min ($earliest) vs. latest max $max ($latest)"
         echo
-        DIFFFILE="$DIFFDIR/${field}_v$min-$max.diff"
+        DIFFFILE="$DIFFDIR/${node}_v$min-$max.diff"
         diff -u --color <(echo "$old") <(echo "$mid")
         diff -u <(echo "$old") <(echo "$mid") > "$DIFFFILE"
         echo
@@ -141,7 +141,7 @@ eforms_node_diff() {
         new_xpath=$(get_xpath_change new "$DIFFFILE")
         xpath_sim=$([[ -n $old_xpath ]] && [[ -n $new_xpath ]] && get_xpath_similarity $old_xpath $new_xpath $min $max || echo "No Abslute XPath changes in v$min-$max")
         [[ -n $xpath_sim ]] && echo $xpath_sim && sed -i "1s/^/$xpath_sim\n/" "$DIFFFILE"
-        test -s "$DIFFFILE" || rm "$DIFFFILE"
+        test -s "$DIFFFILE" && echo "Saved to $DIFFFILE" || rm "$DIFFFILE"
     fi
 }
 

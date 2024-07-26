@@ -79,7 +79,7 @@ get_xpath_similarity() {
     minver=$3
     maxver=$4
     # WARNING: remove the /dev/null pipe to debug, otherwise real errors are hidden
-    echo -n "Abs XPath v$minver-$maxver " && python3 "$STRSIM_SCRIPT" $old_xpath $new_xpath 2> /dev/null
+    echo -n "Abs XPath v$minver-$maxver " && python3 "$STRSIM_SCRIPT" "$old_xpath" "$new_xpath" 2> /dev/null
 }
 
 # $1: eForms Node ID, $2: Min SDK Version, $3: Max SDK Version (optional)
@@ -112,7 +112,7 @@ eforms_node_diff() {
     echo
     old_xpath=$(get_xpath_change old "$DIFFFILE")
     new_xpath=$(get_xpath_change new "$DIFFFILE")
-    xpath_sim=$([[ -n $old_xpath ]] && [[ -n $new_xpath ]] && get_xpath_similarity $old_xpath $new_xpath $min $ref || echo "No Abs XPath changes in v$min-$ref")
+    xpath_sim=$([[ -n $old_xpath ]] && [[ -n $new_xpath ]] && get_xpath_similarity "$old_xpath" "$new_xpath" $min $ref || echo "No Abs XPath changes in v$min-$ref")
     [[ -n $xpath_sim ]] && echo $xpath_sim && sed -i "1s/^/$xpath_sim\n/" "$DIFFFILE"
     test -s "$DIFFFILE" && echo "Saved to $DIFFFILE" || rm "$DIFFFILE"
     echo
@@ -126,7 +126,7 @@ eforms_node_diff() {
         echo
         old_xpath=$(get_xpath_change old "$DIFFFILE")
         new_xpath=$(get_xpath_change new "$DIFFFILE")
-        xpath_sim=$([[ -n $old_xpath ]] && [[ -n $new_xpath ]] && get_xpath_similarity $old_xpath $new_xpath $max $ref || echo "No Abs XPath changes v$max-$ref")
+        xpath_sim=$([[ -n $old_xpath ]] && [[ -n $new_xpath ]] && get_xpath_similarity "$old_xpath" "$new_xpath" $max $ref || echo "No Abs XPath changes v$max-$ref")
         [[ -n $xpath_sim ]] && echo $xpath_sim && sed -i "1s/^/$xpath_sim\n/" "$DIFFFILE"
         test -s "$DIFFFILE" && echo "Saved to $DIFFFILE" || rm "$DIFFFILE"
         echo
@@ -139,7 +139,7 @@ eforms_node_diff() {
         echo
         old_xpath=$(get_xpath_change old "$DIFFFILE")
         new_xpath=$(get_xpath_change new "$DIFFFILE")
-        xpath_sim=$([[ -n $old_xpath ]] && [[ -n $new_xpath ]] && get_xpath_similarity $old_xpath $new_xpath $min $max || echo "No Abslute XPath changes in v$min-$max")
+        xpath_sim=$([[ -n $old_xpath ]] && [[ -n $new_xpath ]] && get_xpath_similarity "$old_xpath" "$new_xpath" $min $max || echo "No Abslute XPath changes in v$min-$max")
         [[ -n $xpath_sim ]] && echo $xpath_sim && sed -i "1s/^/$xpath_sim\n/" "$DIFFFILE"
         test -s "$DIFFFILE" && echo "Saved to $DIFFFILE" || rm "$DIFFFILE"
     fi

@@ -426,7 +426,7 @@ build-site:
 	@ echo -e "$(BUILD_PRINT)Build site$(END_BUILD_PRINT)"
 	@ npx antora --fetch antora-playbook.yml
 
-# requires jq
+# requires jq, python (pandas for reading Excel, thefuzz for XPath str similarity)
 # credit https://unix.stackexchange.com/a/249799 by nisetama
 # TODO generate the diffs and handle different versions
 # recommended to first generate with analyse_versions.sh for a specific versioned package CM

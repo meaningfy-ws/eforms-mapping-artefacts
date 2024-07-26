@@ -3,7 +3,7 @@ from thefuzz import fuzz
 
 def similarity_partial_ratio(str1, str2):
     """Calculates the partial ratio similarity score between two strings."""
-    return fuzz.partial_ratio(str1, str2)
+    return fuzz.ratio(str1, str2)
 
 
 def help_message():

@@ -1,6 +1,5 @@
 import sys
-import pandas as pd
-from fuzzywuzzy import fuzz
+from thefuzz import fuzz
 
 def similarity_partial_ratio(str1, str2):
     """Calculates the partial ratio similarity score between two strings."""
@@ -33,4 +32,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

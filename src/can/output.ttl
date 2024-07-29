@@ -247,6 +247,26 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyContactPoint_exXX5w4R9epdXpsc
   cccev:email "info@pub-mediator.com";
   cccev:telephone "+44 123456345678" .
 
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractFundIdentifier_VPU8QnEnvpxVBA2qwYNzjZ
+  a adms:Identifier;
+  epo:hasScheme "2021/1234";
+  skos:notation "2021/1234" .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractFundIdentifier_oXwXYzaLxMkFreJUNf6BBv
+  a adms:Identifier;
+  epo:hasScheme "2021/5678";
+  skos:notation "2021/5678" .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractFund_VPU8QnEnvpxVBA2qwYNzjZ a
+    epo:Fund;
+  epo:hasFundProgramme <http://publications.europa.eu/resource/authority/eu-programme/LIFE_2021>;
+  dct:description "Recovery Fund"@en .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractFund_oXwXYzaLxMkFreJUNf6BBv a
+    epo:Fund;
+  epo:hasFundProgramme <http://publications.europa.eu/resource/authority/eu-programme/LIFE_2021>;
+  dct:description "Recovery Fund"@en .
+
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractLocationAddress_5rDboKRaxqo6CZogdiqWet
   a locn:Address;
   epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR> .
@@ -930,6 +950,11 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Reviewer_hnDhtixV2ZdgbuFJoTT2jt a ep
   epo:contextualisedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;
   epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0005 .
 
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContractFund_JryEpNBTCzNfzKbsxaXwjt
+  a epo:Fund;
+  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractFundIdentifier_VPU8QnEnvpxVBA2qwYNzjZ,
+    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractFundIdentifier_oXwXYzaLxMkFreJUNf6BBv .
+
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContractIdentifier_JryEpNBTCzNfzKbsxaXwjt
   a adms:Identifier;
   skos:notation "KLM FGH/912", "REF RST-678" .
@@ -938,6 +963,8 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContract_CON-0001 a epo:Contr
   epo:FrameworkAgreement "true";
   epo:hasAccessURL "https://wheretofindcontract.com/ctr123"^^xs:anyURI;
   epo:hasContractConclusionDate "2023-03-24+02:00"^^xs:date;
+  epo:isFundedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractFund_VPU8QnEnvpxVBA2qwYNzjZ,
+    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContractFund_JryEpNBTCzNfzKbsxaXwjt;
   dct:title "This is the title of the contract ---"@en;
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContractIdentifier_JryEpNBTCzNfzKbsxaXwjt .
 
@@ -945,6 +972,8 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContract_CON-0002 a epo:Contr
   epo:FrameworkAgreement "true";
   epo:hasAccessURL "https://wheretofindcontract.com/ctr222"^^xs:anyURI;
   epo:hasContractConclusionDate "2023-03-24+02:00"^^xs:date;
+  epo:isFundedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractFund_oXwXYzaLxMkFreJUNf6BBv,
+    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContractFund_JryEpNBTCzNfzKbsxaXwjt;
   dct:title "Title of second contract ---"@en;
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContractIdentifier_JryEpNBTCzNfzKbsxaXwjt .
 

@@ -57,6 +57,10 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_5RkUZBRon4U8t9FeNL7QSi
   epo:hasAmountValue 10000.0;
   epo:hasCurrency "EUR" .
 
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_JryEpNBTCzNfzKbsxaXwjt a
+    epo:MonetaryValue;
+  epo:hasAmountValue 9999999.99 .
+
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Notice a epo:ResultNotice;
   epo::announcesRole epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0001,
     epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0002;
@@ -110,6 +114,32 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContract_CON-0002 a epo:Contr
   dct:title "Title of second contract ---"@en;
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContractIdentifier_JryEpNBTCzNfzKbsxaXwjt .
 
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderAwardOutcome_JryEpNBTCzNfzKbsxaXwjt
+  a epo:TenderAwardOutcome;
+  epo:concernsTender epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_8tLJD9wyvjSHWYvDWGiX5D,
+    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_nNq2rC7wBesmhA5baJ8mCt;
+  epo:hasAwardRank "3", "4" .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderIdentifier_JryEpNBTCzNfzKbsxaXwjt
+  a adms:Identifier;
+  skos:notation "REF DEF-001/02", "REF GHI/0003-01", "REF JKL/0003-01" .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_8tLJD9wyvjSHWYvDWGiX5D a epo:Tender;
+  epo:hasFinancialOfferValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_JryEpNBTCzNfzKbsxaXwjt;
+  epo:isSubmitedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TEN-0001;
+  epo:isVariant true .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_JryEpNBTCzNfzKbsxaXwjt a epo:Tender;
+  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderIdentifier_JryEpNBTCzNfzKbsxaXwjt .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_econsLsjPJro8aUo9zUip8 a epo:Tender;
+  epo:isSubmitedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TEN-0003 .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_nNq2rC7wBesmhA5baJ8mCt a epo:Tender;
+  epo:hasFinancialOfferValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_JryEpNBTCzNfzKbsxaXwjt;
+  epo:isSubmitedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TEN-0002;
+  epo:isVariant true .
+
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TendererIdentifier_7rVzZwwwwKDY9vEDYu5vNr
   a adms:Identifier;
   epo:hasScheme "organization";
@@ -124,6 +154,12 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TendererIdentifier_nek8J9435HMtiJoTn
   a adms:Identifier;
   epo:hasScheme "organization";
   skos:notation "ORG-0011" .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TEN-0001 a epo:Tenderer .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TEN-0002 a epo:Tenderer .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TEN-0003 a epo:Tenderer .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0001 a epo:Tenderer;
   epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_OrganisationGroup_ECUZjDvaPMUJHS4Tp5KyYK,

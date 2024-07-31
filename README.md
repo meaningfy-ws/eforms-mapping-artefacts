@@ -38,13 +38,15 @@ files using Jena's `riot` tool.
 Users need only to install the following external software tools, libraries
 and/or runtimes if developing and testing the RML mapping:
 
-- Java 11+ (tested up to 17)
-- RMLMapper-Java==v6.2.2
-- A UNIX-compatible environment w/ `make`, `curl`, `zip`, etc.
-- Apache Jena 4.10 (for the command-line tools `arq` and `riot`)
+- [Java](https://www.oracle.com/java/technologies/downloads/) 11+ (tested up to 17)
+- [RMLMapper-Java==v6.2.2](https://github.com/RMLio/rmlmapper-java/releases/tag/v6.2.2)
+- A UNIX-compatible environment w/ `make`, `curl`, `zip`, etc. (for packaging)
+- [Apache Jena 4.10](https://jena.apache.org/download/index.cgi#previous-releases) (for testing using the [command-line tools](https://jena.apache.org/documentation/tools/index.html) `arq` and `riot`)
+- [Python](https://www.python.org/downloads/) and `jq` for running some other (namely analysis) tools/scripts/targets
 
-Make, cURL, ZIP and other UNIX/Bash tools may be accessible on Windows via
-Chocolatey (e.g. `choco install make`).
+Make, cURL, ZIP, JQ and other UNIX/Bash tools may be accessible on Windows via
+[Chocolatey](https://chocolatey.org/install), and on Mac via [HomeBrew](https://brew.sh/). Python and Java should be installed from their respective official sources, but [pyenv](https://github.com/pyenv/pyenv)[(-win)](https://github.com/pyenv-win/pyenv-win)
+and [SDKMAN!](https://sdkman.io/usage) are good options as well.
 
 RMLMapper is currently tied to v6.2.2 because of an [issue with conditional
 instantiation](https://github.com/RMLio/rmlmapper-java/issues/236) (currently

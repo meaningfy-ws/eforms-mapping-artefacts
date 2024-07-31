@@ -57,9 +57,25 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_5RkUZBRon4U8t9FeNL7QSi
   epo:hasAmountValue 10000.0;
   epo:hasCurrency "EUR" .
 
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_8tLJD9wyvjSHWYvDWGiX5D a
+    epo:MonetaryValue;
+  epo:hasAmountValue 9999999.99;
+  epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> .
+
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_JryEpNBTCzNfzKbsxaXwjt a
     epo:MonetaryValue;
-  epo:hasAmountValue 9999999.99 .
+  epo:hasAmountValue 9999999.99;
+  epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_econsLsjPJro8aUo9zUip8 a
+    epo:MonetaryValue;
+  epo:hasAmountValue 99999999.99;
+  epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_nNq2rC7wBesmhA5baJ8mCt a
+    epo:MonetaryValue;
+  epo:hasAmountValue 9999999.99;
+  epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Notice a epo:ResultNotice;
   epo::announcesRole epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0001,
@@ -114,6 +130,24 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContract_CON-0002 a epo:Contr
   dct:title "Title of second contract ---"@en;
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContractIdentifier_JryEpNBTCzNfzKbsxaXwjt .
 
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubcontractingEstimate_8tLJD9wyvjSHWYvDWGiX5D
+  a epo:SubcontractingEstimate;
+  epo:hasEstimatedPercentage 30.0;
+  epo:hasSubcontractingEstimatedValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_8tLJD9wyvjSHWYvDWGiX5D;
+  dct:description "Subcontracting Description ---"@en .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubcontractingEstimate_econsLsjPJro8aUo9zUip8
+  a epo:SubcontractingEstimate;
+  epo:hasEstimatedPercentage 30.0;
+  epo:hasSubcontractingEstimatedValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_econsLsjPJro8aUo9zUip8;
+  dct:description "Subcontracting Description ---"@en .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubcontractingEstimate_nNq2rC7wBesmhA5baJ8mCt
+  a epo:SubcontractingEstimate;
+  epo:hasEstimatedPercentage 30.0;
+  epo:hasSubcontractingEstimatedValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_nNq2rC7wBesmhA5baJ8mCt;
+  dct:description "Subcontracting Description ---"@en .
+
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderAwardOutcome_JryEpNBTCzNfzKbsxaXwjt
   a epo:TenderAwardOutcome;
   epo:concernsTender epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_8tLJD9wyvjSHWYvDWGiX5D,
@@ -124,19 +158,28 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderIdentifier_JryEpNBTCzNfzKbsxaX
   a adms:Identifier;
   skos:notation "REF DEF-001/02", "REF GHI/0003-01", "REF JKL/0003-01" .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_8tLJD9wyvjSHWYvDWGiX5D a epo:Tender;
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_8tLJD9wyvjSHWYvDWGiX5D a <http://data.europa.eu/a4g/ontology#>,
+    epo:Tender;
+  epo:foreseesSubcontracting epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubcontractingEstimate_8tLJD9wyvjSHWYvDWGiX5D;
   epo:hasFinancialOfferValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_JryEpNBTCzNfzKbsxaXwjt;
+  epo:hasSubcontracting <http://publications.europa.eu/resource/authority/applicability/yes>;
   epo:isSubmitedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TEN-0001;
   epo:isVariant true .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_JryEpNBTCzNfzKbsxaXwjt a epo:Tender;
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderIdentifier_JryEpNBTCzNfzKbsxaXwjt .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_econsLsjPJro8aUo9zUip8 a epo:Tender;
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_econsLsjPJro8aUo9zUip8 a <http://data.europa.eu/a4g/ontology#>,
+    epo:Tender;
+  epo:foreseesSubcontracting epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubcontractingEstimate_econsLsjPJro8aUo9zUip8;
+  epo:hasSubcontracting <http://publications.europa.eu/resource/authority/applicability/yes>;
   epo:isSubmitedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TEN-0003 .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_nNq2rC7wBesmhA5baJ8mCt a epo:Tender;
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_nNq2rC7wBesmhA5baJ8mCt a <http://data.europa.eu/a4g/ontology#>,
+    epo:Tender;
+  epo:foreseesSubcontracting epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubcontractingEstimate_nNq2rC7wBesmhA5baJ8mCt;
   epo:hasFinancialOfferValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_JryEpNBTCzNfzKbsxaXwjt;
+  epo:hasSubcontracting <http://publications.europa.eu/resource/authority/applicability/yes>;
   epo:isSubmitedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TEN-0002;
   epo:isVariant true .
 

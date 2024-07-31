@@ -92,6 +92,7 @@ tedm:MG-Identifier-identifier-Tender_ND-LotTender  a rr:TriplesMap ;
                     rml:reference "efac:TenderReference/cbc:ID/@schemeName";
                 ] ;
         ] ;
+
 .
 tedm:MG-TenderAwardOutcome_ND-LotTender  a rr:TriplesMap ;
   rdfs:label "MG-TenderAwardOutcome";
@@ -203,6 +204,32 @@ tedm:MG-Tender_ND-LotTender  a rr:TriplesMap ;
                     ];
                 ] ;
         ];
+    rr:predicateObjectMap
+        [
+            rdfs:label "ND-SubcontractedContract and BT-553-Tender" ;
+            rr:predicate epo:foreseesSubcontracting  ;
+            rr:objectMap
+                [
+                   rr:parentTriplesMap tedm:MG-SubcontractingEstimate-foreseesSubcontracting-Tender_ND-LotTender ;
+                    rr:joinCondition[
+                        rr:child "path(.)";
+                        rr:parent "path(.)"
+                    ];
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-554-Tender and BT-555-Tender" ;
+            rr:predicate epo:foreseesSubcontracting  ;
+            rr:objectMap
+                [
+                   rr:parentTriplesMap tedm:MG-SubcontractingEstimate-foreseesSubcontracting-Tender_ND-SubcontractedContract ;
+                    rr:joinCondition[
+                        rr:child "path(.)";
+                        rr:parent "path(..)"
+                    ];
+                ] ;
+        ] ;
 .
 
 tedm:MG-MonetaryValue-hasFinancialOfferValue-Tender_ND-LotTender  a rr:TriplesMap ;
@@ -230,6 +257,21 @@ tedm:MG-MonetaryValue-hasFinancialOfferValue-Tender_ND-LotTender  a rr:TriplesMa
                     rr:datatype xsd:decimal  ;
                 ] ;
         ];
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-720-Tender-Currency";
+            rdfs:comment "Currency of Tender Value of MG-MonetaryValue under ND-LotTender";
+            rr:predicate epo:hasCurrency ;
+            rr:objectMap
+                [
+                    rdfs:label "at-voc:currency" ;
+                    rr:parentTriplesMap tedm:currency ;
+                    rr:joinCondition [
+                        rr:child "cac:LegalMonetaryTotal/cbc:PayableAmount/@currencyID" ;
+                        rr:parent "code.value" ;
+                    ] ;
+                ] ;
+        ] ;
 .
 
 tedm:MG-Tenderer-isSubmitedBy-Tender_ND-LotTender  a rr:TriplesMap ;
@@ -246,4 +288,181 @@ tedm:MG-Tenderer-isSubmitedBy-Tender_ND-LotTender  a rr:TriplesMap ;
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Tenderer_{cbc:ID}" ;
             rr:class epo:Tenderer
         ] ;
+    .
+
+tedm:MG-SubcontractingEstimate_ND-LotTender  a rr:TriplesMap ;
+  rdfs:label "MG-SubcontractingEstimate";
+       rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-LotTender" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_SubcontractingEstimate_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rr:class epo:SubcontractingEstimate
+        ] ;
+    .
+
+tedm:MG-SubcontractingEstimate-foreseesSubcontracting-Tender_ND-LotTender  a rr:TriplesMap ;
+  rdfs:label "MG-SubcontractingEstimate";
+       rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-LotTender" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_SubcontractingEstimate_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rr:class epo:SubcontractingEstimate
+        ] ;
+     rr:predicateObjectMap
+        [
+            rdfs:label "BT-553-Tender" ;
+            rdfs:comment "Subcontracting Value  of MG-SubcontractingEstimate under ND-LotTender" ;
+            rr:predicate epo:hasSubcontractingEstimatedValue   ;
+            rr:objectMap
+                [
+                   rr:parentTriplesMap tedm:MG-MonetaryValue-hasSubcontractingEstimatedValue-SubcontractingEstimate-foreseesSubcontracting-Tender_ND-SubcontractedContract ;
+                    rr:joinCondition[
+                        rr:child "path(.)";
+                        rr:parent "path(..)"
+                    ];
+                ] ;
+        ] ;
+    .
+
+tedm:MG-MonetaryValue-hasSubcontractingEstimatedValue-SubcontractingEstimate-foreseesSubcontracting-Tender_ND-SubcontractedContract  a rr:TriplesMap ;
+  rdfs:label "MG-MonetaryValue";
+       rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:SubcontractingTerm[efbc:TermCode/@listName='applicability']" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-SubcontractedActivity" ;
+            rml:reference "if (exists(efbc:TermAmount)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_MonetaryValue_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw') else null" ;
+            rr:class epo:MonetaryValue
+        ] ;
+    rr:predicateObjectMap
+        [
+            # TODO max sdk 1.8
+             tedm:minSDKVersion "1.9" ;
+            rdfs:label "BT-553-Tender";
+            rdfs:comment "Subcontracting Value of MG-MonetaryValue under ND-SubcontractedActivity";
+            rr:predicate  epo:hasAmountValue  ;
+            rr:objectMap
+                [
+                    rml:reference "if(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='sub-val']) and efbc:TermAmount/text() = '-1' )) then efbc:TermAmount else null" ;
+                    rr:datatype xsd:decimal  ;
+                ] ;
+        ];
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-553-Tender-Currency";
+            rdfs:comment "Currency of Subcontracting Value of MG-MonetaryValue under ND-SubcontractedActivity";
+            rr:predicate epo:hasCurrency ;
+            rr:objectMap
+                [
+                    rdfs:label "at-voc:currency" ;
+                    rr:parentTriplesMap tedm:currency ;
+                    rr:joinCondition [
+                        rr:child "efbc:TermAmount/@currencyID" ;
+                        rr:parent "code.value" ;
+                    ] ;
+                ] ;
+        ] ;
+    .
+
+tedm:MG-SubcontractingEstimate-foreseesSubcontracting-Tender_ND-SubcontractedContract  a rr:TriplesMap ;
+  rdfs:label "MG-SubcontractingEstimate";
+       rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:SubcontractingTerm[efbc:TermCode/@listName='applicability']" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-SubcontractedActivity" ;
+            rml:reference "if (exists(efbc:TermDescription)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_SubcontractingEstimate_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw') else null" ;
+            rr:class epo:SubcontractingEstimate ;
+        ] ;
+     rr:predicateObjectMap
+        [
+            # TODO max sdk 1.8
+             tedm:minSDKVersion "1.9" ;
+            rdfs:label "BT-554-Tender" ;
+            rdfs:comment "Description of Subcontracting of  MG-SubcontractingEstimate under ND-SubcontractedActivity" ;
+            rr:predicate  dct:description  ;
+            rr:objectMap
+                [
+                    rdfs:label "BT-554-Tender-Language" ;
+                    rdfs:comment "Language of Subcontracting Description of MG-SubcontractingEstimate under ND-SubcontractedActivity" ;
+                    rml:reference "efbc:TermDescription";
+                    rml:languageMap [
+                        fnml:functionValue [
+                            rr:predicateObjectMap [
+                                rr:predicate idlab-fn:str ;
+                                rr:objectMap  [ rml:reference "efbc:TermDescription/@languageID" ]
+                            ] ,
+                            tedm:idlab-fn_executes_lookup ,
+                            tedm:idlab-fn_inputFile_language ,
+                            tedm:idlab-fn_fromColumn_code ,
+                            tedm:idlab-fn_toColumn_code
+                        ]
+                    ] ;
+                ] ;
+        ] ;
+     rr:predicateObjectMap
+        [
+            # TODO max sdk 1.8
+             tedm:minSDKVersion "1.9" ;
+            rdfs:label "BT-555-Tender";
+            rdfs:comment "Subcontracting Percentage of MG-SubcontractingEstimate under ND-SubcontractedActivity";
+            rr:predicate  epo:hasEstimatedPercentage   ;
+            rr:objectMap
+                [
+                    rml:reference "if(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='sub-per']) and efbc:TermPercent/text() = '-1' )) then efbc:TermPercent else null" ;
+                    rr:datatype xsd:decimal  ;
+                ] ;
+        ];
+    .
+
+tedm:MG-Tender_ND-SubcontractedContract  a rr:TriplesMap ;
+  rdfs:label "MG-Tender";
+       rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:SubcontractingTerm[efbc:TermCode/@listName='applicability']" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-Tender" ;
+            rml:reference "if (exists(efbc:TermCode)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_Tender_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw') else null" ;
+            rr:class epo: ;
+        ] ;
+     rr:predicateObjectMap
+        [
+            rdfs:label "BT-773-Tender";
+            rdfs:comment "Subcontracting of MG-SubcontractingEstimate under ND-SubcontractedActivity";
+            rr:predicate  epo:hasSubcontracting    ;
+             rr:objectMap
+                [
+                    rdfs:label "at-voc:applicability" ;
+                    rr:parentTriplesMap tedm:applicability ;
+                    rr:joinCondition [
+                        rr:child "if(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='sub-con']) and efbc:TermCode/text() = 'unpublished' )) then efbc:TermCode else null" ;
+                        rr:parent "code.value" ;
+                    ] ;
+                ] ;
+
+        ];
     .

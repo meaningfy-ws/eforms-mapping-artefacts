@@ -1,37 +1,44 @@
 # eForms Mapping Artefacts
 
-To update the minimal test package `package_cn_v1.9_minimal` from the
-contents in `src` (latest developmental RML rules), simply run `make`, which
-resolves to the default (first) Make target `package_sync`.
+To update (synchronize) all tracked packages in toplevel `mappings` against the
+latest developmental RML rules in `src`, simply run `make`, which resolves to
+the default (first) Make target `package_sync`.
 
-The package `package_cn_v1.9` is kept for reference with old RML file(s), but
-will be updated with the new RML rules in development at one point. In the
-meantime, feel free to create derived packages with more or less data. Some
-helper Make commands are provided for this:
+These packages, or "mapping suites", are _minimal_ in nature, meaning they
+contain very little (currently just one) test data. They serve as reference to
+the package _variants_ that can be generated from `src`.
+
+The contents in `src` are laid out in a way that is conducive to local
+development, which packages are not. However, varying amounts of data can be
+combined to generate new packages. Helper Make commands are provided for this:
 
 ```
 make package_cn_all_variants
 make export_cn_all_variants
 ```
 
-These will output temporary packages in an `output` folder, along with their
-ZIP archive files. Currently, they are based around the following variants of
-_EF10-24 (CN), SDK v1.9_:
+These will output complete packages in a `dist` folder, along with their ZIP
+archive files, suitable for loading into mapping tools such as [Mapping
+Workbench (MWB)](https://meaningfy.ws/mapping-workbench). Currently, they are
+based around the following variants:
 
-- **minimal** One SDK example only, `cn_24_maximal.xml`
-- **examples** All SDK examples, _except_ `cn_24_maximal_100_lots.xml`
-- **samples** All sample data, no SDK example
-- **maximal** All SDK examples and all sample data, _including_ `cn_24_maximal_100_lots.xml`
+- **minimal** One SDK example only, e.g. `cn_24_maximal.xml`
+- **examples** All SDK examples, _except_ any `*100_lots.xml` or similar large data
+- **samples** All systematic, manual and random sample data, no SDK example
+- **maximal** All SDK examples and all sample data, _including_ any large data
 
 You are free to modify any package and rerun the relevant export Make target,
 e.g. `make export_cn_minimal`.
 
 ## Testing
 
-There are semi-automated tests which are mainly for _checking_ and
-investigating, run with `make test_output` (uses Apache Jena `arq` to run some
-queries). Otherwise, there is GitHub Actions CI integration for validating RDF
-files using Jena's `riot` tool.
+There are semi-automated _local_ tests which are mainly for _checking_ sanity
+of the reference output(s) for (mostly) qualitative analysis, executed with
+`make test_output` (uses Apache Jena `arq` to run some queries).
+
+There is automated validation of RDF files via running `make test`, which uses
+Jena's `riot` tool. This is also integrated into the main (GitHub Actions)
+Continuous Integration (CI) workflow.
 
 ## Requirements
 

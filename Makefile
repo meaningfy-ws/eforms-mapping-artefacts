@@ -42,6 +42,7 @@ OWLCLI_DIR = $(shell test ! -z ${OWLCLI_HOME} && echo ${OWLCLI_HOME} || echo `pw
 OWLCLI_BIN = OWLCLI_DIR/owl-cli.jar
 OWLCLI_CMD = java -jar ~/.rmlmapper/owl-cli.jar write --indentSize 4
 MULTIVER_SCRIPT = scripts/prep-multiver.sh
+ANLYS_SCRIPTS_DIR = analysis_scripts
 
 BUILD_PRINT = \e[1;34mSTEP: \e[0m
 SDK_DATA_DIR = $(TEST_DATA_DIR)/$(SDK_DATA_NAME)
@@ -425,3 +426,21 @@ install-antora:
 build-site:
 	@ echo -e "$(BUILD_PRINT)Build site$(END_BUILD_PRINT)"
 	@ npx antora --fetch antora-playbook.yml
+
+# requires jq, python (pandas for reading Excel, thefuzz for XPath str similarity)
+# credit https://unix.stackexchange.com/a/249799 by nisetama
+# TODO generate the diffs and handle different versions
+# recommended to first generate diffs with analyse_versions.sh against a master CM (filtered to CN or CAN)
+get_xpath_similarity_stats:
+	@ echo "Frequency of Abs XPath similarity scores (no. of field-version range comparisons, score):" && echo && grep Score ref/eForms-SDK/diffs/* | sed 's/.*Ratio): //' | sort | uniq -c | sort -nr
+	@ echo
+	@ echo -n "Min: " && grep Score ref/eForms-SDK/diffs/* | sed 's/.*Ratio): //' | sort | jq -s min
+	@ echo -n "Max: " && grep Score ref/eForms-SDK/diffs/* | sed 's/.*Ratio): //' | sort | jq -s max
+	@ echo -n "Avg: " && grep Score ref/eForms-SDK/diffs/* | sed 's/.*Ratio): //' | sort | jq -s add/length
+	@ echo -n "Med: " && grep Score ref/eForms-SDK/diffs/* | sed 's/.*Ratio): //' | sort | jq -s 'sort|if length%2==1 then.[length/2|floor]else[.[length/2-1,length/2]]|add/2 end'
+
+get_xpath_similarity_grouped:
+	@ bash $(ANLYS_SCRIPTS_DIR)/xpath_sim_stats_grouped.sh
+
+get_xpath_similarity_table:
+	@ bash $(ANLYS_SCRIPTS_DIR)/xpath_sim_stats_table.sh

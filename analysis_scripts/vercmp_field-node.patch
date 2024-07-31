@@ -1,0 +1,82 @@
+--- eforms_field_vercmp.sh	2024-07-31 15:38:34.377919949 +0600
++++ eforms_node_vercmp.sh	2024-07-31 15:48:26.897915966 +0600
+@@ -1,8 +1,12 @@
+ #!/bin/bash
+ 
+-# Given an eForms field (BT/OPT/OPP) compare a given min version to a reference
+-# version (hardcoded to 1.9.1 currently). Optionally, also compare the min
+-# against a max version, and the max against the reference.
++# Given an eForms node (ND) compare a given min version to a reference version
++# (hardcoded to 1.9.1 currently). Optionally, also compare the min against a
++# max version, and the max against the reference.
++#
++# Code almost similar to eforms_field_vercmp except jq lookup is with
++# .xmlStructure[] instead of .fields[], so code replacements must be made at
++# lines containing $node. Helper patch `vercmp_field-node.patch` provided.
+ #
+ # Depends on Python3 script cmp_xpaths.py (see requirements.txt)
+ 
+@@ -78,31 +82,31 @@
+     echo -n "Abs XPath v$minver-$maxver " && python3 "$STRSIM_SCRIPT" "$old_xpath" "$new_xpath" 2> /dev/null
+ }
+ 
+-# $1: eForms Field ID, $2: Min SDK Version, $3: Max SDK Version (optional)
+-eforms_field_diff() {
+-    [[ -z $1 || -z $2 ]] && echo "usage: <fieldID> <minver> [maxver]" && return 1
+-    field=$1; min=$2; max=$3
++# $1: eForms Node ID, $2: Min SDK Version, $3: Max SDK Version (optional)
++eforms_node_diff() {
++    [[ -z $1 || -z $2 ]] && echo "usage: <nodeID> <minver> [maxver]" && return 1
++    node=$1; min=$2; max=$3
+ 
+     earliest=$(get_earliest_vertag $min)
+     minver_fields_file=$(get_local_fields_file $earliest)
+     test -s $minver_fields_file || get_fields_file_by_ver $earliest
+-    old=$(cat $minver_fields_file | jq -r --arg ID "$field" '.fields[] | select(.id == $ID)')
++    old=$(cat $minver_fields_file | jq -r --arg ID "$node" '.xmlStructure[] | select(.id == $ID)')
+ 
+     refver_fields_file=$(get_local_fields_file $REFVER)
+     test -s $refver_fields_file || get_fields_file_by_ver $REFVER
+-    new=$(cat $refver_fields_file | jq -r --arg ID "$field" '.fields[] | select(.id == $ID)')
++    new=$(cat $refver_fields_file | jq -r --arg ID "$node" '.xmlStructure[] | select(.id == $ID)')
+ 
+     # any Git operations output should come first, so we run conditionally twice
+     if [[ -n $3 ]]; then
+         latest=$(get_latest_vertag $max)
+         maxver_fields_file=$(get_local_fields_file $latest)
+         test -s $maxver_fields_file || get_fields_file_by_ver $latest
+-        mid=$(cat $maxver_fields_file | jq -r --arg ID "$field" '.fields[] | select(.id == $ID)')
++        mid=$(cat $maxver_fields_file | jq -r --arg ID "$node" '.xmlStructure[] | select(.id == $ID)')
+     fi
+ 
+     echo "==> Diff of earliest min $min ($earliest) vs. reference $REFVER"
+     echo
+-    DIFFFILE="$DIFFDIR/${field}_v$min-$ref.diff"
++    DIFFFILE="$DIFFDIR/${node}_v$min-$ref.diff"
+     diff -u --color <(echo "$old") <(echo "$new")
+     diff -u <(echo "$old") <(echo "$new") > "$DIFFFILE"
+     echo
+@@ -116,7 +120,7 @@
+     if [[ -n $3 ]]; then
+         echo "==> Diff of latest max $max ($latest) vs. reference $REFVER"
+         echo
+-        DIFFFILE="$DIFFDIR/${field}_v$max-$ref.diff"
++        DIFFFILE="$DIFFDIR/${node}_v$max-$ref.diff"
+         diff -u --color <(echo "$mid") <(echo "$new")
+         diff -u <(echo "$mid") <(echo "$new") > "$DIFFFILE"
+         echo
+@@ -129,7 +133,7 @@
+ 
+         echo "==> Diff of earliest min $min ($earliest) vs. latest max $max ($latest)"
+         echo
+-        DIFFFILE="$DIFFDIR/${field}_v$min-$max.diff"
++        DIFFFILE="$DIFFDIR/${node}_v$min-$max.diff"
+         diff -u --color <(echo "$old") <(echo "$mid")
+         diff -u <(echo "$old") <(echo "$mid") > "$DIFFFILE"
+         echo
+@@ -141,4 +145,4 @@
+     fi
+ }
+ 
+-eforms_field_diff $@
++eforms_node_diff $@

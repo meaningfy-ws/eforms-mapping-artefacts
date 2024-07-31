@@ -1,16 +1,16 @@
 #!/bin/bash
 
-# Given an eForms field (BT/OPT/OPP) compare a given min version
-# to a reference version (hardcoded to 1.9.1 currently).
-# Optionally, also compare the min against a max version,
-# and the max against the reference.
+# Given an eForms field (BT/OPT/OPP) compare a given min version to a reference
+# version (hardcoded to 1.9.1 currently). Optionally, also compare the min
+# against a max version, and the max against the reference.
 #
-# Depends on Python3 script cmp_xpaths.py (requires pandas, fuzzywuzzy)
+# Depends on Python3 script cmp_xpaths.py (see requirements.txt)
 
 # eForms SDK folder (as it is checked out from GitHub)
-[[ -z $SDK_DIR ]] && SDK_DIR=../eForms-SDK # relative path to the root of the eForms-SDK Git project
+[[ -z $SDK_DIR ]] && SDK_DIR=../eForms-SDK # relative path from where this is run from
 
 # working directory
+# FIXME using `pwd` is wrong, we can't enforce where this is run from
 [[ -z $WORKDIR ]] && WORKDIR="`pwd`/ref"
 
 # fields store

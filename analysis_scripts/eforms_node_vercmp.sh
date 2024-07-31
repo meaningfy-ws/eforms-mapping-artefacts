@@ -1,20 +1,20 @@
 #!/bin/bash
 
-# Given an eForms node (ND) compare a given min version
-# to a reference version (hardcoded to 1.9.1 currently).
-# Optionally, also compare the min against a max version,
-# and the max against the reference.
+# Given an eForms node (ND) compare a given min version to a reference version
+# (hardcoded to 1.9.1 currently). Optionally, also compare the min against a
+# max version, and the max against the reference.
 #
-# Code almost similar to eforms_field_vercmp except
-# jq lookup is with .xmlStructure[] instead of .xmlStructure[],
-# so code replacements must be made at lines containing $node.
+# Code almost similar to eforms_field_vercmp except jq lookup is with
+# .xmlStructure[] instead of .fields[], so code replacements must be made at
+# lines containing $node. Helper patch `vercmp_field-node.patch` provided.
 #
-# Depends on Python3 script cmp_xpaths.py (requires pandas, fuzzywuzzy)
+# Depends on Python3 script cmp_xpaths.py (see requirements.txt)
 
 # eForms SDK folder (as it is checked out from GitHub)
-[[ -z $SDK_DIR ]] && SDK_DIR=../eForms-SDK # relative path to the root of the eForms-SDK Git project
+[[ -z $SDK_DIR ]] && SDK_DIR=../eForms-SDK # relative path from where this is run from
 
 # working directory
+# FIXME using `pwd` is wrong, we can't enforce where this is run from
 [[ -z $WORKDIR ]] && WORKDIR="`pwd`/ref"
 
 # fields store
@@ -139,7 +139,7 @@ eforms_node_diff() {
         echo
         old_xpath=$(get_xpath_change old "$DIFFFILE")
         new_xpath=$(get_xpath_change new "$DIFFFILE")
-        xpath_sim=$([[ -n $old_xpath ]] && [[ -n $new_xpath ]] && get_xpath_similarity "$old_xpath" "$new_xpath" $min $max || echo "No Abslute XPath changes in v$min-$max")
+        xpath_sim=$([[ -n $old_xpath ]] && [[ -n $new_xpath ]] && get_xpath_similarity "$old_xpath" "$new_xpath" $min $max || echo "No Abs XPath changes in v$min-$max")
         [[ -n $xpath_sim ]] && echo $xpath_sim && sed -i "1s/^/$xpath_sim\n/" "$DIFFFILE"
         test -s "$DIFFFILE" && echo "Saved to $DIFFFILE" || rm "$DIFFFILE"
     fi

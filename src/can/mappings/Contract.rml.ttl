@@ -42,7 +42,7 @@ tedm:MG-Identifier-identifier-Contract_ND-SettledContract  a rr:TriplesMap ;
         [
             rdfs:label "ND-SettledContract" ;
 #            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_SettledContractIdentifier_{cbc:ID}" ;
-            rml:reference "if (exists(efac:ContractReference/cbc:ID)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_SettledContractIdentifier_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw') else null" ;
+            rml:reference "if (exists(efac:ContractReference/cbc:ID)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_SettledContractIdentifier_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(.)) || '?response_type=raw') else null" ;
             rr:class adms:Identifier
         ] ;
     rr:predicateObjectMap
@@ -195,7 +195,7 @@ tedm:MG-Fund_ND-SettledContract  a rr:TriplesMap ;
         [
             rdfs:label "ND-SettledContract" ;
 #            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_SettledContract_{cbc:ID}" ;
-             rml:reference "if (exists(efac:Funding)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_SettledContractFund_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw') else null" ;
+             rml:reference "if (exists(efac:Funding)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_ContractFund_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(.)) || '?response_type=raw') else null" ;
             rr:class epo:Fund
         ] ;
     .
@@ -210,7 +210,7 @@ tedm:MG-Fund-isFundedBy-Contract_ND-SettledContract   a rr:TriplesMap ;
     rr:subjectMap
         [
             rdfs:label "ND-SettledContract" ;
-             rml:reference "if (exists(efac:Funding)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_SettledContractFund_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw') else null" ;
+             rml:reference "if (exists(efac:Funding)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_ContractFund_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(.)) || '?response_type=raw') else null" ;
             rr:class epo:Fund
         ] ;
     rr:predicateObjectMap
@@ -260,7 +260,7 @@ tedm:MG-Identifier-identifier-Fund-isFundedBy-Contract_ND-ContractEUFunds a rr:T
             rr:predicate epo:hasScheme ;
             rr:objectMap
                 [
-                    rml:reference "efbc:FinancingIdentifier";
+                    rml:reference "efbc:FinancingIdentifier/@schemeName";
                 ] ;
         ] ;
     .

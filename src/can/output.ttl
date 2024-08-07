@@ -249,23 +249,23 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyContactPoint_exXX5w4R9epdXpsc
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractFundIdentifier_VPU8QnEnvpxVBA2qwYNzjZ
   a adms:Identifier;
-  epo:hasScheme "2021/1234";
   skos:notation "2021/1234" .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractFundIdentifier_oXwXYzaLxMkFreJUNf6BBv
   a adms:Identifier;
-  epo:hasScheme "2021/5678";
   skos:notation "2021/5678" .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractFund_VPU8QnEnvpxVBA2qwYNzjZ a
     epo:Fund;
   epo:hasFundProgramme <http://publications.europa.eu/resource/authority/eu-programme/LIFE_2021>;
-  dct:description "Recovery Fund"@en .
+  dct:description "Recovery Fund"@en;
+  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractFundIdentifier_VPU8QnEnvpxVBA2qwYNzjZ .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractFund_oXwXYzaLxMkFreJUNf6BBv a
     epo:Fund;
   epo:hasFundProgramme <http://publications.europa.eu/resource/authority/eu-programme/LIFE_2021>;
-  dct:description "Recovery Fund"@en .
+  dct:description "Recovery Fund"@en;
+  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractFundIdentifier_oXwXYzaLxMkFreJUNf6BBv .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractLocationAddress_5rDboKRaxqo6CZogdiqWet
   a locn:Address;
@@ -618,6 +618,26 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_5RkUZBRon4U8t9FeNL7QSi
   epo:hasAmountValue 10000.0;
   epo:hasCurrency "EUR" .
 
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_8tLJD9wyvjSHWYvDWGiX5D a
+    epo:MonetaryValue;
+  epo:hasAmountValue 9999999.99;
+  epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_JryEpNBTCzNfzKbsxaXwjt a
+    epo:MonetaryValue;
+  epo:hasAmountValue 9999999.99;
+  epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_econsLsjPJro8aUo9zUip8 a
+    epo:MonetaryValue;
+  epo:hasAmountValue 99999999.99;
+  epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_nNq2rC7wBesmhA5baJ8mCt a
+    epo:MonetaryValue;
+  epo:hasAmountValue 9999999.99;
+  epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> .
+
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Notice a epo:Notice, epo:Notice29, epo:ResultNotice;
   epo::announcesRole epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0001,
     epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0002;
@@ -659,7 +679,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_OfflineAccessProvider_CLwCuB6jJaDuNT
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_OrganisationGroup_ECUZjDvaPMUJHS4Tp5KyYK
   a epo:OrganisationGroup;
   epo:hasMember epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0008, epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0009;
-  epo:leadBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0008, epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0009 .
+  epo:leadBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0008 .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_OrganisationIdentifier_4NU5AxJwe7aGai3Cgq8HpC
   a adms:Identifier;
@@ -950,32 +970,29 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Reviewer_hnDhtixV2ZdgbuFJoTT2jt a ep
   epo:contextualisedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;
   epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0005 .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContractFund_JryEpNBTCzNfzKbsxaXwjt
-  a epo:Fund;
-  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractFundIdentifier_VPU8QnEnvpxVBA2qwYNzjZ,
-    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractFundIdentifier_oXwXYzaLxMkFreJUNf6BBv .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContractIdentifier_JryEpNBTCzNfzKbsxaXwjt
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContractIdentifier_VPU8QnEnvpxVBA2qwYNzjZ
   a adms:Identifier;
-  skos:notation "KLM FGH/912", "REF RST-678" .
+  skos:notation "REF RST-678" .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContractIdentifier_oXwXYzaLxMkFreJUNf6BBv
+  a adms:Identifier;
+  skos:notation "KLM FGH/912" .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContract_CON-0001 a epo:Contract;
   epo:FrameworkAgreement "true";
   epo:hasAccessURL "https://wheretofindcontract.com/ctr123"^^xs:anyURI;
   epo:hasContractConclusionDate "2023-03-24+02:00"^^xs:date;
-  epo:isFundedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractFund_VPU8QnEnvpxVBA2qwYNzjZ,
-    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContractFund_JryEpNBTCzNfzKbsxaXwjt;
+  epo:isFundedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractFund_VPU8QnEnvpxVBA2qwYNzjZ;
   dct:title "This is the title of the contract ---"@en;
-  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContractIdentifier_JryEpNBTCzNfzKbsxaXwjt .
+  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContractIdentifier_VPU8QnEnvpxVBA2qwYNzjZ .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContract_CON-0002 a epo:Contract;
   epo:FrameworkAgreement "true";
   epo:hasAccessURL "https://wheretofindcontract.com/ctr222"^^xs:anyURI;
   epo:hasContractConclusionDate "2023-03-24+02:00"^^xs:date;
-  epo:isFundedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractFund_oXwXYzaLxMkFreJUNf6BBv,
-    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContractFund_JryEpNBTCzNfzKbsxaXwjt;
+  epo:isFundedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractFund_oXwXYzaLxMkFreJUNf6BBv;
   dct:title "Title of second contract ---"@en;
-  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContractIdentifier_JryEpNBTCzNfzKbsxaXwjt .
+  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContractIdentifier_oXwXYzaLxMkFreJUNf6BBv .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SocialProcurement_GMkEB6CQmd2Qggut3NjWzr
   a epo:SocialProcurement;
@@ -1003,6 +1020,24 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_StrategicProcurement_aCmMsvvkogsdTBE
   epo:hasNonAccessibilityCriterionJustification "Accessibility Justification lot 2 ---"@en;
   epo:includesAccessibilityCriterion <http://publications.europa.eu/resource/authority/accessibility/n-inc-just> .
 
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubcontractingEstimate_8tLJD9wyvjSHWYvDWGiX5D
+  a epo:SubcontractingEstimate;
+  epo:hasEstimatedPercentage 30.0;
+  epo:hasSubcontractingEstimatedValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_8tLJD9wyvjSHWYvDWGiX5D;
+  dct:description "Subcontracting Description ---"@en .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubcontractingEstimate_econsLsjPJro8aUo9zUip8
+  a epo:SubcontractingEstimate;
+  epo:hasEstimatedPercentage 30.0;
+  epo:hasSubcontractingEstimatedValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_econsLsjPJro8aUo9zUip8;
+  dct:description "Subcontracting Description ---"@en .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubcontractingEstimate_nNq2rC7wBesmhA5baJ8mCt
+  a epo:SubcontractingEstimate;
+  epo:hasEstimatedPercentage 30.0;
+  epo:hasSubcontractingEstimatedValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_nNq2rC7wBesmhA5baJ8mCt;
+  dct:description "Subcontracting Description ---"@en .
+
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubmissionTerm_KorWZrEXpQCBgrGqtjBT6W
   a epo:SubmissionTerm .
 
@@ -1019,18 +1054,57 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TaxInformationProvider_PnhuBYxDrpkJi
   epo:contextualisedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;
   epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0002 .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderAwardOutcome_JryEpNBTCzNfzKbsxaXwjt
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderAwardOutcome_8tLJD9wyvjSHWYvDWGiX5D
   a epo:TenderAwardOutcome;
-  epo:concernsTender epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_JryEpNBTCzNfzKbsxaXwjt;
-  epo:hasAwardRank "3", "4" .
+  epo:concernsTender epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_8tLJD9wyvjSHWYvDWGiX5D;
+  epo:hasAwardRank "3" .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderIdentifier_JryEpNBTCzNfzKbsxaXwjt
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderAwardOutcome_nNq2rC7wBesmhA5baJ8mCt
+  a epo:TenderAwardOutcome;
+  epo:concernsTender epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_nNq2rC7wBesmhA5baJ8mCt;
+  epo:hasAwardRank "4" .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderIdentifier_8tLJD9wyvjSHWYvDWGiX5D
   a adms:Identifier;
-  skos:notation "REF DEF-001/02", "REF GHI/0003-01", "REF JKL/0003-01" .
+  skos:notation "REF DEF-001/02" .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_JryEpNBTCzNfzKbsxaXwjt a epo:Tender,
-    epo:TenderAwardOutcome;
-  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderIdentifier_JryEpNBTCzNfzKbsxaXwjt .
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderIdentifier_econsLsjPJro8aUo9zUip8
+  a adms:Identifier;
+  skos:notation "REF JKL/0003-01" .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderIdentifier_nNq2rC7wBesmhA5baJ8mCt
+  a adms:Identifier;
+  skos:notation "REF GHI/0003-01" .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_6tpSE8jbTRUwo5AE3y5G7w a epo:Tender;
+  epo:hasSubcontracting <http://publications.europa.eu/resource/authority/applicability/yes> .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_8tLJD9wyvjSHWYvDWGiX5D a epo:Tender;
+  epo:foreseesSubcontracting epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubcontractingEstimate_8tLJD9wyvjSHWYvDWGiX5D;
+  epo:hasFinancialOfferValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_JryEpNBTCzNfzKbsxaXwjt;
+  epo:isSubmitedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TEN-0001;
+  epo:isVariant true .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_9ShyBb4XeAYabSStYrgq4j a epo:Tender;
+  epo:hasSubcontracting <http://publications.europa.eu/resource/authority/applicability/yes> .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_JryEpNBTCzNfzKbsxaXwjt a epo:Tender;
+  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderIdentifier_8tLJD9wyvjSHWYvDWGiX5D,
+    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderIdentifier_econsLsjPJro8aUo9zUip8,
+    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderIdentifier_nNq2rC7wBesmhA5baJ8mCt .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_econsLsjPJro8aUo9zUip8 a epo:Tender;
+  epo:foreseesSubcontracting epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubcontractingEstimate_econsLsjPJro8aUo9zUip8;
+  epo:isSubmitedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TEN-0003 .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_nNq2rC7wBesmhA5baJ8mCt a epo:Tender;
+  epo:foreseesSubcontracting epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubcontractingEstimate_nNq2rC7wBesmhA5baJ8mCt;
+  epo:hasFinancialOfferValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_JryEpNBTCzNfzKbsxaXwjt;
+  epo:isSubmitedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TEN-0002;
+  epo:isVariant true .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_nr8Q4oATGXT6RTkQWnAqqx a epo:Tender;
+  epo:hasSubcontracting <http://publications.europa.eu/resource/authority/applicability/yes> .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TendererIdentifier_7rVzZwwwwKDY9vEDYu5vNr
   a adms:Identifier;
@@ -1046,6 +1120,12 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TendererIdentifier_nek8J9435HMtiJoTn
   a adms:Identifier;
   epo:hasScheme "organization";
   skos:notation "ORG-0011" .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TEN-0001 a epo:Tenderer .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TEN-0002 a epo:Tenderer .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TEN-0003 a epo:Tenderer .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0001 a epo:Tenderer;
   epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_OrganisationGroup_ECUZjDvaPMUJHS4Tp5KyYK,

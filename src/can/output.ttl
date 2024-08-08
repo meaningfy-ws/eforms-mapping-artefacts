@@ -457,6 +457,15 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_InnovativeProcurement_WkofDRMGPe4b3Y
   a epo:InnovativeProcurement;
   epo:fulfillsRequirement <http://publications.europa.eu/resource/authority/innovative-acquisition/proc-innov> .
 
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotAwardOutcome_A5K3ndcSySWYxA4wrRkqDG
+  a epo:LotAwardOutcome;
+  epo:hasAwardStatus <http://publications.europa.eu/resource/authority/winner-selection-status/clos-nw>;
+  epo:hasNonAwardJustification <http://publications.europa.eu/resource/authority/non-award-justification/all-rej> .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotAwardOutcome_FmfbzZdeEatT3nzZdqXd3D
+  a epo:LotAwardOutcome;
+  epo:hasAwardStatus <http://publications.europa.eu/resource/authority/winner-selection-status/selec-w> .
+
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotGroupAwardCriterion_M3ABHWyJDyj8yxDZZ2sJeg
   a epo:AwardCriterion;
   epo:hasAwardCriterionType <http://publications.europa.eu/resource/authority/award-criterion-type/cost>;

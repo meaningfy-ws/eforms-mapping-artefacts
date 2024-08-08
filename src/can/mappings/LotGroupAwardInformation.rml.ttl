@@ -35,13 +35,13 @@ tedm:MG-MonetaryValue-hasGroupFrameworkAgreementMaximumValue-LotGroupAwardInform
    rr:subjectMap
         [
             rdfs:label "ND-NoticeResultGroupFA";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_MonetaryValue_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rml:reference "if (exists(efbc:GroupFrameworkMaximumValueAmount)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_MonetaryValue_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(.)) || '?response_type=raw') else null" ;
             rr:class epo:MonetaryValue
         ] ;
    rr:predicateObjectMap
         [
             rdfs:label "BT-156-NoticeResult";
-            rdfs:comment "GroupFrameworkMaximumValue of MG-MonetaryValue under ND-NoticeResultGroupFA";
+            rdfs:comment "Group Framework Maximum Value of MG-MonetaryValue under ND-NoticeResultGroupFA";
             rr:predicate epo:hasAmountValue ;
             rr:objectMap
                 [

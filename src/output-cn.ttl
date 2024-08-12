@@ -205,6 +205,10 @@ epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_MonetaryValueLot_EgMjw2pg9jruQvYxRQ9
   epo:hasAmountValue 1000000.0;
   epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> .
 
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_MultipleStageProcedureTerm_246rmGzZvwFBcxRNZTXjTW
+  a epo:MultipleStageProcedureTerm;
+  epo:hasSuccessiveReduction true .
+
 epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_NonDisclosureAgreementTerm_YWMCGu6i5HBxweh3xaUekn
   a epo:NonDisclosureAgreementTerm;
   epo:isNonDisclosureAgreementRequired true;

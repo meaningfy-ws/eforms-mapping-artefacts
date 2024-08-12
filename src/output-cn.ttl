@@ -21,230 +21,398 @@
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_AccessTerm_CyWo5YTU3YkPLSVwo2XACs a epo:AccessTerm;
-  epo:definesProcurementProcedureInformationProvider epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_ProcurementProcedureInformationProvider_CyWo5YTU3YkPLSVwo2XACs .
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_AccessTerm_YWMCGu6i5HBxweh3xaUekn a epo:AccessTerm;
+  epo:definesOfflineAccessProvider epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_OfflineAccessProvider_YWMCGu6i5HBxweh3xaUekn;
+  epo:definesProcurementProcedureInformationProvider epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_ProcurementProcedureInformationProvider_YWMCGu6i5HBxweh3xaUekn .
 
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_Buyer_SZHsNf9AnmY76awze3Gonb a epo:Buyer;
-  epo:playedBy epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_Organization_ORG-0001 .
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_AccessTerm_naE3mfoLZyth2mWXywVhn6 a epo:AccessTerm;
+  epo:hasPublicAccessURL "https://s2c.mercell.com/today/60167"^^xsd:anyURI;
+  epo:isProcurementDocumentRestricted false .
 
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_CompanyAddress_PcFLvGUMubmeEHZGZJQoer
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_AuctionTerms_Y7WNjU2HSM4HNny2xZsabR a
+    epo:EAuctionTechnique;
+  epo:hasUsage <http://publications.europa.eu/resource/authority/usage/n-used> .
+
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_AwardCriterion_MGJNUreXVLg5AkPswtTpQ5
+  a epo:AwardCriterion;
+  dct:description "De prijs is niet het enige gunningscriterium en alle criteria worden enkel vermeld in de aanbestedingsdocumenten"@nl .
+
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Buyer_MT3gdCnJ9BA7aEqaGqKxAh a epo:Buyer;
+  epo:playedBy epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Organization_ORG-0001 .
+
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_CompanyAddress_SyrXybB9qnydTsiCYvqfwn
   a locn:Address;
   epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/NLD>;
-  epo:hasNutsCode <http://data.europa.eu/nuts/code/NL33A>;
-  locn:fullAddress "Koninginnegracht 19, The Hague, 2514AB, NLD";
-  locn:postCode "2514AB";
-  locn:postName "The Hague" .
+  locn:fullAddress "Plein 4, 's-Gravenhage, 2511CR, NLD";
+  locn:postCode "2511CR";
+  locn:postName "'s-Gravenhage" .
 
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_CompanyContactPoint_P6hpGybLbTPLfmuVNJo8zd
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_CompanyAddress_kp4YHhT2Gw9BnTPKnwxcdW
+  a locn:Address;
+  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/NLD>;
+  locn:fullAddress "Prins Clauslaan 60, Den Haag, 2595 AJ, NLD";
+  locn:postCode "2595 AJ";
+  locn:postName "Den Haag" .
+
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_CompanyContactPoint_7iFD8NVFhULkdXRNPqKyHs
   a cccev:ContactPoint;
-  epo:hasContactName "David Pianelli";
-  epo:hasInternetAddress "www.Fountainfuel.com"^^xsd:anyURI;
-  cccev:email "davidpianelli@fountainfuel.com";
-  cccev:telephone "+31616078653" .
+  epo:hasContactName "Dionne Kudding- van der Sluis";
+  epo:hasInternetAddress "https://www.mindef.nl"^^xsd:anyURI;
+  cccev:email "D.Kudding.vd.Sluis@mindef.nl";
+  cccev:telephone "+31612022755" .
 
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_ContractPeriod_kSZMfSA8qTkPCvvg4J7pge
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_CompanyContactPoint_CCKfjNm3UAMuYf3dDso6C2
+  a cccev:ContactPoint;
+  cccev:email "leveranciers.ondersteuning@mindef.nl";
+  cccev:telephone "+31883622200" .
+
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_ContractLocationAddress_6KLSiuR7u4upEUz8ykdzrc
+  a locn:Address;
+  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/NLD> .
+
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_ContractLocation_6KLSiuR7u4upEUz8ykdzrc
+  a dct:Location;
+  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/NLD>;
+  locn:address epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_ContractLocationAddress_6KLSiuR7u4upEUz8ykdzrc .
+
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_ContractLocation_btiykpkF9yYEWFnDmvRf6a
+  a dct:Location;
+  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/NLD>;
+  locn:address epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_ProcedurePlacePerformance_btiykpkF9yYEWFnDmvRf6a .
+
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_ContractPeriod_DW9uu9Ka9v6eCrwhU9MmBC
   a epo:Period;
-  epo:hasTimePeriod <http://publications.europa.eu/resource/authority/timeperiod/UNKNOWN> .
+  epo:hasBeginning "2022-12-22+01:00"^^xsd:date;
+  epo:hasEnd "2025-01-31+01:00"^^xsd:date .
 
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_ContractTerm_adyhtKZkzxr6SEjy3tRyua a
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_ContractTerm_246rmGzZvwFBcxRNZTXjTW a
     epo:ContractTerm;
-  epo:definesContractPeriod epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_ContractPeriod_kSZMfSA8qTkPCvvg4J7pge;
-  epo:hasContractNatureType <http://publications.europa.eu/resource/authority/contract-nature/supplies>;
-  epo:hasReservedExecution <http://publications.europa.eu/resource/authority/applicability/not-known> .
+  epo:definesContractPeriod epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_ContractPeriod_DW9uu9Ka9v6eCrwhU9MmBC;
+  epo:definesSpecificPlaceOfPerformance epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_ContractLocation_6KLSiuR7u4upEUz8ykdzrc;
+  epo:hasBroadPlaceOfPerformance <http://publications.europa.eu/resource/authority/other-place-service/anyw-cou>;
+  epo:hasContractNatureType <http://publications.europa.eu/resource/authority/contract-nature/services>;
+  epo:hasPlaceOfPerformanceAdditionalInformation "Zie documentatie"@nl;
+  epo:hasReservedExecution <http://publications.europa.eu/resource/authority/applicability/no> .
 
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_DynamicPurchaseSystemTechnicalUsage_Hu7wzHDygWmeSqTPnwY9wa
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_DynamicPurchaseSystemTechnicalUsage_bq3rWUnhLReULR3Pe8QxDZ
   a epo:DynamicPurchaseSystemTechnique;
-  epo:hasDPSScope <http://publications.europa.eu/resource/authority/dps-usage/none> .
+  epo:hasDPSScope <http://publications.europa.eu/resource/authority/dps-usage/dps-list> .
 
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_FrameworkAgreementTerm_Hu7wzHDygWmeSqTPnwY9wa
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_EmploymentInformationProvider_jqmd9oW5AWitENTLtaAT9i
+  a epo:EmploymentInformationProvider;
+  epo:contextualisedBy epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Lot_LOT-0000;
+  epo:playedBy epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Organization_ORG-0002 .
+
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_EnvironmentalProtectionInformationProvider_YWMCGu6i5HBxweh3xaUekn
+  a epo:EnvironmentalProtectionInformationProvider;
+  epo:contextualisedBy epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Lot_LOT-0000;
+  epo:playedBy epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Organization_ORG-0002 .
+
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_FrameworkAgreementTerm_bq3rWUnhLReULR3Pe8QxDZ
   a epo:FrameworkAgreementTerm;
   epo:hasFrameworkAgreementType <http://publications.europa.eu/resource/authority/framework-agreement/none> .
 
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_GreenProcurement_4gTcJKvMrKJqn8kmW6ifwA
-  a epo:GreenProcurement;
-  epo:fulfillsRequirement <http://publications.europa.eu/resource/authority/environmental-impact/other> .
-
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_GreenProcurement_hypTAHXK79h3UjZM2AtvtZ
-  a epo:GreenProcurement;
-  epo:fulfillsRequirement <http://publications.europa.eu/resource/authority/gpp-criteria/none> .
-
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_Identifier_ORG-0001 a adms:Identifier;
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Identifier_ORG-0001 a adms:Identifier;
+  epo:hasScheme "organization";
   skos:notation "ORG-0001" .
 
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_LotGroupAwardCriterion_TeSi2ETyW5tKEb35ULnz2C
-  a epo:AwardCriterion;
-  epo:hasAwardCriterionType <http://publications.europa.eu/resource/authority/award-criterion-type/quality> .
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Identifier_ORG-0002 a adms:Identifier;
+  epo:hasScheme "organization";
+  skos:notation "ORG-0002" .
 
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_LotGroupAwardCriterion_kTu2tTsLRqHVoa9dgechQ6
-  a epo:AwardCriterion;
-  epo:hasAwardCriterionType <http://publications.europa.eu/resource/authority/award-criterion-type/price> .
-
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_LotGroup_GLO-0001 a epo:LotGroup;
-  epo:hasInternalIdentifier epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_LotInternalIdentifier_NBXwSfDA69s3YWK9QbEs7X;
-  epo:setsGroupingContextForLot epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_Lot_LOT-0001;
-  epo:specifiesProcurementCriterion epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_LotGroupAwardCriterion_TeSi2ETyW5tKEb35ULnz2C,
-    epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_LotGroupAwardCriterion_kTu2tTsLRqHVoa9dgechQ6;
-  dct:description " Fountain Fuel is starting a tender for the purchase of 6 Hydrogen Refueling Stations. "@en;
-  dct:title "Tender for 6 hydrogen refueling systems in North-Sweden "@en;
-  adms:identifier epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_LotsGroupIdentifier_MERF6WnoPEnVfJ9wqSQxW9 .
-
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_LotIdentifier_adyhtKZkzxr6SEjy3tRyua a
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_LotIdentifier_246rmGzZvwFBcxRNZTXjTW a
     adms:Identifier;
   epo:hasScheme "Lot";
-  skos:notation "LOT-0001" .
+  skos:notation "LOT-0000" .
 
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_LotInternalIdentifier_NBXwSfDA69s3YWK9QbEs7X
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_LotInternalIdentifier_BboGPQkCpLeHXdXL8io8wo
   a adms:Identifier;
-  skos:notation "01-HRS" .
+  epo:hasScheme "InternalID";
+  skos:notation "20383042 Werving en selectie IT personeel" .
 
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_LotInternalIdentifier_hq9SUTbfgyszaBVWP2RTwv
-  a adms:Identifier;
-  skos:notation "01-HRS" .
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_LotPurpose_BboGPQkCpLeHXdXL8io8wo a epo:Purpose;
+  epo:hasAdditionalClassification <http://data.europa.eu/cpv/cpv/79600000>;
+  epo:hasMainClassification <http://data.europa.eu/cpv/cpv/79610000> .
 
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_LotPurpose_hq9SUTbfgyszaBVWP2RTwv a epo:Purpose;
-  epo:hasMainClassification <http://data.europa.eu/cpv/cpv/09121000> .
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Lot_LOT-0000 a epo:Lot;
+  epo:foreseesContractSpecificTerm epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_ContractTerm_246rmGzZvwFBcxRNZTXjTW;
+  epo:hasEstimatedValue epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_MonetaryValueLot_EgMjw2pg9jruQvYxRQ9GAr;
+  epo:hasInternalIdentifier epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_LotInternalIdentifier_BboGPQkCpLeHXdXL8io8wo;
+  epo:hasPurpose epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_LotPurpose_BboGPQkCpLeHXdXL8io8wo;
+  epo:isCoveredByGPA true;
+  epo:isSubjectToLotSpecificTerm epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_AccessTerm_YWMCGu6i5HBxweh3xaUekn,
+    epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_AccessTerm_naE3mfoLZyth2mWXywVhn6, epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_FrameworkAgreementTerm_bq3rWUnhLReULR3Pe8QxDZ,
+    epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_NonDisclosureAgreementTerm_YWMCGu6i5HBxweh3xaUekn,
+    epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_ReviewTerm_D9HNqZBE8z3NZfKG6rn3Cq, epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_SecurityClearanceTerm_YWMCGu6i5HBxweh3xaUekn,
+    epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_SubmissionTerm_246rmGzZvwFBcxRNZTXjTW,
+    epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_SubmissionTerm_YWMCGu6i5HBxweh3xaUekn;
+  epo:isUsingEUFunds false;
+  epo:specifiesProcurementCriterion epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_AwardCriterion_MGJNUreXVLg5AkPswtTpQ5,
+    epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_ParticipationCondition_Wbukq4uv37BmR2FRZxpHbN,
+    epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_SelectionTerm_DEqKehWh2My5y2k7i9vnNu,
+    epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_SelectionTerm_F2EkrTHhwGTB3ZRA69q4nd,
+    epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_SelectionTerm_QwLGZTLYe95szz5vdsUu7F;
+  epo:usesTechnique epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_AuctionTerms_Y7WNjU2HSM4HNny2xZsabR,
+    epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_DynamicPurchaseSystemTechnicalUsage_bq3rWUnhLReULR3Pe8QxDZ;
+  dct:description """Dienstverlening werving en selectie IT personeel middels de niet openbare procedure conform § 2.2.3.4 Aanbestedingswet 2012 waarbij gebruik gemaakt zal gaan worden van een Dynamisch Aankoop Systeem (DAS).
 
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_Lot_LOT-0001 a epo:Lot;
-  epo:foreseesContractSpecificTerm epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_ContractTerm_adyhtKZkzxr6SEjy3tRyua;
-  epo:fulfillsStrategicProcurement epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_GreenProcurement_4gTcJKvMrKJqn8kmW6ifwA,
-    epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_GreenProcurement_hypTAHXK79h3UjZM2AtvtZ;
-  epo:hasInternalIdentifier epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_LotInternalIdentifier_hq9SUTbfgyszaBVWP2RTwv;
-  epo:hasPurpose epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_LotPurpose_hq9SUTbfgyszaBVWP2RTwv;
-  epo:isCoveredByGPA false;
-  epo:isSubjectToLotSpecificTerm epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_AccessTerm_CyWo5YTU3YkPLSVwo2XACs,
-    epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_FrameworkAgreementTerm_Hu7wzHDygWmeSqTPnwY9wa,
-    epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_ReviewTerm_9wBisz48ygTPo3wfXCXP3X, epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_SubmissionTerm_CyWo5YTU3YkPLSVwo2XACs,
-    epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_SubmissionTerm_adyhtKZkzxr6SEjy3tRyua;
-  epo:specifiesProcurementCriterion epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_ParticipationCondition_YEruXnswWJkYCSR4jGK8Bs,
-    epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_SelectionTerm_Nx3zxAhTCn7QWX9NwEt6R4;
-  epo:usesTechnique epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_DynamicPurchaseSystemTechnicalUsage_Hu7wzHDygWmeSqTPnwY9wa;
-  dct:description " Fountain Fuel is starting a tender for the purchase of 6 Hydrogen Refueling Stations. "@en;
-  dct:title "Tender for 6 hydrogen refueling systems in North-Sweden "@en;
-  adms:identifier epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_LotIdentifier_adyhtKZkzxr6SEjy3tRyua .
+De Aanbestedende dienst nodigt u hierbij uit om u in te schrijven voor de aanbesteding van Werving en selectie IT personeel.
 
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_LotsGroupIdentifier_MERF6WnoPEnVfJ9wqSQxW9
-  a adms:Identifier;
-  epo:hasScheme "LotsGroup";
-  skos:notation "GLO-0001" .
+De procedure verloopt volledig elektronisch via het online aanbestedingsplatform Mercell. 
 
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_Notice a epo:CompetitionNotice, epo:Notice,
-    epo:Notice11;
-  epo:announcesLot epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_Lot_LOT-0001;
-  epo:announcesProcedure epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_Procedure_iNVWPykMuHh9p4AY3uzvA2;
-  epo:announcesRole epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_Buyer_SZHsNf9AnmY76awze3Gonb,
-    epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_ProcurementProcedureInformationProvider_CyWo5YTU3YkPLSVwo2XACs,
-    epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_ReviewProcedureInformationProvider_9wBisz48ygTPo3wfXCXP3X,
-    epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_Reviewer_9wBisz48ygTPo3wfXCXP3X;
-  epo:hasESenderDispatchDate "2024-03-04T15:30:55Z"^^xsd:dateTime;
+Deze selectieleidraad bevat onder meer informatie over de eisen waaraan de (inhoud van de) levering en de daaraan gerelateerde dienstverlening dient te voldoen, het verloop van de aanbestedingsprocedure en de eisen waaraan de (inhoud van de) inschrijving dient te voldoen.
+
+De looptijd van deze DAS :
+2023 tot 2025 met een optie op verlenging.
+
+Algemeen
+De Aanbestedende dienst is Commando Materieel en IT (COMMIT) van het Ministerie van Defensie. COMMIT is verantwoordelijk voor de aankoop van het defensiematerieel van de 4 Operationele Commando's (Koninklijke Landmacht, Luchtmacht, Marine en Marechaussee). 
+
+Voor meer informatie over het Ministerie van Defensie en de Aanbestedende Dienst is de website www.defensie.nl te raadplegen.
+
+Beoogde situatie
+Het JIVC heeft met het DAS voor werving en selectie IT Personeel tot doel om Deelnemers te selecteren die - gedurende de komende periode 2023-2025 met optie tot verlenging en binnen de daarvoor gestelde kaders - kunnen voldoen aan de vraag van het JIVC op het gebied van werving en selectie van IT-medewerkers. Voor de volledigheid: deze medewerker gaat een arbeidsovereenkomst aan met het Ministerie van Defensie.
+
+Uitdrukkelijk wil ik vermelden dat toetreding / deelname aan het DAS gedurende de gehele looptijd van het DAS mogelijk blijft.
+
+Wat is een DAS?
+Een DAS is een elektronisch aankoopsysteem voor het doen van gangbare aankopen met algemene kenmerken gedurende een bepaalde periode. De procedure begint met een vereenvoudigde aankondiging van de opdracht, met de vermelding dat de aanbesteding volgens een DAS verloopt (aankondiging van het instellen van een Dynamisch aankoopsysteem). In de (selectie)leidraad vermeldt de Aanbestedende dienst wat de aard van de opdracht in het DAS zal zijn.
+
+Gedurende de looptijd van het DAS kunnen Deelnemers die aan de selectiecriteria voldoen en een inschrijving tot Deelname hebben gedaan worden toegelaten tot het DAS. De Aanbestedende dienst zal het verzoek tot Deelname binnen vijftien dagen na indiening beoordelen en de deelnemer mededelen of hij is toegelaten tot het systeem of niet.
+
+Nadat ondernemers zijn toegelaten (Deelname) binnen het DAS kunnen zij meedingen naar opdrachten voor de gevraagde diensten, welke na toelating tot het systeem worden uitgevraagd.
+
+De volgende stap is de publicatie van een daadwerkelijk concrete en specifieke overheidsopdracht (offerteaanvraag) binnen het DAS. De Aanbestedende Dienst nodigt in het kader van een Dynamisch Aankoopsysteem alle deelnemers uit om een offerte uit te brengen.
+
+Ondernemers die graag nadere informatie willen over het gebruik van Mercell, kunnen diverse instructies raadplegen op:
+https://www.negometrix.com/nl/informatie-voor-leveranciers/
+ 
+"""@nl;
+  dct:title "20383042 Werving en selectie IT personeel"@nl;
+  adms:identifier epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_LotIdentifier_246rmGzZvwFBcxRNZTXjTW .
+
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Mediator_D9HNqZBE8z3NZfKG6rn3Cq a epo:Mediator;
+  epo:contextualisedBy epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Lot_LOT-0000;
+  epo:playedBy epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Organization_ORG-0002 .
+
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_MonetaryValueLot_BaGzsXLuGR4tRgDAxRPwS8
+  a epo:MonetaryValue;
+  epo:hasAmountValue 1000000.0;
+  epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> .
+
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_MonetaryValueLot_EgMjw2pg9jruQvYxRQ9GAr
+  a epo:MonetaryValue;
+  epo:hasAmountValue 1000000.0;
+  epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> .
+
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_NonDisclosureAgreementTerm_YWMCGu6i5HBxweh3xaUekn
+  a epo:NonDisclosureAgreementTerm;
+  epo:isNonDisclosureAgreementRequired true;
+  dct:description "Voor de in te zetten medewerkers."@nl .
+
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Notice a epo:CompetitionNotice, epo:Notice,
+    epo:Notice10;
+  epo:announcesLot epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Lot_LOT-0000;
+  epo:announcesProcedure epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Procedure_MnX8qyREnFMNLeS5MJAX9K;
+  epo:announcesRole epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Buyer_MT3gdCnJ9BA7aEqaGqKxAh,
+    epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_EmploymentInformationProvider_jqmd9oW5AWitENTLtaAT9i,
+    epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_EnvironmentalProtectionInformationProvider_YWMCGu6i5HBxweh3xaUekn,
+    epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Mediator_D9HNqZBE8z3NZfKG6rn3Cq, epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_OfflineAccessProvider_YWMCGu6i5HBxweh3xaUekn,
+    epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_ProcurementProcedureInformationProvider_YWMCGu6i5HBxweh3xaUekn,
+    epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_ReviewProcedureInformationProvider_D9HNqZBE8z3NZfKG6rn3Cq,
+    epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Reviewer_D9HNqZBE8z3NZfKG6rn3Cq, epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_TaxInformationProvider_28mpSsyXhEY3Eg89ym5obS;
+  epo:hasESenderDispatchDate "2024-02-29T14:08:00+00:00"^^xsd:dateTime;
   epo:hasFormType <http://publications.europa.eu/resource/authority/form-type/competition>;
-  epo:hasNoticePublicationNumber "00137599-2024";
+  epo:hasNoticePublicationNumber "00127505-2024";
   epo:hasNoticeType <http://publications.europa.eu/resource/authority/notice-type/pin-cfc-standard>;
-  epo:hasOJSIssueNumber "47/2024";
-  epo:hasOfficialLanguage <http://publications.europa.eu/resource/authority/language/ENG>;
-  epo:hasPublicationDate "2024-03-06Z"^^xsd:date;
+  epo:hasOJSIssueNumber "44/2024";
+  epo:hasOfficialLanguage <http://publications.europa.eu/resource/authority/language/NLD>;
+  epo:hasPublicationDate "2024-03-01Z"^^xsd:date;
   epo:hasVersion "01";
-  epo:refersToLot epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_Lot_LOT-0001;
-  epo:refersToProcedure epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_Procedure_iNVWPykMuHh9p4AY3uzvA2;
-  adms:identifier epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_NoticeIdentifier_UqBk5rJmTLyMMKTBaBF8aL .
+  epo:refersToLot epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Lot_LOT-0000;
+  epo:refersToProcedure epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Procedure_MnX8qyREnFMNLeS5MJAX9K;
+  adms:identifier epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_NoticeIdentifier_cMBzh6pL4JRkiaCd4DWjT2 .
 
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_NoticeIdentifier_UqBk5rJmTLyMMKTBaBF8aL
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_NoticeIdentifier_cMBzh6pL4JRkiaCd4DWjT2
   a adms:Identifier;
   epo:hasScheme "notice-id";
-  skos:notation "d5d2835b-dce6-4e36-a5fb-913f474b3c71" .
+  skos:notation "9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57" .
 
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_OrganisationIdentifier_cAizxUxLJ53PhRH8XHXPmd
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_OfflineAccessProvider_YWMCGu6i5HBxweh3xaUekn
+  a epo:OfflineAccessProvider;
+  epo:contextualisedBy epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Lot_LOT-0000;
+  epo:playedBy epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Organization_ORG-0001 .
+
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_OrganisationIdentifier_ZowVe8fwBUBP7Pd4ikinCk
   a adms:Identifier;
-  skos:notation "77725883" .
+  skos:notation "82946175" .
 
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_Organization_ORG-0001 a org:Organization;
-  epo:hasLegalIdentifier epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_OrganisationIdentifier_cAizxUxLJ53PhRH8XHXPmd;
-  epo:hasLegalName "Fountain Fuel B.V."@en;
-  epo:hasMainActivity <http://publications.europa.eu/resource/authority/main-activity/gas-heat>;
-  epo:hasPrimaryContactPoint epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_CompanyContactPoint_P6hpGybLbTPLfmuVNJo8zd;
-  cccev:registeredAddress epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_CompanyAddress_PcFLvGUMubmeEHZGZJQoer;
-  adms:identifier epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_Identifier_ORG-0001 .
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_OrganisationIdentifier_ezhXiD7oQurCdTdR4RSM9g
+  a adms:Identifier;
+  skos:notation "27370985" .
 
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_ParticipationCondition_YEruXnswWJkYCSR4jGK8Bs
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Organization_ORG-0001 a org:Organization;
+  epo:hasBuyerLegalType <http://publications.europa.eu/resource/authority/buyer-legal-type/cga>;
+  epo:hasLegalIdentifier epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_OrganisationIdentifier_ezhXiD7oQurCdTdR4RSM9g;
+  epo:hasLegalName "Ministerie van Defensie"@nl;
+  epo:hasMainActivity <http://publications.europa.eu/resource/authority/main-activity/defence>;
+  epo:hasPrimaryContactPoint epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_CompanyContactPoint_7iFD8NVFhULkdXRNPqKyHs;
+  cccev:registeredAddress epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_CompanyAddress_SyrXybB9qnydTsiCYvqfwn;
+  adms:identifier epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Identifier_ORG-0001 .
+
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Organization_ORG-0002 a org:Organization;
+  epo:hasLegalIdentifier epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_OrganisationIdentifier_ZowVe8fwBUBP7Pd4ikinCk;
+  epo:hasLegalName "Rechtbank Den Haag"@nl;
+  epo:hasPrimaryContactPoint epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_CompanyContactPoint_CCKfjNm3UAMuYf3dDso6C2;
+  cccev:registeredAddress epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_CompanyAddress_kp4YHhT2Gw9BnTPKnwxcdW;
+  adms:identifier epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Identifier_ORG-0002 .
+
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_ParticipationCondition_Wbukq4uv37BmR2FRZxpHbN
   a epo:ParticipationCondition;
   epo:hasReservedProcurement <http://publications.europa.eu/resource/authority/reserved-procurement/none> .
 
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_ProcedureIdentifier_ByC2hyDTLG6nmfsEEo8uPF
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_ProcedureIdentifier_MnX8qyREnFMNLeS5MJAX9K
   a adms:Identifier;
-  skos:notation "01-HRS" .
+  skos:notation "cd9b9071-6cd2-47bb-aad6-3d9cca00bb59" .
 
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_ProcedureIdentifier_iNVWPykMuHh9p4AY3uzvA2
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_ProcedureIdentifier_eySzap22e3jkZr3f7VXYNj
   a adms:Identifier;
-  skos:notation "9693f9b9-d9f6-4835-b990-7beac03901e6" .
+  epo:hasScheme "InternalID";
+  skos:notation "20383042 Werving en selectie IT personeel" .
 
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_ProcedurePurpose_ByC2hyDTLG6nmfsEEo8uPF
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_ProcedurePlacePerformance_btiykpkF9yYEWFnDmvRf6a
+  a locn:Address;
+  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/NLD> .
+
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_ProcedurePurpose_eySzap22e3jkZr3f7VXYNj
   a epo:Purpose;
-  epo:hasMainClassification <http://data.europa.eu/cpv/cpv/09121000> .
+  epo:hasAdditionalClassification <http://data.europa.eu/cpv/cpv/79600000>;
+  epo:hasMainClassification <http://data.europa.eu/cpv/cpv/79610000> .
 
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_ProcedureTerm_i6VkigiswhdrkGE2Qsoo3o a
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_ProcedureTerm_YWMCGu6i5HBxweh3xaUekn a
     epo:ProcedureTerm;
-  epo:definesLotGroup epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_LotGroup_GLO-0001;
-  epo:hasMaximumLotSubmissionAllowed 1;
-  epo:hasMaximumNumberOfLotsToBeAwarded 1 .
+  epo:definesInformationProvider epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_EmploymentInformationProvider_jqmd9oW5AWitENTLtaAT9i,
+    epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_EnvironmentalProtectionInformationProvider_YWMCGu6i5HBxweh3xaUekn,
+    epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_TaxInformationProvider_28mpSsyXhEY3Eg89ym5obS;
+  epo:definesMediator epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Mediator_D9HNqZBE8z3NZfKG6rn3Cq .
 
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_ProcedureTerm_iNVWPykMuHh9p4AY3uzvA2 a
-    epo:ProcedureTerm;
-  epo:isSubmissionForAllLotsRequired true .
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Procedure_MnX8qyREnFMNLeS5MJAX9K a epo:Procedure;
+  epo:foreseesContractSpecificTerm epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_ProcurementProjectContractTerm_QmFgWdHMQiunuxrdtntYZx,
+    epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_ProcurementProjectContractTerm_eySzap22e3jkZr3f7VXYNj;
+  epo:hasEstimatedValue epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_MonetaryValueLot_BaGzsXLuGR4tRgDAxRPwS8;
+  epo:hasInternalIdentifier epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_ProcedureIdentifier_eySzap22e3jkZr3f7VXYNj;
+  epo:hasLegalBasis <http://publications.europa.eu/resource/authority/legal-basis/32014L0024>;
+  epo:hasProcedureType <http://publications.europa.eu/resource/authority/procurement-procedure-type/oth-mult>;
+  epo:hasProcurementScopeDividedIntoLot epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Lot_LOT-0000;
+  epo:hasPurpose epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_ProcedurePurpose_eySzap22e3jkZr3f7VXYNj;
+  epo:isSubjectToProcedureSpecificTerm epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_ProcedureTerm_YWMCGu6i5HBxweh3xaUekn;
+  dct:description """Dienstverlening werving en selectie IT personeel middels de niet openbare procedure conform § 2.2.3.4 Aanbestedingswet 2012 waarbij gebruik gemaakt zal gaan worden van een Dynamisch Aankoop Systeem (DAS).
 
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_Procedure_iNVWPykMuHh9p4AY3uzvA2 a epo:Procedure;
-  epo:foreseesContractSpecificTerm epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_ProcurementProjectContractTerm_ByC2hyDTLG6nmfsEEo8uPF;
-  epo:hasAdditionalInformation "For additional information: fountainfuel.com"@en;
-  epo:hasInternalIdentifier epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_ProcedureIdentifier_ByC2hyDTLG6nmfsEEo8uPF;
-  epo:hasLegalBasis <http://publications.europa.eu/resource/authority/legal-basis/other>;
-  epo:hasMainFeature "Voluntary publication; Public tender"@en;
-  epo:hasProcedureType <http://publications.europa.eu/resource/authority/procurement-procedure-type/comp-dial>;
-  epo:hasProcurementScopeDividedIntoLot epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_Lot_LOT-0001;
-  epo:hasPurpose epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_ProcedurePurpose_ByC2hyDTLG6nmfsEEo8uPF;
-  epo:isSubjectToProcedureSpecificTerm epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_ProcedureTerm_i6VkigiswhdrkGE2Qsoo3o,
-    epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_ProcedureTerm_iNVWPykMuHh9p4AY3uzvA2;
-  dct:description " Fountain Fuel is starting a tender for the purchase of 6 Hydrogen Refueling Stations. "@en;
-  dct:title "Tender for 6 hydrogen refueling systems in North-Sweden "@en;
-  adms:identifier epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_ProcedureIdentifier_iNVWPykMuHh9p4AY3uzvA2 .
+De Aanbestedende dienst nodigt u hierbij uit om u in te schrijven voor de aanbesteding van Werving en selectie IT personeel.
 
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_ProcurementProcedureInformationProvider_CyWo5YTU3YkPLSVwo2XACs
+De procedure verloopt volledig elektronisch via het online aanbestedingsplatform Mercell. 
+
+Deze selectieleidraad bevat onder meer informatie over de eisen waaraan de (inhoud van de) levering en de daaraan gerelateerde dienstverlening dient te voldoen, het verloop van de aanbestedingsprocedure en de eisen waaraan de (inhoud van de) inschrijving dient te voldoen.
+
+De looptijd van deze DAS :
+2023 tot 2025 met een optie op verlenging.
+
+Algemeen
+De Aanbestedende dienst is Commando Materieel en IT (COMMIT) van het Ministerie van Defensie. COMMIT is verantwoordelijk voor de aankoop van het defensiematerieel van de 4 Operationele Commando's (Koninklijke Landmacht, Luchtmacht, Marine en Marechaussee). 
+
+Voor meer informatie over het Ministerie van Defensie en de Aanbestedende Dienst is de website www.defensie.nl te raadplegen.
+
+Beoogde situatie
+Het JIVC heeft met het DAS voor werving en selectie IT Personeel tot doel om Deelnemers te selecteren die - gedurende de komende periode 2023-2025 met optie tot verlenging en binnen de daarvoor gestelde kaders - kunnen voldoen aan de vraag van het JIVC op het gebied van werving en selectie van IT-medewerkers. Voor de volledigheid: deze medewerker gaat een arbeidsovereenkomst aan met het Ministerie van Defensie.
+
+Uitdrukkelijk wil ik vermelden dat toetreding / deelname aan het DAS gedurende de gehele looptijd van het DAS mogelijk blijft.
+
+Wat is een DAS?
+Een DAS is een elektronisch aankoopsysteem voor het doen van gangbare aankopen met algemene kenmerken gedurende een bepaalde periode. De procedure begint met een vereenvoudigde aankondiging van de opdracht, met de vermelding dat de aanbesteding volgens een DAS verloopt (aankondiging van het instellen van een Dynamisch aankoopsysteem). In de (selectie)leidraad vermeldt de Aanbestedende dienst wat de aard van de opdracht in het DAS zal zijn.
+
+Gedurende de looptijd van het DAS kunnen Deelnemers die aan de selectiecriteria voldoen en een inschrijving tot Deelname hebben gedaan worden toegelaten tot het DAS. De Aanbestedende dienst zal het verzoek tot Deelname binnen vijftien dagen na indiening beoordelen en de deelnemer mededelen of hij is toegelaten tot het systeem of niet.
+
+Nadat ondernemers zijn toegelaten (Deelname) binnen het DAS kunnen zij meedingen naar opdrachten voor de gevraagde diensten, welke na toelating tot het systeem worden uitgevraagd.
+
+De volgende stap is de publicatie van een daadwerkelijk concrete en specifieke overheidsopdracht (offerteaanvraag) binnen het DAS. De Aanbestedende Dienst nodigt in het kader van een Dynamisch Aankoopsysteem alle deelnemers uit om een offerte uit te brengen.
+
+Ondernemers die graag nadere informatie willen over het gebruik van Mercell, kunnen diverse instructies raadplegen op:
+https://www.negometrix.com/nl/informatie-voor-leveranciers/
+ 
+"""@nl;
+  dct:title "20383042 Werving en selectie IT personeel"@nl;
+  adms:identifier epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_ProcedureIdentifier_MnX8qyREnFMNLeS5MJAX9K .
+
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_ProcurementProcedureInformationProvider_YWMCGu6i5HBxweh3xaUekn
   a epo:ProcurementProcedureInformationProvider;
-  epo:contextualisedBy epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_Lot_LOT-0001;
-  epo:playedBy epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_Organization_ORG-0001 .
+  epo:contextualisedBy epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Lot_LOT-0000;
+  epo:playedBy epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Organization_ORG-0001 .
 
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_ProcurementProcessInformation_kQWnAaQzjfQ3uH37qK6TkV
-  a epo:ProcurementProcessInformation;
-  epo:concernsProcedure epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_Procedure_iNVWPykMuHh9p4AY3uzvA2;
-  epo:isToBeRelaunched true .
-
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_ProcurementProjectContractTerm_ByC2hyDTLG6nmfsEEo8uPF
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_ProcurementProjectContractTerm_QmFgWdHMQiunuxrdtntYZx
   a epo:ContractTerm;
-  epo:hasContractNatureType <http://publications.europa.eu/resource/authority/contract-nature/supplies> .
+  epo:definesSpecificPlaceOfPerformance epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_ContractLocation_btiykpkF9yYEWFnDmvRf6a;
+  epo:hasBroadPlaceOfPerformance <http://publications.europa.eu/resource/authority/other-place-service/anyw-cou>;
+  epo:hasPlaceOfPerformanceAdditionalInformation "Zie documentatie"@nl .
 
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_ReviewProcedureInformationProvider_9wBisz48ygTPo3wfXCXP3X
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_ProcurementProjectContractTerm_eySzap22e3jkZr3f7VXYNj
+  a epo:ContractTerm;
+  epo:hasContractNatureType <http://publications.europa.eu/resource/authority/contract-nature/services> .
+
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_ReviewProcedureInformationProvider_D9HNqZBE8z3NZfKG6rn3Cq
   a epo:ReviewProcedureInformationProvider;
-  epo:contextualisedBy epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_Lot_LOT-0001;
-  epo:playedBy epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_Organization_ORG-0001 .
+  epo:contextualisedBy epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Lot_LOT-0000;
+  epo:playedBy epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Organization_ORG-0002 .
 
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_ReviewTerm_9wBisz48ygTPo3wfXCXP3X a epo:ReviewTerm;
-  epo:definesReviewProcedureInformationProvider epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_ReviewProcedureInformationProvider_9wBisz48ygTPo3wfXCXP3X;
-  epo:definesReviewer epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_Reviewer_9wBisz48ygTPo3wfXCXP3X .
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_ReviewTerm_D9HNqZBE8z3NZfKG6rn3Cq a epo:ReviewTerm;
+  epo:definesReviewProcedureInformationProvider epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_ReviewProcedureInformationProvider_D9HNqZBE8z3NZfKG6rn3Cq;
+  epo:definesReviewer epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Reviewer_D9HNqZBE8z3NZfKG6rn3Cq .
 
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_Reviewer_9wBisz48ygTPo3wfXCXP3X a epo:Reviewer;
-  epo:contextualisedBy epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_Lot_LOT-0001;
-  epo:playedBy epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_Organization_ORG-0001 .
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Reviewer_D9HNqZBE8z3NZfKG6rn3Cq a epo:Reviewer;
+  epo:contextualisedBy epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Lot_LOT-0000;
+  epo:playedBy epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Organization_ORG-0002 .
 
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_SelectionTerm_Nx3zxAhTCn7QWX9NwEt6R4 a
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_SecurityClearanceTerm_YWMCGu6i5HBxweh3xaUekn
+  a epo:SecurityClearanceTerm;
+  epo:isSecurityClearanceRequired true;
+  dct:description "Alle medewerkers die in dienst komen bij Defensie dienen deel te nemen aan een screeningsonderzoek."@nl .
+
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_SelectionTerm_DEqKehWh2My5y2k7i9vnNu a
     epo:SelectionCriterion;
-  epo:hasSelectionCriterionType <http://publications.europa.eu/resource/authority/selection-criterion/other> .
+  epo:hasSelectionCriteriaUsage <http://publications.europa.eu/resource/authority/usage/used>;
+  epo:hasSelectionCriterionType <http://publications.europa.eu/resource/authority/selection-criterion/tp-abil>;
+  dct:description """Lijst en beknopte beschrijving van de selectiecriteria:
+Zie artikel 4.4 van de selectieleidraad."""@nl;
+  skos:prefLabel "4.4 Technische bekwaamheid of beroepsbekwaamheid"@nl .
 
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_SubmissionTerm_CyWo5YTU3YkPLSVwo2XACs
-  a epo:SubmissionTerm;
-  epo:hasSubmissionURL "www.Fountainfuel.com"^^xsd:anyURI .
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_SelectionTerm_F2EkrTHhwGTB3ZRA69q4nd a
+    epo:SelectionCriterion;
+  epo:hasSelectionCriteriaUsage <http://publications.europa.eu/resource/authority/usage/n-used>;
+  epo:hasSelectionCriterionType <http://publications.europa.eu/resource/authority/selection-criterion/ef-stand> .
 
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_SubmissionTerm_adyhtKZkzxr6SEjy3tRyua
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_SelectionTerm_QwLGZTLYe95szz5vdsUu7F a
+    epo:SelectionCriterion;
+  epo:hasSelectionCriteriaUsage <http://publications.europa.eu/resource/authority/usage/used>;
+  epo:hasSelectionCriterionType <http://publications.europa.eu/resource/authority/selection-criterion/sui-act>;
+  dct:description """Lijst en beknopte beschrijving van de selectiecriteria:
+Zie artikel 4 van de selectieleidraad."""@nl;
+  skos:prefLabel "4.2 Bevoegdheid de beroepsactiviteit uit te voeren"@nl .
+
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_SubmissionTerm_246rmGzZvwFBcxRNZTXjTW
   a epo:SubmissionTerm;
   epo:hasESubmissionPermission <http://publications.europa.eu/resource/authority/permission/allowed>;
-  epo:hasLanguage <http://publications.europa.eu/resource/authority/language/ENG> .
+  epo:hasLanguage <http://publications.europa.eu/resource/authority/language/NLD>;
+  epo:hasVariantPermission <http://publications.europa.eu/resource/authority/permission/not-allowed> .
 
-epd:id_d5d2835b-dce6-4e36-a5fb-913f474b3c71_SubmissionTerm_bhwNkU3ZDWjqixNqPViKkL
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_SubmissionTerm_FqYQevizs8bYnqhUzSaYor
   a epo:SubmissionTerm;
-  epo:hasReceiptExpressionDeadline "2024-03-20T20:03:20+01:00"^^xsd:dateTime .
+  epo:hasReceiptExpressionDeadline "2025-01-31T11:00:00+00:00"^^xsd:dateTime .
+
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_SubmissionTerm_YWMCGu6i5HBxweh3xaUekn
+  a epo:SubmissionTerm;
+  epo:hasSubmissionURL "https://s2c.mercell.com/today/60167"^^xsd:anyURI;
+  epo:isAdvancedElectronicSignatureRequired true .
+
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_TaxInformationProvider_28mpSsyXhEY3Eg89ym5obS
+  a epo:TaxInformationProvider;
+  epo:contextualisedBy epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Lot_LOT-0000;
+  epo:playedBy epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Organization_ORG-0002 .

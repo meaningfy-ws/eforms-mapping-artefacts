@@ -231,6 +231,34 @@ tedm:MG-Tender_ND-LotTender  a rr:TriplesMap ;
                     ];
                 ] ;
         ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-13714-Tender";
+            rdfs:comment "Tender Lot Identifier of MG-Tender under ND-LotTender";
+            rr:predicate  epo:isSubmittedForLot ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-Lot-isSubmittedForLot-Tender_ND-LotTender ;
+                    rr:joinCondition[
+                        rr:child "path(.)";
+                        rr:parent "path(.)"
+                    ];
+                ] ;
+        ];
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-13714-Tender";
+            rdfs:comment "Tender Lot Identifier of MG-Tender under ND-LotTender";
+            rr:predicate  epo:isSubjectToGrouping ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-LotGroup-isSubjectToGrouping-Tender_ND-LotTender ;
+                    rr:joinCondition[
+                        rr:child "path(.)";
+                        rr:parent "path(.)"
+                    ];
+                ] ;
+        ];
 .
 
 tedm:MG-MonetaryValue-hasFinancialOfferValue-Tender_ND-LotTender  a rr:TriplesMap ;
@@ -466,4 +494,42 @@ tedm:MG-Tender_ND-SubcontractedContract  a rr:TriplesMap ;
                 ] ;
 
         ];
+    .
+
+tedm:MG-Lot-isSubmittedForLot-Tender_ND-LotTender  a rr:TriplesMap ;
+  rdfs:label "MG-Lot";
+  rdfs:label "BT-13714-Tender" ;
+       rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+         rdfs:label "ND-LotTender" ;
+         rml:reference """ if (exists(efac:TenderLot/cbc:ID[starts-with(text(), 'LOT-')])) then concat('http://data.europa.eu/a4g/resource/id_',
+         replace(replace(string(/*/cbc:ID[@schemeName='notice-id']), ' ', '-'), '/', '-'), '_Lot_',
+         string(efac:TenderLot/cbc:ID))  else null """ ;
+
+        ] ;
+    .
+tedm:MG-LotGroup-isSubjectToGrouping-Tender_ND-LotTender  a rr:TriplesMap ;
+  rdfs:label "MG-LotGroup";
+  rdfs:label "BT-13714-Tender" ;
+       rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-LotTender" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_LotGroup_{cbc:ID}" ;
+             rml:reference """ if (exists(efac:TenderLot/cbc:ID[starts-with(text(), 'GLO-')])) then concat('http://data.europa.eu/a4g/resource/id_',
+            replace(replace(string(/*/cbc:ID[@schemeName='notice-id']), ' ', '-'), '/', '-'), '_GLO_',
+            string(efac:TenderLot/cbc:ID))  else null """ ;
+            rr:class epo:LotGroup
+        ] ;
     .

@@ -149,9 +149,9 @@ epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_Lot_LOT-0000 a epo:Lot;
   epo:isUsingEUFunds false;
   epo:specifiesProcurementCriterion epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_AwardCriterion_MGJNUreXVLg5AkPswtTpQ5,
     epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_ParticipationCondition_Wbukq4uv37BmR2FRZxpHbN,
-    epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_SelectionTerm_DEqKehWh2My5y2k7i9vnNu,
-    epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_SelectionTerm_F2EkrTHhwGTB3ZRA69q4nd,
-    epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_SelectionTerm_QwLGZTLYe95szz5vdsUu7F;
+    epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_SelectionCriterion_DEqKehWh2My5y2k7i9vnNu,
+    epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_SelectionCriterion_F2EkrTHhwGTB3ZRA69q4nd,
+    epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_SelectionCriterion_QwLGZTLYe95szz5vdsUu7F;
   epo:usesTechnique epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_AuctionTerms_Y7WNjU2HSM4HNny2xZsabR,
     epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_DynamicPurchaseSystemTechnicalUsage_bq3rWUnhLReULR3Pe8QxDZ;
   dct:description """Dienstverlening werving en selectie IT personeel middels de niet openbare procedure conform § 2.2.3.4 Aanbestedingswet 2012 waarbij gebruik gemaakt zal gaan worden van een Dynamisch Aankoop Systeem (DAS).
@@ -380,21 +380,21 @@ epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_SecurityClearanceTerm_YWMCGu6i5HBxwe
   epo:isSecurityClearanceRequired true;
   dct:description "Alle medewerkers die in dienst komen bij Defensie dienen deel te nemen aan een screeningsonderzoek."@nl .
 
-epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_SelectionTerm_DEqKehWh2My5y2k7i9vnNu a
-    epo:SelectionCriterion;
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_SelectionCriterion_DEqKehWh2My5y2k7i9vnNu
+  a epo:SelectionCriterion;
   epo:hasSelectionCriteriaUsage <http://publications.europa.eu/resource/authority/usage/used>;
   epo:hasSelectionCriterionType <http://publications.europa.eu/resource/authority/selection-criterion/tp-abil>;
   dct:description """Lijst en beknopte beschrijving van de selectiecriteria:
 Zie artikel 4.4 van de selectieleidraad."""@nl;
   skos:prefLabel "4.4 Technische bekwaamheid of beroepsbekwaamheid"@nl .
 
-epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_SelectionTerm_F2EkrTHhwGTB3ZRA69q4nd a
-    epo:SelectionCriterion;
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_SelectionCriterion_F2EkrTHhwGTB3ZRA69q4nd
+  a epo:SelectionCriterion;
   epo:hasSelectionCriteriaUsage <http://publications.europa.eu/resource/authority/usage/n-used>;
   epo:hasSelectionCriterionType <http://publications.europa.eu/resource/authority/selection-criterion/ef-stand> .
 
-epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_SelectionTerm_QwLGZTLYe95szz5vdsUu7F a
-    epo:SelectionCriterion;
+epd:id_9e5933fa-86a8-44c0-a8c1-abc1e0d1ab57_SelectionCriterion_QwLGZTLYe95szz5vdsUu7F
+  a epo:SelectionCriterion;
   epo:hasSelectionCriteriaUsage <http://publications.europa.eu/resource/authority/usage/used>;
   epo:hasSelectionCriterionType <http://publications.europa.eu/resource/authority/selection-criterion/sui-act>;
   dct:description """Lijst en beknopte beschrijving van de selectiecriteria:

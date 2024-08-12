@@ -54,7 +54,6 @@ tedm:MG-ProcurementProcessInformation_ND-LotResult  a rr:TriplesMap ;
         ];
     rr:predicateObjectMap
         [
-            # TODO fix the URI (path) of LOT
             rdfs:label " BT-119-LotResult";
             rdfs:comment "Dynamic Purchasing System Termination of MG-Lot under ND-LotResult" ;
             rr:predicate  epo:concernsLot   ;

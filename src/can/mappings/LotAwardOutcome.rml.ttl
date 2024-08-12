@@ -75,8 +75,7 @@ tedm:MG-LotAwardOutcome_ND-LotResult  a rr:TriplesMap ;
         ] ;
      rr:predicateObjectMap
         [
-            # TODO fix the URI (path) of LOT
-            rdfs:label " BT-119-LotResult";
+            rdfs:label " BT-13713";
             rr:predicate  epo:concernsLot   ;
              rr:objectMap
                 [

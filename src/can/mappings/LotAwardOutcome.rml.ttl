@@ -40,7 +40,7 @@ tedm:MG-LotAwardOutcome_ND-LotResult  a rr:TriplesMap ;
             rdfs:label "ND-LotResult" ;
             rdfs:label " OPT-322-LotResult ";
             rdfs:comment "LotResultTechnicalIdentifier of MG-LotAwardOutcome under ND-LotResult" ;
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_LotAwardOutcome_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_LotAwardOutcome_{cbc:ID}" ;
             rr:class epo:LotAwardOutcome
         ] ;
     rr:predicateObjectMap

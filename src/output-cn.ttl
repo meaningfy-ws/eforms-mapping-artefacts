@@ -251,8 +251,5 @@ epd:id_95a505a4-924c-420b-958d-b628f7c4d50b_SelectionTerm_QwLGZTLYe95szz5vdsUu7F
 epd:id_95a505a4-924c-420b-958d-b628f7c4d50b_SubmissionTerm_246rmGzZvwFBcxRNZTXjTW
   a epo:SubmissionTerm;
   epo:hasESubmissionPermission <http://publications.europa.eu/resource/authority/permission/required>;
+  epo:hasLanguage <http://publications.europa.eu/resource/authority/language/FRA>;
   epo:hasReceiptParticipationRequestDeadline "2024-04-18T12:00:00+02:00"^^xsd:dateTime .
-
-epd:id_95a505a4-924c-420b-958d-b628f7c4d50b_SubmissionTerm_YWMCGu6i5HBxweh3xaUekn
-  a epo:SubmissionTerm;
-  epo:hasLanguage <http://publications.europa.eu/resource/authority/language/FRA> .

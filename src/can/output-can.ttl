@@ -41,18 +41,16 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractFund_oXwXYzaLxMkFreJUNf6BBv 
   dct:description "Recovery Fund"@en;
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractFundIdentifier_oXwXYzaLxMkFreJUNf6BBv .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotAwardOutcome_A5K3ndcSySWYxA4wrRkqDG
-  a epo:LotAwardOutcome;
-  epo:concernsLot epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_RES-0002;
-  epo:hasAwardStatus <http://publications.europa.eu/resource/authority/winner-selection-status/clos-nw>;
-  epo:hasNonAwardJustification <http://publications.europa.eu/resource/authority/non-award-justification/all-rej> .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotAwardOutcome_FmfbzZdeEatT3nzZdqXd3D
-  a epo:LotAwardOutcome;
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotAwardOutcome_RES-0001 a epo:LotAwardOutcome;
   epo:concernsLot epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_RES-0001;
   epo:hasApproximateFrameworkAgreementValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_buhfT7xy3UtLfxfwv8HbfT;
   epo:hasAwardStatus <http://publications.europa.eu/resource/authority/winner-selection-status/selec-w>;
   epo:hasFrameworkAgreementMaximumValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_buhfT7xy3UtLfxfwv8HbfT .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotAwardOutcome_RES-0002 a epo:LotAwardOutcome;
+  epo:concernsLot epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_RES-0002;
+  epo:hasAwardStatus <http://publications.europa.eu/resource/authority/winner-selection-status/clos-nw>;
+  epo:hasNonAwardJustification <http://publications.europa.eu/resource/authority/non-award-justification/all-rej> .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotGroupAwardInformation_5RkUZBRon4U8t9FeNL7QSi
   a epo:LotGroupAwardInformation;
@@ -87,7 +85,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_JryEpNBTCzNfzKbsxaXwjt
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_buhfT7xy3UtLfxfwv8HbfT a
     epo:MonetaryValue;
   epo:hasAmountValue 9000000.0, 9999999.99;
-  epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR>, "EUR" .
+  epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_econsLsjPJro8aUo9zUip8 a
     epo:MonetaryValue;

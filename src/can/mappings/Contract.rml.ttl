@@ -321,3 +321,36 @@ tedm:MG-Fund-isFundedBy-Contract_ND-ContractEUFunds a rr:TriplesMap ;
                 ] ;
         ] ;
 .
+
+#tedm:MG-Contract_ND-LotResultContractReference  a rr:TriplesMap ;
+#  rdfs:label "MG-Contract";
+#       rml:logicalSource
+#        [
+#            rml:source "data/source.xml" ;
+#            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotResult/efac:SettledContract" ;
+#            rml:referenceFormulation ql:XPath
+#        ] ;
+#    rr:subjectMap
+#        [
+#            rdfs:label "ND-LotResultContractReference" ;
+#            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_SettledContract_{cbc:ID}" ;
+#            rr:class epo:Contract
+#        ] ;
+#    rr:predicateObjectMap
+#        [
+#            # TODO LOT URI
+#            # TODO max sdk 1.7
+#            tedm:minSDKVersion "1.8" ;
+#            rdfs:label "OPT-315-LotResult" ;
+#            rdfs:comment "Contract Identifier Reference of MG-Contract under ND-LotResultContractReference" ;
+#            rr:predicate epo:hasLotReference ;
+#            rr:objectMap
+#                [
+#                   rr:parentTriplesMap tedm:MG-Lot-hasLotReference-Contract_ND-LotResultContractReference ;
+#                    rr:joinCondition[
+#                        rr:child "path(.)";
+#                        rr:parent "path(.)"
+#                    ];
+#                ] ;
+#        ] ;
+#    .

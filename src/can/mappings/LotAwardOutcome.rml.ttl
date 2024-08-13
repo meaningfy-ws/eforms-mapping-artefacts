@@ -75,7 +75,7 @@ tedm:MG-LotAwardOutcome_ND-LotResult  a rr:TriplesMap ;
         ] ;
      rr:predicateObjectMap
         [
-            rdfs:label " BT-13713";
+            rdfs:label "BT-13713-LotResult";
             rr:predicate  epo:concernsLot   ;
              rr:objectMap
                 [

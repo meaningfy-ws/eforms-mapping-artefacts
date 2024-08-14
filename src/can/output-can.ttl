@@ -174,12 +174,12 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubcontractingEstimate_nNq2rC7wBesmh
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderAwardOutcome_8tLJD9wyvjSHWYvDWGiX5D
   a epo:TenderAwardOutcome;
-  epo:concernsTender epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_8tLJD9wyvjSHWYvDWGiX5D;
+  epo:concernsTender epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0001;
   epo:hasAwardRank "3" .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderAwardOutcome_nNq2rC7wBesmhA5baJ8mCt
   a epo:TenderAwardOutcome;
-  epo:concernsTender epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_nNq2rC7wBesmhA5baJ8mCt;
+  epo:concernsTender epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0002;
   epo:hasAwardRank "4" .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderIdentifier_8tLJD9wyvjSHWYvDWGiX5D
@@ -194,38 +194,30 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderIdentifier_nNq2rC7wBesmhA5baJ8
   a adms:Identifier;
   skos:notation "REF GHI/0003-01" .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_6tpSE8jbTRUwo5AE3y5G7w a epo:Tender;
-  epo:hasSubcontracting <http://publications.europa.eu/resource/authority/applicability/yes> .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_8tLJD9wyvjSHWYvDWGiX5D a epo:Tender;
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0001 a epo:Tender;
   epo:foreseesSubcontracting epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubcontractingEstimate_8tLJD9wyvjSHWYvDWGiX5D;
   epo:hasFinancialOfferValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_JryEpNBTCzNfzKbsxaXwjt;
+  epo:hasSubcontracting <http://publications.europa.eu/resource/authority/applicability/yes>;
   epo:isSubjectToGrouping epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_GLO_GLO-0001;
   epo:isSubmitedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TEN-0001;
-  epo:isVariant true .
+  epo:isVariant true;
+  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderIdentifier_8tLJD9wyvjSHWYvDWGiX5D .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_9ShyBb4XeAYabSStYrgq4j a epo:Tender;
-  epo:hasSubcontracting <http://publications.europa.eu/resource/authority/applicability/yes> .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_JryEpNBTCzNfzKbsxaXwjt a epo:Tender;
-  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderIdentifier_8tLJD9wyvjSHWYvDWGiX5D,
-    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderIdentifier_econsLsjPJro8aUo9zUip8,
-    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderIdentifier_nNq2rC7wBesmhA5baJ8mCt .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_econsLsjPJro8aUo9zUip8 a epo:Tender;
-  epo:foreseesSubcontracting epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubcontractingEstimate_econsLsjPJro8aUo9zUip8;
-  epo:isSubmitedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TEN-0003;
-  epo:isSubmittedForLot epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0002 .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_nNq2rC7wBesmhA5baJ8mCt a epo:Tender;
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0002 a epo:Tender;
   epo:foreseesSubcontracting epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubcontractingEstimate_nNq2rC7wBesmhA5baJ8mCt;
   epo:hasFinancialOfferValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_JryEpNBTCzNfzKbsxaXwjt;
+  epo:hasSubcontracting <http://publications.europa.eu/resource/authority/applicability/yes>;
   epo:isSubmitedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TEN-0002;
   epo:isSubmittedForLot epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;
-  epo:isVariant true .
+  epo:isVariant true;
+  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderIdentifier_nNq2rC7wBesmhA5baJ8mCt .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_nr8Q4oATGXT6RTkQWnAqqx a epo:Tender;
-  epo:hasSubcontracting <http://publications.europa.eu/resource/authority/applicability/yes> .
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0003 a epo:Tender;
+  epo:foreseesSubcontracting epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubcontractingEstimate_econsLsjPJro8aUo9zUip8;
+  epo:hasSubcontracting <http://publications.europa.eu/resource/authority/applicability/yes>;
+  epo:isSubmitedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TEN-0003;
+  epo:isSubmittedForLot epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0002;
+  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderIdentifier_econsLsjPJro8aUo9zUip8 .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TendererIdentifier_7rVzZwwwwKDY9vEDYu5vNr
   a adms:Identifier;

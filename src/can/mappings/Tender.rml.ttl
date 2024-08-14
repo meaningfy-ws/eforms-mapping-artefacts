@@ -27,36 +27,23 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xs:   <http://www.w3.org/2001/XMLSchema#> .
 
-tedm:MG-Tender_ND-NoticeResult a rr:TriplesMap ;
-  rdfs:label "MG-Tender";
-     rml:logicalSource
-        [
-            rml:source "data/source.xml" ;
-            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult";
-            rml:referenceFormulation ql:XPath
-        ] ;
-    rr:subjectMap
-        [
-            rdfs:label "ND-NoticeResult" ;
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Tender_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
-            rr:class epo:Tender
-        ] ;
-     rr:predicateObjectMap
-        [
-            rdfs:label "BT-3201-Tender" ;
-            rdfs:comment "Tender Identifier of MG-Identifier under ND-LotTender";
-            rr:predicate adms:identifier ;
-            rr:objectMap
-                [
-                    rr:parentTriplesMap tedm:MG-Identifier-identifier-Tender_ND-LotTender ;
-                    rr:joinCondition [
-                        rr:child "efac:TenderReference/cbc:ID";
-                        rr:parent "../efac:TenderReference/cbc:ID";
-                    ];
-                ] ;
-        ] ;
-
-.
+#tedm:MG-Tender_ND-NoticeResult a rr:TriplesMap ;
+#  rdfs:label "MG-Tender";
+#     rml:logicalSource
+#        [
+#            rml:source "data/source.xml" ;
+#            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult";
+#            rml:referenceFormulation ql:XPath
+#        ] ;
+#    rr:subjectMap
+#        [
+#            rdfs:label "ND-NoticeResult" ;
+#             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Tender_{efac:LotResult/efac:LotTender/cbc:ID}" ;
+#             rr:class epo:Tender
+#        ] ;
+#
+#
+#.
 
 tedm:MG-Identifier-identifier-Tender_ND-LotTender  a rr:TriplesMap ;
   rdfs:label "MG-Identifier";
@@ -146,7 +133,7 @@ tedm:MG-Tender-concernsTender-TenderAwardOutcome_ND-LotTender  a rr:TriplesMap ;
     rr:subjectMap
         [
             rdfs:label "ND-LotTender" ;
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Tender_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Tender_{cbc:ID}" ;
             rr:class epo:Tender
         ] ;
 .
@@ -162,7 +149,8 @@ tedm:MG-Tender_ND-LotTender  a rr:TriplesMap ;
     rr:subjectMap
         [
             rdfs:label "ND-LotTender" ;
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Tender_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+#            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Tender_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Tender_{cbc:ID}" ;
             rr:class epo:Tender
         ] ;
     rr:predicateObjectMap
@@ -258,6 +246,20 @@ tedm:MG-Tender_ND-LotTender  a rr:TriplesMap ;
                     ];
                 ] ;
         ];
+     rr:predicateObjectMap
+        [
+            rdfs:label "BT-3201-Tender" ;
+            rdfs:comment "Tender Identifier of MG-Identifier under ND-LotTender";
+            rr:predicate adms:identifier ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-Identifier-identifier-Tender_ND-LotTender ;
+                    rr:joinCondition[
+                        rr:child "path(.)";
+                        rr:parent "path(.)"
+                    ];
+                ] ;
+        ] ;
 .
 
 tedm:MG-MonetaryValue-hasFinancialOfferValue-Tender_ND-LotTender  a rr:TriplesMap ;
@@ -474,7 +476,8 @@ tedm:MG-Tender_ND-SubcontractedContract  a rr:TriplesMap ;
     rr:subjectMap
         [
             rdfs:label "ND-Tender" ;
-            rml:reference "if (exists(efbc:TermCode)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_Tender_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
+#            rml:reference "if (exists(efbc:TermCode)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_Tender_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
+            rml:reference "if(exists(efbc:TermCode)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_Tender_' || ../cbc:ID else null";
             rr:class epo:Tender ;
         ] ;
      rr:predicateObjectMap
@@ -512,6 +515,7 @@ tedm:MG-Lot-isSubmittedForLot-Tender_ND-LotTender  a rr:TriplesMap ;
          string(efac:TenderLot/cbc:ID))  else null """ ;
 
         ] ;
+     rr:class epo:Lot
     .
 tedm:MG-LotGroup-isSubjectToGrouping-Tender_ND-LotTender  a rr:TriplesMap ;
   rdfs:label "MG-LotGroup";

@@ -27,24 +27,6 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xs:   <http://www.w3.org/2001/XMLSchema#> .
 
-#tedm:MG-Tender_ND-NoticeResult a rr:TriplesMap ;
-#  rdfs:label "MG-Tender";
-#     rml:logicalSource
-#        [
-#            rml:source "data/source.xml" ;
-#            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult";
-#            rml:referenceFormulation ql:XPath
-#        ] ;
-#    rr:subjectMap
-#        [
-#            rdfs:label "ND-NoticeResult" ;
-#             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Tender_{efac:LotResult/efac:LotTender/cbc:ID}" ;
-#             rr:class epo:Tender
-#        ] ;
-#
-#
-#.
-
 tedm:MG-Identifier-identifier-Tender_ND-LotTender  a rr:TriplesMap ;
   rdfs:label "MG-Identifier";
        rml:logicalSource

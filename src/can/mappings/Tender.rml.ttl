@@ -131,7 +131,6 @@ tedm:MG-Tender_ND-LotTender  a rr:TriplesMap ;
     rr:subjectMap
         [
             rdfs:label "ND-LotTender" ;
-#            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Tender_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Tender_{cbc:ID}" ;
             rr:class epo:Tender
         ] ;
@@ -458,7 +457,6 @@ tedm:MG-Tender_ND-SubcontractedContract  a rr:TriplesMap ;
     rr:subjectMap
         [
             rdfs:label "ND-Tender" ;
-#            rml:reference "if (exists(efbc:TermCode)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_Tender_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
             rml:reference "if(exists(efbc:TermCode)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_Tender_' || ../cbc:ID else null";
             rr:class epo:Tender ;
         ] ;
@@ -511,7 +509,6 @@ tedm:MG-LotGroup-isSubjectToGrouping-Tender_ND-LotTender  a rr:TriplesMap ;
     rr:subjectMap
         [
             rdfs:label "ND-LotTender" ;
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_LotGroup_{cbc:ID}" ;
              rml:reference """ if (exists(efac:TenderLot/cbc:ID[starts-with(text(), 'GLO-')])) then concat('http://data.europa.eu/a4g/resource/id_',
             replace(replace(string(/*/cbc:ID[@schemeName='notice-id']), ' ', '-'), '/', '-'), '_GLO_',
             string(efac:TenderLot/cbc:ID))  else null """ ;

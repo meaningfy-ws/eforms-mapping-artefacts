@@ -20,10 +20,13 @@ EXCLUDE_LARGE_EXAMPLE = 1
 REPLACE_CM_METADATA_ID = 1
 REPLACE_CM_METADATA_ID_EXAMPLES = 0
 
-CANONICAL_TEST_OUTPUT = src/output.ttl
+CN_TEST_OUTPUT = src/output-cn.ttl
+CAN_TEST_OUTPUT = src/output-can.ttl
+CANONLY_TEST_OUTPUT = src/output-canonly.ttl
 VERSIONED_OUTPUT_DIR = src/output-versioned
 CANONICAL_EXAMPLE = cn_24_maximal
-CANONICAL_RML_DIR = src/mappings
+CN_RML_DIR = src/mappings
+CAN_RML_DIR = src/mappings-can
 TEST_DATA_DIR = test_data
 TEST_QUERIES_DIR = test_queries
 TEST_SCRIPTS_DIR = test_scripts
@@ -313,10 +316,13 @@ setup-owl-cli:
 test:
 	@ echo "Using $(JENA_TOOLS_RIOT)"
 	@ echo "Validating RML files"
-	@ $(JENA_TOOLS_RIOT) --validate $(CANONICAL_RML_DIR)/*
-	@ test -d $(CANONICAL_RML_DIR)-versioned && $(JENA_TOOLS_RIOT) --validate $(CANONICAL_RML_DIR)-versioned/* || echo "No versioned dir"
-	@ echo -n "Validating reference test output.."
-	@ $(JENA_TOOLS_RIOT) --validate $(CANONICAL_TEST_OUTPUT)
+	@ $(JENA_TOOLS_RIOT) --validate $(CN_RML_DIR)/*
+	@ $(JENA_TOOLS_RIOT) --validate $(CAN_RML_DIR)/*
+	@ test -d $(CN_RML_DIR)-versioned && $(JENA_TOOLS_RIOT) --validate $(CN_RML_DIR)-versioned/* || echo "No versioned dir"
+	@ echo -n "Validating reference test outputs.."
+	@ $(JENA_TOOLS_RIOT) --validate $(CN_TEST_OUTPUT)
+	@ $(JENA_TOOLS_RIOT) --validate $(CAN_TEST_OUTPUT)
+	@ $(JENA_TOOLS_RIOT) --validate $(CANONLY_TEST_OUTPUT)
 	@ echo "done"
 
 test_versioned_v%: test
@@ -328,41 +334,78 @@ test_versioned_v%: test
 test_output:
 	@ echo "Testing output w/ $(JENA_TOOLS_ARQ) in $(TEST_QUERY_RESULTS_FORMAT) format"
 	@ echo "==> Test output orphans"
-	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_orphans.rq --data $(CANONICAL_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT) | grep -vE $(ROOT_CONCEPTS_GREPFILTER)
+	@ echo "-> CN (EF10-24)"
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_orphans.rq --data $(CN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT) | grep -vE $(ROOT_CONCEPTS_GREPFILTER)
+	@ echo
+	@ echo "-> CAN (EF29)"
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_orphans.rq --data $(CAN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT) | grep -vE $(ROOT_CONCEPTS_GREPFILTER)
 	@ echo
 	@ echo "==> Test output runts"
-	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_runts.rq --data $(CANONICAL_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ echo "-> CN (EF10-24)"
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_runts.rq --data $(CN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ echo
+	@ echo "-> CAN (EF29)"
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_runts.rq --data $(CAN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
 	@ echo
 	@ echo "==> Test output mixed types"
-	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_mixed_types.rq --data $(CANONICAL_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ echo "-> CN (EF10-24)"
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_mixed_types.rq --data $(CN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ echo
+	@ echo "-> CAN (EF29)"
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_mixed_types.rq --data $(CAN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
 	@ echo
 	@ echo "==> Test output malformed dateTime"
-	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_malformed_dateTime.rq --data $(CANONICAL_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ echo "-> CN (EF10-24)"
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_malformed_dateTime.rq --data $(CN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ echo
+	@ echo "-> CAN (EF29)"
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_malformed_dateTime.rq --data $(CAN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
 	@ echo
 	@ echo "==> Test output untyped date or time"
-	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_untyped_dateOrTime.rq --data $(CANONICAL_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ echo "-> CN (EF10-24)"
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_untyped_dateOrTime.rq --data $(CN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ echo
+	@ echo "-> CAN (EF29)"
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_untyped_dateOrTime.rq --data $(CAN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
 	@ echo
 	@ echo "==> Test output overloaded rels"
-	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_overloaded_rels.rq --data $(CANONICAL_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ echo "-> CN (EF10-24)"
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_overloaded_rels.rq --data $(CN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ echo
+	@ echo "-> CAN (EF29)"
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_overloaded_rels.rq --data $(CAN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
 	@ echo
 	@ echo "==> Test output suspect iri name"
-	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_suspect_iri_name.rq --data $(CANONICAL_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ echo "-> CN (EF10-24)"
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_suspect_iri_name.rq --data $(CN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ echo
+	@ echo "-> CAN (EF29)"
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_suspect_iri_name.rq --data $(CAN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
 	@ echo
 	@ echo "==> Test output dupe identifiers"
-	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_dupe_identifiers.rq --data $(CANONICAL_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ echo "-> CN (EF10-24)"
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_dupe_identifiers.rq --data $(CN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ echo
+	@ echo "-> CAN (EF29)"
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_dupe_identifiers.rq --data $(CAN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
 	@ echo
 	@ echo "==> Test output missing playedBy"
-	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_missing_playedBy.rq --data $(CANONICAL_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ echo "-> CN (EF10-24)"
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_missing_playedBy.rq --data $(CN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
 	@ echo
-	@ echo "Testing mapping rules coverage against output"
-	@ echo "==> Test RML predicate mapping coverage"
-	@ $(TEST_SCRIPTS_DIR)/test_predicate_coverage.sh $(CANONICAL_RML_DIR) $(CANONICAL_TEST_OUTPUT)
+	@ echo "-> CAN (EF29)"
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_missing_playedBy.rq --data $(CAN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
 	@ echo
-	@ echo "==> Test RML subject reference coverage"
-	@ $(TEST_SCRIPTS_DIR)/test_reference_coverage.sh $(CANONICAL_RML_DIR) $(CANONICAL_TEST_OUTPUT)
+# TODO think about how to do this for CN, CAN together and separately both
+	@ echo "Testing mapping rules coverage against CN output"
+	@ echo "==> Test RML predicate mapping coverage CN"
+	@ $(TEST_SCRIPTS_DIR)/test_predicate_coverage.sh $(CN_RML_DIR) $(CN_TEST_OUTPUT)
 	@ echo
-	@ echo "==> Test RML subject template coverage"
-	@ $(TEST_SCRIPTS_DIR)/test_template_coverage.sh $(CANONICAL_RML_DIR) $(CANONICAL_TEST_OUTPUT)
+	@ echo "==> Test RML subject reference coverage CN"
+	@ $(TEST_SCRIPTS_DIR)/test_reference_coverage.sh $(CN_RML_DIR) $(CN_TEST_OUTPUT)
+	@ echo
+	@ echo "==> Test RML subject template coverage CN"
+	@ $(TEST_SCRIPTS_DIR)/test_template_coverage.sh $(CN_RML_DIR) $(CN_TEST_OUTPUT)
 	@ echo
 
 test_output_versioned_v%:
@@ -396,12 +439,12 @@ test_output_versioned_v%:
 # @ echo
 
 test_output_postproc:
-	@ echo "Testing output post-processing scripts"
+	@ echo "Testing CN output post-processing scripts"
 	@ echo "==> Test link role playedBy"
 	@ $(POST_SCRIPTS_DIR)/link_role_playedBy.sh
 	@ echo
 	@ echo "==> Test output missing playedBy"
-	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_missing_playedBy.rq --data $(CANONICAL_TEST_OUTPUT) --data output/source/link_role_playedBy.ttl --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_missing_playedBy.rq --data $(CN_TEST_OUTPUT) --data output/source/link_role_playedBy.ttl --results=$(TEST_QUERY_RESULTS_FORMAT)
 
 clean:
 	@ rm -fv jena.zip

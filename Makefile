@@ -334,40 +334,77 @@ test_versioned_v%: test
 test_output:
 	@ echo "Testing output w/ $(JENA_TOOLS_ARQ) in $(TEST_QUERY_RESULTS_FORMAT) format"
 	@ echo "==> Test output orphans"
+	@ echo "-> CN (EF10-24)"
 	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_orphans.rq --data $(CN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT) | grep -vE $(ROOT_CONCEPTS_GREPFILTER)
 	@ echo
+	@ echo "-> CAN (EF29)"
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_orphans.rq --data $(CAN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT) | grep -vE $(ROOT_CONCEPTS_GREPFILTER)
+	@ echo
 	@ echo "==> Test output runts"
+	@ echo "-> CN (EF10-24)"
 	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_runts.rq --data $(CN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
 	@ echo
+	@ echo "-> CAN (EF29)"
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_runts.rq --data $(CAN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ echo
 	@ echo "==> Test output mixed types"
+	@ echo "-> CN (EF10-24)"
 	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_mixed_types.rq --data $(CN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
 	@ echo
+	@ echo "-> CAN (EF29)"
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_mixed_types.rq --data $(CAN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ echo
 	@ echo "==> Test output malformed dateTime"
+	@ echo "-> CN (EF10-24)"
 	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_malformed_dateTime.rq --data $(CN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
 	@ echo
+	@ echo "-> CAN (EF29)"
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_malformed_dateTime.rq --data $(CAN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ echo
 	@ echo "==> Test output untyped date or time"
+	@ echo "-> CN (EF10-24)"
 	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_untyped_dateOrTime.rq --data $(CN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
 	@ echo
+	@ echo "-> CAN (EF29)"
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_untyped_dateOrTime.rq --data $(CAN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ echo
 	@ echo "==> Test output overloaded rels"
+	@ echo "-> CN (EF10-24)"
 	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_overloaded_rels.rq --data $(CN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
 	@ echo
+	@ echo "-> CAN (EF29)"
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_overloaded_rels.rq --data $(CAN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ echo
 	@ echo "==> Test output suspect iri name"
+	@ echo "-> CN (EF10-24)"
 	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_suspect_iri_name.rq --data $(CN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
 	@ echo
+	@ echo "-> CAN (EF29)"
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_suspect_iri_name.rq --data $(CAN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ echo
 	@ echo "==> Test output dupe identifiers"
+	@ echo "-> CN (EF10-24)"
 	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_dupe_identifiers.rq --data $(CN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
 	@ echo
+	@ echo "-> CAN (EF29)"
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_dupe_identifiers.rq --data $(CAN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ echo
 	@ echo "==> Test output missing playedBy"
+	@ echo "-> CN (EF10-24)"
 	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_missing_playedBy.rq --data $(CN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
 	@ echo
-	@ echo "Testing mapping rules coverage against output"
-	@ echo "==> Test RML predicate mapping coverage"
+	@ echo "-> CAN (EF29)"
+	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_missing_playedBy.rq --data $(CAN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ echo
+# TODO think about how to do this for CN, CAN together and separately both
+	@ echo "Testing mapping rules coverage against CN output"
+	@ echo "==> Test RML predicate mapping coverage CN"
 	@ $(TEST_SCRIPTS_DIR)/test_predicate_coverage.sh $(CN_RML_DIR) $(CN_TEST_OUTPUT)
 	@ echo
-	@ echo "==> Test RML subject reference coverage"
+	@ echo "==> Test RML subject reference coverage CN"
 	@ $(TEST_SCRIPTS_DIR)/test_reference_coverage.sh $(CN_RML_DIR) $(CN_TEST_OUTPUT)
 	@ echo
-	@ echo "==> Test RML subject template coverage"
+	@ echo "==> Test RML subject template coverage CN"
 	@ $(TEST_SCRIPTS_DIR)/test_template_coverage.sh $(CN_RML_DIR) $(CN_TEST_OUTPUT)
 	@ echo
 
@@ -402,7 +439,7 @@ test_output_versioned_v%:
 # @ echo
 
 test_output_postproc:
-	@ echo "Testing output post-processing scripts"
+	@ echo "Testing CN output post-processing scripts"
 	@ echo "==> Test link role playedBy"
 	@ $(POST_SCRIPTS_DIR)/link_role_playedBy.sh
 	@ echo

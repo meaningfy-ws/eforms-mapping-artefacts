@@ -150,7 +150,8 @@ epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_CompanyContactPoint_YG3RWHcWTBZPCNqF
 
 epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ContractDuration_DW9uu9Ka9v6eCrwhU9MmBC
   a epo:SpecificDuration;
-  time:numericDuration 1826.0 .
+  time:numericDuration 1826.0;
+  time:unitType time:unitDay .
 
 epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ContractLocationAddress_6KLSiuR7u4upEUz8ykdzrc
   a locn:Address;

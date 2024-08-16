@@ -361,6 +361,11 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractTerm_RdpZg7b4gA4ZEQmQB5ZNhK 
   epo:hasPlaceOfPerformanceAdditionalInformation "Additional information ---"@en, "The main location is ..."@en;
   epo:hasRenewalDescription "Renewal description ---"@en .
 
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_DirectAwardTerm_DDmVKAr2D9d2R9YAz7bPSt
+  a epo:DirectAwardTerm;
+  epo:hasDirectAwardJustification "Procedure Accelerated Justification ---"@en, "TEST direct-award-justification ---"@en;
+  epo:refersToPreviousProcedure epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Procedure_DDmVKAr2D9d2R9YAz7bPSt .
+
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_DynamicPurchaseSystemTechnicalUsage_JdBkiUatysvbDSqaUnVeDH
   a epo:DynamicPurchaseSystemTechnique;
   epo:hasDPSScope <http://publications.europa.eu/resource/authority/dps-usage/none> .
@@ -402,6 +407,8 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_GreenProcurement_Kc62R6i3CT36VZoaXkk
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_GreenProcurement_aTxk5f26D5UBUZ3UgoLWca
   a epo:GreenProcurement;
   epo:usesCleanVehicleDirective true .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Identifier_DDmVKAr2D9d2R9YAz7bPSt a adms:Identifier .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Identifier_ORG-0001 a adms:Identifier;
   epo:hasScheme "organization";
@@ -865,7 +872,8 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Procedure_6dcsBnuV4FTNoRpTZHckqN a e
   epo:foreseesContractSpecificTerm epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementProjectContractTerm_BAFiQAm5eaBz7sDFPbYXor,
     epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementProjectContractTerm_Hu2nD8nFQkA5CPSQ43KMRD,
     epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementProjectContractTerm_XFzL73ufnqniDUby5oyMFJ;
-  epo:hasAcceleratedProcedureJustification "Procedure Accelerated Justification ---"@en;
+  epo:hasAcceleratedProcedureJustification "Procedure Accelerated Justification ---"@en,
+    "TEST direct-award-justification ---"@en;
   epo:hasAdditionalInformation "Additional information ---"@en;
   epo:hasEstimatedValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValueLot_YFTDpjyGUfQWdZ93njHfhX;
   epo:hasInternalIdentifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcedureIdentifier_Hu2nD8nFQkA5CPSQ43KMRD;
@@ -875,7 +883,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Procedure_6dcsBnuV4FTNoRpTZHckqN a e
   epo:hasProcurementScopeDividedIntoLot epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001,
     epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0002;
   epo:hasPurpose epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcedurePurpose_Hu2nD8nFQkA5CPSQ43KMRD;
-  epo:isAccelerated true;
+  epo:isAccelerated "dir24-list"^^xs:boolean, true;
   epo:isSubjectToProcedureSpecificTerm epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcedureTerm_3m6Q8n9T683acseXWAKALc,
     epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcedureTerm_CLwCuB6jJaDuNTJfrVRmnb,
     epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcedureTerm_E8bP4ennLrqQNiLdoMjEh5,
@@ -883,6 +891,10 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Procedure_6dcsBnuV4FTNoRpTZHckqN a e
   dct:description "Description ---"@en;
   dct:title "Procurement Title ---"@en;
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcedureIdentifier_6dcsBnuV4FTNoRpTZHckqN .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Procedure_DDmVKAr2D9d2R9YAz7bPSt a epo:Procedure;
+  epo:isSubjectToProcedureSpecificTerm epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_DirectAwardTerm_DDmVKAr2D9d2R9YAz7bPSt;
+  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Identifier_DDmVKAr2D9d2R9YAz7bPSt .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementProcedureInformationProvider_jwe5W9zs8YV9By53R4pKKA
   a epo:ProcurementProcedureInformationProvider;
@@ -899,6 +911,11 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementProcessInformation_JryEpN
   a epo:ProcurementProcessInformation;
   epo:concernsLot epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;
   epo:isDPSTerminated true .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementProcessInformation_WcwJtRXtDB2SosVcBYfxSC
+  a epo:ProcurementProcessInformation;
+  epo:concernsProcedure epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Procedure_6dcsBnuV4FTNoRpTZHckqN;
+  epo:isCompetitionTerminated false .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementProcessInformation_Zcb2nasm4y367FTcbUpanP
   a epo:ProcurementProcessInformation;

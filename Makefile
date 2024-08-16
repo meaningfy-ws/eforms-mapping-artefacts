@@ -81,6 +81,7 @@ package_sync_v%: package_prep
 	@ echo "Syncing CN v1.$*"
 	@ rm -rfv mappings/$(DEFAULT_PKG_PREFIX)_v1.$*/$(TX_DIR)/mappings*
 	@ cp -rv src/mappings mappings/$(DEFAULT_PKG_PREFIX)_v1.$*/$(TX_DIR)/
+	@ cp -v src/mappings-common/* mappings/$(DEFAULT_PKG_PREFIX)_v1.$*/$(TX_DIR)/mappings/
 	@ cp -v src/mappings-1.$*/* mappings/$(DEFAULT_PKG_PREFIX)_v1.$*/$(TX_DIR)/mappings/
 	@ rm -rfv mappings/$(DEFAULT_PKG_PREFIX)_v1.$*/$(TX_DIR)/resources
 	@ cp -rv src/$(TX_DIR)/resources mappings/$(DEFAULT_PKG_PREFIX)_v1.$*/$(TX_DIR)/
@@ -102,6 +103,7 @@ package_release_v%: package_prep
 		echo "Syncing CN v1.$* to $(RELEASE_DIR)"; \
 		rm -rv $(PKG_DIR)/$(TX_DIR)/mappings ; \
 		cp -rv src/mappings $(PKG_DIR)/$(TX_DIR)/ ; \
+		cp -v src/mappings-common/* $(PKG_DIR)/$(TX_DIR)/mappings/ ; \
 		cp -v src/mappings-1.$*/* $(PKG_DIR)/$(TX_DIR)/mappings/ ; \
 		rm -rv $(PKG_DIR)/$(TX_DIR)/resources ; \
 		cp -rv src/$(TX_DIR)/resources $(PKG_DIR)/$(TX_DIR)/ ; \

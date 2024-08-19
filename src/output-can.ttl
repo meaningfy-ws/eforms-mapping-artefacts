@@ -69,6 +69,40 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_AwardCriterion_cMwBnyyxkduMCBR7uRm8C
   dct:description "AC Description ---"@en;
   skos:prefLabel "name of AC ---"@en .
 
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_BeneficialOwnerTechnicalIdentifier_59Sg7tGS5qRkCGHeLrco2F
+  a adms:Identifier;
+  epo:hasScheme "ubo";
+  skos:notation "UBO-0003" .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_BeneficialOwnerTechnicalIdentifier_BXhK5QPUdH6Cdcb2Cj8MV2
+  a adms:Identifier;
+  epo:hasScheme "ubo";
+  skos:notation "UBO-0001" .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_BeneficialOwnerTechnicalIdentifier_nwhh7wiDwTuPwa9R3esgw5
+  a adms:Identifier;
+  epo:hasScheme "ubo";
+  skos:notation "UBO-0004" .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Business_7z4ofTV9dqFyh5CgX4849Y a epo:Business;
+  epo:hasBeneficialOwner epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Person_UBO-0004;
+  epo:hasBusinessSize <http://publications.europa.eu/resource/authority/economic-operator-size/large>;
+  epo:isListedCompany false .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Business_WjXKSDieDSHPgsFuxxEzPy a epo:Business;
+  epo:hasBeneficialOwner epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Person_UBO-0003;
+  epo:hasBusinessSize <http://publications.europa.eu/resource/authority/economic-operator-size/medium>;
+  epo:isListedCompany false .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Business_Y2PCmxuavJ95yHLQmwtJNe a epo:Business;
+  epo:hasBeneficialOwner epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Person_UBO-0001;
+  epo:hasBusinessSize <http://publications.europa.eu/resource/authority/economic-operator-size/large>;
+  epo:isListedCompany false .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Business_e4Lg9euTwEsAQAQAryfrEs a epo:Business;
+  epo:hasBusinessSize <http://publications.europa.eu/resource/authority/economic-operator-size/micro>;
+  epo:isListedCompany false .
+
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Buyer_7UMPwyXRgVDYJBYSxTfTBn a epo:Buyer;
   epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0001 .
 
@@ -824,6 +858,21 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_TPO-0001 a org:Organiza
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_TPO-0002 a org:Organization;
   owl:sameAs epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0001 .
 
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Person_UBO-0001 a person:Person;
+  epo:hasNationality <http://publications.europa.eu/resource/authority/country/BEL>;
+  cccev:registeredAddress epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_UBOAddress_Kgw52KheiSHAoueYo7YFXX;
+  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_BeneficialOwnerTechnicalIdentifier_BXhK5QPUdH6Cdcb2Cj8MV2;
+  foaf:familyName "Dupont";
+  foaf:givenName "Jean" .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Person_UBO-0003 a person:Person;
+  epo:hasNationality <http://publications.europa.eu/resource/authority/country/ESP>;
+  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_BeneficialOwnerTechnicalIdentifier_59Sg7tGS5qRkCGHeLrco2F .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Person_UBO-0004 a person:Person;
+  epo:hasNationality <http://publications.europa.eu/resource/authority/country/FRA>;
+  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_BeneficialOwnerTechnicalIdentifier_nwhh7wiDwTuPwa9R3esgw5 .
+
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcedureIdentifier_6dcsBnuV4FTNoRpTZHckqN
   a adms:Identifier;
   skos:notation "2d2d24a2-df84-449e-8695-fb66ef504a5a" .
@@ -1200,6 +1249,13 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TouchPoint_TPO-0002 a cccev:ContactP
   cccev:telephone "+44 123456776";
   dct:description "Fin Adm Archives"@en;
   locn:address epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TouchPointAddress_bWVshHaFdEUL6h5JY9cjZj .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_UBOAddress_Kgw52KheiSHAoueYo7YFXX a locn:Address;
+  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/BEL>;
+  epo:hasNutsCode <http://data.europa.eu/nuts/code/BE100>;
+  locn:fullAddress "7 rue de la loi, Bruxelles, 10123, BEL";
+  locn:postCode "10123";
+  locn:postName "Bruxelles" .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_VehicleInformation_aTxk5f26D5UBUZ3UgoLWca
   a epo:VehicleInformation;

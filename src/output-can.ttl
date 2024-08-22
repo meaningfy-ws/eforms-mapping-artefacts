@@ -22,12 +22,12 @@
 @prefix xs: <http://www.w3.org/2001/XMLSchema#> .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_AccessTerm_3m6Q8n9T683acseXWAKALc a epo:AccessTerm;
-  epo:definesOfflineAccessProvider epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_OfflineAccessProvider_3m6Q8n9T683acseXWAKALc;
-  epo:definesProcurementProcedureInformationProvider epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementProcedureInformationProvider_3m6Q8n9T683acseXWAKALc .
+  epo:definesOfflineAccessProvider epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_OfflineAccessProvider_oBahBtUnPsC7aJgntGEdus;
+  epo:definesProcurementProcedureInformationProvider epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementProcedureInformationProvider_jwe5W9zs8YV9By53R4pKKA .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_AccessTerm_CLwCuB6jJaDuNTJfrVRmnb a epo:AccessTerm;
-  epo:definesOfflineAccessProvider epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_OfflineAccessProvider_CLwCuB6jJaDuNTJfrVRmnb;
-  epo:definesProcurementProcedureInformationProvider epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementProcedureInformationProvider_CLwCuB6jJaDuNTJfrVRmnb .
+  epo:definesOfflineAccessProvider epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_OfflineAccessProvider_oBahBtUnPsC7aJgntGEdus;
+  epo:definesProcurementProcedureInformationProvider epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementProcedureInformationProvider_jwe5W9zs8YV9By53R4pKKA .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_AuctionTerms_SuKL9DCCHFkcSse6JvaAZv a
     epo:EAuctionTechnique;
@@ -363,24 +363,14 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_DynamicPurchaseSystemTechnicalUsage_
   a epo:DynamicPurchaseSystemTechnique;
   epo:hasDPSScope <http://publications.europa.eu/resource/authority/dps-usage/dps-list> .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_EmploymentInformationProvider_M7bvppB2dPHtGWusKzyQ9a
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_EmploymentInformationProvider_Lg96o4u3Pe2t4SkoPaxEB3
   a epo:EmploymentInformationProvider;
   epo:contextualisedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001, epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0002;
   epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0004 .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_EmploymentInformationProvider_YLKY3HPGk6qATFydmMgRex
-  a epo:EmploymentInformationProvider;
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_EnvironmentalProtectionInformationProvider_Ap5f9znq6VYbCx76JYpsGs
+  a epo:EnvironmentalProtectionInformationProvider;
   epo:contextualisedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001, epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0002;
-  epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0004 .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_EnvironmentalProtectionInformationProvider_3m6Q8n9T683acseXWAKALc
-  a epo:EnvironmentalProtectionInformationProvider;
-  epo:contextualisedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0002;
-  epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0003 .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_EnvironmentalProtectionInformationProvider_CLwCuB6jJaDuNTJfrVRmnb
-  a epo:EnvironmentalProtectionInformationProvider;
-  epo:contextualisedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;
   epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0003 .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_FrameworkAgreementTerm_JdBkiUatysvbDSqaUnVeDH
@@ -595,12 +585,8 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotsGroupValueMaximum_kkL4MrwXHbC7yC
   epo:hasAmountValue 10000.0;
   epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Mediator_CeXEq53W64yH9eABRxF5Ay a epo:Mediator;
-  epo:contextualisedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0002;
-  epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0006 .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Mediator_hnDhtixV2ZdgbuFJoTT2jt a epo:Mediator;
-  epo:contextualisedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Mediator_Db3VnFcw2TfRM6Qmj79Ari a epo:Mediator;
+  epo:contextualisedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001, epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0002;
   epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0006 .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValueLot_27KA6ACAHWGqx86uaQS9dG
@@ -673,15 +659,9 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_NoticeIdentifier_aHt4iskyRUJYALjw7mS
   epo:hasScheme "notice-id";
   skos:notation "15377ca1-6cf7-4060-90f0-9290128957a3" .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_OfflineAccessProvider_3m6Q8n9T683acseXWAKALc
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_OfflineAccessProvider_oBahBtUnPsC7aJgntGEdus
   a epo:OfflineAccessProvider;
-  epo:contextualisedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0002;
-  epo:hasContactPointInRole epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TouchPoint_TPO-0002;
-  epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_TPO-0002 .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_OfflineAccessProvider_CLwCuB6jJaDuNTJfrVRmnb
-  a epo:OfflineAccessProvider;
-  epo:contextualisedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;
+  epo:contextualisedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001, epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0002;
   epo:hasContactPointInRole epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TouchPoint_TPO-0002;
   epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_TPO-0002 .
 
@@ -846,17 +826,17 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcedurePurpose_Hu2nD8nFQkA5CPSQ43K
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcedureTerm_3m6Q8n9T683acseXWAKALc a
     epo:ProcedureTerm;
-  epo:definesInformationProvider epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_EmploymentInformationProvider_M7bvppB2dPHtGWusKzyQ9a,
-    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_EnvironmentalProtectionInformationProvider_3m6Q8n9T683acseXWAKALc,
-    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TaxInformationProvider_BKect2gLLZE4gUKMjuvnxh;
-  epo:definesMediator epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Mediator_CeXEq53W64yH9eABRxF5Ay .
+  epo:definesInformationProvider epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_EmploymentInformationProvider_Lg96o4u3Pe2t4SkoPaxEB3,
+    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_EnvironmentalProtectionInformationProvider_Ap5f9znq6VYbCx76JYpsGs,
+    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TaxInformationProvider_HaEv2nhsYWgNmx2FoRrNgG;
+  epo:definesMediator epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Mediator_Db3VnFcw2TfRM6Qmj79Ari .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcedureTerm_CLwCuB6jJaDuNTJfrVRmnb a
     epo:ProcedureTerm;
-  epo:definesInformationProvider epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_EmploymentInformationProvider_YLKY3HPGk6qATFydmMgRex,
-    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_EnvironmentalProtectionInformationProvider_CLwCuB6jJaDuNTJfrVRmnb,
-    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TaxInformationProvider_PnhuBYxDrpkJiRLyH28Yev;
-  epo:definesMediator epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Mediator_hnDhtixV2ZdgbuFJoTT2jt .
+  epo:definesInformationProvider epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_EmploymentInformationProvider_Lg96o4u3Pe2t4SkoPaxEB3,
+    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_EnvironmentalProtectionInformationProvider_Ap5f9znq6VYbCx76JYpsGs,
+    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TaxInformationProvider_HaEv2nhsYWgNmx2FoRrNgG;
+  epo:definesMediator epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Mediator_Db3VnFcw2TfRM6Qmj79Ari .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcedureTerm_E8bP4ennLrqQNiLdoMjEh5 a
     epo:ProcedureTerm;
@@ -889,15 +869,9 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Procedure_6dcsBnuV4FTNoRpTZHckqN a e
   dct:title "Procurement Title ---"@en;
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcedureIdentifier_6dcsBnuV4FTNoRpTZHckqN .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementProcedureInformationProvider_3m6Q8n9T683acseXWAKALc
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementProcedureInformationProvider_jwe5W9zs8YV9By53R4pKKA
   a epo:ProcurementProcedureInformationProvider;
-  epo:contextualisedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0002;
-  epo:hasContactPointInRole epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TouchPoint_TPO-0001;
-  epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_TPO-0001 .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementProcedureInformationProvider_CLwCuB6jJaDuNTJfrVRmnb
-  a epo:ProcurementProcedureInformationProvider;
-  epo:contextualisedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;
+  epo:contextualisedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001, epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0002;
   epo:hasContactPointInRole epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TouchPoint_TPO-0001;
   epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_TPO-0001 .
 
@@ -950,21 +924,15 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Quantity_myo3vCsSuhWxPVpWujDK9s a ep
   epo:hasQuantityValue 1000.0;
   epo:hasUnitCode <http://publications.europa.eu/resource/authority/measurement-unit/HUR> .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ReviewProcedureInformationProvider_CeXEq53W64yH9eABRxF5Ay
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ReviewProcedureInformationProvider_NLBDyF4vvGuCAMJpQJe8nw
   a epo:ReviewProcedureInformationProvider;
-  epo:contextualisedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0002;
-  epo:hasContactPointInRole epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TouchPoint_TPO-0001;
-  epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_TPO-0001 .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ReviewProcedureInformationProvider_hnDhtixV2ZdgbuFJoTT2jt
-  a epo:ReviewProcedureInformationProvider;
-  epo:contextualisedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;
+  epo:contextualisedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001, epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0002;
   epo:hasContactPointInRole epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TouchPoint_TPO-0001;
   epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_TPO-0001 .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ReviewTerm_CeXEq53W64yH9eABRxF5Ay a epo:ReviewTerm;
-  epo:definesReviewProcedureInformationProvider epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ReviewProcedureInformationProvider_CeXEq53W64yH9eABRxF5Ay;
-  epo:definesReviewer epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Reviewer_CeXEq53W64yH9eABRxF5Ay .
+  epo:definesReviewProcedureInformationProvider epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ReviewProcedureInformationProvider_NLBDyF4vvGuCAMJpQJe8nw;
+  epo:definesReviewer epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Reviewer_6Bv5pbGfbWmvGfJNVgYFXA .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ReviewTerm_Sm5xD6mjUCEB7FWYWoqUs6 a epo:ReviewTerm;
   epo:hasReviewDeadlineInformation "Review Deadline Description ---"@en .
@@ -973,15 +941,11 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ReviewTerm_exdVXnwZ2EHQ8adaTpSDrN a 
   epo:hasReviewDeadlineInformation "Review Deadline Description ---"@en .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ReviewTerm_hnDhtixV2ZdgbuFJoTT2jt a epo:ReviewTerm;
-  epo:definesReviewProcedureInformationProvider epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ReviewProcedureInformationProvider_hnDhtixV2ZdgbuFJoTT2jt;
-  epo:definesReviewer epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Reviewer_hnDhtixV2ZdgbuFJoTT2jt .
+  epo:definesReviewProcedureInformationProvider epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ReviewProcedureInformationProvider_NLBDyF4vvGuCAMJpQJe8nw;
+  epo:definesReviewer epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Reviewer_6Bv5pbGfbWmvGfJNVgYFXA .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Reviewer_CeXEq53W64yH9eABRxF5Ay a epo:Reviewer;
-  epo:contextualisedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0002;
-  epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0005 .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Reviewer_hnDhtixV2ZdgbuFJoTT2jt a epo:Reviewer;
-  epo:contextualisedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Reviewer_6Bv5pbGfbWmvGfJNVgYFXA a epo:Reviewer;
+  epo:contextualisedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001, epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0002;
   epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0005 .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContractIdentifier_VPU8QnEnvpxVBA2qwYNzjZ
@@ -1058,14 +1022,9 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubmissionTerm_KorWZrEXpQCBgrGqtjBT6
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubmissionTerm_RdpZg7b4gA4ZEQmQB5ZNhK
   a epo:SubmissionTerm .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TaxInformationProvider_BKect2gLLZE4gUKMjuvnxh
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TaxInformationProvider_HaEv2nhsYWgNmx2FoRrNgG
   a epo:TaxInformationProvider;
-  epo:contextualisedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0002;
-  epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0002 .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TaxInformationProvider_PnhuBYxDrpkJiRLyH28Yev
-  a epo:TaxInformationProvider;
-  epo:contextualisedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;
+  epo:contextualisedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001, epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0002;
   epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0002 .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderAwardOutcome_8tLJD9wyvjSHWYvDWGiX5D

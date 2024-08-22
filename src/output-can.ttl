@@ -69,8 +69,14 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_AwardCriterion_cMwBnyyxkduMCBR7uRm8C
   dct:description "AC Description ---"@en;
   skos:prefLabel "name of AC ---"@en .
 
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Buyer_7UMPwyXRgVDYJBYSxTfTBn a epo:Buyer;
+  epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0001 .
+
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Buyer_JGa56JxZ6vPv3NZm242nMu a epo:Buyer;
   epo:hasBuyerProfile "https://profile.example.com"^^xs:anyURI;
+  epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0001 .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Buyer_XBZfpJGKezpX9vV2w2Gtmt a epo:Buyer;
   epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0001 .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyAddress_5oamSpC3ikwoRMLn49RxG2
@@ -450,12 +456,15 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_InnovativeProcurement_WkofDRMGPe4b3Y
   epo:fulfillsRequirement <http://publications.europa.eu/resource/authority/innovative-acquisition/proc-innov> .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotAwardOutcome_RES-0001 a epo:LotAwardOutcome;
+  epo:comprisesTenderAwardOutcome epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderAwardOutcome_EBPJ2fbv7o99YfmArtWauY,
+    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderAwardOutcome_JLUDXPkxvCA955SAqWv3Ju;
   epo:concernsLot epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;
   epo:hasApproximateFrameworkAgreementValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_buhfT7xy3UtLfxfwv8HbfT;
   epo:hasAwardStatus <http://publications.europa.eu/resource/authority/winner-selection-status/selec-w>;
   epo:hasFrameworkAgreementMaximumValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_buhfT7xy3UtLfxfwv8HbfT .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotAwardOutcome_RES-0002 a epo:LotAwardOutcome;
+  epo:comprisesTenderAwardOutcome epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderAwardOutcome_jWu7544ZnnuCc6He5Egjkx;
   epo:concernsLot epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0002;
   epo:hasAwardStatus <http://publications.europa.eu/resource/authority/winner-selection-status/clos-nw>;
   epo:hasNonAwardJustification <http://publications.europa.eu/resource/authority/non-award-justification/all-rej> .
@@ -475,9 +484,6 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotGroupAwardCriterion_Y6iaTUeQDukaq
   cccev:weight 40.0;
   dct:description "AC Description ---"@en;
   skos:prefLabel "name of AC ---"@en .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotGroupAwardInformation_JryEpNBTCzNfzKbsxaXwjt
-  a epo:LotGroupAwardInformation .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotGroup_GLO-0001 a epo:LotGroup;
   epo:hasEstimatedValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_PurposeLotGroupEstimatedValue_meF4dTeUhaCEbdrjCjZEdP;
@@ -608,7 +614,17 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValueLot_dtgHN4uepvFKD99RLsB
   epo:hasAmountValue 9999999.99;
   epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> .
 
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValueLowestReceivedTenderValue_A5K3ndcSySWYxA4wrRkqDG
+  a epo:MonetaryValue;
+  epo:hasAmountValue 999999.99;
+  epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> .
+
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_8tLJD9wyvjSHWYvDWGiX5D a
+    epo:MonetaryValue;
+  epo:hasAmountValue 9999999.99;
+  epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_A5K3ndcSySWYxA4wrRkqDG a
     epo:MonetaryValue;
   epo:hasAmountValue 9999999.99;
   epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> .
@@ -636,7 +652,6 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_nNq2rC7wBesmhA5baJ8mCt
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Notice a epo:Notice, epo:Notice29, epo:ResultNotice;
   epo::announcesRole epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0001,
     epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0002;
-  epo:announcesLotGroupAwardInformation epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotGroupAwardInformation_JryEpNBTCzNfzKbsxaXwjt;
   epo:announcesNoticeAwardInformation epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_NoticeAwardInformation_JryEpNBTCzNfzKbsxaXwjt;
   epo:hasESenderDispatchDate "2023-04-23T20:59:32+01:00"^^xs:dateTime;
   epo:hasFormType <http://publications.europa.eu/resource/authority/form-type/result>;
@@ -960,7 +975,9 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContract_CON-0001 a epo:Contr
   epo:FrameworkAgreement "true";
   epo:hasAccessURL "https://wheretofindcontract.com/ctr123"^^xs:anyURI;
   epo:hasContractConclusionDate "2023-03-24+02:00"^^xs:date;
+  epo:includesTender epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0001;
   epo:isFundedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractFund_VPU8QnEnvpxVBA2qwYNzjZ;
+  epo:signedByBuyer epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Buyer_XBZfpJGKezpX9vV2w2Gtmt;
   dct:title "This is the title of the contract ---"@en;
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContractIdentifier_VPU8QnEnvpxVBA2qwYNzjZ .
 
@@ -968,7 +985,9 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContract_CON-0002 a epo:Contr
   epo:FrameworkAgreement "true";
   epo:hasAccessURL "https://wheretofindcontract.com/ctr222"^^xs:anyURI;
   epo:hasContractConclusionDate "2023-03-24+02:00"^^xs:date;
+  epo:includesTender epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0002;
   epo:isFundedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractFund_oXwXYzaLxMkFreJUNf6BBv;
+  epo:signedByBuyer epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Buyer_7UMPwyXRgVDYJBYSxTfTBn;
   dct:title "Title of second contract ---"@en;
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContractIdentifier_oXwXYzaLxMkFreJUNf6BBv .
 
@@ -1016,6 +1035,18 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubcontractingEstimate_nNq2rC7wBesmh
   epo:hasSubcontractingEstimatedValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_nNq2rC7wBesmhA5baJ8mCt;
   dct:description "Subcontracting Description ---"@en .
 
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubmissionStatisticalInformation_A5K3ndcSySWYxA4wrRkqDG
+  a epo:SubmissionStatisticalInformation;
+  epo:hasHighestReceivedTenderValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_A5K3ndcSySWYxA4wrRkqDG;
+  epo:hasLowestReceivedTenderValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValueLowestReceivedTenderValue_A5K3ndcSySWYxA4wrRkqDG;
+  epo:hasReceivedTenders 0, 1;
+  epo:summarisesInformationForAwardOutcome epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotAwardOutcome_RES-0002 .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubmissionStatisticalInformation_FmfbzZdeEatT3nzZdqXd3D
+  a epo:SubmissionStatisticalInformation;
+  epo:hasReceivedTenders 1, 3, 9;
+  epo:summarisesInformationForAwardOutcome epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotAwardOutcome_RES-0001 .
+
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubmissionTerm_KorWZrEXpQCBgrGqtjBT6W
   a epo:SubmissionTerm .
 
@@ -1031,6 +1062,18 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderAwardOutcome_8tLJD9wyvjSHWYvDW
   a epo:TenderAwardOutcome;
   epo:concernsTender epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0001;
   epo:hasAwardRank "3" .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderAwardOutcome_EBPJ2fbv7o99YfmArtWauY
+  a epo:TenderAwardOutcome;
+  epo:concernsTender epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0002 .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderAwardOutcome_JLUDXPkxvCA955SAqWv3Ju
+  a epo:TenderAwardOutcome;
+  epo:concernsTender epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0001 .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderAwardOutcome_jWu7544ZnnuCc6He5Egjkx
+  a epo:TenderAwardOutcome;
+  epo:concernsTender epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0003 .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderAwardOutcome_nNq2rC7wBesmhA5baJ8mCt
   a epo:TenderAwardOutcome;

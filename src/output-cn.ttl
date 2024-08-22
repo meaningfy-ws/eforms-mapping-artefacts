@@ -381,8 +381,7 @@ epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Lot_LOT-0001 a epo:Lot;
     epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_AwardEvaluationTerm_mvugP5Whk4zjSAanDcqJza,
     epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_FrameworkAgreementTerm_bq3rWUnhLReULR3Pe8QxDZ,
     epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_MultipleStageProcedureTerm_246rmGzZvwFBcxRNZTXjTW,
-    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ReviewTerm_D9HNqZBE8z3NZfKG6rn3Cq, epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_SubmissionTerm_246rmGzZvwFBcxRNZTXjTW,
-    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_SubmissionTerm_YWMCGu6i5HBxweh3xaUekn;
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ReviewTerm_D9HNqZBE8z3NZfKG6rn3Cq, epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_SubmissionTerm_246rmGzZvwFBcxRNZTXjTW;
   epo:isUsingEUFunds false;
   epo:specifiesProcurementCriterion epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_AwardCriterion_CTwFnetyuuSnLXUpTG6Pi8,
     epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_AwardCriterion_KnfpsdA2r7UUmsXaoyvxgY,
@@ -847,22 +846,19 @@ epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_SpecificDuration_F7UWe8nDJG7d3PMXR3m
 
 epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_SubmissionTerm_246rmGzZvwFBcxRNZTXjTW
   a epo:SubmissionTerm;
+  epo:definesTenderReceiver epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_TenderReceiver_HGvue6GtAm3yppLpDLnBKD;
   epo:hasECataloguePermission <http://publications.europa.eu/resource/authority/permission/not-allowed>;
   epo:hasESubmissionPermission <http://publications.europa.eu/resource/authority/permission/required>;
-  epo:hasLanguage <http://publications.europa.eu/resource/authority/language/NLD>;
-  epo:hasReceiptParticipationRequestDeadline "2024-04-15T14:00:00+02:00"^^xsd:dateTime;
-  epo:hasTenderValidityDuration epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_SpecificDuration_F7UWe8nDJG7d3PMXR3mkVa;
-  epo:hasVariantPermission <http://publications.europa.eu/resource/authority/permission/not-allowed>;
-  epo:isMultipleTenderSubmissionAllowed false .
-
-epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_SubmissionTerm_YWMCGu6i5HBxweh3xaUekn
-  a epo:SubmissionTerm;
-  epo:definesTenderReceiver epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_TenderReceiver_HGvue6GtAm3yppLpDLnBKD;
   epo:hasGuaranteeDescription """Borgtocht (3 % van het geraamde bedrag van de
 					opdracht (excl. btw), afgerond naar het hogere tiental)"""@nl;
+  epo:hasLanguage <http://publications.europa.eu/resource/authority/language/NLD>;
+  epo:hasReceiptParticipationRequestDeadline "2024-04-15T14:00:00+02:00"^^xsd:dateTime;
   epo:hasSubmissionURL "https://www.publicprocurement.be"^^xsd:anyURI;
+  epo:hasTenderValidityDuration epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_SpecificDuration_F7UWe8nDJG7d3PMXR3mkVa;
+  epo:hasVariantPermission <http://publications.europa.eu/resource/authority/permission/not-allowed>;
   epo:isAdvancedElectronicSignatureRequired false;
-  epo:isGuaranteeRequired true .
+  epo:isGuaranteeRequired true;
+  epo:isMultipleTenderSubmissionAllowed false .
 
 epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_TenderReceiver_HGvue6GtAm3yppLpDLnBKD
   a epo:TenderReceiver;

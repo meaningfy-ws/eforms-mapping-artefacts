@@ -12,8 +12,10 @@ SAMPLES_RANDOM_NAME = sampling_random
 ROOT_CONCEPTS_GREPFILTER = "_Organization_|_TouchPoint_|_Notice|_ProcurementProcessInformation_|_Lot_|_VehicleInformation_|_ChangeInformation_"
 TEST_QUERY_RESULTS_FORMAT = CSV
 XLSX_STRDATA = xl/sharedStrings.xml
-DEFAULT_CM_ID_PREFIX = package_eforms_10-24
-DEFAULT_CM_DESC_PREFIX = Package EF10-EF24
+CM_ID_PREFIX_CN = package_eforms_10-24
+CM_TITLE_PREFIX_CN = Package EF10-EF24
+CM_ID_PREFIX_CAN = package_eforms_29
+CM_TITLE_PREFIX_CAN = Package EF29
 TRIM_DOWN_SHACL = 1
 EXCLUDE_INEFFICIENT_VALIDATIONS = 1
 INCLUDE_RANDOM_SAMPLES = 1
@@ -63,16 +65,25 @@ VERSIONS := $(shell seq 3 10)
 VERSIONS_SAMPLES := $(3 6 7 8 9)
 
 package_sync: $(addprefix package_sync_v, $(VERSIONS))
-package_release: $(addprefix package_release_v, $(VERSIONS))
+package_release_cn: $(addprefix package_release_cn_v, $(VERSIONS))
 reformat_package_cn: $(addprefix reformat_package_cn_v, $(VERSIONS))
+reformat_package_can: $(addprefix reformat_package_can_v, $(VERSIONS))
 package_cn_minimal: $(addprefix package_cn_minimal_v, $(VERSIONS))
+package_can_minimal: $(addprefix package_can_minimal_v, $(VERSIONS))
 export_cn_minimal: $(addprefix export_cn_minimal_v, $(VERSIONS))
+export_can_minimal: $(addprefix export_can_minimal_v, $(VERSIONS))
 package_cn_examples: $(addprefix package_cn_examples_v, $(VERSIONS))
+package_can_examples: $(addprefix package_can_examples_v, $(VERSIONS))
 export_cn_examples: $(addprefix export_cn_examples_v, $(VERSIONS))
+export_can_examples: $(addprefix export_can_examples_v, $(VERSIONS))
 package_cn_samples: $(addprefix package_cn_samples_v, $(VERSIONS))
+package_can_samples: $(addprefix package_can_samples_v, $(VERSIONS))
 export_cn_samples: $(addprefix export_cn_samples_v, $(VERSIONS))
+export_can_samples: $(addprefix export_can_samples_v, $(VERSIONS))
 package_cn_maximal: $(addprefix package_cn_maximal_v, $(VERSIONS))
+package_can_maximal: $(addprefix package_can_maximal_v, $(VERSIONS))
 export_cn_maximal: $(addprefix export_cn_maximal_v, $(VERSIONS))
+export_can_maximal: $(addprefix export_can_maximal_v, $(VERSIONS))
 test_versioned: $(addprefix test_versioned_v, $(VERSIONS))
 test_output_versioned: $(addprefix test_output_versioned_v, $(VERSIONS))
 
@@ -118,7 +129,7 @@ ifeq ($(TRIM_DOWN_SHACL), 1)
 	@ sed -i '/.*at-voc:green-public-procurement-criteria ;/d' mappings/$(PKG_PREFIX_CAN)_v1.$*/$(SHACL_PATH_EPO)	
 endif
 
-package_release_v%: package_prep
+package_release_cn_v%: package_prep
 	@ $(eval PKG_DIR := $(RELEASE_DIR)/mappings/$(PKG_PREFIX_CN)_v1.$*)
 	@ $(eval PKG_EXISTS := $(shell test -d $(PKG_DIR) && echo yes || echo no))
 	@ if [ "$(PKG_EXISTS)" = "yes" ]; then \
@@ -142,6 +153,8 @@ package_release_v%: package_prep
 # 	@ sed -i '/.*at-voc:green-public-procurement-criteria ;/d' $(PKG_DIR)/$(SHACL_PATH_EPO)
 # endif
 
+include packaging-can.mk
+
 # FIXME: don't think anyone would use it like this wholesale (but rather more selectively)
 reformat_package_cn_v%:
 	@ echo "Reformatting RML files for packaging $(PKG_PREFIX_CN)_v1.$*, with $(OWLCLI_BIN)"
@@ -159,8 +172,8 @@ ifeq ($(REPLACE_CM_METADATA_ID), 1)
 	@ echo "Modifying Identifier in the CM and replacing XLSX"
 	@ mkdir -p $(PKG_TMP) && unzip $(PKG_DIR)/$(CM_FILE) -d $(PKG_TMP)
 	@ rm -v $(PKG_DIR)/$(CM_FILE)
-	@ sed -i "s|<t>$(DEFAULT_CM_ID_PREFIX)_v1.$*</t>|<t>$(DEFAULT_CM_ID_PREFIX)_v1.$*_minimal</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
-	@ sed -i "s|<t>$(DEFAULT_CM_DESC_PREFIX), SDK v1.$*</t>|<t>$(DEFAULT_CM_DESC_PREFIX), SDK v1.$* (minimal data)</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
+	@ sed -i "s|<t>$(CM_ID_PREFIX_CN)_v1.$*</t>|<t>$(CM_ID_PREFIX_CN)_v1.$*_minimal</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
+	@ sed -i "s|<t>$(CM_TITLE_PREFIX_CN), SDK v1.$*</t>|<t>$(CM_TITLE_PREFIX_CN), SDK v1.$* (minimal data)</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
 	@ cd $(PKG_TMP) && zip -r tmp.xlsx * && mv -v tmp.xlsx ../../$(PKG_DIR)/$(CM_FILE) && cd ../.. && rm -r $(PKG_TMP)
 endif
 	@ echo "Removing outdated metadata"
@@ -184,10 +197,10 @@ package_cn_examples_v%:
 	@ rm -rfv $(PKG_DIR)
 	@ cp -rv mappings/$(PKG_PREFIX_CN)_v1.$* $(PKG_DIR)
 	@ echo "Including CN SDK v1.$* example data"
-	@ cp -rv $(SDK_DATA_DIR)/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)/
+	@ cp -rv $(SDK_DATA_DIR_CN)/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)/
 ifeq ($(INCLUDE_INVALID_EXAMPLES), 1)
 	@ echo "Including CN SDK v1.$* example data, INVALIDs"
-	@ cp -rv $(SDK_DATA_DIR)_invalid/eforms-sdk-1.$* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)_invalid
+	@ cp -rv $(SDK_DATA_DIR_CN)_invalid/eforms-sdk-1.$* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)_invalid
 endif
 # TODO: not working, use Bash notation or bring out into separate target
 # ifeq ($($*), 9)
@@ -203,8 +216,8 @@ ifeq ($(REPLACE_METADATA_ID_EXAMPLES), 1)
 	@ echo "Modifying Identifier in the CM and replacing XLSX"
 	@ mkdir -p $(PKG_TMP) && unzip $(PKG_DIR)/$(CM_FILE) -d $(PKG_TMP)
 	@ rm -v $(PKG_DIR)/$(CM_FILE)
-	@ sed -i "s|<t>$(DEFAULT_CM_ID_PREFIX)_v1.$*</t>|<t>$(DEFAULT_CM_ID_PREFIX)_v1.$*_examples</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
-	@ sed -i "s|<t>$(DEFAULT_CM_DESC_PREFIX), SDK v1.$*</t>|<t>$(DEFAULT_CM_DESC_PREFIX), SDK v1.$* (SDK example data)</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
+	@ sed -i "s|<t>$(CM_ID_PREFIX_CN)_v1.$*</t>|<t>$(CM_ID_PREFIX_CN)_v1.$*_examples</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
+	@ sed -i "s|<t>$(CM_TITLE_PREFIX_CN), SDK v1.$*</t>|<t>$(CM_TITLE_PREFIX_CN), SDK v1.$* (SDK example data)</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
 	@ cd $(PKG_TMP) && zip -r tmp.xlsx * && mv -v tmp.xlsx ../../$(PKG_DIR)/$(CM_FILE) && cd ../.. && rm -r $(PKG_TMP)
 endif
 	@ echo "Removing outdated metadata"
@@ -242,13 +255,13 @@ ifeq ($(EXCLUDE_PROBLEM_SAMPLES), 1)
 	@ find $(PKG_DIR)/$(SAMPLES_DIR_CN) -name 725041-2023.xml -exec rm -fv {} \;
 endif
 	@ echo "Removing any SDK examples"
-	@ rm -rfv $(PKG_DIR)/$(SDK_DATA_DIR)*
+	@ rm -rfv $(PKG_DIR)/$(SDK_DATA_DIR_CN)*
 ifeq ($(REPLACE_METADATA_ID), 1)
 	@ echo "Modifying Identifier in the CM and replacing XLSX"
 	@ mkdir -p $(PKG_TMP) && unzip $(PKG_DIR)/$(CM_FILE) -d $(PKG_TMP)
 	@ rm -v $(PKG_DIR)/$(CM_FILE)
-	@ sed -i "s|<t>$(DEFAULT_CM_ID_PREFIX)_v1.$*</t>|<t>$(DEFAULT_CM_ID_PREFIX)_v1.$*_samples</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
-	@ sed -i "s|<t>$(DEFAULT_CM_DESC_PREFIX), SDK v1.$*</t>|<t>$(DEFAULT_CM_DESC_PREFIX), SDK v1.$* (sample data)</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
+	@ sed -i "s|<t>$(CM_ID_PREFIX_CN)_v1.$*</t>|<t>$(CM_ID_PREFIX_CN)_v1.$*_samples</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
+	@ sed -i "s|<t>$(CM_TITLE_PREFIX_CN), SDK v1.$*</t>|<t>$(CM_TITLE_PREFIX_CN), SDK v1.$* (sample data)</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
 	@ cd $(PKG_TMP) && zip -r tmp.xlsx * && mv -v tmp.xlsx ../../$(PKG_DIR)/$(CM_FILE) && cd ../.. && rm -r $(PKG_TMP)
 endif
 	@ echo "Removing outdated metadata"
@@ -275,10 +288,10 @@ package_cn_maximal_v%:
 	@ rm -rfv $(PKG_DIR)
 	@ cp -rv mappings/$(PKG_PREFIX_CN)_v1.$* $(PKG_DIR)
 	@ echo "Including CN SDK v1.$* example data"
-	@ cp -rv $(SDK_DATA_DIR)/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)/
+	@ cp -rv $(SDK_DATA_DIR_CN)/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)/
 ifeq ($(INCLUDE_INVALID_EXAMPLES), 1)
 	@ echo "Including CN SDK v1.$* example data, INVALIDs"
-	@ cp -rv $(SDK_DATA_DIR)_invalid/eforms-sdk-1.$* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)_invalid
+	@ cp -rv $(SDK_DATA_DIR_CN)_invalid/eforms-sdk-1.$* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)_invalid
 endif
 # TODO: not working, use Bash notation or bring out into separate target
 # ifeq ($($*), 9)
@@ -304,8 +317,8 @@ ifeq ($(REPLACE_METADATA_ID), 1)
 	@ echo "Modifying Identifier in the CM and replacing XLSX"
 	@ mkdir -p $(PKG_TMP) && unzip $(PKG_DIR)/$(CM_FILE) -d $(PKG_TMP)
 	@ rm -v $(PKG_DIR)/$(CM_FILE)
-	@ sed -i "s|<t>$(DEFAULT_CM_ID_PREFIX)_v1.$*</t>|<t>$(DEFAULT_CM_ID_PREFIX)_v1.$*_maximal</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
-	@ sed -i "s|<t>$(DEFAULT_CM_DESC_PREFIX), SDK v1.$*</t>|<t>$(DEFAULT_CM_DESC_PREFIX), SDK v1.$* (all data)</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
+	@ sed -i "s|<t>$(CM_ID_PREFIX_CN)_v1.$*</t>|<t>$(CM_ID_PREFIX_CN)_v1.$*_maximal</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
+	@ sed -i "s|<t>$(CM_TITLE_PREFIX_CN), SDK v1.$*</t>|<t>$(CM_TITLE_PREFIX_CN), SDK v1.$* (all data)</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
 	@ cd $(PKG_TMP) && zip -r tmp.xlsx * && mv -v tmp.xlsx ../../$(PKG_DIR)/$(CM_FILE) && cd ../.. && rm -r $(PKG_TMP)
 endif
 	@ echo "Removing outdated metadata"

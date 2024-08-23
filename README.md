@@ -50,6 +50,7 @@ and/or runtimes if developing and testing the RML mapping:
 - A UNIX-compatible environment w/ `make`, `curl`, `zip`, etc. (for packaging)
 - [Apache Jena 4.10](https://jena.apache.org/download/index.cgi#previous-releases) (for testing using the [command-line tools](https://jena.apache.org/documentation/tools/index.html) `arq` and `riot`)
 - [Python](https://www.python.org/downloads/) and `jq` for running some other (namely analysis) tools/scripts/targets
+- [Node.js](https://nodejs.org/en/download/package-manager) for generating documentation
 
 Make, cURL, ZIP, JQ and other UNIX/Bash tools may be accessible on Windows via
 [Chocolatey](https://chocolatey.org/install), and on Mac via [HomeBrew](https://brew.sh/). Python and Java should be installed from their respective official sources, but [pyenv](https://github.com/pyenv/pyenv)[(-win)](https://github.com/pyenv-win/pyenv-win)

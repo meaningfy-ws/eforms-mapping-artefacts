@@ -442,8 +442,6 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_GreenProcurement_aTxk5f26D5UBUZ3UgoL
   a epo:GreenProcurement;
   epo:usesCleanVehicleDirective true .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Identifier_DDmVKAr2D9d2R9YAz7bPSt a adms:Identifier .
-
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Identifier_ORG-0001 a adms:Identifier;
   epo:hasScheme "organization";
   skos:notation "ORG-0001" .
@@ -873,6 +871,9 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Person_UBO-0004 a person:Person;
   epo:hasNationality <http://publications.europa.eu/resource/authority/country/FRA>;
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_BeneficialOwnerTechnicalIdentifier_nwhh7wiDwTuPwa9R3esgw5 .
 
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_PreviousIdentifier_DDmVKAr2D9d2R9YAz7bPSt
+  a adms:Identifier .
+
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcedureIdentifier_6dcsBnuV4FTNoRpTZHckqN
   a adms:Identifier;
   skos:notation "2d2d24a2-df84-449e-8695-fb66ef504a5a" .
@@ -933,7 +934,8 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Procedure_6dcsBnuV4FTNoRpTZHckqN a e
     epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0002;
   epo:hasPurpose epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcedurePurpose_Hu2nD8nFQkA5CPSQ43KMRD;
   epo:isAccelerated true;
-  epo:isSubjectToProcedureSpecificTerm epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcedureTerm_3m6Q8n9T683acseXWAKALc,
+  epo:isSubjectToProcedureSpecificTerm epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_DirectAwardTerm_DDmVKAr2D9d2R9YAz7bPSt,
+    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcedureTerm_3m6Q8n9T683acseXWAKALc,
     epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcedureTerm_CLwCuB6jJaDuNTJfrVRmnb,
     epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcedureTerm_E8bP4ennLrqQNiLdoMjEh5,
     epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcedureTerm_EBNnMcft6dyp4QdU5yf87t;
@@ -942,8 +944,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Procedure_6dcsBnuV4FTNoRpTZHckqN a e
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcedureIdentifier_6dcsBnuV4FTNoRpTZHckqN .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Procedure_DDmVKAr2D9d2R9YAz7bPSt a epo:Procedure;
-  epo:isSubjectToProcedureSpecificTerm epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_DirectAwardTerm_DDmVKAr2D9d2R9YAz7bPSt;
-  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Identifier_DDmVKAr2D9d2R9YAz7bPSt .
+  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_PreviousIdentifier_DDmVKAr2D9d2R9YAz7bPSt .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementProcedureInformationProvider_jwe5W9zs8YV9By53R4pKKA
   a epo:ProcurementProcedureInformationProvider;
@@ -955,11 +956,6 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementProcessInformation_HCR2UC
   a epo:ProcurementProcessInformation;
   epo:concernsLot epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;
   epo:isToBeRelaunched true .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementProcessInformation_JryEpNBTCzNfzKbsxaXwjt
-  a epo:ProcurementProcessInformation;
-  epo:concernsLot epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;
-  epo:isDPSTerminated true .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementProcessInformation_WcwJtRXtDB2SosVcBYfxSC
   a epo:ProcurementProcessInformation;

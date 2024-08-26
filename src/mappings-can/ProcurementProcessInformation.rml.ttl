@@ -29,7 +29,7 @@ tedm:MG-ProcurementProcessInformation_ND-LotResult  a rr:TriplesMap ;
        rml:logicalSource
         [
             rml:source "data/source.xml" ;
-            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotResult" ;
+            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingProcess/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension";
             rml:referenceFormulation ql:XPath
         ] ;
     rr:subjectMap

@@ -16,7 +16,7 @@
 @prefix cccev: <http://data.europa.eu/m8g/> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix cpov: <http://data.europa.eu/m8g/> .
-@prefix	foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix time: <http://www.w3.org/2006/time#>.
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -57,37 +57,6 @@ tedm:MG-LotGroup-describesLotGroup-LotGroupAwardInformation_ND-NoticeResultGroup
             rr:class epo:LotGroup
         ] ;
 .
-
-#tedm:MG-LotGroupAwardInformation_ND-NoticeResultGroupFA a rr:TriplesMap ;
-#    rdfs:label "MG-LotGroupAwardInformation_ND";
-#    rml:logicalSource
-#        [
-#            rml:source "data/source.xml" ;
-#            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:GroupFramework";
-#            rml:referenceFormulation ql:XPath
-#        ];
-#    rr:subjectMap
-#        [
-#            # TODO Not in the source
-#            rdfs:label  "ND-NoticeResultGroupFA";
-#            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_LotGroupAwardInformation_{../cbc:ID}" ;
-#            rr:class epo:LotGroupAwardInformation
-#        ] ;
-#    rr:predicateObjectMap
-#        [
-#            rdfs:label "ND-NoticeResultGroupFA";
-#            rdfs:comment "ND-NoticeResultGroupFA of MG-LotGroup undr ND-NoticeResult";
-#            rr:predicate epo:describesLotGroup ;
-#            rr:objectMap
-#                [
-#                    rr:parentTriplesMap tedm:MG-LotGroup-describesLotGroup-LotGroupAwardInformation_ND-NoticeResultGroupFA ;
-#                    rr:joinCondition[
-#                        rr:child "path(.)";
-#                        rr:parent "path(.)"
-#                    ];
-#                ] ;
-#        ] ;
-#.
 
 tedm:MG-Identifier-identifier-Lot-setsGroupingContextForLot-LotGroup_ND-NoticeResultGroupFA  a rr:TriplesMap ;
     rdfs:label "MG-Identifier";

@@ -94,4 +94,19 @@ tedm:MG-LotGroupAwardInformation_ND-NoticeResultGroupFA  a rr:TriplesMap ;
                     ];
                 ] ;
         ]   ;
+    rr:predicateObjectMap
+        [
+            # TODO Not in the source
+            rdfs:label "ND-NoticeResultGroupFA";
+            rdfs:comment "ND-NoticeResultGroupFA of MG-LotGroup undr ND-NoticeResult";
+            rr:predicate epo:describesLotGroup ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-LotGroup-describesLotGroup-LotGroupAwardInformation_ND-NoticeResultGroupFA ;
+                    rr:joinCondition[
+                        rr:child "path(.)";
+                        rr:parent "path(.)"
+                    ];
+                ] ;
+        ] ;
 .

@@ -41,21 +41,38 @@ tedm:MG-LotGroup_ND-NoticeResult a rr:TriplesMap ;
         ] ;
 .
 
-tedm:MG-LotGroup-describesLotGroup-LotGroupAwardInformation_ND-NoticeResult a rr:TriplesMap ;
+tedm:MG-LotGroup-describesLotGroup-LotGroupAwardInformation_ND-NoticeResultGroupFA a rr:TriplesMap ;
     rdfs:label "MG-LotGroup";
     rml:logicalSource
         [
             rml:source "data/source.xml" ;
-            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult";
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:GroupFramework";
             rml:referenceFormulation ql:XPath
         ];
     rr:subjectMap
         [
             # TODO Not in the source
-            rdfs:label  "ND-NoticeResult";
+            rdfs:label  "ND-NoticeResultGroupFA";
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_LotGroup_{../cbc:ID}" ;
             rr:class epo:LotGroup
         ] ;
+.
+
+#tedm:MG-LotGroupAwardInformation_ND-NoticeResultGroupFA a rr:TriplesMap ;
+#    rdfs:label "MG-LotGroupAwardInformation_ND";
+#    rml:logicalSource
+#        [
+#            rml:source "data/source.xml" ;
+#            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:GroupFramework";
+#            rml:referenceFormulation ql:XPath
+#        ];
+#    rr:subjectMap
+#        [
+#            # TODO Not in the source
+#            rdfs:label  "ND-NoticeResultGroupFA";
+#            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_LotGroupAwardInformation_{../cbc:ID}" ;
+#            rr:class epo:LotGroupAwardInformation
+#        ] ;
 #    rr:predicateObjectMap
 #        [
 #            rdfs:label "ND-NoticeResultGroupFA";
@@ -63,41 +80,14 @@ tedm:MG-LotGroup-describesLotGroup-LotGroupAwardInformation_ND-NoticeResult a rr
 #            rr:predicate epo:describesLotGroup ;
 #            rr:objectMap
 #                [
-#                    rml:reference "efac:GroupFramework";
+#                    rr:parentTriplesMap tedm:MG-LotGroup-describesLotGroup-LotGroupAwardInformation_ND-NoticeResultGroupFA ;
+#                    rr:joinCondition[
+#                        rr:child "path(.)";
+#                        rr:parent "path(.)"
+#                    ];
 #                ] ;
 #        ] ;
-.
-tedm:MG-LotGroupAwardInformation_ND-NoticeResult a rr:TriplesMap ;
-    rdfs:label "MG-LotGroupAwardInformation_ND";
-    rml:logicalSource
-        [
-            rml:source "data/source.xml" ;
-            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult";
-            rml:referenceFormulation ql:XPath
-        ];
-    rr:subjectMap
-        [
-            # TODO Not in the source
-            rdfs:label  "ND-NoticeResult";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_LotGroupAwardInformation_{../cbc:ID}" ;
-            rr:class epo:LotGroupAwardInformation
-        ] ;
-    rr:predicateObjectMap
-        [
-            rdfs:label "ND-NoticeResultGroupFA";
-            rdfs:comment "ND-NoticeResultGroupFA of MG-LotGroup undr ND-NoticeResult";
-            rr:predicate epo:describesLotGroup ;
-            rr:objectMap
-                [
-#                    rml:reference "efac:GroupFramework";
-                    rr:parentTriplesMap tedm:MG-LotGroup-describesLotGroup-LotGroupAwardInformation_ND-NoticeResult ;
-                    rr:joinCondition[
-                        rr:child "path(.)";
-                        rr:parent "path(.)"
-                    ];
-                ] ;
-        ] ;
-.
+#.
 
 tedm:MG-Identifier-identifier-Lot-setsGroupingContextForLot-LotGroup_ND-NoticeResultGroupFA  a rr:TriplesMap ;
     rdfs:label "MG-Identifier";
@@ -176,7 +166,7 @@ tedm:MG-LotGroup_ND-NoticeResultGroupFA  a rr:TriplesMap ;
             rr:predicate  epo:setsGroupingContextForLot ;
             rr:objectMap
                 [
-                   rr:parentTriplesMap tedm:MG-LotGroup-describesLotGroup-LotGroupAwardInformation_ND-NoticeResult ;
+                   rr:parentTriplesMap tedm:MG-LotGroup-describesLotGroup-LotGroupAwardInformation_ND-NoticeResultGroupFA ;
                     rr:joinCondition[
                         rr:child "path(.)";
                         rr:parent "path(.)";
@@ -234,3 +224,4 @@ tedm:MG-MonetaryValue-hasLaunchFrameworkAgreementMaximumValue-LotGroup_ND-Notice
                 ] ;
         ]
 .
+

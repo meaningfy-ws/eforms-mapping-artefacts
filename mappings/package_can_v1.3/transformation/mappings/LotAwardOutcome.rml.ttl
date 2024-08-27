@@ -200,5 +200,51 @@ tedm:MG-MonetaryValue-hasFrameworkAgreementMaximumValue-LotAwardOutcome_ND-LotRe
                     ] ;
                 ] ;
         ] ;
-
     .
+tedm:MG-LotAwardOutcome-summarisesInformationForAwardOutcome-SubmissionStatisticalInformation_ND-LotResult a rr:TriplesMap ;
+  rdfs:label "MG-LotAwardOutcome";
+       rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotResult" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-LotResult" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_LotAwardOutcome_{cbc:ID}" ;
+            rr:class epo:LotAwardOutcome
+        ] ;
+    .
+
+tedm:MG-LotAwardOutcome_ND-LotResultTenderReference  a rr:TriplesMap ;
+  rdfs:label "MG-LotAwardOutcome";
+       rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotResult/efac:LotTender" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-LotResultTenderReference" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_LotAwardOutcome_{../cbc:ID}" ;
+            rr:class epo:LotAwardOutcome
+        ] ;
+     rr:predicateObjectMap
+        [
+            # TODO max sdk 1.7
+            tedm:minSDKVersion "1.8" ;
+            rdfs:label "OPT-320-LotResult" ;
+            rdfs:comment "Tender Identifier Reference  of MG-otAwardOutcome under ND-LotResultTenderReference" ;
+            rr:predicate epo:comprisesTenderAwardOutcome   ;
+            rr:objectMap
+                [
+                   rr:parentTriplesMap tedm:MG-TenderAwardOutcome-comprisesTenderAwardOutcome-LotAwardOutcome_ND-LotResultTenderReference ;
+                    rr:joinCondition[
+                        rr:child "path(.)";
+                        rr:parent "path(.)"
+                    ];
+                ] ;
+        ] ;
+.

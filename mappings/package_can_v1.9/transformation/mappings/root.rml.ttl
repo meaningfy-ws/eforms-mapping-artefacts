@@ -66,13 +66,14 @@ tedm:MG-ResultNotice_ND-NoticeResult a rr:TriplesMap ;
             rr:predicate epo:announcesLotGroupAwardInformation   ;
             rr:objectMap
                 [
-                    rr:parentTriplesMap tedm:MG-LotGroupAwardInformation-announcesLotGroupAwardInformation-ResultNotice_ND-NoticeResult ;
+                    rr:parentTriplesMap tedm:MG-LotGroupAwardInformation-announcesLotGroupAwardInformation-ResultNotice_ND-NoticeResultGroupFA ;
                     rr:joinCondition [
                         rr:child "path(.)";
-                        rr:parent "path(.)";
+                        rr:parent "path(..)";
                     ];
                 ] ;
         ]   ;
+
     rr:predicateObjectMap
         [
             rdfs:label "OPT-210-Tenderer" ;
@@ -230,12 +231,13 @@ tedm:MG-MonetaryValue-hasApproximateFrameworkAgreementValue-NoticeAwardInformati
         ] ;
 .
 
-tedm:MG-LotGroupAwardInformation-announcesLotGroupAwardInformation-ResultNotice_ND-NoticeResult  a rr:TriplesMap ;
+
+tedm:MG-LotGroupAwardInformation-announcesLotGroupAwardInformation-ResultNotice_ND-NoticeResultGroupFA  a rr:TriplesMap ;
   rdfs:label "MG-LotGroupAwardInformation";
     rml:logicalSource
         [
             rml:source "data/source.xml" ;
-            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:GroupFramework" ;
             rml:referenceFormulation ql:XPath
         ] ;
     rr:subjectMap

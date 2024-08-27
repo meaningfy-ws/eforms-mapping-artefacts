@@ -363,7 +363,7 @@ tedm:MG-MonetaryValue-hasSubcontractingEstimatedValue-SubcontractingEstimate-for
         ] ;
     rr:predicateObjectMap
         [
-            # TODO max sdk 1.8
+             # TODO max sdk 1.8
              tedm:minSDKVersion "1.9" ;
             rdfs:label "BT-553-Tender";
             rdfs:comment "Subcontracting Value of MG-MonetaryValue under ND-SubcontractedActivity";
@@ -510,3 +510,70 @@ tedm:MG-LotGroup-isSubjectToGrouping-Tender_ND-LotTender  a rr:TriplesMap ;
             rr:class epo:LotGroup
         ] ;
     .
+tedm:MG-Tender-includesTender-Contract_ND-SettledContractTenderReference  a rr:TriplesMap ;
+  rdfs:label "MG-Tender";
+  rdfs:label "BT-3202-Contract";
+        # TODO max sdk 1.7
+        tedm:minSDKVersion "1.8" ;
+                                                                          rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:SettledContract/efac:LotTender" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-LotTender" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Tender_{cbc:ID}" ;
+            rr:class epo:Tender
+        ] ;
+.
+
+tedm:MG-Tender-concernsTender-TenderAwardOutcome-comprisesTenderAwardOutcome-LotAwardOutcome_ND-LotResultTenderReference  a rr:TriplesMap ;
+  rdfs:label "MG-Tender";
+       rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotResult/efac:LotTender" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-LotTender" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Tender_{cbc:ID}" ;
+            rr:class epo:Tender
+        ] ;
+.
+
+tedm:MG-TenderAwardOutcome-comprisesTenderAwardOutcome-LotAwardOutcome_ND-LotResultTenderReference  a rr:TriplesMap ;
+  rdfs:label "MG-TenderAwardOutcome";
+       rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotResult/efac:LotTender" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-LotResultTenderReference" ;
+            rml:reference "if (exists(cbc:ID)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_TenderAwardOutcome_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(.)) || '?response_type=raw') else null" ;
+            rr:class epo:TenderAwardOutcome
+        ] ;
+     rr:predicateObjectMap
+        [
+            # TODO max sdk 1.7
+            tedm:minSDKVersion "1.8" ;
+            rdfs:label "OPT-320-LotResult" ;
+            rdfs:comment "Tender Identifier Reference  of MG-TenderAwardOutcome under ND-LotResultTenderReference" ;
+            rr:predicate epo:concernsTender   ;
+            rr:objectMap
+                [
+                   rr:parentTriplesMap tedm:MG-Tender-concernsTender-TenderAwardOutcome-comprisesTenderAwardOutcome-LotAwardOutcome_ND-LotResultTenderReference ;
+                    rr:joinCondition[
+                        rr:child "path(.)";
+                        rr:parent "path(.)"
+                    ];
+                ] ;
+        ] ;
+.
+

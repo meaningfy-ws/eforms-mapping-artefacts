@@ -181,6 +181,38 @@ tedm:MG-Contract_ND-SettledContract  a rr:TriplesMap ;
                     ];
                 ] ;
         ] ;
+    rr:predicateObjectMap
+        [
+            # TODO max sdk 1.7
+            tedm:minSDKVersion "1.8" ;
+            rdfs:label "BT-3202-Contract" ;
+            rdfs:comment "ND-SettledContractTenderReference of MG-Contract under ND-SettledContract" ;
+            rr:predicate  epo:includesTender ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-Tender-includesTender-Contract_ND-SettledContractTenderReference ;
+                    rr:joinCondition [
+                        rr:child "path(.)";
+                        rr:parent "path(..)";
+                    ];
+                ] ;
+        ] ;
+     rr:predicateObjectMap
+        [
+            # TODO max sdk 1.7
+            tedm:minSDKVersion "1.8" ;
+            rdfs:label "OPT-300-Contract-Signatory" ;
+            rdfs:comment "SignatoryIdentifierReference of MG-Contract under ND-SettledContract" ;
+            rr:predicate  epo:signedByBuyer ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-Buyer-signedByBuyer-Contract_ND-ContractSignatory ;
+                    rr:joinCondition [
+                        rr:child "path(.)";
+                        rr:parent "path(..)";
+                    ];
+                ] ;
+        ] ;
 .
 
 tedm:MG-Fund_ND-SettledContract  a rr:TriplesMap ;
@@ -322,3 +354,51 @@ tedm:MG-Fund-isFundedBy-Contract_ND-ContractEUFunds a rr:TriplesMap ;
         ] ;
 .
 
+tedm:MG-Organization-playedBy-Buyer-signedByBuyer-Contract_ND-ContractSignatory a rr:TriplesMap ;
+    rdfs:label "MG-Organization" ;
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:SettledContract/cac:SignatoryParty";
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-ContractSignatory" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Organization_{cac:PartyIdentification/cbc:ID}" ;
+            rr:class org:Organization
+        ] ;
+    .
+tedm:MG-Buyer-signedByBuyer-Contract_ND-ContractSignatory a rr:TriplesMap ;
+    rdfs:label "MG-Buyer" ;
+     rdfs:label "OPT-300-Contract-Signatory" ;
+     rdfs:comment "Signatory Identifier Reference of MG-Buyer under ND-ContractSignatory" ;
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:SettledContract/cac:SignatoryParty";
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-ContractSignatory" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Buyer_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rr:class epo:Buyer
+        ] ;
+    rr:predicateObjectMap
+        [
+            # TODO max sdk 1.7
+            tedm:minSDKVersion "1.8" ;
+            rdfs:label "OPT-300-Contract-Signatory" ;
+            rdfs:comment "Signatory Identifier Reference of MG-Buyer under ND-ContractSignatory" ;
+            rr:predicate epo:playedBy ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-Organization-playedBy-Buyer-signedByBuyer-Contract_ND-ContractSignatory ;
+                    rr:joinCondition [
+                        rr:child "path(.)";
+                        rr:parent "path(.)";
+                    ];
+                ] ;
+        ] ;
+    .

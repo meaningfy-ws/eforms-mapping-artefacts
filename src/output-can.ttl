@@ -957,6 +957,11 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementProcessInformation_HCR2UC
   epo:concernsLot epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;
   epo:isToBeRelaunched true .
 
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementProcessInformation_JryEpNBTCzNfzKbsxaXwjt
+  a epo:ProcurementProcessInformation;
+  epo:concernsLot epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;
+  epo:isDPSTerminated true .
+
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementProcessInformation_WcwJtRXtDB2SosVcBYfxSC
   a epo:ProcurementProcessInformation;
   epo:concernsProcedure epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Procedure_6dcsBnuV4FTNoRpTZHckqN;

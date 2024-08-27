@@ -952,25 +952,21 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementProcedureInformationProvi
   epo:hasContactPointInRole epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TouchPoint_TPO-0001;
   epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_TPO-0001 .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementProcessInformation_HCR2UC5wFkJmrtjHi236C8
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementProcessInformation_LOT-0001
   a epo:ProcurementProcessInformation;
   epo:concernsLot epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;
+  epo:isDPSTerminated true;
   epo:isToBeRelaunched true .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementProcessInformation_JryEpNBTCzNfzKbsxaXwjt
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementProcessInformation_LOT-0002
   a epo:ProcurementProcessInformation;
-  epo:concernsLot epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;
-  epo:isDPSTerminated true .
+  epo:concernsLot epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0002;
+  epo:isToBeRelaunched true .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementProcessInformation_WcwJtRXtDB2SosVcBYfxSC
   a epo:ProcurementProcessInformation;
   epo:concernsProcedure epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Procedure_6dcsBnuV4FTNoRpTZHckqN;
   epo:isCompetitionTerminated false .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementProcessInformation_Zcb2nasm4y367FTcbUpanP
-  a epo:ProcurementProcessInformation;
-  epo:concernsLot epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0002;
-  epo:isToBeRelaunched true .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementProjectContractTerm_BAFiQAm5eaBz7sDFPbYXor
   a epo:ContractTerm;

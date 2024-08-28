@@ -872,7 +872,8 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Person_UBO-0004 a person:Person;
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_BeneficialOwnerTechnicalIdentifier_nwhh7wiDwTuPwa9R3esgw5 .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_PreviousProcedureIdentifier_DDmVKAr2D9d2R9YAz7bPSt
-  a adms:Identifier .
+  a adms:Identifier;
+  skos:notation "---identifier for Previous Procedure Test ---" .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcedureIdentifier_6dcsBnuV4FTNoRpTZHckqN
   a adms:Identifier;

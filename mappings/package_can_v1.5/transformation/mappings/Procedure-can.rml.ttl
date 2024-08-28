@@ -63,16 +63,13 @@ tedm:MG-DirectAwardTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-DirectAwar
         ] ;
     rr:subjectMap
         [
-            # TODO Add to source
-            # TODO max sdk 1.9.1
-            tedm:minSDKVersion "1.10" ;
+            # VERINFO: SDK v1.10 onwards this becomes repeatable
             rdfs:label "ND-DirectAward";
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_DirectAwardTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
             rr:class epo:DirectAwardTerm
         ] ;
      rr:predicateObjectMap
         [
-            # TODO Add to source
             rdfs:label "BT-136-Procedure";
             rdfs:comment "Direct Award Justification Code of MG-DirectAwardTerm under ND-DirectAward";
             rr:predicate  epo:hasDirectAwardJustification   ;
@@ -88,7 +85,6 @@ tedm:MG-DirectAwardTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-DirectAwar
         ]   ;
     rr:predicateObjectMap
         [
-            # TODO Add to source
             rdfs:label "BT-135-Procedure";
             rdfs:comment "Direct Award Justification Text of MG-DirectAwardTerm under ND-DirectAward";
             rr:predicate  epo:hasDirectAwardJustification   ;

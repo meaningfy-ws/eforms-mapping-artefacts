@@ -41,11 +41,11 @@ tedm:MG-Business_ND-OrganizationUboReference a rr:TriplesMap ;
         ] ;
     rr:predicateObjectMap
         [
-            # TODO min sdk 1.8
-            tedm:minSDKVersion "1.8" ;
+            # Differences across versions are practically superficial and have little to no functional effect on this mapping even though different iterators can be interpreted
+            # VERINFO: SDK v1.8+ contain only rel XPath change within the same abs XPath due to node change, along with repeatable=false and other mapping-irrelevant changes
             rdfs:label "OPT-302-Organization" ;
-            rdfs:comment "Beneficial Owner Reference of MG-Business under ND-OrganizationUboReference" ;
-            rr:predicate  epo:hasBeneficialOwner   ;
+            rdfs:comment "Beneficial Owner Reference of MG-Business under ND-OrganizationUboReference (v1.8+), ND-Organization (up to v1.7)" ;
+            rr:predicate epo:hasBeneficialOwner ;
              rr:objectMap
                 [
                    rr:parentTriplesMap tedm:MG-Person-hasBeneficialOwner-Business_ND-OrganizationUboReference ;
@@ -322,10 +322,10 @@ tedm:MG-Person_ND-UBONationality a rr:TriplesMap ;
         ] ;
      rr:predicateObjectMap
         [
-            # TODO max sdk 1.7
-            tedm:minSDKVersion "1.8" ;
+            # Differences across versions are practically superficial and have little to no functional effect on this mapping even though different iterators can be interpreted
+            # VERINFO: SDK v1.8+ contain only rel XPath change within the same abs XPath due to node change, along with repeatable=false and other mapping-irrelevant changes
             rdfs:label "BT-706-UBO";
-            rdfs:comment "Winner Owner Nationality of MG-Person under ND-UBONationality" ;
+            rdfs:comment "Winner Owner Nationality of MG-Person under ND-UBONationality (v1.8+), ND-UBO (up to v1.7)" ;
             rr:predicate epo:hasNationality  ;
             rr:objectMap
                 [

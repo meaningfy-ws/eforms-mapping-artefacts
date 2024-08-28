@@ -1169,7 +1169,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0001 a epo:Tender;
   epo:hasFinancialOfferValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_JryEpNBTCzNfzKbsxaXwjt;
   epo:hasSubcontracting <http://publications.europa.eu/resource/authority/applicability/yes>;
   epo:isSubjectToGrouping epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_GLO_GLO-0001;
-  epo:isSubmitedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TEN-0001;
+  epo:isSubmitedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0001;
   epo:isVariant true;
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderIdentifier_8tLJD9wyvjSHWYvDWGiX5D .
 
@@ -1177,7 +1177,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0002 a epo:Tender;
   epo:foreseesSubcontracting epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubcontractingEstimate_nNq2rC7wBesmhA5baJ8mCt;
   epo:hasFinancialOfferValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_JryEpNBTCzNfzKbsxaXwjt;
   epo:hasSubcontracting <http://publications.europa.eu/resource/authority/applicability/yes>;
-  epo:isSubmitedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TEN-0002;
+  epo:isSubmitedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0002;
   epo:isSubmittedForLot epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;
   epo:isVariant true;
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderIdentifier_nNq2rC7wBesmhA5baJ8mCt .
@@ -1185,7 +1185,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0002 a epo:Tender;
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0003 a epo:Tender;
   epo:foreseesSubcontracting epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubcontractingEstimate_econsLsjPJro8aUo9zUip8;
   epo:hasSubcontracting <http://publications.europa.eu/resource/authority/applicability/yes>;
-  epo:isSubmitedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TEN-0003;
+  epo:isSubmitedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0002;
   epo:isSubmittedForLot epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0002;
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderIdentifier_econsLsjPJro8aUo9zUip8 .
 
@@ -1203,12 +1203,6 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TendererIdentifier_nek8J9435HMtiJoTn
   a adms:Identifier;
   epo:hasScheme "organization";
   skos:notation "ORG-0011" .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TEN-0001 a epo:Tenderer .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TEN-0002 a epo:Tenderer .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TEN-0003 a epo:Tenderer .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0001 a epo:Tenderer;
   epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_OrganisationGroup_ECUZjDvaPMUJHS4Tp5KyYK,
@@ -1275,7 +1269,7 @@ epd:id_9c0fd704-64d3-4294-a3b6-6df45911ab9f-01_Notice a epo:PlanningNotice;
 epd:id_9c0fd704-64d3-4294-a3b6-6df45911ab9f-01_PlannedProcurementPartIdentifier_K53mu54F9PCk4RoVqcWwaL
   a adms:Identifier;
   skos:notation "123" .
-
+epo
 epd:id_9c0fd704-64d3-4294-a3b6-6df45911ab9f-01_PlannedProcurementPart_K53mu54F9PCk4RoVqcWwaL
   a epo:PlannedProcurementPart;
   adms:identifier epd:id_9c0fd704-64d3-4294-a3b6-6df45911ab9f-01_PlannedProcurementPartIdentifier_K53mu54F9PCk4RoVqcWwaL .

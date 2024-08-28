@@ -296,7 +296,7 @@ tedm:MG-Tenderer-isSubmitedBy-Tender_ND-LotTender  a rr:TriplesMap ;
     rr:subjectMap
         [
             rdfs:label "ND-LotTender" ;
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Tenderer_{cbc:ID}" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Tenderer_{efac:TenderingParty/cbc:ID}" ;
             rr:class epo:Tenderer
         ] ;
     .

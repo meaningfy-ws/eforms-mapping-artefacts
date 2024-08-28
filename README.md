@@ -12,7 +12,7 @@ The contents in `src` are laid out in a way that is conducive to local
 development, which packages are not. However, varying amounts of data can be
 combined to generate new packages. Helper Make commands are provided for this:
 
-```
+```sh
 make package_cn_all_variants
 make export_cn_all_variants
 ```
@@ -29,6 +29,15 @@ based around the following variants:
 
 You are free to modify any package and rerun the relevant export Make target,
 e.g. `make export_cn_minimal`.
+
+It is recommended to clean and sync before running any of the packaging
+targets, in particular because ZIP _updates_ archives if existing ones are
+found, which can lead to unwanted situations. A complete one-liner command
+could be:
+
+```sh
+make clean && make && make package_can_all_variatns export_can_all_variants
+```
 
 ## Testing
 

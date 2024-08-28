@@ -1221,16 +1221,11 @@
 			<cbc:ProcessReasonCode listName="accelerated-procedure">true</cbc:ProcessReasonCode>
 			<!--"id" : "BT-1351-Procedure", "name" : "Procedure Accelerated Justification" -->
 			<cbc:ProcessReason languageID="ENG">Procedure Accelerated Justification ---</cbc:ProcessReason>
-			<cac:ProcessJustification>
-			<cbc:ProcessReasonCode listName="direct-award-justification">true</cbc:ProcessReasonCode>
-			<!--"id" : "BT-1351-Procedure", "name" : "Procedure Accelerated Justification" -->
-			<cbc:ProcessReason languageID="ENG">TEST direct-award-justification ---</cbc:ProcessReason>
-				<cbc:Description languageID="ENG">---identifier  ---</cbc:Description>
-		    </cac:ProcessJustification>
 			<!--"id" : "BT-106-Procedure", "name" : "Procedure Accelerated -->
 			<cbc:ProcessReasonCode listName="direct-award-justification">true</cbc:ProcessReasonCode>
 			<!--"id" : "BT-1351-Procedure", "name" : "Procedure Accelerated Justification" -->
 			<cbc:ProcessReason languageID="ENG">TEST direct-award-justification ---</cbc:ProcessReason>
+			<cbc:Description languageID="ENG">---identifier for Previous Procedure Test ---</cbc:Description>
 		</cac:ProcessJustification>
 	</cac:TenderingProcess>
 	<!-- Procedure - Procurement Project -->

@@ -38,7 +38,7 @@ tedm:MG-Subcontractor-specifiesSubcontractors-Tender_ND-SubContractor  a rr:Trip
     rr:subjectMap
         [
             rdfs:label "ND-TenderingParty";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_SubContractor_{cbc:ID}" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Subcontractor_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path( )) || '?response_type=raw')}" ;
             rr:class epo:Subcontractor
         ] ;
 .
@@ -54,7 +54,7 @@ tedm:MG-Subcontractor-announcesRole-ResultNotice_ND-SubContractor  a rr:TriplesM
     rr:subjectMap
         [
             rdfs:label "ND-SubContractor";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_SubContractor_{cbc:ID}" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Subcontractor_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path( )) || '?response_type=raw')}" ;
             rr:class epo:Subcontractor
         ] ;
 .
@@ -85,6 +85,52 @@ tedm:MG-ResultNotice_ND-SubContractor  a rr:TriplesMap ;
                         rr:child "path(.)";
                         rr:parent "path(.)"
                     ];
+                ] ;
+        ] ;
+.
+
+tedm:MG-Organization-playedBy-Subcontractor_ND-SubContractor  a rr:TriplesMap ;
+    rdfs:label "MG-Subcontractor" ;
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:TenderingParty/efac:SubContractor" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-SubContractor";
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Organization_{cbc:ID}" ;
+            rr:class epo:Organization
+        ] ;
+.
+
+tedm:MG-Subcontractor_ND-SubContractor  a rr:TriplesMap ;
+    rdfs:label "MG-Subcontractor" ;
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:TenderingParty/efac:SubContractor" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-SubContractor";
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Subcontractor_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path( )) || '?response_type=raw')}" ;
+            rr:class epo:Subcontractor
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "OPT-301-Tenderer-SubCont" ;
+            rr:predicate epo:playedBy ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-Organization-playedBy-Subcontractor_ND-SubContractor ;
+                     rr:joinCondition
+                    [
+                        rr:child "path(.)" ;
+                        rr:parent "path(.)" ;
+                   ] ;
                 ] ;
         ] ;
 .

@@ -88,23 +88,23 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_BeneficialOwnerTechnicalIdentifier_n
   epo:hasScheme "ubo";
   skos:notation "UBO-0004" .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Business_7z4ofTV9dqFyh5CgX4849Y a epo:Business;
-  epo:hasBeneficialOwner epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Person_UBO-0004;
-  epo:hasBusinessSize <http://publications.europa.eu/resource/authority/economic-operator-size/large>;
-  epo:isListedCompany false .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Business_WjXKSDieDSHPgsFuxxEzPy a epo:Business;
-  epo:hasBeneficialOwner epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Person_UBO-0003;
-  epo:hasBusinessSize <http://publications.europa.eu/resource/authority/economic-operator-size/medium>;
-  epo:isListedCompany false .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Business_Y2PCmxuavJ95yHLQmwtJNe a epo:Business;
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Business_ORG-0008 a epo:Business;
   epo:hasBeneficialOwner epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Person_UBO-0001;
   epo:hasBusinessSize <http://publications.europa.eu/resource/authority/economic-operator-size/large>;
   epo:isListedCompany false .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Business_e4Lg9euTwEsAQAQAryfrEs a epo:Business;
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Business_ORG-0009 a epo:Business;
   epo:hasBusinessSize <http://publications.europa.eu/resource/authority/economic-operator-size/micro>;
+  epo:isListedCompany false .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Business_ORG-0010 a epo:Business;
+  epo:hasBeneficialOwner epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Person_UBO-0003;
+  epo:hasBusinessSize <http://publications.europa.eu/resource/authority/economic-operator-size/medium>;
+  epo:isListedCompany false .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Business_ORG-0011 a epo:Business;
+  epo:hasBeneficialOwner epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Person_UBO-0004;
+  epo:hasBusinessSize <http://publications.europa.eu/resource/authority/economic-operator-size/large>;
   epo:isListedCompany false .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Buyer_7UMPwyXRgVDYJBYSxTfTBn a epo:Buyer;
@@ -833,7 +833,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0008 a epo:Organiza
   epo:hasLegalName "Gyro Soft SA"@en;
   epo:hasPrimaryContactPoint epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyContactPoint_RVyNteJCXPVfgCRsomYU8e;
   cccev:registeredAddress epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyAddress_kazHeCPckN7TddQSoqJzxV;
-  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Identifier_ORG-0008, epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TendererIdentifier_7rVzZwwwwKDY9vEDYu5vNr .
+  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Identifier_ORG-0008 .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0009 a epo:Organization,
     org:Organization;
@@ -841,7 +841,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0009 a epo:Organiza
   epo:hasLegalName "The best App Ltd."@en;
   epo:hasPrimaryContactPoint epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyContactPoint_SKFLyoFfRmoPfFxaxBTeM9;
   cccev:registeredAddress epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyAddress_PWqQf3UzWb4VpZjpAfV2R3;
-  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Identifier_ORG-0009, epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TendererIdentifier_e2qdcoGJDPmK2UPWUzdmhi .
+  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Identifier_ORG-0009 .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0010 a epo:Organization,
     org:Organization;
@@ -857,7 +857,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0011 a epo:Organiza
   epo:hasLegalName "Competitor"@en;
   epo:hasPrimaryContactPoint epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyContactPoint_UMqokYpZn6koQvE3bWxatk;
   cccev:registeredAddress epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyAddress_Jwx4RfdUgXZsP62GuWEJCA;
-  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Identifier_ORG-0011, epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TendererIdentifier_nek8J9435HMtiJoTn8hUVe .
+  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Identifier_ORG-0011 .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_TPO-0001 a org:Organization;
   owl:sameAs epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0001 .
@@ -1146,7 +1146,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TaxInformationProvider_HaEv2nhsYWgNm
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderAwardOutcome_8tLJD9wyvjSHWYvDWGiX5D
   a epo:TenderAwardOutcome;
   epo:concernsTender epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0001;
-  epo:hasAwardRank "3" .
+  epo:hasAwardRank 3 .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderAwardOutcome_EBPJ2fbv7o99YfmArtWauY
   a epo:TenderAwardOutcome;
@@ -1163,7 +1163,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderAwardOutcome_jWu7544ZnnuCc6He5
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderAwardOutcome_nNq2rC7wBesmhA5baJ8mCt
   a epo:TenderAwardOutcome;
   epo:concernsTender epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0002;
-  epo:hasAwardRank "4" .
+  epo:hasAwardRank 4 .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderIdentifier_8tLJD9wyvjSHWYvDWGiX5D
   a adms:Identifier;
@@ -1202,21 +1202,6 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0003 a epo:Tender;
   epo:isSubmitedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0002;
   epo:isSubmittedForLot epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0002;
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderIdentifier_econsLsjPJro8aUo9zUip8 .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TendererIdentifier_7rVzZwwwwKDY9vEDYu5vNr
-  a adms:Identifier;
-  epo:hasScheme "organization";
-  skos:notation "ORG-0008" .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TendererIdentifier_e2qdcoGJDPmK2UPWUzdmhi
-  a adms:Identifier;
-  epo:hasScheme "organization";
-  skos:notation "ORG-0009" .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TendererIdentifier_nek8J9435HMtiJoTn8hUVe
-  a adms:Identifier;
-  epo:hasScheme "organization";
-  skos:notation "ORG-0011" .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0001 a epo:Tenderer;
   epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_OrganisationGroup_ECUZjDvaPMUJHS4Tp5KyYK;

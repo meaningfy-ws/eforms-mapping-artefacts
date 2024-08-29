@@ -396,3 +396,29 @@ tedm:MG-Buyer-signedByBuyer-Contract_ND-ContractSignatory a rr:TriplesMap ;
                 ] ;
         ] ;
     .
+
+tedm:MG-Contract_ND-LotResultContractReference  a rr:TriplesMap ;
+  rdfs:label "MG-Contract";
+       rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:SettledContract" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-SettledContract" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_SettledContract_{cbc:ID}" ;
+            rr:class epo:Contract
+        ] ;
+     rr:predicateObjectMap
+        [
+            rdfs:label "OPT-315-LotResult" ;
+            rdfs:comment "ContractIdentifierReference of MG-Contract under ND-SettledContract" ;
+            rr:predicate  epo:hasLotReference ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-Lot-hasLotReference-Contract_ND-LotResultContractReference ;
+                ] ;
+        ] ;
+    .

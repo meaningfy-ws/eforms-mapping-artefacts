@@ -776,18 +776,6 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_OrganisationIdentifier_o3DmeDpoFTnKS
   a adms:Identifier;
   skos:notation "0986543" .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organisation_7rVzZwwwwKDY9vEDYu5vNr a
-    epo:Organization;
-  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TendererIdentifier_7rVzZwwwwKDY9vEDYu5vNr .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organisation_e2qdcoGJDPmK2UPWUzdmhi a
-    epo:Organization;
-  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TendererIdentifier_e2qdcoGJDPmK2UPWUzdmhi .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organisation_nek8J9435HMtiJoTn8hUVe a
-    epo:Organization;
-  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TendererIdentifier_nek8J9435HMtiJoTn8hUVe .
-
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0001 a org:Organization;
   epo:hasBuyerLegalType <http://publications.europa.eu/resource/authority/buyer-legal-type/body-pl>;
   epo:hasLegalIdentifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_OrganisationIdentifier_4NU5AxJwe7aGai3Cgq8HpC;
@@ -845,7 +833,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0008 a epo:Organiza
   epo:hasLegalName "Gyro Soft SA"@en;
   epo:hasPrimaryContactPoint epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyContactPoint_RVyNteJCXPVfgCRsomYU8e;
   cccev:registeredAddress epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyAddress_kazHeCPckN7TddQSoqJzxV;
-  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Identifier_ORG-0008 .
+  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Identifier_ORG-0008, epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TendererIdentifier_7rVzZwwwwKDY9vEDYu5vNr .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0009 a epo:Organization,
     org:Organization;
@@ -853,7 +841,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0009 a epo:Organiza
   epo:hasLegalName "The best App Ltd."@en;
   epo:hasPrimaryContactPoint epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyContactPoint_SKFLyoFfRmoPfFxaxBTeM9;
   cccev:registeredAddress epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyAddress_PWqQf3UzWb4VpZjpAfV2R3;
-  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Identifier_ORG-0009 .
+  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Identifier_ORG-0009, epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TendererIdentifier_e2qdcoGJDPmK2UPWUzdmhi .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0010 a org:Organization;
   epo:hasLegalIdentifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_OrganisationIdentifier_aH6wABNpvU8pHKqJCX6PTo;
@@ -862,12 +850,13 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0010 a org:Organiza
   cccev:registeredAddress epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyAddress_QGxu2dPi4aMxWvazg7nLfW;
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Identifier_ORG-0010 .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0011 a org:Organization;
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0011 a epo:Organization,
+    org:Organization;
   epo:hasLegalIdentifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_OrganisationIdentifier_BpHV2HFi6aA8H6oMrquULu;
   epo:hasLegalName "Competitor"@en;
   epo:hasPrimaryContactPoint epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyContactPoint_UMqokYpZn6koQvE3bWxatk;
   cccev:registeredAddress epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyAddress_Jwx4RfdUgXZsP62GuWEJCA;
-  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Identifier_ORG-0011 .
+  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Identifier_ORG-0011, epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TendererIdentifier_nek8J9435HMtiJoTn8hUVe .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_TPO-0001 a org:Organization;
   owl:sameAs epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0001 .
@@ -1219,12 +1208,11 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TendererIdentifier_nek8J9435HMtiJoTn
   skos:notation "ORG-0011" .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0001 a epo:Tenderer;
-  epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_OrganisationGroup_ECUZjDvaPMUJHS4Tp5KyYK,
-    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organisation_7rVzZwwwwKDY9vEDYu5vNr, epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organisation_e2qdcoGJDPmK2UPWUzdmhi;
+  epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_OrganisationGroup_ECUZjDvaPMUJHS4Tp5KyYK;
   dct:title "Gyro and Others Consortium" .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0002 a epo:Tenderer;
-  epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organisation_nek8J9435HMtiJoTn8hUVe;
+  epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0011;
   dct:title "Competitor" .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TouchPointAddress_LdBFAHkYrTBWCThJzAG9g8

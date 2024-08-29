@@ -42,3 +42,49 @@ tedm:MG-Subcontractor-specifiesSubcontractors-Tender_ND-SubContractor  a rr:Trip
             rr:class epo:Subcontractor
         ] ;
 .
+
+tedm:MG-Subcontractor-announcesRole-ResultNotice_ND-SubContractor  a rr:TriplesMap ;
+    rdfs:label "MG-Subcontractor" ;
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:TenderingParty/efac:SubContractor" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-SubContractor";
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_SubContractor_{cbc:ID}" ;
+            rr:class epo:Subcontractor
+        ] ;
+.
+
+tedm:MG-ResultNotice_ND-SubContractor  a rr:TriplesMap ;
+    rdfs:label "MG-ResultNotice" ;
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:TenderingParty/efac:SubContractor" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-SubContractor";
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ResultNotice_{../../cbc:ID}" ;
+            rr:class epo:ResultNotice
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "ND-SubContractor" ;
+            rdfs:comment "connection between SubContractor and ResultNotice under ND-SubContractor";
+            rr:predicate epo:announcesRole   ;
+            rr:objectMap
+                [
+                   rr:parentTriplesMap tedm:MG-Subcontractor-announcesRole-ResultNotice_ND-SubContractor ;
+                    rr:joinCondition[
+                        rr:child "path(.)";
+                        rr:parent "path(.)"
+                    ];
+                ] ;
+        ] ;
+.

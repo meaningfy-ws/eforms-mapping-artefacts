@@ -1116,14 +1116,20 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Subcontractor_9j2v7t3GXjdgoHTvgxCPWt
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubmissionStatisticalInformation_A5K3ndcSySWYxA4wrRkqDG
   a epo:SubmissionStatisticalInformation;
+  epo:hasEEAReceivedTenders 0;
+  epo:hasElectronicTenders 0;
   epo:hasHighestReceivedTenderValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_A5K3ndcSySWYxA4wrRkqDG;
   epo:hasLowestReceivedTenderValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValueLowestReceivedTenderValue_A5K3ndcSySWYxA4wrRkqDG;
-  epo:hasReceivedTenders 0, 1;
+  epo:hasReceivedTenders 1;
+  epo:hasSMEReceivedTenders 0;
   epo:summarisesInformationForAwardOutcome epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotAwardOutcome_RES-0002 .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubmissionStatisticalInformation_FmfbzZdeEatT3nzZdqXd3D
   a epo:SubmissionStatisticalInformation;
-  epo:hasReceivedTenders 1, 3, 9;
+  epo:hasEEAReceivedTenders 3;
+  epo:hasElectronicTenders 9;
+  epo:hasReceivedTenders 9;
+  epo:hasSMEReceivedTenders 1;
   epo:summarisesInformationForAwardOutcome epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotAwardOutcome_RES-0001 .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubmissionTerm_KorWZrEXpQCBgrGqtjBT6W

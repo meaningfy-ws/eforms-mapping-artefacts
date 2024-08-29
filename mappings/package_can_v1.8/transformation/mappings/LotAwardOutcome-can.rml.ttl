@@ -130,7 +130,7 @@ tedm:MG-MonetaryValue-hasApproximateFrameworkAgreementValue-LotAwardOutcome_ND-L
    rr:predicateObjectMap
         [
             # TODO max sdk 1.5
-             tedm:minSDKVersion "1.6" ;
+            tedm:minSDKVersion "1.6" ;
             rdfs:label "BT-660-LotResult";
             rdfs:comment "Framework Re-estimated Value of MG-MonetaryValue under ND-LotResultFAValues";
             rr:predicate epo:hasAmountValue ;

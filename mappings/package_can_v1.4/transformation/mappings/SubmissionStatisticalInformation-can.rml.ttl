@@ -45,8 +45,131 @@ tedm:MG-SubmissionStatisticalInformation_ND-ReceivedSubmissions  a rr:TriplesMap
             rr:predicate  epo:hasReceivedTenders  ;
             rr:objectMap
                 [
-#                    rml:reference "if((not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 'tenders') or(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 'part-req') or(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-esubm') or (not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-med')or(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-micro')or(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-no-eea') or (not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-no-verif')or(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-oth-eea')or(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-small')or(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-sme')or(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-verif-inad')or(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-verif-inad-low'))then efbc:StatisticsNumeric else null" ;
-                    rml:reference "if (not(exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1')  and efbc:StatisticsCode/text() = ('tenders', 'part-req', 't-esubm', 't-med', 't-micro', 't-no-eea', 't-no-verif', 't-oth-eea', 't-small', 't-sme', 't-verif-inad', 't-verif-inad-low')) then efbc:StatisticsNumeric else null" ;
+                   rml:reference "if((not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 'tenders'))then efbc:StatisticsNumeric else null" ;
+                   rr:datatype xsd:integer  ;
+                ] ;
+        ];
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-759-LotResult";
+            rdfs:comment "Received Submissions Count of MG-SubmissionStatisticalInformation under ND-ReceivedSubmissions";
+            rr:predicate  epo:hasReceivedParticipationRequests   ;
+            rr:objectMap
+                [
+#                   rml:reference "if((not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 'tenders') or(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 'part-req') or(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-esubm') or (not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-med')or(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-micro')or(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-no-eea') or (not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-no-verif')or(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-oth-eea')or(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-small')or(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-sme')or(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-verif-inad')or(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-verif-inad-low'))then efbc:StatisticsNumeric else null" ;
+                   rml:reference "if (not(exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1')  and efbc:StatisticsCode/text() = ('part-req')) then efbc:StatisticsNumeric else null" ;
+                    rr:datatype xsd:integer  ;
+                ] ;
+        ];
+     rr:predicateObjectMap
+        [
+            rdfs:label "BT-759-LotResult";
+            rdfs:comment "Received Submissions Count of MG-SubmissionStatisticalInformation under ND-ReceivedSubmissions";
+            rr:predicate  epo:hasElectronicTenders    ;
+            rr:objectMap
+                [
+#                   rml:reference "if((not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 'tenders') or(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 'part-req') or(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-esubm') or (not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-med')or(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-micro')or(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-no-eea') or (not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-no-verif')or(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-oth-eea')or(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-small')or(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-sme')or(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-verif-inad')or(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-verif-inad-low'))then efbc:StatisticsNumeric else null" ;
+                   rml:reference "if (not(exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1')  and efbc:StatisticsCode/text() = ('t-esubm')) then efbc:StatisticsNumeric else null" ;
+                    rr:datatype xsd:integer  ;
+                ] ;
+        ];
+     rr:predicateObjectMap
+        [
+            rdfs:label "BT-759-LotResult";
+            rdfs:comment "Received Submissions Count of MG-SubmissionStatisticalInformation under ND-ReceivedSubmissions";
+            rr:predicate  epo:hasMediumTenderPerLots    ;
+            rr:objectMap
+                [
+#                   rml:reference "if((not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 'tenders') or(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 'part-req') or(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-esubm') or (not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-med')or(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-micro')or(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-no-eea') or (not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-no-verif')or(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-oth-eea')or(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-small')or(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-sme')or(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-verif-inad')or(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 't-verif-inad-low'))then efbc:StatisticsNumeric else null" ;
+                   rml:reference "if (not(exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1')  and efbc:StatisticsCode/text() = ('t-med')) then efbc:StatisticsNumeric else null" ;
+                    rr:datatype xsd:integer  ;
+                ] ;
+        ];
+     rr:predicateObjectMap
+        [
+            rdfs:label "BT-759-LotResult";
+            rdfs:comment "Received Submissions Count of MG-SubmissionStatisticalInformation under ND-ReceivedSubmissions";
+            rr:predicate  epo:hasReceivedMicroTenders     ;
+            rr:objectMap
+                [
+                   rml:reference "if (not(exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1')  and efbc:StatisticsCode/text() = ('t-micro')) then efbc:StatisticsNumeric else null" ;
+                    rr:datatype xsd:integer  ;
+                ] ;
+        ];
+     rr:predicateObjectMap
+        [
+            rdfs:label "BT-759-LotResult";
+            rdfs:comment "Received Submissions Count of MG-SubmissionStatisticalInformation under ND-ReceivedSubmissions";
+            rr:predicate  epo:hasNonEEAReceivedTenders ;
+            rr:objectMap
+                [
+                   rml:reference "if (not(exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1')  and efbc:StatisticsCode/text() = ('t-no-eea')) then efbc:StatisticsNumeric else null" ;
+                    rr:datatype xsd:integer  ;
+                ] ;
+        ];
+      rr:predicateObjectMap
+        [
+            rdfs:label "BT-759-LotResult";
+            rdfs:comment "Received Submissions Count of MG-SubmissionStatisticalInformation under ND-ReceivedSubmissions";
+            rr:predicate  epo:hasUnverifiedTenders  ;
+            rr:objectMap
+                [
+                   rml:reference "if (not(exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1')  and efbc:StatisticsCode/text() = ('t-no-verif')) then efbc:StatisticsNumeric else null" ;
+                    rr:datatype xsd:integer  ;
+                ] ;
+        ];
+       rr:predicateObjectMap
+        [
+            rdfs:label "BT-759-LotResult";
+            rdfs:comment "Received Submissions Count of MG-SubmissionStatisticalInformation under ND-ReceivedSubmissions";
+            rr:predicate  epo:hasEEAReceivedTenders   ;
+            rr:objectMap
+                [
+                   rml:reference "if (not(exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1')  and efbc:StatisticsCode/text() = ('t-oth-eea')) then efbc:StatisticsNumeric else null" ;
+                    rr:datatype xsd:integer  ;
+                ] ;
+        ];
+      rr:predicateObjectMap
+        [
+            rdfs:label "BT-759-LotResult";
+            rdfs:comment "Received Submissions Count of MG-SubmissionStatisticalInformation under ND-ReceivedSubmissions";
+            rr:predicate  epo:hasReceivedSmallTenders    ;
+            rr:objectMap
+                [
+                   rml:reference "if (not(exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1')  and efbc:StatisticsCode/text() = ('t-small')) then efbc:StatisticsNumeric else null" ;
+                    rr:datatype xsd:integer  ;
+                ] ;
+        ];
+      rr:predicateObjectMap
+        [
+            rdfs:label "BT-759-LotResult";
+            rdfs:comment "Received Submissions Count of MG-SubmissionStatisticalInformation under ND-ReceivedSubmissions";
+            rr:predicate  epo:hasSMEReceivedTenders     ;
+            rr:objectMap
+                [
+                   rml:reference "if (not(exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1')  and efbc:StatisticsCode/text() = ('t-sme')) then efbc:StatisticsNumeric else null" ;
+                    rr:datatype xsd:integer  ;
+                ] ;
+        ];
+      rr:predicateObjectMap
+        [
+            rdfs:label "BT-759-LotResult";
+            rdfs:comment "Received Submissions Count of MG-SubmissionStatisticalInformation under ND-ReceivedSubmissions";
+            rr:predicate  epo:hasInadmissibleTenders      ;
+            rr:objectMap
+                [
+                   rml:reference "if (not(exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1')  and efbc:StatisticsCode/text() = ('t-verif-inad')) then efbc:StatisticsNumeric else null" ;
+                    rr:datatype xsd:integer  ;
+                ] ;
+        ];
+      rr:predicateObjectMap
+        [
+            rdfs:label "BT-759-LotResult";
+            rdfs:comment "Received Submissions Count of MG-SubmissionStatisticalInformation under ND-ReceivedSubmissions";
+            rr:predicate  epo:hasAbnormallyLowTenders       ;
+            rr:objectMap
+                [
+                   rml:reference "if (not(exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1')  and efbc:StatisticsCode/text() = ('t-verif-inad-low')) then efbc:StatisticsNumeric else null" ;
                     rr:datatype xsd:integer  ;
                 ] ;
         ];

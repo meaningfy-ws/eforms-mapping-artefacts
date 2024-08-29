@@ -1048,6 +1048,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContract_CON-0001 a epo:Contr
   epo:FrameworkAgreement "true";
   epo:hasAccessURL "https://wheretofindcontract.com/ctr123"^^xsd:anyURI;
   epo:hasContractConclusionDate "2023-03-24+02:00"^^xsd:date;
+  epo:hasLotReference epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;
   epo:includesTender epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0001;
   epo:isFundedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractFund_VPU8QnEnvpxVBA2qwYNzjZ;
   epo:signedByBuyer epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Buyer_XBZfpJGKezpX9vV2w2Gtmt;
@@ -1058,6 +1059,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContract_CON-0002 a epo:Contr
   epo:FrameworkAgreement "true";
   epo:hasAccessURL "https://wheretofindcontract.com/ctr222"^^xsd:anyURI;
   epo:hasContractConclusionDate "2023-03-24+02:00"^^xsd:date;
+  epo:hasLotReference epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;
   epo:includesTender epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0002;
   epo:isFundedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractFund_oXwXYzaLxMkFreJUNf6BBv;
   epo:signedByBuyer epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Buyer_7UMPwyXRgVDYJBYSxTfTBn;

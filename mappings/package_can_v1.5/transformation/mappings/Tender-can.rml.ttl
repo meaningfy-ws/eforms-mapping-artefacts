@@ -82,6 +82,7 @@ tedm:MG-TenderAwardOutcome_ND-LotTender  a rr:TriplesMap ;
             rr:objectMap
                 [
                     rml:reference "cbc:RankCode";
+                    rr:datatype xsd:integer  ;
                 ] ;
         ];
     rr:predicateObjectMap

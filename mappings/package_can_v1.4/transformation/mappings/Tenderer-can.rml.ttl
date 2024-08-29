@@ -154,56 +154,56 @@ tedm:MG-Organization-playedBy-Tenderer_ND-Tenderer  a rr:TriplesMap ;
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Organization_{cbc:ID}" ;
             rr:class epo:Organization
         ] ;
-     rr:predicateObjectMap
-        [
-            rdfs:label "OPT-300-Tenderer" ;
-            rdfs:comment "Tenderer Identifier of MG-Organization under ND-Tenderer" ;
-            rr:predicate adms:identifier ;
-            rr:objectMap
-                [
-                    rr:parentTriplesMap tedm:MG-Identifier-identifier-Organization-playedBy-Tenderer_ND-Tenderer ;
-                    rr:joinCondition [
-                        rr:child "cbc:ID";
-                        rr:parent "cbc:ID";
-                    ];
-                ] ;
-        ] ;
+#     rr:predicateObjectMap
+#        [
+#            rdfs:label "OPT-300-Tenderer" ;
+#            rdfs:comment "Tenderer Identifier of MG-Organization under ND-Tenderer" ;
+#            rr:predicate adms:identifier ;
+#            rr:objectMap
+#                [
+#                    rr:parentTriplesMap tedm:MG-Identifier-identifier-Organization-playedBy-Tenderer_ND-Tenderer ;
+#                    rr:joinCondition [
+#                        rr:child "cbc:ID";
+#                        rr:parent "cbc:ID";
+#                    ];
+#                ] ;
+#        ] ;
       .
 
-tedm:MG-Identifier-identifier-Organization-playedBy-Tenderer_ND-Tenderer  a rr:TriplesMap ;
-    rdfs:label "MG-Identifier";
-    rml:logicalSource
-        [
-            rml:source "data/source.xml" ;
-            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:TenderingParty/efac:Tenderer" ;
-            rml:referenceFormulation ql:XPath
-        ] ;
-    rr:subjectMap
-        [
-            rdfs:label "ND-Tenderer";
-            rml:reference "if (exists(cbc:ID)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_TendererIdentifier_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
-            rr:class adms:Identifier
-        ] ;
-    rr:predicateObjectMap
-        [
-            rdfs:label "OPT-300-Tenderer";
-            rr:predicate skos:notation ;
-            rr:objectMap
-                [
-                    rml:reference "cbc:ID";
-                ] ;
-        ];
-     rr:predicateObjectMap
-        [
-            rdfs:label "OPT-300-Tenderer-Scheme" ;
-            rdfs:comment "Scheme of MG-Identifier under ND-Tenderer" ;
-            rr:predicate epo:hasScheme ;
-            rr:objectMap
-                [
-                    rml:reference "cbc:ID/@schemeName";
-                ] ;
-        ] ;
- .
+#tedm:MG-Identifier-identifier-Organization-playedBy-Tenderer_ND-Tenderer  a rr:TriplesMap ;
+#    rdfs:label "MG-Identifier";
+#    rml:logicalSource
+#        [
+#            rml:source "data/source.xml" ;
+#            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:TenderingParty/efac:Tenderer" ;
+#            rml:referenceFormulation ql:XPath
+#        ] ;
+#    rr:subjectMap
+#        [
+#            rdfs:label "ND-Tenderer";
+#            rml:reference "if (exists(cbc:ID)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_TendererIdentifier_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
+#            rr:class adms:Identifier
+#        ] ;
+#    rr:predicateObjectMap
+#        [
+#            rdfs:label "OPT-300-Tenderer";
+#            rr:predicate skos:notation ;
+#            rr:objectMap
+#                [
+#                    rml:reference "cbc:ID";
+#                ] ;
+#        ];
+#     rr:predicateObjectMap
+#        [
+#            rdfs:label "OPT-300-Tenderer-Scheme" ;
+#            rdfs:comment "Scheme of MG-Identifier under ND-Tenderer" ;
+#            rr:predicate epo:hasScheme ;
+#            rr:objectMap
+#                [
+#                    rml:reference "cbc:ID/@schemeName";
+#                ] ;
+#        ] ;
+# .
 
 tedm:MG-Organization-hasMember-OrganisationGroup-playedBy-Tenderer_ND-Tenderer a rr:TriplesMap ;
     rdfs:label "MG-Organization" ;

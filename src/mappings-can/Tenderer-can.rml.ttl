@@ -48,15 +48,14 @@ tedm:MG-Tenderer_ND-TenderingParty  a rr:TriplesMap ;
             rr:predicate epo:playedBy ;
             rr:objectMap
                 [
-                    rr:parentTriplesMap tedm:MG-OrganisationGroup-playedBy-Tenderer_ND-TenderingParty ;
+                   rr:parentTriplesMap tedm:MG-OrganisationGroup-playedBy-Tenderer_ND-TenderingParty ;
                    rr:joinCondition
-                    [
-                        rr:child "path(.)" ;
-                       rr:parent "path(.)" ;
-                   ] ;
+                      [
+                        rr:child "if(exists(efac:Tenderer[2])) then path(.) else null" ;
+                        rr:parent "path(.)" ;
+                      ] ;
                 ] ;
         ] ;
-
      rr:predicateObjectMap
         [
             rdfs:label "OPT-211-Tenderer" ;
@@ -76,7 +75,7 @@ tedm:MG-Tenderer_ND-TenderingParty  a rr:TriplesMap ;
                     rr:parentTriplesMap tedm:MG-Organization-playedBy-Tenderer_ND-Tenderer ;
                      rr:joinCondition
                     [
-                        rr:child "path(.)" ;
+                        rr:child "if(not(exists(efac:Tenderer[2]))) then path(.) else null" ;
                         rr:parent "path(..)" ;
                    ] ;
                 ] ;
@@ -154,7 +153,8 @@ tedm:MG-Organization-playedBy-Tenderer_ND-Tenderer  a rr:TriplesMap ;
     rr:subjectMap
         [
             rdfs:label "ND-Tenderer";
-            rml:reference "if(not(exists(efac:Tenderer[2]))) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_Organisation_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null";
+#            rml:reference "if(not(exists(efac:Tenderer[2]))) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_Organisation_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null";
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Organization_{cbc:ID}" ;
             rr:class epo:Organization
         ] ;
      rr:predicateObjectMap

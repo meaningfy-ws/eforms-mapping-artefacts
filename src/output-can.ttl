@@ -843,7 +843,8 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0009 a epo:Organiza
   cccev:registeredAddress epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyAddress_PWqQf3UzWb4VpZjpAfV2R3;
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Identifier_ORG-0009, epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TendererIdentifier_e2qdcoGJDPmK2UPWUzdmhi .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0010 a org:Organization;
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0010 a epo:Organization,
+    org:Organization;
   epo:hasLegalIdentifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_OrganisationIdentifier_aH6wABNpvU8pHKqJCX6PTo;
   epo:hasLegalName "Ayuda"@en;
   epo:hasPrimaryContactPoint epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyContactPoint_8L3aPT2CiaTmid78nwBMTG;
@@ -1089,8 +1090,6 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_StrategicProcurement_aCmMsvvkogsdTBE
   epo:hasNonAccessibilityCriterionJustification "Accessibility Justification lot 2 ---"@en;
   epo:includesAccessibilityCriterion <http://publications.europa.eu/resource/authority/accessibility/n-inc-just> .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubContractor_ORG-0010 a epo:Subcontractor .
-
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubcontractingEstimate_8tLJD9wyvjSHWYvDWGiX5D
   a epo:SubcontractingEstimate;
   epo:hasEstimatedPercentage 30.0;
@@ -1108,6 +1107,10 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubcontractingEstimate_nNq2rC7wBesmh
   epo:hasEstimatedPercentage 30.0;
   epo:hasSubcontractingEstimatedValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_nNq2rC7wBesmhA5baJ8mCt;
   dct:description "Subcontracting Description ---"@en .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Subcontractor_9j2v7t3GXjdgoHTvgxCPWt a
+    epo:Subcontractor;
+  epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0010 .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubmissionStatisticalInformation_A5K3ndcSySWYxA4wrRkqDG
   a epo:SubmissionStatisticalInformation;
@@ -1173,7 +1176,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0001 a epo:Tender;
   epo:isSubjectToGrouping epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_GLO_GLO-0001;
   epo:isSubmitedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0001;
   epo:isVariant true;
-  epo:specifiesSubcontractors epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubContractor_ORG-0010;
+  epo:specifiesSubcontractors epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Subcontractor_9j2v7t3GXjdgoHTvgxCPWt;
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderIdentifier_8tLJD9wyvjSHWYvDWGiX5D .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0002 a epo:Tender;

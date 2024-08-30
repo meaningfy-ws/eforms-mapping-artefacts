@@ -221,7 +221,7 @@ tedm:MG-MonetaryValue-hasApproximateFrameworkAgreementValue-NoticeAwardInformati
     rr:predicateObjectMap
         [
             rdfs:label "BT-1118-NoticeResult" ;
-            rdfs:comment "NoticeFrameworkApproximateValue of MonetaryValue under ND-NoticeResult" ;
+            rdfs:comment "Notice FrameworkApproximate Value of MonetaryValue under ND-NoticeResult" ;
             rr:predicate  epo:hasAmountValue   ;
             rr:objectMap
                 [

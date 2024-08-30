@@ -437,8 +437,6 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_FrameworkAgreementTerm_cbLiqkxUijgxf
   epo:hasBuyerCategoryDescription "Framework Buyer Categories ---"@en;
   epo:hasFrameworkAgreementType <http://publications.europa.eu/resource/authority/framework-agreement/fa-w-rc> .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_GLO_GLO-0001 a epo:LotGroup .
-
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_GreenProcurement_CrSXFRAVKMkjkVH4Y5vFm7
   a epo:GreenProcurement;
   epo:fulfillsRequirement <http://publications.europa.eu/resource/authority/environmental-impact/clim-mitig> .
@@ -1186,7 +1184,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0001 a epo:Tender;
   epo:foreseesSubcontracting epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubcontractingEstimate_8tLJD9wyvjSHWYvDWGiX5D;
   epo:hasFinancialOfferValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_JryEpNBTCzNfzKbsxaXwjt;
   epo:hasSubcontracting <http://publications.europa.eu/resource/authority/applicability/yes>;
-  epo:isSubjectToGrouping epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_GLO_GLO-0001;
+  epo:isSubjectToGrouping epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotGroup_GLO-0001;
   epo:isSubmitedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0001;
   epo:isVariant true;
   epo:specifiesSubcontractors epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Subcontractor_9j2v7t3GXjdgoHTvgxCPWt;

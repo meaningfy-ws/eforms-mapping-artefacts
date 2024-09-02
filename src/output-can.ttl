@@ -19,7 +19,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix tedm: <http://data.europa.eu/a4g/mapping/sf-rml/> .
 @prefix time: <http://www.w3.org/2006/time#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_AccessTerm_3m6Q8n9T683acseXWAKALc a epo:AccessTerm;
   epo:definesOfflineAccessProvider epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_OfflineAccessProvider_oBahBtUnPsC7aJgntGEdus;
@@ -73,6 +73,14 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_AwardCriterion_cMwBnyyxkduMCBR7uRm8C
   dct:description "AC Description ---"@en;
   skos:prefLabel "name of AC ---"@en .
 
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_AwardDecision_VPU8QnEnvpxVBA2qwYNzjZ a
+    epo:AwardDecision;
+  epo:hasAwardDecisionDate "2023-03-23+02:00"^^xs:date .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_AwardDecision_oXwXYzaLxMkFreJUNf6BBv a
+    epo:AwardDecision;
+  epo:hasAwardDecisionDate "2023-03-23+02:00"^^xs:date .
+
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_BeneficialOwnerTechnicalIdentifier_59Sg7tGS5qRkCGHeLrco2F
   a adms:Identifier;
   epo:hasScheme "ubo";
@@ -111,7 +119,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Buyer_7UMPwyXRgVDYJBYSxTfTBn a epo:B
   epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0001 .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Buyer_JGa56JxZ6vPv3NZm242nMu a epo:Buyer;
-  epo:hasBuyerProfile "https://profile.example.com"^^xsd:anyURI;
+  epo:hasBuyerProfile "https://profile.example.com"^^xs:anyURI;
   epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0001 .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Buyer_XBZfpJGKezpX9vV2w2Gtmt a epo:Buyer;
@@ -207,7 +215,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyAddress_kazHeCPckN7TddQSoqJzx
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyContactPoint_2eGnrypHYVpTNxKbtnAVq2
   a cccev:ContactPoint;
   epo:hasFax "+352 1234567899";
-  epo:hasInternetAddress "https://esendercorp.eu"^^xsd:anyURI;
+  epo:hasInternetAddress "https://esendercorp.eu"^^xs:anyURI;
   cccev:email "esender@esendcorp.lu";
   cccev:telephone "+352 123456789" .
 
@@ -215,7 +223,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyContactPoint_6r33Cv99oV38zobB
   a cccev:ContactPoint;
   epo:hasContactName "Info desk";
   epo:hasFax "+44 123456789";
-  epo:hasInternetAddress "https://www.fin-adm.com"^^xsd:anyURI;
+  epo:hasInternetAddress "https://www.fin-adm.com"^^xs:anyURI;
   cccev:email "info@fin-adm.com";
   cccev:telephone "+44 123456780" .
 
@@ -223,7 +231,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyContactPoint_8L3aPT2CiaTmid78
   a cccev:ContactPoint;
   epo:hasContactName "Info";
   epo:hasFax "+34 123456789";
-  epo:hasInternetAddress "https://www.ayuda.com"^^xsd:anyURI;
+  epo:hasInternetAddress "https://www.ayuda.com"^^xs:anyURI;
   cccev:email "info@ayuda.com";
   cccev:telephone "+34 123456780" .
 
@@ -231,7 +239,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyContactPoint_Kt8Anvwo3sjQE2zR
   a cccev:ContactPoint;
   epo:hasContactName "A and R Department";
   epo:hasFax "+44 9928736";
-  epo:hasInternetAddress "https://www.appeal-adm-proc.com"^^xsd:anyURI;
+  epo:hasInternetAddress "https://www.appeal-adm-proc.com"^^xs:anyURI;
   cccev:email "info@appeal-adm-proc.com";
   cccev:telephone "+44 899375" .
 
@@ -239,7 +247,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyContactPoint_NcbPXevKMmMoUV4i
   a cccev:ContactPoint;
   epo:hasContactName "Info desk";
   epo:hasFax "+44 123456789";
-  epo:hasInternetAddress "https://www.employment-legis.com"^^xsd:anyURI;
+  epo:hasInternetAddress "https://www.employment-legis.com"^^xs:anyURI;
   cccev:email "info@example.com";
   cccev:telephone "+44 123456780" .
 
@@ -247,7 +255,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyContactPoint_NsQgV4dy8XNKVeR2
   a cccev:ContactPoint;
   epo:hasContactName "Info desk";
   epo:hasFax "+44 123456789";
-  epo:hasInternetAddress "https://www.env-dpt.com"^^xsd:anyURI;
+  epo:hasInternetAddress "https://www.env-dpt.com"^^xs:anyURI;
   cccev:email "info@env-dpt.com";
   cccev:telephone "+44 123456780" .
 
@@ -255,7 +263,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyContactPoint_RVyNteJCXPVfgCRs
   a cccev:ContactPoint;
   epo:hasContactName "Service Presse and Communication";
   epo:hasFax "+352 123456789";
-  epo:hasInternetAddress "https://www.gyro-soft.com"^^xsd:anyURI;
+  epo:hasInternetAddress "https://www.gyro-soft.com"^^xs:anyURI;
   cccev:email "info@gyro-soft.com";
   cccev:telephone "+352 123456780" .
 
@@ -263,7 +271,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyContactPoint_SKFLyoFfRmoPfFxa
   a cccev:ContactPoint;
   epo:hasContactName "Contact";
   epo:hasFax "+49 123456789";
-  epo:hasInternetAddress "https://www.the-best-app.com"^^xsd:anyURI;
+  epo:hasInternetAddress "https://www.the-best-app.com"^^xs:anyURI;
   cccev:email "info@the-best-app.com";
   cccev:telephone "+49 123456780" .
 
@@ -271,7 +279,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyContactPoint_UMqokYpZn6koQvE3
   a cccev:ContactPoint;
   epo:hasContactName "Contact";
   epo:hasFax "+33 123456789";
-  epo:hasInternetAddress "https://www.competitor.com"^^xsd:anyURI;
+  epo:hasInternetAddress "https://www.competitor.com"^^xs:anyURI;
   cccev:email "info@competitor.com";
   cccev:telephone "+33 123456780" .
 
@@ -279,7 +287,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyContactPoint_boyhsCP9AduPpEce
   a cccev:ContactPoint;
   epo:hasContactName "Info desk";
   epo:hasFax "+44 123456789";
-  epo:hasInternetAddress "https://www.fin-leg.com"^^xsd:anyURI;
+  epo:hasInternetAddress "https://www.fin-leg.com"^^xs:anyURI;
   cccev:email "info@example.com";
   cccev:telephone "+44 123456780" .
 
@@ -287,7 +295,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyContactPoint_exXX5w4R9epdXpsc
   a cccev:ContactPoint;
   epo:hasContactName "Info desk";
   epo:hasFax "+44 098765432";
-  epo:hasInternetAddress "https://www.pub-mediator.com"^^xsd:anyURI;
+  epo:hasInternetAddress "https://www.pub-mediator.com"^^xs:anyURI;
   cccev:email "info@pub-mediator.com";
   cccev:telephone "+44 123456345678" .
 
@@ -365,13 +373,13 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractLocation_a7vRB6mj8wKnZwmoPH5
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractPeriod_6rzNvVzvXk5FCPBPRmrELC
   a epo:Period;
-  epo:hasBeginning "2023-01-01+01:00"^^xsd:date;
-  epo:hasEnd "2023-05-23+01:00"^^xsd:date .
+  epo:hasBeginning "2023-01-01+01:00"^^xs:date;
+  epo:hasEnd "2023-05-23+01:00"^^xs:date .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractPeriod_nwFgoD6yNKgPvB9L4PsJUF
   a epo:Period;
-  epo:hasBeginning "2023-01-01+01:00"^^xsd:date;
-  epo:hasEnd "2023-05-23+01:00"^^xsd:date .
+  epo:hasBeginning "2023-01-01+01:00"^^xs:date;
+  epo:hasEnd "2023-05-23+01:00"^^xs:date .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractTerm_KorWZrEXpQCBgrGqtjBT6W a
     epo:ContractTerm;
@@ -437,6 +445,20 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_FrameworkAgreementTerm_cbLiqkxUijgxf
   epo:hasBuyerCategoryDescription "Framework Buyer Categories ---"@en;
   epo:hasFrameworkAgreementType <http://publications.europa.eu/resource/authority/framework-agreement/fa-w-rc> .
 
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_FrameworkAgreement_VPU8QnEnvpxVBA2qwYNzjZ
+  a epo:FrameworkAgreement .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_FrameworkAgreement_oXwXYzaLxMkFreJUNf6BBv
+  a epo:FrameworkAgreement .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_FrameworkNoticeIdentifier_VPU8QnEnvpxVBA2qwYNzjZ
+  a adms:Identifier;
+  skos:notation "12345678-2023" .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_FrameworkNoticeIdentifier_oXwXYzaLxMkFreJUNf6BBv
+  a adms:Identifier;
+  skos:notation "12345678-2023" .
+
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_GreenProcurement_CrSXFRAVKMkjkVH4Y5vFm7
   a epo:GreenProcurement;
   epo:fulfillsRequirement <http://publications.europa.eu/resource/authority/environmental-impact/clim-mitig> .
@@ -444,6 +466,9 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_GreenProcurement_CrSXFRAVKMkjkVH4Y5v
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_GreenProcurement_Kc62R6i3CT36VZoaXkktTx
   a epo:GreenProcurement;
   epo:fulfillsRequirement <http://publications.europa.eu/resource/authority/environmental-impact/clim-mitig> .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_GreenProcurement_NJqWLgHQbjQCE5pSdQ2254
+  a epo:GreenProcurement .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_GreenProcurement_aTxk5f26D5UBUZ3UgoLWca
   a epo:GreenProcurement;
@@ -507,7 +532,9 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotAwardOutcome_RES-0001 a epo:LotAw
   epo:concernsLot epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;
   epo:hasApproximateFrameworkAgreementValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_buhfT7xy3UtLfxfwv8HbfT;
   epo:hasAwardStatus <http://publications.europa.eu/resource/authority/winner-selection-status/selec-w>;
-  epo:hasFrameworkAgreementMaximumValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_FrameworkAgreementMaximumMonetaryValue_buhfT7xy3UtLfxfwv8HbfT .
+  epo:hasFrameworkAgreementMaximumValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_FrameworkAgreementMaximumMonetaryValue_buhfT7xy3UtLfxfwv8HbfT;
+  epo:seeAlso epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_GreenProcurement_NJqWLgHQbjQCE5pSdQ2254,
+    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_VehicleInformation_NJqWLgHQbjQCE5pSdQ2254 .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotAwardOutcome_RES-0002 a epo:LotAwardOutcome;
   epo:comprisesTenderAwardOutcome epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderAwardOutcome_jWu7544ZnnuCc6He5Egjkx;
@@ -543,6 +570,10 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotGroup_GLO-0001 a epo:LotGroup;
   dct:title "Title ---"@en;
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotsGroupIdentifier_jucn4erQJnXcty2wPoNNzB .
 
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotGroup_LOT-0001 a epo:LotGroup .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotGroup_LOT-0002 a epo:LotGroup .
+
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotIdentifier_KorWZrEXpQCBgrGqtjBT6W a
     adms:Identifier;
   epo:hasScheme "Lot";
@@ -575,6 +606,8 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotPurpose_Zg4ZmGAZR5g4xA8RP4Bd63 a 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotPurpose_myo3vCsSuhWxPVpWujDK9s a epo:Purpose;
   epo:hasMainClassification <http://data.europa.eu/cpv/cpv/75121000>;
   epo:hasTotalQuantity epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Quantity_myo3vCsSuhWxPVpWujDK9s .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_GLO-0001 a epo:Lot .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001 a epo:Lot;
   epo:foreseesContractSpecificTerm epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractTerm_RdpZg7b4gA4ZEQmQB5ZNhK;
@@ -703,7 +736,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Notice a epo:Notice, epo:Notice29, e
   epo::announcesRole epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0001,
     epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0002;
   epo:announcesNoticeAwardInformation epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_NoticeAwardInformation_JryEpNBTCzNfzKbsxaXwjt;
-  epo:hasESenderDispatchDate "2023-04-23T20:59:32+01:00"^^xsd:dateTime;
+  epo:hasESenderDispatchDate "2023-04-23T20:59:32+01:00"^^xs:dateTime;
   epo:hasFormType <http://publications.europa.eu/resource/authority/form-type/result>;
   epo:hasNoticeType <http://publications.europa.eu/resource/authority/notice-type/can-standard>;
   epo:hasOfficialLanguage <http://publications.europa.eu/resource/authority/language/ENG>;
@@ -1001,6 +1034,14 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementServiceProvider_AxEoDZth6
   epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0007;
   dct:description "ted-esen" .
 
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_PurchaseContract_VPU8QnEnvpxVBA2qwYNzjZ
+  a epo:PurchaseContract;
+  epo:followsRulesSetBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_FrameworkAgreement_VPU8QnEnvpxVBA2qwYNzjZ .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_PurchaseContract_oXwXYzaLxMkFreJUNf6BBv
+  a epo:PurchaseContract;
+  epo:followsRulesSetBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_FrameworkAgreement_oXwXYzaLxMkFreJUNf6BBv .
+
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_PurposeLotGroupEstimatedValue_meF4dTeUhaCEbdrjCjZEdP
   a epo:MonetaryValue;
   epo:hasAmountValue 9999999.99;
@@ -1013,6 +1054,13 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Quantity_Zg4ZmGAZR5g4xA8RP4Bd63 a ep
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Quantity_myo3vCsSuhWxPVpWujDK9s a epo:Quantity;
   epo:hasQuantityValue 1000.0;
   epo:hasUnitCode <http://publications.europa.eu/resource/authority/measurement-unit/HUR> .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ResultNotice_RES-0001 a epo:ResultNotice;
+  epo:announcesContract epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_FrameworkAgreement_VPU8QnEnvpxVBA2qwYNzjZ,
+    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_FrameworkAgreement_oXwXYzaLxMkFreJUNf6BBv;
+  epo:announcesRole epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Subcontractor_9j2v7t3GXjdgoHTvgxCPWt;
+  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_FrameworkNoticeIdentifier_VPU8QnEnvpxVBA2qwYNzjZ,
+    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_FrameworkNoticeIdentifier_oXwXYzaLxMkFreJUNf6BBv .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ReviewProcedureInformationProvider_NLBDyF4vvGuCAMJpQJe8nw
   a epo:ReviewProcedureInformationProvider;
@@ -1047,9 +1095,8 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContractIdentifier_oXwXYzaLxM
   skos:notation "KLM FGH/912" .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContract_CON-0001 a epo:Contract;
-  epo:FrameworkAgreement "true";
-  epo:hasAccessURL "https://wheretofindcontract.com/ctr123"^^xsd:anyURI;
-  epo:hasContractConclusionDate "2023-03-24+02:00"^^xsd:date;
+  epo:hasAccessURL "https://wheretofindcontract.com/ctr123"^^xs:anyURI;
+  epo:hasContractConclusionDate "2023-03-24+02:00"^^xs:date;
   epo:hasLotReference epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;
   epo:includesTender epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0001;
   epo:isFundedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractFund_VPU8QnEnvpxVBA2qwYNzjZ;
@@ -1058,9 +1105,8 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContract_CON-0001 a epo:Contr
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContractIdentifier_VPU8QnEnvpxVBA2qwYNzjZ .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContract_CON-0002 a epo:Contract;
-  epo:FrameworkAgreement "true";
-  epo:hasAccessURL "https://wheretofindcontract.com/ctr222"^^xsd:anyURI;
-  epo:hasContractConclusionDate "2023-03-24+02:00"^^xsd:date;
+  epo:hasAccessURL "https://wheretofindcontract.com/ctr222"^^xs:anyURI;
+  epo:hasContractConclusionDate "2023-03-24+02:00"^^xs:date;
   epo:hasLotReference epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;
   epo:includesTender epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0002;
   epo:isFundedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractFund_oXwXYzaLxMkFreJUNf6BBv;
@@ -1185,6 +1231,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0001 a epo:Tender;
   epo:hasSubcontracting <http://publications.europa.eu/resource/authority/applicability/yes>;
   epo:isSubjectToGrouping epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotGroup_GLO-0001;
   epo:isSubmitedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0001;
+  epo:isSubmittedForLot epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_GLO-0001;
   epo:isVariant true;
   epo:specifiesSubcontractors epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Subcontractor_9j2v7t3GXjdgoHTvgxCPWt;
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderIdentifier_8tLJD9wyvjSHWYvDWGiX5D .
@@ -1193,6 +1240,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0002 a epo:Tender;
   epo:foreseesSubcontracting epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubcontractingEstimate_nNq2rC7wBesmhA5baJ8mCt;
   epo:hasFinancialOfferValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_JryEpNBTCzNfzKbsxaXwjt;
   epo:hasSubcontracting <http://publications.europa.eu/resource/authority/applicability/yes>;
+  epo:isSubjectToGrouping epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotGroup_LOT-0001;
   epo:isSubmitedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0002;
   epo:isSubmittedForLot epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;
   epo:isVariant true;
@@ -1201,6 +1249,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0002 a epo:Tender;
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0003 a epo:Tender;
   epo:foreseesSubcontracting epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubcontractingEstimate_econsLsjPJro8aUo9zUip8;
   epo:hasSubcontracting <http://publications.europa.eu/resource/authority/applicability/yes>;
+  epo:isSubjectToGrouping epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotGroup_LOT-0002;
   epo:isSubmitedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0002;
   epo:isSubmittedForLot epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0002;
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderIdentifier_econsLsjPJro8aUo9zUip8 .
@@ -1232,7 +1281,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TouchPointAddress_bWVshHaFdEUL6h5JY9
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TouchPoint_TPO-0001 a cccev:ContactPoint;
   epo:hasContactName "Head of Procurement Department";
   epo:hasFax "+123 456789";
-  epo:hasInternetAddress "https://www.fin-adm.com"^^xsd:anyURI;
+  epo:hasInternetAddress "https://www.fin-adm.com"^^xs:anyURI;
   cccev:email "proc-info@fin-adm.com";
   cccev:telephone "+123 45678";
   dct:description "Procurement Department"@en;
@@ -1241,7 +1290,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TouchPoint_TPO-0001 a cccev:ContactP
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TouchPoint_TPO-0002 a cccev:ContactPoint;
   epo:hasContactName "Proc Archives Dpt Lead";
   epo:hasFax "+44 1234567769";
-  epo:hasInternetAddress "https://www.fin-adm.com"^^xsd:anyURI;
+  epo:hasInternetAddress "https://www.fin-adm.com"^^xs:anyURI;
   cccev:email "proc-archi@fin-adm.com";
   cccev:telephone "+44 123456776";
   dct:description "Fin Adm Archives"@en;
@@ -1254,10 +1303,22 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_UBOAddress_Kgw52KheiSHAoueYo7YFXX a 
   locn:postCode "10123";
   locn:postName "Bruxelles" .
 
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_VehicleInformation_NJqWLgHQbjQCE5pSdQ2254
+  a epo:VehicleInformation;
+  epo:concernsGreenProcurement epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_GreenProcurement_NJqWLgHQbjQCE5pSdQ2254;
+  epo:hasCleanVehicles 10;
+  epo:hasTotalVehicles 45;
+  epo:hasZeroEmissionVehicles 2;
+  epo:specifiesCleanVehicleDirectiveContractType <http://publications.europa.eu/resource/authority/cvd-contract-type/oth-serv-contr> .
+
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_VehicleInformation_aTxk5f26D5UBUZ3UgoLWca
   a epo:VehicleInformation;
   epo:concernsGreenProcurement epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_GreenProcurement_aTxk5f26D5UBUZ3UgoLWca;
   epo:specifiesCleanVehicleDirectiveContractType <http://publications.europa.eu/resource/authority/cvd-contract-type/oth-serv-contr> .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_VehicleInformation_h2o5BJdvvp9KScEzqN2krS
+  a epo:VehicleInformation;
+  epo:specifiesCleanVehicleDirectiveContractType <http://publications.europa.eu/resource/authority/vehicle-category/n2-n3> .
 
 epd:id_9c0fd704-64d3-4294-a3b6-6df45911ab9f-01_Notice a epo:PlanningNotice;
   epo:announcesPlannedProcurementPart epd:id_9c0fd704-64d3-4294-a3b6-6df45911ab9f-01_PlannedProcurementPart_K53mu54F9PCk4RoVqcWwaL;

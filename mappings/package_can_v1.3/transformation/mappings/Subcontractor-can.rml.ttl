@@ -70,7 +70,7 @@ tedm:MG-ResultNotice_ND-SubContractor  a rr:TriplesMap ;
     rr:subjectMap
         [
             rdfs:label "ND-SubContractor";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ResultNotice_{../../cbc:ID}" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ResultNotice_{../../efac:LotResult/cbc:ID}" ;
             rr:class epo:ResultNotice
         ] ;
     rr:predicateObjectMap

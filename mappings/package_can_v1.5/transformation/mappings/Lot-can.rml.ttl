@@ -70,3 +70,19 @@ tedm:MG-Lot-hasLotReference-Contract_ND-LotResultContractReference a rr:TriplesM
             rr:class epo:Lot
         ] ;
 .
+
+tedm:MG-Lot-contextualisedBy-PaymentExecutor_ND-PayerParty a rr:TriplesMap ;
+  rdfs:label "MG-Lot";
+       rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotResult/cac:PayerParty" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-PayerParty" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Lot_{../efac:TenderLot/cbc:ID}" ;
+            rr:class epo:Lot
+        ] ;
+    .

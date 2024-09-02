@@ -135,18 +135,18 @@ tedm:MG-Contract_ND-SettledContract  a rr:TriplesMap ;
                     rr:datatype xsd:anyURI;
                 ] ;
         ] ;
-    rr:predicateObjectMap
-        [
-            rdfs:label "BT-768-Contract" ;
-            rdfs:comment "Contract Framework Agreement of MG-Contract under ND-SettledContract" ;
-            rr:predicate epo:FrameworkAgreement ;
-            rr:objectMap
-                [
-                    rml:reference "if (efbc:ContractFrameworkIndicator='true') then efbc:ContractFrameworkIndicator else null";
-
-
-                ] ;
-        ] ;
+#    rr:predicateObjectMap
+#        [
+#            rdfs:label "BT-768-Contract" ;
+#            rdfs:comment "Contract Framework Agreement of MG-Contract under ND-SettledContract" ;
+#            rr:predicate epo:FrameworkAgreement ;
+#            rr:objectMap
+#                [
+#                    rml:reference "if (efbc:ContractFrameworkIndicator='true') then efbc:ContractFrameworkIndicator else null";
+#
+#
+#                ] ;
+#        ] ;
      rr:predicateObjectMap
         [
             rdfs:label "ND-ContractEUFunds and BT-5011-Contract" ;
@@ -421,6 +421,213 @@ tedm:MG-Contract_ND-LotResultContractReference  a rr:TriplesMap ;
             rr:objectMap
                 [
                     rr:parentTriplesMap tedm:MG-Lot-hasLotReference-Contract_ND-LotResultContractReference ;
+                ] ;
+        ] ;
+    .
+
+tedm:MG:PurchaseContract_ND-SettledContract  a rr:TriplesMap ;
+  rdfs:label "MG-PurchaseContract";
+       rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:SettledContract" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-SettledContract" ;
+#            rml:reference "(if(exists(efbc:ContractFrameworkIndicator))) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_PurchaseContract_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw') else null" ;
+             rml:reference "if(exists(efbc:ContractFrameworkIndicator)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_PurchaseContract_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null";
+            rr:class epo:PurchaseContract
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-100-Contract";
+            rdfs:comment "Framework Notice Identifier of MG-PurchaseContract under ND-SettledContract";
+            rr:predicate epo:followsRulesSetBy ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-FrameworkAgreement-followsRulesSetBy-PurchaseContract_ND-SettledContract ;
+                    rr:joinCondition [
+                        rr:child "path(.)";
+                        rr:parent "path(.)";
+                    ];
+                ] ;
+        ];
+    .
+
+tedm:MG-FrameworkAgreement_ND-SettledContract  a rr:TriplesMap ;
+  rdfs:label "MG-FrameworkAgreement";
+       rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:SettledContract" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-SettledContract" ;
+#           rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_SettledContract_{cbc:ID}" ;
+             rml:reference "if(exists(/*/cac:ProcurementProjectLot[(cbc:ID/@schemeName='Lot') and (cbc:ID/text()=/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender[cbc:ID/text()=//efac:LotTender/cbc:ID/text()]/efac:TenderLot/cbc:ID/text())]/cac:TenderingProcess/cac:ContractingSystem/cbc:ContractingSystemTypeCode[@listName='framework-agreement' and starts-with(text(),'fa-')])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_FrameworkAgreement_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null";
+            rr:class epo:FrameworkAgreement
+        ] ;
+    .
+
+tedm:MG-Identifier-identifier-ResultNotice_ND-SettledContract  a rr:TriplesMap ;
+  rdfs:label "MG-Identifier";
+       rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:SettledContract" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-SettledContract" ;
+            rml:reference "if (exists(cac:NoticeDocumentReference/cbc:ID)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_FrameworkNoticeIdentifier_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(.)) || '?response_type=raw') else null" ;
+            rr:class adms:Identifier
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-100-Contract";
+            rdfs:comment "Framework Notice Identifier of MG-Identifier under ND-SettledContract";
+            rr:predicate skos:notation ;
+            rr:objectMap
+                [
+                    rml:reference "cac:NoticeDocumentReference/cbc:ID";
+                ] ;
+        ];
+    .
+
+tedm:MG-ResultNotice_ND-SettledContract  a rr:TriplesMap ;
+  rdfs:label "MG-ResultNotice";
+       rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:SettledContract" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-SettledContract" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ResultNotice_{../efac:LotResult/cbc:ID}" ;
+            rr:class epo:ResultNotice
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-100-Contract";
+            rdfs:comment "Framework Notice Identifier of MG-ResultNotice under ND-SettledContract";
+            rr:predicate adms:identifier ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-Identifier-identifier-ResultNotice_ND-SettledContract ;
+                    rr:joinCondition [
+                        rr:child "path(.)";
+                        rr:parent "path(.)";
+                    ];
+                ] ;
+        ];
+     rr:predicateObjectMap
+        [
+            rdfs:label "BT-100-Contract";
+            rdfs:comment "Framework Notice Identifier of MG-Identifier under ND-SettledContract";
+            rr:predicate epo:announcesContract ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-FrameworkAgreement-announcesContract-ResultNotice_ND-SettledContract ;
+                    rr:joinCondition [
+                        rr:child "path(.)";
+                        rr:parent "path(.)";
+                    ];
+                ] ;
+        ];
+    .
+
+tedm:MG-FrameworkAgreement-announcesContract-ResultNotice_ND-SettledContract  a rr:TriplesMap ;
+  rdfs:label "MG-FrameworkAgreement";
+       rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:SettledContract" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-SettledContract" ;
+            rml:reference "if (exists(cac:NoticeDocumentReference/cbc:ID)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_FrameworkAgreement_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(.)) || '?response_type=raw') else null" ;
+            rr:class epo:FrameworkAgreement
+        ] ;
+    .
+
+tedm:MG-FrameworkAgreement-followsRulesSetBy-PurchaseContract_ND-SettledContract  a rr:TriplesMap ;
+  rdfs:label "MG-FrameworkAgreement";
+       rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:SettledContract" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-SettledContract" ;
+            rml:reference "if (exists(cac:NoticeDocumentReference/cbc:ID)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_FrameworkAgreement_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(.)) || '?response_type=raw') else null" ;
+            rr:class epo:FrameworkAgreement
+        ] ;
+    .
+tedm:MG-AwardDecision_ND-SettledContract  a rr:TriplesMap ;
+  rdfs:label "MG-AwardDecision";
+       rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:SettledContract" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-SettledContract" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_AwardDecision_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rr:class epo:AwardDecision
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-1451-Contract";
+            rdfs:comment "Winner Decision Date of MG-AwardDecision under ND-SettledContract";
+            rr:predicate  epo:hasAwardDecisionDate     ;
+            rr:objectMap
+                [
+                    rml:reference "cbc:AwardDate";
+                    rr:datatype xsd:date   ;
+                ] ;
+        ];
+    .
+tedm:MG-Contract_ND-PayerParty  a rr:TriplesMap ;
+  rdfs:label "MG-Contract";
+       rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotResult/cac:PayerParty" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-PayerParty" ;
+#            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ContractTerm_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_SettledContract_{../../efac:SettledContract/cbc:ID}" ;
+            rr:class epo:Contract
+        ] ;
+    rr:predicateObjectMap
+        [
+            # TODO min sdk 1.8
+            tedm:minSDKVersion "1.8" ;
+            rr:predicate epo:isSubjectToContractSpecificTerm ;
+            rr:objectMap
+                [
+                   rr:parentTriplesMap tedm:MG-ContractTerm-isSubjectToContractSpecificTerm-Contract_ND-PayerParty ;
+                   rr:joinCondition
+                      [
+                        rr:child "path(.)" ;
+                        rr:parent "path(.)" ;
+                      ] ;
                 ] ;
         ] ;
     .

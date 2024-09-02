@@ -142,55 +142,56 @@ tedm:MG-LotGroup_ND-NoticeResultGroupFA  a rr:TriplesMap ;
                     ];
                 ] ;
         ];
-   rr:predicateObjectMap
-        [
-            rdfs:label "BT-1561-NoticeResult";
-            rdfs:comment "GroupFrameworkValueLotIdentifier of MG-Lot under ND-NoticeResultGroupFA";
-            rr:predicate  epo:hasLaunchFrameworkAgreementMaximumValue  ;
-            rr:objectMap
-                [
-                   rr:parentTriplesMap tedm:MG-MonetaryValue-hasLaunchFrameworkAgreementMaximumValue-LotGroup_ND-NoticeResultGroupFA ;
-                    rr:joinCondition[
-                        rr:child "path(.)";
-                        rr:parent "path(.)";
-                    ];
-                ] ;
-        ];
+   rdfs:comment "this will be supported only in ePO 4.2.0, ( see GH issue #644)";
+#   rr:predicateObjectMap
+#        [
+#            rdfs:label "BT-1561-NoticeResult";
+#            rdfs:comment "GroupFrameworkValueLotIdentifier of MG-Lot under ND-NoticeResultGroupFA";
+#            rr:predicate  epo:hasApproximateFrameworkAgreementValue  ;
+#            rr:objectMap
+#                [
+#                   rr:parentTriplesMap tedm:MG-MonetaryValue-hasApproximateFrameworkAgreementValue-LotGroup_ND-NoticeResultGroupFA ;
+#                    rr:joinCondition[
+#                        rr:child "path(.)";
+#                        rr:parent "path(.)";
+#                    ];
+#                ] ;
+#        ];
 .
 
-tedm:MG-MonetaryValue-hasLaunchFrameworkAgreementMaximumValue-LotGroup_ND-NoticeResultGroupFA  a rr:TriplesMap ;
-    rdfs:label "MG-MonetaryValue";
-    rml:logicalSource
-        [
-            rml:source "data/source.xml" ;
-            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:GroupFramework" ;
-            rml:referenceFormulation ql:XPath
-        ] ;
-    rr:subjectMap
-        [
-            rdfs:label "ND-NoticeResultGroupFA";
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_MonetaryValue_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
-            rr:class epo:MonetaryValue
-        ] ;
-   rr:predicateObjectMap
-        [
-            # TODO to be added the the source for validation
-            rdfs:label "BT-1561-NoticeResult";
-            rdfs:comment "GroupFrameworkRe-estimatedValue of MG-MonetaryValue under ND-NoticeResultGroupFA";
-            rr:predicate epo:hasAmountValue ;
-            rr:objectMap
-                [
-                    rml:reference "if (not(exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='gro-ree-val']) and efbc:GroupFrameworkReestimatedValueAmount/text() = '-1' )) then efbc:GroupFrameworkReestimatedValueAmount else null";
-                    rr:datatype xsd:decimal;
-                ] ;
-        ];
-    rr:predicateObjectMap
-        [
-            rr:predicate epo:hasCurrency ;
-            rr:objectMap
-                [
-                    rml:reference "efbc:GroupFrameworkReestimatedValueAmount/@currencyID";
-                ] ;
-        ]
-.
-
+# TODO this will be supported only in ePO 4.2.0, ( see GH issue #644)
+#tedm:MG-MonetaryValue-hasApproximateFrameworkAgreementValue-LotGroup_ND-NoticeResultGroupFA  a rr:TriplesMap ;
+#    rdfs:label "MG-MonetaryValue";
+#    rml:logicalSource
+#        [
+#            rml:source "data/source.xml" ;
+#            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:GroupFramework" ;
+#            rml:referenceFormulation ql:XPath
+#        ] ;
+#    rr:subjectMap
+#        [
+#            rdfs:label "ND-NoticeResultGroupFA";
+#            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_MonetaryValue_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+#            rr:class epo:MonetaryValue
+#        ] ;
+#   rr:predicateObjectMap
+#        [
+#            # TODO to be added the the source for validation
+#            rdfs:label "BT-1561-NoticeResult";
+#            rdfs:comment "GroupFrameworkRe-estimatedValue of MG-MonetaryValue under ND-NoticeResultGroupFA";
+#            rr:predicate epo:hasAmountValue ;
+#            rr:objectMap
+#                [
+#                    rml:reference "if (not(exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='gro-ree-val']) and efbc:GroupFrameworkReestimatedValueAmount/text() = '-1' )) then efbc:GroupFrameworkReestimatedValueAmount else null";
+#                    rr:datatype xsd:decimal;
+#                ] ;
+#        ];
+#    rr:predicateObjectMap
+#        [
+#            rr:predicate epo:hasCurrency ;
+#            rr:objectMap
+#                [
+#                    rml:reference "efbc:GroupFrameworkReestimatedValueAmount/@currencyID";
+#                ] ;
+#        ]
+#.

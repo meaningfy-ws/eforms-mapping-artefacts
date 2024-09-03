@@ -105,6 +105,6 @@ tedm:MG-BudgetProvider-seeAlso-LotAwardOutcome_ND-FinancingParty  a rr:TriplesMa
             rdfs:label "ND-FinancingParty" ;
             rdfs:comment "Financing Party (IDreference)";
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Organization_{cac:PartyIdentification/cbc:ID}" ;
-            rr:class epo:Organization
+            rr:class org:Organization
         ] ;
     .

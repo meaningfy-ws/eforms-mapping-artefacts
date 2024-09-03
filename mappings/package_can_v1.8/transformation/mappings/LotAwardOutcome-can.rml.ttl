@@ -263,7 +263,7 @@ tedm:MG-LotAwardOutcome_ND-StrategicProcurementLotResult  a rr:TriplesMap ;
      rr:predicateObjectMap
         [
             rdfs:label "ND-StrategicProcurementInformationLotResult" ;
-            rr:predicate epo:seeAlso   ;
+            rr:predicate rdfs:seeAlso ;
             rr:objectMap
                 [
                    rr:parentTriplesMap tedm:MG-GreenProcurement-seeAlso-LotAwardOutcome_ND-StrategicProcurementLotResult ;
@@ -276,7 +276,7 @@ tedm:MG-LotAwardOutcome_ND-StrategicProcurementLotResult  a rr:TriplesMap ;
      rr:predicateObjectMap
         [
             rdfs:label "ND-StrategicProcurementInformationLotResult" ;
-            rr:predicate epo:seeAlso   ;
+            rr:predicate rdfs:seeAlso ;
             rr:objectMap
                 [
                    rr:parentTriplesMap tedm:MG-VehicleInformation-seeAlso-LotAwardOutcome_ND-ProcurementStatistics ;
@@ -304,7 +304,7 @@ tedm:MG-LotAwardOutcome_ND-StrategicProcurementLotResult  a rr:TriplesMap ;
      rr:predicateObjectMap
         [
             rdfs:comment "ND-FinancingParty of MG-LotAwardOutcome, this relationship will be represented differently in future EPO versions" ;
-            rr:predicate epo:seeAlso   ;
+            rr:predicate rdfs:seeAlso ;
             rr:objectMap
                 [
                    rr:parentTriplesMap tedm:MG-BudgetProvider-seeAlso-LotAwardOutcome_ND-FinancingParty ;

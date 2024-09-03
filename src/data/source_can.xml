@@ -121,6 +121,16 @@
 								<!-- "id" : "BT-13713-LotResult", "name" : "Result Lot Identifier" -->
 								<cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
 							</efac:TenderLot>
+							<cac:FinancingParty>
+								<cac:PartyIdentification>
+									<cbc:ID>ORG-0001</cbc:ID>
+								</cac:PartyIdentification>
+							</cac:FinancingParty>
+							<cac:PayerParty>
+								<cac:PartyIdentification>
+									<cbc:ID>ORG-0001</cbc:ID>
+								</cac:PartyIdentification>
+							</cac:PayerParty>
 						</efac:LotResult>
 						<!-- -->
 						<!-- RESULTS - LOT-0002-->

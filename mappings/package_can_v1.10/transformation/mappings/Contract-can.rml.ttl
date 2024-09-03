@@ -442,7 +442,7 @@ tedm:MG:PurchaseContract_ND-SettledContract  a rr:TriplesMap ;
         ] ;
     rr:predicateObjectMap
         [
-            rdfs:label "BT-100-Contract";
+            rdfs:label "OPT-100-Contract";
             rdfs:comment "Framework Notice Identifier of MG-PurchaseContract under ND-SettledContract";
             rr:predicate epo:followsRulesSetBy ;
             rr:objectMap
@@ -489,7 +489,7 @@ tedm:MG-Identifier-identifier-ResultNotice_ND-SettledContract  a rr:TriplesMap ;
         ] ;
     rr:predicateObjectMap
         [
-            rdfs:label "BT-100-Contract";
+            rdfs:label "OPT-100-Contract";
             rdfs:comment "Framework Notice Identifier of MG-Identifier under ND-SettledContract";
             rr:predicate skos:notation ;
             rr:objectMap
@@ -515,7 +515,7 @@ tedm:MG-ResultNotice_ND-SettledContract  a rr:TriplesMap ;
         ] ;
     rr:predicateObjectMap
         [
-            rdfs:label "BT-100-Contract";
+            rdfs:label "OPT-100-Contract";
             rdfs:comment "Framework Notice Identifier of MG-ResultNotice under ND-SettledContract";
             rr:predicate adms:identifier ;
             rr:objectMap
@@ -529,7 +529,7 @@ tedm:MG-ResultNotice_ND-SettledContract  a rr:TriplesMap ;
         ];
      rr:predicateObjectMap
         [
-            rdfs:label "BT-100-Contract";
+            rdfs:label "OPT-100-Contract";
             rdfs:comment "Framework Notice Identifier of MG-Identifier under ND-SettledContract";
             rr:predicate epo:announcesContract ;
             rr:objectMap

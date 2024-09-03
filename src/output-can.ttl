@@ -570,10 +570,6 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotGroup_GLO-0001 a epo:LotGroup;
   dct:title "Title ---"@en;
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotsGroupIdentifier_jucn4erQJnXcty2wPoNNzB .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotGroup_LOT-0001 a epo:LotGroup .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotGroup_LOT-0002 a epo:LotGroup .
-
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotIdentifier_KorWZrEXpQCBgrGqtjBT6W a
     adms:Identifier;
   epo:hasScheme "Lot";
@@ -607,7 +603,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotPurpose_myo3vCsSuhWxPVpWujDK9s a 
   epo:hasMainClassification <http://data.europa.eu/cpv/cpv/75121000>;
   epo:hasTotalQuantity epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Quantity_myo3vCsSuhWxPVpWujDK9s .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_GLO-0001 a epo:Lot .
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_GLO-0001 a epo:LotGroup .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001 a epo:Lot;
   epo:foreseesContractSpecificTerm epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractTerm_RdpZg7b4gA4ZEQmQB5ZNhK;
@@ -1229,9 +1225,8 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0001 a epo:Tender;
   epo:foreseesSubcontracting epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubcontractingEstimate_8tLJD9wyvjSHWYvDWGiX5D;
   epo:hasFinancialOfferValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_JryEpNBTCzNfzKbsxaXwjt;
   epo:hasSubcontracting <http://publications.europa.eu/resource/authority/applicability/yes>;
-  epo:isSubjectToGrouping epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotGroup_GLO-0001;
+  epo:isSubjectToGrouping epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_GLO-0001;
   epo:isSubmitedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0001;
-  epo:isSubmittedForLot epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_GLO-0001;
   epo:isVariant true;
   epo:specifiesSubcontractors epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Subcontractor_9j2v7t3GXjdgoHTvgxCPWt;
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderIdentifier_8tLJD9wyvjSHWYvDWGiX5D .
@@ -1240,7 +1235,6 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0002 a epo:Tender;
   epo:foreseesSubcontracting epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubcontractingEstimate_nNq2rC7wBesmhA5baJ8mCt;
   epo:hasFinancialOfferValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_JryEpNBTCzNfzKbsxaXwjt;
   epo:hasSubcontracting <http://publications.europa.eu/resource/authority/applicability/yes>;
-  epo:isSubjectToGrouping epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotGroup_LOT-0001;
   epo:isSubmitedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0002;
   epo:isSubmittedForLot epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;
   epo:isVariant true;
@@ -1249,7 +1243,6 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0002 a epo:Tender;
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0003 a epo:Tender;
   epo:foreseesSubcontracting epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubcontractingEstimate_econsLsjPJro8aUo9zUip8;
   epo:hasSubcontracting <http://publications.europa.eu/resource/authority/applicability/yes>;
-  epo:isSubjectToGrouping epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotGroup_LOT-0002;
   epo:isSubmitedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0002;
   epo:isSubmittedForLot epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0002;
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderIdentifier_econsLsjPJro8aUo9zUip8 .

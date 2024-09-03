@@ -73,7 +73,20 @@ tedm:MG-ResultNotice_ND-NoticeResult a rr:TriplesMap ;
                     ];
                 ] ;
         ]   ;
-
+    rr:predicateObjectMap
+        [
+            rdfs:label "ND-NoticeResult" ;
+            rdfs:comment "NoticeResult of MG-ResultNotice under ND-NoticeResult" ;
+            rr:predicate epo:announcesAwardDecision ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-AwardDecision-announcesAwardDecision-ResultNotice_ND-NoticeResult ;
+                    rr:joinCondition [
+                        rr:child "if(exists(efac:LotResult)) then path(.) else null" ;
+                        rr:parent "path(.)" ;
+                    ] ;
+                ] ;
+        ]  ;
     rr:predicateObjectMap
         [
             rdfs:label "OPT-210-Tenderer" ;

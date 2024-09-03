@@ -73,11 +73,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_AwardCriterion_cMwBnyyxkduMCBR7uRm8C
   dct:description "AC Description ---"@en;
   skos:prefLabel "name of AC ---"@en .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_AwardDecision_VPU8QnEnvpxVBA2qwYNzjZ a
-    epo:AwardDecision;
-  epo:hasAwardDecisionDate "2023-03-23+02:00"^^xs:date .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_AwardDecision_oXwXYzaLxMkFreJUNf6BBv a
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_AwardDecision_JryEpNBTCzNfzKbsxaXwjt a
     epo:AwardDecision;
   epo:hasAwardDecisionDate "2023-03-23+02:00"^^xs:date .
 
@@ -710,6 +706,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_nNq2rC7wBesmhA5baJ8mCt
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Notice a epo:Notice, epo:Notice29, epo:ResultNotice;
   epo::announcesRole epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0001,
     epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0002;
+  epo:announcesAwardDecision epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_AwardDecision_JryEpNBTCzNfzKbsxaXwjt;
   epo:announcesNoticeAwardInformation epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_NoticeAwardInformation_JryEpNBTCzNfzKbsxaXwjt;
   epo:hasESenderDispatchDate "2023-04-23T20:59:32+01:00"^^xs:dateTime;
   epo:hasFormType <http://publications.europa.eu/resource/authority/form-type/result>;

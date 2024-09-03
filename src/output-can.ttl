@@ -92,6 +92,10 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_BeneficialOwnerTechnicalIdentifier_n
   epo:hasScheme "ubo";
   skos:notation "UBO-0004" .
 
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_BudgetProvider_NXb2WhCvHwRKxwpAaxLqts
+  a epo:BudgetProvider;
+  epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0001 .
+
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Buyer_7UMPwyXRgVDYJBYSxTfTBn a epo:Buyer;
   epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0001 .
 
@@ -358,6 +362,10 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractPeriod_nwFgoD6yNKgPvB9L4PsJU
   epo:hasBeginning "2023-01-01+01:00"^^xs:date;
   epo:hasEnd "2023-05-23+01:00"^^xs:date .
 
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractTerm_BeKugscVJPFt54vNGjQBPC a
+    epo:ContractTerm;
+  epo:definesPaymentExecutor epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_PaymentExecutor_BeKugscVJPFt54vNGjQBPC .
+
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractTerm_KorWZrEXpQCBgrGqtjBT6W a
     epo:ContractTerm;
   epo:definesContractPeriod epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractPeriod_6rzNvVzvXk5FCPBPRmrELC;
@@ -510,7 +518,8 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotAwardOutcome_RES-0001 a epo:LotAw
   epo:hasApproximateFrameworkAgreementValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_buhfT7xy3UtLfxfwv8HbfT;
   epo:hasAwardStatus <http://publications.europa.eu/resource/authority/winner-selection-status/selec-w>;
   epo:hasFrameworkAgreementMaximumValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_FrameworkAgreementMaximumMonetaryValue_buhfT7xy3UtLfxfwv8HbfT;
-  rdfs:seeAlso epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_GreenProcurement_NJqWLgHQbjQCE5pSdQ2254,
+  rdfs:seeAlso epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_BudgetProvider_NXb2WhCvHwRKxwpAaxLqts,
+    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_GreenProcurement_NJqWLgHQbjQCE5pSdQ2254,
     epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_VehicleInformation_NJqWLgHQbjQCE5pSdQ2254 .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotAwardOutcome_RES-0002 a epo:LotAwardOutcome;
@@ -884,6 +893,10 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_TPO-0001 a org:Organiza
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_TPO-0002 a org:Organization;
   owl:sameAs epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0001 .
 
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_PaymentExecutor_BeKugscVJPFt54vNGjQBPC
+  a epo:PaymentExecutor;
+  epo:contextualisedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001 .
+
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Person_UBO-0001 a person:Person;
   epo:hasNationality <http://publications.europa.eu/resource/authority/country/BEL>;
   cccev:registeredAddress epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_UBOAddress_Kgw52KheiSHAoueYo7YFXX;
@@ -1076,6 +1089,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContract_CON-0001 a epo:Contr
   epo:hasLotReference epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;
   epo:includesTender epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0001;
   epo:isFundedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractFund_VPU8QnEnvpxVBA2qwYNzjZ;
+  epo:isSubjectToContractSpecificTerm epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractTerm_BeKugscVJPFt54vNGjQBPC;
   epo:signedByBuyer epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Buyer_XBZfpJGKezpX9vV2w2Gtmt;
   dct:title "This is the title of the contract ---"@en;
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContractIdentifier_VPU8QnEnvpxVBA2qwYNzjZ .

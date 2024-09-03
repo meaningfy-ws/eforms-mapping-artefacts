@@ -1017,14 +1017,6 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementServiceProvider_AxEoDZth6
   epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0007;
   dct:description "ted-esen" .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_PurchaseContract_VPU8QnEnvpxVBA2qwYNzjZ
-  a epo:PurchaseContract;
-  epo:followsRulesSetBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_FrameworkAgreement_VPU8QnEnvpxVBA2qwYNzjZ .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_PurchaseContract_oXwXYzaLxMkFreJUNf6BBv
-  a epo:PurchaseContract;
-  epo:followsRulesSetBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_FrameworkAgreement_oXwXYzaLxMkFreJUNf6BBv .
-
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_PurposeLotGroupEstimatedValue_meF4dTeUhaCEbdrjCjZEdP
   a epo:MonetaryValue;
   epo:hasAmountValue 9999999.99;
@@ -1077,7 +1069,8 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContractIdentifier_oXwXYzaLxM
   a adms:Identifier;
   skos:notation "KLM FGH/912" .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContract_CON-0001 a epo:Contract;
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContract_CON-0001 a epo:Contract,
+    epo:PurchaseContract;
   epo:hasAccessURL "https://wheretofindcontract.com/ctr123"^^xs:anyURI;
   epo:hasContractConclusionDate "2023-03-24+02:00"^^xs:date;
   epo:hasLotReference epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;
@@ -1087,7 +1080,8 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContract_CON-0001 a epo:Contr
   dct:title "This is the title of the contract ---"@en;
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContractIdentifier_VPU8QnEnvpxVBA2qwYNzjZ .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContract_CON-0002 a epo:Contract;
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContract_CON-0002 a epo:Contract,
+    epo:PurchaseContract;
   epo:hasAccessURL "https://wheretofindcontract.com/ctr222"^^xs:anyURI;
   epo:hasContractConclusionDate "2023-03-24+02:00"^^xs:date;
   epo:hasLotReference epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;

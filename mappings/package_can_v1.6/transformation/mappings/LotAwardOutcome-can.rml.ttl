@@ -298,8 +298,8 @@ tedm:MG-LotAwardOutcome_ND-StrategicProcurementLotResult  a rr:TriplesMap ;
     rr:subjectMap
         [
             rdfs:label "ND-FinancingParty" ;
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_BudgetProvider_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
-            rr:class epo:BudgetProvider
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_LotAwardOutcome_{../cbc:ID}" ;
+            rr:class epo:LotAwardOutcome
         ] ;
      rr:predicateObjectMap
         [

@@ -96,25 +96,6 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_BeneficialOwnerTechnicalIdentifier_n
   epo:hasScheme "ubo";
   skos:notation "UBO-0004" .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Business_ORG-0008 a epo:Business;
-  epo:hasBeneficialOwner epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Person_UBO-0001;
-  epo:hasBusinessSize <http://publications.europa.eu/resource/authority/economic-operator-size/large>;
-  epo:isListedCompany false .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Business_ORG-0009 a epo:Business;
-  epo:hasBusinessSize <http://publications.europa.eu/resource/authority/economic-operator-size/micro>;
-  epo:isListedCompany false .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Business_ORG-0010 a epo:Business;
-  epo:hasBeneficialOwner epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Person_UBO-0003;
-  epo:hasBusinessSize <http://publications.europa.eu/resource/authority/economic-operator-size/medium>;
-  epo:isListedCompany false .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Business_ORG-0011 a epo:Business;
-  epo:hasBeneficialOwner epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Person_UBO-0004;
-  epo:hasBusinessSize <http://publications.europa.eu/resource/authority/economic-operator-size/large>;
-  epo:isListedCompany false .
-
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Buyer_7UMPwyXRgVDYJBYSxTfTBn a epo:Buyer;
   epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0001 .
 
@@ -859,31 +840,46 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0007 a org:Organiza
   cccev:registeredAddress epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyAddress_XSr6vAeEq7ruMbW45bvsTp;
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Identifier_ORG-0007 .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0008 a org:Organization;
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0008 a epo:Business,
+    org:Organization;
+  epo:hasBeneficialOwner epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Person_UBO-0001;
+  epo:hasBusinessSize <http://publications.europa.eu/resource/authority/economic-operator-size/large>;
   epo:hasLegalIdentifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_OrganisationIdentifier_BatdGXtE4W6JswZaRbzXbY;
   epo:hasLegalName "Gyro Soft SA"@en;
   epo:hasPrimaryContactPoint epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyContactPoint_RVyNteJCXPVfgCRsomYU8e;
+  epo:isListedCompany false;
   cccev:registeredAddress epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyAddress_kazHeCPckN7TddQSoqJzxV;
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Identifier_ORG-0008 .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0009 a org:Organization;
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0009 a epo:Business,
+    org:Organization;
+  epo:hasBusinessSize <http://publications.europa.eu/resource/authority/economic-operator-size/micro>;
   epo:hasLegalIdentifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_OrganisationIdentifier_FmMq7XVAcXtG3EmwPCPxb6;
   epo:hasLegalName "The best App Ltd."@en;
   epo:hasPrimaryContactPoint epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyContactPoint_SKFLyoFfRmoPfFxaxBTeM9;
+  epo:isListedCompany false;
   cccev:registeredAddress epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyAddress_PWqQf3UzWb4VpZjpAfV2R3;
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Identifier_ORG-0009 .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0010 a org:Organization;
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0010 a epo:Business,
+    org:Organization;
+  epo:hasBeneficialOwner epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Person_UBO-0003;
+  epo:hasBusinessSize <http://publications.europa.eu/resource/authority/economic-operator-size/medium>;
   epo:hasLegalIdentifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_OrganisationIdentifier_aH6wABNpvU8pHKqJCX6PTo;
   epo:hasLegalName "Ayuda"@en;
   epo:hasPrimaryContactPoint epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyContactPoint_8L3aPT2CiaTmid78nwBMTG;
+  epo:isListedCompany false;
   cccev:registeredAddress epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyAddress_QGxu2dPi4aMxWvazg7nLfW;
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Identifier_ORG-0010 .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0011 a org:Organization;
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0011 a epo:Business,
+    org:Organization;
+  epo:hasBeneficialOwner epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Person_UBO-0004;
+  epo:hasBusinessSize <http://publications.europa.eu/resource/authority/economic-operator-size/large>;
   epo:hasLegalIdentifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_OrganisationIdentifier_BpHV2HFi6aA8H6oMrquULu;
   epo:hasLegalName "Competitor"@en;
   epo:hasPrimaryContactPoint epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyContactPoint_UMqokYpZn6koQvE3bWxatk;
+  epo:isListedCompany false;
   cccev:registeredAddress epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyAddress_Jwx4RfdUgXZsP62GuWEJCA;
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Identifier_ORG-0011 .
 

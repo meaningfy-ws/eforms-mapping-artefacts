@@ -514,7 +514,7 @@ tedm:MG-Tender-includesTender-Contract_ND-SettledContractTenderReference  a rr:T
   rdfs:label "BT-3202-Contract";
         # TODO max sdk 1.7
         tedm:minSDKVersion "1.8" ;
-                                                                          rml:logicalSource
+        rml:logicalSource
         [
             rml:source "data/source.xml" ;
             rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:SettledContract/efac:LotTender" ;

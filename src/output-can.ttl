@@ -430,12 +430,6 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_FrameworkAgreementTerm_cbLiqkxUijgxf
   epo:hasBuyerCategoryDescription "Framework Buyer Categories ---"@en;
   epo:hasFrameworkAgreementType <http://publications.europa.eu/resource/authority/framework-agreement/fa-w-rc> .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_FrameworkAgreement_VPU8QnEnvpxVBA2qwYNzjZ
-  a epo:FrameworkAgreement .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_FrameworkAgreement_oXwXYzaLxMkFreJUNf6BBv
-  a epo:FrameworkAgreement .
-
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_FrameworkNoticeIdentifier_VPU8QnEnvpxVBA2qwYNzjZ
   a adms:Identifier;
   skos:notation "12345678-2023" .
@@ -716,6 +710,8 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Notice a epo:Notice, epo:Notice29, e
   epo::announcesRole epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0001,
     epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0002;
   epo:announcesAwardDecision epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_AwardDecision_JryEpNBTCzNfzKbsxaXwjt;
+  epo:announcesContract epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContract_CON-0001,
+    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContract_CON-0002;
   epo:announcesNoticeAwardInformation epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_NoticeAwardInformation_JryEpNBTCzNfzKbsxaXwjt;
   epo:hasESenderDispatchDate "2023-04-23T20:59:32+01:00"^^xs:dateTime;
   epo:hasFormType <http://publications.europa.eu/resource/authority/form-type/result>;
@@ -725,7 +721,9 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Notice a epo:Notice, epo:Notice29, e
   epo:refersToLot epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001, epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0002;
   epo:refersToPrevious epd:id_9c0fd704-64d3-4294-a3b6-6df45911ab9f-01_Notice;
   epo:refersToProcedure epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Procedure_6dcsBnuV4FTNoRpTZHckqN;
-  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_NoticeIdentifier_aHt4iskyRUJYALjw7mSMu2 .
+  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_FrameworkNoticeIdentifier_VPU8QnEnvpxVBA2qwYNzjZ,
+    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_FrameworkNoticeIdentifier_oXwXYzaLxMkFreJUNf6BBv,
+    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_NoticeIdentifier_aHt4iskyRUJYALjw7mSMu2 .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_NoticeAwardInformation_JryEpNBTCzNfzKbsxaXwjt
   a epo:NoticeAwardInformation;
@@ -1044,11 +1042,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Quantity_myo3vCsSuhWxPVpWujDK9s a ep
   epo:hasUnitCode <http://publications.europa.eu/resource/authority/measurement-unit/HUR> .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ResultNotice_RES-0001 a epo:ResultNotice;
-  epo:announcesContract epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_FrameworkAgreement_VPU8QnEnvpxVBA2qwYNzjZ,
-    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_FrameworkAgreement_oXwXYzaLxMkFreJUNf6BBv;
-  epo:announcesRole epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Subcontractor_9j2v7t3GXjdgoHTvgxCPWt;
-  adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_FrameworkNoticeIdentifier_VPU8QnEnvpxVBA2qwYNzjZ,
-    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_FrameworkNoticeIdentifier_oXwXYzaLxMkFreJUNf6BBv .
+  epo:announcesRole epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Subcontractor_9j2v7t3GXjdgoHTvgxCPWt .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ReviewProcedureInformationProvider_NLBDyF4vvGuCAMJpQJe8nw
   a epo:ReviewProcedureInformationProvider;
@@ -1083,7 +1077,8 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContractIdentifier_oXwXYzaLxM
   skos:notation "KLM FGH/912" .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContract_CON-0001 a epo:Contract,
-    epo:PurchaseContract;
+    epo:FrameworkAgreement, epo:PurchaseContract;
+  epo:followsRulesSetBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContract_CON-0001;
   epo:hasAccessURL "https://wheretofindcontract.com/ctr123"^^xs:anyURI;
   epo:hasContractConclusionDate "2023-03-24+02:00"^^xs:date;
   epo:hasLotReference epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;
@@ -1095,7 +1090,8 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContract_CON-0001 a epo:Contr
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContractIdentifier_VPU8QnEnvpxVBA2qwYNzjZ .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContract_CON-0002 a epo:Contract,
-    epo:PurchaseContract;
+    epo:FrameworkAgreement, epo:PurchaseContract;
+  epo:followsRulesSetBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContract_CON-0002;
   epo:hasAccessURL "https://wheretofindcontract.com/ctr222"^^xs:anyURI;
   epo:hasContractConclusionDate "2023-03-24+02:00"^^xs:date;
   epo:hasLotReference epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;

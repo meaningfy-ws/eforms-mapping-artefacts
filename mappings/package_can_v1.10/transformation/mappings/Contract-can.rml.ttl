@@ -541,7 +541,8 @@ tedm:MG-FrameworkAgreement-announcesContract-ResultNotice_ND-SettledContract  a 
     rr:subjectMap
         [
             rdfs:label "ND-SettledContract" ;
-            rml:reference "if (exists(cac:NoticeDocumentReference/cbc:ID)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_SettledContract_' || cbc:ID else null" ;
+#            rml:reference "if (exists(cac:NoticeDocumentReference/cbc:ID)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_SettledContract_' || cbc:ID else null" ;
+            rml:reference "if (exists(/*/cac:ProcurementProjectLot[(cbc:ID/@schemeName='Lot') and (cbc:ID/text()=/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender[cbc:ID/text()=//efac:LotTender/cbc:ID/text()]/efac:TenderLot/cbc:ID/text())]/cac:TenderingProcess/cac:ContractingSystem/cbc:ContractingSystemTypeCode[@listName='framework-agreement' and starts-with(text(),'fa-')])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_SettledContract_' || cbc:ID else null" ;
             rr:class epo:FrameworkAgreement
         ] ;
     .

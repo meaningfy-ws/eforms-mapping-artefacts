@@ -209,7 +209,8 @@ tedm:MG-LotAwardOutcome-summarisesInformationForAwardOutcome-SubmissionStatistic
     rr:subjectMap
         [
             rdfs:label "ND-LotResult" ;
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_LotAwardOutcome_{cbc:ID}" ;
+#            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_LotAwardOutcome_{cbc:ID}" ;
+            rml:reference "if(exists(cbc:LowerTenderAmount) or exists(cbc:HigherTenderAmount) or exists(efac:ReceivedSubmissionsStatistics)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_LotAwardOutcome_' || cbc:ID else null";
             rr:class epo:LotAwardOutcome
         ] ;
     .

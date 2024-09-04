@@ -225,7 +225,7 @@ tedm:MG-SubmissionStatisticalInformation_ND-LotResult  a rr:TriplesMap ;
                 [
                    rr:parentTriplesMap tedm:MG-LotAwardOutcome-summarisesInformationForAwardOutcome-SubmissionStatisticalInformation_ND-LotResult;
                     rr:joinCondition[
-                        rr:child "path(.)";
+                        rr:child "if(exists(cbc:LowerTenderAmount) or exists(cbc:HigherTenderAmount) or exists(efac:ReceivedSubmissionsStatistics)) then path(.) else null";
                         rr:parent "path(.)";
                     ];
                 ] ;

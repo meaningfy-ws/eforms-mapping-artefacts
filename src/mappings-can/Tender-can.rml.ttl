@@ -81,7 +81,7 @@ tedm:MG-TenderAwardOutcome_ND-LotTender  a rr:TriplesMap ;
             rr:predicate  epo:hasAwardRank ;
             rr:objectMap
                 [
-                    rml:reference "cbc:RankCode";
+                    rml:reference "if(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='ten-ran']) and cbc:RankCode/text() = '-1' )) then cbc:RankCode else null";
                     rr:datatype xsd:integer  ;
                 ] ;
         ];
@@ -94,7 +94,7 @@ tedm:MG-TenderAwardOutcome_ND-LotTender  a rr:TriplesMap ;
                 [
                     rr:parentTriplesMap tedm:MG-Tender-concernsTender-TenderAwardOutcome_ND-LotTender ;
                     rr:joinCondition[
-                        rr:child "path(.)";
+                        rr:child "if(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='ten-ran']) and cbc:RankCode/text() = '-1' )) then path(.) else null";
                         rr:parent "path(.)"
                     ];
                 ] ;
@@ -415,6 +415,7 @@ tedm:MG-SubcontractingEstimate-foreseesSubcontracting-Tender_ND-SubcontractedCon
                     rdfs:label "BT-554-Tender-Language" ;
                     rdfs:comment "Language of Subcontracting Description of MG-SubcontractingEstimate under ND-SubcontractedActivity" ;
                     rml:reference "efbc:TermDescription";
+                    rml:reference "if(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='sub-des']) and efbc:TermDescription/text() = 'unpublished' )) then efbc:TermDescription else null";
                     rml:languageMap [
                         fnml:functionValue [
                             rr:predicateObjectMap [
@@ -489,7 +490,6 @@ tedm:MG-Lot-isSubmittedForLot-Tender_ND-LotTender  a rr:TriplesMap ;
         [
              rdfs:label "ND-LotTender" ;
              rml:reference "if (exists(efac:TenderLot/cbc:ID[starts-with(text(), 'LOT-')])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_Lot_' || efac:TenderLot/cbc:ID else null" ;
-#             rml:reference "if (exists( /*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cbc:ID[text() = //efac:TenderLot/cbc:ID/text()] )) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_Lot_' || efac:TenderLot/cbc:ID else null" ;
              rr:class epo:Lot
         ] ;
     .

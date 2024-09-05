@@ -653,6 +653,18 @@ tedm:MG-AwardDecision_ND-LotResult a rr:TriplesMap ;
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_AwardDecision_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
             rr:class epo:AwardDecision
         ] ;
+    rr:predicateObjectMap
+        [
+            rr:predicate epo:comprisesAwardOutcome ;
+            rr:objectMap
+                [
+                   rr:parentTriplesMap tedm:MG-LotAwardOutcome-comprisesAwardOutcome-AwardDecision-LotResult ;
+                    rr:joinCondition[
+                        rr:child "path(.)";
+                        rr:parent "path(.)"
+                    ];
+                ] ;
+        ] ;
     .
 
 tedm:MG-AwardDecision-announcesAwardDecision-ResultNotice-LotResult a rr:TriplesMap ;

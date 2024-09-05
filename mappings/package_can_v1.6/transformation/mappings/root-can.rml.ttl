@@ -289,6 +289,34 @@ tedm:MG-LotGroupAwardInformation-announcesLotGroupAwardInformation-ResultNotice_
         ] ;
 .
 
+tedm:MG-ResultNotice_ND-LotResult a rr:TriplesMap ;
+  rdfs:label "MG-ResultNotice";
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotResult" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "LotResult" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Notice" ;
+            rr:class epo-not:ResultNotice
+        ] ;
+    rr:predicateObjectMap
+        [
+            rr:predicate epo:announcesAwardDecision  ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-AwardDecision-announcesAwardDecision-ResultNotice-LotResult;
+                         rr:joinCondition [
+                              rr:child "path(.)";
+                              rr:parent "path(.)";
+                     ] ;
+                ] ;
+        ] ;
+   .
+
 
 
 ##--- Function Parameters ---

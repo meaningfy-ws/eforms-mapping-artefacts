@@ -75,6 +75,8 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_AwardCriterion_cMwBnyyxkduMCBR7uRm8C
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_AwardDecision_JryEpNBTCzNfzKbsxaXwjt a
     epo:AwardDecision;
+  epo:comprisesAwardOutcome epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotAwardOutcome_RES-0001,
+    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotAwardOutcome_RES-0002;
   epo:hasAwardDecisionDate "2023-03-23+02:00"^^xs:date .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_BeneficialOwnerTechnicalIdentifier_59Sg7tGS5qRkCGHeLrco2F

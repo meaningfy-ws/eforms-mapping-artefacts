@@ -110,7 +110,7 @@ tedm:MG-ResultNotice_ND-NoticeResult a rr:TriplesMap ;
                 [
                     rr:parentTriplesMap tedm:MG-AwardDecision-announcesAwardDecision-ResultNotice_ND-NoticeResult ;
                     rr:joinCondition [
-                        rr:child "if(exists(efac:LotResult) ) then path(.) else null" ;
+                        rr:child "if(exists(efac:SettledContract/cbc:AwardDate) ) then path(.) else null" ;
                         rr:parent "path(.)" ;
                     ] ;
                 ] ;

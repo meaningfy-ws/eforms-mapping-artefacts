@@ -601,7 +601,7 @@ tedm:MG-AwardDecision-announcesAwardDecision-ResultNotice_ND-NoticeResult a rr:T
     rr:subjectMap
         [
             rdfs:label "ND-SettledContract" ;
-            rml:reference "if(exists(efac:SettledContract[1]/cbc:AwardDate)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_AwardDecision_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
+            rml:reference "if(exists(efac:SettledContract)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_AwardDecision_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
             rr:class epo:AwardDecision
         ] ;
     .

@@ -248,7 +248,7 @@ tedm:MG-LotAwardOutcome_ND-LotResultTenderReference  a rr:TriplesMap ;
 .
 
 tedm:MG-LotAwardOutcome_ND-StrategicProcurementLotResult  a rr:TriplesMap ;
-  rdfs:label "MG-GreenProcurement";
+  rdfs:label "MG-LotAwardOutcome";
        rml:logicalSource
         [
             rml:source "data/source.xml" ;
@@ -309,6 +309,34 @@ tedm:MG-LotAwardOutcome_ND-StrategicProcurementLotResult  a rr:TriplesMap ;
             rr:objectMap
                 [
                    rr:parentTriplesMap tedm:MG-BudgetProvider-seeAlso-LotAwardOutcome_ND-FinancingParty ;
+                    rr:joinCondition[
+                        rr:child "path(.)";
+                        rr:parent "path(.)"
+                    ];
+                ] ;
+        ] ;
+    .
+
+tedm:MG-LotAwardOutcome_ND-BuyerReviewComplainants  a rr:TriplesMap ;
+    rdfs:label "MG-LotAwardOutcome" ;
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotResult/efac:AppealRequestsStatistics[efbc:StatisticsCode/@listName='review-type']" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-BuyerReviewComplainants";
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_LotAwardOutcome_{../cbc:ID}" ;
+            rr:class epo:LotAwardOutcome
+        ] ;
+     rr:predicateObjectMap
+        [
+            rr:predicate rdfs:seeAlso ;
+            rr:objectMap
+                [
+                   rr:parentTriplesMap tedm:MG-ReviewRequestSummary-seeAlso-LotAwardOutcome_ND-BuyerReviewComplainants ;
                     rr:joinCondition[
                         rr:child "path(.)";
                         rr:parent "path(.)"

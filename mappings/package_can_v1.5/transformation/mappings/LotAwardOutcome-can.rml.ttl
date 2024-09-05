@@ -344,3 +344,19 @@ tedm:MG-LotAwardOutcome_ND-BuyerReviewComplainants  a rr:TriplesMap ;
                 ] ;
         ] ;
     .
+
+tedm:MG-LotAwardOutcome-comprisesAwardOutcome-AwardDecision-LotResult a rr:TriplesMap ;
+    rdfs:label "MG-LotAwardOutcome" ;
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotResult" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-LotResult" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_LotAwardOutcome_{cbc:ID}" ;
+            rr:class epo:LotAwardOutcome
+        ] ;
+    .

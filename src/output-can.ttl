@@ -73,7 +73,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_AwardCriterion_cMwBnyyxkduMCBR7uRm8C
   dct:description "AC Description ---"@en;
   skos:prefLabel "name of AC ---"@en .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_AwardDecision_JryEpNBTCzNfzKbsxaXwjt a
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_AwardDecision_X7kGKvhmsm4n9XZKc7u8Wt a
     epo:AwardDecision;
   epo:comprisesAwardOutcome epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotAwardOutcome_RES-0001,
     epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotAwardOutcome_RES-0002;
@@ -710,7 +710,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_nNq2rC7wBesmhA5baJ8mCt
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Notice a epo:Notice, epo:Notice29, epo:ResultNotice;
   epo::announcesRole epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0001,
     epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0002;
-  epo:announcesAwardDecision epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_AwardDecision_JryEpNBTCzNfzKbsxaXwjt;
+  epo:announcesAwardDecision epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_AwardDecision_X7kGKvhmsm4n9XZKc7u8Wt;
   epo:announcesContract epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContract_CON-0001,
     epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContract_CON-0002;
   epo:announcesNoticeAwardInformation epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_NoticeAwardInformation_JryEpNBTCzNfzKbsxaXwjt;

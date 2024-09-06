@@ -55,6 +55,21 @@ tedm:MG-BudgetProvider_ND-FinancingParty  a rr:TriplesMap ;
                       ] ;
                 ] ;
         ] ;
+     rr:predicateObjectMap
+        [
+            # TODO min sdk 1.8
+            tedm:minSDKVersion "1.8" ;
+            rr:predicate epo:contextualisedBy ;
+            rr:objectMap
+                [
+                   rr:parentTriplesMap tedm:MG-Lot-contextualisedBy-BudgetProvider_ND-FinancingParty ;
+                   rr:joinCondition
+                      [
+                        rr:child "path(.)" ;
+                        rr:parent "path(.)" ;
+                      ] ;
+                ] ;
+        ] ;
     .
 tedm:MG-Lot-contextualisedBy-BudgetProvider_ND-FinancingParty  a rr:TriplesMap ;
   rdfs:label "MG-Lot";

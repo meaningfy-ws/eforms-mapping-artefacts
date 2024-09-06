@@ -283,7 +283,7 @@ tedm:MG-LotAwardOutcome_ND-StrategicProcurementLotResult  a rr:TriplesMap ;
                    rr:parentTriplesMap tedm:MG-VehicleInformation-seeAlso-LotAwardOutcome_ND-StrategicProcurementInformationLotResult ;
                     rr:joinCondition[
                         rr:child "path(.)";
-                        rr:parent "path(../..)"
+                        rr:parent "path(.)"
                     ];
                 ] ;
         ] ;
@@ -358,5 +358,33 @@ tedm:MG-LotAwardOutcome-comprisesAwardOutcome-AwardDecision-LotResult a rr:Tripl
             rdfs:label "ND-LotResult" ;
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_LotAwardOutcome_{cbc:ID}" ;
             rr:class epo:LotAwardOutcome
+        ] ;
+    .
+
+tedm:MG-LotAwardOutcome_ND-PayerParty a rr:TriplesMap ;
+  rdfs:label "MG-LotAwardOutcome";
+       rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotResult/cac:PayerParty" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-PayerParty" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_LotAwardOutcome_{../cbc:ID}" ;
+            rr:class epo:LotAwardOutcome
+        ] ;
+     rr:predicateObjectMap
+        [
+            rr:predicate rdfs:seeAlso ;
+            rr:objectMap
+                [
+                   rr:parentTriplesMap tedm:MG-PaymentExecutor-seeAlso-LotAwardOutcome_ND-PayerParty ;
+                    rr:joinCondition[
+                        rr:child "path(.)";
+                        rr:parent "path(.)"
+                    ];
+                ] ;
         ] ;
     .

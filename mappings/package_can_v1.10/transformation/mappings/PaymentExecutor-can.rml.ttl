@@ -72,7 +72,6 @@ tedm:MG-PaymentExecutor-definesPaymentExecutor-ContractTerm-isSubjectToContractS
         ] ;
     .
 
-
 tedm:MG-PaymentExecutor_ND-PayerParty a rr:TriplesMap ;
   rdfs:label "MG-PaymentExecutor";
        rml:logicalSource
@@ -119,6 +118,7 @@ tedm:MG-PaymentExecutor_ND-PayerParty a rr:TriplesMap ;
                 ] ;
         ] ;
     .
+
 tedm:MG-Organization-playedBy-PaymentExecutor_ND-PayerParty a rr:TriplesMap ;
   rdfs:label "MG-Organization";
        rml:logicalSource

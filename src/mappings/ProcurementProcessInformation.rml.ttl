@@ -24,6 +24,56 @@
 @prefix fno: <https://w3id.org/function/ontology#> .
 @prefix idlab-fn: <http://example.com/idlab/function/> .
 
+tedm:MG-ProcurementProcessInformation_ND-ProcedureTenderingProcess a rr:TriplesMap ;
+    rdfs:label "MG-ProcurementProcessInformation" ;
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/cac:TenderingProcess" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-ProcedureTenderingProcess" ;
+            rdfs:comment "Primary type declaration for MG-ProcurementProcessInformation under ND-ProcedureTenderingProcess" ;
+            rml:reference "if(exists(ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efbc:ProcedureRelaunchIndicator) or exists(cbc:TerminatedIndicator)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_ProcurementProcessInformation_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
+            rr:class epo:ProcurementProcessInformation
+
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-634-Procedure" ;
+            rdfs:comment "Procurement Relaunch of MG-ProcurementProcessInformation under ND-ProcedureTenderingProcess" ;
+            rr:predicate epo:isToBeRelaunched ;
+            rr:objectMap
+                [
+                    rml:reference "ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efbc:ProcedureRelaunchIndicator" ;
+                    rr:datatype xsd:boolean
+                ] ;
+        ] ;
+    # this is an example of a relationship that can link to one of multiple TMaps with the same subject IRI
+    # (we link the one with the closest matching node, in this case an exact match)
+    rr:predicateObjectMap
+        [
+            rr:predicate epo:concernsProcedure ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-Procedure_ND-ProcedureTenderingProcess ;
+                ]
+        ];
+    rr:predicateObjectMap
+        [
+            rdfs:label " BT-756-Procedure";
+            rdfs:comment "Dynamic Purchasing System Termination of MG-ProcurementProcessInformation under ND-LotResult" ;
+            rr:predicate  epo:isCompetitionTerminated    ;
+            rr:objectMap
+                [
+                    rml:reference "cbc:TerminatedIndicator" ;
+                    rr:datatype xsd:boolean;
+                ] ;
+        ];
+.
+
 tedm:MG-ProcurementProcessInformation_ND-LotTenderingProcessExtension a rr:TriplesMap ;
     rdfs:label "MG-ProcurementProcessInformation";
     rml:logicalSource
@@ -42,7 +92,7 @@ tedm:MG-ProcurementProcessInformation_ND-LotTenderingProcessExtension a rr:Tripl
         [
             rdfs:label "BT-634-Lot";
             rdfs:comment "Procurement Relaunch of MG-ProcurementProcessInformation under ND-LotTenderingProcessExtension ";
-            rr:predicate   epo:isToBeRelaunched ;
+            rr:predicate epo:isToBeRelaunched ;
             rr:objectMap
                 [
                     rml:reference "efbc:ProcedureRelaunchIndicator";

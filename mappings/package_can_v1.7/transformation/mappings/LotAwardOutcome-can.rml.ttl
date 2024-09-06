@@ -50,7 +50,7 @@ tedm:MG-LotAwardOutcome_ND-LotResult  a rr:TriplesMap ;
                     rdfs:label "at-voc:winner-selection-status" ;
                     rr:parentTriplesMap tedm:winner-selection-status ;
                     rr:joinCondition [
-                        rr:child "if(not(exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='win-cho']) and cbc:TenderResultCode/text() = 'unpublished')) then cbc:TenderResultCode else null" ;
+                        rr:child "if(not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='win-cho']) and cbc:TenderResultCode/text() = 'unpublished')) then cbc:TenderResultCode else null" ;
                         rr:parent "code.value" ;
                     ] ;
                 ] ;
@@ -65,7 +65,7 @@ tedm:MG-LotAwardOutcome_ND-LotResult  a rr:TriplesMap ;
                     rdfs:label "at-voc:non-award-justification" ;
                     rr:parentTriplesMap tedm:non-award-justification;
                     rr:joinCondition [
-                        rr:child "if(not( exists(../../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='no-awa-rea']) and efac:DecisionReason/efbc:DecisionReasonCode/text() = 'unpublished' )) then efac:DecisionReason/efbc:DecisionReasonCode else null" ;
+                        rr:child "if(not(exists(efac:DecisionReason/efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='no-awa-rea']) and efac:DecisionReason/efbc:DecisionReasonCode/text() = 'unpublished' )) then efac:DecisionReason/efbc:DecisionReasonCode else null" ;
                         rr:parent "code.value" ;
                     ] ;
                 ] ;
@@ -136,7 +136,7 @@ tedm:MG-MonetaryValue-hasApproximateFrameworkAgreementValue-LotAwardOutcome_ND-L
             rr:predicate epo:hasAmountValue ;
             rr:objectMap
                 [
-                    rml:reference "if(not(exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='ree-val']) and efbc:ReestimatedValueAmount/text() = '-1' )) then efbc:ReestimatedValueAmount else null";
+                    rml:reference "if(not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='ree-val']) and efbc:ReestimatedValueAmount/text() = '-1' )) then efbc:ReestimatedValueAmount else null";
                     rr:datatype xsd:decimal;
                 ] ;
         ] ;
@@ -150,7 +150,7 @@ tedm:MG-MonetaryValue-hasApproximateFrameworkAgreementValue-LotAwardOutcome_ND-L
                     rdfs:label "at-voc:currency" ;
                     rr:parentTriplesMap tedm:currency ;
                     rr:joinCondition [
-                        rr:child "if(not(exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='ree-val']) and efbc:ReestimatedValueAmount/text() = '-1' )) then efbc:ReestimatedValueAmount/@currencyID else null";
+                        rr:child "if(not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='ree-val']) and efbc:ReestimatedValueAmount/text() = '-1' )) then efbc:ReestimatedValueAmount/@currencyID else null";
                         rr:parent "code.value" ;
                     ] ;
                 ] ;
@@ -173,13 +173,13 @@ tedm:MG-MonetaryValue-hasFrameworkAgreementMaximumValue-LotAwardOutcome_ND-LotRe
         ] ;
    rr:predicateObjectMap
         [
-            rdfs:label "BT-709-LotResult";
-            rdfs:comment "Framework Maximum Value of MG-MonetaryValue under ND-LotResultFAValues";
+            rdfs:label "BT-709-LotResult" ;
+            rdfs:comment "Framework Maximum Value of MG-MonetaryValue under ND-LotResultFAValues" ;
             rr:predicate epo:hasAmountValue ;
             rr:objectMap
                 [
-                    rml:reference "if(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='max-val']) and cbc:MaximumValueAmount/text() = '-1' )) then cbc:MaximumValueAmount else null";
-                    rr:datatype xsd:decimal;
+                    rml:reference "if(not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='max-val']) and cbc:MaximumValueAmount/text() = '-1' )) then cbc:MaximumValueAmount else null" ;
+                    rr:datatype xsd:decimal ;
                 ] ;
         ] ;
     rr:predicateObjectMap
@@ -192,7 +192,7 @@ tedm:MG-MonetaryValue-hasFrameworkAgreementMaximumValue-LotAwardOutcome_ND-LotRe
                     rdfs:label "at-voc:currency" ;
                     rr:parentTriplesMap tedm:currency ;
                     rr:joinCondition [
-                        rr:child "if(not(exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='max-val']) and cbc:MaximumValueAmount/text() = '-1' )) then cbc:MaximumValueAmount/@currencyID  else null";
+                        rr:child "if(not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='max-val']) and cbc:MaximumValueAmount/text() = '-1' )) then cbc:MaximumValueAmount/@currencyID  else null";
                         rr:parent "code.value" ;
                     ] ;
                 ] ;

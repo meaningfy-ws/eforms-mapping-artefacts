@@ -45,8 +45,8 @@ tedm:MG-MonetaryValue-hasGroupFrameworkAgreementMaximumValue-LotGroupAwardInform
             rr:predicate epo:hasAmountValue ;
             rr:objectMap
                 [
-                    rml:reference "if(not(exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='gro-max-val']) and efbc:GroupFrameworkMaximumValueAmount/text() = '-1' )) then efbc:GroupFrameworkMaximumValueAmount else null";
-                    rr:datatype xsd:decimal;
+                    rml:reference "if(not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='gro-max-val']) and efbc:GroupFrameworkMaximumValueAmount/text() = '-1' )) then efbc:GroupFrameworkMaximumValueAmount else null" ;
+                    rr:datatype xsd:decimal ;
                 ] ;
         ] ;
       rr:predicateObjectMap

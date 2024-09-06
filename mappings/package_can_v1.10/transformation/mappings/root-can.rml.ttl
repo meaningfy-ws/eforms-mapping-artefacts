@@ -135,11 +135,11 @@ tedm:MG-MonetaryValue-hasTotalAwardedValue-NoticeAwardInformation-announcesNotic
         [
             rdfs:label "BT-161-NoticeResult" ;
             rdfs:comment "NoticeValue of MonetaryValue under ND-NoticeResult" ;
-            rr:predicate  epo:hasAmountValue   ;
+            rr:predicate epo:hasAmountValue ;
             rr:objectMap
                 [
-               rml:reference "if(not(exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='not-val']) and cbc:TotalAmount/text() = '-1' )) then cbc:TotalAmount else null";
-               rr:datatype xsd:decimal;
+                    rml:reference "if(not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='not-val']) and cbc:TotalAmount/text() = '-1' )) then cbc:TotalAmount else null" ;
+                    rr:datatype xsd:decimal ;
                 ] ;
         ] ;
 .
@@ -225,7 +225,7 @@ tedm:MG-MonetaryValue-hasMaximumFrameworkAgreementAwardedValue-NoticeAwardInform
             rr:predicate  epo:hasAmountValue   ;
             rr:objectMap
                 [
-               rml:reference "if(not(exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='not-max-val']) and efbc:OverallMaximumFrameworkContractsAmount/text() = '-1' )) then efbc:OverallMaximumFrameworkContractsAmount else null";
+               rml:reference "if(not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='not-max-val']) and efbc:OverallMaximumFrameworkContractsAmount/text() = '-1' )) then efbc:OverallMaximumFrameworkContractsAmount else null";
                rr:datatype xsd:decimal;
                 ] ;
         ] ;
@@ -252,7 +252,7 @@ tedm:MG-MonetaryValue-hasApproximateFrameworkAgreementValue-NoticeAwardInformati
             rr:predicate  epo:hasAmountValue   ;
             rr:objectMap
                 [
-               rml:reference "if(not(exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='not-app-val']) and efbc:OverallApproximateFrameworkContractsAmount/text() = '-1' )) then efbc:OverallApproximateFrameworkContractsAmount else null";
+               rml:reference "if(not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='not-app-val']) and efbc:OverallApproximateFrameworkContractsAmount/text() = '-1' )) then efbc:OverallApproximateFrameworkContractsAmount else null";
                rr:datatype xsd:decimal;
                 ] ;
         ] ;

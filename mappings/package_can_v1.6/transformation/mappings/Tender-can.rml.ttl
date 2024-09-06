@@ -81,7 +81,7 @@ tedm:MG-TenderAwardOutcome_ND-LotTender  a rr:TriplesMap ;
             rr:predicate  epo:hasAwardRank ;
             rr:objectMap
                 [
-                    rml:reference "if(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='ten-ran']) and cbc:RankCode/text() = '-1' )) then cbc:RankCode else null";
+                    rml:reference "if(not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='ten-ran']) and cbc:RankCode/text() = '-1' )) then cbc:RankCode else null";
                     rr:datatype xsd:integer  ;
                 ] ;
         ];
@@ -94,7 +94,7 @@ tedm:MG-TenderAwardOutcome_ND-LotTender  a rr:TriplesMap ;
                 [
                     rr:parentTriplesMap tedm:MG-Tender-concernsTender-TenderAwardOutcome_ND-LotTender ;
                     rr:joinCondition[
-                        rr:child "if(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='ten-ran']) and cbc:RankCode/text() = '-1' )) then path(.) else null";
+                        rr:child "if(not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='ten-ran']) and cbc:RankCode/text() = '-1' )) then path(.) else null";
                         rr:parent "path(.)"
                     ];
                 ] ;
@@ -139,7 +139,7 @@ tedm:MG-Tender_ND-LotTender  a rr:TriplesMap ;
             rr:predicate  epo:isVariant ;
             rr:objectMap
                 [
-                    rml:reference "if(not(exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='win-ten-var']) and efbc:TenderVariantIndicator/text() = '0' )) then efbc:TenderVariantIndicator else null" ;
+                    rml:reference "if(not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='win-ten-var']) and efbc:TenderVariantIndicator/text() = '0' )) then efbc:TenderVariantIndicator else null" ;
                     rr:datatype xsd:boolean ;
                 ] ;
         ];
@@ -259,11 +259,11 @@ tedm:MG-MonetaryValue-hasFinancialOfferValue-Tender_ND-LotTender  a rr:TriplesMa
         [
             rdfs:label "BT-720-Tender";
             rdfs:comment " Tender Value of MG-MonetaryValue under ND-LotTender";
-            rr:predicate  epo:hasAmountValue  ;
+            rr:predicate epo:hasAmountValue ;
             rr:objectMap
                 [
-                    rml:reference "if(not( exists(../../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='win-ten-val']) and cac:LegalMonetaryTotal/cbc:PayableAmount/text() = '-1' )) then cac:LegalMonetaryTotal/cbc:PayableAmount else null" ;
-                    rr:datatype xsd:decimal  ;
+                    rml:reference "if(not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='win-ten-val']) and cac:LegalMonetaryTotal/cbc:PayableAmount/text() = '-1' )) then cac:LegalMonetaryTotal/cbc:PayableAmount else null" ;
+                    rr:datatype xsd:decimal ;
                 ] ;
         ];
     rr:predicateObjectMap
@@ -368,7 +368,7 @@ tedm:MG-MonetaryValue-hasSubcontractingEstimatedValue-SubcontractingEstimate-for
             rr:predicate  epo:hasAmountValue  ;
             rr:objectMap
                 [
-                    rml:reference "if(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='sub-val']) and efbc:TermAmount/text() = '-1' )) then efbc:TermAmount else null" ;
+                    rml:reference "if(not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='sub-val']) and efbc:TermAmount/text() = '-1' )) then efbc:TermAmount else null" ;
                     rr:datatype xsd:decimal  ;
                 ] ;
         ];
@@ -415,7 +415,7 @@ tedm:MG-SubcontractingEstimate-foreseesSubcontracting-Tender_ND-SubcontractedCon
                     rdfs:label "BT-554-Tender-Language" ;
                     rdfs:comment "Language of Subcontracting Description of MG-SubcontractingEstimate under ND-SubcontractedActivity" ;
                     rml:reference "efbc:TermDescription";
-                    rml:reference "if(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='sub-des']) and efbc:TermDescription/text() = 'unpublished' )) then efbc:TermDescription else null";
+                    rml:reference "if(not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='sub-des']) and efbc:TermDescription/text() = 'unpublished' )) then efbc:TermDescription else null";
                     rml:languageMap [
                         fnml:functionValue [
                             rr:predicateObjectMap [
@@ -439,7 +439,7 @@ tedm:MG-SubcontractingEstimate-foreseesSubcontracting-Tender_ND-SubcontractedCon
             rr:predicate  epo:hasEstimatedPercentage   ;
             rr:objectMap
                 [
-                    rml:reference "if(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='sub-per']) and efbc:TermPercent/text() = '-1' )) then efbc:TermPercent else null" ;
+                    rml:reference "if(not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='sub-per']) and efbc:TermPercent/text() = '-1' )) then efbc:TermPercent else null" ;
                     rr:datatype xsd:decimal  ;
                 ] ;
         ];
@@ -469,7 +469,7 @@ tedm:MG-Tender_ND-SubcontractedContract  a rr:TriplesMap ;
                     rdfs:label "at-voc:applicability" ;
                     rr:parentTriplesMap tedm:applicability ;
                     rr:joinCondition [
-                        rr:child "if(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='sub-con']) and efbc:TermCode/text() = 'unpublished' )) then efbc:TermCode else null" ;
+                        rr:child "if(not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='sub-con']) and efbc:TermCode/text() = 'unpublished' )) then efbc:TermCode else null" ;
                         rr:parent "code.value" ;
                     ] ;
                 ] ;

@@ -563,6 +563,9 @@ tedm:MG-FrameworkAgreement-followsRulesSetBy-PurchaseContract_ND-SettledContract
         ] ;
     .
 
+# This will instantiate AwardDecisions independent of any connection. Whether
+# or not there is a connection depends on whether a SettledContract is
+# referenced from a LotResult, i.e. tedm:MG-AwardDecision_ND-LotResult
 tedm:MG-AwardDecision_ND-SettledContract a rr:TriplesMap ;
     rdfs:label "MG-AwardDecision" ;
     rml:logicalSource
@@ -574,7 +577,7 @@ tedm:MG-AwardDecision_ND-SettledContract a rr:TriplesMap ;
     rr:subjectMap
         [
             rdfs:label "ND-SettledContract" ;
-            rml:reference "if(exists(cbc:AwardDate)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_AwardDecision_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw') else null" ;
+            rml:reference "if(exists(cbc:AwardDate)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_AwardDecision_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(cbc:AwardDate) || '?response_type=raw') else null" ;
             rr:class epo:AwardDecision
         ] ;
     rr:predicateObjectMap
@@ -587,22 +590,6 @@ tedm:MG-AwardDecision_ND-SettledContract a rr:TriplesMap ;
                     rml:reference "cbc:AwardDate" ;
                     rr:datatype xsd:date ;
                 ] ;
-        ] ;
-    .
-
-tedm:MG-AwardDecision-announcesAwardDecision-ResultNotice_ND-NoticeResult a rr:TriplesMap ;
-    rdfs:label "MG-AwardDecision" ;
-    rml:logicalSource
-        [
-            rml:source "data/source.xml" ;
-            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult" ;
-            rml:referenceFormulation ql:XPath
-        ] ;
-    rr:subjectMap
-        [
-            rdfs:label "ND-SettledContract" ;
-            rml:reference "if(exists(efac:SettledContract)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_AwardDecision_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
-            rr:class epo:AwardDecision
         ] ;
     .
 
@@ -638,6 +625,8 @@ tedm:MG-Contract_ND-PayerParty  a rr:TriplesMap ;
         ] ;
     .
 
+# to be interpreted as the same as
+# MG-AwardDecision-announcesAwardDecision-ResultNotice_ND-LotResult
 tedm:MG-AwardDecision_ND-LotResult a rr:TriplesMap ;
     rdfs:label "MG-AwardDecision" ;
     rml:logicalSource
@@ -649,8 +638,14 @@ tedm:MG-AwardDecision_ND-LotResult a rr:TriplesMap ;
     rr:subjectMap
         [
             rdfs:label "ND-LotResult" ;
-#            rml:reference "if(exists(cbc:AwardDate)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_AwardDecision_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw') else null" ;
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_AwardDecision_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
+            # if there exists at least a SettledContract with an AwardDate
+            # under the LotResult matching a definition of an existing
+            # SettledContract of the notice, pick the date of the first such
+            # referenced SettledContract
+            #
+            # ASSUMPTION: all SettledContract AwardDates under the LotResult
+            # are the same date
+            rml:reference "if (exists(/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:SettledContract[cbc:ID/text() = //efac:SettledContract/cbc:ID/text()]/cbc:AwardDate)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_AwardDecision_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri((/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:SettledContract[cbc:ID/text() = //efac:SettledContract/cbc:ID/text()]/cbc:AwardDate)[1]) || '?response_type=raw') else if (exists(efac:SettledContract/cbc:ID)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_AwardDecision_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(efac:SettledContract/cbc:ID) || '?response_type=raw') else 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_AwardDecision_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(cbc:ID) || '?response_type=raw')" ;
             rr:class epo:AwardDecision
         ] ;
     rr:predicateObjectMap
@@ -667,19 +662,4 @@ tedm:MG-AwardDecision_ND-LotResult a rr:TriplesMap ;
         ] ;
     .
 
-tedm:MG-AwardDecision-announcesAwardDecision-ResultNotice-LotResult a rr:TriplesMap ;
-    rdfs:label "MG-AwardDecision" ;
-    rml:logicalSource
-        [
-            rml:source "data/source.xml" ;
-            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotResult" ;
-            rml:referenceFormulation ql:XPath
-        ] ;
-    rr:subjectMap
-        [
-            rdfs:label "ND-LotResult" ;
-#            rml:reference "if(exists(cbc:AwardDate)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_AwardDecision_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw') else null" ;
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_AwardDecision_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
-            rr:class epo:AwardDecision
-        ] ;
-    .
+tedm:MG-AwardDecision_ND-LotResult owl:sameAs tedm:MG-AwardDecision-announcesAwardDecision-ResultNotice_ND-LotResult .

@@ -100,21 +100,7 @@ tedm:MG-ResultNotice_ND-NoticeResult a rr:TriplesMap ;
                         rr:parent "path(..)";
                     ];
                 ] ;
-        ]   ;
-    rr:predicateObjectMap
-        [
-            rdfs:label "ND-NoticeResult" ;
-            rdfs:comment "NoticeResult of MG-ResultNotice under ND-NoticeResult" ;
-            rr:predicate epo:announcesAwardDecision ;
-            rr:objectMap
-                [
-                    rr:parentTriplesMap tedm:MG-AwardDecision-announcesAwardDecision-ResultNotice_ND-NoticeResult ;
-                    rr:joinCondition [
-                        rr:child "if(exists(efac:SettledContract/cbc:AwardDate) ) then path(.) else null" ;
-                        rr:parent "path(.)" ;
-                    ] ;
-                ] ;
-        ]  ;
+        ] ;
     rr:predicateObjectMap
         [
             rdfs:label "OPT-210-Tenderer" ;
@@ -305,19 +291,19 @@ tedm:MG-ResultNotice_ND-LotResult a rr:TriplesMap ;
         ] ;
     rr:predicateObjectMap
         [
-            rr:predicate epo:announcesAwardDecision  ;
+            rdfs:label "ND-LotResult" ;
+            rdfs:comment "AwardDecision of MG-ResultNotice under ND-LotResult" ;
+            rr:predicate epo:announcesAwardDecision ;
             rr:objectMap
                 [
-                    rr:parentTriplesMap tedm:MG-AwardDecision-announcesAwardDecision-ResultNotice-LotResult;
-                         rr:joinCondition [
-                              rr:child "path(.)";
-                              rr:parent "path(.)";
-                     ] ;
+                    rr:parentTriplesMap tedm:MG-AwardDecision_ND-LotResult ;
+                    rr:joinCondition [
+                            rr:child "path(.)" ;
+                            rr:parent "path(.)" ;
+                    ] ;
                 ] ;
         ] ;
    .
-
-
 
 ##--- Function Parameters ---
 

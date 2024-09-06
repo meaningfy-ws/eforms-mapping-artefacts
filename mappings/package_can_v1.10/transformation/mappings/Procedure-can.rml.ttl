@@ -78,7 +78,7 @@ tedm:MG-DirectAwardTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-DirectAwar
                     rdfs:label "at-voc:direct-award-justification" ;
                     rr:parentTriplesMap tedm:direct-award-justification ;
                     rr:joinCondition [
-                        rr:child "if(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='dir-awa-jus']) and cbc:ProcessReasonCode/text() = 'unpublished')) then cbc:ProcessReasonCode else null" ;
+                        rr:child "if(not(exists(ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='dir-awa-jus']) and cbc:ProcessReasonCode/text() = 'unpublished')) then cbc:ProcessReasonCode else null" ;
                         rr:parent "code.value" ;
                     ] ;
                 ] ;
@@ -92,12 +92,12 @@ tedm:MG-DirectAwardTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-DirectAwar
                 [
                     rdfs:label "BT-135-Procedure-Language";
                     rdfs:comment "Language of Direct Award Justification Text of MG-DirectAwardTerm under ND-DirectAward";
-                    rml:reference "if (not(exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='dir-awa-tex']) and cbc:ProcessReason/text() = 'unpublished')) then cbc:ProcessReason else null";
+                    rml:reference "if (not(exists(ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='dir-awa-tex']) and cbc:ProcessReason/text() = 'unpublished')) then cbc:ProcessReason else null";
                     rml:languageMap [
                         fnml:functionValue [
                             rr:predicateObjectMap [
                                 rr:predicate idlab-fn:str ;
-                                rr:objectMap [ rml:reference "if (not(exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='dir-awa-tex']) and cbc:ProcessReason/text() = 'unpublished')) then cbc:ProcessReason/@languageID else null" ]
+                                rr:objectMap [ rml:reference "cbc:ProcessReason/@languageID" ]
                             ] ,
                             tedm:idlab-fn_executes_lookup ,
                             tedm:idlab-fn_inputFile_language ,
@@ -151,16 +151,16 @@ tedm:MG-Procedure-refersToPreviousProcedure-DirectAwardTerm-isSubjectToProcedure
     .
 
 tedm:MG-Identifier-identifier-Procedure-refersToPreviousProcedure-DirectAwardTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-DirectAward a rr:TriplesMap ;
-    rdfs:label "MG-Identifier";
+    rdfs:label "MG-Identifier" ;
     rml:logicalSource
         [
             rml:source "data/source.xml" ;
-            rml:iterator "/*/cac:TenderingProcess/cac:ProcessJustification[cbc:ProcessReasonCode/@listName='direct-award-justification']";
+            rml:iterator "/*/cac:TenderingProcess/cac:ProcessJustification[cbc:ProcessReasonCode/@listName='direct-award-justification']" ;
             rml:referenceFormulation ql:XPath
         ] ;
     rr:subjectMap
         [
-            rdfs:label "ND-DirectAward";
+            rdfs:label "ND-DirectAward" ;
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_PreviousProcedureIdentifier_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
             rr:class adms:Identifier
         ] ;
@@ -171,17 +171,18 @@ tedm:MG-Identifier-identifier-Procedure-refersToPreviousProcedure-DirectAwardTer
             rr:predicate skos:notation ;
             rr:objectMap
                 [
-                    rml:reference "if (not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='dir-awa-pre']) and cbc:Description/text() = 'unpublished' )) then cbc:Description else null";
+                    rml:reference "if (not(exists(ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='dir-awa-pre']) and cbc:Description/text() = 'unpublished' )) then cbc:Description else null" ;
                 ] ;
-        ];
-     rr:predicateObjectMap
+        ] ;
+    # PRIV: the scheme is shown even if the associated value is masked
+    rr:predicateObjectMap
         [
             rdfs:label "BT-1252-Procedure-Scheme" ;
             rdfs:comment "Scheme of MG-Identifier under ND-DirectAward" ;
             rr:predicate epo:hasScheme ;
             rr:objectMap
                 [
-                    rml:reference "if (not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='dir-awa-pre']) and cbc:Description/text() = 'unpublished' )) then cbc:Description/@schemeName else null";
+                    rml:reference "cbc:Description/@schemeName" ;
                 ] ;
-            ];
+        ];
     .

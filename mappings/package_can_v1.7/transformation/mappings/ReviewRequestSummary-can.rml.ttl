@@ -40,20 +40,20 @@ tedm:MG-ReviewIrregularitySummary-hasReviewIrregularitySummary-ReviewRequestSumm
         ] ;
      rr:predicateObjectMap
         [
-            rdfs:label "BT-636-LotResult";
-            rdfs:comment "Buyer Review Requests Irregularity Type of MG-ReviewIrregularitySummary under ND-ReviewRequestsStatistics";
-            rr:predicate  epo:hasIrregularityType     ;
-             rr:objectMap
+            rdfs:label "BT-636-LotResult" ;
+            rdfs:comment "Buyer Review Requests Irregularity Type of MG-ReviewIrregularitySummary under ND-ReviewRequestsStatistics" ;
+            rr:predicate epo:hasIrregularityType ;
+            rr:objectMap
                 [
                     rdfs:label "at-voc:irregularity-type" ;
                     rr:parentTriplesMap tedm:irregularity-type ;
                     rr:joinCondition [
-                        rr:child "if(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='buy-rev-typ']) and efbc:StatisticsCode/text() = 'unpublished' )) then efbc:StatisticsCode else null" ;
+                        rr:child "if(not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='buy-rev-typ']) and efbc:StatisticsCode/text() = 'unpublished' )) then efbc:StatisticsCode else null" ;
                         rr:parent "code.value" ;
                     ] ;
                 ] ;
 
-        ];
+        ] ;
     rr:predicateObjectMap
         [
             rdfs:label "BT-636-LotResult";
@@ -61,7 +61,7 @@ tedm:MG-ReviewIrregularitySummary-hasReviewIrregularitySummary-ReviewRequestSumm
             rr:predicate  epo:hasReviewIrregularityCount   ;
             rr:objectMap
                 [
-                   rml:reference "if(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='buy-rev-cou']) and efbc:StatisticsNumeric/text() = '-1' )) then efbc:StatisticsNumeric else null" ;
+                   rml:reference "if(not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='buy-rev-cou']) and efbc:StatisticsNumeric/text() = '-1' )) then efbc:StatisticsNumeric else null" ;
                    rr:datatype xsd:integer  ;
                 ] ;
         ];
@@ -144,7 +144,7 @@ tedm:MG-ReviewRequestSummary_ND-LotResult  a rr:TriplesMap ;
             rr:predicate  epo:hasTotalNumberOfComplainants    ;
             rr:objectMap
                 [
-                   rml:reference "if(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rev-req']) and efbc:StatisticsNumeric/text() = '-1' )) then efbc:StatisticsNumeric else null" ;
+                   rml:reference "if(not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rev-req']) and efbc:StatisticsNumeric/text() = '-1' )) then efbc:StatisticsNumeric else null" ;
                    rr:datatype xsd:integer  ;
                 ] ;
         ];
@@ -186,7 +186,7 @@ tedm:MG-ReviewRequestSummary_ND-BuyerReviewComplainants  a rr:TriplesMap ;
             rr:predicate  epo:hasTotalNumberOfComplainants    ;
             rr:objectMap
                 [
-                   rml:reference "if(not( exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rev-req']) and efbc:StatisticsNumeric/text() = '-1' )) then efbc:StatisticsNumeric else null" ;
+                   rml:reference "if(not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rev-req']) and efbc:StatisticsNumeric/text() = '-1' )) then efbc:StatisticsNumeric else null" ;
                    rr:datatype xsd:integer  ;
                 ] ;
         ];

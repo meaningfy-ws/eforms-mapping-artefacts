@@ -79,7 +79,7 @@ tedm:MG-Identifier-identifier-Lot-setsGroupingContextForLot-LotGroup_ND-NoticeRe
             rr:predicate  skos:notation ;
             rr:objectMap
                 [
-                    rml:reference "if (not( exists(../../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='gro-max-ide']) and efac:TenderLot/cbc:ID/text() = 'unpublished' )) then efac:TenderLot/cbc:ID else null";
+                    rml:reference "if (not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='gro-max-ide']) and efac:TenderLot/cbc:ID/text() = 'unpublished' )) then efac:TenderLot/cbc:ID else null";
                 ] ;
         ];
 .
@@ -182,7 +182,7 @@ tedm:MG-LotGroup_ND-NoticeResultGroupFA  a rr:TriplesMap ;
 #            rr:predicate epo:hasAmountValue ;
 #            rr:objectMap
 #                [
-#                    rml:reference "if (not(exists(../efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='gro-ree-val']) and efbc:GroupFrameworkReestimatedValueAmount/text() = '-1' )) then efbc:GroupFrameworkReestimatedValueAmount else null";
+#                    rml:reference "if (not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='gro-ree-val']) and efbc:GroupFrameworkReestimatedValueAmount/text() = '-1' )) then efbc:GroupFrameworkReestimatedValueAmount else null";
 #                    rr:datatype xsd:decimal;
 #                ] ;
 #        ];

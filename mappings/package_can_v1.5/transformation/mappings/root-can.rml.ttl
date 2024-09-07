@@ -105,7 +105,7 @@ tedm:MG-ResultNotice_ND-NoticeResult a rr:TriplesMap ;
         [
             rdfs:label "OPT-210-Tenderer" ;
             rdfs:comment "TenderingPartyID of MG-Tenderer under ND-TenderingParty" ;
-            rr:predicate  epo::announcesRole   ;
+            rr:predicate epo:announcesRole ;
             rr:objectMap
                 [
                     rr:parentTriplesMap  tedm:MG-Tenderer-announcesRole-ResultNotice_ND-TenderingParty;
@@ -304,6 +304,52 @@ tedm:MG-ResultNotice_ND-LotResult a rr:TriplesMap ;
                 ] ;
         ] ;
    .
+
+tedm:MG-Subcontractor-announcesRole-ResultNotice_ND-SubContractor  a rr:TriplesMap ;
+    rdfs:label "MG-Subcontractor" ;
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:TenderingParty/efac:SubContractor" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-SubContractor";
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Subcontractor_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path( )) || '?response_type=raw')}" ;
+            rr:class epo:Subcontractor
+        ] ;
+.
+
+tedm:MG-ResultNotice_ND-SubContractor a rr:TriplesMap ;
+    rdfs:label "MG-ResultNotice" ;
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:TenderingParty/efac:SubContractor" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-SubContractor" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Notice" ;
+            rr:class epo:ResultNotice
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "ND-SubContractor" ;
+            rdfs:comment "connection between SubContractor and ResultNotice under ND-SubContractor" ;
+            rr:predicate epo:announcesRole ;
+            rr:objectMap
+                [
+                   rr:parentTriplesMap tedm:MG-Subcontractor-announcesRole-ResultNotice_ND-SubContractor ;
+                    rr:joinCondition [
+                        rr:child "path(.)" ;
+                        rr:parent "path(.)" ;
+                    ] ;
+                ] ;
+        ] ;
+.
 
 ##--- Function Parameters ---
 

@@ -705,12 +705,12 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_nNq2rC7wBesmhA5baJ8mCt
   epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Notice a epo:Notice, epo:Notice29, epo:ResultNotice;
-  epo::announcesRole epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0001,
-    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0002;
   epo:announcesAwardDecision epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_AwardDecision_X7kGKvhmsm4n9XZKc7u8Wt;
   epo:announcesContract epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContract_CON-0001,
     epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContract_CON-0002;
   epo:announcesNoticeAwardInformation epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_NoticeAwardInformation_JryEpNBTCzNfzKbsxaXwjt;
+  epo:announcesRole epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Subcontractor_9j2v7t3GXjdgoHTvgxCPWt,
+    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0001, epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tenderer_TPA-0002;
   epo:hasESenderDispatchDate "2023-04-23T20:59:32+01:00"^^xs:dateTime;
   epo:hasFormType <http://publications.europa.eu/resource/authority/form-type/result>;
   epo:hasNoticeType <http://publications.europa.eu/resource/authority/notice-type/can-standard>;
@@ -1040,9 +1040,6 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Quantity_Zg4ZmGAZR5g4xA8RP4Bd63 a ep
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Quantity_myo3vCsSuhWxPVpWujDK9s a epo:Quantity;
   epo:hasQuantityValue 1000.0;
   epo:hasUnitCode <http://publications.europa.eu/resource/authority/measurement-unit/HUR> .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ResultNotice_RES-0001 a epo:ResultNotice;
-  epo:announcesRole epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Subcontractor_9j2v7t3GXjdgoHTvgxCPWt .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ReviewIrregularitySummary_CMn6R585b6sMXTAicswp6C
   a epo:ReviewIrregularitySummary;

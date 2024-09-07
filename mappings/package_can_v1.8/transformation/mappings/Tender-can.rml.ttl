@@ -414,7 +414,6 @@ tedm:MG-SubcontractingEstimate-foreseesSubcontracting-Tender_ND-SubcontractedCon
                 [
                     rdfs:label "BT-554-Tender-Language" ;
                     rdfs:comment "Language of Subcontracting Description of MG-SubcontractingEstimate under ND-SubcontractedActivity" ;
-                    rml:reference "efbc:TermDescription";
                     rml:reference "if(not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='sub-des']) and efbc:TermDescription/text() = 'unpublished' )) then efbc:TermDescription else null";
                     rml:languageMap [
                         fnml:functionValue [

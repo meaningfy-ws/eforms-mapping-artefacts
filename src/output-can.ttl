@@ -99,14 +99,8 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_BudgetProvider_NXb2WhCvHwRKxwpAaxLqt
   epo:contextualisedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;
   epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0001 .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Buyer_7UMPwyXRgVDYJBYSxTfTBn a epo:Buyer;
-  epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0001 .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Buyer_JGa56JxZ6vPv3NZm242nMu a epo:Buyer;
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Buyer_HGvue6GtAm3yppLpDLnBKD a epo:Buyer;
   epo:hasBuyerProfile "https://profile.example.com"^^xs:anyURI;
-  epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0001 .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Buyer_XBZfpJGKezpX9vV2w2Gtmt a epo:Buyer;
   epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0001 .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_CompanyAddress_5oamSpC3ikwoRMLn49RxG2
@@ -1030,7 +1024,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementProjectContractTerm_XFzL7
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementServiceProvider_AxEoDZth6eN89p7o8GWdBS
   a epo:ProcurementServiceProvider;
-  epo:actsOnBehalfOf epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Buyer_JGa56JxZ6vPv3NZm242nMu;
+  epo:actsOnBehalfOf epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Buyer_HGvue6GtAm3yppLpDLnBKD;
   epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0007;
   dct:description "ted-esen" .
 
@@ -1113,7 +1107,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContract_CON-0001 a epo:Contr
   epo:includesTender epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0001;
   epo:isFundedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractFund_VPU8QnEnvpxVBA2qwYNzjZ;
   epo:isSubjectToContractSpecificTerm epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractTerm_BeKugscVJPFt54vNGjQBPC;
-  epo:signedByBuyer epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Buyer_XBZfpJGKezpX9vV2w2Gtmt;
+  epo:signedByBuyer epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Buyer_HGvue6GtAm3yppLpDLnBKD;
   dct:title "This is the title of the contract ---"@en;
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContractIdentifier_VPU8QnEnvpxVBA2qwYNzjZ .
 
@@ -1125,7 +1119,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContract_CON-0002 a epo:Contr
   epo:hasLotReference epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;
   epo:includesTender epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0002;
   epo:isFundedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractFund_oXwXYzaLxMkFreJUNf6BBv;
-  epo:signedByBuyer epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Buyer_7UMPwyXRgVDYJBYSxTfTBn;
+  epo:signedByBuyer epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Buyer_HGvue6GtAm3yppLpDLnBKD;
   dct:title "Title of second contract ---"@en;
   adms:identifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContractIdentifier_oXwXYzaLxMkFreJUNf6BBv .
 

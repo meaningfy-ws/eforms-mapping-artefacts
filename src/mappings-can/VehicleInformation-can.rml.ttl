@@ -1,7 +1,3 @@
-@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xs:   <http://www.w3.org/2001/XMLSchema#> .
-
 #--- MG-VehicleInformation ---
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -28,9 +24,9 @@
 @prefix fno: <https://w3id.org/function/ontology#> .
 @prefix idlab-fn: <http://example.com/idlab/function/> .
 
-tedm:MG-VehicleInformation_ND-StrategicProcurementInformationLotResult  a rr:TriplesMap ;
-  rdfs:label "MG-VehicleInformation";
-       rml:logicalSource
+tedm:MG-VehicleInformation_ND-StrategicProcurementInformationLotResult a rr:TriplesMap ;
+    rdfs:label "MG-VehicleInformation";
+    rml:logicalSource
         [
             rml:source "data/source.xml" ;
             rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotResult/efac:StrategicProcurement/efac:StrategicProcurementInformation" ;
@@ -70,10 +66,11 @@ tedm:MG-VehicleInformation_ND-StrategicProcurementInformationLotResult  a rr:Tri
                     ] ;
                 ] ;
         ] ;
-    .
-tedm:MG-VehicleInformation_ND-ProcurementStatistics  a rr:TriplesMap ;
-  rdfs:label "MG-VehicleInformation";
-       rml:logicalSource
+.
+
+tedm:MG-VehicleInformation_ND-ProcurementStatistics a rr:TriplesMap ;
+    rdfs:label "MG-VehicleInformation";
+    rml:logicalSource
         [
             rml:source "data/source.xml" ;
             rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotResult/efac:StrategicProcurement/efac:StrategicProcurementInformation/efac:ProcurementDetails/efac:StrategicProcurementStatistics" ;
@@ -114,14 +111,15 @@ tedm:MG-VehicleInformation_ND-ProcurementStatistics  a rr:TriplesMap ;
             rr:predicate  epo:hasZeroEmissionVehicles    ;
             rr:objectMap
                 [
-                    rml:reference "if ((efbc:StatisticsCode='vehicles-zero-emission'))then efbc:StatisticsNumeric else null";
+                    rml:reference "if (efbc:StatisticsCode='vehicles-zero-emission') then efbc:StatisticsNumeric else null";
                     rr:datatype xsd:integer  ;
                 ] ;
         ];
-    .
-tedm:MG-VehicleInformation_ND-ProcurementDetailsLotResult  a rr:TriplesMap ;
-  rdfs:label "MG-VehicleInformation";
-       rml:logicalSource
+.
+
+tedm:MG-VehicleInformation_ND-ProcurementDetailsLotResult a rr:TriplesMap ;
+    rdfs:label "MG-VehicleInformation";
+    rml:logicalSource
         [
             rml:source "data/source.xml" ;
             rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotResult/efac:StrategicProcurement/efac:StrategicProcurementInformation/efac:ProcurementDetails" ;
@@ -163,11 +161,11 @@ tedm:MG-VehicleInformation_ND-ProcurementDetailsLotResult  a rr:TriplesMap ;
                     ] ;
                 ] ;
         ] ;
-    .
+.
 
 tedm:MG-VehicleInformation-seeAlso-LotAwardOutcome_ND-StrategicProcurementInformationLotResult  a rr:TriplesMap ;
-  rdfs:label "MG-VehicleInformation";
-       rml:logicalSource
+    rdfs:label "MG-VehicleInformation";
+    rml:logicalSource
         [
             rml:source "data/source.xml" ;
             rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotResult/efac:StrategicProcurement/efac:StrategicProcurementInformation" ;
@@ -179,4 +177,4 @@ tedm:MG-VehicleInformation-seeAlso-LotAwardOutcome_ND-StrategicProcurementInform
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_VehicleInformation_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
             rr:class epo:VehicleInformation
         ] ;
-    .
+.

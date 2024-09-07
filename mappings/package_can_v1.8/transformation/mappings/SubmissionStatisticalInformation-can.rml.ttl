@@ -24,9 +24,9 @@
 @prefix idlab-fn: <http://example.com/idlab/function/> .
 @prefix tedm: <http://data.europa.eu/a4g/mapping/sf-rml/> .
 
-tedm:MG-SubmissionStatisticalInformation_ND-ReceivedSubmissions  a rr:TriplesMap ;
-  rdfs:label "MG-SubmissionStatisticalInformation";
-       rml:logicalSource
+tedm:MG-SubmissionStatisticalInformation_ND-ReceivedSubmissions a rr:TriplesMap ;
+    rdfs:label "MG-SubmissionStatisticalInformation" ;
+    rml:logicalSource
         [
             rml:source "data/source.xml" ;
             rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotResult/efac:ReceivedSubmissionsStatistics" ;
@@ -40,169 +40,169 @@ tedm:MG-SubmissionStatisticalInformation_ND-ReceivedSubmissions  a rr:TriplesMap
         ] ;
     rr:predicateObjectMap
         [
-            rdfs:label "BT-759-LotResult";
-            rdfs:comment "Received Submissions Count of MG-SubmissionStatisticalInformation under ND-ReceivedSubmissions";
-            rr:predicate  epo:hasReceivedTenders  ;
+            rdfs:label "BT-759-LotResult (tenders)" ;
+            rdfs:comment "Received Submissions Count of MG-SubmissionStatisticalInformation under ND-ReceivedSubmissions" ;
+            rr:predicate epo:hasReceivedTenders ;
             rr:objectMap
                 [
                    rml:reference "if((not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1' ) and efbc:StatisticsCode/text() = 'tenders')) then efbc:StatisticsNumeric else null" ;
-                   rr:datatype xsd:integer  ;
+                   rr:datatype xsd:integer ;
                 ] ;
-        ];
+        ] ;
     rr:predicateObjectMap
         [
-            rdfs:label "BT-759-LotResult";
-            rdfs:comment "Received Submissions Count of MG-SubmissionStatisticalInformation under ND-ReceivedSubmissions";
-            rr:predicate  epo:hasReceivedParticipationRequests   ;
+            rdfs:label "BT-759-LotResult (part-req)" ;
+            rdfs:comment "Received Submissions Count of MG-SubmissionStatisticalInformation under ND-ReceivedSubmissions" ;
+            rr:predicate epo:hasReceivedParticipationRequests ;
             rr:objectMap
                 [
-                    rml:reference "if (not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1')  and efbc:StatisticsCode/text() = ('part-req')) then efbc:StatisticsNumeric else null" ;
-                    rr:datatype xsd:integer  ;
+                    rml:reference "if (not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1')  and efbc:StatisticsCode/text() = 'part-req') then efbc:StatisticsNumeric else null" ;
+                    rr:datatype xsd:integer ;
                 ] ;
-        ];
-     rr:predicateObjectMap
+        ] ;
+    rr:predicateObjectMap
         [
-            rdfs:label "BT-759-LotResult";
-            rdfs:comment "Received Submissions Count of MG-SubmissionStatisticalInformation under ND-ReceivedSubmissions";
-            rr:predicate  epo:hasElectronicTenders    ;
+            rdfs:label "BT-759-LotResult (t-esubm)" ;
+            rdfs:comment "Received Submissions Count of MG-SubmissionStatisticalInformation under ND-ReceivedSubmissions" ;
+            rr:predicate epo:hasElectronicTenders ;
             rr:objectMap
                 [
-                    rml:reference "if (not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1')  and efbc:StatisticsCode/text() = ('t-esubm')) then efbc:StatisticsNumeric else null" ;
-                    rr:datatype xsd:integer  ;
+                    rml:reference "if (not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1')  and efbc:StatisticsCode/text() = 't-esubm') then efbc:StatisticsNumeric else null" ;
+                    rr:datatype xsd:integer ;
                 ] ;
-        ];
-     rr:predicateObjectMap
+        ] ;
+    rr:predicateObjectMap
         [
-            rdfs:label "BT-759-LotResult";
+            rdfs:label "BT-759-LotResult (t-med)" ;
             rdfs:comment "Received Submissions Count of MG-SubmissionStatisticalInformation under ND-ReceivedSubmissions";
-            rr:predicate  epo:hasMediumTenderPerLots    ;
+            rr:predicate epo:hasMediumTenderPerLots ;
             rr:objectMap
                 [
-                    rml:reference "if (not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1')  and efbc:StatisticsCode/text() = ('t-med')) then efbc:StatisticsNumeric else null" ;
-                    rr:datatype xsd:integer  ;
+                    rml:reference "if (not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1')  and efbc:StatisticsCode/text() = 't-med') then efbc:StatisticsNumeric else null" ;
+                    rr:datatype xsd:integer ;
                 ] ;
-        ];
-     rr:predicateObjectMap
+        ] ;
+    rr:predicateObjectMap
         [
-            rdfs:label "BT-759-LotResult";
+            rdfs:label "BT-759-LotResult (t-micro)" ;
             rdfs:comment "Received Submissions Count of MG-SubmissionStatisticalInformation under ND-ReceivedSubmissions";
-            rr:predicate  epo:hasReceivedMicroTenders     ;
+            rr:predicate epo:hasReceivedMicroTenders ;
             rr:objectMap
                 [
-                   rml:reference "if (not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1')  and efbc:StatisticsCode/text() = ('t-micro')) then efbc:StatisticsNumeric else null" ;
-                    rr:datatype xsd:integer  ;
+                    rml:reference "if (not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1')  and efbc:StatisticsCode/text() = ('t-micro')) then efbc:StatisticsNumeric else null" ;
+                    rr:datatype xsd:integer ;
                 ] ;
-        ];
-     rr:predicateObjectMap
+        ] ;
+    rr:predicateObjectMap
         [
-            rdfs:label "BT-759-LotResult";
+            rdfs:label "BT-759-LotResult (t-no-eea)" ;
             rdfs:comment "Received Submissions Count of MG-SubmissionStatisticalInformation under ND-ReceivedSubmissions";
-            rr:predicate  epo:hasNonEEAReceivedTenders ;
+            rr:predicate epo:hasNonEEAReceivedTenders ;
             rr:objectMap
                 [
-                   rml:reference "if (not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1')  and efbc:StatisticsCode/text() = ('t-no-eea')) then efbc:StatisticsNumeric else null" ;
-                    rr:datatype xsd:integer  ;
+                    rml:reference "if (not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1')  and efbc:StatisticsCode/text() = ('t-no-eea')) then efbc:StatisticsNumeric else null" ;
+                    rr:datatype xsd:integer ;
                 ] ;
-        ];
-      rr:predicateObjectMap
+        ] ;
+    rr:predicateObjectMap
         [
-            rdfs:label "BT-759-LotResult";
+            rdfs:label "BT-759-LotResult (t-no-verif)" ;
             rdfs:comment "Received Submissions Count of MG-SubmissionStatisticalInformation under ND-ReceivedSubmissions";
-            rr:predicate  epo:hasUnverifiedTenders  ;
+            rr:predicate epo:hasUnverifiedTenders ;
             rr:objectMap
                 [
-                   rml:reference "if (not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1')  and efbc:StatisticsCode/text() = ('t-no-verif')) then efbc:StatisticsNumeric else null" ;
-                    rr:datatype xsd:integer  ;
+                    rml:reference "if (not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1')  and efbc:StatisticsCode/text() = ('t-no-verif')) then efbc:StatisticsNumeric else null" ;
+                    rr:datatype xsd:integer ;
                 ] ;
-        ];
-       rr:predicateObjectMap
+        ] ;
+    rr:predicateObjectMap
         [
-            rdfs:label "BT-759-LotResult";
-            rdfs:comment "Received Submissions Count of MG-SubmissionStatisticalInformation under ND-ReceivedSubmissions";
-            rr:predicate  epo:hasEEAReceivedTenders   ;
+            rdfs:label "BT-759-LotResult (t-oth-eea)" ;
+            rdfs:comment "Received Submissions Count of MG-SubmissionStatisticalInformation under ND-ReceivedSubmissions" ;
+            rr:predicate epo:hasEEAReceivedTenders ;
             rr:objectMap
                 [
-                   rml:reference "if (not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1')  and efbc:StatisticsCode/text() = ('t-oth-eea')) then efbc:StatisticsNumeric else null" ;
-                    rr:datatype xsd:integer  ;
+                    rml:reference "if (not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1')  and efbc:StatisticsCode/text() = ('t-oth-eea')) then efbc:StatisticsNumeric else null" ;
+                    rr:datatype xsd:integer ;
                 ] ;
-        ];
-      rr:predicateObjectMap
+        ] ;
+    rr:predicateObjectMap
         [
-            rdfs:label "BT-759-LotResult";
-            rdfs:comment "Received Submissions Count of MG-SubmissionStatisticalInformation under ND-ReceivedSubmissions";
-            rr:predicate  epo:hasReceivedSmallTenders    ;
+            rdfs:label "BT-759-LotResult (t-small)" ;
+            rdfs:comment "Received Submissions Count of MG-SubmissionStatisticalInformation under ND-ReceivedSubmissions" ;
+            rr:predicate epo:hasReceivedSmallTenders ;
             rr:objectMap
                 [
                    rml:reference "if (not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1')  and efbc:StatisticsCode/text() = ('t-small')) then efbc:StatisticsNumeric else null" ;
-                    rr:datatype xsd:integer  ;
+                    rr:datatype xsd:integer ;
                 ] ;
-        ];
-      rr:predicateObjectMap
+        ] ;
+    rr:predicateObjectMap
         [
-            rdfs:label "BT-759-LotResult";
-            rdfs:comment "Received Submissions Count of MG-SubmissionStatisticalInformation under ND-ReceivedSubmissions";
-            rr:predicate  epo:hasSMEReceivedTenders     ;
+            rdfs:label "BT-759-LotResult (t-sme)" ;
+            rdfs:comment "Received Submissions Count of MG-SubmissionStatisticalInformation under ND-ReceivedSubmissions" ;
+            rr:predicate epo:hasSMEReceivedTenders ;
             rr:objectMap
                 [
-                   rml:reference "if (not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1')  and efbc:StatisticsCode/text() = ('t-sme')) then efbc:StatisticsNumeric else null" ;
-                    rr:datatype xsd:integer  ;
+                    rml:reference "if (not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1')  and efbc:StatisticsCode/text() = ('t-sme')) then efbc:StatisticsNumeric else null" ;
+                    rr:datatype xsd:integer ;
                 ] ;
-        ];
-      rr:predicateObjectMap
+        ] ;
+    rr:predicateObjectMap
         [
-            rdfs:label "BT-759-LotResult";
-            rdfs:comment "Received Submissions Count of MG-SubmissionStatisticalInformation under ND-ReceivedSubmissions";
-            rr:predicate  epo:hasInadmissibleTenders      ;
+            rdfs:label "BT-759-LotResult (t-verif-inad)" ;
+            rdfs:comment "Received Submissions Count of MG-SubmissionStatisticalInformation under ND-ReceivedSubmissions" ;
+            rr:predicate epo:hasInadmissibleTenders ;
             rr:objectMap
                 [
-                   rml:reference "if (not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1')  and efbc:StatisticsCode/text() = ('t-verif-inad')) then efbc:StatisticsNumeric else null" ;
-                    rr:datatype xsd:integer  ;
+                    rml:reference "if (not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1')  and efbc:StatisticsCode/text() = ('t-verif-inad')) then efbc:StatisticsNumeric else null" ;
+                    rr:datatype xsd:integer ;
                 ] ;
-        ];
-      rr:predicateObjectMap
+        ] ;
+    rr:predicateObjectMap
         [
-            rdfs:label "BT-759-LotResult";
-            rdfs:comment "Received Submissions Count of MG-SubmissionStatisticalInformation under ND-ReceivedSubmissions";
-            rr:predicate  epo:hasAbnormallyLowTenders       ;
+            rdfs:label "BT-759-LotResult (t-verif-inad-low)" ;
+            rdfs:comment "Received Submissions Count of MG-SubmissionStatisticalInformation under ND-ReceivedSubmissions" ;
+            rr:predicate epo:hasAbnormallyLowTenders ;
             rr:objectMap
                 [
-                   rml:reference "if (not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1')  and efbc:StatisticsCode/text() = ('t-verif-inad-low')) then efbc:StatisticsNumeric else null" ;
-                    rr:datatype xsd:integer  ;
+                    rml:reference "if (not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='rec-sub-cou']) and efbc:StatisticsNumeric/text() = '-1') and efbc:StatisticsCode/text() = ('t-verif-inad-low')) then efbc:StatisticsNumeric else null" ;
+                    rr:datatype xsd:integer ;
                 ] ;
-        ];
-     rr:predicateObjectMap
+        ] ;
+    rr:predicateObjectMap
         [
-            rdfs:label "BT-709-LotResult";
-            rdfs:comment "Tender Value Highest of MG-MonetaryValue under ND-LotResult";
-            rr:predicate  epo:hasHighestReceivedTenderValue      ;
+            rdfs:label "BT-709-LotResult" ;
+            rdfs:comment "Tender Value Highest of MG-MonetaryValue under ND-LotResult" ;
+            rr:predicate epo:hasHighestReceivedTenderValue ;
              rr:objectMap
                 [
-                   rr:parentTriplesMap tedm:MG-MonetaryValue-hasHighestReceivedTenderValue-SubmissionStatisticalInformation_ND-LotResult;
-                    rr:joinCondition[
-                        rr:child "path(..)";
-                        rr:parent "path(.)";
-                    ];
+                    rr:parentTriplesMap tedm:MG-MonetaryValue-hasHighestReceivedTenderValue-SubmissionStatisticalInformation_ND-LotResult ;
+                    rr:joinCondition [
+                        rr:child "path(..)" ;
+                        rr:parent "path(.)" ;
+                    ] ;
                 ] ;
-        ];
-     rr:predicateObjectMap
+        ] ;
+    rr:predicateObjectMap
         [
-            rdfs:label "BT-709-LotResult";
-            rdfs:comment "Tender Value Lowest of MG-MonetaryValue under ND-LotResult";
-            rr:predicate  epo:hasLowestReceivedTenderValue      ;
+            rdfs:label "BT-709-LotResult" ;
+            rdfs:comment "Tender Value Lowest of MG-MonetaryValue under ND-LotResult" ;
+            rr:predicate epo:hasLowestReceivedTenderValue ;
              rr:objectMap
                 [
-                   rr:parentTriplesMap tedm:MG-MonetaryValue-hasLowestReceivedTenderValue-SubmissionStatisticalInformation_ND-LotResult;
+                    rr:parentTriplesMap tedm:MG-MonetaryValue-hasLowestReceivedTenderValue-SubmissionStatisticalInformation_ND-LotResult ;
                     rr:joinCondition[
-                        rr:child "path(..)";
-                        rr:parent "path(.)";
-                    ];
+                        rr:child "path(..)" ;
+                        rr:parent "path(.)" ;
+                    ] ;
                 ] ;
-        ];
-    .
+        ] ;
+.
 
-tedm:MG-SubmissionStatisticalInformation_ND-LotResult  a rr:TriplesMap ;
-  rdfs:label "MG-SubmissionStatisticalInformation";
-       rml:logicalSource
+tedm:MG-SubmissionStatisticalInformation_ND-LotResult a rr:TriplesMap ;
+    rdfs:label "MG-SubmissionStatisticalInformation";
+    rml:logicalSource
         [
             rml:source "data/source.xml" ;
             rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotResult" ;
@@ -217,21 +217,21 @@ tedm:MG-SubmissionStatisticalInformation_ND-LotResult  a rr:TriplesMap ;
     rr:predicateObjectMap
         [
             rdfs:label "ND-LotResult";
-            rr:predicate  epo:summarisesInformationForAwardOutcome      ;
-             rr:objectMap
+            rr:predicate epo:summarisesInformationForAwardOutcome ;
+            rr:objectMap
                 [
-                   rr:parentTriplesMap tedm:MG-LotAwardOutcome-summarisesInformationForAwardOutcome-SubmissionStatisticalInformation_ND-LotResult;
-                    rr:joinCondition[
-                        rr:child "if(exists(cbc:LowerTenderAmount) or exists(cbc:HigherTenderAmount) or exists(efac:ReceivedSubmissionsStatistics)) then path(.) else null";
-                        rr:parent "path(.)";
-                    ];
+                    rr:parentTriplesMap tedm:MG-LotAwardOutcome-summarisesInformationForAwardOutcome-SubmissionStatisticalInformation_ND-LotResult ;
+                    rr:joinCondition [
+                        rr:child "if(exists(cbc:LowerTenderAmount) or exists(cbc:HigherTenderAmount) or exists(efac:ReceivedSubmissionsStatistics)) then path(.) else null" ;
+                        rr:parent "path(.)" ;
+                    ] ;
                 ] ;
-        ];
-    .
+        ] ;
+.
 
-tedm:MG-MonetaryValue-hasHighestReceivedTenderValue-SubmissionStatisticalInformation_ND-LotResult  a rr:TriplesMap ;
-  rdfs:label "MG-MonetaryValue";
-       rml:logicalSource
+tedm:MG-MonetaryValue-hasHighestReceivedTenderValue-SubmissionStatisticalInformation_ND-LotResult a rr:TriplesMap ;
+    rdfs:label "MG-MonetaryValue" ;
+    rml:logicalSource
         [
             rml:source "data/source.xml" ;
             rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotResult" ;
@@ -245,36 +245,35 @@ tedm:MG-MonetaryValue-hasHighestReceivedTenderValue-SubmissionStatisticalInforma
         ] ;
     rr:predicateObjectMap
         [
-            rdfs:label "BT-711-LotResult";
-            rdfs:comment "Tender Value Highest of MG-MonetaryValue under ND-LotResult";
+            rdfs:label "BT-711-LotResult" ;
+            rdfs:comment "Tender Value Highest of MG-MonetaryValue under ND-LotResult" ;
             rr:predicate epo:hasAmountValue ;
             rr:objectMap
                 [
                     rml:reference "if(not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='ten-val-hig']) and cbc:HigherTenderAmount/text() = '-1' )) then cbc:HigherTenderAmount else null" ;
                     rr:datatype xsd:decimal ;
                 ] ;
-        ];
-      rr:predicateObjectMap
+        ] ;
+    rr:predicateObjectMap
         [
-            rdfs:label "BT-711-LotResult-Currency";
-            rdfs:comment "Currency of Tender Value Highest of MG-MonetaryValue under ND-LotResult";
+            rdfs:label "BT-711-LotResult-Currency" ;
+            rdfs:comment "Currency of Tender Value Highest of MG-MonetaryValue under ND-LotResult" ;
             rr:predicate epo:hasCurrency ;
             rr:objectMap
                 [
                     rdfs:label "at-voc:currency" ;
                     rr:parentTriplesMap tedm:currency ;
                     rr:joinCondition [
-                        rr:child "if(not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='ten-val-hig']) and cbc:HigherTenderAmount/text() = '-1' )) then cbc:HigherTenderAmount/@currencyID  else null";
+                        rr:child "if(not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='ten-val-hig']) and cbc:HigherTenderAmount/text() = '-1' )) then cbc:HigherTenderAmount/@currencyID  else null" ;
                         rr:parent "code.value" ;
                     ] ;
                 ] ;
         ] ;
-
     .
 
 tedm:MG-MonetaryValue-hasLowestReceivedTenderValue-SubmissionStatisticalInformation_ND-LotResult  a rr:TriplesMap ;
-  rdfs:label "MG-MonetaryValue";
-       rml:logicalSource
+    rdfs:label "MG-MonetaryValue";
+    rml:logicalSource
         [
             rml:source "data/source.xml" ;
             rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotResult" ;
@@ -288,19 +287,19 @@ tedm:MG-MonetaryValue-hasLowestReceivedTenderValue-SubmissionStatisticalInformat
         ] ;
     rr:predicateObjectMap
         [
-            rdfs:label "BT-710-LotResult";
-            rdfs:comment "Tender Value lowest of MG-MonetaryValue under ND-LotResult";
-            rr:predicate  epo:hasAmountValue   ;
+            rdfs:label "BT-710-LotResult" ;
+            rdfs:comment "Tender Value lowest of MG-MonetaryValue under ND-LotResult" ;
+            rr:predicate epo:hasAmountValue ;
             rr:objectMap
                 [
                     rml:reference "if(not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='ten-val-low']) and cbc:LowerTenderAmount/text() = '-1' )) then cbc:LowerTenderAmount else null" ;
-                    rr:datatype xsd:decimal   ;
+                    rr:datatype xsd:decimal ;
                 ] ;
-        ];
-      rr:predicateObjectMap
+        ] ;
+    rr:predicateObjectMap
         [
-            rdfs:label "BT-711-LotResult-Currency";
-            rdfs:comment "Currency of Tender Value Lowest of MG-MonetaryValue under ND-LotResult";
+            rdfs:label "BT-711-LotResult-Currency" ;
+            rdfs:comment "Currency of Tender Value Lowest of MG-MonetaryValue under ND-LotResult" ;
             rr:predicate epo:hasCurrency ;
             rr:objectMap
                 [
@@ -312,5 +311,4 @@ tedm:MG-MonetaryValue-hasLowestReceivedTenderValue-SubmissionStatisticalInformat
                     ] ;
                 ] ;
         ] ;
-
-    .
+.

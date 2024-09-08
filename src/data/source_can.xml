@@ -1227,13 +1227,8 @@
 		<!--"id" : "BT-756-Procedure", "name" : "PIN Competition Termination"-->
 		<cbc:TerminatedIndicator>false</cbc:TerminatedIndicator>
 		<cac:ProcessJustification>
-			<!--"id" : "BT-106-Procedure", "name" : "Procedure Accelerated -->
-			<cbc:ProcessReasonCode listName="accelerated-procedure">true</cbc:ProcessReasonCode>
-			<!--"id" : "BT-1351-Procedure", "name" : "Procedure Accelerated Justification" -->
+			<cbc:ProcessReasonCode listName="direct-award-justification">unsuitable</cbc:ProcessReasonCode>
 			<cbc:ProcessReason languageID="ENG">Procedure Accelerated Justification ---</cbc:ProcessReason>
-			<!--"id" : "BT-106-Procedure", "name" : "Procedure Accelerated -->
-			<cbc:ProcessReasonCode listName="direct-award-justification">true</cbc:ProcessReasonCode>
-			<!--"id" : "BT-1351-Procedure", "name" : "Procedure Accelerated Justification" -->
 			<cbc:Description languageID="ENG">---identifier for Previous Procedure Test ---</cbc:Description>
 		</cac:ProcessJustification>
 	</cac:TenderingProcess>

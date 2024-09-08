@@ -391,7 +391,8 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ContractTerm_RdpZg7b4gA4ZEQmQB5ZNhK 
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_DirectAwardTerm_DDmVKAr2D9d2R9YAz7bPSt
   a epo:DirectAwardTerm;
-  epo:hasDirectAwardJustification "Procedure Accelerated Justification ---"@en;
+  epo:hasDirectAwardJustification <http://publications.europa.eu/resource/authority/direct-award-justification/unsuitable>;
+  epo:hasJustification "Procedure Accelerated Justification ---"@en;
   epo:refersToPreviousProcedure epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Procedure_DDmVKAr2D9d2R9YAz7bPSt .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_DynamicPurchaseSystemTechnicalUsage_JdBkiUatysvbDSqaUnVeDH
@@ -962,7 +963,6 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Procedure_6dcsBnuV4FTNoRpTZHckqN a e
   epo:foreseesContractSpecificTerm epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementProjectContractTerm_BAFiQAm5eaBz7sDFPbYXor,
     epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementProjectContractTerm_Hu2nD8nFQkA5CPSQ43KMRD,
     epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementProjectContractTerm_XFzL73ufnqniDUby5oyMFJ;
-  epo:hasAcceleratedProcedureJustification "Procedure Accelerated Justification ---"@en;
   epo:hasAdditionalInformation "Additional information ---"@en;
   epo:hasEstimatedValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValueProcedure_YFTDpjyGUfQWdZ93njHfhX;
   epo:hasInternalIdentifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcedureIdentifier_Hu2nD8nFQkA5CPSQ43KMRD;
@@ -972,7 +972,6 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Procedure_6dcsBnuV4FTNoRpTZHckqN a e
   epo:hasProcurementScopeDividedIntoLot epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001,
     epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0002;
   epo:hasPurpose epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcedurePurpose_Hu2nD8nFQkA5CPSQ43KMRD;
-  epo:isAccelerated true;
   epo:isSubjectToProcedureSpecificTerm epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_DirectAwardTerm_DDmVKAr2D9d2R9YAz7bPSt,
     epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcedureTerm_3m6Q8n9T683acseXWAKALc,
     epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcedureTerm_CLwCuB6jJaDuNTJfrVRmnb,

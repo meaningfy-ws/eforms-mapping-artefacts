@@ -478,9 +478,10 @@ tedm:MG-Identifier-identifier-ResultNotice_ND-SettledContract  a rr:TriplesMap ;
         ];
     .
 
-tedm:MG-FrameworkAgreement-announcesContract-ResultNotice_ND-SettledContract  a rr:TriplesMap ;
-  rdfs:label "MG-FrameworkAgreement";
-       rml:logicalSource
+# this is an external reference (another notice)
+tedm:MG-ResultNotice_ND-SettledContract a rr:TriplesMap ;
+    rdfs:label "MG-ResultNotice" ;
+    rml:logicalSource
         [
             rml:source "data/source.xml" ;
             rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:SettledContract" ;
@@ -489,14 +490,45 @@ tedm:MG-FrameworkAgreement-announcesContract-ResultNotice_ND-SettledContract  a 
     rr:subjectMap
         [
             rdfs:label "ND-SettledContract" ;
-            rml:reference "if (exists(/*/cac:ProcurementProjectLot[(cbc:ID/@schemeName='Lot') and (cbc:ID/text()=/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender[cbc:ID/text()=//efac:LotTender/cbc:ID/text()]/efac:TenderLot/cbc:ID/text())]/cac:TenderingProcess/cac:ContractingSystem/cbc:ContractingSystemTypeCode[@listName='framework-agreement' and starts-with(text(),'fa-')])) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_SettledContract_' || cbc:ID else null" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(cac:NoticeDocumentReference/cbc:ID, ' ', '-' ), '/' , '-')}_Notice" ;
+            rr:class epo:ResultNotice
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "OPT-100-Contract" ;
+            rdfs:comment "Framework Notice Identifier of MG-ResultNotice under ND-SettledContract" ;
+            rr:predicate epo:announcesContract ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-FrameworkAgreement-announcesContract-ResultNotice_ND-SettledContract ;
+                    rr:joinCondition [
+                        rr:child "path(.)" ;
+                        rr:parent "path(.)" ;
+                    ] ;
+                ] ;
+        ] ;
+.
+
+# this is a proxy for a non-existing but cited resource
+tedm:MG-FrameworkAgreement-announcesContract-ResultNotice_ND-SettledContract a rr:TriplesMap ;
+    rdfs:label "MG-FrameworkAgreement" ;
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:SettledContract" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:subjectMap
+        [
+            rdfs:label "ND-SettledContract" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(cac:NoticeDocumentReference/cbc:ID, ' ', '-' ), '/' , '-')}_SettledContractProxyFA" ;
             rr:class epo:FrameworkAgreement
         ] ;
-    .
+.
 
 tedm:MG-FrameworkAgreement-followsRulesSetBy-PurchaseContract_ND-SettledContract  a rr:TriplesMap ;
-  rdfs:label "MG-FrameworkAgreement";
-       rml:logicalSource
+    rdfs:label "MG-FrameworkAgreement" ;
+    rml:logicalSource
         [
             rml:source "data/source.xml" ;
             rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:SettledContract" ;
@@ -505,10 +537,10 @@ tedm:MG-FrameworkAgreement-followsRulesSetBy-PurchaseContract_ND-SettledContract
     rr:subjectMap
         [
             rdfs:label "ND-SettledContract" ;
-            rml:reference "if (exists(cac:NoticeDocumentReference/cbc:ID)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_SettledContract_' || cbc:ID else null" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(cac:NoticeDocumentReference/cbc:ID, ' ', '-' ), '/' , '-')}_SettledContractProxyFA" ;
             rr:class epo:FrameworkAgreement
         ] ;
-    .
+.
 
 tedm:MG-Contract_ND-PayerParty  a rr:TriplesMap ;
   rdfs:label "MG-Contract";

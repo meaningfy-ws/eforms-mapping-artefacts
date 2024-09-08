@@ -128,7 +128,7 @@ tedm:MG-MonetaryValue-hasTotalAwardedValue-NoticeAwardInformation-announcesNotic
     rr:subjectMap
         [
             rdfs:label "ND-NoticeResult" ;
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_MonetaryValueLot_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rml:reference "if (exists(cbc:TotalAmount)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_MonetaryValueNoticeAwardInformation_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
             rr:class epo:MonetaryValue
         ] ;
     rr:predicateObjectMap
@@ -213,7 +213,7 @@ tedm:MG-MonetaryValue-hasMaximumFrameworkAgreementAwardedValue-NoticeAwardInform
     rr:subjectMap
         [
             rdfs:label "ND-NoticeResult" ;
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_MaximumFrameworkAgreementAwardedMonetaryValueLot_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rml:reference "if (exists(efbc:OverallMaximumFrameworkContractsAmount)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_MaximumFrameworkAgreementAwardedMonetaryValueLot_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
             rr:class epo:MonetaryValue
         ] ;
     rr:predicateObjectMap
@@ -242,7 +242,7 @@ tedm:MG-MonetaryValue-hasApproximateFrameworkAgreementValue-NoticeAwardInformati
     rr:subjectMap
         [
             rdfs:label "ND-NoticeResult" ;
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_ApproximateFrameworkAgreementMonetaryValueLot_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rml:reference "if (exists(efbc:OverallApproximateFrameworkContractsAmount)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_ApproximateFrameworkAgreementMonetaryValueLot_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw') else null" ;
             rr:class epo:MonetaryValue
         ] ;
     rr:predicateObjectMap

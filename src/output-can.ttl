@@ -503,8 +503,8 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_InnovativeProcurement_WkofDRMGPe4b3Y
   epo:fulfillsRequirement <http://publications.europa.eu/resource/authority/innovative-acquisition/proc-innov> .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotAwardOutcome_RES-0001 a epo:LotAwardOutcome;
-  epo:comprisesTenderAwardOutcome epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderAwardOutcome_EBPJ2fbv7o99YfmArtWauY,
-    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderAwardOutcome_JLUDXPkxvCA955SAqWv3Ju;
+  epo:comprisesTenderAwardOutcome epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderAwardOutcome_TEN-0001,
+    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderAwardOutcome_TEN-0002;
   epo:concernsLot epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;
   epo:hasApproximateFrameworkAgreementValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_buhfT7xy3UtLfxfwv8HbfT;
   epo:hasAwardStatus <http://publications.europa.eu/resource/authority/winner-selection-status/selec-w>;
@@ -516,7 +516,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotAwardOutcome_RES-0001 a epo:LotAw
     epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_VehicleInformation_NJqWLgHQbjQCE5pSdQ2254 .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotAwardOutcome_RES-0002 a epo:LotAwardOutcome;
-  epo:comprisesTenderAwardOutcome epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderAwardOutcome_jWu7544ZnnuCc6He5Egjkx;
+  epo:comprisesTenderAwardOutcome epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderAwardOutcome_TEN-0003;
   epo:concernsLot epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0002;
   epo:hasAwardStatus <http://publications.europa.eu/resource/authority/winner-selection-status/clos-nw>;
   epo:hasNonAwardJustification <http://publications.europa.eu/resource/authority/non-award-justification/all-rej>;
@@ -1191,27 +1191,16 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TaxInformationProvider_HaEv2nhsYWgNm
   epo:contextualisedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001, epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0002;
   epo:playedBy epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0002 .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderAwardOutcome_8tLJD9wyvjSHWYvDWGiX5D
-  a epo:TenderAwardOutcome;
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderAwardOutcome_TEN-0001 a epo:TenderAwardOutcome;
   epo:concernsTender epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0001;
   epo:hasAwardRank 3 .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderAwardOutcome_EBPJ2fbv7o99YfmArtWauY
-  a epo:TenderAwardOutcome;
-  epo:concernsTender epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0002 .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderAwardOutcome_JLUDXPkxvCA955SAqWv3Ju
-  a epo:TenderAwardOutcome;
-  epo:concernsTender epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0001 .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderAwardOutcome_jWu7544ZnnuCc6He5Egjkx
-  a epo:TenderAwardOutcome;
-  epo:concernsTender epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0003 .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderAwardOutcome_nNq2rC7wBesmhA5baJ8mCt
-  a epo:TenderAwardOutcome;
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderAwardOutcome_TEN-0002 a epo:TenderAwardOutcome;
   epo:concernsTender epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0002;
   epo:hasAwardRank 4 .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderAwardOutcome_TEN-0003 a epo:TenderAwardOutcome;
+  epo:concernsTender epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Tender_TEN-0003 .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TenderIdentifier_8tLJD9wyvjSHWYvDWGiX5D
   a adms:Identifier;

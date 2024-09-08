@@ -58,8 +58,8 @@ tedm:MG-Identifier-identifier-Tender_ND-LotTender  a rr:TriplesMap ;
                     rml:reference "efac:TenderReference/cbc:ID/@schemeName";
                 ] ;
         ] ;
-
 .
+
 tedm:MG-TenderAwardOutcome_ND-LotTender  a rr:TriplesMap ;
   rdfs:label "MG-TenderAwardOutcome";
        rml:logicalSource
@@ -71,7 +71,7 @@ tedm:MG-TenderAwardOutcome_ND-LotTender  a rr:TriplesMap ;
     rr:subjectMap
         [
             rdfs:label "ND-LotTender" ;
-            rml:reference "if (exists(cbc:RankCode)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_TenderAwardOutcome_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(.)) || '?response_type=raw') else null" ;
+            rml:reference "if (exists(cbc:RankCode)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_TenderAwardOutcome_' || cbc:ID else null" ;
             rr:class epo:TenderAwardOutcome
         ] ;
     rr:predicateObjectMap
@@ -89,7 +89,7 @@ tedm:MG-TenderAwardOutcome_ND-LotTender  a rr:TriplesMap ;
         [
             rdfs:label "BT-171-Tender";
             rdfs:comment "Tender Rank of MG-TenderAwardOutcome under ND-NoticeResult";
-            rr:predicate epo:concernsTender  ;
+            rr:predicate epo:concernsTender ;
             rr:objectMap
                 [
                     rr:parentTriplesMap tedm:MG-Tender-concernsTender-TenderAwardOutcome_ND-LotTender ;
@@ -99,7 +99,6 @@ tedm:MG-TenderAwardOutcome_ND-LotTender  a rr:TriplesMap ;
                     ];
                 ] ;
         ] ;
-
 .
 
 tedm:MG-Tender-concernsTender-TenderAwardOutcome_ND-LotTender  a rr:TriplesMap ;
@@ -554,7 +553,7 @@ tedm:MG-TenderAwardOutcome-comprisesTenderAwardOutcome-LotAwardOutcome_ND-LotRes
     rr:subjectMap
         [
             rdfs:label "ND-LotResultTenderReference" ;
-            rml:reference "if (exists(cbc:ID)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_TenderAwardOutcome_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(.)) || '?response_type=raw') else null" ;
+            rml:reference "if (exists(cbc:ID)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_TenderAwardOutcome_' || cbc:ID else null" ;
             rr:class epo:TenderAwardOutcome
         ] ;
      rr:predicateObjectMap

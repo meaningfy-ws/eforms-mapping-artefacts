@@ -211,7 +211,7 @@ tedm:MG-SubmissionStatisticalInformation_ND-LotResult a rr:TriplesMap ;
     rr:subjectMap
         [
             rdfs:label "ND-LotResult" ;
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_SubmissionStatisticalInformation_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(.)) || '?response_type=raw')}" ;
+            rml:reference "if(exists(cbc:LowerTenderAmount) or exists(cbc:HigherTenderAmount) or exists(efac:ReceivedSubmissionsStatistics)) then 'http://data.europa.eu/a4g/resource/id_' || replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-') || '_SubmissionStatisticalInformation_' || unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(.)) || '?response_type=raw') else null" ;
             rr:class epo:SubmissionStatisticalInformation
         ] ;
     rr:predicateObjectMap
@@ -222,7 +222,7 @@ tedm:MG-SubmissionStatisticalInformation_ND-LotResult a rr:TriplesMap ;
                 [
                     rr:parentTriplesMap tedm:MG-LotAwardOutcome-summarisesInformationForAwardOutcome-SubmissionStatisticalInformation_ND-LotResult ;
                     rr:joinCondition [
-                        rr:child "if(exists(cbc:LowerTenderAmount) or exists(cbc:HigherTenderAmount) or exists(efac:ReceivedSubmissionsStatistics)) then path(.) else null" ;
+                        rr:child "path(.)" ;
                         rr:parent "path(.)" ;
                     ] ;
                 ] ;

@@ -655,15 +655,6 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValueLot_27KA6ACAHWGqx86uaQS
   epo:hasAmountValue 9999999.99;
   epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValueLot_JryEpNBTCzNfzKbsxaXwjt
-  a epo:MonetaryValue;
-  epo:hasAmountValue 9999999.99 .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValueLot_YFTDpjyGUfQWdZ93njHfhX
-  a epo:MonetaryValue;
-  epo:hasAmountValue 9999999.99;
-  epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> .
-
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValueLot_dtgHN4uepvFKD99RLsBWMZ
   a epo:MonetaryValue;
   epo:hasAmountValue 9999999.99;
@@ -672,6 +663,15 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValueLot_dtgHN4uepvFKD99RLsB
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValueLowestReceivedTenderValue_A5K3ndcSySWYxA4wrRkqDG
   a epo:MonetaryValue;
   epo:hasAmountValue 999999.99;
+  epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValueNoticeAwardInformation_JryEpNBTCzNfzKbsxaXwjt
+  a epo:MonetaryValue;
+  epo:hasAmountValue 9999999.99 .
+
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValueProcedure_YFTDpjyGUfQWdZ93njHfhX
+  a epo:MonetaryValue;
+  epo:hasAmountValue 9999999.99;
   epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValue_8tLJD9wyvjSHWYvDWGiX5D a
@@ -727,7 +727,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_NoticeAwardInformation_JryEpNBTCzNfz
   a epo:NoticeAwardInformation;
   epo:hasApproximateFrameworkAgreementValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ApproximateFrameworkAgreementMonetaryValueLot_JryEpNBTCzNfzKbsxaXwjt;
   epo:hasMaximumFrameworkAgreementAwardedValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MaximumFrameworkAgreementAwardedMonetaryValueLot_JryEpNBTCzNfzKbsxaXwjt;
-  epo:hasTotalAwardedValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValueLot_JryEpNBTCzNfzKbsxaXwjt .
+  epo:hasTotalAwardedValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValueNoticeAwardInformation_JryEpNBTCzNfzKbsxaXwjt .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_NoticeIdentifier_aHt4iskyRUJYALjw7mSMu2
   a adms:Identifier;
@@ -963,7 +963,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Procedure_6dcsBnuV4FTNoRpTZHckqN a e
     epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcurementProjectContractTerm_XFzL73ufnqniDUby5oyMFJ;
   epo:hasAcceleratedProcedureJustification "Procedure Accelerated Justification ---"@en;
   epo:hasAdditionalInformation "Additional information ---"@en;
-  epo:hasEstimatedValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValueLot_YFTDpjyGUfQWdZ93njHfhX;
+  epo:hasEstimatedValue epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_MonetaryValueProcedure_YFTDpjyGUfQWdZ93njHfhX;
   epo:hasInternalIdentifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ProcedureIdentifier_Hu2nD8nFQkA5CPSQ43KMRD;
   epo:hasLegalBasis <http://publications.europa.eu/resource/authority/legal-basis/32014L0024>;
   epo:hasMainFeature "Description of the procedure  ---"@en;

@@ -87,7 +87,7 @@ tedm:MG-DirectAwardTerm-isSubjectToProcedureSpecificTerm-Procedure_ND-DirectAwar
         [
             rdfs:label "BT-135-Procedure";
             rdfs:comment "Direct Award Justification Text of MG-DirectAwardTerm under ND-DirectAward";
-            rr:predicate  epo:hasDirectAwardJustification   ;
+            rr:predicate  epo:hasJustification    ;
             rr:objectMap
                 [
                     rdfs:label "BT-135-Procedure-Language";

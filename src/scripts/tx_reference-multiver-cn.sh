@@ -9,8 +9,8 @@
 # WARNING: depends on versioned mappings in directories of the form
 # mappings-1.$minorver
 
-
 # you probably need to change these
 rmlmapper="java -jar $HOME/.rmlmapper/rmlmapper-6.2.2-r371-all.jar"
 
+bash scripts/prep-multiver.sh
 for i in `ls -dv mappings-1*`; do echo "transforming $i" && cp -v data/source_cn.xml data/source.xml && $rmlmapper -m mappings/* mappings-common/* $i/* -s turtle > output-versioned/output-cn-${i/mappings-}.ttl && rm -fv data/source.xml; done

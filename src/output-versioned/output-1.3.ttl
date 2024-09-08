@@ -21,1430 +21,851 @@
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_8y8GPfmPvSRdBcci6WWcSi a epo:AccessTerm;
-  epo:hasAdditionalInformationDeadline "2023-05-20T20:59:32+01:00"^^xsd:dateTime .
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_AccessTerm_YWMCGu6i5HBxweh3xaUekn a epo:AccessTerm;
+  epo:definesProcurementProcedureInformationProvider epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ProcurementProcedureInformationProvider_HaEv2nhsYWgNmx2FoRrNgG .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_Aim3sQTrJD92cok54ZhnWW a epo:AccessTerm;
-  epo:hasPublicAccessURL "http://restrictedaccessto.com"^^xsd:anyURI;
-  epo:hasRestrictedAccessURL "http://restrictedaccessto.com"^^xsd:anyURI;
-  epo:isProcurementDocumentRestricted true .
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_AccessTerm_naE3mfoLZyth2mWXywVhn6 a epo:AccessTerm;
+  epo:hasPublicAccessURL "https://cloud.3p.eu/Downloads/1/16006/B3/2024"^^xsd:anyURI;
+  epo:involvesProcurementDocument epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ProcurementDocument_URpngqswLJbFakGHMJhG53;
+  epo:isProcurementDocumentRestricted false .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_PuAZ93vcjRYhKiN4rMvUZg a epo:AccessTerm;
-  epo:definesOfflineAccessProvider epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OfflineAccessProvider_PuAZ93vcjRYhKiN4rMvUZg;
-  epo:definesProcurementProcedureInformationProvider epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProcedureInformationProvider_PuAZ93vcjRYhKiN4rMvUZg .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_TT87XZ7rfCixVuS4Z9trMH a epo:AccessTerm;
-  epo:definesOfflineAccessProvider epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OfflineAccessProvider_TT87XZ7rfCixVuS4Z9trMH;
-  epo:definesProcurementProcedureInformationProvider epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProcedureInformationProvider_TT87XZ7rfCixVuS4Z9trMH .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_daUDPcwCUoxbJRjGb7tKNQ a epo:AccessTerm;
-  epo:hasAdditionalInformationDeadline "2023-05-20T20:59:32+01:00"^^xsd:dateTime .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_fHHa5zNc2jy5cUXFhDq6nM a epo:AccessTerm;
-  epo:hasPublicAccessURL "http://restrictedaccessto.com"^^xsd:anyURI;
-  epo:hasRestrictedAccessURL "http://restrictedaccessto.com"^^xsd:anyURI;
-  epo:isProcurementDocumentRestricted true .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AcquiringCentralPurchasingBody_TftBQ7CiqCcyirLAwhsyEn
-  a epo:AcquiringCentralPurchasingBody;
-  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0004 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AuctionTerms_a3YxuhxVZtuVM6PB6isrBc a
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_AuctionTerms_Y7WNjU2HSM4HNny2xZsabR a
     epo:EAuctionTechnique;
-  epo:hasUsage <http://publications.europa.eu/resource/authority/usage/used>;
-  dct:description "Electronic auction description ---"@en .
+  epo:hasUsage <http://publications.europa.eu/resource/authority/usage/n-used> .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AuctionTerms_fEtfKJVcbukziY28mGZdui a
-    epo:EAuctionTechnique;
-  epo:hasUsage <http://publications.europa.eu/resource/authority/usage/used>;
-  dct:description "Electronic auction description ---"@en .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_39TpnFPzm9mQHb8KWyccgF
-  a epo:AwardCriterion;
-  epo:hasAwardCriterionType <http://publications.europa.eu/resource/authority/award-criterion-type/cost>;
-  epo:hasWeightValueType <http://publications.europa.eu/resource/authority/number-weight/per-exa>;
-  cccev:weight 60.0;
-  dct:description "AC Description ---"@en;
-  skos:prefLabel "Name of AC ---"@en .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_Ee3JXqpmik8eG35Uay4dJk
-  a epo:AwardCriterion;
-  epo:hasAwardCriterionType <http://publications.europa.eu/resource/authority/award-criterion-type/cost>;
-  epo:hasWeightValueType <http://publications.europa.eu/resource/authority/number-weight/per-exa>;
-  cccev:weight 60.0;
-  dct:description "AC Description ---"@en;
-  skos:prefLabel "Name of AC ---"@en .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_JXVZRgb5g8CzzdmWDdr5QZ
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_AwardCriterion_CTwFnetyuuSnLXUpTG6Pi8
   a epo:AwardCriterion;
   epo:hasAwardCriterionType <http://publications.europa.eu/resource/authority/award-criterion-type/quality>;
-  epo:hasWeightValueType <http://publications.europa.eu/resource/authority/number-weight/per-exa>;
-  cccev:weight 40.0;
-  dct:description "AC Description ---"@en;
-  skos:prefLabel "Name of AC ---"@en .
+  dct:description """Flexibiliteit en beschikbaarheid van de
+							gecertificeerde bewakingsagenten"""@nl .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_QaDZD9SvbXf8nLh2wqBGkh
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_AwardCriterion_KnfpsdA2r7UUmsXaoyvxgY
   a epo:AwardCriterion;
   epo:hasAwardCriterionType <http://publications.europa.eu/resource/authority/award-criterion-type/quality>;
-  epo:hasWeightValueType <http://publications.europa.eu/resource/authority/number-weight/per-exa>;
-  cccev:weight 40.0;
-  dct:description "AC Description ---"@en;
-  skos:prefLabel "Name of AC ---"@en .
+  dct:description "Kwaliteit van hat aanbod"@nl .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardEvaluationTerm_g9BZcQVSEYMdC6doz2wnjx
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_AwardCriterion_MGJNUreXVLg5AkPswtTpQ5
+  a epo:AwardCriterion;
+  epo:hasAwardCriterionType <http://publications.europa.eu/resource/authority/award-criterion-type/cost>;
+  dct:description "Prijs"@nl .
+
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_AwardEvaluationTerm_Ed82rH3bQh5UFtUqt5RqUi
   a epo:AwardEvaluationTerm;
-  epo:hasAwardCriteriaEvaluationFormula "See the procurement document"@en;
-  epo:hasAwardCriteriaOrderJustification "........"@en .
+  epo:hasAwardCriteriaEvaluationFormula """De punten van de prijs zullen als
+						volgt toegekend worden:
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardingCentralPurchasingBody_U3RE4hoDTRa29J56Gmq3BL
-  a epo:AwardingCentralPurchasingBody;
-  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0003 .
+						(Pmin / Px)*A = Q
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Buyer_MT3gdCnJ9BA7aEqaGqKxAh a epo:Buyer;
-  epo:hasBuyerProfile "https://profile.example.com"^^xsd:anyURI;
-  epo:isContractingEntity true;
-  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0001 .
+						waarbij:
+						Pmin = prijs van de goedkoopste inschrijver
+						Px = prijs van de inschrijving die beoordeeld wordt
+						A = het maximum van de punten
+						Q = quotering van de inschrijving"""@nl .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ChangeInformation_ec9tbJ8ui7TUpJPbEsk6fj
-  a epo:ChangeInformation;
-  epo:concernsNotice epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Notice;
-  epo:hasChangeDescription "Description of the procurement modified"@en, "Short description modified"@en;
-  epo:hasChangeJustification <http://publications.europa.eu/resource/authority/change-corrig-justification/cor-buy>;
-  epo:hasChangeReasonDescription "Change number of suppliers envisaged."@en;
-  epo:hasProcurementDocumentChangeDate "2020-04-14+02:00"^^xsd:date;
-  epo:isProcurementDocumentChanged true;
-  epo:refersToPreviousNotice epd:id_6bc75979-ce6c-46eb-81a6-eee543697dec-01_Notice .
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_AwardEvaluationTerm_U8LR2j9BBALZEeUn7RmhJZ
+  a epo:AwardEvaluationTerm;
+  epo:hasAwardCriteriaEvaluationFormula """Voor wat betreft de kwaliteit,
+						verwijst het Havenbedrijf naar de technische bepalingen zoals omschreven in
+						deel 3 van het bestek en vraagt zij de inschrijver een gedetailleerd plan
+						van aanpak voor de uitvoering van de opdracht (geavanceerde toelichting
+						aangaande de vakkundigheid van de onderneming in het kader van de opdracht)
+						bij de offerte te voegen. Bij de beoordeling van dit criterium zal rekening
+						gehouden worden met de meerwaardes die de inschrijver kan bieden bovenop de
+						behoeften en minimumeisen van het bestek. """@nl .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Channel_4qCitbxYVRfdbqxnYtJTZF a epo:AdHocChannel;
-  epo:hasAddressURL "https://www.the-chest.org.uk/"^^xsd:anyURI;
-  dct:description "Access tool ---" .
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_AwardEvaluationTerm_mvugP5Whk4zjSAanDcqJza
+  a epo:AwardEvaluationTerm;
+  epo:hasAwardCriteriaEvaluationFormula """Onder de flexibiliteit en
+						beschikbaarheid van de gecertificeerde bewakingsagenten wordt XXX verstaan.
+						De punten voor dit gunningscriterium zullen worden toegekend volgens de
+						onderstaande tabel. Van beide scores wordt de gemiddelde score het
+						eindtotaal.
+"""@nl .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Channel_8APvjTVZXX8CxGPVJZoBww a epo:AdHocChannel;
-  dct:description "Access tool ---" .
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Buyer_HGvue6GtAm3yppLpDLnBKD a epo:Buyer;
+  epo:hasBuyerProfile "https://www.publicprocurement.be"^^xsd:anyURI;
+  epo:playedBy epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Organization_ORG-0001 .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_9EoaX693zGgFRHUBTqQE58
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_CompanyAddress_9EoaX693zGgFRHUBTqQE58
   a locn:Address;
-  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
-  epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
-  locn:fullAddress "Reviews and Complains, 87 Big Avenue, London, N1 9FL, GBR";
-  locn:postCode "N1 9FL";
-  locn:postName "London" .
+  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/BEL>;
+  locn:fullAddress "Wetenschapstraat 33, Brussel (Etterbeek), 1040, BEL";
+  locn:postCode "1040";
+  locn:postName "Brussel (Etterbeek)" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_CXdDFvgV5RjePYb9cagtRa
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_CompanyAddress_CXdDFvgV5RjePYb9cagtRa
   a locn:Address;
-  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
-  epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
-  locn:fullAddress "Environment Information department, 23 Nelson Square, London, N1 9FL, GBR";
-  locn:postCode "N1 9FL";
-  locn:postName "London" .
+  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/BEL>;
+  locn:postCode "2000";
+  locn:postName "Antwerpen" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_JAQDkMB4STjLj2Z9DkzGKS
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_CompanyAddress_JAQDkMB4STjLj2Z9DkzGKS
   a locn:Address;
-  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
-  epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
-  locn:fullAddress "ABC Unit, 162 Broad Street, 2nd floor, London, N1 9FL, GBR";
-  locn:postCode "N1 9FL";
-  locn:postName "London" .
+  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/BEL>;
+  locn:postCode "1000";
+  locn:postName "Brussel" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_SyrXybB9qnydTsiCYvqfwn
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_CompanyAddress_SyrXybB9qnydTsiCYvqfwn
   a locn:Address;
-  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
-  epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
-  locn:fullAddress "Finance Division, Bruce Wayne House, 2 Gotham Street, London, N1 9FL, GBR";
-  locn:postCode "N1 9FL";
-  locn:postName "London" .
+  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/BEL>;
+  locn:fullAddress "Zaha Hadidplein 1, Antwerpen, 2030, BEL";
+  locn:postCode "2030";
+  locn:postName "Antwerpen" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_dtBY8KdbdWyJb9xZnV4Xcw
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_CompanyAddress_kp4YHhT2Gw9BnTPKnwxcdW
   a locn:Address;
-  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/LUX>;
-  epo:hasNutsCode <http://data.europa.eu/nuts/code/LU000>;
-  locn:postCode "2985";
-  locn:postName "Luxembourg" .
+  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/BEL>;
+  locn:fullAddress "Zaha Hadidplein 1, Antwerpen, 2030, BEL";
+  locn:postCode "2030";
+  locn:postName "Antwerpen" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_ikV4AfPuLDPpY2gzokb7GH
-  a locn:Address;
-  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
-  epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
-  locn:fullAddress "Public Procurement, 85 Norwish Road, London, N1 9FL, GBR";
-  locn:postCode "N1 9FL";
-  locn:postName "London" .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_kp4YHhT2Gw9BnTPKnwxcdW
-  a locn:Address;
-  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
-  epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
-  locn:fullAddress "6 Main Street, London, N1 9FL, GBR";
-  locn:postCode "N1 9FL";
-  locn:postName "London" .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyContactPoint_2KJnTZs6heaXxBaUWvBfGP
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_CompanyContactPoint_7iFD8NVFhULkdXRNPqKyHs
   a cccev:ContactPoint;
-  epo:hasContactName "Info desk";
-  epo:hasFax "+44 098765432";
-  epo:hasInternetAddress "https://www.pub-mediator.com"^^xsd:anyURI;
-  cccev:email "info@pub-mediator.com";
-  cccev:telephone "+44 123456345678" .
+  epo:hasInternetAddress "http://www.portofantwerpbruges.com/"^^xsd:anyURI;
+  cccev:email "procurement@portofantwerpbruges.com";
+  cccev:telephone "+32 32052011" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyContactPoint_7iFD8NVFhULkdXRNPqKyHs
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_CompanyContactPoint_CCKfjNm3UAMuYf3dDso6C2
   a cccev:ContactPoint;
-  epo:hasContactName "Info desk";
-  epo:hasFax "+44 123456789";
-  epo:hasInternetAddress "https://www.fin-adm.com"^^xsd:anyURI;
-  cccev:email "info@fin-adm.com";
-  cccev:telephone "+44 123456780" .
+  epo:hasContactName "Evelien Vleminckx";
+  epo:hasInternetAddress "http://www.portofantwerpbruges.com/"^^xsd:anyURI;
+  cccev:email "procurement@portofantwerpbruges.com";
+  cccev:telephone "+32 32052011" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyContactPoint_CCKfjNm3UAMuYf3dDso6C2
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_CompanyContactPoint_Qdvn4zi39DtmxZAnxmSELy
   a cccev:ContactPoint;
-  epo:hasContactName "Info desk";
-  epo:hasFax "+44 123456789";
-  epo:hasInternetAddress "https://www.fin-leg.com"^^xsd:anyURI;
-  cccev:email "info@example.com";
-  cccev:telephone "+44 123456780" .
+  epo:hasInternetAddress """
+									http://www.raadvst-consetat.be/?page=index&lang=n"""^^xsd:anyURI;
+  cccev:email "info@raadvanstate.be";
+  cccev:telephone "+32 22349611" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyContactPoint_Qdvn4zi39DtmxZAnxmSELy
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_CompanyContactPoint_VBaHVZvvDEkusW8YJnjRf7
   a cccev:ContactPoint;
-  epo:hasContactName "A and R Department";
-  epo:hasFax "+44 9928736";
-  epo:hasInternetAddress "https://www.appeal-adm-proc.com"^^xsd:anyURI;
-  cccev:email "info@appeal-adm-proc.com";
-  cccev:telephone "+44 899375" .
+  cccev:email "e.proc@publicprocurement.be";
+  cccev:telephone "+32 2 740 80 00" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyContactPoint_VBaHVZvvDEkusW8YJnjRf7
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_CompanyContactPoint_YG3RWHcWTBZPCNqFAQ7guC
   a cccev:ContactPoint;
-  epo:hasContactName "Info desk";
-  epo:hasFax "+44 123456789";
-  epo:hasInternetAddress "https://www.employment-legis.com"^^xsd:anyURI;
-  cccev:email "info@example.com";
-  cccev:telephone "+44 123456780" .
+  cccev:email "info@3p.eu";
+  cccev:telephone "+32 3 294 30 51" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyContactPoint_YG3RWHcWTBZPCNqFAQ7guC
-  a cccev:ContactPoint;
-  epo:hasContactName "Info desk";
-  epo:hasFax "+44 123456789";
-  epo:hasInternetAddress "https://www.env-dpt.com"^^xsd:anyURI;
-  cccev:email "info@env-dpt.com";
-  cccev:telephone "+44 123456780" .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyContactPoint_dxvvStPQ7ekRVg6xG9QN3E
-  a cccev:ContactPoint;
-  epo:hasFax "+352 1234567899";
-  epo:hasInternetAddress "https://esendercorp.eu"^^xsd:anyURI;
-  cccev:email "esender@esendcorp.lu";
-  cccev:telephone "+352 123456789" .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_ALkBdU6DUVGQjGaBxVKxrs a cccev:Constraint;
-  epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/max-pass>;
-  epo:hasThresholdValue 3.0 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_E9HbFRFmAYvtgELes4wHf2 a cccev:Constraint;
-  epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/min-score>;
-  epo:hasThresholdValue 3.0 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_HUx9CExQBWkrce4vqV7Wkg a cccev:Constraint;
-  epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/max-pass>;
-  epo:hasThresholdValue 3.0 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_LKeBCmZMuGEzgAFGuK3tmF a cccev:Constraint;
-  epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/min-score>;
-  epo:hasThresholdValue 3.0 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_S65zMGfHi8GrHsbz4tEFZJ a cccev:Constraint;
-  epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/max-pass>;
-  epo:hasThresholdValue 3.0 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_UboKtLfWMDPTeedX7G9Jj7 a cccev:Constraint;
-  epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/min-score>;
-  epo:hasThresholdValue 3.0 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_ZJQeB6XSAAiMd7wbsht64X a cccev:Constraint;
-  epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/min-score>;
-  epo:hasThresholdValue 3.0 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_bBNJn8mrLioKfy7sx9PaWi a cccev:Constraint;
-  epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/min-score>;
-  epo:hasThresholdValue 3.0 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_hpcDhFsANoBzRR9uDDJxnt a cccev:Constraint;
-  epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/max-pass>;
-  epo:hasThresholdValue 3.0 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_mrZZo6ZRTw7EZzqh2Xn6xa a cccev:Constraint;
-  epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/max-pass>;
-  epo:hasThresholdValue 3.0 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_ncrUJebheR6Q2qJFiiVscf a cccev:Constraint;
-  epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/max-pass>;
-  epo:hasThresholdValue 3.0 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_nxePuFH9i25oYGdwmceAuJ a cccev:Constraint;
-  epo:hasThresholdType <http://publications.europa.eu/resource/authority/number-threshold/min-score>;
-  epo:hasThresholdValue 3.0 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractDuration_JNctcsx6JXdNkzdL4P6dek
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ContractDuration_DW9uu9Ka9v6eCrwhU9MmBC
   a epo:SpecificDuration;
-  time:numericDuration 5.0;
-  time:unitType time:unitMonth .
+  time:numericDuration 1826.0;
+  time:unitType time:unitDay .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractDuration_SwK8Z4wjBuauCWAoBTPk4Z
-  a epo:SpecificDuration;
-  time:numericDuration 5.0;
-  time:unitType time:unitMonth .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocationAddress_6pwBpb8FW5caR7TKqg7TvM
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ContractLocationAddress_6KLSiuR7u4upEUz8ykdzrc
   a locn:Address;
-  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
-  epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
-  locn:fullAddress "Bruce Wayne House, 2 Gotham Street, London, N1 9FL, GBR";
-  locn:postCode "N1 9FL";
-  locn:postName "London" .
+  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/BEL>;
+  epo:hasNutsCode <http://data.europa.eu/nuts/code/BE211>;
+  locn:fullAddress "Zaha Hadidplein 1, Antwerpen, 2030, BEL";
+  locn:postCode "2030";
+  locn:postName "Antwerpen" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocationAddress_TfeqsbtZz7bnSaeLJEmaKZ
-  a locn:Address;
-  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
-  epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
-  locn:fullAddress "Bruce Wayne House, 2 Gotham Street, London, N1 9FL, GBR";
-  locn:postCode "N1 9FL";
-  locn:postName "London" .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocationAddress_e4BUCegaReE8NKq7sHcoAX
-  a locn:Address;
-  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR> .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocationAddress_es3GJHPAww7U8q366gSYas
-  a locn:Address;
-  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR> .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_6pwBpb8FW5caR7TKqg7TvM
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ContractLocation_6KLSiuR7u4upEUz8ykdzrc
   a dct:Location;
-  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
-  epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
-  locn:address epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocationAddress_6pwBpb8FW5caR7TKqg7TvM .
+  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/BEL>;
+  epo:hasNutsCode <http://data.europa.eu/nuts/code/BE211>;
+  locn:address epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ContractLocationAddress_6KLSiuR7u4upEUz8ykdzrc .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_TfeqsbtZz7bnSaeLJEmaKZ
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ContractLocation_RxWyYo5p6B6QKE6kAx4iDD
   a dct:Location;
-  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
-  epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
-  locn:address epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocationAddress_TfeqsbtZz7bnSaeLJEmaKZ .
+  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/BEL>;
+  epo:hasNutsCode <http://data.europa.eu/nuts/code/BE211>;
+  locn:address epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ProcedurePlacePerformance_RxWyYo5p6B6QKE6kAx4iDD .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_btiykpkF9yYEWFnDmvRf6a
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ContractLocation_btiykpkF9yYEWFnDmvRf6a
   a dct:Location;
-  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
-  epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
-  locn:address epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedurePlacePerformance_btiykpkF9yYEWFnDmvRf6a .
+  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/BEL>;
+  epo:hasNutsCode <http://data.europa.eu/nuts/code/BE211>;
+  locn:address epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ProcedurePlacePerformance_btiykpkF9yYEWFnDmvRf6a .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_e4BUCegaReE8NKq7sHcoAX
-  a dct:Location;
-  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
-  locn:address epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocationAddress_e4BUCegaReE8NKq7sHcoAX .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_es3GJHPAww7U8q366gSYas
-  a dct:Location;
-  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
-  locn:address epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocationAddress_es3GJHPAww7U8q366gSYas .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractPeriod_JNctcsx6JXdNkzdL4P6dek
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ContractPeriod_DW9uu9Ka9v6eCrwhU9MmBC
   a epo:Period;
-  epo:hasBeginning "2023-01-01+01:00"^^xsd:date;
-  epo:hasEnd "2023-05-23+01:00"^^xsd:date .
+  epo:hasBeginning "2024-12-02+01:00"^^xsd:date .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractPeriod_SwK8Z4wjBuauCWAoBTPk4Z
-  a epo:Period;
-  epo:hasBeginning "2023-01-01+01:00"^^xsd:date;
-  epo:hasEnd "2023-05-23+02:00"^^xsd:date .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_8y8GPfmPvSRdBcci6WWcSi a
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ContractTerm_246rmGzZvwFBcxRNZTXjTW a
     epo:ContractTerm;
-  epo:definesContractDuration epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractDuration_SwK8Z4wjBuauCWAoBTPk4Z;
-  epo:definesContractPeriod epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractPeriod_SwK8Z4wjBuauCWAoBTPk4Z;
-  epo:definesSpecificPlaceOfPerformance epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_6pwBpb8FW5caR7TKqg7TvM,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_es3GJHPAww7U8q366gSYas;
-  epo:hasAdditionalContractNature <http://publications.europa.eu/resource/authority/contract-nature/works>;
-  epo:hasBroadPlaceOfPerformance <http://publications.europa.eu/resource/authority/other-place-service/anyw-cou>;
+  epo:definesContractDuration epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ContractDuration_DW9uu9Ka9v6eCrwhU9MmBC;
+  epo:definesContractPeriod epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ContractPeriod_DW9uu9Ka9v6eCrwhU9MmBC;
+  epo:definesSpecificPlaceOfPerformance epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ContractLocation_6KLSiuR7u4upEUz8ykdzrc;
   epo:hasContractNatureType <http://publications.europa.eu/resource/authority/contract-nature/services>;
   epo:hasEInvoicingPermission <http://publications.europa.eu/resource/authority/permission/required>;
-  epo:hasEOrdering true;
-  epo:hasEPayment true;
-  epo:hasLegalFormRequirement "Tenderer Legal Form Description ---"@en;
-  epo:hasMaximumNumberOfRenewals 3;
-  epo:hasOptionsDescription "Options description ---"@en;
-  epo:hasPaymentArrangement "Terms Financial ---"@en;
-  epo:hasPerformanceConditions "Terms Performance ---"@en;
-  epo:hasPlaceOfPerformanceAdditionalInformation "Additional information ---"@en, "The main location is ..."@en;
-  epo:hasRenewalDescription "Renewal description ---"@en;
-  epo:hasReservedExecution <http://publications.europa.eu/resource/authority/applicability/yes> .
+  epo:hasEOrdering false;
+  epo:hasEPayment false;
+  epo:hasPaymentArrangement "/"@nl;
+  epo:hasPlaceOfPerformanceAdditionalInformation "Zeebrugge"@nl;
+  epo:hasReservedExecution <http://publications.europa.eu/resource/authority/applicability/no> .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_daUDPcwCUoxbJRjGb7tKNQ a
-    epo:ContractTerm;
-  epo:definesContractDuration epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractDuration_JNctcsx6JXdNkzdL4P6dek;
-  epo:definesContractPeriod epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractPeriod_JNctcsx6JXdNkzdL4P6dek;
-  epo:definesSpecificPlaceOfPerformance epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_TfeqsbtZz7bnSaeLJEmaKZ,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_e4BUCegaReE8NKq7sHcoAX;
-  epo:hasAdditionalContractNature <http://publications.europa.eu/resource/authority/contract-nature/works>;
-  epo:hasBroadPlaceOfPerformance <http://publications.europa.eu/resource/authority/other-place-service/anyw-cou>;
-  epo:hasContractNatureType <http://publications.europa.eu/resource/authority/contract-nature/services>;
-  epo:hasEInvoicingPermission <http://publications.europa.eu/resource/authority/permission/required>;
-  epo:hasEOrdering true;
-  epo:hasEPayment true;
-  epo:hasLegalFormRequirement "Tenderer Legal Form Description ---"@en;
-  epo:hasMaximumNumberOfRenewals 3;
-  epo:hasOptionsDescription "Options description ---"@en;
-  epo:hasPaymentArrangement "Terms Financial ---"@en;
-  epo:hasPerformanceConditions "Terms Performance ---"@en;
-  epo:hasPlaceOfPerformanceAdditionalInformation "Additional information ---"@en, "The main location is ..."@en;
-  epo:hasRenewalDescription "Renewal description ---"@en;
-  epo:hasReservedExecution <http://publications.europa.eu/resource/authority/applicability/yes> .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_DesignContestRegimeTerm_PuAZ93vcjRYhKiN4rMvUZg
-  a epo:DesignContestRegimeTerm;
-  epo:definesPrize epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Prize_W3WEhLqsTnuQGFepVs9sA7,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Prize_kB8mzufhJfCu7QSJVs6cLZ;
-  epo:hasFollowupContract true;
-  epo:isJuryDecisionBinding true .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_DynamicPurchaseSystemTechnicalUsage_4qCitbxYVRfdbqxnYtJTZF
-  a epo:DynamicPurchaseSystemTechnique;
-  epo:hasDPSScope <http://publications.europa.eu/resource/authority/dps-usage/dps-list> .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_DynamicPurchaseSystemTechnicalUsage_8APvjTVZXX8CxGPVJZoBww
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_DynamicPurchaseSystemTechnicalUsage_bq3rWUnhLReULR3Pe8QxDZ
   a epo:DynamicPurchaseSystemTechnique;
   epo:hasDPSScope <http://publications.europa.eu/resource/authority/dps-usage/none> .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EmploymentInformationProvider_LynXyp22UHq9wSHKWpaZdf
-  a epo:EmploymentInformationProvider;
-  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
-  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0004 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EmploymentInformationProvider_jd3pLTPdR98iydFAqeHECy
-  a epo:EmploymentInformationProvider;
-  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
-  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0004 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EnvironmentalProtectionInformationProvider_PuAZ93vcjRYhKiN4rMvUZg
-  a epo:EnvironmentalProtectionInformationProvider;
-  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
-  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0003 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EnvironmentalProtectionInformationProvider_TT87XZ7rfCixVuS4Z9trMH
-  a epo:EnvironmentalProtectionInformationProvider;
-  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001;
-  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0003 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_65B5ieqPopJApHPkYdhiAi
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_5wQytch458NVWvEDHFqRwG
   a epo:ExclusionGround;
-  dct:description "Exclusion Ground description ---"@en;
-  dct:type <http://publications.europa.eu/resource/authority/criterion/socsec-pay> .
+  dct:description """Voortijdige beëindiging, schadevergoeding of
+					andere vergelijkbare sancties. (zie UEA)"""@nl;
+  dct:type <http://publications.europa.eu/resource/authority/criterion/sanction> .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_BpL5yyeW3cMvEHbh6b4ScW
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_65B5ieqPopJApHPkYdhiAi
   a epo:ExclusionGround;
-  dct:description "Exclusion Ground description ---"@en;
-  dct:type <http://publications.europa.eu/resource/authority/criterion/terr-offence> .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_LGVLo87ArD4HobVYoAGR5B
-  a epo:ExclusionGround;
-  dct:description "Exclusion Ground description ---"@en;
-  dct:type <http://publications.europa.eu/resource/authority/criterion/human-traffic> .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_SGPTD68m84zt8Q9GNUnuFA
-  a epo:ExclusionGround;
-  dct:description "Other Exclusion Ground description ---"@en;
-  dct:type <http://publications.europa.eu/resource/authority/criterion/nati-ground> .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_T2q43pjq3JHuJtvxjmL6vf
-  a epo:ExclusionGround;
-  dct:description "Exclusion Ground description ---"@en;
+  dct:description """Witwassen van geld of financiering van terrorisme.
+					(zie UEA)"""@nl;
   dct:type <http://publications.europa.eu/resource/authority/criterion/finan-laund> .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_TTD43oQXgzgzeUvR3mf5zL
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_BpL5yyeW3cMvEHbh6b4ScW
   a epo:ExclusionGround;
-  dct:description "Exclusion Ground description ---"@en;
+  dct:description "Corruptie. (zie UEA)"@nl;
   dct:type <http://publications.europa.eu/resource/authority/criterion/corruption> .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_TTUy3kEUkWQjLYAVZE4jQa
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_LGVLo87ArD4HobVYoAGR5B
   a epo:ExclusionGround;
-  dct:description "Exclusion Ground description ---"@en;
-  dct:type <http://publications.europa.eu/resource/authority/criterion/envir-law> .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_TyUFN5TJLPnpNx9yoZf5Ti
-  a epo:ExclusionGround;
-  dct:description "Exclusion Ground description ---"@en;
-  dct:type <http://publications.europa.eu/resource/authority/criterion/tax-pay> .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_ZY3SnQBRXooC6NjbRDS9an
-  a epo:ExclusionGround;
-  dct:description "Exclusion Ground description ---"@en;
+  dct:description """Deelneming aan een criminele organisatie. (zie
+					UEA)"""@nl;
   dct:type <http://publications.europa.eu/resource/authority/criterion/crime-org> .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_bm6uSwy7hkcan8rVF5YHgR
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_SGPTD68m84zt8Q9GNUnuFA
   a epo:ExclusionGround;
-  dct:description "Exclusion Ground description ---"@en;
+  dct:description "Activa beheerd door vereffenaar. (zie UEA)"@nl;
+  dct:type <http://publications.europa.eu/resource/authority/criterion/liq-admin> .
+
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_T2q43pjq3JHuJtvxjmL6vf
+  a epo:ExclusionGround;
+  dct:description "Regeling met schuldeisers. (zie UEA)"@nl;
+  dct:type <http://publications.europa.eu/resource/authority/criterion/cred-arran> .
+
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_TTD43oQXgzgzeUvR3mf5zL
+  a epo:ExclusionGround;
+  dct:description """Met faillissement vergelijkbare toestand uit
+					hoofde van nationale recht. (zie UEA)"""@nl;
+  dct:type <http://publications.europa.eu/resource/authority/criterion/bankr-nat> .
+
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_TTUy3kEUkWQjLYAVZE4jQa
+  a epo:ExclusionGround;
+  dct:description "Fraude. (zie UEA)"@nl;
   dct:type <http://publications.europa.eu/resource/authority/criterion/fraud> .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_eE9UGyZshPCAPa9HY5m3SS
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_TkXrCvoxtk4GKQN38wAzMt
   a epo:ExclusionGround;
-  dct:description "Exclusion Ground description ---"@en;
-  dct:type <http://publications.europa.eu/resource/authority/criterion/insolvency> .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_gsqwnkSxN5gKbqYWRFqTmc
-  a epo:ExclusionGround;
-  dct:description "Exclusion Ground description ---"@en;
+  dct:description """Niet-nakoming van verplichtingen op het gebied van
+					sociaal recht. (zie UEA)"""@nl;
   dct:type <http://publications.europa.eu/resource/authority/criterion/socsec-law> .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_hqawu5kJC8i3dxZ99zexxB
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_TyUFN5TJLPnpNx9yoZf5Ti
   a epo:ExclusionGround;
-  dct:description "Exclusion Ground description ---"@en;
+  dct:description """Niet-nakoming van verplichtingen op het gebied van
+					milieurecht. (zie UEA)"""@nl;
+  dct:type <http://publications.europa.eu/resource/authority/criterion/envir-law> .
+
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_YGYLhb2LyjG3THWmzopx5a
+  a epo:ExclusionGround;
+  dct:description "Betaling van sociale premies. (zie UEA)"@nl;
+  dct:type <http://publications.europa.eu/resource/authority/criterion/socsec-pay> .
+
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_YLEyVjkvPySnYWBMN2kXn3
+  a epo:ExclusionGround;
+  dct:description """Belangenconflict als gevolg van deelneming aan de
+					aanbestedingsprocedure. (zie UEA)"""@nl;
+  dct:type <http://publications.europa.eu/resource/authority/criterion/partic-confl> .
+
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_ZY3SnQBRXooC6NjbRDS9an
+  a epo:ExclusionGround;
+  dct:description "Vervalsing van de mededinging. (zie UEA)"@nl;
+  dct:type <http://publications.europa.eu/resource/authority/criterion/distorsion> .
+
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_ZrLAZ2zYt9ZSkyNyucoZjB
+  a epo:ExclusionGround;
+  dct:description "Staking van bedrijfsactiviteiten. (zie UEA)"@nl;
+  dct:type <http://publications.europa.eu/resource/authority/criterion/susp-act> .
+
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_bm6uSwy7hkcan8rVF5YHgR
+  a epo:ExclusionGround;
+  dct:description "Faillissement. (zie UEA)"@nl;
+  dct:type <http://publications.europa.eu/resource/authority/criterion/bankruptcy> .
+
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_ckYPsVin4htwF867bz6Ghf
+  a epo:ExclusionGround;
+  dct:description "Ernstige beroepsfouten. (zie UEA)"@nl;
+  dct:type <http://publications.europa.eu/resource/authority/criterion/prof-misconduct> .
+
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_dZjuVAEeCK6MQWNLBFCLgF
+  a epo:ExclusionGround;
+  dct:description """Terroristische misdrijven of strafbare feiten in
+					verband met terroristische activiteiten. (zie UEA)"""@nl;
+  dct:type <http://publications.europa.eu/resource/authority/criterion/terr-offence> .
+
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_eE9UGyZshPCAPa9HY5m3SS
+  a epo:ExclusionGround;
+  dct:description """Niet-nakoming van verplichtingen op het gebied van
+					arbeidsrecht. (zie UEA)"""@nl;
   dct:type <http://publications.europa.eu/resource/authority/criterion/labour-law> .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTerm_4qCitbxYVRfdbqxnYtJTZF
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_gsqwnkSxN5gKbqYWRFqTmc
+  a epo:ExclusionGround;
+  dct:description """Kinderarbeid en andere vormen van mensenhandel.
+					(zie UEA)"""@nl;
+  dct:type <http://publications.europa.eu/resource/authority/criterion/human-traffic> .
+
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_hqawu5kJC8i3dxZ99zexxB
+  a epo:ExclusionGround;
+  dct:description "Insolventie. (zie UEA)"@nl;
+  dct:type <http://publications.europa.eu/resource/authority/criterion/insolvency> .
+
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_i8mnWUe2qMrSYiJiu25QXu
+  a epo:ExclusionGround;
+  dct:description """Valse verklaringen, achterhouden van informatie,
+					niet in staat vereiste documenten te verstrekken en verkrijging van
+					vertrouwelijke informatie over deze procedure. (zie UEA)"""@nl;
+  dct:type <http://publications.europa.eu/resource/authority/criterion/misrepresent> .
+
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_jNvYhB6XsMWdsYzwKuupXY
+  a epo:ExclusionGround;
+  dct:description "Louter nationale uitsluitingsgronden. (zie UEA)"@nl;
+  dct:type <http://publications.europa.eu/resource/authority/criterion/nati-ground> .
+
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_m4kTXGLiFNt2eMFdMeyrJs
+  a epo:ExclusionGround;
+  dct:description """Directe of indirecte betrokkenheid bij de
+					voorbereiding van deze aanbestedingsprocedure. (zie UEA)"""@nl;
+  dct:type <http://publications.europa.eu/resource/authority/criterion/prep-confl> .
+
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_mFrDghNEkNrmi5Ra6xpuYu
+  a epo:ExclusionGround;
+  dct:description "Betaling van belastingen. (zie UEA)"@nl;
+  dct:type <http://publications.europa.eu/resource/authority/criterion/tax-pay> .
+
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_FrameworkAgreementTerm_bq3rWUnhLReULR3Pe8QxDZ
   a epo:FrameworkAgreementTerm;
-  epo:hasBuyerCategoryDescription "Framework Buyer Categories ---"@en;
-  epo:hasDurationExtensionJustification "Framwork duration justification ---"@en;
-  epo:hasFrameworkAgreementType <http://publications.europa.eu/resource/authority/framework-agreement/fa-w-rc>;
-  epo:hasMaximumParticipantsNumber 10 .
+  epo:hasFrameworkAgreementType <http://publications.europa.eu/resource/authority/framework-agreement/fa-wo-rc> .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTerm_8APvjTVZXX8CxGPVJZoBww
-  a epo:FrameworkAgreementTerm;
-  epo:hasBuyerCategoryDescription "Framework Buyer Categories ---"@en;
-  epo:hasFrameworkAgreementType <http://publications.europa.eu/resource/authority/framework-agreement/fa-w-rc>;
-  epo:hasMaximumParticipantsNumber 10 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FundIdentifier_UQnAwfk3ERwvnj7e2sbo39
-  a adms:Identifier;
-  skos:notation "2021/5678" .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_GreenProcurement_6gHfSxSpgNRXavjTJCiAJv
-  a epo:GreenProcurement;
-  epo:usesCleanVehicleDirective false .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_GreenProcurement_YnBjYVCB47Lh3T4W9D8off
-  a epo:GreenProcurement;
-  epo:fulfillsRequirement <http://publications.europa.eu/resource/authority/environmental-impact/clim-mitig> .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_GreenProcurement_dfeMpbQbaBY6WfVozDLEGf
-  a epo:GreenProcurement;
-  epo:fulfillsRequirement <http://publications.europa.eu/resource/authority/environmental-impact/clim-mitig> .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0001 a adms:Identifier;
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Identifier_ORG-0001 a adms:Identifier;
   epo:hasScheme "organization";
   skos:notation "ORG-0001" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0002 a adms:Identifier;
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Identifier_ORG-0002 a adms:Identifier;
   epo:hasScheme "organization";
   skos:notation "ORG-0002" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0003 a adms:Identifier;
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Identifier_ORG-0003 a adms:Identifier;
   epo:hasScheme "organization";
   skos:notation "ORG-0003" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0004 a adms:Identifier;
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Identifier_ORG-0004 a adms:Identifier;
   epo:hasScheme "organization";
   skos:notation "ORG-0004" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0005 a adms:Identifier;
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Identifier_ORG-0005 a adms:Identifier;
   epo:hasScheme "organization";
   skos:notation "ORG-0005" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0006 a adms:Identifier;
-  epo:hasScheme "organization";
-  skos:notation "ORG-0006" .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0007 a adms:Identifier;
-  epo:hasScheme "organization";
-  skos:notation "ORG-0007" .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_InnovativeProcurement_2yjckcDCeZgS5m5tUcZ68p
-  a epo:InnovativeProcurement;
-  epo:fulfillsRequirement <http://publications.europa.eu/resource/authority/innovative-acquisition/proc-innov> .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_InnovativeProcurement_cLKYnTLDZb6RpEv6sHGwFG
-  a epo:InnovativeProcurement;
-  epo:fulfillsRequirement <http://publications.europa.eu/resource/authority/innovative-acquisition/proc-innov> .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_JuryMember_cvGnw3hJYztkzCgnhrJDWV a epo:JuryMember;
-  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Person_cvGnw3hJYztkzCgnhrJDWV .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LeadBuyer_N4cgMQL3K4CA88AYBBwUNn a epo:LeadBuyer;
-  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0001 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotFund_UQnAwfk3ERwvnj7e2sbo39 a epo:Fund;
-  epo:hasFundProgramme <http://publications.europa.eu/resource/authority/eu-programme/LIFE_2021>;
-  dct:description "Recovery Fund"@en;
-  adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FundIdentifier_UQnAwfk3ERwvnj7e2sbo39 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroupAwardCriterion_83TR8A3HiWh9GmZEyyQGjQ
-  a epo:AwardCriterion;
-  epo:hasAwardCriterionType <http://publications.europa.eu/resource/authority/award-criterion-type/quality>;
-  epo:hasWeightValueType <http://publications.europa.eu/resource/authority/number-weight/per-exa>;
-  cccev:weight 40.0;
-  dct:description "AC Description ---"@en;
-  skos:prefLabel "Name of AC ---"@en .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroupAwardCriterion_MGJNUreXVLg5AkPswtTpQ5
-  a epo:AwardCriterion;
-  epo:hasAwardCriterionType <http://publications.europa.eu/resource/authority/award-criterion-type/cost>;
-  epo:hasFixedValue 50.0;
-  epo:hasFixedValueType <http://publications.europa.eu/resource/authority/number-fixed/fix-tot>;
-  epo:hasWeightValueType <http://publications.europa.eu/resource/authority/number-weight/per-exa>;
-  cccev:weight 60.0;
-  dct:description "AC Description ---"@en;
-  skos:prefLabel "name of AC ---"@en .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroup_GLO-0001 a epo:LotGroup;
-  epo:hasEstimatedValue epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_PurposeLotGroupEstimatedValue_EgMjw2pg9jruQvYxRQ9GAr;
-  epo:hasInternalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotInternalIdentifier_BboGPQkCpLeHXdXL8io8wo;
-  epo:hasLaunchFrameworkAgreementMaximumValue epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotsGroupValueEstimateExtension_ZoH93rHLWdKDPCSNvWx8rE,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotsGroupValueMaximum_gLuU9xVSAhVSewi2MZNMhW;
-  epo:setsGroupingContextForLot epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
-  epo:specifiesProcurementCriterion epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroupAwardCriterion_83TR8A3HiWh9GmZEyyQGjQ,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroupAwardCriterion_MGJNUreXVLg5AkPswtTpQ5;
-  dct:description "Description ---"@en;
-  dct:title "Title ---"@en;
-  adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotsGroupIdentifier_246rmGzZvwFBcxRNZTXjTW .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotIdentifier_8y8GPfmPvSRdBcci6WWcSi a
-    adms:Identifier;
-  epo:hasScheme "Lot";
-  skos:notation "LOT-0002" .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotIdentifier_daUDPcwCUoxbJRjGb7tKNQ a
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_LotIdentifier_246rmGzZvwFBcxRNZTXjTW a
     adms:Identifier;
   epo:hasScheme "Lot";
   skos:notation "LOT-0001" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotInternalIdentifier_BDTC4WRLKSCg4KipkdMxR8
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_LotInternalIdentifier_BboGPQkCpLeHXdXL8io8wo
   a adms:Identifier;
   epo:hasScheme "InternalID";
-  skos:notation "Object Reference Number---" .
+  skos:notation "B11165" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotInternalIdentifier_BboGPQkCpLeHXdXL8io8wo
-  a adms:Identifier;
-  epo:hasScheme "InternalID";
-  skos:notation "Object Reference Number---" .
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_LotPurpose_BboGPQkCpLeHXdXL8io8wo a epo:Purpose;
+  epo:hasAdditionalClassification <http://data.europa.eu/cpv/cpv/79710000>;
+  epo:hasMainClassification <http://data.europa.eu/cpv/cpv/79713000> .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotInternalIdentifier_QRFEJSYy7fATJoZShoDC4D
-  a adms:Identifier;
-  epo:hasScheme "InternalID";
-  skos:notation "Object Reference Number---" .
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Lot_LOT-0001 a epo:Lot;
+  epo:foreseesContractSpecificTerm epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ContractTerm_246rmGzZvwFBcxRNZTXjTW;
+  epo:hasInternalIdentifier epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_LotInternalIdentifier_BboGPQkCpLeHXdXL8io8wo;
+  epo:hasPurpose epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_LotPurpose_BboGPQkCpLeHXdXL8io8wo;
+  epo:isSubjectToLotSpecificTerm epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_AccessTerm_YWMCGu6i5HBxweh3xaUekn,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_AccessTerm_naE3mfoLZyth2mWXywVhn6, epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_AwardEvaluationTerm_Ed82rH3bQh5UFtUqt5RqUi,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_AwardEvaluationTerm_U8LR2j9BBALZEeUn7RmhJZ,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_AwardEvaluationTerm_mvugP5Whk4zjSAanDcqJza,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_FrameworkAgreementTerm_bq3rWUnhLReULR3Pe8QxDZ,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_MultipleStageProcedureTerm_246rmGzZvwFBcxRNZTXjTW,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ReviewTerm_D9HNqZBE8z3NZfKG6rn3Cq, epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_SubmissionTerm_246rmGzZvwFBcxRNZTXjTW;
+  epo:isUsingEUFunds false;
+  epo:specifiesProcurementCriterion epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_AwardCriterion_CTwFnetyuuSnLXUpTG6Pi8,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_AwardCriterion_KnfpsdA2r7UUmsXaoyvxgY,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_AwardCriterion_MGJNUreXVLg5AkPswtTpQ5,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_5wQytch458NVWvEDHFqRwG,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_65B5ieqPopJApHPkYdhiAi,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_BpL5yyeW3cMvEHbh6b4ScW,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_LGVLo87ArD4HobVYoAGR5B,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_SGPTD68m84zt8Q9GNUnuFA,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_T2q43pjq3JHuJtvxjmL6vf,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_TTD43oQXgzgzeUvR3mf5zL,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_TTUy3kEUkWQjLYAVZE4jQa,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_TkXrCvoxtk4GKQN38wAzMt,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_TyUFN5TJLPnpNx9yoZf5Ti,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_YGYLhb2LyjG3THWmzopx5a,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_YLEyVjkvPySnYWBMN2kXn3,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_ZY3SnQBRXooC6NjbRDS9an,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_ZrLAZ2zYt9ZSkyNyucoZjB,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_bm6uSwy7hkcan8rVF5YHgR,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_ckYPsVin4htwF867bz6Ghf,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_dZjuVAEeCK6MQWNLBFCLgF,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_eE9UGyZshPCAPa9HY5m3SS,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_gsqwnkSxN5gKbqYWRFqTmc,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_hqawu5kJC8i3dxZ99zexxB,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_i8mnWUe2qMrSYiJiu25QXu,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_jNvYhB6XsMWdsYzwKuupXY,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_m4kTXGLiFNt2eMFdMeyrJs,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ExclusionGround_mFrDghNEkNrmi5Ra6xpuYu,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ParticipationCondition_Wbukq4uv37BmR2FRZxpHbN,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ProcurementCriterion_246rmGzZvwFBcxRNZTXjTW,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_SelectionCriterion_DEqKehWh2My5y2k7i9vnNu,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_SelectionCriterion_DMSpfaB8fZx4MY2NWtEgG3,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_SelectionCriterion_F2EkrTHhwGTB3ZRA69q4nd,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_SelectionCriterion_KJZVpFbg59s5miVxYyncVM,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_SelectionCriterion_QwLGZTLYe95szz5vdsUu7F,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_SelectionCriterion_RgYZTGigh6rqkvPrLQfrZb,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_SelectionCriterion_SCV7T69xPGzuBjSP6UxYtT,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_SelectionCriterion_fA8GQSty69xks3Q4sFpZ2C;
+  epo:usesTechnique epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_AuctionTerms_Y7WNjU2HSM4HNny2xZsabR,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_DynamicPurchaseSystemTechnicalUsage_bq3rWUnhLReULR3Pe8QxDZ;
+  dct:description "Raamovereenkomst beveiliging Cruiseterminal"@nl;
+  dct:title "Raamovereenkomst beveiliging Cruiseterminal"@nl;
+  adms:identifier epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_LotIdentifier_246rmGzZvwFBcxRNZTXjTW .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotPurpose_BDTC4WRLKSCg4KipkdMxR8 a epo:Purpose;
-  epo:hasMainClassification <http://data.europa.eu/cpv/cpv/75121000>;
-  epo:hasTotalQuantity epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Quantity_BDTC4WRLKSCg4KipkdMxR8 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotPurpose_QRFEJSYy7fATJoZShoDC4D a epo:Purpose;
-  epo:hasMainClassification <http://data.europa.eu/cpv/cpv/75121000>;
-  epo:hasTotalQuantity epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Quantity_QRFEJSYy7fATJoZShoDC4D .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotValueEstimateExtension_fhpEAkeAi2DhcGZP8Nqr2u
-  a epo:MonetaryValue;
-  epo:hasAmountValue 247547.0;
-  epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/BSD> .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001 a epo:Lot;
-  epo:foreseesContractSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_daUDPcwCUoxbJRjGb7tKNQ;
-  epo:fulfillsStrategicProcurement epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_GreenProcurement_6gHfSxSpgNRXavjTJCiAJv,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_GreenProcurement_YnBjYVCB47Lh3T4W9D8off,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_InnovativeProcurement_cLKYnTLDZb6RpEv6sHGwFG,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SocialProcurement_AyeF96vKsfhzrt5AYeKRTv,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_StrategicProcurement_Wj9gx3dGgPeHcrkfPnxbfg,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_StrategicProcurement_Xb7ADxt2QhzBynPpXk4tjW;
-  epo:hasAdditionalInformation "Additional information for GLO-0001 ProcurementProject ---"@en;
-  epo:hasEstimatedValue epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValueLot_WdC3kBS9amJ4en7K2hRKUQ;
-  epo:hasInternalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotInternalIdentifier_BDTC4WRLKSCg4KipkdMxR8;
-  epo:hasLaunchFrameworkAgreementMaximumValue epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotValueEstimateExtension_fhpEAkeAi2DhcGZP8Nqr2u;
-  epo:hasPurpose epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotPurpose_BDTC4WRLKSCg4KipkdMxR8;
-  epo:isCoveredByGPA true;
-  epo:isSMESuitable true;
-  epo:isSubjectToLotSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_TT87XZ7rfCixVuS4Z9trMH,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_daUDPcwCUoxbJRjGb7tKNQ, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_fHHa5zNc2jy5cUXFhDq6nM,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTerm_4qCitbxYVRfdbqxnYtJTZF,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MultipleStageProcedureTerm_daUDPcwCUoxbJRjGb7tKNQ,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_NonDisclosureAgreementTerm_TT87XZ7rfCixVuS4Z9trMH,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OpeningTerm_QuUbCTvwqkE5rYfeGgqExM, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_VZxmrBG8UMc3RvpZcKCpvE,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_bMTjo7a5Ke582iB4TXZmU8, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SecurityClearanceTerm_TT87XZ7rfCixVuS4Z9trMH,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_TT87XZ7rfCixVuS4Z9trMH,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_daUDPcwCUoxbJRjGb7tKNQ;
-  epo:isUsingEUFunds true;
-  epo:specifiesProcurementCriterion epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_Ee3JXqpmik8eG35Uay4dJk,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_QaDZD9SvbXf8nLh2wqBGkh,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_65B5ieqPopJApHPkYdhiAi,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_BpL5yyeW3cMvEHbh6b4ScW,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_LGVLo87ArD4HobVYoAGR5B,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_SGPTD68m84zt8Q9GNUnuFA,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_T2q43pjq3JHuJtvxjmL6vf,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_TTD43oQXgzgzeUvR3mf5zL,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_TTUy3kEUkWQjLYAVZE4jQa,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_TyUFN5TJLPnpNx9yoZf5Ti,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_ZY3SnQBRXooC6NjbRDS9an,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_bm6uSwy7hkcan8rVF5YHgR,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_eE9UGyZshPCAPa9HY5m3SS,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_gsqwnkSxN5gKbqYWRFqTmc,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_hqawu5kJC8i3dxZ99zexxB,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ParticipationCondition_LRt2DdjrrLdsYp7yMz2y3n,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementCriterion_daUDPcwCUoxbJRjGb7tKNQ,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_9xGCswiFAKWwQgitqGWSQv,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_Bkpcxn7EFoAsBBzSiUjcX2,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_LPqCAx6u8AHZs68SmxnK7p;
-  epo:usesChannel epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Channel_4qCitbxYVRfdbqxnYtJTZF;
-  epo:usesTechnique epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AuctionTerms_fEtfKJVcbukziY28mGZdui,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_DynamicPurchaseSystemTechnicalUsage_4qCitbxYVRfdbqxnYtJTZF;
-  dct:description "Description ---"@en;
-  dct:title "Title ---"@en;
-  adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotIdentifier_daUDPcwCUoxbJRjGb7tKNQ .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002 a epo:Lot;
-  epo:foreseesContractSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractTerm_8y8GPfmPvSRdBcci6WWcSi,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubcontractTerm_8y8GPfmPvSRdBcci6WWcSi;
-  epo:fulfillsStrategicProcurement epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_GreenProcurement_dfeMpbQbaBY6WfVozDLEGf,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_InnovativeProcurement_2yjckcDCeZgS5m5tUcZ68p,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SocialProcurement_GB54RbhU2jfyPCJLbcWmfB,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_StrategicProcurement_AV9BoppTAddYZDEikLyWUv,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_StrategicProcurement_aJZpohKJoPEWi3EuVgFgPb;
-  epo:hasAdditionalInformation "Additional information for GLO-0001 ProcurementProject ---"@en;
-  epo:hasEstimatedValue epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValueLot_evidV3nok82ih2xWwJYg9n;
-  epo:hasInternalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotInternalIdentifier_QRFEJSYy7fATJoZShoDC4D;
-  epo:hasPurpose epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotPurpose_QRFEJSYy7fATJoZShoDC4D;
-  epo:hasRecurrenceDescription "......."@fr;
-  epo:isCoveredByGPA true;
-  epo:isFundedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotFund_UQnAwfk3ERwvnj7e2sbo39;
-  epo:isRecurrent false;
-  epo:isSMESuitable true;
-  epo:isSubjectToLotSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_8y8GPfmPvSRdBcci6WWcSi,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_Aim3sQTrJD92cok54ZhnWW, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AccessTerm_PuAZ93vcjRYhKiN4rMvUZg,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardEvaluationTerm_g9BZcQVSEYMdC6doz2wnjx,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_DesignContestRegimeTerm_PuAZ93vcjRYhKiN4rMvUZg,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_FrameworkAgreementTerm_8APvjTVZXX8CxGPVJZoBww,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MultipleStageProcedureTerm_8y8GPfmPvSRdBcci6WWcSi,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_FsymrRPQVzLm3zkbgk3JgA, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_bpDJYehUZE5dpNtnagJd4V,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SecurityClearanceTerm_PuAZ93vcjRYhKiN4rMvUZg,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_28qA6sXPPZP6NSvA8FovHj,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_8y8GPfmPvSRdBcci6WWcSi,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_PuAZ93vcjRYhKiN4rMvUZg;
-  epo:isUsingEUFunds true;
-  epo:specifiesProcurementCriterion epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_39TpnFPzm9mQHb8KWyccgF,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardCriterion_JXVZRgb5g8CzzdmWDdr5QZ,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_65B5ieqPopJApHPkYdhiAi,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_BpL5yyeW3cMvEHbh6b4ScW,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_LGVLo87ArD4HobVYoAGR5B,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_SGPTD68m84zt8Q9GNUnuFA,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_T2q43pjq3JHuJtvxjmL6vf,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_TTD43oQXgzgzeUvR3mf5zL,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_TTUy3kEUkWQjLYAVZE4jQa,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_TyUFN5TJLPnpNx9yoZf5Ti,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_ZY3SnQBRXooC6NjbRDS9an,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_bm6uSwy7hkcan8rVF5YHgR,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_eE9UGyZshPCAPa9HY5m3SS,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_gsqwnkSxN5gKbqYWRFqTmc,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ExclusionGround_hqawu5kJC8i3dxZ99zexxB,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ParticipationCondition_n8e85pxdcT7ZJ2rmjZQqjA,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementCriterion_8y8GPfmPvSRdBcci6WWcSi,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_2Y8NzdfvWC5GNYLbHsuq2F,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_bxHGbwwHUP9MfJv6P8NaFL,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_j76qWqsuJdCtjNmRv3MK5T;
-  epo:usesChannel epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Channel_8APvjTVZXX8CxGPVJZoBww;
-  epo:usesTechnique epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AuctionTerms_a3YxuhxVZtuVM6PB6isrBc,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_DynamicPurchaseSystemTechnicalUsage_8APvjTVZXX8CxGPVJZoBww;
-  dct:description "Description ---"@en;
-  dct:title "Title Lot 2---"@en;
-  adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotIdentifier_8y8GPfmPvSRdBcci6WWcSi .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotsGroupIdentifier_246rmGzZvwFBcxRNZTXjTW
-  a adms:Identifier;
-  epo:hasScheme "LotsGroup";
-  skos:notation "GLO-0001" .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotsGroupValueEstimateExtension_ZoH93rHLWdKDPCSNvWx8rE
-  a epo:MonetaryValue;
-  epo:hasAmountValue 247547.0;
-  epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/BSD> .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotsGroupValueMaximum_gLuU9xVSAhVSewi2MZNMhW
-  a epo:MonetaryValue;
-  epo:hasAmountValue 10000.0;
-  epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Mediator_FsymrRPQVzLm3zkbgk3JgA a epo:Mediator;
-  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
-  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0006 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Mediator_bMTjo7a5Ke582iB4TXZmU8 a epo:Mediator;
-  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001;
-  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0006 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValueLot_BaGzsXLuGR4tRgDAxRPwS8
-  a epo:MonetaryValue;
-  epo:hasAmountValue 9999999.99;
-  epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValueLot_WdC3kBS9amJ4en7K2hRKUQ
-  a epo:MonetaryValue;
-  epo:hasAmountValue 9999999.99;
-  epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValueLot_evidV3nok82ih2xWwJYg9n
-  a epo:MonetaryValue;
-  epo:hasAmountValue 9999999.99;
-  epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValue_W3WEhLqsTnuQGFepVs9sA7 a
-    epo:MonetaryValue;
-  epo:hasAmountValue 10000.0 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValue_kB8mzufhJfCu7QSJVs6cLZ a
-    epo:MonetaryValue;
-  epo:hasAmountValue 20000.0 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MultipleStageProcedureTerm_8y8GPfmPvSRdBcci6WWcSi
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_MultipleStageProcedureTerm_246rmGzZvwFBcxRNZTXjTW
   a epo:MultipleStageProcedureTerm;
-  epo:hasMaximumNumberOfCandidates 7;
-  epo:hasMinimumNumberOfCandidates 3;
-  epo:hasNoNegotiationNecessary false;
-  epo:hasSuccessiveReduction true .
+  epo:hasMinimumNumberOfCandidates 0;
+  epo:hasSuccessiveReduction false .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MultipleStageProcedureTerm_daUDPcwCUoxbJRjGb7tKNQ
-  a epo:MultipleStageProcedureTerm;
-  epo:hasEstimatedInvitationToExpressInterestDate "2023-12-12+01:00"^^xsd:date;
-  epo:hasEstimatedInvitationToTenderDate "2020-05-22+02:00"^^xsd:date;
-  epo:hasMaximumNumberOfCandidates 7;
-  epo:hasMinimumNumberOfCandidates 3;
-  epo:hasNoNegotiationNecessary false;
-  epo:hasSuccessiveReduction true .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_NonDisclosureAgreementTerm_TT87XZ7rfCixVuS4Z9trMH
-  a epo:NonDisclosureAgreementTerm;
-  epo:isNonDisclosureAgreementRequired true;
-  dct:description "Non Disclosure Agreement Description ---"@en .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Notice a epo:CompetitionNotice, epo:Notice,
-    epo:Notice16;
-  epo:announcesLot epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
-  epo:announcesProcedure epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_MnX8qyREnFMNLeS5MJAX9K;
-  epo:announcesRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AcquiringCentralPurchasingBody_TftBQ7CiqCcyirLAwhsyEn,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_AwardingCentralPurchasingBody_U3RE4hoDTRa29J56Gmq3BL,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Buyer_MT3gdCnJ9BA7aEqaGqKxAh, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EmploymentInformationProvider_LynXyp22UHq9wSHKWpaZdf,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EmploymentInformationProvider_jd3pLTPdR98iydFAqeHECy,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EnvironmentalProtectionInformationProvider_PuAZ93vcjRYhKiN4rMvUZg,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EnvironmentalProtectionInformationProvider_TT87XZ7rfCixVuS4Z9trMH,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_JuryMember_cvGnw3hJYztkzCgnhrJDWV, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LeadBuyer_N4cgMQL3K4CA88AYBBwUNn,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Mediator_FsymrRPQVzLm3zkbgk3JgA, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Mediator_bMTjo7a5Ke582iB4TXZmU8,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OfflineAccessProvider_PuAZ93vcjRYhKiN4rMvUZg,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OfflineAccessProvider_TT87XZ7rfCixVuS4Z9trMH,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProcedureInformationProvider_PuAZ93vcjRYhKiN4rMvUZg,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProcedureInformationProvider_TT87XZ7rfCixVuS4Z9trMH,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementServiceProvider_f7UuQ7S8iGMkM7gCN4x35m,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewProcedureInformationProvider_FsymrRPQVzLm3zkbgk3JgA,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewProcedureInformationProvider_bMTjo7a5Ke582iB4TXZmU8,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Reviewer_FsymrRPQVzLm3zkbgk3JgA, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Reviewer_bMTjo7a5Ke582iB4TXZmU8,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TaxInformationProvider_UyJLB5UdNE5RM2ZpQVeTCV,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TaxInformationProvider_j5VcAZZjswFkX9mLn9opDA,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderProcessor_PuAZ93vcjRYhKiN4rMvUZg,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderProcessor_TT87XZ7rfCixVuS4Z9trMH,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderReceiver_EzgHnVsFm5yZb2op3EXTjn,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderReceiver_ZRrbuPPWyxGgmdJHy5oG8a;
-  epo:hasESenderDispatchDate "2023-03-23T20:59:32+01:00"^^xsd:dateTime;
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Notice a epo:CompetitionNotice, epo:Notice,
+    epo:Notice21;
+  epo:announcesLot epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Lot_LOT-0001;
+  epo:announcesProcedure epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Procedure_MnX8qyREnFMNLeS5MJAX9K;
+  epo:announcesRole epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Buyer_HGvue6GtAm3yppLpDLnBKD,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ProcurementProcedureInformationProvider_HaEv2nhsYWgNmx2FoRrNgG,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ProcurementServiceProvider_f7UuQ7S8iGMkM7gCN4x35m,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ProcurementServiceProvider_iaQ3XXC4nJfXpc8nydYd8X,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ReviewProcedureInformationProvider_bZ6uUw4kXUYVuGcQCsr5Pk,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Reviewer_6Bv5pbGfbWmvGfJNVgYFXA, epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_TenderReceiver_HGvue6GtAm3yppLpDLnBKD;
+  epo:hasESenderDispatchDate "2024-03-15T00:00:00+01:00"^^xsd:dateTime;
   epo:hasFormType <http://publications.europa.eu/resource/authority/form-type/competition>;
-  epo:hasNoticePublicationNumber "00675564-2023";
-  epo:hasNoticeType <http://publications.europa.eu/resource/authority/notice-type/cn-standard>;
-  epo:hasOJSIssueNumber "214/2023";
-  epo:hasOfficialLanguage <http://publications.europa.eu/resource/authority/language/BUL>,
-    <http://publications.europa.eu/resource/authority/language/ENG>;
-  epo:hasPublicationDate "2023-11-07Z"^^xsd:date;
-  epo:hasVersion "03";
-  epo:refersToLot epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001, epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
-  epo:refersToPrevious epd:id_9c0fd704-64d3-4294-a3b6-6df45911ab9f-01_Notice;
-  epo:refersToProcedure epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_MnX8qyREnFMNLeS5MJAX9K;
-  adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_NoticeIdentifier_cMBzh6pL4JRkiaCd4DWjT2 .
+  epo:hasNoticePublicationNumber "00163529-2024";
+  epo:hasNoticeType <http://publications.europa.eu/resource/authority/notice-type/cn-social>;
+  epo:hasOJSIssueNumber "56/2024";
+  epo:hasOfficialLanguage <http://publications.europa.eu/resource/authority/language/NLD>;
+  epo:hasPublicationDate "2024-03-19Z"^^xsd:date;
+  epo:hasVersion "01";
+  epo:refersToLot epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Lot_LOT-0001;
+  epo:refersToProcedure epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Procedure_MnX8qyREnFMNLeS5MJAX9K;
+  adms:identifier epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_NoticeIdentifier_cMBzh6pL4JRkiaCd4DWjT2 .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_NoticeIdentifier_cMBzh6pL4JRkiaCd4DWjT2
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_NoticeIdentifier_cMBzh6pL4JRkiaCd4DWjT2
   a adms:Identifier;
   epo:hasScheme "notice-id";
-  skos:notation "14549263-b47b-4e59-96a1-2d0d13e19343" .
+  skos:notation "b90ca08f-0b39-46c6-9d03-096c80d35c03" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_NoticeIdentifier_ec9tbJ8ui7TUpJPbEsk6fj
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_OrganisationIdentifier_5ZoEQEDimbU7BLyB2frEpT
   a adms:Identifier;
-  skos:notation "6bc75979-ce6c-46eb-81a6-eee543697dec-01" .
+  skos:notation "BE001" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OfflineAccessProvider_PuAZ93vcjRYhKiN4rMvUZg
-  a epo:OfflineAccessProvider;
-  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
-  epo:hasContactPointInRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0002;
-  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_TPO-0002 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OfflineAccessProvider_TT87XZ7rfCixVuS4Z9trMH
-  a epo:OfflineAccessProvider;
-  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001;
-  epo:hasContactPointInRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0002;
-  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_TPO-0002 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OpenTenderEventPlace_TpCFHZDentQZiC2NomrGLF
-  a locn:Address;
-  locn:fullAddress "Renfrewshire House, Cotton Street, Paisley."@en .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OpeningTerm_QuUbCTvwqkE5rYfeGgqExM a epo:OpeningTerm;
-  epo:definesOpeningPlace epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OpenTenderEventPlace_TpCFHZDentQZiC2NomrGLF;
-  epo:hasOpeningDateTime "2020-06-12T14:00:00+01:00"^^xsd:dateTime;
-  epo:hasOpeningDescription "Strictly by invitation only."@en .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_5ZoEQEDimbU7BLyB2frEpT
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_OrganisationIdentifier_ZowVe8fwBUBP7Pd4ikinCk
   a adms:Identifier;
-  skos:notation "99283" .
+  skos:notation "BE0248.399.380" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_EVJLSmcpmMxC2ser3UGKGb
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_OrganisationIdentifier_dcFQz5DL4ZBPqMeq5T8Yet
   a adms:Identifier;
-  skos:notation "111 222 333" .
+  skos:notation "BE 0475.480.736" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_ZowVe8fwBUBP7Pd4ikinCk
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_OrganisationIdentifier_ewuXkefLbEMgjnxiEwoxj6
   a adms:Identifier;
-  skos:notation "12345" .
+  skos:notation "BE 0931.814.266" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_dcFQz5DL4ZBPqMeq5T8Yet
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_OrganisationIdentifier_ezhXiD7oQurCdTdR4RSM9g
   a adms:Identifier;
-  skos:notation "7812345" .
+  skos:notation "BE0248.399.380" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_ewuXkefLbEMgjnxiEwoxj6
-  a adms:Identifier;
-  skos:notation "0986543" .
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Organization_ORG-0001 a org:Organization;
+  epo:hasBuyerLegalType <http://publications.europa.eu/resource/authority/buyer-legal-type/pub-undert>;
+  epo:hasLegalIdentifier epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_OrganisationIdentifier_ezhXiD7oQurCdTdR4RSM9g;
+  epo:hasLegalName """Haven van Antwerpen-Brugge, NV van
+										publiek recht"""@nl;
+  epo:hasPrimaryContactPoint epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_CompanyContactPoint_7iFD8NVFhULkdXRNPqKyHs;
+  cccev:registeredAddress epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_CompanyAddress_SyrXybB9qnydTsiCYvqfwn;
+  adms:identifier epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Identifier_ORG-0001 .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_ezhXiD7oQurCdTdR4RSM9g
-  a adms:Identifier;
-  skos:notation "998298" .
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Organization_ORG-0002 a org:Organization;
+  epo:hasLegalIdentifier epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_OrganisationIdentifier_ZowVe8fwBUBP7Pd4ikinCk;
+  epo:hasLegalName "Procurement"@nl;
+  epo:hasPrimaryContactPoint epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_CompanyContactPoint_CCKfjNm3UAMuYf3dDso6C2;
+  cccev:registeredAddress epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_CompanyAddress_kp4YHhT2Gw9BnTPKnwxcdW;
+  adms:identifier epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Identifier_ORG-0002 .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_oL2naWEEvhzCjBHXXR6juG
-  a adms:Identifier;
-  skos:notation "09812345" .
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Organization_ORG-0003 a org:Organization;
+  epo:hasLegalIdentifier epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_OrganisationIdentifier_dcFQz5DL4ZBPqMeq5T8Yet;
+  epo:hasLegalName "3P Aanbieder van diensten"@nl;
+  epo:hasPrimaryContactPoint epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_CompanyContactPoint_YG3RWHcWTBZPCNqFAQ7guC;
+  cccev:registeredAddress epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_CompanyAddress_CXdDFvgV5RjePYb9cagtRa;
+  adms:identifier epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Identifier_ORG-0003 .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0001 a org:Organization;
-  epo:hasBuyerLegalType <http://publications.europa.eu/resource/authority/buyer-legal-type/body-pl>;
-  epo:hasLegalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_ezhXiD7oQurCdTdR4RSM9g;
-  epo:hasLegalName "Financial Adinistration for ..."@en;
-  epo:hasMainActivity <http://publications.europa.eu/resource/authority/main-activity/econ-aff>;
-  epo:hasPrimaryContactPoint epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyContactPoint_7iFD8NVFhULkdXRNPqKyHs;
-  cccev:registeredAddress epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_SyrXybB9qnydTsiCYvqfwn;
-  adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0001 .
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Organization_ORG-0004 a org:Organization;
+  epo:hasLegalIdentifier epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_OrganisationIdentifier_5ZoEQEDimbU7BLyB2frEpT;
+  epo:hasLegalName "FPS Policy and Support"@nl;
+  epo:hasPrimaryContactPoint epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_CompanyContactPoint_VBaHVZvvDEkusW8YJnjRf7;
+  cccev:registeredAddress epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_CompanyAddress_JAQDkMB4STjLj2Z9DkzGKS;
+  adms:identifier epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Identifier_ORG-0004 .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0002 a org:Organization;
-  epo:hasLegalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_ZowVe8fwBUBP7Pd4ikinCk;
-  epo:hasLegalName "TaxInfo Department"@en;
-  epo:hasPrimaryContactPoint epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyContactPoint_CCKfjNm3UAMuYf3dDso6C2;
-  cccev:registeredAddress epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_kp4YHhT2Gw9BnTPKnwxcdW;
-  adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0002 .
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Organization_ORG-0005 a org:Organization;
+  epo:hasLegalIdentifier epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_OrganisationIdentifier_ewuXkefLbEMgjnxiEwoxj6;
+  epo:hasLegalName "Raad Van State"@nl;
+  epo:hasPrimaryContactPoint epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_CompanyContactPoint_Qdvn4zi39DtmxZAnxmSELy;
+  cccev:registeredAddress epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_CompanyAddress_9EoaX693zGgFRHUBTqQE58;
+  adms:identifier epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Identifier_ORG-0005 .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0003 a org:Organization;
-  epo:hasLegalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_dcFQz5DL4ZBPqMeq5T8Yet;
-  epo:hasLegalName "EnvironmentalInfo Dpt"@en;
-  epo:hasPrimaryContactPoint epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyContactPoint_YG3RWHcWTBZPCNqFAQ7guC;
-  cccev:registeredAddress epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_CXdDFvgV5RjePYb9cagtRa;
-  adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0003 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0004 a org:Organization;
-  epo:hasLegalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_5ZoEQEDimbU7BLyB2frEpT;
-  epo:hasLegalName "EmploymentInfo Division"@en;
-  epo:hasPrimaryContactPoint epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyContactPoint_VBaHVZvvDEkusW8YJnjRf7;
-  cccev:registeredAddress epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_JAQDkMB4STjLj2Z9DkzGKS;
-  adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0004 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0005 a org:Organization;
-  epo:hasLegalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_ewuXkefLbEMgjnxiEwoxj6;
-  epo:hasLegalName "Pub Proc Appeal Adm"@en;
-  epo:hasPrimaryContactPoint epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyContactPoint_Qdvn4zi39DtmxZAnxmSELy;
-  cccev:registeredAddress epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_9EoaX693zGgFRHUBTqQE58;
-  adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0005 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0006 a org:Organization;
-  epo:hasLegalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_oL2naWEEvhzCjBHXXR6juG;
-  epo:hasLegalName "The Public Mediator"@en;
-  epo:hasPrimaryContactPoint epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyContactPoint_2KJnTZs6heaXxBaUWvBfGP;
-  cccev:registeredAddress epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_ikV4AfPuLDPpY2gzokb7GH;
-  adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0006 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0007 a org:Organization;
-  epo:hasLegalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_OrganisationIdentifier_EVJLSmcpmMxC2ser3UGKGb;
-  epo:hasLegalName "eSendCorp"@en;
-  epo:hasPrimaryContactPoint epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyContactPoint_dxvvStPQ7ekRVg6xG9QN3E;
-  cccev:registeredAddress epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_CompanyAddress_dtBY8KdbdWyJb9xZnV4Xcw;
-  adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Identifier_ORG-0007 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_TPO-0001 a org:Organization;
-  owl:sameAs epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0001 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_TPO-0002 a org:Organization;
-  owl:sameAs epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0003 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_TPO-0003 a org:Organization;
-  owl:sameAs epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0001 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ParticipationCondition_LRt2DdjrrLdsYp7yMz2y3n
-  a epo:ParticipationCondition;
-  epo:hasReservedProcurement <http://publications.europa.eu/resource/authority/reserved-procurement/res-pub-ser> .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ParticipationCondition_n8e85pxdcT7ZJ2rmjZQqjA
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ParticipationCondition_Wbukq4uv37BmR2FRZxpHbN
   a epo:ParticipationCondition;
   epo:hasReservedProcurement <http://publications.europa.eu/resource/authority/reserved-procurement/none> .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Person_cvGnw3hJYztkzCgnhrJDWV a person:Person;
-  foaf:familyName "arch. Andrzej Bulanda – Przewodniczący Sądu Konkurs.; arch. Maria Saloni-Sadowska –Sędzia referent; arch. Bartosz Lewandowski – Asystent Sędziego referenta; Robert Widz –Członek Sądu Konkurs.; Agnieszka Zubala – Członek Sądu Konkurs.; arch. Kinga Socha –Członek Sądu Konkurs.; arch. Piotr Piętka – Członek Sądu Konkurs.; arch. Rafał Sieraczyński –Członek Sądu Konkurs.; Rafał Mroczkowski - Sekretarz" .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Prize_W3WEhLqsTnuQGFepVs9sA7 a epo:Prize;
-  epo:hasPrizeRank 1;
-  epo:hasPrizeValue epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValue_W3WEhLqsTnuQGFepVs9sA7 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Prize_kB8mzufhJfCu7QSJVs6cLZ a epo:Prize;
-  epo:hasPrizeRank 2;
-  epo:hasPrizeValue epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValue_kB8mzufhJfCu7QSJVs6cLZ .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureIdentifier_MnX8qyREnFMNLeS5MJAX9K
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ProcedureIdentifier_MnX8qyREnFMNLeS5MJAX9K
   a adms:Identifier;
-  skos:notation "aff2863e-b4cc-4e91-baba-b3b85f709117" .
+  skos:notation "db1670b5-a512-40fa-ab34-01795b562228" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureIdentifier_eySzap22e3jkZr3f7VXYNj
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ProcedureIdentifier_eySzap22e3jkZr3f7VXYNj
   a adms:Identifier;
   epo:hasScheme "InternalID";
-  skos:notation "2023-P-0001" .
+  skos:notation "PPP0B3-16006/4293/B11165" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedurePlacePerformance_btiykpkF9yYEWFnDmvRf6a
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ProcedurePlacePerformance_RxWyYo5p6B6QKE6kAx4iDD
   a locn:Address;
-  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
-  epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
-  locn:fullAddress "Bruce Wayne House, 2 Gotham Street, London, N1 9FL, GBR";
-  locn:postCode "N1 9FL";
-  locn:postName "London" .
+  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/BEL>;
+  epo:hasNutsCode <http://data.europa.eu/nuts/code/BE211>;
+  locn:fullAddress "Zaha Hadidplein 1, Antwerpen, 2030, BEL";
+  locn:postCode "2030";
+  locn:postName "Antwerpen" .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedurePurpose_eySzap22e3jkZr3f7VXYNj
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ProcedurePlacePerformance_btiykpkF9yYEWFnDmvRf6a
+  a locn:Address;
+  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/BEL>;
+  epo:hasNutsCode <http://data.europa.eu/nuts/code/BE211>;
+  locn:fullAddress "Zaha Hadidplein 1, Antwerpen, 2030, BEL";
+  locn:postCode "2030";
+  locn:postName "Antwerpen" .
+
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ProcedurePurpose_eySzap22e3jkZr3f7VXYNj
   a epo:Purpose;
-  epo:hasAdditionalClassification <http://data.europa.eu/cpv/cpv/79720000>;
   epo:hasMainClassification <http://data.europa.eu/cpv/cpv/79710000> .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_5ePSyM3yjeKrNdoLehDe7g a
-    epo:ProcedureTerm;
-  epo:hasCrossBorderLaw "Cross border law description ---"@en .
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Procedure_MnX8qyREnFMNLeS5MJAX9K a epo:Procedure;
+  epo:foreseesContractSpecificTerm epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ProcurementProjectContractTerm_67o9ur9Jjef9htMoaQhdxm,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ProcurementProjectContractTerm_QmFgWdHMQiunuxrdtntYZx,
+    epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ProcurementProjectContractTerm_eySzap22e3jkZr3f7VXYNj;
+  epo:hasAdditionalInformation """OPGELET !!! de opdracht werd als niet-openbare procedure
+			gepubliceerd, MAAR dit betreft wel degelijk een opdracht met onderhandelingsprocedure
+			met voorafgaande oproep tot mededinging !!!!
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_BniuuBzYtT7voNxpkh6A9M a
-    epo:ProcedureTerm;
-  epo:definesLotGroup epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_LotGroup_GLO-0001;
-  epo:hasMaximumLotSubmissionAllowed 2;
-  epo:hasMaximumNumberOfLotsToBeAwarded 2 .
+			De gunningscriteria zijn indicatief en zullen worden vastgelegd in het bestek.
+			Richtlijnen bij het invullen van het UEA:
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_MnX8qyREnFMNLeS5MJAX9K a
-    epo:ProcedureTerm;
-  epo:isSubmissionForAllLotsRequired true .
+			- Ga naar de website https://uea.publicprocurement.be en kies uw taal.
+			- Op de vraag 'Wie bent u' antwoordt u 'Ik ben een ondernemer'.
+			- Op de vraag 'Wat wilt u doen' antwoordt u 'Een antwoord aanmaken'.
+			- Selecteer uw land en klik op 'Volgende'.
+			- Doorloop het formulier en antwoord op de vragen in de onderdelen 'Procedure' en
+			'Uitsluiting'.
+			- In het onderdeel 'Selectie' mag u 'Nee' antwoorden op de vraag 'Wilt u de
+			selectiecriteria van A tot en met D gebruiken?'
+			- Zodra het volledige formulier ingevuld is, klikt u op 'Overzicht' onderaan de pagina.
+			Het door u ingevulde UEA wordt weergegeven en kan worden gedownload in PDF formaat om
+			vervolgens bij uw offerte te voegen.
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_PuAZ93vcjRYhKiN4rMvUZg a
-    epo:ProcedureTerm;
-  epo:definesInformationProvider epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EmploymentInformationProvider_jd3pLTPdR98iydFAqeHECy,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EnvironmentalProtectionInformationProvider_PuAZ93vcjRYhKiN4rMvUZg,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TaxInformationProvider_j5VcAZZjswFkX9mLn9opDA;
-  epo:definesMediator epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Mediator_FsymrRPQVzLm3zkbgk3JgA .
+			Wijze van indienen – e-Procurement
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_TT87XZ7rfCixVuS4Z9trMH a
-    epo:ProcedureTerm;
-  epo:definesInformationProvider epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EmploymentInformationProvider_LynXyp22UHq9wSHKWpaZdf,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_EnvironmentalProtectionInformationProvider_TT87XZ7rfCixVuS4Z9trMH,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TaxInformationProvider_UyJLB5UdNE5RM2ZpQVeTCV;
-  epo:definesMediator epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Mediator_bMTjo7a5Ke582iB4TXZmU8 .
+			Het indienen en ontvangen van offertes en/of aanvragen tot deelneming verloopt volledig
+			en uitsluitend op elektronische wijze.
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureValueEstimateExtension_9thMAaeveYJRewotgDGorG
-  a epo:MonetaryValue;
-  epo:hasAmountValue 247547.0;
-  epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/BSD> .
+			Met elektronische indiening wordt indiening bedoeld via de e-Procurement applicatie en
+			niet per e-mail!
+			De offertes en/of aanvragen tot deelneming dienen digitaal ondertekend te zijn volgens
+			het e-Procurementsysteem.
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_MnX8qyREnFMNLeS5MJAX9K a epo:Procedure;
-  epo:foreseesContractSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_67o9ur9Jjef9htMoaQhdxm,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_QmFgWdHMQiunuxrdtntYZx,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_eySzap22e3jkZr3f7VXYNj;
-  epo:hasAcceleratedProcedureJustification "Procedure Accelerated Justification ---"@en;
-  epo:hasAdditionalInformation "Additional information ---"@en;
-  epo:hasEstimatedValue epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_MonetaryValueLot_BaGzsXLuGR4tRgDAxRPwS8;
-  epo:hasInternalIdentifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureIdentifier_eySzap22e3jkZr3f7VXYNj;
-  epo:hasLaunchFrameworkAgreementMaximumValue epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureValueEstimateExtension_9thMAaeveYJRewotgDGorG;
-  epo:hasLegalBasis <http://publications.europa.eu/resource/authority/legal-basis/32014L0024>;
-  epo:hasLegalBasisDescription "art. 410 ust. 1 ustawy z dnia 11 września 2019 r. - Prawo zamówień publicznych (Dz. U. z 2023r. poz. 1605 t.j.) [thisAlmostNeverOccurs] / legal base description ---"@en,
-    "Loi modifiée du 8 juillet 2018 sur les concessions"@fr;
-  epo:hasMainFeature "Description of the procedure  ---"@en;
-  epo:hasProcedureType <http://publications.europa.eu/resource/authority/procurement-procedure-type/neg-w-call>;
-  epo:hasProcurementScopeDividedIntoLot epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
-  epo:hasPurpose epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedurePurpose_eySzap22e3jkZr3f7VXYNj;
-  epo:isAccelerated true;
-  epo:isSubjectToProcedureSpecificTerm epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_5ePSyM3yjeKrNdoLehDe7g,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_BniuuBzYtT7voNxpkh6A9M,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_MnX8qyREnFMNLeS5MJAX9K,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_PuAZ93vcjRYhKiN4rMvUZg,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureTerm_TT87XZ7rfCixVuS4Z9trMH;
-  dct:description "Description ---"@en;
-  dct:title "Procurement Title ---"@en;
-  adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcedureIdentifier_MnX8qyREnFMNLeS5MJAX9K .
+			De elektronische indiening van offertes en/of aanvragen tot deelneming gebeurt via:
+			https://www.publicprocurement.be/
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementCriterion_8y8GPfmPvSRdBcci6WWcSi
+			Voor meer informatie wordt verwezen naar: http://www.publicprocurement.be.
+
+			Indien u dit dossier toevoegt aan uw favorieten, wordt u via mail op de hoogte gesteld
+			van alle wijzigingen.
+
+			Het betreft in deze fase enkel een oproep tot kandidaten. Het bestek wordt pas in de
+			tweede fase van de procedure toegezonden aan de geselecteerde kandidaten.
+			Momenteel is er nog geen bestek voorhanden.
+
+			U dient BIJLAGE A: FORMULIER VOOR AANVRAAG TOT DEELNEMING in te vullen en bij uw
+			kandidatuurstelling te voegen.
+			Zo niet, kan uw kandidatuurstelling geweerd worden."""@nl;
+  epo:hasInternalIdentifier epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ProcedureIdentifier_eySzap22e3jkZr3f7VXYNj;
+  epo:hasLegalBasis <http://publications.europa.eu/resource/authority/legal-basis/32014L0025>;
+  epo:hasMainFeature "niet-openbare procedure"@nl;
+  epo:hasProcedureType <http://publications.europa.eu/resource/authority/procurement-procedure-type/restricted>;
+  epo:hasProcurementScopeDividedIntoLot epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Lot_LOT-0001;
+  epo:hasPurpose epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ProcedurePurpose_eySzap22e3jkZr3f7VXYNj;
+  dct:description """De opdracht betreft het sluiten van een raamovereenkomst
+			met een erkende bewakingsonderneming voor de uitvoering van beveiligingstaken in de
+			cruiseterminal (ABC gebouw of andere gebouwen) of op andere locaties waar cruiseschepen
+			in de haven van Zeebrugge aanmeren.
+
+			De opdracht heeft betrekking op de volgende dienst: 79710000-4 beveiligingsdiensten.
+
+			POAB verwacht gemiddeld 190 aanlopen van cruiseschepen, met ongeveer 450.000 passagiers
+			op jaarbasis, voornamelijk afkomstig uit Groot-Brittannië, Duitsland en de Verenigde
+			Staten van Amerika. De voertaal met de passagiers is Engels.
+
+			De meeste cruiseschepen verblijven in de haven van Zeebrugge tussen 8u en 18u. Een
+			continue inzet kan vereist zijn bij opeenvolgende schepen, gelijktijdige aanlopen van
+			meerdere schepen of schepen op overnight stay.
+
+			De inschrijver wordt reeds gewezen op het gegeven dat hij de benodigde uitrusting voor
+			het uitvoeren van de opdracht (o.a. metaaldetectieportieken en RX-scanners) op huurbasis
+			aan POAB ter beschikking moet stellen. De opdracht zal ook bestaan uit het inzetten van
+			K9-honden.
+"""@nl;
+  dct:title "Raamovereenkomst beveiliging Cruiseterminal"@nl;
+  adms:identifier epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ProcedureIdentifier_MnX8qyREnFMNLeS5MJAX9K .
+
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ProcurementCriterion_246rmGzZvwFBcxRNZTXjTW
   a epo:ProcurementCriterion;
-  epo:hasPerformingStaffQualificationInformation <http://publications.europa.eu/resource/authority/requirement-stage/t-requ> .
+  epo:hasPerformingStaffQualificationInformation <http://publications.europa.eu/resource/authority/requirement-stage/not-requ> .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementCriterion_daUDPcwCUoxbJRjGb7tKNQ
-  a epo:ProcurementCriterion;
-  epo:hasPerformingStaffQualificationInformation <http://publications.europa.eu/resource/authority/requirement-stage/t-requ> .
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ProcurementDocument_URpngqswLJbFakGHMJhG53
+  a epo:ProcurementDocument;
+  epo:hasOfficialLanguage <http://publications.europa.eu/resource/authority/language/NLD> .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_Aim3sQTrJD92cok54ZhnWW
-  a epo:ProcurementDocument .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_SUjgiTfthNR3jeStaMcRex
-  a epo:ProcurementDocument .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_XnxqfcRqzA7sngzwrWyL3G
-  a epo:ProcurementDocument .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementDocument_fHHa5zNc2jy5cUXFhDq6nM
-  a epo:ProcurementDocument .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProcedureInformationProvider_PuAZ93vcjRYhKiN4rMvUZg
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ProcurementProcedureInformationProvider_HaEv2nhsYWgNmx2FoRrNgG
   a epo:ProcurementProcedureInformationProvider;
-  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
-  epo:hasContactPointInRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0001;
-  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_TPO-0001 .
+  epo:contextualisedBy epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Lot_LOT-0001;
+  epo:playedBy epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Organization_ORG-0002 .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProcedureInformationProvider_TT87XZ7rfCixVuS4Z9trMH
-  a epo:ProcurementProcedureInformationProvider;
-  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001;
-  epo:hasContactPointInRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0001;
-  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_TPO-0001 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProcessInformation_Bh5qwhngs3Hc9wnu7VDUTo
-  a epo:ProcurementProcessInformation;
-  epo:concernsProcedure epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Procedure_MnX8qyREnFMNLeS5MJAX9K;
-  epo:isToBeRelaunched false .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProcessInformation_Teea8WfH2bcWaNtNTR8HsQ
-  a epo:ProcurementProcessInformation;
-  epo:concernsLot epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001;
-  epo:isToBeRelaunched false .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_67o9ur9Jjef9htMoaQhdxm
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ProcurementProjectContractTerm_67o9ur9Jjef9htMoaQhdxm
   a epo:ContractTerm;
-  epo:hasBroadPlaceOfPerformance <http://publications.europa.eu/resource/authority/other-place-service/anyw-eea>;
-  epo:hasPlaceOfPerformanceAdditionalInformation "Additional information ---"@en .
+  epo:definesSpecificPlaceOfPerformance epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ContractLocation_RxWyYo5p6B6QKE6kAx4iDD;
+  epo:hasPlaceOfPerformanceAdditionalInformation "Zeebrugge"@nl .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_QmFgWdHMQiunuxrdtntYZx
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ProcurementProjectContractTerm_QmFgWdHMQiunuxrdtntYZx
   a epo:ContractTerm;
-  epo:definesSpecificPlaceOfPerformance epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ContractLocation_btiykpkF9yYEWFnDmvRf6a;
-  epo:hasPlaceOfPerformanceAdditionalInformation "The main location is ..."@en .
+  epo:definesSpecificPlaceOfPerformance epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ContractLocation_btiykpkF9yYEWFnDmvRf6a;
+  epo:hasPlaceOfPerformanceAdditionalInformation "Zeebrugge"@nl .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementProjectContractTerm_eySzap22e3jkZr3f7VXYNj
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ProcurementProjectContractTerm_eySzap22e3jkZr3f7VXYNj
   a epo:ContractTerm;
-  epo:hasAdditionalContractNature <http://publications.europa.eu/resource/authority/contract-nature/works>;
   epo:hasContractNatureType <http://publications.europa.eu/resource/authority/contract-nature/services> .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ProcurementServiceProvider_f7UuQ7S8iGMkM7gCN4x35m
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ProcurementServiceProvider_f7UuQ7S8iGMkM7gCN4x35m
   a epo:ProcurementServiceProvider;
-  epo:actsOnBehalfOf epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Buyer_MT3gdCnJ9BA7aEqaGqKxAh;
-  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0007;
-  dct:description "ted-esen" .
+  epo:actsOnBehalfOf epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Buyer_HGvue6GtAm3yppLpDLnBKD;
+  epo:playedBy epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Organization_ORG-0004 .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_PurposeLotGroupEstimatedValue_EgMjw2pg9jruQvYxRQ9GAr
-  a epo:MonetaryValue;
-  epo:hasAmountValue 9999999.99;
-  epo:hasCurrency <http://publications.europa.eu/resource/authority/currency/EUR> .
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ProcurementServiceProvider_iaQ3XXC4nJfXpc8nydYd8X
+  a epo:ProcurementServiceProvider;
+  epo:actsOnBehalfOf epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Buyer_HGvue6GtAm3yppLpDLnBKD;
+  epo:playedBy epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Organization_ORG-0003 .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Quantity_BDTC4WRLKSCg4KipkdMxR8 a epo:Quantity;
-  epo:hasQuantityValue 1000.0;
-  epo:hasUnitCode <http://publications.europa.eu/resource/authority/measurement-unit/HUR> .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Quantity_QRFEJSYy7fATJoZShoDC4D a epo:Quantity;
-  epo:hasQuantityValue 2000.0;
-  epo:hasUnitCode <http://publications.europa.eu/resource/authority/measurement-unit/HUR> .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewProcedureInformationProvider_FsymrRPQVzLm3zkbgk3JgA
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ReviewProcedureInformationProvider_bZ6uUw4kXUYVuGcQCsr5Pk
   a epo:ReviewProcedureInformationProvider;
-  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
-  epo:hasContactPointInRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0001;
-  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_TPO-0001 .
+  epo:contextualisedBy epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Lot_LOT-0001;
+  epo:playedBy epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Organization_ORG-0005 .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewProcedureInformationProvider_bMTjo7a5Ke582iB4TXZmU8
-  a epo:ReviewProcedureInformationProvider;
-  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001;
-  epo:hasContactPointInRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0001;
-  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_TPO-0001 .
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ReviewTerm_D9HNqZBE8z3NZfKG6rn3Cq a epo:ReviewTerm;
+  epo:definesReviewProcedureInformationProvider epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_ReviewProcedureInformationProvider_bZ6uUw4kXUYVuGcQCsr5Pk;
+  epo:definesReviewer epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Reviewer_6Bv5pbGfbWmvGfJNVgYFXA .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_FsymrRPQVzLm3zkbgk3JgA a epo:ReviewTerm;
-  epo:definesReviewProcedureInformationProvider epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewProcedureInformationProvider_FsymrRPQVzLm3zkbgk3JgA;
-  epo:definesReviewer epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Reviewer_FsymrRPQVzLm3zkbgk3JgA .
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Reviewer_6Bv5pbGfbWmvGfJNVgYFXA a epo:Reviewer;
+  epo:contextualisedBy epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Lot_LOT-0001;
+  epo:playedBy epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Organization_ORG-0005 .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_VZxmrBG8UMc3RvpZcKCpvE a epo:ReviewTerm;
-  epo:hasReviewDeadlineInformation "Review Deadline Description ---"@en .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_bMTjo7a5Ke582iB4TXZmU8 a epo:ReviewTerm;
-  epo:definesReviewProcedureInformationProvider epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewProcedureInformationProvider_bMTjo7a5Ke582iB4TXZmU8;
-  epo:definesReviewer epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Reviewer_bMTjo7a5Ke582iB4TXZmU8 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_ReviewTerm_bpDJYehUZE5dpNtnagJd4V a epo:ReviewTerm;
-  epo:hasReviewDeadlineInformation "Review Deadline Description ---"@en .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Reviewer_FsymrRPQVzLm3zkbgk3JgA a epo:Reviewer;
-  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
-  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0005 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Reviewer_bMTjo7a5Ke582iB4TXZmU8 a epo:Reviewer;
-  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001;
-  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_ORG-0005 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SecurityClearanceTerm_PuAZ93vcjRYhKiN4rMvUZg
-  a epo:SecurityClearanceTerm;
-  epo:hasDeadline "2023-05-23+02:00"^^xsd:date;
-  epo:isSecurityClearanceRequired true;
-  dct:description "Security Clearance Description ---"@en .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SecurityClearanceTerm_TT87XZ7rfCixVuS4Z9trMH
-  a epo:SecurityClearanceTerm;
-  epo:hasDeadline "2023-05-23+02:00"^^xsd:date;
-  epo:isSecurityClearanceRequired true;
-  dct:description "Security Clearance Description ---"@en .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_2Y8NzdfvWC5GNYLbHsuq2F a
-    epo:SelectionCriterion;
-  epo:hasConstraint epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_HUx9CExQBWkrce4vqV7Wkg,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_bBNJn8mrLioKfy7sx9PaWi;
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_SelectionCriterion_DEqKehWh2My5y2k7i9vnNu
+  a epo:SelectionCriterion;
   epo:hasSelectionCriteriaUsage <http://publications.europa.eu/resource/authority/usage/used>;
   epo:hasSelectionCriterionType <http://publications.europa.eu/resource/authority/selection-criterion/tp-abil>;
-  epo:isUsedForCandidateRestriction true;
-  dct:description "Selection Criteria Description ---"@en;
-  skos:prefLabel "Name of the selection criteria---"@en .
+  dct:description """Certificaat Erkende
+									beveiligingsorganisatie (RSO)Minimumeisen: De inschrijver legt
+									de door de nationale autoriteit voor maritieme beveiliging
+									verstrekte erkenning voor, voor het uitvoeren van
+									beveiligingsopdrachten."""@nl .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_9xGCswiFAKWwQgitqGWSQv a
-    epo:SelectionCriterion;
-  epo:hasConstraint epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_S65zMGfHi8GrHsbz4tEFZJ,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_ZJQeB6XSAAiMd7wbsht64X;
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_SelectionCriterion_DMSpfaB8fZx4MY2NWtEgG3
+  a epo:SelectionCriterion;
   epo:hasSelectionCriteriaUsage <http://publications.europa.eu/resource/authority/usage/used>;
   epo:hasSelectionCriterionType <http://publications.europa.eu/resource/authority/selection-criterion/tp-abil>;
-  epo:isUsedForCandidateRestriction true;
-  dct:description "Selection Criteria Description ---"@en;
-  skos:prefLabel "Name of the selection criteria---"@en .
+  dct:description """De inschrijver toont aan dat hij
+									over het kwaliteitslabel “SECURE QUALITY®” (of gelijkwaardig)
+									voor private bewakingsdiensten beschikt.Minimumeisen: De
+									inschrijver legt in zijn offerte één van de hiernaast omschreven
+									bewijzen (kwaliteitslabel, verklaring of andere bewijzen) voor."""@nl .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_Bkpcxn7EFoAsBBzSiUjcX2 a
-    epo:SelectionCriterion;
-  epo:hasConstraint epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_UboKtLfWMDPTeedX7G9Jj7,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_hpcDhFsANoBzRR9uDDJxnt;
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_SelectionCriterion_F2EkrTHhwGTB3ZRA69q4nd
+  a epo:SelectionCriterion;
   epo:hasSelectionCriteriaUsage <http://publications.europa.eu/resource/authority/usage/used>;
-  epo:hasSelectionCriterionType <http://publications.europa.eu/resource/authority/selection-criterion/sui-act>;
-  epo:isUsedForCandidateRestriction true;
-  dct:description "Selection Criteria Description ---"@en;
-  skos:prefLabel "Name of the selection criteria---"@en .
+  epo:hasSelectionCriterionType <http://publications.europa.eu/resource/authority/selection-criterion/tp-abil>;
+  dct:description """De inschrijver dient een lijst te
+									bezorgen met minstens 3 referenties van soortgelijke diensten
+									die de afgelopen 3 jaar werden verricht.
+									Onder soortgelijke diensten wordt het beveiligen van een
+									terminalomgeving (luchthaven, zeehaven, binnenhaven, kaaien,
+									station…) met gebruik van een controlekamer voor een minimum
+									totaalbedrag van 500.000 euro exclusief btw verstaan.
+									Minimumeisen: De inschrijver levert minimaal 3 referenties
+									(maximum 2 pagina’s per referentie) van soortgelijke diensten
+									vergezeld van de gevraagde informatie:
+									- beknopte omschrijving van de diensten (verschillende
+									onderdelen);
+									- de kostprijs van de geleverde diensten;
+									- de naam van de opdrachtgever;
+									- de contactgegevens van de contactpersoon van de opdrachtgever;
+									- de datum van de diensten (in geval van een éénmalige dienst)
+									of de maand van aanvang van de opdracht en de maand van
+									beëindiging van de opdracht (in geval van een raamovereenkomst).
+									Per referentie legt de inschrijver een attest van goede
+									uitvoering voor.
+"""@nl .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_LPqCAx6u8AHZs68SmxnK7p a
-    epo:SelectionCriterion;
-  epo:hasConstraint epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_ALkBdU6DUVGQjGaBxVKxrs,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_E9HbFRFmAYvtgELes4wHf2;
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_SelectionCriterion_KJZVpFbg59s5miVxYyncVM
+  a epo:SelectionCriterion;
   epo:hasSelectionCriteriaUsage <http://publications.europa.eu/resource/authority/usage/used>;
   epo:hasSelectionCriterionType <http://publications.europa.eu/resource/authority/selection-criterion/ef-stand>;
-  epo:isUsedForCandidateRestriction true;
-  dct:description "Selection Criteria Description ---"@en;
-  skos:prefLabel "Name of the selection criteria---"@en .
+  dct:description """De inschrijver voegt een
+									verklaring op eer toe met vermelding van de totale jaaromzet van
+									de onderneming van de laatste drie boekjaren en/of een
+									verklaring geattesteerd door een revisor of een gelijkwaardig
+									persoon dat aan onderstaande minimumeis wordt voldaan.
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_bxHGbwwHUP9MfJv6P8NaFL a
-    epo:SelectionCriterion;
-  epo:hasConstraint epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_ncrUJebheR6Q2qJFiiVscf,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_nxePuFH9i25oYGdwmceAuJ;
+									Onder omzet wordt begrepen het bedrag vermeld onder code 70 in
+									de jaarrekening van Belgische ondernemingen (volledig schema).
+									Voor jaarrekeningen van buitenlandse ondernemingen wordt onder
+									omzet begrepen het bedrag waarop de onderneming recht heeft of
+									verwacht te hebben in ruil voor de geleverde of verstrekte
+									werken, goederen of verstrekte diensten.
+									Minimumeisen: De gemiddelde totale jaaromzet van de onderneming
+									over elk van de laatste drie boekjaren bedraagt minimaal
+									1.575.000 €.
+
+									In het geval de inschrijver indient middels een consortium dient
+									minimaal één lid van het consortium minimaal deze omzet te
+									kunnen voorleggen, hetzij aangetoond te worden dat de gevraagde
+									minimale omzet gepoold wordt door twee ondernemingen die of lid
+									zijn van het consortium of een derde entiteit op wiens
+									draagkracht beroep wordt gedaan.
+
+								"""@nl .
+
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_SelectionCriterion_QwLGZTLYe95szz5vdsUu7F
+  a epo:SelectionCriterion;
+  epo:hasSelectionCriteriaUsage <http://publications.europa.eu/resource/authority/usage/used>;
+  epo:hasSelectionCriterionType <http://publications.europa.eu/resource/authority/selection-criterion/tp-abil>;
+  dct:description """De inschrijver toont aan dat hij
+									een vergunde \"bewakingsonderneming” is.Minimumeisen: De
+									inschrijver moet voor deze opdracht beschikken over de nodige
+									vergunning om de bewakingsactiviteiten uit te voeren in België"""@nl .
+
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_SelectionCriterion_RgYZTGigh6rqkvPrLQfrZb
+  a epo:SelectionCriterion;
   epo:hasSelectionCriteriaUsage <http://publications.europa.eu/resource/authority/usage/used>;
   epo:hasSelectionCriterionType <http://publications.europa.eu/resource/authority/selection-criterion/ef-stand>;
-  epo:isUsedForCandidateRestriction true;
-  dct:description "Selection Criteria Description ---"@en;
-  skos:prefLabel "Name of the selection criteria---"@en .
+  dct:description """Het bewijs van een verzekering
+									burgerlijke aansprakelijkheid (BA) en beroepsaansprakelijkheid
+									met vermelding van de verzekerde limieten.Minimumeisen: De
+									kandidaat levert een attest aan met het bewijs van beide
+									verzekeringen.
+									De inschrijver dient verzekerd te zijn voor beroepsrisico’s
+									(verzekering BA) met een dekking van minstens 1.000.000 euro. De
+									verzekering is afgesloten op naam van de inschrijver of, bij een
+									gezamenlijke kandidaatstelling, op naam van elke onderneming die
+									deelneemt aan de groep van kandidaten. De inschrijver voeg het
+									attest van deze verzekering tot aan zijn offerte."""@nl .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SelectionTerm_j76qWqsuJdCtjNmRv3MK5T a
-    epo:SelectionCriterion;
-  epo:hasConstraint epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_LKeBCmZMuGEzgAFGuK3tmF,
-    epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Constraint_mrZZo6ZRTw7EZzqh2Xn6xa;
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_SelectionCriterion_SCV7T69xPGzuBjSP6UxYtT
+  a epo:SelectionCriterion;
   epo:hasSelectionCriteriaUsage <http://publications.europa.eu/resource/authority/usage/used>;
   epo:hasSelectionCriterionType <http://publications.europa.eu/resource/authority/selection-criterion/sui-act>;
-  epo:isUsedForCandidateRestriction true;
-  dct:description "Selection Criteria Description ---"@en;
-  skos:prefLabel "Name of the selection criteria---"@en .
+  dct:description """ Het UEA, waarmee de ondernemer
+									verklaart dat hij zich niet bevindt in een van de
+									uitsluitingssituaties als bedoeld in de artikelen 67 tot 69 van
+									de wet van 17 juni 2016.
+									Artikel 70 van de wet van 17 juni 2016 betreffende de
+									overheidsopdrachten is van toepassing. Voor de in artikel 67 van
+									de wet bedoelde uitsluitingsgronden deelt de gegadigde of
+									inschrijver op eigen initiatief mee of hij bij het begin van de
+									procedure de in artikel 70, lid 1, bedoelde corrigerende
+									maatregelen heeft genomen.
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SocialProcurement_AyeF96vKsfhzrt5AYeKRTv
-  a epo:SocialProcurement;
-  epo:fulfillsRequirement <http://publications.europa.eu/resource/authority/social-objective/acc-all> .
+									De kandidaat voegt voor de uitsluitingsgronden voorzien in
+									artikel 67 juncto artikel 151 van de wet van 17 juni 2016 en
+									artikel 67 van het koninklijk besluit van 18 juni 2017
+									(veroordelingen/respectievelijk inbreuken wegens deelneming aan
+									een criminele organisatie, omkoping, fraude, terroristische
+									misdrijven e.a., witwassen van geld en financiering van
+									terrorisme, kinderarbeid en andere vormen van mensenhandel,
+									tewerkstelling van illegalen) «b»een uittreksel uit het
+									strafregister of evenwaardig document uitgereikt door een
+									gerechtelijke overheid of overheidsinstantie van het land van
+									oorsprong of herkomst«-b» bij zijn aanvraag tot deelneming
+									(uittreksel m.b.t. de vennootschap, max. 3 maanden oud t.o.v. de
+									limietdatum voor indiening van de aanvraag tot deelneming).
+									Veroordelingen respectievelijk inbreuken ouder dan 5 jaar worden
+									niet in overweging genomen voor uitsluiting.
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SocialProcurement_GB54RbhU2jfyPCJLbcWmfB
-  a epo:SocialProcurement;
-  epo:fulfillsRequirement <http://publications.europa.eu/resource/authority/social-objective/acc-all> .
+									De kandidaat van vreemde nationaliteit moet, opdat zijn aanvraag
+									tot deelneming als regelmatig zou worden beschouwd, attesten
+									voorleggen die door de bevoegde overheden zijn uitgereikt,
+									overeenkomstig de wettelijke bepalingen van het land waar hij
+									gevestigd is, en waaruit blijkt dat hij:
+									- niet in staat van faillissement verkeert;
+									- voldaan heeft aan zijn fiscale verplichtingen;
+									- en voldaan heeft aan zijn verplichtingen ten aanzien van
+									betalingen van de bijdragen voor sociale zekerheid."""@nl .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SpecificDuration_5FkLTeSLMGuVhyxZY2piu9
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_SelectionCriterion_fA8GQSty69xks3Q4sFpZ2C
+  a epo:SelectionCriterion;
+  epo:hasSelectionCriteriaUsage <http://publications.europa.eu/resource/authority/usage/used>;
+  epo:hasSelectionCriterionType <http://publications.europa.eu/resource/authority/selection-criterion/tp-abil>;
+  dct:description """De kandidaat geeft in zijn
+									kandidatuurstelling:
+									een voorstelling van het bedrijf, inclusief
+									• een beschrijving van de diensten die het bedrijf aanbiedt
+									(intern en extern);
+									• een organigram
+									• een beschrijving van de markten en de klanten die het bedrijf
+									bedient;
+									• de grootte van het bedrijf;
+									indien van toepassing: een overzicht van de voornaamste
+									onderaannemers die ingezet zouden worden, met een omschrijving
+									van de aan hun toevertrouwde deeltaken
+
+									De kandidaat toont aan dat elke werknemer die wordt ingezet voor
+									deze opdracht beschikt over een EXE14-licentie.
+									Minimumeisen: De kandidaat levert alle gevraagde informatie
+									zoals hiernaast beschreven. Het document met de gevraagde
+									informatie behelst maximum 10 pagina’s.
+
+									De kandidaat moet een continuïteit kunnen garanderen van minimum
+									21 personen tijdens een cruise call.
+"""@nl .
+
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_SpecificDuration_F7UWe8nDJG7d3PMXR3mkVa
   a epo:SpecificDuration;
-  time:numericDuration 6.0;
-  time:unitType time:unitMonth .
+  time:numericDuration 180.0;
+  time:unitType time:unitDay .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_StrategicProcurement_AV9BoppTAddYZDEikLyWUv
-  a epo:SocialProcurement, epo:StrategicProcurement;
-  epo:hasStrategicProcurementDescription "Strategic procurement description social procurement ---"@en .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_StrategicProcurement_Wj9gx3dGgPeHcrkfPnxbfg
-  a epo:GreenProcurement, epo:StrategicProcurement;
-  epo:hasStrategicProcurementDescription "Strategic procurement description green procurement ---"@en .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_StrategicProcurement_Xb7ADxt2QhzBynPpXk4tjW
-  a epo:StrategicProcurement;
-  epo:hasNonAccessibilityCriterionJustification "Accessibility Justification ---"@en;
-  epo:includesAccessibilityCriterion <http://publications.europa.eu/resource/authority/accessibility/n-inc-just> .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_StrategicProcurement_aJZpohKJoPEWi3EuVgFgPb
-  a epo:StrategicProcurement;
-  epo:hasNonAccessibilityCriterionJustification "Accessibility Justification ---"@en;
-  epo:includesAccessibilityCriterion <http://publications.europa.eu/resource/authority/accessibility/n-inc-just> .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubcontractTerm_8y8GPfmPvSRdBcci6WWcSi
-  a epo:SubcontractTerm;
-  epo:hasSubcontractingObligation <http://publications.europa.eu/resource/authority/subcontracting-obligation/none> .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_28qA6sXPPZP6NSvA8FovHj
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_SubmissionTerm_246rmGzZvwFBcxRNZTXjTW
   a epo:SubmissionTerm;
-  epo:hasTenderSubcontractingInformation <http://publications.europa.eu/resource/authority/subcontracting-indication/none> .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_8y8GPfmPvSRdBcci6WWcSi
-  a epo:SubmissionTerm;
-  epo:definesTenderProcessor epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderProcessor_PuAZ93vcjRYhKiN4rMvUZg;
-  epo:hasEAuctionURL "https://electronic-auction.com"^^xsd:anyURI;
-  epo:hasECataloguePermission <http://publications.europa.eu/resource/authority/permission/allowed>;
-  epo:hasESubmissionPermission <http://publications.europa.eu/resource/authority/permission/not-allowed>;
-  epo:hasLateSubmissionInformationDescription "Later tender information description ---"@en;
-  epo:hasLateSubmissionPermission <http://publications.europa.eu/resource/authority/missing-info-submission/late-all>;
-  epo:hasNonElectronicSubmissionDescription "Nonelectronic Submission Description ---"@en;
-  epo:hasNonElectronicSubmissionJustification <http://publications.europa.eu/resource/authority/communication-justification/ipr-iss>;
-  epo:hasReceiptTenderDeadline "2023-05-22T20:59:32+01:00"^^xsd:dateTime;
-  epo:hasTenderValidityDuration epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SpecificDuration_5FkLTeSLMGuVhyxZY2piu9;
-  epo:hasVariantPermission <http://publications.europa.eu/resource/authority/permission/not-allowed>;
-  epo:isMultipleTenderSubmissionAllowed true .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_PuAZ93vcjRYhKiN4rMvUZg
-  a epo:SubmissionTerm;
-  epo:definesTenderReceiver epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderReceiver_EzgHnVsFm5yZb2op3EXTjn;
-  epo:hasGuaranteeDescription "Guarantee Required Description ---"@en;
-  epo:hasLanguage <http://publications.europa.eu/resource/authority/language/ENG>, <http://publications.europa.eu/resource/authority/language/FRA>;
-  epo:isAdvancedElectronicSignatureRequired true;
-  epo:isGuaranteeRequired true .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_TT87XZ7rfCixVuS4Z9trMH
-  a epo:SubmissionTerm;
-  epo:definesTenderReceiver epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderReceiver_ZRrbuPPWyxGgmdJHy5oG8a;
-  epo:hasGuaranteeDescription "Guarantee Required Description ---"@en;
-  epo:hasLanguage <http://publications.europa.eu/resource/authority/language/ENG>, <http://publications.europa.eu/resource/authority/language/FRA>;
-  epo:hasSubmissionURL "http://tender-submit.fin-adm.com/esubmission"^^xsd:anyURI;
-  epo:isAdvancedElectronicSignatureRequired true;
-  epo:isGuaranteeRequired true .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_SubmissionTerm_daUDPcwCUoxbJRjGb7tKNQ
-  a epo:SubmissionTerm;
-  epo:definesTenderProcessor epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderProcessor_TT87XZ7rfCixVuS4Z9trMH;
-  epo:hasEAuctionURL "https://electronic-auction.com"^^xsd:anyURI;
-  epo:hasECataloguePermission <http://publications.europa.eu/resource/authority/permission/allowed>;
+  epo:definesTenderReceiver epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_TenderReceiver_HGvue6GtAm3yppLpDLnBKD;
+  epo:hasECataloguePermission <http://publications.europa.eu/resource/authority/permission/not-allowed>;
   epo:hasESubmissionPermission <http://publications.europa.eu/resource/authority/permission/required>;
-  epo:hasLateSubmissionInformationDescription "Later tender information description ---"@en;
-  epo:hasLateSubmissionPermission <http://publications.europa.eu/resource/authority/missing-info-submission/late-all>;
-  epo:hasReceiptParticipationRequestDeadline "2020-05-07T23:55:00+01:00"^^xsd:dateTime;
-  epo:hasReceiptTenderDeadline "2023-05-22T20:59:32+01:00"^^xsd:dateTime;
-  epo:isMultipleTenderSubmissionAllowed true .
+  epo:hasGuaranteeDescription """Borgtocht (3 % van het geraamde bedrag van de
+					opdracht (excl. btw), afgerond naar het hogere tiental)"""@nl;
+  epo:hasLanguage <http://publications.europa.eu/resource/authority/language/NLD>;
+  epo:hasReceiptParticipationRequestDeadline "2024-04-15T14:00:00+02:00"^^xsd:dateTime;
+  epo:hasSubmissionURL "https://www.publicprocurement.be"^^xsd:anyURI;
+  epo:hasTenderValidityDuration epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_SpecificDuration_F7UWe8nDJG7d3PMXR3mkVa;
+  epo:hasVariantPermission <http://publications.europa.eu/resource/authority/permission/not-allowed>;
+  epo:isAdvancedElectronicSignatureRequired false;
+  epo:isGuaranteeRequired true;
+  epo:isMultipleTenderSubmissionAllowed false .
 
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TaxInformationProvider_UyJLB5UdNE5RM2ZpQVeTCV
-  a epo:TaxInformationProvider;
-  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001;
-  epo:hasContactPointInRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0002;
-  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_TPO-0002 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TaxInformationProvider_j5VcAZZjswFkX9mLn9opDA
-  a epo:TaxInformationProvider;
-  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
-  epo:hasContactPointInRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0001;
-  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_TPO-0001 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderProcessor_PuAZ93vcjRYhKiN4rMvUZg
-  a epo:TenderProcessor;
-  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
-  epo:hasContactPointInRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0003;
-  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_TPO-0003 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderProcessor_TT87XZ7rfCixVuS4Z9trMH
-  a epo:TenderProcessor;
-  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001;
-  epo:hasContactPointInRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0003;
-  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_TPO-0003 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderReceiver_EzgHnVsFm5yZb2op3EXTjn
+epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_TenderReceiver_HGvue6GtAm3yppLpDLnBKD
   a epo:TenderReceiver;
-  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0002;
-  epo:hasContactPointInRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0001;
-  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_TPO-0001 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TenderReceiver_ZRrbuPPWyxGgmdJHy5oG8a
-  a epo:TenderReceiver;
-  epo:contextualisedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Lot_LOT-0001;
-  epo:hasContactPointInRole epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0001;
-  epo:playedBy epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_Organization_TPO-0001 .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_DQ3D2nHojn4VijYMYRtvzY
-  a locn:Address;
-  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
-  epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
-  locn:fullAddress "Procurement Dpt, Bruce Wayne House, 2 Gotham Street, London, N1 9FL, GBR";
-  locn:postCode "N1 9FL";
-  locn:postName "London" .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_ZDibsmqh6XaKEG4WjjfUDb
-  a locn:Address;
-  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
-  epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
-  locn:fullAddress "Tenders Evaluation Committee, Bruce Wayne House, 2 Gotham Street, London, N1 9FL, GBR";
-  locn:postCode "N1 9FL";
-  locn:postName "London" .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_h9nNgdx6iKqoLeHmAXWn7m
-  a locn:Address;
-  epo:hasCountryCode <http://publications.europa.eu/resource/authority/country/GBR>;
-  epo:hasNutsCode <http://data.europa.eu/nuts/code/UKI62>;
-  locn:fullAddress "Fin Adm Archives Dpt, Bruce Wayne House, 2 Gotham Street, London, N1 9FL, GBR";
-  locn:postCode "N1 9FL";
-  locn:postName "London" .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0001 a cccev:ContactPoint;
-  epo:hasContactName "Head of Procurement Department";
-  epo:hasFax "+123 456789";
-  epo:hasInternetAddress "http://tender-submit.fin-adm.com"^^xsd:anyURI;
-  cccev:email "proc-info@fin-adm.com";
-  cccev:telephone "+123 45678";
-  dct:description "Procurement Department"@en;
-  locn:address epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_DQ3D2nHojn4VijYMYRtvzY .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0002 a cccev:ContactPoint;
-  epo:hasContactName "Proc Archives Dpt Lead";
-  epo:hasFax "+44 1234567769";
-  epo:hasInternetAddress "http://archives.fin-adm.com"^^xsd:anyURI;
-  cccev:email "proc-archi@fin-adm.com";
-  cccev:telephone "+44 123456776";
-  dct:description "Fin Adm Archives"@en;
-  locn:address epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_h9nNgdx6iKqoLeHmAXWn7m .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPoint_TPO-0003 a cccev:ContactPoint;
-  epo:hasContactName "Evaluation Dpt";
-  epo:hasFax "+44 1234567779";
-  epo:hasInternetAddress "http://tender-evaluation.fin-adm.com"^^xsd:anyURI;
-  cccev:email "proc-eval@fin-adm.com";
-  cccev:telephone "+44 123456777";
-  dct:description "Tenders Evaluation Committee"@en;
-  locn:address epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_TouchPointAddress_ZDibsmqh6XaKEG4WjjfUDb .
-
-epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_VehicleInformation_6gHfSxSpgNRXavjTJCiAJv
-  a epo:VehicleInformation;
-  epo:concernsGreenProcurement epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_GreenProcurement_6gHfSxSpgNRXavjTJCiAJv;
-  epo:specifiesCleanVehicleDirectiveContractType <http://publications.europa.eu/resource/authority/cvd-contract-type/oth-serv-contr> .
-
-epd:id_6bc75979-ce6c-46eb-81a6-eee543697dec-01_Notice a epo:Notice;
-  adms:identifier epd:id_14549263-b47b-4e59-96a1-2d0d13e19343_NoticeIdentifier_ec9tbJ8ui7TUpJPbEsk6fj .
-
-epd:id_9c0fd704-64d3-4294-a3b6-6df45911ab9f-01_Notice a epo:PlanningNotice;
-  epo:announcesPlannedProcurementPart epd:id_9c0fd704-64d3-4294-a3b6-6df45911ab9f-01_PlannedProcurementPart_K53mu54F9PCk4RoVqcWwaL;
-  adms:identifier epd:id_9c0fd704-64d3-4294-a3b6-6df45911ab9f-01_PlanningNoticeIdentifier_K53mu54F9PCk4RoVqcWwaL .
-
-epd:id_9c0fd704-64d3-4294-a3b6-6df45911ab9f-01_PlannedProcurementPartIdentifier_K53mu54F9PCk4RoVqcWwaL
-  a adms:Identifier;
-  skos:notation "123" .
-
-epd:id_9c0fd704-64d3-4294-a3b6-6df45911ab9f-01_PlannedProcurementPart_K53mu54F9PCk4RoVqcWwaL
-  a epo:PlannedProcurementPart;
-  adms:identifier epd:id_9c0fd704-64d3-4294-a3b6-6df45911ab9f-01_PlannedProcurementPartIdentifier_K53mu54F9PCk4RoVqcWwaL .
-
-epd:id_9c0fd704-64d3-4294-a3b6-6df45911ab9f-01_PlanningNoticeIdentifier_K53mu54F9PCk4RoVqcWwaL
-  a adms:Identifier;
-  skos:notation "9c0fd704-64d3-4294-a3b6-6df45911ab9f-01" .
+  epo:contextualisedBy epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Lot_LOT-0001;
+  epo:playedBy epd:id_b90ca08f-0b39-46c6-9d03-096c80d35c03_Organization_ORG-0001 .

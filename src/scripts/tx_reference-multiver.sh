@@ -13,4 +13,4 @@
 # you probably need to change these
 rmlmapper="java -jar $HOME/.rmlmapper/rmlmapper-6.2.2-r371-all.jar"
 
-for i in `ls -dv mappings-1*`; do echo "transforming $i" && $rmlmapper -m mappings/* $i/* -s turtle > output-versioned/output-${i/mappings-}.ttl; done
+for i in `ls -dv mappings-1*`; do echo "transforming $i" && cp -v data/source_cn.xml data/source.xml && $rmlmapper -m mappings/* mappings-common/* $i/* -s turtle > output-versioned/output-${i/mappings-}.ttl && rm -fv data/source.xml; done

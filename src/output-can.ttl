@@ -789,8 +789,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_OrganisationIdentifier_o3DmeDpoFTnKS
   a adms:Identifier;
   skos:notation "0986543" .
 
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0001 a epo:Organization,
-    org:Organization;
+epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Organization_ORG-0001 a org:Organization;
   epo:hasBuyerLegalType <http://publications.europa.eu/resource/authority/buyer-legal-type/body-pl>;
   epo:hasLegalIdentifier epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_OrganisationIdentifier_4NU5AxJwe7aGai3Cgq8HpC;
   epo:hasLegalName "Financial Adinistration for ..."@en;

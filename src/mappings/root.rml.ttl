@@ -525,8 +525,8 @@ tedm:MG-ResultNotice_ND-Root
         ] ;
     rr:predicateObjectMap
         [
-            rdfs:label "MG-Buyer-refersToRole -ResultNotice" ;
-            rdfs:comment "MG-Buyer-refersToRole -ResultNotice under ND-ContractingParty" ;
+            rdfs:label "MG-Buyer-refersToRole-ResultNotice" ;
+            rdfs:comment "MG-Buyer-refersToRole-ResultNotice under ND-ContractingParty" ;
             rr:predicate epo-not:refersToRole ;
             rr:objectMap
                 [

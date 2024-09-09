@@ -59,20 +59,6 @@ tedm:MG-ResultNotice_ND-NoticeResult a rr:TriplesMap ;
                      ] ;
                 ] ;
         ] ;
-    # rr:predicateObjectMap
-    #     [
-    #         rdfs:label "OPT-100-Contract";
-    #         rdfs:comment "Framework Notice Identifier of MG-ResultNotice under ND-SettledContract";
-    #         rr:predicate adms:identifier ;
-    #         rr:objectMap
-    #             [
-    #                 rr:parentTriplesMap tedm:MG-Identifier-identifier-ResultNotice_ND-SettledContract ;
-    #                 rr:joinCondition [
-    #                     rr:child "path(.)";
-    #                     rr:parent "path(..)";
-    #                 ];
-    #             ] ;
-    #     ];
     rr:predicateObjectMap
         [
             rdfs:label "ND-NoticeResultGroupFA";

@@ -266,19 +266,6 @@ tedm:MG-LotAwardOutcome_ND-StrategicProcurementLotResult  a rr:TriplesMap ;
             rr:predicate rdfs:seeAlso ;
             rr:objectMap
                 [
-                   rr:parentTriplesMap tedm:MG-GreenProcurement-seeAlso-LotAwardOutcome_ND-StrategicProcurementLotResult ;
-                    rr:joinCondition[
-                        rr:child "path(.)";
-                        rr:parent "path(.)"
-                    ];
-                ] ;
-        ] ;
-     rr:predicateObjectMap
-        [
-            rdfs:label "ND-StrategicProcurementInformationLotResult" ;
-            rr:predicate rdfs:seeAlso ;
-            rr:objectMap
-                [
                    rr:parentTriplesMap tedm:MG-VehicleInformation-seeAlso-LotAwardOutcome_ND-StrategicProcurementInformationLotResult ;
                     rr:joinCondition[
                         rr:child "path(.)";

@@ -1282,16 +1282,13 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_VehicleInformation_NJqWLgHQbjQCE5pSd
   epo:hasCleanVehicles 10;
   epo:hasTotalVehicles 45;
   epo:hasZeroEmissionVehicles 2;
-  epo:specifiesCleanVehicleDirectiveContractType <http://publications.europa.eu/resource/authority/cvd-contract-type/oth-serv-contr> .
+  epo:specifiesCleanVehicleDirectiveContractType <http://publications.europa.eu/resource/authority/cvd-contract-type/oth-serv-contr>;
+  epo:specifiesCleanVehicleDirectiveVehicleCategory <http://publications.europa.eu/resource/authority/vehicle-category/n2-n3> .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_VehicleInformation_aTxk5f26D5UBUZ3UgoLWca
   a epo:VehicleInformation;
   epo:concernsGreenProcurement epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_GreenProcurement_aTxk5f26D5UBUZ3UgoLWca;
   epo:specifiesCleanVehicleDirectiveContractType <http://publications.europa.eu/resource/authority/cvd-contract-type/oth-serv-contr> .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_VehicleInformation_h2o5BJdvvp9KScEzqN2krS
-  a epo:VehicleInformation;
-  epo:specifiesCleanVehicleDirectiveContractType <http://publications.europa.eu/resource/authority/vehicle-category/n2-n3> .
 
 epd:id_9c0fd704-64d3-4294-a3b6-6df45911ab9f-01_Notice a epo:PlanningNotice;
   epo:announcesPlannedProcurementPart epd:id_9c0fd704-64d3-4294-a3b6-6df45911ab9f-01_PlannedProcurementPart_K53mu54F9PCk4RoVqcWwaL;

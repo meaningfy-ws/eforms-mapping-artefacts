@@ -128,29 +128,28 @@ tedm:MG-VehicleInformation_ND-ProcurementDetailsLotResult a rr:TriplesMap ;
     rr:subjectMap
         [
             rdfs:label "ND-ProcurementDetailsLotResult" ;
-            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_VehicleInformation_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_VehicleInformation_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
             rr:class epo:VehicleInformation
         ] ;
     rr:predicateObjectMap
         [
             rdfs:label "ND-StrategicProcurementInformationLotResult";
-            rr:predicate epo:specifiesCleanVehicleDirectiveVehicleCategory  ;
+            rr:predicate epo:concernsGreenProcurement ;
             rr:objectMap
                 [
                    rr:parentTriplesMap tedm:MG-GreenProcurement-concernsGreenProcurement-VehicleInformation_ND-StrategicProcurementLotResult ;
                    rr:joinCondition [
-                        rr:child "path(.)";
+                        rr:child "path(..)";
                         rr:parent "path(.)";
                     ];
                 ] ;
         ] ;
     rr:predicateObjectMap
         [
-            # TODO min sdk 1.9.1.
             tedm:minSDKVersion "1.9.1" ;
-            rdfs:label "BT-735-LotResult";
+            rdfs:label "BT-723-LotResult";
             rdfs:comment "VehicleCategory of MG-VehicleInformation under ND-StrategicProcurementInformationLotResult";
-            rr:predicate epo:specifiesCleanVehicleDirectiveContractType  ;
+            rr:predicate epo:specifiesCleanVehicleDirectiveVehicleCategory ;
             rr:objectMap
                 [
                     rdfs:label "at-voc:vehicle-category" ;

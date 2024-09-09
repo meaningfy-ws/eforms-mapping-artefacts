@@ -182,6 +182,8 @@ tedm:MG-LotGroup_ND-NoticeResultGroupFA  a rr:TriplesMap ;
 #            rr:predicate epo:hasAmountValue ;
 #            rr:objectMap
 #                [
+#                    # TODO min SDK 1.5 max SDK 1.6 condition
+#                    # rml:reference "if (not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='not-ree-val']) and efbc:GroupFrameworkReestimatedValueAmount/text() = '-1' )) then efbc:GroupFrameworkReestimatedValueAmount else null";
 #                    rml:reference "if (not(exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='gro-ree-val']) and efbc:GroupFrameworkReestimatedValueAmount/text() = '-1' )) then efbc:GroupFrameworkReestimatedValueAmount else null";
 #                    rr:datatype xsd:decimal;
 #                ] ;

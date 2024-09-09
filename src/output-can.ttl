@@ -21,10 +21,14 @@
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-epd:id_12345678-2023_Notice a epo:ResultNotice;
-  epo:announcesContract epd:id_12345678-2023_SettledContractProxyFA .
+epd:id_12345678-2023_FrameworkAgreementNoticeIdentifier_iGmnNZPsR6H7pDggHJTsUZ a adms:Identifier;
+  skos:notation "12345678-2023" .
 
-epd:id_12345678-2023_SettledContractProxyFA a epo:FrameworkAgreement .
+epd:id_12345678-2023_Notice a epo:Notice;
+  epo:announcesContract epd:id_12345678-2023_ProxyFrameworkAgreement;
+  adms:identifier epd:id_12345678-2023_FrameworkAgreementNoticeIdentifier_iGmnNZPsR6H7pDggHJTsUZ .
+
+epd:id_12345678-2023_ProxyFrameworkAgreement a epo:FrameworkAgreement .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_AccessTerm_3m6Q8n9T683acseXWAKALc a epo:AccessTerm;
   epo:definesOfflineAccessProvider epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_OfflineAccessProvider_oBahBtUnPsC7aJgntGEdus;
@@ -432,14 +436,6 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_FrameworkAgreementTerm_cbLiqkxUijgxf
   a epo:FrameworkAgreementTerm;
   epo:hasBuyerCategoryDescription "Framework Buyer Categories ---"@en;
   epo:hasFrameworkAgreementType <http://publications.europa.eu/resource/authority/framework-agreement/fa-w-rc> .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_FrameworkNoticeIdentifier_VPU8QnEnvpxVBA2qwYNzjZ
-  a adms:Identifier;
-  skos:notation "12345678-2023" .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_FrameworkNoticeIdentifier_oXwXYzaLxMkFreJUNf6BBv
-  a adms:Identifier;
-  skos:notation "12345678-2023" .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_GreenProcurement_CrSXFRAVKMkjkVH4Y5vFm7
   a epo:GreenProcurement;
@@ -1095,7 +1091,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContractIdentifier_oXwXYzaLxM
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContract_CON-0001 a epo:Contract,
     epo:PurchaseContract;
-  epo:followsRulesSetBy epd:id_12345678-2023_SettledContractProxyFA;
+  epo:followsRulesSetBy epd:id_12345678-2023_ProxyFrameworkAgreement;
   epo:hasAccessURL "https://wheretofindcontract.com/ctr123"^^xsd:anyURI;
   epo:hasContractConclusionDate "2023-03-24+02:00"^^xsd:date;
   epo:hasLotReference epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;
@@ -1108,7 +1104,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContract_CON-0001 a epo:Contr
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SettledContract_CON-0002 a epo:Contract,
     epo:PurchaseContract;
-  epo:followsRulesSetBy epd:id_12345678-2023_SettledContractProxyFA;
+  epo:followsRulesSetBy epd:id_12345678-2023_ProxyFrameworkAgreement;
   epo:hasAccessURL "https://wheretofindcontract.com/ctr222"^^xsd:anyURI;
   epo:hasContractConclusionDate "2023-03-24+02:00"^^xsd:date;
   epo:hasLotReference epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001;

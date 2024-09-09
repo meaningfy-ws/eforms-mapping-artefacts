@@ -476,6 +476,16 @@ tedm:MG-Identifier-identifier-Notice_ND-SettledContract  a rr:TriplesMap ;
                     rml:reference "cac:NoticeDocumentReference/cbc:ID";
                 ] ;
         ];
+     rr:predicateObjectMap
+        [
+            rdfs:label "OPT-100-Contract-Scheme" ;
+            rdfs:comment "Scheme of MG-Identifier under ND-SettledContract" ;
+            rr:predicate epo:hasScheme ;
+            rr:objectMap
+                [
+                    rml:reference "efac:NoticeDocumentReference/cbc:ID/@schemeName";
+                ] ;
+        ] ;
     .
 
 # this is an external reference (another notice)

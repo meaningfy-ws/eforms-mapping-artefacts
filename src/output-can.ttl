@@ -603,8 +603,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0001 a epo:Lot;
   epo:isCoveredByGPA true;
   epo:isSubjectToLotSpecificTerm epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_AccessTerm_CLwCuB6jJaDuNTJfrVRmnb,
     epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_FrameworkAgreementTerm_cbLiqkxUijgxfr4seBmsLy,
-    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ReviewTerm_Sm5xD6mjUCEB7FWYWoqUs6, epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ReviewTerm_hnDhtixV2ZdgbuFJoTT2jt,
-    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubmissionTerm_RdpZg7b4gA4ZEQmQB5ZNhK;
+    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ReviewTerm_Sm5xD6mjUCEB7FWYWoqUs6, epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ReviewTerm_hnDhtixV2ZdgbuFJoTT2jt;
   epo:isUsingEUFunds true;
   epo:specifiesProcurementCriterion epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_AwardCriterion_Au5rZFgvwgLKwXDqJiGyJH,
     epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_AwardCriterion_Q65iNgvdx3shkgmgjezsgu;
@@ -627,8 +626,7 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_Lot_LOT-0002 a epo:Lot;
   epo:isCoveredByGPA true;
   epo:isSubjectToLotSpecificTerm epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_AccessTerm_3m6Q8n9T683acseXWAKALc,
     epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_FrameworkAgreementTerm_JdBkiUatysvbDSqaUnVeDH,
-    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ReviewTerm_CeXEq53W64yH9eABRxF5Ay, epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ReviewTerm_exdVXnwZ2EHQ8adaTpSDrN,
-    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubmissionTerm_KorWZrEXpQCBgrGqtjBT6W;
+    epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ReviewTerm_CeXEq53W64yH9eABRxF5Ay, epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_ReviewTerm_exdVXnwZ2EHQ8adaTpSDrN;
   epo:isUsingEUFunds true;
   epo:specifiesProcurementCriterion epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_AwardCriterion_Laoy38WzsxhroKSVuffDon,
     epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_AwardCriterion_cMwBnyyxkduMCBR7uRm8C7;
@@ -1179,12 +1177,6 @@ epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubmissionStatisticalInformation_Fmf
   epo:hasReceivedTenders 9;
   epo:hasSMEReceivedTenders 1;
   epo:summarisesInformationForAwardOutcome epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_LotAwardOutcome_RES-0001 .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubmissionTerm_KorWZrEXpQCBgrGqtjBT6W
-  a epo:SubmissionTerm .
-
-epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_SubmissionTerm_RdpZg7b4gA4ZEQmQB5ZNhK
-  a epo:SubmissionTerm .
 
 epd:id_15377ca1-6cf7-4060-90f0-9290128957a3_TaxInformationProvider_HaEv2nhsYWgNmx2FoRrNgG
   a epo:TaxInformationProvider;

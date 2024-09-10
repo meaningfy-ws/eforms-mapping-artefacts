@@ -40,10 +40,10 @@ tedm:MG-BudgetProvider_ND-FinancingParty a rr:TriplesMap ;
         ] ;
     rr:predicateObjectMap
         [
-            # TODO min sdk 1.8
-            tedm:minSDKVersion "1.8" ;
+            # Differences across versions have no functional effect on this mapping even though different iterators can be interpreted
+            # VERINFO: SDK v1.8 onwards contain node change yielding the same effective XPaths
             rdfs:label "OPT-301-LotResult-Financing " ;
-            rdfs:comment "Financing Party (IDreference) of MG-BudgetProvider under ND-FinancingParty" ;
+            rdfs:comment "Financing Party (ID reference) of MG-BudgetProvider under ND-FinancingParty (v1.8+), ND-LotResult (up to v1.7)" ;
             rr:predicate epo:playedBy ;
             rr:objectMap
                 [
@@ -57,8 +57,6 @@ tedm:MG-BudgetProvider_ND-FinancingParty a rr:TriplesMap ;
         ] ;
     rr:predicateObjectMap
         [
-            # TODO min sdk 1.8
-            tedm:minSDKVersion "1.8" ;
             rr:predicate epo:contextualisedBy ;
             rr:objectMap
                 [
@@ -98,8 +96,6 @@ tedm:MG-BudgetProvider-seeAlso-LotAwardOutcome_ND-FinancingParty a rr:TriplesMap
         ] ;
     rr:subjectMap
         [
-            # TODO min sdk 1.8
-            tedm:minSDKVersion "1.8" ;
             rdfs:label "ND-FinancingParty" ;
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_BudgetProvider_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
             rr:class epo:BudgetProvider
@@ -116,10 +112,8 @@ tedm:MG-Organization-playedBy-BudgetProvider_ND-FinancingParty a rr:TriplesMap ;
         ] ;
     rr:subjectMap
         [
-           # TODO min sdk 1.8
-            tedm:minSDKVersion "1.8" ;
             rdfs:label "ND-FinancingParty" ;
-            rdfs:comment "Financing Party (IDreference)";
+            rdfs:comment "Financing Party (ID reference)";
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_Organization_{cac:PartyIdentification/cbc:ID}" ;
             rr:class org:Organization
         ] ;

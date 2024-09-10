@@ -393,11 +393,8 @@ tedm:MG-LotGroup-isSubjectToGrouping-Tender_ND-LotTender  a rr:TriplesMap ;
         ] ;
     .
 tedm:MG-Tender-includesTender-Contract_ND-SettledContractTenderReference  a rr:TriplesMap ;
-  rdfs:label "MG-Tender";
-  rdfs:label "BT-3202-Contract";
-        # TODO max sdk 1.7
-        tedm:minSDKVersion "1.8" ;
-        rml:logicalSource
+    rdfs:label "MG-Tender";
+    rml:logicalSource
         [
             rml:source "data/source.xml" ;
             rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:SettledContract/efac:LotTender" ;
@@ -443,11 +440,11 @@ tedm:MG-TenderAwardOutcome-comprisesTenderAwardOutcome-LotAwardOutcome_ND-LotRes
         ] ;
      rr:predicateObjectMap
         [
-            # TODO max sdk 1.7
-            tedm:minSDKVersion "1.8" ;
+            # Differences across versions have no functional effect on this mapping even though different iterators can be interpreted
+            # VERINFO: SDK v1.8 onwards contain node change yielding the same effective XPaths
             rdfs:label "OPT-320-LotResult" ;
-            rdfs:comment "Tender Identifier Reference  of MG-TenderAwardOutcome under ND-LotResultTenderReference" ;
-            rr:predicate epo:concernsTender   ;
+            rdfs:comment "Tender Identifier Reference of MG-otAwardOutcome under ND-LotResultTenderReference (v1.8+), ND-LotResult (up to v1.7)" ;
+            rr:predicate epo:concernsTender ;
             rr:objectMap
                 [
                    rr:parentTriplesMap tedm:MG-Tender-concernsTender-TenderAwardOutcome-comprisesTenderAwardOutcome-LotAwardOutcome_ND-LotResultTenderReference ;

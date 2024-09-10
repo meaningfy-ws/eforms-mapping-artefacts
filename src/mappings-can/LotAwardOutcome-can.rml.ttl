@@ -129,10 +129,11 @@ tedm:MG-MonetaryValue-hasApproximateFrameworkAgreementValue-LotAwardOutcome_ND-L
         ] ;
    rr:predicateObjectMap
         [
-            # TODO max sdk 1.5
+            # Differences across versions have no functional effect on this mapping
+            # VERINFO: SDK v1.6 contains only node name change
             tedm:minSDKVersion "1.6" ;
             rdfs:label "BT-660-LotResult";
-            rdfs:comment "Framework Re-estimated Value of MG-MonetaryValue under ND-LotResultFAValues";
+            rdfs:comment "Framework Re-estimated Value (Framework Estimated Value up to v1.5) of MG-MonetaryValue under ND-LotResultFAValues";
             rr:predicate epo:hasAmountValue ;
             rr:objectMap
                 [
@@ -230,11 +231,11 @@ tedm:MG-LotAwardOutcome_ND-LotResultTenderReference  a rr:TriplesMap ;
         ] ;
      rr:predicateObjectMap
         [
-            # TODO max sdk 1.7
-            tedm:minSDKVersion "1.8" ;
+            # Differences across versions have no functional effect on this mapping even though different iterators can be interpreted
+            # VERINFO: SDK v1.8 onwards contain node change yielding the same effective XPaths
             rdfs:label "OPT-320-LotResult" ;
-            rdfs:comment "Tender Identifier Reference  of MG-otAwardOutcome under ND-LotResultTenderReference" ;
-            rr:predicate epo:comprisesTenderAwardOutcome   ;
+            rdfs:comment "Tender Identifier Reference of MG-otAwardOutcome under ND-LotResultTenderReference (v1.8+), ND-LotResult (up to v1.7)" ;
+            rr:predicate epo:comprisesTenderAwardOutcome ;
             rr:objectMap
                 [
                    rr:parentTriplesMap tedm:MG-TenderAwardOutcome-comprisesTenderAwardOutcome-LotAwardOutcome_ND-LotResultTenderReference ;

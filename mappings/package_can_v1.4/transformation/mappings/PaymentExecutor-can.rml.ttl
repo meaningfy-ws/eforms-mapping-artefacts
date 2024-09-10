@@ -41,8 +41,6 @@ tedm:MG-ContractTerm-isSubjectToContractSpecificTerm-Contract_ND-PayerParty  a r
         ] ;
     rr:predicateObjectMap
         [
-            # TODO min sdk 1.8
-            tedm:minSDKVersion "1.8" ;
             rr:predicate epo:definesPaymentExecutor ;
             rr:objectMap
                 [
@@ -88,8 +86,6 @@ tedm:MG-PaymentExecutor_ND-PayerParty a rr:TriplesMap ;
         ] ;
      rr:predicateObjectMap
         [
-            # TODO min sdk 1.8
-            tedm:minSDKVersion "1.8" ;
             rr:predicate epo:contextualisedBy ;
             rr:objectMap
                 [
@@ -103,9 +99,10 @@ tedm:MG-PaymentExecutor_ND-PayerParty a rr:TriplesMap ;
         ] ;
      rr:predicateObjectMap
         [
-            # TODO min sdk 1.8
-            tedm:minSDKVersion "1.8" ;
+            # Differences across versions have no functional effect on this mapping even though different iterators can be interpreted
+            # VERINFO: SDK v1.8 onwards contain node change yielding the same effective XPaths
             rdfs:label "OPT-301-LotResult-Paying" ;
+            rdfs:comment "Payer Party (ID reference) of MG-BudgetProvider under ND-PayerParty (v1.8+), ND-LotResult (up to v1.7)" ;
             rr:predicate epo:playedBy ;
             rr:objectMap
                 [

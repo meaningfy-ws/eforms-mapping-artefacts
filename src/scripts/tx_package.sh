@@ -13,7 +13,7 @@ mkdir -p data
 mkdir -p output
 for i in $(find test_data/ -type f -iname "*.xml"); do
     infile=$(basename $i)
-    outdir=output/$(basename $(dirname $i))
+    outdir=output/$(basename $(dirname $i))/$(basename ${i/.xml})
     outfile=$outdir/$(basename ${i/.xml/.ttl})
     echo "transforming $infile -> $outfile"
     mkdir -p $outdir

@@ -21,6 +21,13 @@
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+epd:id_629133-2023_Notice a epo:Notice;
+  adms:identifier epd:id_629133-2023_PreviousNoticeIdentifier_HpNJ3sCJ5fwiWFBX8dR7zR .
+
+epd:id_629133-2023_PreviousNoticeIdentifier_HpNJ3sCJ5fwiWFBX8dR7zR a adms:Identifier;
+  epo:hasScheme "ojs-notice-id";
+  skos:notation "629133-2023" .
+
 epd:id_e23f09ec-e388-47f1-94c2-f6e495b1cf27_AuctionTerms_h8hgikxAY3BGCvpBi6x4FY a
     epo:EAuctionTechnique;
   epo:hasUsage <http://publications.europa.eu/resource/authority/usage/n-used> .
@@ -244,6 +251,7 @@ epd:id_e23f09ec-e388-47f1-94c2-f6e495b1cf27_Notice a epo:Notice, epo:Notice29, e
   epo:hasPublicationDate "2024-04-02Z"^^xsd:date;
   epo:hasVersion "01";
   epo:refersToLot epd:id_e23f09ec-e388-47f1-94c2-f6e495b1cf27_Lot_LOT-0000;
+  epo:refersToPrevious epd:id_629133-2023_Notice;
   epo:refersToProcedure epd:id_e23f09ec-e388-47f1-94c2-f6e495b1cf27_Procedure_6dcsBnuV4FTNoRpTZHckqN;
   epo:refersToRole epd:id_e23f09ec-e388-47f1-94c2-f6e495b1cf27_Buyer_HGvue6GtAm3yppLpDLnBKD;
   adms:identifier epd:id_e23f09ec-e388-47f1-94c2-f6e495b1cf27_NoticeIdentifier_aHt4iskyRUJYALjw7mSMu2 .

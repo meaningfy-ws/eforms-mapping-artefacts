@@ -66,6 +66,7 @@ VERSIONS_SAMPLES := $(3 6 7 8 9)
 
 package_sync: $(addprefix package_sync_v, $(VERSIONS))
 package_release_cn: $(addprefix package_release_cn_v, $(VERSIONS))
+package_release_can: $(addprefix package_release_can_v, $(VERSIONS))
 reformat_package_cn: $(addprefix reformat_package_cn_v, $(VERSIONS))
 reformat_package_can: $(addprefix reformat_package_can_v, $(VERSIONS))
 package_cn_minimal: $(addprefix package_cn_minimal_v, $(VERSIONS))
@@ -153,6 +154,20 @@ package_release_cn_v%: package_prep
 # 	@ sed -i 's/sh:class at-voc:environmental-impact,/sh:nodeKind sh:IRI ;/' $(PKG_DIR)/$(SHACL_PATH_EPO)
 # 	@ sed -i '/.*at-voc:green-public-procurement-criteria ;/d' $(PKG_DIR)/$(SHACL_PATH_EPO)
 # endif
+
+package_release_can_v%: package_prep
+	@ $(eval PKG_DIR := $(RELEASE_DIR)/mappings/$(PKG_PREFIX_CAN)_v1.$*)
+	@ $(eval PKG_EXISTS := $(shell test -d $(PKG_DIR) && echo yes || echo no))
+	@ if [ "$(PKG_EXISTS)" = "yes" ]; then \
+		echo "Syncing CAN v1.$* to $(RELEASE_DIR)"; \
+		rm -rv $(PKG_DIR)/$(TX_DIR)/mappings ; \
+		cp -rv src/mappings $(PKG_DIR)/$(TX_DIR)/ ; \
+		cp -v src/mappings-can/* $(PKG_DIR)/$(TX_DIR)/mappings/ ; \
+		cp -v src/mappings-common/* $(PKG_DIR)/$(TX_DIR)/mappings/ ; \
+		cp -v src/mappings-1.$*/* $(PKG_DIR)/$(TX_DIR)/mappings/ ; \
+		rm -rv $(PKG_DIR)/$(TX_DIR)/resources ; \
+		cp -rv src/$(TX_DIR)/resources $(PKG_DIR)/$(TX_DIR)/ ; \
+	  fi
 
 include packaging-cn.mk
 include packaging-can.mk

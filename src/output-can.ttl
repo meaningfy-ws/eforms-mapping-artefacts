@@ -1405,9 +1405,7 @@ epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_SettledContractIdentifier_oXwXYzaLxM
 
 epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_SettledContract_CON-0001 a epo:Contract;
   epo:hasContractConclusionDate "2024-09-05+02:00"^^xsd:date;
-  epo:hasLotReference epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_Lot_LOT-0001, epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_Lot_LOT-0002,
-    epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_Lot_LOT-0003, epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_Lot_LOT-0004,
-    epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_Lot_LOT-0005;
+  epo:hasLotReference epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_Lot_LOT-0001;
   epo:includesTender epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_Tender_TEN-0001;
   epo:isSubjectToContractSpecificTerm epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_ContractTerm_25bTP58Hmt3tqJdvsLErPG,
     epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_ContractTerm_339qT4cxTErsaypPxCNdf2, epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_ContractTerm_BeKugscVJPFt54vNGjQBPC,
@@ -1417,33 +1415,25 @@ epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_SettledContract_CON-0001 a epo:Contr
 
 epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_SettledContract_CON-0002 a epo:Contract;
   epo:hasContractConclusionDate "2024-09-27+02:00"^^xsd:date;
-  epo:hasLotReference epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_Lot_LOT-0001, epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_Lot_LOT-0002,
-    epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_Lot_LOT-0003, epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_Lot_LOT-0004,
-    epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_Lot_LOT-0005;
+  epo:hasLotReference epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_Lot_LOT-0002;
   epo:includesTender epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_Tender_TEN-0002;
   adms:identifier epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_SettledContractIdentifier_oXwXYzaLxMkFreJUNf6BBv .
 
 epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_SettledContract_CON-0003 a epo:Contract;
   epo:hasContractConclusionDate "2024-09-05+02:00"^^xsd:date;
-  epo:hasLotReference epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_Lot_LOT-0001, epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_Lot_LOT-0002,
-    epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_Lot_LOT-0003, epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_Lot_LOT-0004,
-    epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_Lot_LOT-0005;
+  epo:hasLotReference epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_Lot_LOT-0003;
   epo:includesTender epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_Tender_TEN-0003;
   adms:identifier epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_SettledContractIdentifier_cpUd4MertNiccvdhgmTnit .
 
 epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_SettledContract_CON-0004 a epo:Contract;
   epo:hasContractConclusionDate "2024-08-22+02:00"^^xsd:date;
-  epo:hasLotReference epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_Lot_LOT-0001, epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_Lot_LOT-0002,
-    epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_Lot_LOT-0003, epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_Lot_LOT-0004,
-    epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_Lot_LOT-0005;
+  epo:hasLotReference epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_Lot_LOT-0004;
   epo:includesTender epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_Tender_TEN-0004;
   adms:identifier epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_SettledContractIdentifier_AVAHLUiNF5qDN7gEvjjWvt .
 
 epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_SettledContract_CON-0005 a epo:Contract;
   epo:hasContractConclusionDate "2024-08-14+02:00"^^xsd:date;
-  epo:hasLotReference epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_Lot_LOT-0001, epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_Lot_LOT-0002,
-    epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_Lot_LOT-0003, epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_Lot_LOT-0004,
-    epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_Lot_LOT-0005;
+  epo:hasLotReference epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_Lot_LOT-0005;
   epo:includesTender epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_Tender_TEN-0005;
   adms:identifier epd:id_4ce488ea-1004-42fb-9437-52a327f9583e_SettledContractIdentifier_KmxAqCo8NXPvKZBS3zYyV7 .
 

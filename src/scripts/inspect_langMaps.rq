@@ -1,0 +1,76 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rr: <http://www.w3.org/ns/r2rml#>
+PREFIX rml: <http://semweb.mmlab.be/ns/rml#>
+PREFIX ql: <http://semweb.mmlab.be/ns/ql#>
+PREFIX locn: <http://www.w3.org/ns/locn#>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX epd: <http://data.europa.eu/a4g/resource/>
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX epo-not: <http://data.europa.eu/a4g/ontology#>
+PREFIX cv: <http://data.europa.eu/m8g/>
+PREFIX cccev: <http://data.europa.eu/m8g/>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX cpov: <http://data.europa.eu/m8g/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX adms: <http://www.w3.org/ns/adms#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX fnml: <http://semweb.mmlab.be/ns/fnml#>
+PREFIX fno: <https://w3id.org/function/ontology#>
+PREFIX idlab-fn: <http://example.com/idlab/function/>
+PREFIX tedm: <http://data.europa.eu/a4g/mapping/sf-rml/>
+
+# RUN WITH:
+# arq --query scripts/inspect_langMaps.rq $(for i in `ls mappings/* mappings-versioned/* mappings-common/*`; do echo -n "--data $i "; done) --results=CSV
+
+SELECT DISTINCT ?tMap ?tMapMinSDK ?tMapMaxSDK ?tMapLabel ?tMapComment ?iterator ?template ?sRef ?predicate ?pOMapMinSDK ?pOMapMaxSDK ?reference ?oMapMinSDK ?oMapMaxSDK ?langMapRef
+# SELECT DISTINCT ?reference ?newReference
+WHERE {
+    ?tMap a rr:TriplesMap ;
+        rml:logicalSource ?lSource ;
+        rr:predicateObjectMap ?pOMap .
+
+    ?lSource rml:iterator ?iterator .
+
+    ?pOMap rr:predicate ?predicate ;
+        rr:objectMap ?oMap .
+
+    ?oMap rml:reference ?reference ;
+        rml:languageMap ?langMap .
+
+    ?langMap fnml:functionValue ?funcVal .
+    ?funcVal rr:predicateObjectMap ?funcPOMap .
+    ?funcPOMap rr:objectMap ?funcOMap .
+    ?funcOMap rml:reference ?langMapRef .
+
+    BIND(REPLACE(STR(?predicate), REPLACE(STR(?predicate),"[^/#]+$",""), "") AS ?predicateStr)
+    BIND(IRI(CONCAT("http://data.europa.eu/a4g/mapping/sf-rml/", "MG-langString-", ?predicateStr, REPLACE(STR(?tMap), "http://data.europa.eu/a4g/mapping/sf-rml/", ""))) AS ?newTMap)
+    BIND(STRBEFORE(?langMapRef, "/@languageID") AS ?relReference) .
+    BIND(CONCAT(?iterator, "/", ?relReference) AS ?newIterator) .
+    BIND(REPLACE(?reference, ?relReference, ".") AS ?newReference) .
+
+    OPTIONAL { ?tMap rdfs:label ?tMapLabel }
+    OPTIONAL { ?tMap rdfs:comment ?tMapComment }
+    OPTIONAL { ?pOMap rdfs:label ?pOMapLabel }
+    OPTIONAL { ?pOMap rdfs:comment ?pOMapComment }
+    OPTIONAL { ?oMap rdfs:label ?oMapLabel }
+    OPTIONAL { ?oMap rdfs:comment ?oMapComment }
+    OPTIONAL { ?tMap tedm:minSDKVersion ?tMapMinSDK }
+    OPTIONAL { ?tMap tedm:maxSDKVersion ?tMapMaxSDK }
+    OPTIONAL { ?pOMap tedm:minSDKVersion ?pOMapMinSDK }
+    OPTIONAL { ?pOMap tedm:maxSDKVersion ?pOMapMaxSDK }
+    OPTIONAL { ?oMap tedm:minSDKVersion ?oMapMinSDK }
+    OPTIONAL { ?oMap tedm:maxSDKVersion ?oMapMaxSDK }
+
+    OPTIONAL {
+        ?tMap rr:subjectMap ?sMap
+        OPTIONAL { ?sMap rdfs:label ?sMapLabel }
+        OPTIONAL { ?sMap rdfs:comment ?sMapComment }
+        OPTIONAL { ?sMap rr:template ?template }
+        OPTIONAL { ?sMap rml:reference ?sRef }
+        OPTIONAL { ?sMap rr:class ?class }
+    }
+}

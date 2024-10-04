@@ -210,3 +210,10 @@ get_xpath_similarity_grouped:
 
 get_xpath_similarity_table:
 	@ bash $(ANLYS_SCRIPTS_DIR)/xpath_sim_stats_table.sh
+
+get_languageMap_reflengths: clean
+	@ bash $(ANLYS_SCRIPTS_DIR)/langMap_ref_lengths.sh
+
+get_languageMap_reflength_stats: clean
+	@ echo "XPath reference lengths of languageMaps (no. of @languageId occurences, XPath length):"
+	@ bash $(ANLYS_SCRIPTS_DIR)/langMap_ref_lengths.sh | awk -F" " '{print $$2}' | sort | uniq -c | sort -nr

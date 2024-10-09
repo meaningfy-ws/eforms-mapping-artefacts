@@ -306,6 +306,7 @@ epd:id_f55a6503-0aba-4e23-bea5-13def0822653_LotAwardOutcome_RES-0004 a epo:LotAw
 
 epd:id_f55a6503-0aba-4e23-bea5-13def0822653_LotGroupAwardInformation_5RkUZBRon4U8t9FeNL7QSi
   a epo:LotGroupAwardInformation;
+  epo:describesLotGroup epd:id_f55a6503-0aba-4e23-bea5-13def0822653_LotGroup_GLO-0001;
   epo:hasGroupFrameworkAgreementMaximumValue epd:id_f55a6503-0aba-4e23-bea5-13def0822653_MonetaryValue_5RkUZBRon4U8t9FeNL7QSi .
 
 epd:id_f55a6503-0aba-4e23-bea5-13def0822653_LotGroup_GLO-0001 a epo:LotGroup;

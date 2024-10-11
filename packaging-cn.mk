@@ -137,6 +137,7 @@ ifeq ($(INCLUDE_INVALID_EXAMPLES), 1)
 	@ cp -rv $(SDK_DATA_DIR_CN)_invalid/eforms-sdk-1.$* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)_invalid
 endif
 # TODO: not working, use Bash notation or bring out into separate target
+# but also not needed as they are already tracked in the default/minimal packages we copy from
 # ifeq ($($*), 9)
 # 	@ echo "Including CN OP test data"
 # 	@ cp -rv $(TEST_DATA_DIR)/op_test_cn_d2.1 $(PKG_DIR)/test_data
@@ -210,6 +211,55 @@ export_cn_lang_v%:
 	@ $(eval PKG_NAME := $(PKG_PREFIX_CN)_v1.$*_multilang)
 	@ cd $(OUTPUT_DIR) && zip -r $(PKG_NAME).zip $(PKG_NAME)
 	@ echo "Multilingual package exported to $(OUTPUT_DIR)/$(PKG_PREFIX_CN)_v1.$*_multilang.zip"
+
+package_cn_attribs_v%:
+	@ echo "Preparing attributes CN package, v1.$*"
+	@ $(eval PKG_NAME := $(PKG_PREFIX_CN)_v1.$*_attribs)
+	@ $(eval PKG_DIR := $(OUTPUT_DIR)/$(PKG_NAME))
+	@ $(eval PKG_TMP := tmp/$(PKG_NAME))
+	@ mkdir -p $(OUTPUT_DIR)
+	@ rm -rfv $(PKG_DIR)
+	@ cp -rv mappings/$(PKG_PREFIX_CN)_v1.$* $(PKG_DIR)
+	@ echo "Including CN SDK v1.$* example data"
+	@ cp -rv $(SDK_DATA_DIR_CN)/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)/
+	@ echo "Including EF10-24 systematic sample data"
+	@ mkdir -p $(PKG_DIR)/$(SAMPLES_DIR_CN)
+	@ test -d $(SAMPLES_DIR_CN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_CN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_CN) \; || echo "No systematic samples for v1.$*"
+	@ echo "Including CN multilingual sample data"
+	@ mkdir -p $(PKG_DIR)/$(SAMPLES_DIR_LANG_CN)
+	@ test -d $(SAMPLES_DIR_LANG_CN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_LANG_CN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_LANG_CN) \; || echo "No multilingual samples for CN v1.$*"
+ifeq ($(INCLUDE_RANDOM_SAMPLES), 1)
+	@ echo "Including EF10-24 random sampling data"
+	@ mkdir -p $(PKG_DIR)/$(SAMPLES_RANDOM_DIR)
+	@ test -d $(SAMPLES_RANDOM_DIR)/$(SDK_NAME)-1.$* && find $(SAMPLES_RANDOM_DIR)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_RANDOM_DIR) \; || echo "No random samples for v1.$*"
+endif
+ifeq ($(EXCLUDE_PROBLEM_SAMPLES), 1)
+	@ echo "Removing problematic sample notices"
+	@ find $(PKG_DIR)/$(SAMPLES_RANDOM_DIR) -name 665610-2023.xml -exec rm -fv {} \;
+	@ find $(PKG_DIR)/$(SAMPLES_DIR_CN) -name 135016-2024.xml -exec rm -fv {} \;
+	@ find $(PKG_DIR)/$(SAMPLES_DIR_CN) -name 725041-2023.xml -exec rm -fv {} \;
+endif
+	@ echo "Including attributes CM"
+	@ cp -v src/transformation/$(CM_ATTR_FILENAME) $(PKG_DIR)/$(CM_FILE)
+ifeq ($(REPLACE_CM_METADATA_ID), 1)
+	@ echo "Modifying Identifier in the CM and replacing XLSX"
+	@ mkdir -p $(PKG_TMP) && unzip $(PKG_DIR)/$(CM_FILE) -d $(PKG_TMP)
+	@ rm -v $(PKG_DIR)/$(CM_FILE)
+	@ sed -i "s|<t>$(CM_ID_PREFIX_CN)_10-24+29</t>|<t>$(CM_ID_PREFIX_CN)_10-24_v1.$*_multilang</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
+	@ sed -i "s|<t>$(CM_TITLE_PREFIX_CN)10-EF24, SDK v1.3-1.10</t>|<t>$(CM_TITLE_PREFIX_CN)10-EF24, SDK v1.$* (multilingual data)</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
+	@ cd $(PKG_TMP) && zip -r tmp.xlsx * && mv -v tmp.xlsx ../../$(PKG_DIR)/$(CM_FILE) && cd ../.. && rm -r $(PKG_TMP)
+endif
+	@ echo "Removing outdated metadata"
+	@ rm -fv $(PKG_DIR)/metadata.json
+ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
+	@ echo "Removing inefficient generic validations"
+	@ rm -rfv $(PKG_DIR)/validation/sparql/generic* -v
+endif
+
+export_cn_attribs_v%:
+	@ $(eval PKG_NAME := $(PKG_PREFIX_CN)_v1.$*_attribs)
+	@ cd $(OUTPUT_DIR) && zip -r $(PKG_NAME).zip $(PKG_NAME)
+	@ echo "Attributes package exported to $(OUTPUT_DIR)/$(PKG_PREFIX_CN)_v1.$*_attribs.zip"
 
 package_cn_all_variants: package_cn_minimal package_cn_examples package_cn_samples package_cn_maximal
 

@@ -176,6 +176,41 @@ export_cn_maximal_v%:
 	@ cd $(OUTPUT_DIR) && zip -r $(PKG_NAME).zip $(PKG_NAME)
 	@ echo "Maximal package exported to $(OUTPUT_DIR)/$(PKG_PREFIX_CN)_v1.$*_examples.zip"
 
+package_cn_lang_v%:
+	@ echo "Preparing multilingual CN package, v1.$*"
+	@ $(eval PKG_NAME := $(PKG_PREFIX_CN)_v1.$*_multilang)
+	@ $(eval PKG_DIR := $(OUTPUT_DIR)/$(PKG_NAME))
+	@ $(eval PKG_TMP := tmp/$(PKG_NAME))
+	@ mkdir -p $(OUTPUT_DIR)
+	@ rm -rfv $(PKG_DIR)
+	@ cp -rv mappings/$(PKG_PREFIX_CN)_v1.$* $(PKG_DIR)
+	@ echo "Including CAN SDK v1.$* multilingual example data"
+	@ cp -rv $(SDK_DATA_DIR_CN)/eforms-sdk-1.$*/*multilingual* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)/
+	@ echo "Including CN multilingual sample data"
+	@ mkdir -p $(PKG_DIR)/$(SAMPLES_DIR_LANG_CN)
+	@ test -d $(SAMPLES_DIR_LANG_CN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_LANG_CN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_LANG_CN) \; || echo "No multilingual samples for CN v1.$*"
+	@ echo "Including attributes CM"
+	@ cp -v src/transformation/$(CM_ATTR_FILENAME) $(PKG_DIR)/$(CM_FILE)
+ifeq ($(REPLACE_CM_METADATA_ID), 1)
+	@ echo "Modifying Identifier in the CM and replacing XLSX"
+	@ mkdir -p $(PKG_TMP) && unzip $(PKG_DIR)/$(CM_FILE) -d $(PKG_TMP)
+	@ rm -v $(PKG_DIR)/$(CM_FILE)
+	@ sed -i "s|<t>$(CM_ID_PREFIX_CN)_10-24+29</t>|<t>$(CM_ID_PREFIX_CN)_10-24_v1.$*_multilang</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
+	@ sed -i "s|<t>$(CM_TITLE_PREFIX_CN)10-EF24, SDK v1.3-1.10</t>|<t>$(CM_TITLE_PREFIX_CN)10-EF24, SDK v1.$* (multilingual data)</t>|" $(PKG_TMP)/$(XLSX_STRDATA)
+	@ cd $(PKG_TMP) && zip -r tmp.xlsx * && mv -v tmp.xlsx ../../$(PKG_DIR)/$(CM_FILE) && cd ../.. && rm -r $(PKG_TMP)
+endif
+	@ echo "Removing outdated metadata"
+	@ rm -fv $(PKG_DIR)/metadata.json
+ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
+	@ echo "Removing inefficient generic validations"
+	@ rm -rfv $(PKG_DIR)/validation/sparql/generic* -v
+endif
+
+export_cn_lang_v%:
+	@ $(eval PKG_NAME := $(PKG_PREFIX_CN)_v1.$*_multilang)
+	@ cd $(OUTPUT_DIR) && zip -r $(PKG_NAME).zip $(PKG_NAME)
+	@ echo "Multilingual package exported to $(OUTPUT_DIR)/$(PKG_PREFIX_CN)_v1.$*_multilang.zip"
+
 package_cn_all_variants: package_cn_minimal package_cn_examples package_cn_samples package_cn_maximal
 
 export_cn_all_variants: export_cn_minimal export_cn_examples export_cn_samples export_cn_maximal

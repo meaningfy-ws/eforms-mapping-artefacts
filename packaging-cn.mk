@@ -55,7 +55,7 @@ ifeq ($(EXCLUDE_LARGE_EXAMPLE), 1)
 	@ echo "Removing large file cn_24_maximal_100_lots.xml"
 	@ find $(PKG_DIR) -name "cn_24_maximal_100_lots.xml" -exec rm -v {} \;
 endif
-ifeq ($(REPLACE_METADATA_ID_EXAMPLES), 1)
+ifeq ($(REPLACE_CM_METADATA_ID_EXAMPLES), 1)
 	@ echo "Modifying Identifier in the CM and replacing XLSX"
 	@ mkdir -p $(PKG_TMP) && unzip $(PKG_DIR)/$(CM_FILE) -d $(PKG_TMP)
 	@ rm -v $(PKG_DIR)/$(CM_FILE)
@@ -99,7 +99,7 @@ ifeq ($(EXCLUDE_PROBLEM_SAMPLES), 1)
 endif
 	@ echo "Removing any SDK examples"
 	@ rm -rfv $(PKG_DIR)/$(SDK_DATA_DIR_CN)*
-ifeq ($(REPLACE_METADATA_ID), 1)
+ifeq ($(REPLACE_CM_METADATA_ID), 1)
 	@ echo "Modifying Identifier in the CM and replacing XLSX"
 	@ mkdir -p $(PKG_TMP) && unzip $(PKG_DIR)/$(CM_FILE) -d $(PKG_TMP)
 	@ rm -v $(PKG_DIR)/$(CM_FILE)
@@ -156,7 +156,7 @@ ifeq ($(EXCLUDE_PROBLEM_SAMPLES), 1)
 	@ find $(PKG_DIR)/$(SAMPLES_DIR_CN) -name 135016-2024.xml -exec rm -fv {} \;
 	@ find $(PKG_DIR)/$(SAMPLES_DIR_CN) -name 725041-2023.xml -exec rm -fv {} \;
 endif
-ifeq ($(REPLACE_METADATA_ID), 1)
+ifeq ($(REPLACE_CM_METADATA_ID), 1)
 	@ echo "Modifying Identifier in the CM and replacing XLSX"
 	@ mkdir -p $(PKG_TMP) && unzip $(PKG_DIR)/$(CM_FILE) -d $(PKG_TMP)
 	@ rm -v $(PKG_DIR)/$(CM_FILE)

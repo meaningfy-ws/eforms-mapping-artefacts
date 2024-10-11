@@ -43,7 +43,7 @@ ifeq ($(INCLUDE_INVALID_EXAMPLES), 1)
 	@ echo "Including CAN SDK v1.$* example data, INVALIDs"
 	@ cp -rv $(SDK_DATA_DIR_CAN)_invalid/eforms-sdk-1.$* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)_invalid
 endif
-ifeq ($(REPLACE_METADATA_ID_EXAMPLES), 1)
+ifeq ($(REPLACE_CM_METADATA_ID_EXAMPLES), 1)
 	@ echo "Modifying Identifier in the CM and replacing XLSX"
 	@ mkdir -p $(PKG_TMP) && unzip $(PKG_DIR)/$(CM_FILE) -d $(PKG_TMP)
 	@ rm -v $(PKG_DIR)/$(CM_FILE)
@@ -76,7 +76,7 @@ package_can_samples_v%:
 	@ test -d $(SAMPLES_DIR_CAN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_CAN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_CAN) \; || echo "No manual samples for v1.$*"
 	@ echo "Removing any SDK examples"
 	@ rm -rfv $(PKG_DIR)/$(SDK_DATA_DIR_CAN)*
-ifeq ($(REPLACE_METADATA_ID), 1)
+ifeq ($(REPLACE_CM_METADATA_ID), 1)
 	@ echo "Modifying Identifier in the CM and replacing XLSX"
 	@ mkdir -p $(PKG_TMP) && unzip $(PKG_DIR)/$(CM_FILE) -d $(PKG_TMP)
 	@ rm -v $(PKG_DIR)/$(CM_FILE)
@@ -116,7 +116,7 @@ endif
 	@ echo "Including EF29 manual sample data"
 	@ mkdir -p $(PKG_DIR)/$(SAMPLES_DIR_CAN)
 	@ test -d $(SAMPLES_DIR_CAN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_CAN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_CAN) \; || echo "No manual samples for v1.$*"
-ifeq ($(REPLACE_METADATA_ID), 1)
+ifeq ($(REPLACE_CM_METADATA_ID), 1)
 	@ echo "Modifying Identifier in the CM and replacing XLSX"
 	@ mkdir -p $(PKG_TMP) && unzip $(PKG_DIR)/$(CM_FILE) -d $(PKG_TMP)
 	@ rm -v $(PKG_DIR)/$(CM_FILE)

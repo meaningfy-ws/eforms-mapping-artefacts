@@ -8,14 +8,15 @@ SDK_DATA_NAME_CN = sdk_examples_cn
 SDK_DATA_NAME_CAN = sdk_examples_can
 SAMPLES_NAME_CN = sampling_20231001-20240311
 SAMPLES_NAME_CAN = sampling_manual_CAN_202404
+SAMPLES_NAME_LANG = sampling_multilingual
 SAMPLES_RANDOM_NAME = sampling_random
 ROOT_CONCEPTS_GREPFILTER = "_Organization_|_TouchPoint_|_Notice|_ProcurementProcessInformation_|_Lot_|_VehicleInformation_|_ChangeInformation_"
 TEST_QUERY_RESULTS_FORMAT = CSV
 XLSX_STRDATA = xl/sharedStrings.xml
-CM_ID_PREFIX_CN = package_eforms_10-24
-CM_TITLE_PREFIX_CN = Package EF10-EF24
-CM_ID_PREFIX_CAN = package_eforms_29
-CM_TITLE_PREFIX_CAN = Package EF29
+CM_ID_PREFIX_CN = package_eforms
+CM_TITLE_PREFIX_CN = Package EF
+CM_ID_PREFIX_CAN = package_eforms
+CM_TITLE_PREFIX_CAN = Package EF
 TRIM_DOWN_SHACL = 1
 EXCLUDE_INEFFICIENT_VALIDATIONS = 1
 INCLUDE_RANDOM_SAMPLES = 1
@@ -38,6 +39,7 @@ TEST_SCRIPTS_DIR = test_scripts
 POST_SCRIPTS_DIR = src/scripts
 TX_DIR = transformation
 CM_FILENAME = conceptual_mappings.xlsx
+CM_ATTR_FILENAME = conceptual_mappings_CN+CAN_Attributes.xlsx
 SHACL_FILE_EPO = ePO_core_shapes.ttl
 SHACL_PATH_EPO = validation/shacl/epo/$(SHACL_FILE_EPO)
 RELEASE_DIR = ../ted-rdf-mapping-eforms
@@ -57,6 +59,8 @@ SDK_DATA_DIR_CN = $(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)
 SDK_DATA_DIR_CAN = $(TEST_DATA_DIR)/$(SDK_DATA_NAME_CAN)
 SAMPLES_DIR_CN = $(TEST_DATA_DIR)/$(SAMPLES_NAME_CN)
 SAMPLES_DIR_CAN = $(TEST_DATA_DIR)/$(SAMPLES_NAME_CAN)
+SAMPLES_DIR_LANG_CN = $(TEST_DATA_DIR)/$(SAMPLES_NAME_LANG)_cn
+SAMPLES_DIR_LANG_CAN = $(TEST_DATA_DIR)/$(SAMPLES_NAME_LANG)_can
 SAMPLES_RANDOM_DIR = $(TEST_DATA_DIR)/$(SAMPLES_RANDOM_NAME)
 CM_FILE = $(TX_DIR)/$(CM_FILENAME)
 
@@ -85,6 +89,14 @@ package_cn_maximal: $(addprefix package_cn_maximal_v, $(VERSIONS))
 package_can_maximal: $(addprefix package_can_maximal_v, $(VERSIONS))
 export_cn_maximal: $(addprefix export_cn_maximal_v, $(VERSIONS))
 export_can_maximal: $(addprefix export_can_maximal_v, $(VERSIONS))
+package_cn_lang: $(addprefix package_cn_lang_v, $(VERSIONS))
+package_can_lang: $(addprefix package_can_lang_v, $(VERSIONS))
+export_cn_lang: $(addprefix export_cn_lang_v, $(VERSIONS))
+export_can_lang: $(addprefix export_can_lang_v, $(VERSIONS))
+package_cn_attribs: $(addprefix package_cn_attribs_v, $(VERSIONS))
+package_can_attribs: $(addprefix package_can_attribs_v, $(VERSIONS))
+export_cn_attribs: $(addprefix export_cn_attribs_v, $(VERSIONS))
+export_can_attribs: $(addprefix export_can_attribs_v, $(VERSIONS))
 test_versioned: $(addprefix test_versioned_v, $(VERSIONS))
 test_output_versioned: $(addprefix test_output_versioned_v, $(VERSIONS))
 
@@ -210,3 +222,10 @@ get_xpath_similarity_grouped:
 
 get_xpath_similarity_table:
 	@ bash $(ANLYS_SCRIPTS_DIR)/xpath_sim_stats_table.sh
+
+get_languageMap_reflengths: clean
+	@ bash $(ANLYS_SCRIPTS_DIR)/langMap_ref_lengths.sh
+
+get_languageMap_reflength_stats: clean
+	@ echo "XPath reference lengths of languageMaps (no. of @languageId occurences, XPath length):"
+	@ bash $(ANLYS_SCRIPTS_DIR)/langMap_ref_lengths.sh | awk -F" " '{print $$2}' | sort | uniq -c | sort -nr

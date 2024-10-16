@@ -6,29 +6,35 @@ the default (first) Make target `package_sync`.
 
 These packages, or "mapping suites", are _minimal_ in nature, meaning they
 contain very little (currently just one) test data. They serve as reference to
-the package _variants_ that can be generated from `src`.
+the package _variants_ that can be generated from `src`, for different rule
+_profiles_ (currently CN or CAN).
 
 The contents in `src` are laid out in a way that is conducive to local
 development, which packages are not. However, varying amounts of data can be
 combined to generate new packages. Helper Make commands are provided for this:
 
 ```sh
-make package_cn_all_variants
-make export_cn_all_variants
+make package_cn_all_variants export_cn_all_variants
 ```
+
+> Replace `cn` with `can` in any relevant command depending on which profile of
+> rules you want to package for, i.e. Contract/Competition Notices (subtypes
+> EF10-24) or Contract Award Notices (subtype EF29).
 
 These will output complete packages in a `dist` folder, along with their ZIP
 archive files, suitable for loading into mapping tools such as [Mapping
 Workbench (MWB)](https://meaningfy.ws/mapping-workbench). Currently, they are
 based around the following variants:
 
-- **minimal** One SDK example only, e.g. `cn_24_maximal.xml`
+- **minimal** One SDK example only, e.g. `cn_24_maximal.xml` or `can_24_maximal.xml`
 - **examples** All SDK examples, _except_ any `*100_lots.xml` or similar large data
 - **samples** All systematic, manual and random sample data, no SDK example
 - **maximal** All SDK examples and all sample data, _including_ any large data
 
 You are free to modify any package and rerun the relevant export Make target,
-e.g. `make export_cn_minimal`.
+e.g. `make export_cn_minimal`. Note that these generated packages use content
+from the tracked ones, and so it is good to ensure that the tracked packages
+are in sync with `src` _at all times_.
 
 It is recommended to clean and sync before running any of the packaging
 targets, in particular because ZIP _updates_ archives if existing ones are
@@ -36,7 +42,7 @@ found, which can lead to unwanted situations. A complete one-liner command
 could be:
 
 ```sh
-make clean && make && make package_can_all_variatns export_can_all_variants
+make clean && make && make package_cn_all_variants export_cn_all_variants
 ```
 
 ## Testing
@@ -89,6 +95,13 @@ Expanding on some of the components for further clarity:
 Note: Wherever _URI_ is mentioned, [IRI](https://www.w3.org/2001/Talks/0912-IUC-IRI/paper.html#:~:text=In%20principle%2C%20the%20definition%20of,us%2Dascii%20characters%20in%20URIs) is meant. Also, the generation of hashes is done _online_ against a remote HTTP web API endpoint offering this function, during transformation (which can otherwise be an offline process).
 
 ## Development Workflow
+
+Please ensure that for every change, you run `make` to synchronize tracked
+packages with content in `src`. Additionally, you should generate outputs for
+all rule profiles and versions, e.g. using the scripts under `src/scripts`,
+namely `tx_source*` and `tx_example-multiver*`. This is so that output changes
+are tracked with as much coverage as possible, and content changes can be
+easily ported over to an external package repository.
 
 For collaboration, create branches with a three-fragment scheme
 `feature/{internal-ticket-id}/{understandable-short-label}` where

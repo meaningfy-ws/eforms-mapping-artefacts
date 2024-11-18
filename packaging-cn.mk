@@ -25,6 +25,8 @@ ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
 	@ echo "Removing inefficient generic validations"
 	@ rm -rfv $(PKG_DIR)/validation/sparql/generic* -v
 endif
+	@ echo "Removing any empty test_data subfolders"
+	@ for i in $$(find $(PKG_DIR) -type d -empty -path "*/test_data/*"); do rm -rfv $$i; done
 
 export_cn_minimal_v%:
 	@ cd $(OUTPUT_DIR) && zip -r $(PKG_PREFIX_CN)_v1.$*_minimal.zip $(PKG_PREFIX_CN)_v1.$*_minimal
@@ -71,6 +73,8 @@ ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
 	@ echo "Removing inefficient generic validations"
 	@ rm -rfv $(PKG_DIR)/validation/sparql/generic* -v
 endif
+	@ echo "Removing any empty test_data subfolders"
+	@ for i in $$(find $(PKG_DIR) -type d -empty -path "*/test_data/*"); do rm -rfv $$i; done
 
 export_cn_examples_v%:
 	@ $(eval PKG_NAME := $(PKG_PREFIX_CN)_v1.$*_examples)
@@ -115,9 +119,8 @@ ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
 	@ echo "Removing inefficient generic validations"
 	@ rm -rfv $(PKG_DIR)/validation/sparql/generic* -v
 endif
-# TODO: not working in any way for some reason
-# @ echo "Cleaning up invalid samples packages (no actual samples)"
-# @ [ -z `ls -A $(PKG_DIR)/$(SAMPLES_DIR_CN)` ] && rm -rfv $(PKG_DIR)
+	@ echo "Removing any empty test_data subfolders"
+	@ for i in $$(find $(PKG_DIR) -type d -empty -path "*/test_data/*"); do rm -rfv $$i; done
 
 export_cn_samples_v%:
 	@ $(eval PKG_NAME := $(PKG_PREFIX_CN)_v1.$*_samples)
@@ -175,6 +178,8 @@ ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
 	@ echo "Removing inefficient generic validations"
 	@ rm -rfv $(PKG_DIR)/validation/sparql/generic* -v
 endif
+	@ echo "Removing any empty test_data subfolders"
+	@ for i in $$(find $(PKG_DIR) -type d -empty -path "*/test_data/*"); do rm -rfv $$i; done
 
 export_cn_maximal_v%:
 	@ $(eval PKG_NAME := $(PKG_PREFIX_CN)_v1.$*_allData)
@@ -210,6 +215,8 @@ ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
 	@ echo "Removing inefficient generic validations"
 	@ rm -rfv $(PKG_DIR)/validation/sparql/generic* -v
 endif
+	@ echo "Removing any empty test_data subfolders"
+	@ for i in $$(find $(PKG_DIR) -type d -empty -path "*/test_data/*"); do rm -rfv $$i; done
 
 export_cn_lang_v%:
 	@ $(eval PKG_NAME := $(PKG_PREFIX_CN)_v1.$*_multilang)
@@ -260,6 +267,8 @@ ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
 	@ echo "Removing inefficient generic validations"
 	@ rm -rfv $(PKG_DIR)/validation/sparql/generic* -v
 endif
+	@ echo "Removing any empty test_data subfolders"
+	@ for i in $$(find $(PKG_DIR) -type d -empty -path "*/test_data/*"); do rm -rfv $$i; done
 
 export_cn_attribs_v%:
 	@ $(eval PKG_NAME := $(PKG_PREFIX_CN)_v1.$*_attribs)

@@ -272,3 +272,21 @@ version-pkg-assets:
 		mv "$$dir"/* "$$newdir/" \
 		rmdir "$$dir"; \
 	done
+
+list-pkgs-data-count:
+	@ find $(MAPPINGS_DIR)/package*/test_data -type f | cut -d "/" -f 2 | sort | uniq -c | sort -nr
+
+list-pkgs-data-count-cn:
+	@ find $(MAPPINGS_DIR)/package*cn*/test_data -type f | cut -d "/" -f 2 | sort | uniq -c | sort -nr
+
+list-pkgs-data-count-can:
+	@ find $(MAPPINGS_DIR)/package*can*/test_data -type f | cut -d "/" -f 2 | sort | uniq -c | sort -nr
+
+list-pkgs-data-size:
+	@ du -sh $(MAPPINGS_DIR)/package*/test_data | sort -rh
+
+list-pkgs-data-size-cn:
+	@ du -sh $(MAPPINGS_DIR)/package*cn*/test_data | sort -rh
+
+list-pkgs-data-size-can:
+	@ du -sh $(MAPPINGS_DIR)/package*can*/test_data | sort -rh

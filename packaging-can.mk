@@ -43,7 +43,7 @@ package_can_examples_v%:
 ifeq ($(INCLUDE_INVALID_EXAMPLES), 1)
 	@ echo "Including CAN SDK v1.$* example data, INVALIDs"
 	@ mkdir -p $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)_invalid-1.$*
-	@ cp -rv $(SDK_DATA_DIR_CAN)_invalid/eforms-sdk-1.$* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)_invalid-1.$*
+	@ cp -rv $(SDK_DATA_DIR_CAN)_invalid/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)_invalid-1.$*
 endif
 ifeq ($(REPLACE_CM_METADATA_ID_EXAMPLES), 1)
 	@ echo "Modifying Identifier in the CM and replacing XLSX"
@@ -115,7 +115,7 @@ package_can_maximal_v%:
 ifeq ($(INCLUDE_INVALID_EXAMPLES), 1)
 	@ echo "Including CAN SDK v1.$* example data, INVALIDs"
 	@ mkdir -p $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)_invalid-1.$*
-	@ cp -rv $(SDK_DATA_DIR_CAN)_invalid/eforms-sdk-1.$* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)_invalid-1.$*
+	@ cp -rv $(SDK_DATA_DIR_CAN)_invalid/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)_invalid-1.$*
 endif
 	@ echo "Including EF29 manual sample data"
 	@ mkdir -p $(PKG_DIR)/$(SAMPLES_DIR_CAN)-1.$*

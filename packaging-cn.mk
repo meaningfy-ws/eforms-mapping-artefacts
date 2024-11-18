@@ -45,7 +45,7 @@ package_cn_examples_v%:
 ifeq ($(INCLUDE_INVALID_EXAMPLES), 1)
 	@ echo "Including CN SDK v1.$* example data, INVALIDs"
 	@ mkdir -p $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)_invalid-1.$*
-	@ cp -rv $(SDK_DATA_DIR_CN)_invalid/eforms-sdk-1.$* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)_invalid-1.$*
+	@ cp -rv $(SDK_DATA_DIR_CN)_invalid/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)_invalid-1.$*
 endif
 # TODO: not working, use Bash notation or bring out into separate target
 # ifeq ($($*), 9)
@@ -138,7 +138,7 @@ package_cn_maximal_v%:
 ifeq ($(INCLUDE_INVALID_EXAMPLES), 1)
 	@ echo "Including CN SDK v1.$* example data, INVALIDs"
 	@ mkdir -p $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)_invalid-1.$*
-	@ cp -rv $(SDK_DATA_DIR_CN)_invalid/eforms-sdk-1.$* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)_invalid-1.$*
+	@ cp -rv $(SDK_DATA_DIR_CN)_invalid/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)_invalid-1.$*
 endif
 # TODO: not working, use Bash notation or bring out into separate target
 # but also not needed as they are already tracked in the default/minimal packages we copy from

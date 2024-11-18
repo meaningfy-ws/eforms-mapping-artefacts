@@ -231,20 +231,20 @@ get_languageMap_reflength_stats: clean
 	@ bash $(ANLYS_SCRIPTS_DIR)/langMap_ref_lengths.sh | awk -F" " '{print $$2}' | sort | uniq -c | sort -nr
 
 list-versioned-pkg-assets:
-	@find mappings -type d \( -path "*/test_data/*-1.[0-9]*" -o -path "*/output/*-1.[0-9]*" \)
+	@find $(MAPPINGS_DIR) -type d \( -path "*/test_data/*-1.[0-9]*" -o -path "*/output/*-1.[0-9]*" \)
 
 list-versioned-nested:
-	@find mappings -type d -path "*/test_data/*-1.[0-9]*/*-1.[0-9]*" -o -path "*/output/*-1.[0-9]*/*-1.[0-9]*"
+	@find $(MAPPINGS_DIR) -type d -path "*/test_data/*-1.[0-9]*/*-1.[0-9]*" -o -path "*/output/*-1.[0-9]*/*-1.[0-9]*"
 
 unversion-pkg-assets-dry-run:
-	@for dir in $$(find mappings -type d \( -path "*/test_data/*-1.[0-9]*" -o -path "*/output/*-1.[0-9]*" \)); do \
+	@for dir in $$(find $(MAPPINGS_DIR) -type d \( -path "*/test_data/*-1.[0-9]*" -o -path "*/output/*-1.[0-9]*" \)); do \
 		newdir=$$(echo "$$dir" | sed 's/-1\.[0-9]*$$//'); \
 		echo "Would rename: $$dir -> $$newdir"; \
 	done
 
 unversion-pkg-assets:
 	@echo "This will rename all versioned test_data and output directories. Are you sure? [y/N]" && read ans && [ $$ans = y ]
-	@for dir in $$(find mappings -type d \( -path "*/test_data/*-1.[0-9]*" -o -path "*/output/*-1.[0-9]*" \)); do \
+	@for dir in $$(find $(MAPPINGS_DIR) -type d \( -path "*/test_data/*-1.[0-9]*" -o -path "*/output/*-1.[0-9]*" \)); do \
 		newdir=$$(echo "$$dir" | sed 's/-1\.[0-9]*$$//'); \
 		echo "Renaming: $$dir -> $$newdir"; \
 		mkdir -p "$$newdir"; \
@@ -253,10 +253,10 @@ unversion-pkg-assets:
 	done
 
 list-unversioned-pkg-assets:
-	@find mappings -type d \( -path "*/test_data/*" -o -path "*/output/*" \) -not -path "*-1.[0-9]*" -not -path "*/*-1.[0-9]*/*"
+	@find $(MAPPINGS_DIR) -type d \( -path "*/test_data/*" -o -path "*/output/*" \) -not -path "*-1.[0-9]*" -not -path "*/*-1.[0-9]*/*"
 
 version-pkg-assets-dry-run:
-	@for dir in $$(find mappings -type d \( -path "*/test_data/*" -o -path "*/output/*" \) -not -path "*-1.[0-9]*" -not -path "*/*-1.[0-9]*/*"); do \
+	@for dir in $$(find $(MAPPINGS_DIR) -type d \( -path "*/test_data/*" -o -path "*/output/*" \) -not -path "*-1.[0-9]*" -not -path "*/*-1.[0-9]*/*"); do \
 		pkg_version=$$(echo "$$dir" | grep -o "package_[^/]*/\|package_[^_]*_v1\." | grep -o "1\.[0-9]*" || echo "$(DEFAULT_SDK_VERSION)"); \
 		newdir="$${dir}-$${pkg_version}"; \
 		echo "Would rename: $$dir -> $$newdir"; \
@@ -264,7 +264,7 @@ version-pkg-assets-dry-run:
 
 version-pkg-assets:
 	@echo "This will rename all unversioned test_data and output directories. Are you sure? [y/N]" && read ans && [ $$ans = y ]
-	@for dir in $$(find mappings -type d \( -path "*/test_data/*" -o -path "*/output/*" \) -not -path "*-1.[0-9]*" -not -path "*/*-1.[0-9]*/*"); do \
+	@for dir in $$(find $(MAPPINGS_DIR) -type d \( -path "*/test_data/*" -o -path "*/output/*" \) -not -path "*-1.[0-9]*" -not -path "*/*-1.[0-9]*/*"); do \
 		pkg_version=$$(echo "$$dir" | grep -o "package_[^/]*/\|package_[^_]*_v1\." | grep -o "1\.[0-9]*" || echo "$(DEFAULT_SDK_VERSION)"); \
 		newdir="$${dir}-$${pkg_version}"; \
 		echo "Renaming: $$dir -> $$newdir"; \

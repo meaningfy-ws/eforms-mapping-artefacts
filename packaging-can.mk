@@ -24,6 +24,8 @@ ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
 	@ echo "Removing inefficient generic validations"
 	@ rm -rfv $(PKG_DIR)/validation/sparql/generic* -v
 endif
+	@ echo "Removing any empty test_data subfolders"
+	@ for i in $$(find $(PKG_DIR) -type d -empty -path "*/test_data/*"); do rm -rfv $$i; done
 
 export_can_minimal_v%:
 	@ cd $(OUTPUT_DIR) && zip -r $(PKG_PREFIX_CAN)_v1.$*_minimal.zip $(PKG_PREFIX_CAN)_v1.$*_minimal
@@ -38,10 +40,12 @@ package_can_examples_v%:
 	@ rm -rfv $(PKG_DIR)
 	@ cp -rv mappings/$(PKG_PREFIX_CAN)_v1.$* $(PKG_DIR)
 	@ echo "Including CAN SDK v1.$* example data"
-	@ cp -rv $(SDK_DATA_DIR_CAN)/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)/
+	@ mkdir -p $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)-1.$*
+	@ cp -rv $(SDK_DATA_DIR_CAN)/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)-1.$*/
 ifeq ($(INCLUDE_INVALID_EXAMPLES), 1)
 	@ echo "Including CAN SDK v1.$* example data, INVALIDs"
-	@ cp -rv $(SDK_DATA_DIR_CAN)_invalid/eforms-sdk-1.$* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)_invalid
+	@ mkdir -p $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)_invalid-1.$*
+	@ cp -rv $(SDK_DATA_DIR_CAN)_invalid/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)_invalid-1.$*
 endif
 ifeq ($(REPLACE_CM_METADATA_ID_EXAMPLES), 1)
 	@ echo "Modifying Identifier in the CM and replacing XLSX"
@@ -57,6 +61,8 @@ ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
 	@ echo "Removing inefficient generic validations"
 	@ rm -rfv $(PKG_DIR)/validation/sparql/generic* -v
 endif
+	@ echo "Removing any empty test_data subfolders"
+	@ for i in $$(find $(PKG_DIR) -type d -empty -path "*/test_data/*"); do rm -rfv $$i; done
 
 export_can_examples_v%:
 	@ $(eval PKG_NAME := $(PKG_PREFIX_CAN)_v1.$*_examples)
@@ -72,10 +78,10 @@ package_can_samples_v%:
 	@ rm -rfv $(PKG_DIR)
 	@ cp -rv mappings/$(PKG_PREFIX_CAN)_v1.$* $(PKG_DIR)
 	@ echo "Including EF29 manual sample data"
-	@ mkdir -p $(PKG_DIR)/$(SAMPLES_DIR_CAN)
-	@ test -d $(SAMPLES_DIR_CAN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_CAN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_CAN) \; || echo "No manual samples for v1.$*"
+	@ mkdir -p $(PKG_DIR)/$(SAMPLES_DIR_CAN)-1.$*
+	@ test -d $(SAMPLES_DIR_CAN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_CAN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_CAN)-1.$* \; || echo "No manual samples for v1.$*"
 	@ echo "Removing any SDK examples"
-	@ rm -rfv $(PKG_DIR)/$(SDK_DATA_DIR_CAN)*
+	@ rm -rfv $(PKG_DIR)/$(SDK_DATA_NAME_CAN)-1.$*
 ifeq ($(REPLACE_CM_METADATA_ID), 1)
 	@ echo "Modifying Identifier in the CM and replacing XLSX"
 	@ mkdir -p $(PKG_TMP) && unzip $(PKG_DIR)/$(CM_FILE) -d $(PKG_TMP)
@@ -90,9 +96,8 @@ ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
 	@ echo "Removing inefficient generic validations"
 	@ rm -rfv $(PKG_DIR)/validation/sparql/generic* -v
 endif
-# TODO: not working in any way for some reason
-# @ echo "Cleaning up invalid samples packages (no actual samples)"
-# @ [ -z `ls -A $(PKG_DIR)/$(SAMPLES_DIR_CAN)` ] && rm -rfv $(PKG_DIR)
+	@ echo "Removing any empty test_data subfolders"
+	@ for i in $$(find $(PKG_DIR) -type d -empty -path "*/test_data/*"); do rm -rfv $$i; done
 
 export_can_samples_v%:
 	@ $(eval PKG_NAME := $(PKG_PREFIX_CAN)_v1.$*_samples)
@@ -108,14 +113,16 @@ package_can_maximal_v%:
 	@ rm -rfv $(PKG_DIR)
 	@ cp -rv mappings/$(PKG_PREFIX_CAN)_v1.$* $(PKG_DIR)
 	@ echo "Including CAN SDK v1.$* example data"
-	@ cp -rv $(SDK_DATA_DIR_CAN)/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)/
+	@ mkdir -p $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)-1.$*
+	@ cp -rv $(SDK_DATA_DIR_CAN)/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)-1.$*/
 ifeq ($(INCLUDE_INVALID_EXAMPLES), 1)
 	@ echo "Including CAN SDK v1.$* example data, INVALIDs"
-	@ cp -rv $(SDK_DATA_DIR_CAN)_invalid/eforms-sdk-1.$* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)_invalid
+	@ mkdir -p $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)_invalid-1.$*
+	@ cp -rv $(SDK_DATA_DIR_CAN)_invalid/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)_invalid-1.$*
 endif
 	@ echo "Including EF29 manual sample data"
-	@ mkdir -p $(PKG_DIR)/$(SAMPLES_DIR_CAN)
-	@ test -d $(SAMPLES_DIR_CAN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_CAN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_CAN) \; || echo "No manual samples for v1.$*"
+	@ mkdir -p $(PKG_DIR)/$(SAMPLES_DIR_CAN)-1.$*
+	@ test -d $(SAMPLES_DIR_CAN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_CAN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_CAN)-1.$* \; || echo "No manual samples for v1.$*"
 ifeq ($(REPLACE_CM_METADATA_ID), 1)
 	@ echo "Modifying Identifier in the CM and replacing XLSX"
 	@ mkdir -p $(PKG_TMP) && unzip $(PKG_DIR)/$(CM_FILE) -d $(PKG_TMP)
@@ -130,6 +137,8 @@ ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
 	@ echo "Removing inefficient generic validations"
 	@ rm -rfv $(PKG_DIR)/validation/sparql/generic* -v
 endif
+	@ echo "Removing any empty test_data subfolders"
+	@ for i in $$(find $(PKG_DIR) -type d -empty -path "*/test_data/*"); do rm -rfv $$i; done
 
 export_can_maximal_v%:
 	@ $(eval PKG_NAME := $(PKG_PREFIX_CAN)_v1.$*_allData)
@@ -146,8 +155,8 @@ package_can_lang_v%:
 	@ cp -rv mappings/$(PKG_PREFIX_CAN)_v1.$* $(PKG_DIR)
 # NOTE: CANs don't have multilingual examples
 	@ echo "Including CAN multilingual sample data"
-	@ mkdir -p $(PKG_DIR)/$(SAMPLES_DIR_LANG_CAN)
-	@ test -d $(SAMPLES_DIR_LANG_CAN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_LANG_CAN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_LANG_CAN) \; || echo "No multilingual samples for CAN v1.$*"
+	@ mkdir -p $(PKG_DIR)/$(SAMPLES_DIR_LANG_CAN)-1.$*
+	@ test -d $(SAMPLES_DIR_LANG_CAN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_LANG_CAN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_LANG_CAN)-1.$* \; || echo "No multilingual samples for CAN v1.$*"
 	@ echo "Including attributes CM"
 	@ cp -v src/transformation/$(CM_ATTR_FILENAME) $(PKG_DIR)/$(CM_FILE)
 ifeq ($(REPLACE_CM_METADATA_ID), 1)
@@ -164,6 +173,8 @@ ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
 	@ echo "Removing inefficient generic validations"
 	@ rm -rfv $(PKG_DIR)/validation/sparql/generic* -v
 endif
+	@ echo "Removing any empty test_data subfolders"
+	@ for i in $$(find $(PKG_DIR) -type d -empty -path "*/test_data/*"); do rm -rfv $$i; done
 
 export_can_lang_v%:
 	@ $(eval PKG_NAME := $(PKG_PREFIX_CAN)_v1.$*_multilang)
@@ -180,13 +191,14 @@ package_can_attribs_v%:
 	@ cp -rv mappings/$(PKG_PREFIX_CAN)_v1.$* $(PKG_DIR)
 # NOTE: CANs don't have multilingual examples
 	@ echo "Including CAN SDK v1.$* example data"
-	@ cp -rv $(SDK_DATA_DIR_CAN)/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)/
+	@ mkdir -p $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)-1.$*
+	@ cp -rv $(SDK_DATA_DIR_CAN)/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)-1.$*/
 	@ echo "Including EF29 manual sample data"
-	@ mkdir -p $(PKG_DIR)/$(SAMPLES_DIR_CAN)
-	@ test -d $(SAMPLES_DIR_CAN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_CAN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_CAN) \; || echo "No manual samples for v1.$*"
+	@ mkdir -p $(PKG_DIR)/$(SAMPLES_DIR_CAN)-1.$*
+	@ test -d $(SAMPLES_DIR_CAN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_CAN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_CAN)-1.$* \; || echo "No manual samples for v1.$*"
 	@ echo "Including CAN multilingual sample data"
-	@ mkdir -p $(PKG_DIR)/$(SAMPLES_DIR_LANG_CAN)
-	@ test -d $(SAMPLES_DIR_LANG_CAN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_LANG_CAN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_LANG_CAN) \; || echo "No multilingual samples for CAN v1.$*"
+	@ mkdir -p $(PKG_DIR)/$(SAMPLES_DIR_LANG_CAN)-1.$*
+	@ test -d $(SAMPLES_DIR_LANG_CAN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_LANG_CAN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_LANG_CAN)-1.$* \; || echo "No multilingual samples for CAN v1.$*"
 	@ echo "Including attributes CM"
 	@ cp -v src/transformation/$(CM_ATTR_FILENAME) $(PKG_DIR)/$(CM_FILE)
 ifeq ($(REPLACE_CM_METADATA_ID), 1)
@@ -203,6 +215,8 @@ ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
 	@ echo "Removing inefficient generic validations"
 	@ rm -rfv $(PKG_DIR)/validation/sparql/generic* -v
 endif
+	@ echo "Removing any empty test_data subfolders"
+	@ for i in $$(find $(PKG_DIR) -type d -empty -path "*/test_data/*"); do rm -rfv $$i; done
 
 export_can_attribs_v%:
 	@ $(eval PKG_NAME := $(PKG_PREFIX_CAN)_v1.$*_attribs)

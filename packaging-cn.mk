@@ -25,6 +25,8 @@ ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
 	@ echo "Removing inefficient generic validations"
 	@ rm -rfv $(PKG_DIR)/validation/sparql/generic* -v
 endif
+	@ echo "Removing any empty test_data subfolders"
+	@ for i in $$(find $(PKG_DIR) -type d -empty -path "*/test_data/*"); do rm -rfv $$i; done
 
 export_cn_minimal_v%:
 	@ cd $(OUTPUT_DIR) && zip -r $(PKG_PREFIX_CN)_v1.$*_minimal.zip $(PKG_PREFIX_CN)_v1.$*_minimal
@@ -40,10 +42,12 @@ package_cn_examples_v%:
 	@ rm -rfv $(PKG_DIR)
 	@ cp -rv mappings/$(PKG_PREFIX_CN)_v1.$* $(PKG_DIR)
 	@ echo "Including CN SDK v1.$* example data"
-	@ cp -rv $(SDK_DATA_DIR_CN)/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)/
+	@ mkdir -p $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)-1.$*
+	@ cp -rv $(SDK_DATA_DIR_CN)/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)-1.$*/
 ifeq ($(INCLUDE_INVALID_EXAMPLES), 1)
 	@ echo "Including CN SDK v1.$* example data, INVALIDs"
-	@ cp -rv $(SDK_DATA_DIR_CN)_invalid/eforms-sdk-1.$* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)_invalid
+	@ mkdir -p $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)_invalid-1.$*
+	@ cp -rv $(SDK_DATA_DIR_CN)_invalid/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)_invalid-1.$*
 endif
 # TODO: not working, use Bash notation or bring out into separate target
 # ifeq ($($*), 9)
@@ -69,6 +73,8 @@ ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
 	@ echo "Removing inefficient generic validations"
 	@ rm -rfv $(PKG_DIR)/validation/sparql/generic* -v
 endif
+	@ echo "Removing any empty test_data subfolders"
+	@ for i in $$(find $(PKG_DIR) -type d -empty -path "*/test_data/*"); do rm -rfv $$i; done
 
 export_cn_examples_v%:
 	@ $(eval PKG_NAME := $(PKG_PREFIX_CN)_v1.$*_examples)
@@ -84,18 +90,18 @@ package_cn_samples_v%:
 	@ rm -rfv $(PKG_DIR)
 	@ cp -rv mappings/$(PKG_PREFIX_CN)_v1.$* $(PKG_DIR)
 	@ echo "Including EF10-24 systematic sample data"
-	@ mkdir -p $(PKG_DIR)/$(SAMPLES_DIR_CN)
-	@ test -d $(SAMPLES_DIR_CN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_CN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_CN) \; || echo "No systematic samples for v1.$*"
+	@ mkdir -p $(PKG_DIR)/$(SAMPLES_DIR_CN)-1.$*
+	@ test -d $(SAMPLES_DIR_CN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_CN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_CN)-1.$* \; || echo "No systematic samples for v1.$*"
 ifeq ($(INCLUDE_RANDOM_SAMPLES), 1)
 	@ echo "Including EF10-24 random sampling data"
-	@ mkdir -p $(PKG_DIR)/$(SAMPLES_RANDOM_DIR)
-	@ test -d $(SAMPLES_RANDOM_DIR)/$(SDK_NAME)-1.$* && find $(SAMPLES_RANDOM_DIR)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_RANDOM_DIR) \; || echo "No random samples for v1.$*"
+	@ mkdir -p $(PKG_DIR)/$(SAMPLES_RANDOM_DIR)-1.$*
+	@ test -d $(SAMPLES_RANDOM_DIR)/$(SDK_NAME)-1.$* && find $(SAMPLES_RANDOM_DIR)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_RANDOM_DIR)-1.$* \; || echo "No random samples for v1.$*"
 endif
 ifeq ($(EXCLUDE_PROBLEM_SAMPLES), 1)
 	@ echo "Removing problematic sample notices"
-	@ find $(PKG_DIR)/$(SAMPLES_RANDOM_DIR) -name 665610-2023.xml -exec rm -fv {} \;
-	@ find $(PKG_DIR)/$(SAMPLES_DIR_CN) -name 135016-2024.xml -exec rm -fv {} \;
-	@ find $(PKG_DIR)/$(SAMPLES_DIR_CN) -name 725041-2023.xml -exec rm -fv {} \;
+	@ find $(PKG_DIR)/$(SAMPLES_RANDOM_DIR)-1.$* -name 665610-2023.xml -exec rm -fv {} \;
+	@ find $(PKG_DIR)/$(SAMPLES_DIR_CN)-1.$* -name 135016-2024.xml -exec rm -fv {} \;
+	@ find $(PKG_DIR)/$(SAMPLES_DIR_CN)-1.$* -name 725041-2023.xml -exec rm -fv {} \;
 endif
 	@ echo "Removing any SDK examples"
 	@ rm -rfv $(PKG_DIR)/$(SDK_DATA_DIR_CN)*
@@ -113,9 +119,8 @@ ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
 	@ echo "Removing inefficient generic validations"
 	@ rm -rfv $(PKG_DIR)/validation/sparql/generic* -v
 endif
-# TODO: not working in any way for some reason
-# @ echo "Cleaning up invalid samples packages (no actual samples)"
-# @ [ -z `ls -A $(PKG_DIR)/$(SAMPLES_DIR_CN)` ] && rm -rfv $(PKG_DIR)
+	@ echo "Removing any empty test_data subfolders"
+	@ for i in $$(find $(PKG_DIR) -type d -empty -path "*/test_data/*"); do rm -rfv $$i; done
 
 export_cn_samples_v%:
 	@ $(eval PKG_NAME := $(PKG_PREFIX_CN)_v1.$*_samples)
@@ -131,10 +136,12 @@ package_cn_maximal_v%:
 	@ rm -rfv $(PKG_DIR)
 	@ cp -rv mappings/$(PKG_PREFIX_CN)_v1.$* $(PKG_DIR)
 	@ echo "Including CN SDK v1.$* example data"
-	@ cp -rv $(SDK_DATA_DIR_CN)/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)/
+	@ mkdir -p $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)-1.$*
+	@ cp -rv $(SDK_DATA_DIR_CN)/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)-1.$*/
 ifeq ($(INCLUDE_INVALID_EXAMPLES), 1)
 	@ echo "Including CN SDK v1.$* example data, INVALIDs"
-	@ cp -rv $(SDK_DATA_DIR_CN)_invalid/eforms-sdk-1.$* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)_invalid
+	@ mkdir -p $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)_invalid-1.$*
+	@ cp -rv $(SDK_DATA_DIR_CN)_invalid/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)_invalid-1.$*
 endif
 # TODO: not working, use Bash notation or bring out into separate target
 # but also not needed as they are already tracked in the default/minimal packages we copy from
@@ -144,18 +151,18 @@ endif
 # 	@ cp -rv $(TEST_DATA_DIR)/op_test_cn_gh_issues $(PKG_DIR)/test_data
 # endif
 	@ echo "Including EF10-24 systematic sample data"
-	@ mkdir -p $(PKG_DIR)/$(SAMPLES_DIR_CN)
-	@ test -d $(SAMPLES_DIR_CN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_CN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_CN) \; || echo "No systematic samples for v1.$*"
+	@ mkdir -p $(PKG_DIR)/$(SAMPLES_DIR_CN)-1.$*
+	@ test -d $(SAMPLES_DIR_CN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_CN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_CN)-1.$* \; || echo "No manual samples for v1.$*"
 ifeq ($(INCLUDE_RANDOM_SAMPLES), 1)
 	@ echo "Including EF10-24 random sampling data"
-	@ mkdir -p $(PKG_DIR)/$(SAMPLES_RANDOM_DIR)
-	@ test -d $(SAMPLES_RANDOM_DIR)/$(SDK_NAME)-1.$* && find $(SAMPLES_RANDOM_DIR)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_RANDOM_DIR) \; || echo "No random samples for v1.$*"
+	@ mkdir -p $(PKG_DIR)/$(SAMPLES_RANDOM_DIR)-1.$*
+	@ test -d $(SAMPLES_RANDOM_DIR)/$(SDK_NAME)-1.$* && find $(SAMPLES_RANDOM_DIR)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_RANDOM_DIR)-1.$* \; || echo "No random samples for v1.$*"
 endif
 ifeq ($(EXCLUDE_PROBLEM_SAMPLES), 1)
 	@ echo "Removing problematic sample notices"
-	@ find $(PKG_DIR)/$(SAMPLES_RANDOM_DIR) -name 665610-2023.xml -exec rm -fv {} \;
-	@ find $(PKG_DIR)/$(SAMPLES_DIR_CN) -name 135016-2024.xml -exec rm -fv {} \;
-	@ find $(PKG_DIR)/$(SAMPLES_DIR_CN) -name 725041-2023.xml -exec rm -fv {} \;
+	@ find $(PKG_DIR)/$(SAMPLES_RANDOM_DIR)-1.$* -name 665610-2023.xml -exec rm -fv {} \;
+	@ find $(PKG_DIR)/$(SAMPLES_DIR_CN)-1.$* -name 135016-2024.xml -exec rm -fv {} \;
+	@ find $(PKG_DIR)/$(SAMPLES_DIR_CN)-1.$* -name 725041-2023.xml -exec rm -fv {} \;
 endif
 ifeq ($(REPLACE_CM_METADATA_ID), 1)
 	@ echo "Modifying Identifier in the CM and replacing XLSX"
@@ -171,6 +178,8 @@ ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
 	@ echo "Removing inefficient generic validations"
 	@ rm -rfv $(PKG_DIR)/validation/sparql/generic* -v
 endif
+	@ echo "Removing any empty test_data subfolders"
+	@ for i in $$(find $(PKG_DIR) -type d -empty -path "*/test_data/*"); do rm -rfv $$i; done
 
 export_cn_maximal_v%:
 	@ $(eval PKG_NAME := $(PKG_PREFIX_CN)_v1.$*_allData)
@@ -185,11 +194,11 @@ package_cn_lang_v%:
 	@ mkdir -p $(OUTPUT_DIR)
 	@ rm -rfv $(PKG_DIR)
 	@ cp -rv mappings/$(PKG_PREFIX_CN)_v1.$* $(PKG_DIR)
-	@ echo "Including CAN SDK v1.$* multilingual example data"
-	@ cp -rv $(SDK_DATA_DIR_CN)/eforms-sdk-1.$*/*multilingual* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)/
+	@ echo "Including CN SDK v1.$* multilingual example data"
+	@ cp -rv $(SDK_DATA_DIR_CN)/eforms-sdk-1.$*/*multilingual* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)-1.$*/
 	@ echo "Including CN multilingual sample data"
-	@ mkdir -p $(PKG_DIR)/$(SAMPLES_DIR_LANG_CN)
-	@ test -d $(SAMPLES_DIR_LANG_CN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_LANG_CN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_LANG_CN) \; || echo "No multilingual samples for CN v1.$*"
+	@ mkdir -p $(PKG_DIR)/$(SAMPLES_DIR_LANG_CN)-1.$*
+	@ test -d $(SAMPLES_DIR_LANG_CN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_LANG_CN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_LANG_CN)-1.$* \; || echo "No multilingual samples for CN v1.$*"
 	@ echo "Including attributes CM"
 	@ cp -v src/transformation/$(CM_ATTR_FILENAME) $(PKG_DIR)/$(CM_FILE)
 ifeq ($(REPLACE_CM_METADATA_ID), 1)
@@ -206,6 +215,8 @@ ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
 	@ echo "Removing inefficient generic validations"
 	@ rm -rfv $(PKG_DIR)/validation/sparql/generic* -v
 endif
+	@ echo "Removing any empty test_data subfolders"
+	@ for i in $$(find $(PKG_DIR) -type d -empty -path "*/test_data/*"); do rm -rfv $$i; done
 
 export_cn_lang_v%:
 	@ $(eval PKG_NAME := $(PKG_PREFIX_CN)_v1.$*_multilang)
@@ -221,23 +232,24 @@ package_cn_attribs_v%:
 	@ rm -rfv $(PKG_DIR)
 	@ cp -rv mappings/$(PKG_PREFIX_CN)_v1.$* $(PKG_DIR)
 	@ echo "Including CN SDK v1.$* example data"
-	@ cp -rv $(SDK_DATA_DIR_CN)/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)/
+	@ mkdir -p $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)-1.$*
+	@ cp -rv $(SDK_DATA_DIR_CN)/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)-1.$*/
 	@ echo "Including EF10-24 systematic sample data"
-	@ mkdir -p $(PKG_DIR)/$(SAMPLES_DIR_CN)
-	@ test -d $(SAMPLES_DIR_CN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_CN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_CN) \; || echo "No systematic samples for v1.$*"
+	@ mkdir -p $(PKG_DIR)/$(SAMPLES_DIR_CN)-1.$*
+	@ test -d $(SAMPLES_DIR_CN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_CN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_CN)-1.$* \; || echo "No manual samples for v1.$*"
 	@ echo "Including CN multilingual sample data"
-	@ mkdir -p $(PKG_DIR)/$(SAMPLES_DIR_LANG_CN)
-	@ test -d $(SAMPLES_DIR_LANG_CN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_LANG_CN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_LANG_CN) \; || echo "No multilingual samples for CN v1.$*"
+	@ mkdir -p $(PKG_DIR)/$(SAMPLES_DIR_LANG_CN)-1.$*
+	@ test -d $(SAMPLES_DIR_LANG_CN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_LANG_CN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_LANG_CN)-1.$* \; || echo "No multilingual samples for CN v1.$*"
 ifeq ($(INCLUDE_RANDOM_SAMPLES), 1)
 	@ echo "Including EF10-24 random sampling data"
-	@ mkdir -p $(PKG_DIR)/$(SAMPLES_RANDOM_DIR)
-	@ test -d $(SAMPLES_RANDOM_DIR)/$(SDK_NAME)-1.$* && find $(SAMPLES_RANDOM_DIR)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_RANDOM_DIR) \; || echo "No random samples for v1.$*"
+	@ mkdir -p $(PKG_DIR)/$(SAMPLES_RANDOM_DIR)-1.$*
+	@ test -d $(SAMPLES_RANDOM_DIR)/$(SDK_NAME)-1.$* && find $(SAMPLES_RANDOM_DIR)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_RANDOM_DIR)-1.$* \; || echo "No random samples for v1.$*"
 endif
 ifeq ($(EXCLUDE_PROBLEM_SAMPLES), 1)
 	@ echo "Removing problematic sample notices"
-	@ find $(PKG_DIR)/$(SAMPLES_RANDOM_DIR) -name 665610-2023.xml -exec rm -fv {} \;
-	@ find $(PKG_DIR)/$(SAMPLES_DIR_CN) -name 135016-2024.xml -exec rm -fv {} \;
-	@ find $(PKG_DIR)/$(SAMPLES_DIR_CN) -name 725041-2023.xml -exec rm -fv {} \;
+	@ find $(PKG_DIR)/$(SAMPLES_RANDOM_DIR)-1.$* -name 665610-2023.xml -exec rm -fv {} \;
+	@ find $(PKG_DIR)/$(SAMPLES_DIR_CN)-1.$* -name 135016-2024.xml -exec rm -fv {} \;
+	@ find $(PKG_DIR)/$(SAMPLES_DIR_CN)-1.$* -name 725041-2023.xml -exec rm -fv {} \;
 endif
 	@ echo "Including attributes CM"
 	@ cp -v src/transformation/$(CM_ATTR_FILENAME) $(PKG_DIR)/$(CM_FILE)
@@ -255,6 +267,8 @@ ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
 	@ echo "Removing inefficient generic validations"
 	@ rm -rfv $(PKG_DIR)/validation/sparql/generic* -v
 endif
+	@ echo "Removing any empty test_data subfolders"
+	@ for i in $$(find $(PKG_DIR) -type d -empty -path "*/test_data/*"); do rm -rfv $$i; done
 
 export_cn_attribs_v%:
 	@ $(eval PKG_NAME := $(PKG_PREFIX_CN)_v1.$*_attribs)

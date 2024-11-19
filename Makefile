@@ -21,7 +21,7 @@ TRIM_DOWN_SHACL = 1
 EXCLUDE_INEFFICIENT_VALIDATIONS = 1
 INCLUDE_RANDOM_SAMPLES = 1
 EXCLUDE_PROBLEM_SAMPLES = 1
-INCLUDE_INVALID_EXAMPLES = 0
+INCLUDE_INVALID_EXAMPLES = 1
 EXCLUDE_LARGE_EXAMPLE = 1
 REPLACE_CM_METADATA_ID = 1
 REPLACE_CM_METADATA_ID_EXAMPLES = 0
@@ -229,3 +229,64 @@ get_languageMap_reflengths: clean
 get_languageMap_reflength_stats: clean
 	@ echo "XPath reference lengths of languageMaps (no. of @languageId occurences, XPath length):"
 	@ bash $(ANLYS_SCRIPTS_DIR)/langMap_ref_lengths.sh | awk -F" " '{print $$2}' | sort | uniq -c | sort -nr
+
+list-versioned-pkg-assets:
+	@find $(MAPPINGS_DIR) -type d \( -path "*/test_data/*-1.[0-9]*" -o -path "*/output/*-1.[0-9]*" \)
+
+list-versioned-nested:
+	@find $(MAPPINGS_DIR) -type d -path "*/test_data/*-1.[0-9]*/*-1.[0-9]*" -o -path "*/output/*-1.[0-9]*/*-1.[0-9]*"
+
+unversion-pkg-assets-dry-run:
+	@for dir in $$(find $(MAPPINGS_DIR) -type d \( -path "*/test_data/*-1.[0-9]*" -o -path "*/output/*-1.[0-9]*" \)); do \
+		newdir=$$(echo "$$dir" | sed 's/-1\.[0-9]*$$//'); \
+		echo "Would rename: $$dir -> $$newdir"; \
+	done
+
+unversion-pkg-assets:
+	@echo "This will rename all versioned test_data and output directories. Are you sure? [y/N]" && read ans && [ $$ans = y ]
+	@for dir in $$(find $(MAPPINGS_DIR) -type d \( -path "*/test_data/*-1.[0-9]*" -o -path "*/output/*-1.[0-9]*" \)); do \
+		newdir=$$(echo "$$dir" | sed 's/-1\.[0-9]*$$//'); \
+		echo "Renaming: $$dir -> $$newdir"; \
+		mkdir -p "$$newdir"; \
+		mv "$$dir"/* "$$newdir/" 2>/dev/null || true; \
+		rmdir "$$dir"; \
+	done
+
+list-unversioned-pkg-assets:
+	@find $(MAPPINGS_DIR) -type d \( -path "*/test_data/*" -o -path "*/output/*" \) -not -path "*-1.[0-9]*" -not -path "*/*-1.[0-9]*/*"
+
+version-pkg-assets-dry-run:
+	@for dir in $$(find $(MAPPINGS_DIR) -type d \( -path "*/test_data/*" -o -path "*/output/*" \) -not -path "*-1.[0-9]*" -not -path "*/*-1.[0-9]*/*"); do \
+		pkg_version=$$(echo "$$dir" | grep -o "package_[^/]*/\|package_[^_]*_v1\." | grep -o "1\.[0-9]*" || echo "$(DEFAULT_SDK_VERSION)"); \
+		newdir="$${dir}-$${pkg_version}"; \
+		echo "Would rename: $$dir -> $$newdir"; \
+	done
+
+version-pkg-assets:
+	@echo "This will rename all unversioned test_data and output directories. Are you sure? [y/N]" && read ans && [ $$ans = y ]
+	@for dir in $$(find $(MAPPINGS_DIR) -type d \( -path "*/test_data/*" -o -path "*/output/*" \) -not -path "*-1.[0-9]*" -not -path "*/*-1.[0-9]*/*"); do \
+		pkg_version=$$(echo "$$dir" | grep -o "package_[^/]*/\|package_[^_]*_v1\." | grep -o "1\.[0-9]*" || echo "$(DEFAULT_SDK_VERSION)"); \
+		newdir="$${dir}-$${pkg_version}"; \
+		echo "Renaming: $$dir -> $$newdir"; \
+		mkdir -p "$$newdir"; \
+		mv "$$dir"/* "$$newdir/" \
+		rmdir "$$dir"; \
+	done
+
+list-pkgs-data-count:
+	@ find $(MAPPINGS_DIR)/package*/test_data -type f | cut -d "/" -f 2 | sort | uniq -c | sort -nr
+
+list-pkgs-data-count-cn:
+	@ find $(MAPPINGS_DIR)/package*cn*/test_data -type f | cut -d "/" -f 2 | sort | uniq -c | sort -nr
+
+list-pkgs-data-count-can:
+	@ find $(MAPPINGS_DIR)/package*can*/test_data -type f | cut -d "/" -f 2 | sort | uniq -c | sort -nr
+
+list-pkgs-data-size:
+	@ du -sh $(MAPPINGS_DIR)/package*/test_data | sort -rh
+
+list-pkgs-data-size-cn:
+	@ du -sh $(MAPPINGS_DIR)/package*cn*/test_data | sort -rh
+
+list-pkgs-data-size-can:
+	@ du -sh $(MAPPINGS_DIR)/package*can*/test_data | sort -rh

@@ -40,6 +40,7 @@ TEST_QUERIES_DIR = test_queries
 TEST_SCRIPTS_DIR = test_scripts
 POST_SCRIPTS_DIR = src/scripts
 TX_DIR = transformation
+VALIDATION_DIR_SPARQL_RDF = src/validation/sparql/genericRDF
 CM_FILENAME = conceptual_mappings.xlsx
 CM_ATTR_FILENAME = conceptual_mappings_CN+CAN_Attributes.xlsx
 SHACL_FILE_EPO = ePO_core_shapes.ttl

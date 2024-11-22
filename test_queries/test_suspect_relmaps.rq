@@ -1,0 +1,75 @@
+PREFIX adms: <http://www.w3.org/ns/adms#>
+PREFIX cccev: <http://data.europa.eu/m8g/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX epd: <http://data.europa.eu/a4g/resource/>
+PREFIX epo: <http://data.europa.eu/a4g/ontology#>
+PREFIX fnml: <http://semweb.mmlab.be/ns/fnml#>
+PREFIX fno: <https://w3id.org/function/ontology#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX idlab-fn: <http://example.com/idlab/function/>
+PREFIX locn: <http://www.w3.org/ns/locn#>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX ql: <http://semweb.mmlab.be/ns/ql#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rml: <http://semweb.mmlab.be/ns/rml#>
+PREFIX rr: <http://www.w3.org/ns/r2rml#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX tedm: <http://data.europa.eu/a4g/mapping/sf-rml/>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+# Case 1: duplicate occurence of predicate mapping in the same TMap
+#
+#   e.g. announcesRole for the same target occurs twice in the same TMap
+#
+# Case 2: duplicate occurence of predicate mapping in different (wrong) TMaps
+#   e.g. contextualisedBy between the same source-target pair occurs twice in
+#   different TMaps
+#
+#   This is more complicated, because different iterators are not necessarily
+#   wrong
+#
+# Many are false positives as the target is the same class but different
+# iterators (e.g. terms of the same type at different XPaths). Unfortunately we
+# want to also capture those with wrong (different) iterators (case 2), so we
+# need to live with that.
+#
+# WARNING: ALL RML files have to be provided as inputs in order to produce
+# meaningful results.
+
+SELECT
+?class ?predicate ?linkedClass
+# (GROUP_CONCAT(DISTINCT ?s; separator=", ") as ?tmaps)
+# (GROUP_CONCAT(DISTINCT ?predicate; separator=", ") as ?rels)
+(COUNT(?class) as ?occurrence)
+{
+    ?s a rr:TriplesMap ;
+        rml:logicalSource/rml:iterator ?iterator ;
+        rr:subjectMap/rr:class ?class ;
+        rr:predicateObjectMap ?pOMap .
+
+    ?pOMap rr:predicate ?predicate ;
+        rr:objectMap/rr:parentTriplesMap ?parent .
+
+    ?parent rml:logicalSource/rml:iterator ?linkedIter ;
+        rr:subjectMap/rr:class ?linkedClass .
+
+    # we assume these predicates' cardinalities are always high
+    FILTER(?predicate not in (epo:isSubjectToLotSpecificTerm, epo:foreseesContractSpecificTerm))
+
+    # FILTER(?predicate = epo:contextualisedBy)
+    # FILTER(?predicate = epo:announcesRole)
+
+    # OPTIONAL {
+    #     ?pOMap rr:objectMap/rr:joinCondition/rr:child ?childJoinCond ;
+    #         rr:objectMap/rr:joinCondition/rr:parent ?parentJoinCond .
+    # }
+
+    # BIND(IF(BOUND(?childJoinCond),?childJoinCond,"") AS ?childJoin)
+    # BIND(IF(BOUND(?parentJoinCond),?parentJoinCond,"") AS ?parentJoin)
+    # BIND(CONCAT(STR(?predicate),STR(?parentClass),STR(?childJoin),STR(?parentJoin)) AS ?mapping)
+}
+GROUP BY ?predicate ?class ?linkedClass
+HAVING (?occurrence > 1)

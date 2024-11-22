@@ -29,9 +29,9 @@ ifeq ($(REPLACE_CM_METADATA_ID), 1)
 endif
 	@ echo "Removing outdated metadata"
 	@ rm -fv $(PKG_DIR)/metadata.json
-ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
-	@ echo "Removing inefficient generic validations"
-	@ rm -rfv $(PKG_DIR)/validation/sparql/generic* -v
+ifeq ($(EXCLUDE_SPARQL_VALIDATIONS), 1)
+	@ echo "Removing SPARQL validations"
+	@ rm -rfv $(PKG_DIR)/validation/sparql/* -v
 endif
 	@ echo "Removing any empty test_data subfolders"
 	@ for i in $$(find $(PKG_DIR) -type d -empty -path "*/test_data/*"); do rm -rfv $$i; done
@@ -77,9 +77,9 @@ ifeq ($(REPLACE_CM_METADATA_ID_EXAMPLES), 1)
 endif
 	@ echo "Removing outdated metadata"
 	@ rm -fv $(PKG_DIR)/metadata.json
-ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
-	@ echo "Removing inefficient generic validations"
-	@ rm -rfv $(PKG_DIR)/validation/sparql/generic* -v
+ifeq ($(EXCLUDE_SPARQL_VALIDATIONS), 1)
+	@ echo "Removing SPARQL validations"
+	@ rm -rfv $(PKG_DIR)/validation/sparql/* -v
 endif
 	@ echo "Removing any empty test_data subfolders"
 	@ for i in $$(find $(PKG_DIR) -type d -empty -path "*/test_data/*"); do rm -rfv $$i; done
@@ -123,9 +123,9 @@ ifeq ($(REPLACE_CM_METADATA_ID), 1)
 endif
 	@ echo "Removing outdated metadata"
 	@ rm -fv $(PKG_DIR)/metadata.json
-ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
-	@ echo "Removing inefficient generic validations"
-	@ rm -rfv $(PKG_DIR)/validation/sparql/generic* -v
+ifeq ($(EXCLUDE_SPARQL_VALIDATIONS), 1)
+	@ echo "Removing SPARQL validations"
+	@ rm -rfv $(PKG_DIR)/validation/sparql/* -v
 endif
 	@ echo "Removing any empty test_data subfolders"
 	@ for i in $$(find $(PKG_DIR) -type d -empty -path "*/test_data/*"); do rm -rfv $$i; done
@@ -182,9 +182,9 @@ ifeq ($(REPLACE_CM_METADATA_ID), 1)
 endif
 	@ echo "Removing outdated metadata"
 	@ rm -fv $(PKG_DIR)/metadata.json
-ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
-	@ echo "Removing inefficient generic validations"
-	@ rm -rfv $(PKG_DIR)/validation/sparql/generic* -v
+ifeq ($(EXCLUDE_SPARQL_VALIDATIONS), 1)
+	@ echo "Removing SPARQL validations"
+	@ rm -rfv $(PKG_DIR)/validation/sparql/* -v
 endif
 	@ echo "Removing any empty test_data subfolders"
 	@ for i in $$(find $(PKG_DIR) -type d -empty -path "*/test_data/*"); do rm -rfv $$i; done
@@ -219,9 +219,9 @@ ifeq ($(REPLACE_CM_METADATA_ID), 1)
 endif
 	@ echo "Removing outdated metadata"
 	@ rm -fv $(PKG_DIR)/metadata.json
-ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
-	@ echo "Removing inefficient generic validations"
-	@ rm -rfv $(PKG_DIR)/validation/sparql/generic* -v
+ifeq ($(EXCLUDE_SPARQL_VALIDATIONS), 1)
+	@ echo "Removing SPARQL validations"
+	@ rm -rfv $(PKG_DIR)/validation/sparql/* -v
 endif
 	@ echo "Removing any empty test_data subfolders"
 	@ for i in $$(find $(PKG_DIR) -type d -empty -path "*/test_data/*"); do rm -rfv $$i; done
@@ -271,9 +271,9 @@ ifeq ($(REPLACE_CM_METADATA_ID), 1)
 endif
 	@ echo "Removing outdated metadata"
 	@ rm -fv $(PKG_DIR)/metadata.json
-ifeq ($(EXCLUDE_INEFFICIENT_VALIDATIONS), 1)
-	@ echo "Removing inefficient generic validations"
-	@ rm -rfv $(PKG_DIR)/validation/sparql/generic* -v
+ifeq ($(EXCLUDE_SPARQL_VALIDATIONS), 1)
+	@ echo "Removing SPARQL validations"
+	@ rm -rfv $(PKG_DIR)/validation/sparql/* -v
 endif
 	@ echo "Removing any empty test_data subfolders"
 	@ for i in $$(find $(PKG_DIR) -type d -empty -path "*/test_data/*"); do rm -rfv $$i; done

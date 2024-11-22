@@ -69,10 +69,10 @@ test_output:
 	@ echo
 	@ echo "==> Test output dupe identifiers"
 	@ echo "-> CN (EF10-24)"
-	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_dupe_identifiers.rq --data $(CN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ $(JENA_TOOLS_ARQ) --query $(VALIDATION_DIR_SPARQL_EPO)/dupe_identifiers_exist.select.rq --data $(CN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
 	@ echo
 	@ echo "-> CAN (EF29)"
-	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_dupe_identifiers.rq --data $(CAN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ $(JENA_TOOLS_ARQ) --query $(VALIDATION_DIR_SPARQL_EPO)/dupe_identifiers_exist.select.rq --data $(CAN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
 	@ echo
 	@ echo "==> Test output missing playedBy"
 	@ echo "-> CN (EF10-24)"
@@ -117,7 +117,7 @@ test_output_versioned_v%:
 # @ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_suspect_iri_name.rq --data $(VERSIONED_OUTPUT_DIR)/$(CANONICAL_EXAMPLE)-1.$*.ttl --results=$(TEST_QUERY_RESULTS_FORMAT)
 # @ echo
 # @ echo "-> Test output dupe identifiers, v1.$*"
-# @ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_dupe_identifiers.rq --data $(VERSIONED_OUTPUT_DIR)/$(CANONICAL_EXAMPLE)-1.$*.ttl --results=$(TEST_QUERY_RESULTS_FORMAT)
+# @ $(JENA_TOOLS_ARQ) --query $(VALIDATION_DIR_SPARQL_EPO)/dupe_identifiers_exist.select.rq --data $(VERSIONED_OUTPUT_DIR)/$(CANONICAL_EXAMPLE)-1.$*.ttl --results=$(TEST_QUERY_RESULTS_FORMAT)
 # @ echo
 # @ echo "-> Test output missing playedBy, v1.$*"
 # @ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_missing_playedBy.rq --data $(VERSIONED_OUTPUT_DIR)/$(CANONICAL_EXAMPLE)-1.$*.ttl --results=$(TEST_QUERY_RESULTS_FORMAT)

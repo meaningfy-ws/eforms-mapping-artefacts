@@ -1,3 +1,8 @@
+#title: Test absence of runt entities aka empty individuals
+#description: Checks for non-existence of runts or empty individuals/instances, i.e. RDF resources (entities) that have little to no information on them (no property asserted other than rdf:type)
+#xpath: None
+#was: empty_individuals (TED-929/TED-933) / empty_instances
+
 PREFIX adms: <http://www.w3.org/ns/adms#>
 PREFIX cccev: <http://data.europa.eu/m8g/>
 PREFIX dct: <http://purl.org/dc/terms/>
@@ -44,11 +49,15 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 # relationship is established) usually have a type associated, yielding at
 # least a runt, but not a widow.
 
-SELECT DISTINCT ?s {
-    ?s a ?what .
-    FILTER (isIRI(?s))
+# This is a negated version of the SELECT counterpart
+
+ASK {
     FILTER NOT EXISTS {
-        ?s ?p ?o
-        FILTER(?p not in (rdf:type))
+        ?s a ?what .
+        FILTER (isIRI(?s))
+        FILTER NOT EXISTS {
+            ?s ?p ?o
+            FILTER(?p not in (rdf:type))
+        }
     }
 }

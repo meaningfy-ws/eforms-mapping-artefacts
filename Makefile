@@ -309,3 +309,9 @@ list-pkgs-data-size-cn:
 
 list-pkgs-data-size-can:
 	@ du -sh $(MAPPINGS_DIR)/package*can*/test_data | sort -rh
+
+list-mismatching-versions:
+	@ for i in $$(find $(MAPPINGS_DIR) -type f -path "*/test_data/*"); do \
+		version=$$(echo $$i | grep -o "package_[^/]*/\|package_[^_]*_v1\." | grep -o "1\.[0-9]*"); \
+		grep eforms-sdk $$i | grep -v $$version && echo $$i; \
+	done || true

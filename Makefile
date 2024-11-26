@@ -25,6 +25,7 @@ INCLUDE_INVALID_EXAMPLES = 1
 EXCLUDE_LARGE_EXAMPLE = 1
 REPLACE_CM_METADATA_ID = 1
 REPLACE_CM_METADATA_ID_EXAMPLES = 0
+PACKAGE_EXAMPLES_BY_DEFAULT = 1
 
 CN_TEST_OUTPUT = src/output-cn.ttl
 CAN_TEST_OUTPUT = src/output-can.ttl
@@ -132,6 +133,22 @@ package_sync_v%: package_prep
 	@ cp -rv src/$(TX_DIR)/resources $(PKG_DIR_CAN)/$(TX_DIR)/
 	@ rm -rfv $(PKG_DIR_CAN)/validation
 	@ cp -rv src/validation $(PKG_DIR_CAN)/
+ifeq ($(PACKAGE_EXAMPLES_BY_DEFAULT), 1)
+	@ echo "Including CN SDK v1.$* example data"
+	@ mkdir -p $(PKG_DIR_CN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)-1.$*
+	@ cp -rv $(SDK_DATA_DIR_CN)/eforms-sdk-1.$*/* $(PKG_DIR_CN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)-1.$*/
+	@ echo "Including CAN SDK v1.$* example data"
+	@ mkdir -p $(PKG_DIR_CAN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)-1.$*
+	@ cp -rv $(SDK_DATA_DIR_CAN)/eforms-sdk-1.$*/* $(PKG_DIR_CAN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CAN)-1.$*/
+ifeq ($(INCLUDE_INVALID_EXAMPLES), 1)
+	@ echo "Including CN SDK v1.$* example data, INVALIDs"
+	@ mkdir -p $(PKG_DIR_CN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)_invalid-1.$*
+	@ cp -rv $(SDK_DATA_DIR_CN)_invalid/eforms-sdk-1.$*/* $(PKG_DIR_CN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)_invalid-1.$*
+	@ echo "Including CAN SDK v1.$* example data, INVALIDs"
+	@ mkdir -p $(PKG_DIR_CAN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CAN)_invalid-1.$*
+	@ cp -rv $(SDK_DATA_DIR_CAN)_invalid/eforms-sdk-1.$*/* $(PKG_DIR_CAN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CAN)_invalid-1.$*
+endif
+endif
 ifeq ($(TRIM_DOWN_SHACL), 1)
 	@ echo "Modifying ePO SHACL file to suppress rdf:PlainLiteral violations"
 	@ sed -i 's/sh:datatype rdf:PlainLiteral/sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] )/' $(PKG_DIR_CN)/$(SHACL_PATH_EPO)
@@ -142,7 +159,7 @@ ifeq ($(TRIM_DOWN_SHACL), 1)
 	@ sed -i '/.*at-voc:green-public-procurement-criteria ;/d' $(PKG_DIR_CN)/$(SHACL_PATH_EPO)
 	@ sed -i 's/sh:class at-voc.*;/sh:nodeKind sh:IRI ;/' $(PKG_DIR_CAN)/$(SHACL_PATH_EPO)
 	@ sed -i 's/sh:class at-voc:environmental-impact,/sh:nodeKind sh:IRI ;/' $(PKG_DIR_CAN)/$(SHACL_PATH_EPO)
-	@ sed -i '/.*at-voc:green-public-procurement-criteria ;/d' $(PKG_DIR_CAN)/$(SHACL_PATH_EPO)	
+	@ sed -i '/.*at-voc:green-public-procurement-criteria ;/d' $(PKG_DIR_CAN)/$(SHACL_PATH_EPO)
 endif
 
 package_release_cn_v%: package_prep

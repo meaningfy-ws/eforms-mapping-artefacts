@@ -109,38 +109,40 @@ package_prep:
 # also not copying over data
 package_sync_v%: package_prep
 	@ echo "Syncing CN v1.$*"
-	@ mkdir -p mappings/$(PKG_PREFIX_CN)_v1.$*/$(TX_DIR)/
-	@ rm -rfv mappings/$(PKG_PREFIX_CN)_v1.$*/$(TX_DIR)/mappings*
-	@ cp -rv src/mappings mappings/$(PKG_PREFIX_CN)_v1.$*/$(TX_DIR)/
-	@ cp -v src/mappings-common/* mappings/$(PKG_PREFIX_CN)_v1.$*/$(TX_DIR)/mappings/
-	@ cp -v src/mappings-1.$*/* mappings/$(PKG_PREFIX_CN)_v1.$*/$(TX_DIR)/mappings/
-	@ rm -rfv mappings/$(PKG_PREFIX_CN)_v1.$*/$(TX_DIR)/mappings/*can_v*
-	@ rm -rfv mappings/$(PKG_PREFIX_CN)_v1.$*/$(TX_DIR)/resources
-	@ cp -rv src/$(TX_DIR)/resources mappings/$(PKG_PREFIX_CN)_v1.$*/$(TX_DIR)/
-	@ rm -rfv mappings/$(PKG_PREFIX_CN)_v1.$*/validation
-	@ cp -rv src/validation mappings/$(PKG_PREFIX_CN)_v1.$*/
+	@ $(eval PKG_DIR_CN := mappings/$(PKG_PREFIX_CN)_v1.$*)
+	@ mkdir -p $(PKG_DIR_CN)/$(TX_DIR)/
+	@ rm -rfv $(PKG_DIR_CN)/$(TX_DIR)/mappings*
+	@ cp -rv src/mappings $(PKG_DIR_CN)/$(TX_DIR)/
+	@ cp -v src/mappings-common/* $(PKG_DIR_CN)/$(TX_DIR)/mappings/
+	@ cp -v src/mappings-1.$*/* $(PKG_DIR_CN)/$(TX_DIR)/mappings/
+	@ rm -rfv $(PKG_DIR_CN)/$(TX_DIR)/mappings/*can_v*
+	@ rm -rfv $(PKG_DIR_CN)/$(TX_DIR)/resources
+	@ cp -rv src/$(TX_DIR)/resources $(PKG_DIR_CN)/$(TX_DIR)/
+	@ rm -rfv $(PKG_DIR_CN)/validation
+	@ cp -rv src/validation $(PKG_DIR_CN)/
 	@ echo "Syncing CAN v1.$*"
-	@ mkdir -p mappings/$(PKG_PREFIX_CAN)_v1.$*/$(TX_DIR)/	
-	@ rm -rfv mappings/$(PKG_PREFIX_CAN)_v1.$*/$(TX_DIR)/mappings*
-	@ cp -rv src/mappings mappings/$(PKG_PREFIX_CAN)_v1.$*/$(TX_DIR)/
-	@ cp -v src/mappings-can/* mappings/$(PKG_PREFIX_CAN)_v1.$*/$(TX_DIR)/mappings/
-	@ cp -v src/mappings-common/* mappings/$(PKG_PREFIX_CAN)_v1.$*/$(TX_DIR)/mappings/
-	@ cp -v src/mappings-1.$*/* mappings/$(PKG_PREFIX_CAN)_v1.$*/$(TX_DIR)/mappings/
-	@ rm -rfv mappings/$(PKG_PREFIX_CAN)_v1.$*/$(TX_DIR)/resources
-	@ cp -rv src/$(TX_DIR)/resources mappings/$(PKG_PREFIX_CAN)_v1.$*/$(TX_DIR)/
-	@ rm -rfv mappings/$(PKG_PREFIX_CAN)_v1.$*/validation
-	@ cp -rv src/validation mappings/$(PKG_PREFIX_CAN)_v1.$*/
+	@ $(eval PKG_DIR_CAN := mappings/$(PKG_PREFIX_CAN)_v1.$*)
+	@ mkdir -p $(PKG_DIR_CAN)/$(TX_DIR)/
+	@ rm -rfv $(PKG_DIR_CAN)/$(TX_DIR)/mappings*
+	@ cp -rv src/mappings $(PKG_DIR_CAN)/$(TX_DIR)/
+	@ cp -v src/mappings-can/* $(PKG_DIR_CAN)/$(TX_DIR)/mappings/
+	@ cp -v src/mappings-common/* $(PKG_DIR_CAN)/$(TX_DIR)/mappings/
+	@ cp -v src/mappings-1.$*/* $(PKG_DIR_CAN)/$(TX_DIR)/mappings/
+	@ rm -rfv $(PKG_DIR_CAN)/$(TX_DIR)/resources
+	@ cp -rv src/$(TX_DIR)/resources $(PKG_DIR_CAN)/$(TX_DIR)/
+	@ rm -rfv $(PKG_DIR_CAN)/validation
+	@ cp -rv src/validation $(PKG_DIR_CAN)/
 ifeq ($(TRIM_DOWN_SHACL), 1)
 	@ echo "Modifying ePO SHACL file to suppress rdf:PlainLiteral violations"
-	@ sed -i 's/sh:datatype rdf:PlainLiteral/sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] )/' mappings/$(PKG_PREFIX_CN)_v1.$*/$(SHACL_PATH_EPO)
-	@ sed -i 's/sh:datatype rdf:PlainLiteral/sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] )/' mappings/$(PKG_PREFIX_CAN)_v1.$*/$(SHACL_PATH_EPO)
+	@ sed -i 's/sh:datatype rdf:PlainLiteral/sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] )/' $(PKG_DIR_CN)/$(SHACL_PATH_EPO)
+	@ sed -i 's/sh:datatype rdf:PlainLiteral/sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] )/' $(PKG_DIR_CAN)/$(SHACL_PATH_EPO)
 	@ echo "Modifying ePO SHACL file to substitute at-voc constraint with IRI"
-	@ sed -i 's/sh:class at-voc.*;/sh:nodeKind sh:IRI ;/' mappings/$(PKG_PREFIX_CN)_v1.$*/$(SHACL_PATH_EPO)
-	@ sed -i 's/sh:class at-voc:environmental-impact,/sh:nodeKind sh:IRI ;/' mappings/$(PKG_PREFIX_CN)_v1.$*/$(SHACL_PATH_EPO)
-	@ sed -i '/.*at-voc:green-public-procurement-criteria ;/d' mappings/$(PKG_PREFIX_CN)_v1.$*/$(SHACL_PATH_EPO)
-	@ sed -i 's/sh:class at-voc.*;/sh:nodeKind sh:IRI ;/' mappings/$(PKG_PREFIX_CAN)_v1.$*/$(SHACL_PATH_EPO)
-	@ sed -i 's/sh:class at-voc:environmental-impact,/sh:nodeKind sh:IRI ;/' mappings/$(PKG_PREFIX_CAN)_v1.$*/$(SHACL_PATH_EPO)
-	@ sed -i '/.*at-voc:green-public-procurement-criteria ;/d' mappings/$(PKG_PREFIX_CAN)_v1.$*/$(SHACL_PATH_EPO)	
+	@ sed -i 's/sh:class at-voc.*;/sh:nodeKind sh:IRI ;/' $(PKG_DIR_CN)/$(SHACL_PATH_EPO)
+	@ sed -i 's/sh:class at-voc:environmental-impact,/sh:nodeKind sh:IRI ;/' $(PKG_DIR_CN)/$(SHACL_PATH_EPO)
+	@ sed -i '/.*at-voc:green-public-procurement-criteria ;/d' $(PKG_DIR_CN)/$(SHACL_PATH_EPO)
+	@ sed -i 's/sh:class at-voc.*;/sh:nodeKind sh:IRI ;/' $(PKG_DIR_CAN)/$(SHACL_PATH_EPO)
+	@ sed -i 's/sh:class at-voc:environmental-impact,/sh:nodeKind sh:IRI ;/' $(PKG_DIR_CAN)/$(SHACL_PATH_EPO)
+	@ sed -i '/.*at-voc:green-public-procurement-criteria ;/d' $(PKG_DIR_CAN)/$(SHACL_PATH_EPO)	
 endif
 
 package_release_cn_v%: package_prep

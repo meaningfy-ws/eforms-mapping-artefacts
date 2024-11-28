@@ -4,6 +4,7 @@ PKG_PREFIX_CN = package_cn
 PKG_PREFIX_CAN = package_can
 SDK_NAME = eforms-sdk
 DEFAULT_SDK_VERSION = 1.9
+SDK_PROJECT_DIR = ../eForms-SDK
 SDK_DATA_NAME_CN = sdk_examples_cn
 SDK_DATA_NAME_CAN = sdk_examples_can
 SAMPLES_NAME_CN = sampling_20231001-20240311
@@ -65,7 +66,7 @@ SAMPLES_DIR_LANG_CAN = $(TEST_DATA_DIR)/$(SAMPLES_NAME_LANG)_can
 SAMPLES_RANDOM_DIR = $(TEST_DATA_DIR)/$(SAMPLES_RANDOM_NAME)
 CM_FILE = $(TX_DIR)/$(CM_FILENAME)
 
-VERSIONS := $(shell seq 3 10)
+VERSIONS := $(shell seq 3 13)
 # some versions don't currently have systematic and/or random samples
 VERSIONS_SAMPLES := $(3 6 7 8 9)
 
@@ -315,3 +316,6 @@ list-mismatching-versions:
 		version=$$(echo $$i | grep -o "package_[^/]*/\|package_[^_]*_v1\." | grep -o "1\.[0-9]*"); \
 		grep eforms-sdk $$i | grep -v $$version && echo $$i; \
 	done || true
+
+list-latest-sdk-versions:
+	@ cd $(SDK_PROJECT_DIR) && for i in $(VERSIONS); do echo -n "v1.$$i: " && git tag -l | grep 1.$$i | sed 's/-/~/' | sort -V | sed 's/~/-/' | tail -n1; done

@@ -66,7 +66,7 @@ SAMPLES_DIR_LANG_CAN = $(TEST_DATA_DIR)/$(SAMPLES_NAME_LANG)_can
 SAMPLES_RANDOM_DIR = $(TEST_DATA_DIR)/$(SAMPLES_RANDOM_NAME)
 CM_FILE = $(TX_DIR)/$(CM_FILENAME)
 
-VERSIONS := $(shell seq 3 13)
+VERSIONS := $(shell seq 3 10)
 # some versions don't currently have systematic and/or random samples
 VERSIONS_SAMPLES := $(3 6 7 8 9)
 

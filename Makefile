@@ -4,6 +4,7 @@ PKG_PREFIX_CN = package_cn
 PKG_PREFIX_CAN = package_can
 SDK_NAME = eforms-sdk
 DEFAULT_SDK_VERSION = 1.9
+SDK_PROJECT_DIR = ../eForms-SDK
 SDK_DATA_NAME_CN = sdk_examples_cn
 SDK_DATA_NAME_CAN = sdk_examples_can
 SAMPLES_NAME_CN = sampling_20231001-20240311
@@ -25,6 +26,7 @@ INCLUDE_INVALID_EXAMPLES = 1
 EXCLUDE_LARGE_EXAMPLE = 1
 REPLACE_CM_METADATA_ID = 1
 REPLACE_CM_METADATA_ID_EXAMPLES = 0
+PACKAGE_EXAMPLES_BY_DEFAULT = 1
 
 CN_TEST_OUTPUT = src/output-cn.ttl
 CAN_TEST_OUTPUT = src/output-can.ttl
@@ -64,7 +66,7 @@ SAMPLES_DIR_LANG_CAN = $(TEST_DATA_DIR)/$(SAMPLES_NAME_LANG)_can
 SAMPLES_RANDOM_DIR = $(TEST_DATA_DIR)/$(SAMPLES_RANDOM_NAME)
 CM_FILE = $(TX_DIR)/$(CM_FILENAME)
 
-VERSIONS := $(shell seq 3 10)
+VERSIONS := $(shell seq 3 13)
 # some versions don't currently have systematic and/or random samples
 VERSIONS_SAMPLES := $(3 6 7 8 9)
 
@@ -109,38 +111,56 @@ package_prep:
 # also not copying over data
 package_sync_v%: package_prep
 	@ echo "Syncing CN v1.$*"
-	@ mkdir -p mappings/$(PKG_PREFIX_CN)_v1.$*/$(TX_DIR)/
-	@ rm -rfv mappings/$(PKG_PREFIX_CN)_v1.$*/$(TX_DIR)/mappings*
-	@ cp -rv src/mappings mappings/$(PKG_PREFIX_CN)_v1.$*/$(TX_DIR)/
-	@ cp -v src/mappings-common/* mappings/$(PKG_PREFIX_CN)_v1.$*/$(TX_DIR)/mappings/
-	@ cp -v src/mappings-1.$*/* mappings/$(PKG_PREFIX_CN)_v1.$*/$(TX_DIR)/mappings/
-	@ rm -rfv mappings/$(PKG_PREFIX_CN)_v1.$*/$(TX_DIR)/mappings/*can_v*
-	@ rm -rfv mappings/$(PKG_PREFIX_CN)_v1.$*/$(TX_DIR)/resources
-	@ cp -rv src/$(TX_DIR)/resources mappings/$(PKG_PREFIX_CN)_v1.$*/$(TX_DIR)/
-	@ rm -rfv mappings/$(PKG_PREFIX_CN)_v1.$*/validation
-	@ cp -rv src/validation mappings/$(PKG_PREFIX_CN)_v1.$*/
+	@ $(eval PKG_DIR_CN := mappings/$(PKG_PREFIX_CN)_v1.$*)
+	@ mkdir -p $(PKG_DIR_CN)/$(TX_DIR)/
+	@ rm -rfv $(PKG_DIR_CN)/$(TX_DIR)/mappings*
+	@ cp -rv src/mappings $(PKG_DIR_CN)/$(TX_DIR)/
+	@ cp -v src/mappings-common/* $(PKG_DIR_CN)/$(TX_DIR)/mappings/
+	@ cp -v src/mappings-1.$*/* $(PKG_DIR_CN)/$(TX_DIR)/mappings/
+	@ rm -rfv $(PKG_DIR_CN)/$(TX_DIR)/mappings/*can_v*
+	@ rm -rfv $(PKG_DIR_CN)/$(TX_DIR)/resources
+	@ cp -rv src/$(TX_DIR)/resources $(PKG_DIR_CN)/$(TX_DIR)/
+	@ rm -rfv $(PKG_DIR_CN)/validation
+	@ cp -rv src/validation $(PKG_DIR_CN)/
 	@ echo "Syncing CAN v1.$*"
-	@ mkdir -p mappings/$(PKG_PREFIX_CAN)_v1.$*/$(TX_DIR)/	
-	@ rm -rfv mappings/$(PKG_PREFIX_CAN)_v1.$*/$(TX_DIR)/mappings*
-	@ cp -rv src/mappings mappings/$(PKG_PREFIX_CAN)_v1.$*/$(TX_DIR)/
-	@ cp -v src/mappings-can/* mappings/$(PKG_PREFIX_CAN)_v1.$*/$(TX_DIR)/mappings/
-	@ cp -v src/mappings-common/* mappings/$(PKG_PREFIX_CAN)_v1.$*/$(TX_DIR)/mappings/
-	@ cp -v src/mappings-1.$*/* mappings/$(PKG_PREFIX_CAN)_v1.$*/$(TX_DIR)/mappings/
-	@ rm -rfv mappings/$(PKG_PREFIX_CAN)_v1.$*/$(TX_DIR)/resources
-	@ cp -rv src/$(TX_DIR)/resources mappings/$(PKG_PREFIX_CAN)_v1.$*/$(TX_DIR)/
-	@ rm -rfv mappings/$(PKG_PREFIX_CAN)_v1.$*/validation
-	@ cp -rv src/validation mappings/$(PKG_PREFIX_CAN)_v1.$*/
+	@ $(eval PKG_DIR_CAN := mappings/$(PKG_PREFIX_CAN)_v1.$*)
+	@ mkdir -p $(PKG_DIR_CAN)/$(TX_DIR)/
+	@ rm -rfv $(PKG_DIR_CAN)/$(TX_DIR)/mappings*
+	@ cp -rv src/mappings $(PKG_DIR_CAN)/$(TX_DIR)/
+	@ cp -v src/mappings-can/* $(PKG_DIR_CAN)/$(TX_DIR)/mappings/
+	@ cp -v src/mappings-common/* $(PKG_DIR_CAN)/$(TX_DIR)/mappings/
+	@ cp -v src/mappings-1.$*/* $(PKG_DIR_CAN)/$(TX_DIR)/mappings/
+	@ rm -rfv $(PKG_DIR_CAN)/$(TX_DIR)/resources
+	@ cp -rv src/$(TX_DIR)/resources $(PKG_DIR_CAN)/$(TX_DIR)/
+	@ rm -rfv $(PKG_DIR_CAN)/validation
+	@ cp -rv src/validation $(PKG_DIR_CAN)/
+ifeq ($(PACKAGE_EXAMPLES_BY_DEFAULT), 1)
+	@ echo "Including CN SDK v1.$* example data"
+	@ mkdir -p $(PKG_DIR_CN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)-1.$*
+	@ cp -rv $(SDK_DATA_DIR_CN)/eforms-sdk-1.$*/* $(PKG_DIR_CN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)-1.$*/
+	@ echo "Including CAN SDK v1.$* example data"
+	@ mkdir -p $(PKG_DIR_CAN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)-1.$*
+	@ cp -rv $(SDK_DATA_DIR_CAN)/eforms-sdk-1.$*/* $(PKG_DIR_CAN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CAN)-1.$*/
+ifeq ($(INCLUDE_INVALID_EXAMPLES), 1)
+	@ echo "Including CN SDK v1.$* example data, INVALIDs"
+	@ mkdir -p $(PKG_DIR_CN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)_invalid-1.$*
+	@ cp -rv $(SDK_DATA_DIR_CN)_invalid/eforms-sdk-1.$*/* $(PKG_DIR_CN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)_invalid-1.$*
+	@ echo "Including CAN SDK v1.$* example data, INVALIDs"
+	@ mkdir -p $(PKG_DIR_CAN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CAN)_invalid-1.$*
+	@ cp -rv $(SDK_DATA_DIR_CAN)_invalid/eforms-sdk-1.$*/* $(PKG_DIR_CAN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CAN)_invalid-1.$*
+endif
+endif
 ifeq ($(TRIM_DOWN_SHACL), 1)
 	@ echo "Modifying ePO SHACL file to suppress rdf:PlainLiteral violations"
-	@ sed -i 's/sh:datatype rdf:PlainLiteral/sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] )/' mappings/$(PKG_PREFIX_CN)_v1.$*/$(SHACL_PATH_EPO)
-	@ sed -i 's/sh:datatype rdf:PlainLiteral/sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] )/' mappings/$(PKG_PREFIX_CAN)_v1.$*/$(SHACL_PATH_EPO)
+	@ sed -i 's/sh:datatype rdf:PlainLiteral/sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] )/' $(PKG_DIR_CN)/$(SHACL_PATH_EPO)
+	@ sed -i 's/sh:datatype rdf:PlainLiteral/sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] )/' $(PKG_DIR_CAN)/$(SHACL_PATH_EPO)
 	@ echo "Modifying ePO SHACL file to substitute at-voc constraint with IRI"
-	@ sed -i 's/sh:class at-voc.*;/sh:nodeKind sh:IRI ;/' mappings/$(PKG_PREFIX_CN)_v1.$*/$(SHACL_PATH_EPO)
-	@ sed -i 's/sh:class at-voc:environmental-impact,/sh:nodeKind sh:IRI ;/' mappings/$(PKG_PREFIX_CN)_v1.$*/$(SHACL_PATH_EPO)
-	@ sed -i '/.*at-voc:green-public-procurement-criteria ;/d' mappings/$(PKG_PREFIX_CN)_v1.$*/$(SHACL_PATH_EPO)
-	@ sed -i 's/sh:class at-voc.*;/sh:nodeKind sh:IRI ;/' mappings/$(PKG_PREFIX_CAN)_v1.$*/$(SHACL_PATH_EPO)
-	@ sed -i 's/sh:class at-voc:environmental-impact,/sh:nodeKind sh:IRI ;/' mappings/$(PKG_PREFIX_CAN)_v1.$*/$(SHACL_PATH_EPO)
-	@ sed -i '/.*at-voc:green-public-procurement-criteria ;/d' mappings/$(PKG_PREFIX_CAN)_v1.$*/$(SHACL_PATH_EPO)	
+	@ sed -i 's/sh:class at-voc.*;/sh:nodeKind sh:IRI ;/' $(PKG_DIR_CN)/$(SHACL_PATH_EPO)
+	@ sed -i 's/sh:class at-voc:environmental-impact,/sh:nodeKind sh:IRI ;/' $(PKG_DIR_CN)/$(SHACL_PATH_EPO)
+	@ sed -i '/.*at-voc:green-public-procurement-criteria ;/d' $(PKG_DIR_CN)/$(SHACL_PATH_EPO)
+	@ sed -i 's/sh:class at-voc.*;/sh:nodeKind sh:IRI ;/' $(PKG_DIR_CAN)/$(SHACL_PATH_EPO)
+	@ sed -i 's/sh:class at-voc:environmental-impact,/sh:nodeKind sh:IRI ;/' $(PKG_DIR_CAN)/$(SHACL_PATH_EPO)
+	@ sed -i '/.*at-voc:green-public-procurement-criteria ;/d' $(PKG_DIR_CAN)/$(SHACL_PATH_EPO)
 endif
 
 package_release_cn_v%: package_prep
@@ -253,10 +273,10 @@ unversion-pkg-assets:
 	done
 
 list-unversioned-pkg-assets:
-	@find $(MAPPINGS_DIR) -type d \( -path "*/test_data/*" -o -path "*/output/*" \) -not -path "*-1.[0-9]*" -not -path "*/*-1.[0-9]*/*"
+	@find $(MAPPINGS_DIR) -maxdepth 3 -type d \( -path "*/test_data/*" -o -path "*/output/*" \) -not -path "*-1.[0-9]*" -not -path "*/*-1.[0-9]*/*"
 
 version-pkg-assets-dry-run:
-	@for dir in $$(find $(MAPPINGS_DIR) -type d \( -path "*/test_data/*" -o -path "*/output/*" \) -not -path "*-1.[0-9]*" -not -path "*/*-1.[0-9]*/*"); do \
+	@for dir in $$(find $(MAPPINGS_DIR) -maxdepth 3 -type d \( -path "*/test_data/*" -o -path "*/output/*" \) -not -path "*-1.[0-9]*" -not -path "*/*-1.[0-9]*/*"); do \
 		pkg_version=$$(echo "$$dir" | grep -o "package_[^/]*/\|package_[^_]*_v1\." | grep -o "1\.[0-9]*" || echo "$(DEFAULT_SDK_VERSION)"); \
 		newdir="$${dir}-$${pkg_version}"; \
 		echo "Would rename: $$dir -> $$newdir"; \
@@ -264,13 +284,13 @@ version-pkg-assets-dry-run:
 
 version-pkg-assets:
 	@echo "This will rename all unversioned test_data and output directories. Are you sure? [y/N]" && read ans && [ $$ans = y ]
-	@for dir in $$(find $(MAPPINGS_DIR) -type d \( -path "*/test_data/*" -o -path "*/output/*" \) -not -path "*-1.[0-9]*" -not -path "*/*-1.[0-9]*/*"); do \
+	@for dir in $$(find $(MAPPINGS_DIR) -maxdepth 3 -type d \( -path "*/test_data/*" -o -path "*/output/*" \) -not -path "*-1.[0-9]*" -not -path "*/*-1.[0-9]*/*"); do \
 		pkg_version=$$(echo "$$dir" | grep -o "package_[^/]*/\|package_[^_]*_v1\." | grep -o "1\.[0-9]*" || echo "$(DEFAULT_SDK_VERSION)"); \
 		newdir="$${dir}-$${pkg_version}"; \
 		echo "Renaming: $$dir -> $$newdir"; \
 		mkdir -p "$$newdir"; \
-		mv "$$dir"/* "$$newdir/" \
-		rmdir "$$dir"; \
+		mv "$$dir"/* "$$newdir/"; \
+		rm -rfv "$$dir"; \
 	done
 
 list-pkgs-data-count:
@@ -290,3 +310,12 @@ list-pkgs-data-size-cn:
 
 list-pkgs-data-size-can:
 	@ du -sh $(MAPPINGS_DIR)/package*can*/test_data | sort -rh
+
+list-mismatching-versions:
+	@ for i in $$(find $(MAPPINGS_DIR) -type f -path "*/test_data/*"); do \
+		version=$$(echo $$i | grep -o "package_[^/]*/\|package_[^_]*_v1\." | grep -o "1\.[0-9]*"); \
+		grep eforms-sdk $$i | grep -v $$version && echo $$i; \
+	done || true
+
+list-latest-sdk-versions:
+	@ cd $(SDK_PROJECT_DIR) && for i in $(VERSIONS); do echo -n "v1.$$i: " && git tag -l | grep 1.$$i | sed 's/-/~/' | sort -V | sed 's/~/-/' | tail -n1; done

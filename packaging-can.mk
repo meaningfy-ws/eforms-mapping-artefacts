@@ -85,11 +85,18 @@ package_can_samples_v%:
 	@ mkdir -p $(OUTPUT_DIR)
 	@ rm -rfv $(PKG_DIR)
 	@ cp -rv mappings/$(PKG_PREFIX_CAN)_v1.$* $(PKG_DIR)
-	@ echo "Including EF29 manual sample data"
+ifeq ($(INCLUDE_OLD_SAMPLES), 1)
+	@ echo "Including (old) EF29 sample data"
 	@ mkdir -p $(PKG_DIR)/$(SAMPLES_DIR_CAN)-1.$*
-	@ test -d $(SAMPLES_DIR_CAN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_CAN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_CAN)-1.$* \; || echo "No manual samples for v1.$*"
+	@ test -d $(SAMPLES_DIR_CAN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_CAN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_CAN)-1.$* \; || echo "No old samples for v1.$*"
+endif
+ifeq ($(INCLUDE_NEW_SAMPLES), 1)
+	@ echo "Including all (new) CAN sample data"
+	mkdir -p $(PKG_DIR)/$(SAMPLES_ALL_CAN)-1.$*
+	test -d $(SAMPLES_ALL_CAN)/$(SDK_NAME)-1.$* && find $(SAMPLES_ALL_CAN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_ALL_CAN)-1.$* \; || echo "No new samples for v1.$*"
+endif
 	@ echo "Removing any SDK examples"
-	@ rm -rfv $(PKG_DIR)/$(SDK_DATA_NAME_CAN)-1.$*
+	@ rm -rv $(PKG_DIR)/$(SDK_DATA_DIR_CAN)-1.$*
 ifeq ($(REPLACE_CM_METADATA_ID), 1)
 	@ echo "Modifying Identifier in the CM and replacing XLSX"
 	@ mkdir -p $(PKG_TMP) && unzip $(PKG_DIR)/$(CM_FILE) -d $(PKG_TMP)
@@ -128,9 +135,16 @@ ifeq ($(INCLUDE_INVALID_EXAMPLES), 1)
 	@ mkdir -p $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)_invalid-1.$*
 	@ cp -rv $(SDK_DATA_DIR_CAN)_invalid/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)_invalid-1.$*
 endif
-	@ echo "Including EF29 manual sample data"
+ifeq ($(INCLUDE_OLD_SAMPLES), 1)
+	@ echo "Including (old) EF29 sample data"
 	@ mkdir -p $(PKG_DIR)/$(SAMPLES_DIR_CAN)-1.$*
-	@ test -d $(SAMPLES_DIR_CAN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_CAN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_CAN)-1.$* \; || echo "No manual samples for v1.$*"
+	@ test -d $(SAMPLES_DIR_CAN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_CAN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_CAN)-1.$* \; || echo "No old samples for v1.$*"
+endif
+ifeq ($(INCLUDE_NEW_SAMPLES), 1)
+	@ echo "Including all (new) CAN sample data"
+	mkdir -p $(PKG_DIR)/$(SAMPLES_ALL_CAN)-1.$*
+	test -d $(SAMPLES_ALL_CAN)/$(SDK_NAME)-1.$* && find $(SAMPLES_ALL_CAN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_ALL_CAN)-1.$* \; || echo "No new samples for v1.$*"
+endif
 ifeq ($(REPLACE_CM_METADATA_ID), 1)
 	@ echo "Modifying Identifier in the CM and replacing XLSX"
 	@ mkdir -p $(PKG_TMP) && unzip $(PKG_DIR)/$(CM_FILE) -d $(PKG_TMP)
@@ -201,9 +215,16 @@ package_can_attribs_v%:
 	@ echo "Including CAN SDK v1.$* example data"
 	@ mkdir -p $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)-1.$*
 	@ cp -rv $(SDK_DATA_DIR_CAN)/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)-1.$*/
-	@ echo "Including EF29 manual sample data"
+ifeq ($(INCLUDE_OLD_SAMPLES), 1)
+	@ echo "Including (old) EF29 sample data"
 	@ mkdir -p $(PKG_DIR)/$(SAMPLES_DIR_CAN)-1.$*
-	@ test -d $(SAMPLES_DIR_CAN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_CAN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_CAN)-1.$* \; || echo "No manual samples for v1.$*"
+	@ test -d $(SAMPLES_DIR_CAN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_CAN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_CAN)-1.$* \; || echo "No old samples for v1.$*"
+endif
+ifeq ($(INCLUDE_NEW_SAMPLES), 1)
+	@ echo "Including all (new) CAN sample data"
+	mkdir -p $(PKG_DIR)/$(SAMPLES_ALL_CAN)-1.$*
+	test -d $(SAMPLES_ALL_CAN)/$(SDK_NAME)-1.$* && find $(SAMPLES_ALL_CAN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_ALL_CAN)-1.$* \; || echo "No new samples for v1.$*"
+endif
 	@ echo "Including CAN multilingual sample data"
 	@ mkdir -p $(PKG_DIR)/$(SAMPLES_DIR_LANG_CAN)-1.$*
 	@ test -d $(SAMPLES_DIR_LANG_CAN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_LANG_CAN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_LANG_CAN)-1.$* \; || echo "No multilingual samples for CAN v1.$*"

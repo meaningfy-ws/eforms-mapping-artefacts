@@ -97,9 +97,10 @@ package_cn_samples_v%:
 	@ mkdir -p $(OUTPUT_DIR)
 	@ rm -rfv $(PKG_DIR)
 	@ cp -rv mappings/$(PKG_PREFIX_CN)_v1.$* $(PKG_DIR)
-	@ echo "Including EF10-24 systematic sample data"
+ifeq ($(INCLUDE_OLD_SAMPLES), 1)
+	@ echo "Including (old) EF10-24 sample data"
 	@ mkdir -p $(PKG_DIR)/$(SAMPLES_DIR_CN)-1.$*
-	@ test -d $(SAMPLES_DIR_CN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_CN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_CN)-1.$* \; || echo "No systematic samples for v1.$*"
+	@ test -d $(SAMPLES_DIR_CN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_CN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_CN)-1.$* \; || echo "No old samples for v1.$*"
 ifeq ($(INCLUDE_RANDOM_SAMPLES), 1)
 	@ echo "Including EF10-24 random sampling data"
 	@ mkdir -p $(PKG_DIR)/$(SAMPLES_RANDOM_DIR)-1.$*
@@ -110,6 +111,12 @@ ifeq ($(EXCLUDE_PROBLEM_SAMPLES), 1)
 	@ find $(PKG_DIR)/$(SAMPLES_RANDOM_DIR)-1.$* -name 665610-2023.xml -exec rm -fv {} \;
 	@ find $(PKG_DIR)/$(SAMPLES_DIR_CN)-1.$* -name 135016-2024.xml -exec rm -fv {} \;
 	@ find $(PKG_DIR)/$(SAMPLES_DIR_CN)-1.$* -name 725041-2023.xml -exec rm -fv {} \;
+endif
+endif
+ifeq ($(INCLUDE_NEW_SAMPLES), 1)
+	@ echo "Including all (new) CN sample data"
+	mkdir -p $(PKG_DIR)/$(SAMPLES_ALL_CN)-1.$*
+	test -d $(SAMPLES_ALL_CN)/$(SDK_NAME)-1.$* && find $(SAMPLES_ALL_CN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_ALL_CN)-1.$* \; || echo "No old samples for v1.$*"
 endif
 	@ echo "Removing any SDK examples"
 	@ rm -rfv $(PKG_DIR)/$(SDK_DATA_DIR_CN)*
@@ -158,9 +165,10 @@ endif
 # 	@ cp -rv $(TEST_DATA_DIR)/op_test_cn_d2.1 $(PKG_DIR)/test_data
 # 	@ cp -rv $(TEST_DATA_DIR)/op_test_cn_gh_issues $(PKG_DIR)/test_data
 # endif
-	@ echo "Including EF10-24 systematic sample data"
+ifeq ($(INCLUDE_OLD_SAMPLES), 1)
+	@ echo "Including (old) EF10-24 sample data"
 	@ mkdir -p $(PKG_DIR)/$(SAMPLES_DIR_CN)-1.$*
-	@ test -d $(SAMPLES_DIR_CN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_CN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_CN)-1.$* \; || echo "No manual samples for v1.$*"
+	@ test -d $(SAMPLES_DIR_CN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_CN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_CN)-1.$* \; || echo "No old samples for v1.$*"
 ifeq ($(INCLUDE_RANDOM_SAMPLES), 1)
 	@ echo "Including EF10-24 random sampling data"
 	@ mkdir -p $(PKG_DIR)/$(SAMPLES_RANDOM_DIR)-1.$*
@@ -171,6 +179,12 @@ ifeq ($(EXCLUDE_PROBLEM_SAMPLES), 1)
 	@ find $(PKG_DIR)/$(SAMPLES_RANDOM_DIR)-1.$* -name 665610-2023.xml -exec rm -fv {} \;
 	@ find $(PKG_DIR)/$(SAMPLES_DIR_CN)-1.$* -name 135016-2024.xml -exec rm -fv {} \;
 	@ find $(PKG_DIR)/$(SAMPLES_DIR_CN)-1.$* -name 725041-2023.xml -exec rm -fv {} \;
+endif
+endif
+ifeq ($(INCLUDE_NEW_SAMPLES), 1)
+	@ echo "Including all (new) CN sample data"
+	mkdir -p $(PKG_DIR)/$(SAMPLES_ALL_CN)-1.$*
+	test -d $(SAMPLES_ALL_CN)/$(SDK_NAME)-1.$* && find $(SAMPLES_ALL_CN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_ALL_CN)-1.$* \; || echo "No old samples for v1.$*"
 endif
 ifeq ($(REPLACE_CM_METADATA_ID), 1)
 	@ echo "Modifying Identifier in the CM and replacing XLSX"
@@ -242,12 +256,10 @@ package_cn_attribs_v%:
 	@ echo "Including CN SDK v1.$* example data"
 	@ mkdir -p $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)-1.$*
 	@ cp -rv $(SDK_DATA_DIR_CN)/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)-1.$*/
-	@ echo "Including EF10-24 systematic sample data"
+ifeq ($(INCLUDE_OLD_SAMPLES), 1)
+	@ echo "Including (old) EF10-24 sample data"
 	@ mkdir -p $(PKG_DIR)/$(SAMPLES_DIR_CN)-1.$*
-	@ test -d $(SAMPLES_DIR_CN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_CN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_CN)-1.$* \; || echo "No manual samples for v1.$*"
-	@ echo "Including CN multilingual sample data"
-	@ mkdir -p $(PKG_DIR)/$(SAMPLES_DIR_LANG_CN)-1.$*
-	@ test -d $(SAMPLES_DIR_LANG_CN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_LANG_CN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_LANG_CN)-1.$* \; || echo "No multilingual samples for CN v1.$*"
+	@ test -d $(SAMPLES_DIR_CN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_CN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_CN)-1.$* \; || echo "No old samples for v1.$*"
 ifeq ($(INCLUDE_RANDOM_SAMPLES), 1)
 	@ echo "Including EF10-24 random sampling data"
 	@ mkdir -p $(PKG_DIR)/$(SAMPLES_RANDOM_DIR)-1.$*
@@ -259,6 +271,15 @@ ifeq ($(EXCLUDE_PROBLEM_SAMPLES), 1)
 	@ find $(PKG_DIR)/$(SAMPLES_DIR_CN)-1.$* -name 135016-2024.xml -exec rm -fv {} \;
 	@ find $(PKG_DIR)/$(SAMPLES_DIR_CN)-1.$* -name 725041-2023.xml -exec rm -fv {} \;
 endif
+endif
+ifeq ($(INCLUDE_NEW_SAMPLES), 1)
+	@ echo "Including all (new) CN sample data"
+	mkdir -p $(PKG_DIR)/$(SAMPLES_ALL_CN)-1.$*
+	test -d $(SAMPLES_ALL_CN)/$(SDK_NAME)-1.$* && find $(SAMPLES_ALL_CN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_ALL_CN)-1.$* \; || echo "No old samples for v1.$*"
+endif
+	@ echo "Including CN multilingual sample data"
+	@ mkdir -p $(PKG_DIR)/$(SAMPLES_DIR_LANG_CN)-1.$*
+	@ test -d $(SAMPLES_DIR_LANG_CN)/$(SDK_NAME)-1.$* && find $(SAMPLES_DIR_LANG_CN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_DIR_LANG_CN)-1.$* \; || echo "No multilingual samples for CN v1.$*"
 	@ echo "Including attributes CM"
 	@ cp -v src/transformation/$(CM_ATTR_FILENAME) $(PKG_DIR)/$(CM_FILE)
 ifeq ($(REPLACE_CM_METADATA_ID), 1)

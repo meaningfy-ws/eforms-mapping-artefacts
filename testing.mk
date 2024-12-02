@@ -20,17 +20,17 @@ test_output:
 	@ echo "Testing output w/ $(JENA_TOOLS_ARQ) in $(TEST_QUERY_RESULTS_FORMAT) format"
 	@ echo "==> Test output orphans"
 	@ echo "-> CN (EF10-24)"
-	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_orphans.rq --data $(CN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT) | grep -vE $(ROOT_CONCEPTS_GREPFILTER)
+	@ $(JENA_TOOLS_ARQ) --query $(VALIDATION_DIR_SPARQL_RDF)/orphans_exist.select.rq --data $(CN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT) | grep -vE $(ROOT_CONCEPTS_GREPFILTER)
 	@ echo
 	@ echo "-> CAN (EF29)"
-	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_orphans.rq --data $(CAN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT) | grep -vE $(ROOT_CONCEPTS_GREPFILTER)
+	@ $(JENA_TOOLS_ARQ) --query $(VALIDATION_DIR_SPARQL_RDF)/orphans_exist.select.rq --data $(CAN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT) | grep -vE $(ROOT_CONCEPTS_GREPFILTER)
 	@ echo
 	@ echo "==> Test output runts"
 	@ echo "-> CN (EF10-24)"
-	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_runts.rq --data $(CN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ $(JENA_TOOLS_ARQ) --query $(VALIDATION_DIR_SPARQL_RDF)/runts_exist.select.rq --data $(CN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
 	@ echo
 	@ echo "-> CAN (EF29)"
-	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_runts.rq --data $(CAN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ $(JENA_TOOLS_ARQ) --query $(VALIDATION_DIR_SPARQL_RDF)/runts_exist.select.rq --data $(CAN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
 	@ echo
 	@ echo "==> Test output mixed types"
 	@ echo "-> CN (EF10-24)"
@@ -69,10 +69,10 @@ test_output:
 	@ echo
 	@ echo "==> Test output dupe identifiers"
 	@ echo "-> CN (EF10-24)"
-	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_dupe_identifiers.rq --data $(CN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ $(JENA_TOOLS_ARQ) --query $(VALIDATION_DIR_SPARQL_EPO)/dupe_identifiers_exist.select.rq --data $(CN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
 	@ echo
 	@ echo "-> CAN (EF29)"
-	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_dupe_identifiers.rq --data $(CAN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ $(JENA_TOOLS_ARQ) --query $(VALIDATION_DIR_SPARQL_EPO)/dupe_identifiers_exist.select.rq --data $(CAN_TEST_OUTPUT) --results=$(TEST_QUERY_RESULTS_FORMAT)
 	@ echo
 	@ echo "==> Test output missing playedBy"
 	@ echo "-> CN (EF10-24)"
@@ -96,10 +96,10 @@ test_output:
 test_output_versioned_v%:
 	@ echo "==> Test example output, v1.$*"
 	@ echo "-> Test output orphans, v1.$*"
-	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_orphans.rq --data $(VERSIONED_OUTPUT_DIR)/$(CANONICAL_EXAMPLE)-1.$*.ttl --results=$(TEST_QUERY_RESULTS_FORMAT) | grep -vE $(ROOT_CONCEPTS_GREPFILTER)
+	@ $(JENA_TOOLS_ARQ) --query $(VALIDATION_DIR_SPARQL_RDF)/orphans_exist.select.rq --data $(VERSIONED_OUTPUT_DIR)/$(CANONICAL_EXAMPLE)-1.$*.ttl --results=$(TEST_QUERY_RESULTS_FORMAT) | grep -vE $(ROOT_CONCEPTS_GREPFILTER)
 	@ echo
 	@ echo "-> Test output runts, v1.$*"
-	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_runts.rq --data $(VERSIONED_OUTPUT_DIR)/$(CANONICAL_EXAMPLE)-1.$*.ttl --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ $(JENA_TOOLS_ARQ) --query $(VALIDATION_SPARQL_DIR)/runts_exist.select.rq --data $(VERSIONED_OUTPUT_DIR)/$(CANONICAL_EXAMPLE)-1.$*.ttl --results=$(TEST_QUERY_RESULTS_FORMAT)
 	@ echo
 # @ echo "-> Test output mixed types, v1.$*"
 # @ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_mixed_types.rq --data $(VERSIONED_OUTPUT_DIR)/$(CANONICAL_EXAMPLE)-1.$*.ttl --results=$(TEST_QUERY_RESULTS_FORMAT)
@@ -117,7 +117,7 @@ test_output_versioned_v%:
 # @ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_suspect_iri_name.rq --data $(VERSIONED_OUTPUT_DIR)/$(CANONICAL_EXAMPLE)-1.$*.ttl --results=$(TEST_QUERY_RESULTS_FORMAT)
 # @ echo
 # @ echo "-> Test output dupe identifiers, v1.$*"
-# @ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_dupe_identifiers.rq --data $(VERSIONED_OUTPUT_DIR)/$(CANONICAL_EXAMPLE)-1.$*.ttl --results=$(TEST_QUERY_RESULTS_FORMAT)
+# @ $(JENA_TOOLS_ARQ) --query $(VALIDATION_DIR_SPARQL_EPO)/dupe_identifiers_exist.select.rq --data $(VERSIONED_OUTPUT_DIR)/$(CANONICAL_EXAMPLE)-1.$*.ttl --results=$(TEST_QUERY_RESULTS_FORMAT)
 # @ echo
 # @ echo "-> Test output missing playedBy, v1.$*"
 # @ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_missing_playedBy.rq --data $(VERSIONED_OUTPUT_DIR)/$(CANONICAL_EXAMPLE)-1.$*.ttl --results=$(TEST_QUERY_RESULTS_FORMAT)

@@ -6,7 +6,7 @@
 show_help() {
     echo "Usage: $0 -t|--type <type>"
     echo "Options:"
-    echo "  -t, --type         Specify the type of transformation. Must be 'cn' or 'can'."
+    echo "  -t, --type         Specify the type of transformation. Must be 'cn', 'can', or 'pin'."
     echo "  -h, --help         Display this help message."
 }
 
@@ -33,8 +33,8 @@ if [[ -z "$type" ]]; then
 else
     # Convert type to lowercase for case-insensitive comparison
     type=$(echo "$type" | tr '[:upper:]' '[:lower:]')
-    if [[ "$type" != "cn" && "$type" != "can" ]]; then
-        echo "Error: type must be either 'cn' or 'can'"
+    if [[ "$type" != "cn" && "$type" != "can" && "$type" != "pin" ]]; then
+        echo "Error: type must be either 'cn', 'can', or 'pin'"
         exit 1
     fi
 fi

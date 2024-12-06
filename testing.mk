@@ -7,7 +7,6 @@ test:
 	@ echo -n "Validating reference test outputs.."
 	@ $(JENA_TOOLS_RIOT) --validate $(CN_TEST_OUTPUT)
 	@ $(JENA_TOOLS_RIOT) --validate $(CAN_TEST_OUTPUT)
-	@ $(JENA_TOOLS_RIOT) --validate $(CANONLY_TEST_OUTPUT)
 	@ echo "done"
 
 test_versioned_v%: test

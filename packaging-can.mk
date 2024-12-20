@@ -11,7 +11,7 @@ package_can_minimal_v%:
 	@ rm -rfv $(PKG_DIR)
 	@ cp -rv mappings/$(PKG_PREFIX_CAN)_v1.$* $(PKG_DIR)
 ifeq ($(PACKAGE_EXAMPLES_BY_DEFAULT), 1)
-	@ echo "Removing all CN SDK v1.$* example data except can_24_maximal"
+	@ echo "Removing all CAN SDK v1.$* example data except can_24_maximal"
 	@ find $(PKG_DIR)/$(TEST_DATA_DIR) -type f -not -path "*can_24_maximal*" -exec rm -fv {} \;
 ifeq ($(INCLUDE_INVALID_EXAMPLES), 1)
 	@ echo "Removing any INVALID CAN SDK v1.$* example data"
@@ -96,7 +96,7 @@ ifeq ($(INCLUDE_NEW_SAMPLES), 1)
 	test -d $(SAMPLES_ALL_CAN)/$(SDK_NAME)-1.$* && find $(SAMPLES_ALL_CAN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_ALL_CAN)-1.$* \; || echo "No new samples for v1.$*"
 endif
 	@ echo "Removing any SDK examples"
-	@ rm -rv $(PKG_DIR)/$(SDK_DATA_DIR_CAN)-1.$*
+	@ rm -rv $(PKG_DIR)/$(SDK_DATA_DIR_CAN)*
 ifeq ($(REPLACE_CM_METADATA_ID), 1)
 	@ echo "Modifying Identifier in the CM and replacing XLSX"
 	@ mkdir -p $(PKG_TMP) && unzip $(PKG_DIR)/$(CM_FILE) -d $(PKG_TMP)

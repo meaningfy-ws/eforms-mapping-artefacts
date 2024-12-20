@@ -21,8 +21,9 @@ CM_ID_PREFIX_CN = package_eforms
 CM_TITLE_PREFIX_CN = Package EF
 CM_ID_PREFIX_CAN = package_eforms
 CM_TITLE_PREFIX_CAN = Package EF
-CM_ID_PREFIX_PIN = package_eforms
-CM_TITLE_PREFIX_PIN = Package EF
+CM_ID_PREFIX_PIN = package_eforms_1-9
+CM_TITLE_PREFIX_PIN = Package EF1-EF9
+CM_VER_STRING_PIN = v1.10
 TRIM_DOWN_SHACL = 1
 EXCLUDE_SPARQL_VALIDATIONS = 0
 INCLUDE_NEW_SAMPLES = 1
@@ -303,6 +304,7 @@ package_release_pin_v%: package_prep
 
 include packaging-cn.mk
 include packaging-can.mk
+include packaging-pin.mk
 include testing.mk
 include documentation.mk
 

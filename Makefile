@@ -2,11 +2,13 @@ MAPPINGS_DIR = mappings
 OUTPUT_DIR = dist
 PKG_PREFIX_CN = package_cn
 PKG_PREFIX_CAN = package_can
+PKG_PREFIX_PIN = package_pin
 SDK_NAME = eforms-sdk
 DEFAULT_SDK_VERSION = 1.9
 SDK_PROJECT_DIR = ../eForms-SDK
 SDK_DATA_NAME_CN = sdk_examples_cn
 SDK_DATA_NAME_CAN = sdk_examples_can
+SDK_DATA_NAME_PIN = sdk_examples_pin
 SAMPLES_NAME_CN = sampling_20231001-20240311
 SAMPLES_NAME_CAN = sampling_manual_CAN_202404
 SAMPLES_NAME_LANG = sampling_multilingual
@@ -19,6 +21,8 @@ CM_ID_PREFIX_CN = package_eforms
 CM_TITLE_PREFIX_CN = Package EF
 CM_ID_PREFIX_CAN = package_eforms
 CM_TITLE_PREFIX_CAN = Package EF
+CM_ID_PREFIX_PIN = package_eforms
+CM_TITLE_PREFIX_PIN = Package EF
 TRIM_DOWN_SHACL = 1
 EXCLUDE_SPARQL_VALIDATIONS = 0
 INCLUDE_NEW_SAMPLES = 1
@@ -33,11 +37,13 @@ PACKAGE_EXAMPLES_BY_DEFAULT = 1
 
 CN_TEST_OUTPUT = src/output-cn.ttl
 CAN_TEST_OUTPUT = src/output-can.ttl
+PIN_TEST_OUTPUT = src/output-pin.ttl
 CANONLY_TEST_OUTPUT = src/output-canonly.ttl
 VERSIONED_OUTPUT_DIR = src/output-versioned
 CANONICAL_EXAMPLE = cn_24_maximal
 CN_RML_DIR = src/mappings
 CAN_RML_DIR = src/mappings-can
+PIN_RML_DIR = src/mappings-pin
 TEST_DATA_DIR = test_data
 TEST_QUERIES_DIR = test_queries
 TEST_SCRIPTS_DIR = test_scripts
@@ -64,6 +70,7 @@ ANLYS_SCRIPTS_DIR = analysis_scripts
 BUILD_PRINT = \e[1;34mSTEP: \e[0m
 SDK_DATA_DIR_CN = $(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)
 SDK_DATA_DIR_CAN = $(TEST_DATA_DIR)/$(SDK_DATA_NAME_CAN)
+SDK_DATA_DIR_PIN = $(TEST_DATA_DIR)/$(SDK_DATA_NAME_PIN)
 SAMPLES_DIR_CN = $(TEST_DATA_DIR)/$(SAMPLES_NAME_CN)
 SAMPLES_DIR_CAN = $(TEST_DATA_DIR)/$(SAMPLES_NAME_CAN)
 SAMPLES_DIR_LANG_CN = $(TEST_DATA_DIR)/$(SAMPLES_NAME_LANG)_cn
@@ -71,41 +78,62 @@ SAMPLES_DIR_LANG_CAN = $(TEST_DATA_DIR)/$(SAMPLES_NAME_LANG)_can
 SAMPLES_RANDOM_DIR = $(TEST_DATA_DIR)/$(SAMPLES_RANDOM_NAME)
 SAMPLES_ALL_CN = $(TEST_DATA_DIR)/$(SAMPLES_ALL_BASENAME)_cn
 SAMPLES_ALL_CAN = $(TEST_DATA_DIR)/$(SAMPLES_ALL_BASENAME)_can
+SAMPLES_ALL_PIN = $(TEST_DATA_DIR)/$(SAMPLES_ALL_BASENAME)_pin
 CM_FILE = $(TX_DIR)/$(CM_FILENAME)
 
 VERSIONS := $(shell seq 3 10)
 # some versions don't currently have systematic and/or random samples
 VERSIONS_SAMPLES := $(3 6 7 8 9)
 
-package_sync: $(addprefix package_sync_v, $(VERSIONS))
+# TODO: move src subfolders around to be more compatible w/ packages (mappings -> transformation)
+# we are not copying over CM for now -- leaving it under manual control
+# also not copying over data
+package_sync: package_prep package_sync_cn package_sync_can package_sync_pin
+
+package_sync_cn: $(addprefix package_sync_cn_v, $(VERSIONS))
+package_sync_can: $(addprefix package_sync_can_v, $(VERSIONS))
+package_sync_pin: $(addprefix package_sync_pin_v, $(VERSIONS))
 package_release_cn: $(addprefix package_release_cn_v, $(VERSIONS))
 package_release_can: $(addprefix package_release_can_v, $(VERSIONS))
+package_release_pin: $(addprefix package_release_pin_v, $(VERSIONS))
 reformat_package_cn: $(addprefix reformat_package_cn_v, $(VERSIONS))
 reformat_package_can: $(addprefix reformat_package_can_v, $(VERSIONS))
 package_cn_minimal: $(addprefix package_cn_minimal_v, $(VERSIONS))
 package_can_minimal: $(addprefix package_can_minimal_v, $(VERSIONS))
+package_pin_minimal: $(addprefix package_pin_minimal_v, $(VERSIONS))
 export_cn_minimal: $(addprefix export_cn_minimal_v, $(VERSIONS))
 export_can_minimal: $(addprefix export_can_minimal_v, $(VERSIONS))
+export_pin_minimal: $(addprefix export_pin_minimal_v, $(VERSIONS))
 package_cn_examples: $(addprefix package_cn_examples_v, $(VERSIONS))
 package_can_examples: $(addprefix package_can_examples_v, $(VERSIONS))
+package_pin_examples: $(addprefix package_pin_examples_v, $(VERSIONS))
 export_cn_examples: $(addprefix export_cn_examples_v, $(VERSIONS))
 export_can_examples: $(addprefix export_can_examples_v, $(VERSIONS))
+export_pin_examples: $(addprefix export_pin_examples_v, $(VERSIONS))
 package_cn_samples: $(addprefix package_cn_samples_v, $(VERSIONS))
 package_can_samples: $(addprefix package_can_samples_v, $(VERSIONS))
+package_pin_samples: $(addprefix package_pin_samples_v, $(VERSIONS))
 export_cn_samples: $(addprefix export_cn_samples_v, $(VERSIONS))
 export_can_samples: $(addprefix export_can_samples_v, $(VERSIONS))
+export_pin_samples: $(addprefix export_pin_samples_v, $(VERSIONS))
 package_cn_maximal: $(addprefix package_cn_maximal_v, $(VERSIONS))
 package_can_maximal: $(addprefix package_can_maximal_v, $(VERSIONS))
+package_pin_maximal: $(addprefix package_pin_maximal_v, $(VERSIONS))
 export_cn_maximal: $(addprefix export_cn_maximal_v, $(VERSIONS))
 export_can_maximal: $(addprefix export_can_maximal_v, $(VERSIONS))
+export_pin_maximal: $(addprefix export_pin_maximal_v, $(VERSIONS))
 package_cn_lang: $(addprefix package_cn_lang_v, $(VERSIONS))
 package_can_lang: $(addprefix package_can_lang_v, $(VERSIONS))
+package_pin_lang: $(addprefix package_pin_lang_v, $(VERSIONS))
 export_cn_lang: $(addprefix export_cn_lang_v, $(VERSIONS))
 export_can_lang: $(addprefix export_can_lang_v, $(VERSIONS))
+export_pin_lang: $(addprefix export_pin_lang_v, $(VERSIONS))
 package_cn_attribs: $(addprefix package_cn_attribs_v, $(VERSIONS))
 package_can_attribs: $(addprefix package_can_attribs_v, $(VERSIONS))
+package_pin_attribs: $(addprefix package_pin_attribs_v, $(VERSIONS))
 export_cn_attribs: $(addprefix export_cn_attribs_v, $(VERSIONS))
 export_can_attribs: $(addprefix export_can_attribs_v, $(VERSIONS))
+export_pin_attribs: $(addprefix export_pin_attribs_v, $(VERSIONS))
 test_versioned: $(addprefix test_versioned_v, $(VERSIONS))
 test_output_versioned: $(addprefix test_output_versioned_v, $(VERSIONS))
 
@@ -113,10 +141,7 @@ package_prep:
 	@ echo "Staging versioned folders"
 	@ cd src && bash $(MULTIVER_SCRIPT)
 
-# TODO: move src subfolders around to be more compatible w/ packages (mappings -> transformation)
-# we are not copying over CM for now -- leaving it under manual control
-# also not copying over data
-package_sync_v%: package_prep
+package_sync_cn_v%:
 	@ echo "Syncing CN v1.$*"
 	@ $(eval PKG_DIR_CN := mappings/$(PKG_PREFIX_CN)_v1.$*)
 	@ mkdir -p $(PKG_DIR_CN)/$(TX_DIR)/
@@ -124,11 +149,35 @@ package_sync_v%: package_prep
 	@ cp -rv src/mappings $(PKG_DIR_CN)/$(TX_DIR)/
 	@ cp -v src/mappings-common/* $(PKG_DIR_CN)/$(TX_DIR)/mappings/
 	@ cp -v src/mappings-1.$*/* $(PKG_DIR_CN)/$(TX_DIR)/mappings/
-	@ rm -rfv $(PKG_DIR_CN)/$(TX_DIR)/mappings/*can_v*
+	@ echo "Removing irrelevant versioned files"
+	@ rm -fv $(PKG_DIR_CN)/$(TX_DIR)/mappings/*can_v*
+	@ rm -fv $(PKG_DIR_CN)/$(TX_DIR)/mappings/*pin_v*
+	@ echo "Replacing resources"
 	@ rm -rfv $(PKG_DIR_CN)/$(TX_DIR)/resources
 	@ cp -rv src/$(TX_DIR)/resources $(PKG_DIR_CN)/$(TX_DIR)/
+	@ echo "Replacing validations"
 	@ rm -rfv $(PKG_DIR_CN)/validation
 	@ cp -rv src/validation $(PKG_DIR_CN)/
+ifeq ($(PACKAGE_EXAMPLES_BY_DEFAULT), 1)
+	@ echo "Including CN SDK v1.$* example data"
+	@ mkdir -p $(PKG_DIR_CN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)-1.$*
+	@ cp -rv $(SDK_DATA_DIR_CN)/eforms-sdk-1.$*/* $(PKG_DIR_CN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)-1.$*/
+ifeq ($(INCLUDE_INVALID_EXAMPLES), 1)
+	@ echo "Including CN SDK v1.$* example data, INVALIDs"
+	@ mkdir -p $(PKG_DIR_CN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)_invalid-1.$*
+	@ cp -rv $(SDK_DATA_DIR_CN)_invalid/eforms-sdk-1.$*/* $(PKG_DIR_CN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)_invalid-1.$*
+endif
+endif
+ifeq ($(TRIM_DOWN_SHACL), 1)
+	@ echo "Modifying ePO SHACL file to suppress rdf:PlainLiteral violations"
+	@ sed -i 's/sh:datatype rdf:PlainLiteral/sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] )/' $(PKG_DIR_CN)/$(SHACL_PATH_EPO)
+	@ echo "Modifying ePO SHACL file to substitute at-voc constraint with IRI"
+	@ sed -i 's/sh:class at-voc.*;/sh:nodeKind sh:IRI ;/' $(PKG_DIR_CN)/$(SHACL_PATH_EPO)
+	@ sed -i 's/sh:class at-voc:environmental-impact,/sh:nodeKind sh:IRI ;/' $(PKG_DIR_CN)/$(SHACL_PATH_EPO)
+	@ sed -i '/.*at-voc:green-public-procurement-criteria ;/d' $(PKG_DIR_CN)/$(SHACL_PATH_EPO)
+endif
+
+package_sync_can_v%:
 	@ echo "Syncing CAN v1.$*"
 	@ $(eval PKG_DIR_CAN := mappings/$(PKG_PREFIX_CAN)_v1.$*)
 	@ mkdir -p $(PKG_DIR_CAN)/$(TX_DIR)/
@@ -137,21 +186,19 @@ package_sync_v%: package_prep
 	@ cp -v src/mappings-can/* $(PKG_DIR_CAN)/$(TX_DIR)/mappings/
 	@ cp -v src/mappings-common/* $(PKG_DIR_CAN)/$(TX_DIR)/mappings/
 	@ cp -v src/mappings-1.$*/* $(PKG_DIR_CAN)/$(TX_DIR)/mappings/
+	@ echo "Removing irrelevant versioned files"
+	@ rm -fv $(PKG_DIR_CAN)/$(TX_DIR)/mappings/*pin_v*
+	@ echo "Replacing resources"
 	@ rm -rfv $(PKG_DIR_CAN)/$(TX_DIR)/resources
 	@ cp -rv src/$(TX_DIR)/resources $(PKG_DIR_CAN)/$(TX_DIR)/
+	@ echo "Replacing validations"
 	@ rm -rfv $(PKG_DIR_CAN)/validation
 	@ cp -rv src/validation $(PKG_DIR_CAN)/
 ifeq ($(PACKAGE_EXAMPLES_BY_DEFAULT), 1)
-	@ echo "Including CN SDK v1.$* example data"
-	@ mkdir -p $(PKG_DIR_CN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)-1.$*
-	@ cp -rv $(SDK_DATA_DIR_CN)/eforms-sdk-1.$*/* $(PKG_DIR_CN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)-1.$*/
 	@ echo "Including CAN SDK v1.$* example data"
 	@ mkdir -p $(PKG_DIR_CAN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)-1.$*
 	@ cp -rv $(SDK_DATA_DIR_CAN)/eforms-sdk-1.$*/* $(PKG_DIR_CAN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CAN)-1.$*/
 ifeq ($(INCLUDE_INVALID_EXAMPLES), 1)
-	@ echo "Including CN SDK v1.$* example data, INVALIDs"
-	@ mkdir -p $(PKG_DIR_CN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)_invalid-1.$*
-	@ cp -rv $(SDK_DATA_DIR_CN)_invalid/eforms-sdk-1.$*/* $(PKG_DIR_CN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)_invalid-1.$*
 	@ echo "Including CAN SDK v1.$* example data, INVALIDs"
 	@ mkdir -p $(PKG_DIR_CAN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CAN)_invalid-1.$*
 	@ cp -rv $(SDK_DATA_DIR_CAN)_invalid/eforms-sdk-1.$*/* $(PKG_DIR_CAN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CAN)_invalid-1.$*
@@ -159,15 +206,47 @@ endif
 endif
 ifeq ($(TRIM_DOWN_SHACL), 1)
 	@ echo "Modifying ePO SHACL file to suppress rdf:PlainLiteral violations"
-	@ sed -i 's/sh:datatype rdf:PlainLiteral/sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] )/' $(PKG_DIR_CN)/$(SHACL_PATH_EPO)
 	@ sed -i 's/sh:datatype rdf:PlainLiteral/sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] )/' $(PKG_DIR_CAN)/$(SHACL_PATH_EPO)
 	@ echo "Modifying ePO SHACL file to substitute at-voc constraint with IRI"
-	@ sed -i 's/sh:class at-voc.*;/sh:nodeKind sh:IRI ;/' $(PKG_DIR_CN)/$(SHACL_PATH_EPO)
-	@ sed -i 's/sh:class at-voc:environmental-impact,/sh:nodeKind sh:IRI ;/' $(PKG_DIR_CN)/$(SHACL_PATH_EPO)
-	@ sed -i '/.*at-voc:green-public-procurement-criteria ;/d' $(PKG_DIR_CN)/$(SHACL_PATH_EPO)
 	@ sed -i 's/sh:class at-voc.*;/sh:nodeKind sh:IRI ;/' $(PKG_DIR_CAN)/$(SHACL_PATH_EPO)
 	@ sed -i 's/sh:class at-voc:environmental-impact,/sh:nodeKind sh:IRI ;/' $(PKG_DIR_CAN)/$(SHACL_PATH_EPO)
 	@ sed -i '/.*at-voc:green-public-procurement-criteria ;/d' $(PKG_DIR_CAN)/$(SHACL_PATH_EPO)
+endif
+
+package_sync_pin_v%:
+	@ echo "Syncing PIN v1.$*"
+	@ $(eval PKG_DIR_PIN := mappings/$(PKG_PREFIX_PIN)_v1.$*)
+	@ mkdir -p $(PKG_DIR_PIN)/$(TX_DIR)/
+	@ rm -rfv $(PKG_DIR_PIN)/$(TX_DIR)/mappings*
+	@ cp -rv src/mappings $(PKG_DIR_PIN)/$(TX_DIR)/
+	@ cp -v src/mappings-pin/* $(PKG_DIR_PIN)/$(TX_DIR)/mappings/
+	@ cp -v src/mappings-common/* $(PKG_DIR_PIN)/$(TX_DIR)/mappings/
+	@ cp -v src/mappings-1.$*/* $(PKG_DIR_PIN)/$(TX_DIR)/mappings/
+	@ echo "Removing irrelevant versioned files"
+	@ rm -fv $(PKG_DIR_PIN)/$(TX_DIR)/mappings/*can_v*
+	@ echo "Replacing resources"
+	@ rm -rfv $(PKG_DIR_PIN)/$(TX_DIR)/resources
+	@ cp -rv src/$(TX_DIR)/resources $(PKG_DIR_PIN)/$(TX_DIR)/
+	@ echo "Replacing validations"
+	@ rm -rfv $(PKG_DIR_PIN)/validation
+	@ cp -rv src/validation $(PKG_DIR_PIN)/
+ifeq ($(PACKAGE_EXAMPLES_BY_DEFAULT), 1)
+	@ echo "Including PIN SDK v1.$* example data"
+	@ mkdir -p $(PKG_DIR_PIN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_PIN)-1.$*
+	@ cp -rv $(SDK_DATA_DIR_PIN)/eforms-sdk-1.$*/* $(PKG_DIR_PIN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_PIN)-1.$*/
+ifeq ($(INCLUDE_INVALID_EXAMPLES), 1)
+	@ echo "Including PIN SDK v1.$* example data, INVALIDs"
+	@ mkdir -p $(PKG_DIR_PIN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_PIN)_invalid-1.$*
+	@ cp -rv $(SDK_DATA_DIR_PIN)_invalid/eforms-sdk-1.$*/* $(PKG_DIR_PIN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_PIN)_invalid-1.$*
+endif
+endif
+ifeq ($(TRIM_DOWN_SHACL), 1)
+	@ echo "Modifying ePO SHACL file to suppress rdf:PlainLiteral violations"
+	@ sed -i 's/sh:datatype rdf:PlainLiteral/sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] )/' $(PKG_DIR_PIN)/$(SHACL_PATH_EPO)
+	@ echo "Modifying ePO SHACL file to substitute at-voc constraint with IRI"
+	@ sed -i 's/sh:class at-voc.*;/sh:nodeKind sh:IRI ;/' $(PKG_DIR_PIN)/$(SHACL_PATH_EPO)
+	@ sed -i 's/sh:class at-voc:environmental-impact,/sh:nodeKind sh:IRI ;/' $(PKG_DIR_PIN)/$(SHACL_PATH_EPO)
+	@ sed -i '/.*at-voc:green-public-procurement-criteria ;/d' $(PKG_DIR_PIN)/$(SHACL_PATH_EPO)	
 endif
 
 package_release_cn_v%: package_prep
@@ -199,6 +278,20 @@ package_release_can_v%: package_prep
 	@ $(eval PKG_EXISTS := $(shell test -d $(PKG_DIR) && echo yes || echo no))
 	@ if [ "$(PKG_EXISTS)" = "yes" ]; then \
 		echo "Syncing CAN v1.$* to $(RELEASE_DIR)"; \
+		rm -rv $(PKG_DIR)/$(TX_DIR)/mappings ; \
+		cp -rv src/mappings $(PKG_DIR)/$(TX_DIR)/ ; \
+		cp -v src/mappings-can/* $(PKG_DIR)/$(TX_DIR)/mappings/ ; \
+		cp -v src/mappings-common/* $(PKG_DIR)/$(TX_DIR)/mappings/ ; \
+		cp -v src/mappings-1.$*/* $(PKG_DIR)/$(TX_DIR)/mappings/ ; \
+		rm -rv $(PKG_DIR)/$(TX_DIR)/resources ; \
+		cp -rv src/$(TX_DIR)/resources $(PKG_DIR)/$(TX_DIR)/ ; \
+	  fi
+
+package_release_pin_v%: package_prep
+	@ $(eval PKG_DIR := $(RELEASE_DIR)/mappings/$(PKG_PREFIX_PIN)_v1.$*)
+	@ $(eval PKG_EXISTS := $(shell test -d $(PKG_DIR) && echo yes || echo no))
+	@ if [ "$(PKG_EXISTS)" = "yes" ]; then \
+		echo "Syncing PIN v1.$* to $(RELEASE_DIR)"; \
 		rm -rv $(PKG_DIR)/$(TX_DIR)/mappings ; \
 		cp -rv src/mappings $(PKG_DIR)/$(TX_DIR)/ ; \
 		cp -v src/mappings-can/* $(PKG_DIR)/$(TX_DIR)/mappings/ ; \

@@ -1186,3 +1186,35 @@ tedm:MG-ContractTerm-foreseesContractSpecificTerm-ProcurementObject-foreseesProc
                 ] ;
         ] ;
 .
+
+tedm:MG-PlannedProcurementPart-refersToPlannedPart-AccessTerm_ND-PartInfoRequestPeriod a rr:TriplesMap ;
+    rdfs:label "PlannedProcurementPart";
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingProcess/cac:AdditionalInformationRequestPeriod";
+            rml:referenceFormulation ql:XPath
+        ];
+    rr:subjectMap
+        [
+            rdfs:label "ND-PartInfoRequestPeriod ";
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_PlannedProcurementPart_{../../cbc:ID}" ;
+            rr:class epo:PlannedProcurementPart;
+        ] ;
+.
+
+tedm:MG-PlannedProcurementPart-refersToPlannedPart-AccessTerm_ND-PartProcurementDocument a rr:TriplesMap ;
+    rdfs:label "PlannedProcurementPart";
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:CallForTendersDocumentReference";
+            rml:referenceFormulation ql:XPath
+        ];
+    rr:subjectMap
+        [
+            rdfs:label "ND-PartInfoRequestPeriod ";
+            rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_PlannedProcurementPart_{../../cbc:ID}" ;
+            rr:class epo:PlannedProcurementPart;
+        ] ;
+.

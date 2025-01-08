@@ -99,7 +99,7 @@ tedm:MG-AccessTerm_ND-PartProcurementDocument a rr:TriplesMap ;
      rr:predicateObjectMap
         [
             rdfs:label "BT-14-Part";
-            rdfs:comment "Additional Information Deadline MG-AccessTerm_ND under ND-PartProcurementDocument";
+            rdfs:comment "Documents Restricted MG-AccessTerm_ND under ND-PartProcurementDocument";
             rr:predicate epo:isProcurementDocumentRestricted ;
             rr:objectMap
                 [
@@ -109,7 +109,6 @@ tedm:MG-AccessTerm_ND-PartProcurementDocument a rr:TriplesMap ;
                 ] ;
              rr:objectMap
             [
-#                rr:constant "true"^^xsd:boolean ;
                 rml:reference "if (cbc:DocumentType[text()='restricted-document']) then 'true' else null";
                 rr:datatype xsd:boolean ;
 
@@ -128,6 +127,30 @@ tedm:MG-AccessTerm_ND-PartProcurementDocument a rr:TriplesMap ;
                         rr:child "cbc:DocumentTypeCode" ;
                         rr:parent "code.value" ;
                     ] ;
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-15-Part";
+            rdfs:comment "Documents URL MG-AccessTerm_ND under ND-PartProcurementDocument";
+            rr:predicate epo:hasPublicAccessURL ;
+            rr:objectMap
+                [
+                    rml:reference "cac:Attachment[../cbc:DocumentType/text()='non-restricted-document']/cac:ExternalReference/cbc:URI";
+                    rr:datatype xsd:anyURI ;
+
+                ] ;
+        ] ;
+     rr:predicateObjectMap
+        [
+            rdfs:label "BT-615-Part";
+            rdfs:comment "Documents Restricted URL MG-AccessTerm_ND under ND-PartProcurementDocument";
+            rr:predicate epo:make ;
+            rr:objectMap
+                [
+                    rml:reference "cac:Attachment[../cbc:DocumentType/text()='restricted-document']/cac:ExternalReference/cbc:URI";
+                    rr:datatype xsd:anyURI ;
+
                 ] ;
         ] ;
 .

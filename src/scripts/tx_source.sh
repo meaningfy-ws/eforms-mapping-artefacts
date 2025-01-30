@@ -40,6 +40,9 @@ while [[ "$#" -gt 0 ]]; do
     shift
 done
 
+# (re)create the pre-requisite temporary versioned mapping folders
+bash scripts/prep-multiver.sh
+
 # Validate the type argument
 if [[ -z "$type" ]]; then
     echo "Error: type must be provided to determine the correct profile of rules to select"
@@ -75,8 +78,6 @@ if [[ ! -f "data/source_${type}.xml" ]]; then
     echo "Error: data/source_${type}.xml not found. Transformation cannot continue due to lack of sample data file."
     exit 1
 fi
-
-bash scripts/prep-multiver.sh
 
 # Find and copy the data file if specified
 if [[ -n "$data_file" ]]; then

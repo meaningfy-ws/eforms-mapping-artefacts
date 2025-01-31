@@ -29,6 +29,9 @@ while [[ "$#" -gt 0 ]]; do
     shift
 done
 
+# (re)create the pre-requisite temporary versioned mapping folders
+bash scripts/prep-multiver.sh
+
 # Validate the type argument
 if [[ -z "$type" ]]; then
     echo "Error: type must be provided to determine the correct profile of rules to select"
@@ -42,8 +45,6 @@ else
         exit 1
     fi
 fi
-
-bash scripts/prep-multiver.sh
 
 # Check if at least one data file exists for the specified type
 data_file_pattern="data/${type}*_24_maximal*.xml"

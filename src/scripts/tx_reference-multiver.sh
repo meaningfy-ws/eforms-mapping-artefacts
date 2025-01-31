@@ -35,6 +35,9 @@ while [[ "$#" -gt 0 ]]; do
     shift
 done
 
+# (re)create the pre-requisite temporary versioned mapping folders
+bash scripts/prep-multiver.sh
+
 # Validate the type argument
 if [[ -z "$type" ]]; then
     echo "Error: type must be provided to determine the correct profile of rules to select"
@@ -48,8 +51,6 @@ else
         exit 1
     fi
 fi
-
-bash scripts/prep-multiver.sh
 
 # Define additional mappings if type is not 'cn'
 additional_mappings=""

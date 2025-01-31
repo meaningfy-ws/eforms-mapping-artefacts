@@ -19,7 +19,7 @@ show_help() {
     echo "Options:"
     echo "  -t, --type         Specify the type of transformation. Must be 'cn', 'can', or 'pin'."
     echo "  -v, --rule-version Specify the rule version to use in mappings-version. Must match the pattern '1.x' where x is a single or double-digit number."
-    echo "  -d, --data-file    Specify the data file name to find under the root test_data folder."
+    echo "  -d, --data-file    Specify the data file or files (comma-separated, quoted if spaced) to find under the root test_data folder."
     echo "  -h, --help         Display this help message."
 }
 
@@ -39,6 +39,9 @@ while [[ "$#" -gt 0 ]]; do
     esac
     shift
 done
+
+# (re)create the pre-requisite temporary versioned mapping folders
+bash scripts/prep-multiver.sh
 
 # Validate the type argument
 if [[ -z "$type" ]]; then
@@ -76,16 +79,56 @@ if [[ ! -f "data/source_${type}.xml" ]]; then
     exit 1
 fi
 
-bash scripts/prep-multiver.sh
-
 # Find and copy the data file if specified
 if [[ -n "$data_file" ]]; then
-    found_file=$(find "$test_data_dir" -name "$data_file" -print -quit)
-    if [[ -z "$found_file" ]]; then
-        echo "Error: data file '$data_file' not found in $test_data_dir directory."
+    # Split data_file on commas into an array and trim whitespace
+    IFS=',' read -ra data_files_raw <<< "$data_file"
+    # Clear array before populating with trimmed values
+    data_files=()
+    for file in "${data_files_raw[@]}"; do
+        # Trim leading and trailing whitespace and add to array
+        data_files+=("$(echo "$file" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')")
+    done
+
+    # Construct find command with multiple -name conditions
+    find_cmd="find \"$test_data_dir\" "
+    for i in "${!data_files[@]}"; do
+        # Append .xml if not already present
+        if [[ ! "${data_files[$i]}" =~ \.xml$ ]]; then
+            data_files[$i]="${data_files[$i]}.xml"
+        fi
+
+        if [ $i -eq 0 ]; then
+            find_cmd+=" -name \"${data_files[$i]}\""
+        else
+            find_cmd+=" -o -name \"${data_files[$i]}\""
+        fi
+    done
+
+    # Execute find command and store results
+    mapfile -t found_files < <(eval "$find_cmd")
+
+    if [[ ${#found_files[@]} -eq 0 ]]; then
+        echo "Error: no matching data files found in $test_data_dir directory."
         exit 1
     fi
+
+    # Try to find a file matching the rule version
+    found_file=""
+    for file in "${found_files[@]}"; do
+        if grep -q "$rule_version" <<< "$file"; then
+            found_file="$file"
+            break
+        fi
+    done
+
+    # If no version match found, use the first file
+    if [[ -z "$found_file" ]]; then
+        found_file="${found_files[0]}"
+    fi
+
     echo "Copying data file '$found_file' to 'data/source_${type}.xml'"
+    cp "data/source_${type}.xml" "data/source_${type}.xml.bak"
     cp "$found_file" "data/source_${type}.xml"
 fi
 

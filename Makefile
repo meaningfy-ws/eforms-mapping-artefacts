@@ -146,7 +146,7 @@ ifeq ($(PACKAGE_EXAMPLES_BY_DEFAULT), 1)
 	@ mkdir -p $(PKG_DIR_CN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)-1.$*
 	@ cp -rv $(SDK_DATA_DIR_CN)/eforms-sdk-1.$*/* $(PKG_DIR_CN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)-1.$*/
 	@ echo "Including CAN SDK v1.$* example data"
-	@ mkdir -p $(PKG_DIR_CAN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)-1.$*
+	@ mkdir -p $(PKG_DIR_CAN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CAN)-1.$*
 	@ cp -rv $(SDK_DATA_DIR_CAN)/eforms-sdk-1.$*/* $(PKG_DIR_CAN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CAN)-1.$*/
 ifeq ($(INCLUDE_INVALID_EXAMPLES), 1)
 	@ echo "Including CN SDK v1.$* example data, INVALIDs"

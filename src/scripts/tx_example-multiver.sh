@@ -10,7 +10,7 @@ rmlmapper_cmd="java -jar $rmlmapper"
 show_help() {
     echo "Usage: $0 -t|--type <type>"
     echo "Options:"
-    echo "  -t, --type         Specify the type of transformation. Must be 'cn', 'can', or 'pin'."
+    echo "  -t, --type         Specify the type of transformation. Must be 'cn', 'can', 'pin' or 'e5'."
     echo "  -h, --help         Display this help message."
 }
 
@@ -40,14 +40,19 @@ if [[ -z "$type" ]]; then
 else
     # Convert type to lowercase for case-insensitive comparison
     type=$(echo "$type" | tr '[:upper:]' '[:lower:]')
-    if [[ "$type" != "cn" && "$type" != "can" && "$type" != "pin" ]]; then
-        echo "Error: type must be either 'cn', 'can', or 'pin'"
+    if [[ "$type" != "cn" && "$type" != "can" && "$type" != "pin" && "$type" != "e5" ]]; then
+        echo "Error: type must be either 'cn', 'can', 'pin' or 'e5'"
         exit 1
     fi
 fi
 
 # Check if at least one data file exists for the specified type
 data_file_pattern="data/${type}*_24_maximal*.xml"
+
+if [[ "$type" = "e5" ]]; then
+    data_file_pattern="data/E5*_*.xml"    
+fi
+
 if ! ls $data_file_pattern 1> /dev/null 2>&1; then
     echo "Error: No version of example data for $type found."
     exit 1
@@ -59,6 +64,10 @@ if [[ "$type" != "cn" ]]; then
     additional_mappings="mappings-${type}/*"
 fi
 
+if [[ "$type" == "e5" ]]; then
+    additional_mappings="mappings-can/*"
+fi
+
 # Transform SDK example reference data for all versions
 for i in $(ls -dv mappings-1*); do
     echo "Transforming $i for type $type"
@@ -67,6 +76,10 @@ for i in $(ls -dv mappings-1*); do
 
     if [[ "$type" = "pin" ]]; then
         data_name="${type}-only_24_maximal"
+    fi
+
+    if [[ "$type" = "e5" ]]; then
+        data_name="E5_minimal"
     fi
 
     data_file="data/$data_name-$version.xml"

@@ -56,19 +56,7 @@ fi
 # Define additional mappings if type is not 'cn'
 additional_mappings=""
 if [[ "$type" != "cn" ]]; then
-    additional_mappings="mappings-${type}/"
-fi
-
-# Check if the additional mappings directory exists
-if [[ ! -d "$additional_mappings" ]]; then
-    echo "Error: Additional mappings directory '$additional_mappings' not found."
-    exit 1
-fi
-
-# Check if the additional mappings directory is empty
-if [[ -z "$(ls -A "$additional_mappings")" ]]; then
-    echo "Error: Additional mappings directory '$additional_mappings' is empty."
-    exit 1
+    additional_mappings="mappings-${type}/*"
 fi
 
 # Transform SDK example reference data for all versions
@@ -90,6 +78,6 @@ for i in $(ls -dv mappings-1*); do
     fi
 
     cp -v "$data_file" data/source.xml
-    $rmlmapper_cmd -m mappings/* $additional_mappings/* mappings-common/* $i/* -s turtle > output-versioned/$data_name-$version.ttl
+    $rmlmapper_cmd -m mappings/* $additional_mappings mappings-common/* $i/* -s turtle > output-versioned/$data_name-$version.ttl
     rm -fv data/source.xml
 done

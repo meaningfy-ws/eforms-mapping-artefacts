@@ -22,6 +22,9 @@
 # mappings-1.8
 # mappings-1.9
 # mappings-1.10
+# mappings-1.11
+# mappings-1.12
+# mappings-1.13
 # 
 # The version specifier at the end of the file name should be inspected to check whether it falls within the bounds of a specific major version. For e.g., "v1.7+" means it can be copied into mappings-1.7, mappings-1.8, mappings-1.9 and mappings-1.10. However, "v0.0-1.3" can only go to mappings-1.3. Likewise, a file with "v1.3-1.6" can be copied into mappings-1.3, mappings-1.4, mappings-1.5 and mappings-1.6.
 #---
@@ -39,7 +42,7 @@ source_dir="mappings-versioned"
 target_dir_prefix="mappings"
 
 # Define the version range
-versions=( 1.3 1.4 1.5 1.6 1.7 1.8 1.9 1.10 )
+versions=( 1.3 1.4 1.5 1.6 1.7 1.8 1.9 1.10 1.11 1.12 1.13 )
 
 # Loop through each file in the source directory
 echo "Cleaning up and reproducing.."

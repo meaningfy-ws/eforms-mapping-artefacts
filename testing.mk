@@ -98,7 +98,7 @@ test_output_versioned_v%:
 	@ $(JENA_TOOLS_ARQ) --query $(VALIDATION_DIR_SPARQL_RDF)/orphans_exist.select.rq --data $(VERSIONED_OUTPUT_DIR)/$(CANONICAL_EXAMPLE)-1.$*.ttl --results=$(TEST_QUERY_RESULTS_FORMAT) | grep -vE $(ROOT_CONCEPTS_GREPFILTER)
 	@ echo
 	@ echo "-> Test output runts, v1.$*"
-	@ $(JENA_TOOLS_ARQ) --query $(VALIDATION_SPARQL_DIR)/runts_exist.select.rq --data $(VERSIONED_OUTPUT_DIR)/$(CANONICAL_EXAMPLE)-1.$*.ttl --results=$(TEST_QUERY_RESULTS_FORMAT)
+	@ $(JENA_TOOLS_ARQ) --query $(VALIDATION_DIR_SPARQL_RDF)/runts_exist.select.rq --data $(VERSIONED_OUTPUT_DIR)/$(CANONICAL_EXAMPLE)-1.$*.ttl --results=$(TEST_QUERY_RESULTS_FORMAT)
 	@ echo
 # @ echo "-> Test output mixed types, v1.$*"
 # @ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_mixed_types.rq --data $(VERSIONED_OUTPUT_DIR)/$(CANONICAL_EXAMPLE)-1.$*.ttl --results=$(TEST_QUERY_RESULTS_FORMAT)

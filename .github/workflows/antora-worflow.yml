@@ -9,6 +9,10 @@ jobs:
     name: "Build site with Antora"
     runs-on: [ ubuntu-latest ]
     steps:
+      - name: Set up environment variables
+        run: echo "BASE_URL=$BASE_URL" >> $GITHUB_ENV
+        env:
+          PROJECT_URL: ${{ github.server_url }}/${{ github.repository }}
       - name: Checkout
         uses: actions/checkout@v4
       - name: "Install Node 16"

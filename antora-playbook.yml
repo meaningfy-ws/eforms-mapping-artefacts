@@ -4,9 +4,9 @@ site:
 content:
   edit_url: false
   sources:
-    - url: https://github.com/meaningfy-ws/eforms-mapping-artefacts.git
+    - url: $PROJECT_URL
       branches:
-      - feature/TED5-288/docs # change this to main upon/before merge
+      - feature/docs # change this to main upon/before merge
       start_path: docs/antora
 asciidoc:
   attributes:

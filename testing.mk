@@ -1,3 +1,6 @@
+test_versioned: $(addprefix test_versioned_v, $(VERSIONS))
+test_output_versioned: $(addprefix test_output_versioned_v, $(VERSIONS))
+
 test:
 	@ echo "Using $(JENA_TOOLS_RIOT)"
 	@ echo "Validating RML files"
@@ -14,6 +17,7 @@ test_versioned_v%: test
 	@ echo -n "Validating example test output, v1.$*.."
 	@ $(JENA_TOOLS_RIOT) --validate $(VERSIONED_OUTPUT_DIR)/$(CANONICAL_EXAMPLE)-1.$*.ttl
 	@ echo "done"
+# TODO add CAN, PIN
 
 test_output:
 	@ echo "Testing output w/ $(JENA_TOOLS_ARQ) in $(TEST_QUERY_RESULTS_FORMAT) format"
@@ -122,10 +126,9 @@ test_output_versioned_v%:
 # @ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_missing_playedBy.rq --data $(VERSIONED_OUTPUT_DIR)/$(CANONICAL_EXAMPLE)-1.$*.ttl --results=$(TEST_QUERY_RESULTS_FORMAT)
 # @ echo
 
-test_output_postproc:
-	@ echo "Testing CN output post-processing scripts"
-	@ echo "==> Test link role playedBy"
-	@ $(POST_SCRIPTS_DIR)/link_role_playedBy.sh
-	@ echo
-	@ echo "==> Test output missing playedBy"
-	@ $(JENA_TOOLS_ARQ) --query $(TEST_QUERIES_DIR)/test_missing_playedBy.rq --data $(CN_TEST_OUTPUT) --data output/source/link_role_playedBy.ttl --results=$(TEST_QUERY_RESULTS_FORMAT)
+setup-jena-tools:
+	@ echo "Installing Apache Jena CLI tools locally"
+	@ curl "https://archive.apache.org/dist/jena/binaries/apache-jena-4.10.0.zip" -o jena.zip
+	@ unzip jena.zip
+	@ mv apache-jena-4.10.0 jena
+	@ echo "Done installing Jena tools, accessible at $(JENA_TOOLS_DIR)/bin"

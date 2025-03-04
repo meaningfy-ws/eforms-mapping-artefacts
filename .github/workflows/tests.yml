@@ -17,8 +17,9 @@ jobs:
     #     python-version: 3.8
     - name: Update OS
       run: sudo apt-get update
-    - name: Install dependencies
-      run: make setup-jena-tools
+    # - name: Install dependencies
+    #   run: make setup-jena-tools
+    - uses: foooomio/setup-jena@v3
     - name: Run Tests
       run: |
         make test

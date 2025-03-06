@@ -51,7 +51,7 @@ if [[ -z "$type" ]]; then
 else
     # Convert type to lowercase for case-insensitive comparison
     type=$(echo "$type" | tr '[:upper:]' '[:lower:]')
-    if [[ "$type" != "cn" && "$type" != "can" && "$type" != "pin" ]]; then
+    if [[ "$type" != "cn" && "$type" != "can" && "$type" != "pin" && "$type" != "can-modif" ]]; then
         echo "Error: type must be either 'cn', 'can', or 'pin'"
         exit 1
     fi
@@ -143,7 +143,7 @@ echo -n "Transforming reference $(echo "$type" | tr '[:lower:]' '[:upper:]') sou
 # Add additional mappings folder for types other than "cn"
 additional_mappings=""
 if [[ "$type" != "cn" ]]; then
-    additional_mappings="mappings-${type}/*"
+    additional_mappings="mappings-${type/-modif/}/*"
 fi
 
 cp data/source_${type}.xml data/source.xml && $rmlmapper_cmd -m mappings/* $additional_mappings mappings-common/* mappings-${rule_version}/* -s turtle > output-${type}.ttl && rm data/source.xml

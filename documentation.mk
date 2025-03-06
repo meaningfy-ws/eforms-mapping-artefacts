@@ -14,4 +14,5 @@ install-antora:
 
 build-site:
 	@ echo -e "$(BUILD_PRINT)Build site$(END_BUILD_PRINT)"
-	@ npx antora --fetch antora-playbook.yml
+	@ envsubst < antora-playbook.yml.template > antora-playbook.yml
+	@ npx antora --fetch antora-playbook.yml.run

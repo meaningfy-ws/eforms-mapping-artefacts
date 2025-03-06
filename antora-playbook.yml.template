@@ -5,8 +5,7 @@ content:
   edit_url: false
   sources:
     - url: $PROJECT_URL
-      branches:
-      - feature/docs # change this to main upon/before merge
+      branches: -HEAD
       start_path: docs/antora
 asciidoc:
   attributes:

@@ -9,10 +9,6 @@ jobs:
     name: "Build site with Antora"
     runs-on: [ ubuntu-latest ]
     steps:
-      - name: Set up environment variables
-        run: echo "BASE_URL=$BASE_URL" >> $GITHUB_ENV
-        env:
-          PROJECT_URL: ${{ github.server_url }}/${{ github.repository }}
       - name: Checkout
         uses: actions/checkout@v4
       - name: "Install Node 16"
@@ -22,7 +18,11 @@ jobs:
       - name: "Install Antora"
         run: make install-antora
       - name: "Generate site using antora site action"
-        run: make build-site
+        env:
+          PROJECT_URL: ${{ github.server_url }}/${{ github.repository }}
+        run: |
+          echo "Project: $PROJECT_URL"
+          make build-site
 
 #      - name: "Generate site using antora site action"
 #        uses: kameshsampath/antora-site-action@master

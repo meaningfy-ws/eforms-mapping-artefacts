@@ -130,9 +130,6 @@ package_pin_maximal_v%:
 	@ echo "Including PIN SDK v1.$* example data"
 	@ mkdir -p $(PKG_DIR)/test_data/$(SDK_DATA_NAME_PIN)-1.$*
 	@ cp -rv $(SDK_DATA_DIR_PIN)/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_PIN)-1.$*/
-	@ echo "Including CAN-MODIF SDK v1.$* example data"
-	@ mkdir -p $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)-1.$*
-	@ cp -rv $(SDK_DATA_DIR_CAN)/eforms-sdk-1.$*/*modif* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)-1.$*/
 ifeq ($(INCLUDE_INVALID_EXAMPLES), 1)
 	@ echo "Including PIN SDK v1.$* example data, INVALIDs"
 	@ mkdir -p $(PKG_DIR)/test_data/$(SDK_DATA_NAME_PIN)_invalid-1.$*
@@ -145,11 +142,8 @@ ifeq ($(INCLUDE_OLD_SAMPLES), 1)
 endif
 ifeq ($(INCLUDE_NEW_SAMPLES), 1)
 	@ echo "Including all (new) PIN sample data"
-	@ mkdir -p $(PKG_DIR)/$(SAMPLES_ALL_PIN)-1.$*
-	@ test -d $(SAMPLES_ALL_PIN)/$(SDK_NAME)-1.$* && find $(SAMPLES_ALL_PIN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_ALL_PIN)-1.$* \; || echo "No new samples for v1.$*"
-	@ echo "Including all (new) CAN-MODIF sample data"
-	@ mkdir -p $(PKG_DIR)/$(SAMPLES_ALL_CAN)-1.$*
-	@ test -d $(SAMPLES_ALL_CAN)/$(SDK_NAME)-1.$* && find $(SAMPLES_ALL_CAN)/$(SDK_NAME)-1.$*/ -type f -path "*can-modif*" -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_ALL_CAN)-1.$* \; || echo "No new samples for v1.$*"
+	mkdir -p $(PKG_DIR)/$(SAMPLES_ALL_PIN)-1.$*
+	test -d $(SAMPLES_ALL_PIN)/$(SDK_NAME)-1.$* && find $(SAMPLES_ALL_PIN)/$(SDK_NAME)-1.$*/ -type f -exec cp -rv {} $(PKG_DIR)/$(SAMPLES_ALL_PIN)-1.$* \; || echo "No new samples for v1.$*"
 endif
 ifeq ($(REPLACE_CM_METADATA_ID), 1)
 	@ echo "Modifying Identifier in the CM and replacing XLSX"

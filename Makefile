@@ -221,9 +221,10 @@ package_sync_pin_v%:
 	@ rm -rfv $(PKG_DIR_PIN)/$(TX_DIR)/mappings*
 	@ cp -rv src/mappings $(PKG_DIR_PIN)/$(TX_DIR)/
 	@ cp -v src/mappings-pin/* $(PKG_DIR_PIN)/$(TX_DIR)/mappings/
-	@ cp -v src/mappings-can/* $(PKG_DIR_PIN)/$(TX_DIR)/mappings/
 	@ cp -v src/mappings-common/* $(PKG_DIR_PIN)/$(TX_DIR)/mappings/
 	@ cp -v src/mappings-1.$*/* $(PKG_DIR_PIN)/$(TX_DIR)/mappings/
+	@ echo "Removing irrelevant versioned files"
+	@ rm -fv $(PKG_DIR_PIN)/$(TX_DIR)/mappings/*can_v*
 	@ echo "Replacing resources"
 	@ rm -rfv $(PKG_DIR_PIN)/$(TX_DIR)/resources
 	@ cp -rv src/$(TX_DIR)/resources $(PKG_DIR_PIN)/$(TX_DIR)/

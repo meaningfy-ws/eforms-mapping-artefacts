@@ -104,3 +104,28 @@ tedm:MG-VehicleInformation_ND-ProcurementStatistics a rr:TriplesMap ;
                 ] ;
         ];
 .
+
+tedm:MG-VehicleInformation_ND-StrategicProcurementInformationLotResult a rr:TriplesMap ;
+    rml:logicalSource
+        [
+            rml:source "data/source.xml" ;
+            rml:iterator "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotResult/efac:StrategicProcurement[efac:StrategicProcurementInformation/efbc:ProcurementCategoryCode/@listName='cvd-contract-type']/efac:StrategicProcurementInformation" ;
+            rml:referenceFormulation ql:XPath
+        ] ;
+    rr:predicateObjectMap
+        [
+            rdfs:label "BT-735-LotResult";
+            rdfs:comment "CVD Contract Type of MG-VehicleInformation under ND-StrategicProcurementInformationLotResult";
+            rr:predicate epo:specifiesCleanVehicleDirectiveContractType  ;
+            rr:objectMap
+                [
+                    tedm:minSDKVersion "1.13" ;
+                    rdfs:label "at-voc:cvd-contract-type" ;
+                    rr:parentTriplesMap tedm:cvd-contract-type ;
+                    rr:joinCondition [
+                        rr:child "efbc:ProcurementCategoryCode" ;
+                        rr:parent "code.value" ;
+                    ] ;
+                ] ;
+        ] ;
+.

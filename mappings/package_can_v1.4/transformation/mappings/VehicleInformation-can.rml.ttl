@@ -26,6 +26,7 @@
 
 tedm:MG-VehicleInformation_ND-StrategicProcurementInformationLotResult a rr:TriplesMap ;
     rdfs:label "MG-VehicleInformation";
+    # this TMap is in v1.13+ with a different iterator, and the RMLMapper behaviour is therefore uncertain
     rml:logicalSource
         [
             rml:source "data/source.xml" ;
@@ -38,6 +39,7 @@ tedm:MG-VehicleInformation_ND-StrategicProcurementInformationLotResult a rr:Trip
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_VehicleInformation_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path()) || '?response_type=raw')}" ;
             rr:class epo:VehicleInformation
         ] ;
+    # VERINFO: BT-735-LotResult is in versioned files
     rr:predicateObjectMap
         [
             rdfs:label "ND-StrategicProcurementInformationLotResult";
@@ -49,21 +51,6 @@ tedm:MG-VehicleInformation_ND-StrategicProcurementInformationLotResult a rr:Trip
                         rr:child "path(.)";
                         rr:parent "path(.)";
                     ];
-                ] ;
-        ] ;
-    rr:predicateObjectMap
-        [
-            rdfs:label "BT-735-LotResult";
-            rdfs:comment "CVD Contract Type of MG-VehicleInformation under ND-StrategicProcurementInformationLotResult";
-            rr:predicate epo:specifiesCleanVehicleDirectiveContractType  ;
-            rr:objectMap
-                [
-                    rdfs:label "at-voc:cvd-contract-type" ;
-                    rr:parentTriplesMap tedm:cvd-contract-type ;
-                    rr:joinCondition [
-                        rr:child "efbc:ProcurementCategoryCode" ;
-                        rr:parent "code.value" ;
-                    ] ;
                 ] ;
         ] ;
 .

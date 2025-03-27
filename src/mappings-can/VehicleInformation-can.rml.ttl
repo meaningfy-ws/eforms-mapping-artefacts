@@ -131,6 +131,7 @@ tedm:MG-VehicleInformation_ND-ProcurementDetailsLotResult a rr:TriplesMap ;
             rr:template "http://data.europa.eu/a4g/resource/id_{replace(replace(/*/cbc:ID[@schemeName='notice-id'], ' ', '-' ), '/' , '-')}_VehicleInformation_{unparsed-text('https://digest-api.ted-data.eu/api/v1/hashing/fn/uuid/' || encode-for-uri(path(..)) || '?response_type=raw')}" ;
             rr:class epo:VehicleInformation
         ] ;
+    # VERINFO: BT-723-LotResult is in versioned files
     rr:predicateObjectMap
         [
             rdfs:label "ND-StrategicProcurementInformationLotResult";
@@ -142,22 +143,6 @@ tedm:MG-VehicleInformation_ND-ProcurementDetailsLotResult a rr:TriplesMap ;
                         rr:child "path(..)";
                         rr:parent "path(.)";
                     ];
-                ] ;
-        ] ;
-    rr:predicateObjectMap
-        [
-            tedm:minSDKVersion "1.9.1" ;
-            rdfs:label "BT-723-LotResult";
-            rdfs:comment "VehicleCategory of MG-VehicleInformation under ND-StrategicProcurementInformationLotResult";
-            rr:predicate epo:specifiesCleanVehicleDirectiveVehicleCategory ;
-            rr:objectMap
-                [
-                    rdfs:label "at-voc:vehicle-category" ;
-                    rr:parentTriplesMap tedm:vehicle-category ;
-                    rr:joinCondition [
-                        rr:child "efbc:AssetCategoryCode" ;
-                        rr:parent "code.value" ;
-                    ] ;
                 ] ;
         ] ;
 .

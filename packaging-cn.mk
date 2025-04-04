@@ -11,14 +11,8 @@ package_cn_minimal_v%:
 	@ mkdir -p $(OUTPUT_DIR)
 	@ rm -rfv $(PKG_DIR)
 	@ cp -rv mappings/$(PKG_PREFIX_CN)_v1.$* $(PKG_DIR)
-ifeq ($(PACKAGE_EXAMPLES_BY_DEFAULT), 1)
 	@ echo "Removing all CN SDK v1.$* example data except cn_24_maximal"
 	@ find $(PKG_DIR)/$(TEST_DATA_DIR) -type f -not -path "*cn_24_maximal.xml" -exec rm -fv {} \;
-ifeq ($(INCLUDE_INVALID_EXAMPLES), 1)
-	@ echo "Removing any INVALID CN SDK v1.$* example data"
-	@ rm -rv $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)_invalid-1.$*
-endif
-endif
 ifeq ($(REPLACE_CM_METADATA_ID), 1)
 	@ echo "Modifying Identifier in the CM and replacing XLSX"
 	@ mkdir -p $(PKG_TMP) && unzip $(PKG_DIR)/$(CM_FILE) -d $(PKG_TMP)
@@ -52,10 +46,9 @@ package_cn_examples_v%:
 	@ echo "Including CN SDK v1.$* example data"
 	@ mkdir -p $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)-1.$*
 	@ cp -rv $(SDK_DATA_DIR_CN)/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)-1.$*/
-ifeq ($(INCLUDE_INVALID_EXAMPLES), 1)
-	@ echo "Including CN SDK v1.$* example data, INVALIDs"
-	@ mkdir -p $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)_invalid-1.$*
-	@ cp -rv $(SDK_DATA_DIR_CN)_invalid/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)_invalid-1.$*
+ifeq ($(INCLUDE_INVALID_EXAMPLES), 0)
+	@ echo "Removing any INVALID CN SDK v1.$* example data"
+	@ rm -rv $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)_invalid-1.$*
 endif
 # TODO: not working, use Bash notation or bring out into separate target
 # ifeq ($($*), 9)
@@ -153,10 +146,9 @@ package_cn_maximal_v%:
 	@ echo "Including CN SDK v1.$* example data"
 	@ mkdir -p $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)-1.$*
 	@ cp -rv $(SDK_DATA_DIR_CN)/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)-1.$*/
-ifeq ($(INCLUDE_INVALID_EXAMPLES), 1)
-	@ echo "Including CN SDK v1.$* example data, INVALIDs"
-	@ mkdir -p $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)_invalid-1.$*
-	@ cp -rv $(SDK_DATA_DIR_CN)_invalid/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)_invalid-1.$*
+ifeq ($(INCLUDE_INVALID_EXAMPLES), 0)
+	@ echo "Removing any INVALID CN SDK v1.$* example data"
+	@ rm -rv $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)_invalid-1.$*
 endif
 # TODO: not working, use Bash notation or bring out into separate target
 # but also not needed as they are already tracked in the default/minimal packages we copy from
@@ -253,9 +245,10 @@ package_cn_attribs_v%:
 	@ mkdir -p $(OUTPUT_DIR)
 	@ rm -rfv $(PKG_DIR)
 	@ cp -rv mappings/$(PKG_PREFIX_CN)_v1.$* $(PKG_DIR)
-	@ echo "Including CN SDK v1.$* example data"
-	@ mkdir -p $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)-1.$*
-	@ cp -rv $(SDK_DATA_DIR_CN)/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CN)-1.$*/
+ifeq ($(INCLUDE_INVALID_EXAMPLES), 0)
+	@ echo "Removing any INVALID CN SDK v1.$* example data"
+	@ rm -rv $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)_invalid-1.$*
+endif
 ifeq ($(INCLUDE_OLD_SAMPLES), 1)
 	@ echo "Including (old) EF10-24 sample data"
 	@ mkdir -p $(PKG_DIR)/$(SAMPLES_DIR_CN)-1.$*

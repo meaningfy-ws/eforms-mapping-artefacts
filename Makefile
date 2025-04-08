@@ -57,8 +57,8 @@ CM_FILENAME = conceptual_mappings.xlsx
 CM_ATTR_FILENAME = conceptual_mappings_all_attributes.xlsx
 SHACL_FILE_EPO = ePO_core_shapes.ttl
 SHACL_PATH_EPO = validation/shacl/epo/$(SHACL_FILE_EPO)
-RELEASE_DIR = ../ted-rdf-mapping-eforms
-# override with make RELEASE_DIR=$your-dir ...
+RELEASE_DIR = ../ted-rdf-mapping-eForms
+ALL_CM_DIR = tmp/conceptual_mappings
 
 JENA_TOOLS_DIR = $(shell test ! -z ${JENA_HOME} && echo ${JENA_HOME} || echo `pwd`/jena)
 JENA_TOOLS_RIOT = $(JENA_TOOLS_DIR)/bin/riot
@@ -308,7 +308,7 @@ ifeq ($(TRIM_DOWN_SHACL), 1)
 	@ echo "Modifying ePO SHACL file to substitute at-voc constraint with IRI"
 	@ sed -i 's/sh:class at-voc.*;/sh:nodeKind sh:IRI ;/' $(PKG_DIR_PIN)/$(SHACL_PATH_EPO)
 	@ sed -i 's/sh:class at-voc:environmental-impact,/sh:nodeKind sh:IRI ;/' $(PKG_DIR_PIN)/$(SHACL_PATH_EPO)
-	@ sed -i '/.*at-voc:green-public-procurement-criteria ;/d' $(PKG_DIR_PIN)/$(SHACL_PATH_EPO)	
+	@ sed -i '/.*at-voc:green-public-procurement-criteria ;/d' $(PKG_DIR_PIN)/$(SHACL_PATH_EPO)
 endif
 
 # TODO release target for combined packages
@@ -485,3 +485,8 @@ list-mismatching-versions:
 
 list-latest-sdk-versions:
 	@ cd $(SDK_PROJECT_DIR) && for i in $(VERSIONS); do echo -n "v1.$$i: " && git tag -l | grep 1.$$i | sed 's/-/~/' | sort -V | sed 's/~/-/' | tail -n1; done
+
+copy_versioned_conceptual_mappings:
+	@ cd $(ALL_CM_DIR) && for i in $(VERSIONS); do cp -v *1.$$i*xlsx ../../$(MAPPINGS_DIR)/package_cn_v1.$$i/transformation/conceptual_mappings.xlsx; done
+	@ cd $(ALL_CM_DIR) && for i in $(VERSIONS); do cp -v *1.$$i*xlsx ../../$(MAPPINGS_DIR)/package_can_v1.$$i/transformation/conceptual_mappings.xlsx; done
+	@ cd $(ALL_CM_DIR) && for i in $(VERSIONS); do cp -v *1.$$i*xlsx ../../$(MAPPINGS_DIR)/package_pin_v1.$$i/transformation/conceptual_mappings.xlsx; done

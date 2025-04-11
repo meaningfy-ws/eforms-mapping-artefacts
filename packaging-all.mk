@@ -50,9 +50,9 @@ package_examples_v%:
 	@ cp -rv $(SDK_DATA_DIR_PIN)/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_PIN)-1.$*/
 ifeq ($(INCLUDE_INVALID_EXAMPLES), 0)
 	@ echo "Removing any INVALID SDK v1.$* example data"
-	@ rm -rv $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)_invalid-1.$*
-	@ rm -rv $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CAN)_invalid-1.$*
-	@ rm -rv $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_PIN)_invalid-1.$*
+	@ rm -rvf $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)_invalid-1.$*
+	@ rm -rvf $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CAN)_invalid-1.$*
+	@ rm -rvf $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_PIN)_invalid-1.$*
 endif
 ifeq ($(EXCLUDE_LARGE_EXAMPLE), 1)
 	@ echo "Removing large file cn_24_maximal_100_lots.xml"
@@ -151,9 +151,9 @@ package_maximal_v%:
 	@ cp -rv $(SDK_DATA_DIR_PIN)/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_PIN)-1.$*/
 ifeq ($(INCLUDE_INVALID_EXAMPLES), 0)
 	@ echo "Removing any INVALID SDK v1.$* example data"
-	@ rm -rv $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)_invalid-1.$*
-	@ rm -rv $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CAN)_invalid-1.$*
-	@ rm -rv $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_PIN)_invalid-1.$*
+	@ rm -rvf $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)_invalid-1.$*
+	@ rm -rvf $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CAN)_invalid-1.$*
+	@ rm -rvf $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_PIN)_invalid-1.$*
 endif
 ifeq ($(INCLUDE_OLD_SAMPLES), 1)
 	@ echo "Including (old) EF10-24 sample data"
@@ -255,9 +255,9 @@ package_attribs_v%:
 	@ cp -rv $(SDK_DATA_DIR_PIN)/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_PIN)-1.$*/
 ifeq ($(INCLUDE_INVALID_EXAMPLES), 0)
 	@ echo "Removing any INVALID SDK v1.$* example data"
-	@ rm -rv $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)_invalid-1.$*
-	@ rm -rv $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CAN)_invalid-1.$*
-	@ rm -rv $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_PIN)_invalid-1.$*
+	@ rm -rvf $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)_invalid-1.$*
+	@ rm -rvf $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CAN)_invalid-1.$*
+	@ rm -rvf $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_PIN)_invalid-1.$*
 endif
 ifeq ($(INCLUDE_OLD_SAMPLES), 1)
 	@ echo "Including (old) EF10-24 sample data"

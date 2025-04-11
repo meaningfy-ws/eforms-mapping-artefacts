@@ -89,7 +89,7 @@ VERSIONS_SAMPLES := $(3 6 7 8 9)
 
 # we are not copying over CM for now -- leaving it under manual control
 package_sync: package_prep package_sync_cn package_sync_can package_sync_pin
-package_sync_combined: $(addprefix package_sync_v, $(VERSIONS))
+package_sync_combined: $(addprefix package_sync_combined_v, $(VERSIONS))
 package_sync_cn: $(addprefix package_sync_cn_v, $(VERSIONS))
 package_sync_can: $(addprefix package_sync_can_v, $(VERSIONS))
 package_sync_pin: $(addprefix package_sync_pin_v, $(VERSIONS))

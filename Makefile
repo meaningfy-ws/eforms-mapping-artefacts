@@ -27,6 +27,7 @@ CM_TITLE_PREFIX_PIN = Package EF1-EF9
 CM_VER_STRING_PIN = v1.10
 TRIM_DOWN_SHACL = 1
 EXCLUDE_SPARQL_VALIDATIONS = 0
+EXCLUDE_SELECT_VALIDATIONS = 1
 INCLUDE_NEW_SAMPLES = 1
 INCLUDE_OLD_SAMPLES = 0
 INCLUDE_RANDOM_SAMPLES = 1
@@ -172,6 +173,10 @@ package_sync_combined_v%: package_prep
 	@ echo "Replacing validations"
 	@ rm -rfv $(PKG_DIR)/validation
 	@ cp -rv src/validation $(PKG_DIR)/
+ifeq ($(EXCLUDE_SELECT_VALIDATIONS), 1)
+	@ echo "Removing SELECT SPARQL validations"
+	@ find $(PKG_DIR)/validation/sparql -name "*select.rq" -exec rm -fv {} \;
+endif
 ifeq ($(PACKAGE_EXAMPLES_BY_DEFAULT), 1)
 	@ echo "Including CN SDK v1.$* example data"
 	@ mkdir -p $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)-1.$*
@@ -220,6 +225,10 @@ package_sync_cn_v%:
 	@ echo "Replacing validations"
 	@ rm -rfv $(PKG_DIR_CN)/validation
 	@ cp -rv src/validation $(PKG_DIR_CN)/
+ifeq ($(EXCLUDE_SELECT_VALIDATIONS), 1)
+	@ echo "Removing SELECT SPARQL validations"
+	@ find $(PKG_DIR_CN)/validation/sparql -name "*select.rq" -exec rm -fv {} \;
+endif
 ifeq ($(PACKAGE_EXAMPLES_BY_DEFAULT), 1)
 	@ echo "Including CN SDK v1.$* example data"
 	@ mkdir -p $(PKG_DIR_CN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)-1.$*
@@ -256,6 +265,10 @@ package_sync_can_v%:
 	@ echo "Replacing validations"
 	@ rm -rfv $(PKG_DIR_CAN)/validation
 	@ cp -rv src/validation $(PKG_DIR_CAN)/
+ifeq ($(EXCLUDE_SELECT_VALIDATIONS), 1)
+	@ echo "Removing SELECT SPARQL validations"
+	@ find $(PKG_DIR_CAN)/validation/sparql -name "*select.rq" -exec rm -fv {} \;
+endif
 ifeq ($(PACKAGE_EXAMPLES_BY_DEFAULT), 1)
 	@ echo "Including CAN SDK v1.$* example data"
 	@ mkdir -p $(PKG_DIR_CAN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CAN)-1.$*
@@ -292,6 +305,10 @@ package_sync_pin_v%:
 	@ echo "Replacing validations"
 	@ rm -rfv $(PKG_DIR_PIN)/validation
 	@ cp -rv src/validation $(PKG_DIR_PIN)/
+ifeq ($(EXCLUDE_SELECT_VALIDATIONS), 1)
+	@ echo "Removing SELECT SPARQL validations"
+	@ find $(PKG_DIR_PIN)/validation/sparql -name "*select.rq" -exec rm -fv {} \;
+endif
 ifeq ($(PACKAGE_EXAMPLES_BY_DEFAULT), 1)
 	@ echo "Including PIN SDK v1.$* example data"
 	@ mkdir -p $(PKG_DIR_PIN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_PIN)-1.$*

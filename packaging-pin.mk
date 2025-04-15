@@ -26,6 +26,10 @@ ifeq ($(EXCLUDE_SPARQL_VALIDATIONS), 1)
 	@ echo "Removing SPARQL validations"
 	@ rm -rfv $(PKG_DIR)/validation/sparql/* -v
 endif
+ifeq ($(EXCLUDE_SELECT_VALIDATIONS), 1)
+	@ echo "Removing SELECT SPARQL validations"
+	@ find $(PKG_DIR)/validation/sparql -name "*select.rq" -exec rm -fv {} \;
+endif
 	@ echo "Removing any empty test_data subfolders"
 	@ for i in $$(find $(PKG_DIR) -type d -empty -path "*/test_data/*"); do rm -rfv $$i; done
 
@@ -61,6 +65,10 @@ endif
 ifeq ($(EXCLUDE_SPARQL_VALIDATIONS), 1)
 	@ echo "Removing SPARQL validations"
 	@ rm -rfv $(PKG_DIR)/validation/sparql/* -v
+endif
+ifeq ($(EXCLUDE_SELECT_VALIDATIONS), 1)
+	@ echo "Removing SELECT SPARQL validations"
+	@ find $(PKG_DIR)/validation/sparql -name "*select.rq" -exec rm -fv {} \;
 endif
 	@ echo "Removing any empty test_data subfolders"
 	@ for i in $$(find $(PKG_DIR) -type d -empty -path "*/test_data/*"); do rm -rfv $$i; done
@@ -103,6 +111,10 @@ endif
 ifeq ($(EXCLUDE_SPARQL_VALIDATIONS), 1)
 	@ echo "Removing SPARQL validations"
 	@ rm -rfv $(PKG_DIR)/validation/sparql/* -v
+endif
+ifeq ($(EXCLUDE_SELECT_VALIDATIONS), 1)
+	@ echo "Removing SELECT SPARQL validations"
+	@ find $(PKG_DIR)/validation/sparql -name "*select.rq" -exec rm -fv {} \;
 endif
 	@ echo "Removing any empty test_data subfolders"
 	@ for i in $$(find $(PKG_DIR) -type d -empty -path "*/test_data/*"); do rm -rfv $$i; done
@@ -151,6 +163,10 @@ ifeq ($(EXCLUDE_SPARQL_VALIDATIONS), 1)
 	@ echo "Removing SPARQL validations"
 	@ rm -rfv $(PKG_DIR)/validation/sparql/* -v
 endif
+ifeq ($(EXCLUDE_SELECT_VALIDATIONS), 1)
+	@ echo "Removing SELECT SPARQL validations"
+	@ find $(PKG_DIR)/validation/sparql -name "*select.rq" -exec rm -fv {} \;
+endif
 	@ echo "Removing any empty test_data subfolders"
 	@ for i in $$(find $(PKG_DIR) -type d -empty -path "*/test_data/*"); do rm -rfv $$i; done
 
@@ -187,6 +203,10 @@ export_pin_maximal_v%:
 # ifeq ($(EXCLUDE_SPARQL_VALIDATIONS), 1)
 # 	@ echo "Removing SPARQL validations"
 # 	@ rm -rfv $(PKG_DIR)/validation/sparql/* -v
+# endif
+# ifeq ($(EXCLUDE_SELECT_VALIDATIONS), 1)
+# 	@ echo "Removing SELECT SPARQL validations"
+# 	@ find $(PKG_DIR)/validation/sparql -name "*select.rq" -exec rm -fv {} \;
 # endif
 # 	@ echo "Removing any empty test_data subfolders"
 # 	@ for i in $$(find $(PKG_DIR) -type d -empty -path "*/test_data/*"); do rm -rfv $$i; done
@@ -232,6 +252,10 @@ endif
 ifeq ($(EXCLUDE_SPARQL_VALIDATIONS), 1)
 	@ echo "Removing SPARQL validations"
 	@ rm -rfv $(PKG_DIR)/validation/sparql/* -v
+endif
+ifeq ($(EXCLUDE_SELECT_VALIDATIONS), 1)
+	@ echo "Removing SELECT SPARQL validations"
+	@ find $(PKG_DIR)/validation/sparql -name "*select.rq" -exec rm -fv {} \;
 endif
 	@ echo "Removing any empty test_data subfolders"
 	@ for i in $$(find $(PKG_DIR) -type d -empty -path "*/test_data/*"); do rm -rfv $$i; done

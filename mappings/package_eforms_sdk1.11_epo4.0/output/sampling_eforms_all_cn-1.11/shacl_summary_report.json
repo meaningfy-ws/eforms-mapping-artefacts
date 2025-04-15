@@ -1,0 +1,2016 @@
+{
+    "created_at": "2025-04-14 13:00:55.962862+00:00",
+    "results": [],
+    "summary": {
+        "shacl_suites": [
+            {
+                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                "shacl_suite_id": "epo"
+            }
+        ],
+        "results": [
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#hasAwardCriteriaStatedInProcurementDocuments",
+                "short_result_path": "epo:hasAwardCriteriaStatedInProcurementDocuments",
+                "source_constraint_component": "sh:MinCountConstraintComponent",
+                "short_source_constraint_component": "sh:MinCountConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 18,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7d7",
+                                "test_data_id": "625392-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7d8",
+                                "test_data_id": "433026-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7db",
+                                "test_data_id": "490908-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7dc",
+                                "test_data_id": "620222-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7dd",
+                                "test_data_id": "615513-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e1",
+                                "test_data_id": "506793-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e3",
+                                "test_data_id": "610236-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e4",
+                                "test_data_id": "496724-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e6",
+                                "test_data_id": "444576-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e7",
+                                "test_data_id": "517874-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7e8",
+                                "test_data_id": "413879-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7eb",
+                                "test_data_id": "650149-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7ec",
+                                "test_data_id": "591117-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7ed",
+                                "test_data_id": "367455-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f0",
+                                "test_data_id": "597501-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f1",
+                                "test_data_id": "484574-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f2",
+                                "test_data_id": "558523-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f3",
+                                "test_data_id": "438171-2024"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://www.w3.org/2006/time#unitType",
+                "short_result_path": "time:unitType",
+                "source_constraint_component": "sh:ClassConstraintComponent",
+                "short_source_constraint_component": "sh:ClassConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 21,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7d7",
+                                "test_data_id": "625392-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7d9",
+                                "test_data_id": "558049-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7da",
+                                "test_data_id": "495748-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7dc",
+                                "test_data_id": "620222-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7dd",
+                                "test_data_id": "615513-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7df",
+                                "test_data_id": "624669-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e1",
+                                "test_data_id": "506793-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e2",
+                                "test_data_id": "517165-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e3",
+                                "test_data_id": "610236-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e4",
+                                "test_data_id": "496724-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e6",
+                                "test_data_id": "444576-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e7",
+                                "test_data_id": "517874-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7e8",
+                                "test_data_id": "413879-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7e9",
+                                "test_data_id": "483987-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7ea",
+                                "test_data_id": "547418-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7ec",
+                                "test_data_id": "591117-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7ee",
+                                "test_data_id": "440582-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7ef",
+                                "test_data_id": "536291-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f2",
+                                "test_data_id": "558523-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f3",
+                                "test_data_id": "438171-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f4",
+                                "test_data_id": "433676-2024"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#hasBeginning",
+                "short_result_path": "epo:hasBeginning",
+                "source_constraint_component": "sh:DatatypeConstraintComponent",
+                "short_source_constraint_component": "sh:DatatypeConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 11,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7d7",
+                                "test_data_id": "625392-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7d8",
+                                "test_data_id": "433026-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7da",
+                                "test_data_id": "495748-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7dc",
+                                "test_data_id": "620222-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7de",
+                                "test_data_id": "387948-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e0",
+                                "test_data_id": "533162-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7ec",
+                                "test_data_id": "591117-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7ed",
+                                "test_data_id": "367455-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7ee",
+                                "test_data_id": "440582-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f0",
+                                "test_data_id": "597501-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f2",
+                                "test_data_id": "558523-2024"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#hasTimePeriod",
+                "short_result_path": "epo:hasTimePeriod",
+                "source_constraint_component": "sh:MinCountConstraintComponent",
+                "short_source_constraint_component": "sh:MinCountConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 11,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7d7",
+                                "test_data_id": "625392-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7d8",
+                                "test_data_id": "433026-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7da",
+                                "test_data_id": "495748-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7dc",
+                                "test_data_id": "620222-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7de",
+                                "test_data_id": "387948-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e0",
+                                "test_data_id": "533162-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7ec",
+                                "test_data_id": "591117-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7ed",
+                                "test_data_id": "367455-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7ee",
+                                "test_data_id": "440582-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f0",
+                                "test_data_id": "597501-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f2",
+                                "test_data_id": "558523-2024"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#hasPublicationDate",
+                "short_result_path": "epo:hasPublicationDate",
+                "source_constraint_component": "sh:DatatypeConstraintComponent",
+                "short_source_constraint_component": "sh:DatatypeConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 30,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7d7",
+                                "test_data_id": "625392-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7d8",
+                                "test_data_id": "433026-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7d9",
+                                "test_data_id": "558049-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7da",
+                                "test_data_id": "495748-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7db",
+                                "test_data_id": "490908-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7dc",
+                                "test_data_id": "620222-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7dd",
+                                "test_data_id": "615513-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7de",
+                                "test_data_id": "387948-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7df",
+                                "test_data_id": "624669-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e0",
+                                "test_data_id": "533162-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e1",
+                                "test_data_id": "506793-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e2",
+                                "test_data_id": "517165-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e3",
+                                "test_data_id": "610236-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e4",
+                                "test_data_id": "496724-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e5",
+                                "test_data_id": "404078-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e6",
+                                "test_data_id": "444576-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e7",
+                                "test_data_id": "517874-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7e8",
+                                "test_data_id": "413879-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7e9",
+                                "test_data_id": "483987-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7ea",
+                                "test_data_id": "547418-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7eb",
+                                "test_data_id": "650149-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7ec",
+                                "test_data_id": "591117-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7ed",
+                                "test_data_id": "367455-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7ee",
+                                "test_data_id": "440582-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7ef",
+                                "test_data_id": "536291-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f0",
+                                "test_data_id": "597501-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f1",
+                                "test_data_id": "484574-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f2",
+                                "test_data_id": "558523-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f3",
+                                "test_data_id": "438171-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f4",
+                                "test_data_id": "433676-2024"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#hasOJSIssueNumber",
+                "short_result_path": "epo:hasOJSIssueNumber",
+                "source_constraint_component": "sh:DatatypeConstraintComponent",
+                "short_source_constraint_component": "sh:DatatypeConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 30,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7d7",
+                                "test_data_id": "625392-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7d8",
+                                "test_data_id": "433026-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7d9",
+                                "test_data_id": "558049-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7da",
+                                "test_data_id": "495748-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7db",
+                                "test_data_id": "490908-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7dc",
+                                "test_data_id": "620222-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7dd",
+                                "test_data_id": "615513-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7de",
+                                "test_data_id": "387948-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7df",
+                                "test_data_id": "624669-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e0",
+                                "test_data_id": "533162-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e1",
+                                "test_data_id": "506793-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e2",
+                                "test_data_id": "517165-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e3",
+                                "test_data_id": "610236-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e4",
+                                "test_data_id": "496724-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e5",
+                                "test_data_id": "404078-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e6",
+                                "test_data_id": "444576-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e7",
+                                "test_data_id": "517874-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7e8",
+                                "test_data_id": "413879-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7e9",
+                                "test_data_id": "483987-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7ea",
+                                "test_data_id": "547418-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7eb",
+                                "test_data_id": "650149-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7ec",
+                                "test_data_id": "591117-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7ed",
+                                "test_data_id": "367455-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7ee",
+                                "test_data_id": "440582-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7ef",
+                                "test_data_id": "536291-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f0",
+                                "test_data_id": "597501-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f1",
+                                "test_data_id": "484574-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f2",
+                                "test_data_id": "558523-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f3",
+                                "test_data_id": "438171-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f4",
+                                "test_data_id": "433676-2024"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#hasEnd",
+                "short_result_path": "epo:hasEnd",
+                "source_constraint_component": "sh:DatatypeConstraintComponent",
+                "short_source_constraint_component": "sh:DatatypeConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 8,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7d8",
+                                "test_data_id": "433026-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7dc",
+                                "test_data_id": "620222-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7de",
+                                "test_data_id": "387948-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e0",
+                                "test_data_id": "533162-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7ec",
+                                "test_data_id": "591117-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7ed",
+                                "test_data_id": "367455-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f0",
+                                "test_data_id": "597501-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f1",
+                                "test_data_id": "484574-2024"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#hasEstimatedInvitationToTenderDate",
+                "short_result_path": "epo:hasEstimatedInvitationToTenderDate",
+                "source_constraint_component": "sh:DatatypeConstraintComponent",
+                "short_source_constraint_component": "sh:DatatypeConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 4,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7d8",
+                                "test_data_id": "433026-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7de",
+                                "test_data_id": "387948-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e6",
+                                "test_data_id": "444576-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f0",
+                                "test_data_id": "597501-2024"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#isSubjectToProcedureSpecificTerm",
+                "short_result_path": "epo:isSubjectToProcedureSpecificTerm",
+                "source_constraint_component": "sh:MinCountConstraintComponent",
+                "short_source_constraint_component": "sh:MinCountConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 16,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7d8",
+                                "test_data_id": "433026-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7de",
+                                "test_data_id": "387948-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7df",
+                                "test_data_id": "624669-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e0",
+                                "test_data_id": "533162-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e1",
+                                "test_data_id": "506793-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e2",
+                                "test_data_id": "517165-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e4",
+                                "test_data_id": "496724-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e5",
+                                "test_data_id": "404078-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e6",
+                                "test_data_id": "444576-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e7",
+                                "test_data_id": "517874-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7e8",
+                                "test_data_id": "413879-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7e9",
+                                "test_data_id": "483987-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7ea",
+                                "test_data_id": "547418-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7ed",
+                                "test_data_id": "367455-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7ee",
+                                "test_data_id": "440582-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f0",
+                                "test_data_id": "597501-2024"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#hasOfficialLanguage",
+                "short_result_path": "epo:hasOfficialLanguage",
+                "source_constraint_component": "sh:MinCountConstraintComponent",
+                "short_source_constraint_component": "sh:MinCountConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 9,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7d9",
+                                "test_data_id": "558049-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e1",
+                                "test_data_id": "506793-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e2",
+                                "test_data_id": "517165-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e3",
+                                "test_data_id": "610236-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e7",
+                                "test_data_id": "517874-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7ea",
+                                "test_data_id": "547418-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f0",
+                                "test_data_id": "597501-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f1",
+                                "test_data_id": "484574-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f3",
+                                "test_data_id": "438171-2024"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#hasNoticeType",
+                "short_result_path": "epo:hasNoticeType",
+                "source_constraint_component": "sh:MinCountConstraintComponent",
+                "short_source_constraint_component": "sh:MinCountConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 8,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7d9",
+                                "test_data_id": "558049-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e1",
+                                "test_data_id": "506793-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e2",
+                                "test_data_id": "517165-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e3",
+                                "test_data_id": "610236-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e7",
+                                "test_data_id": "517874-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7ea",
+                                "test_data_id": "547418-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f1",
+                                "test_data_id": "484574-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f3",
+                                "test_data_id": "438171-2024"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#refersToLot",
+                "short_result_path": "epo:refersToLot",
+                "source_constraint_component": "sh:MinCountConstraintComponent",
+                "short_source_constraint_component": "sh:MinCountConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 8,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7d9",
+                                "test_data_id": "558049-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e1",
+                                "test_data_id": "506793-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e2",
+                                "test_data_id": "517165-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e3",
+                                "test_data_id": "610236-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e7",
+                                "test_data_id": "517874-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7ea",
+                                "test_data_id": "547418-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f1",
+                                "test_data_id": "484574-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f3",
+                                "test_data_id": "438171-2024"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#refersToProcedure",
+                "short_result_path": "epo:refersToProcedure",
+                "source_constraint_component": "sh:MinCountConstraintComponent",
+                "short_source_constraint_component": "sh:MinCountConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 8,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7d9",
+                                "test_data_id": "558049-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e1",
+                                "test_data_id": "506793-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e2",
+                                "test_data_id": "517165-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e3",
+                                "test_data_id": "610236-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e7",
+                                "test_data_id": "517874-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7ea",
+                                "test_data_id": "547418-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f1",
+                                "test_data_id": "484574-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f3",
+                                "test_data_id": "438171-2024"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#relatesToEFormSectionIdentifier",
+                "short_result_path": "epo:relatesToEFormSectionIdentifier",
+                "source_constraint_component": "sh:MinCountConstraintComponent",
+                "short_source_constraint_component": "sh:MinCountConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 4,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7d9",
+                                "test_data_id": "558049-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e2",
+                                "test_data_id": "517165-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e3",
+                                "test_data_id": "610236-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f3",
+                                "test_data_id": "438171-2024"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://purl.org/dc/terms/description",
+                "short_result_path": "dct:description",
+                "source_constraint_component": "sh:MaxCountConstraintComponent",
+                "short_source_constraint_component": "sh:MaxCountConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 1,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7da",
+                                "test_data_id": "495748-2024"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#hasRecurrenceDescription",
+                "short_result_path": "epo:hasRecurrenceDescription",
+                "source_constraint_component": "sh:MaxCountConstraintComponent",
+                "short_source_constraint_component": "sh:MaxCountConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 1,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7da",
+                                "test_data_id": "495748-2024"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#hasAdditionalInformationDeadline",
+                "short_result_path": "epo:hasAdditionalInformationDeadline",
+                "source_constraint_component": "sh:DatatypeConstraintComponent",
+                "short_source_constraint_component": "sh:DatatypeConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 3,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7dd",
+                                "test_data_id": "615513-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7de",
+                                "test_data_id": "387948-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f2",
+                                "test_data_id": "558523-2024"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#hasOpeningDateTime",
+                "short_result_path": "epo:hasOpeningDateTime",
+                "source_constraint_component": "sh:DatatypeConstraintComponent",
+                "short_source_constraint_component": "sh:DatatypeConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 3,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7dd",
+                                "test_data_id": "615513-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7e8",
+                                "test_data_id": "413879-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7ec",
+                                "test_data_id": "591117-2024"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#hasReceiptTenderDeadline",
+                "short_result_path": "epo:hasReceiptTenderDeadline",
+                "source_constraint_component": "sh:DatatypeConstraintComponent",
+                "short_source_constraint_component": "sh:DatatypeConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 3,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7dd",
+                                "test_data_id": "615513-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7e8",
+                                "test_data_id": "413879-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7ec",
+                                "test_data_id": "591117-2024"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#hasEstimatedInvitationToExpressInterestDate",
+                "short_result_path": "epo:hasEstimatedInvitationToExpressInterestDate",
+                "source_constraint_component": "sh:DatatypeConstraintComponent",
+                "short_source_constraint_component": "sh:DatatypeConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 2,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7de",
+                                "test_data_id": "387948-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f0",
+                                "test_data_id": "597501-2024"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#hasReceiptExpressionDeadline",
+                "short_result_path": "epo:hasReceiptExpressionDeadline",
+                "source_constraint_component": "sh:DatatypeConstraintComponent",
+                "short_source_constraint_component": "sh:DatatypeConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 1,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7de",
+                                "test_data_id": "387948-2024"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#hasProcurementDocumentChangeDate",
+                "short_result_path": "epo:hasProcurementDocumentChangeDate",
+                "source_constraint_component": "sh:DatatypeConstraintComponent",
+                "short_source_constraint_component": "sh:DatatypeConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 3,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e1",
+                                "test_data_id": "506793-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7ea",
+                                "test_data_id": "547418-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7f1",
+                                "test_data_id": "484574-2024"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#hasMainActivity",
+                "short_result_path": "epo:hasMainActivity",
+                "source_constraint_component": "sh:MaxCountConstraintComponent",
+                "short_source_constraint_component": "sh:MaxCountConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 1,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e1",
+                                "test_data_id": "506793-2024"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://www.w3.org/ns/adms#identifier",
+                "short_result_path": "adms:identifier",
+                "source_constraint_component": "sh:MaxCountConstraintComponent",
+                "short_source_constraint_component": "sh:MaxCountConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 2,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e3",
+                                "test_data_id": "610236-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0570ce61e9d6c0d7ec",
+                                "test_data_id": "591117-2024"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#hasReceiptParticipationRequestDeadline",
+                "short_result_path": "epo:hasReceiptParticipationRequestDeadline",
+                "source_constraint_component": "sh:DatatypeConstraintComponent",
+                "short_source_constraint_component": "sh:DatatypeConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 1,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e3",
+                                "test_data_id": "610236-2024"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#hasDeadline",
+                "short_result_path": "epo:hasDeadline",
+                "source_constraint_component": "sh:DatatypeConstraintComponent",
+                "short_source_constraint_component": "sh:DatatypeConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 1,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7d6",
+                                "test_data_suite_id": "sampling_eforms_all_cn-1.11",
+                                "test_data_oid": "67fbea0470ce61e9d6c0d7e4",
+                                "test_data_id": "496724-2024"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

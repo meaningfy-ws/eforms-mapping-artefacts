@@ -1,0 +1,1247 @@
+{
+    "created_at": "2025-04-14 13:01:49.110782+00:00",
+    "results": [],
+    "summary": {
+        "shacl_suites": [
+            {
+                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                "shacl_suite_id": "epo"
+            }
+        ],
+        "results": [
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#hasAwardCriteriaStatedInProcurementDocuments",
+                "short_result_path": "epo:hasAwardCriteriaStatedInProcurementDocuments",
+                "source_constraint_component": "sh:MinCountConstraintComponent",
+                "short_source_constraint_component": "sh:MinCountConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 17,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5d8",
+                                "test_data_id": "cn_23"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5da",
+                                "test_data_id": "cn_81"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5db",
+                                "test_data_id": "cn-social_24"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5dc",
+                                "test_data_id": "cn_24_open"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5dd",
+                                "test_data_id": "cn_81_FRA"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5de",
+                                "test_data_id": "qu-sy_25"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5df",
+                                "test_data_id": "cn_24_open_accel"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e0",
+                                "test_data_id": "cn_24_multilingual"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e1",
+                                "test_data_id": "cn_24_cumbria"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e2",
+                                "test_data_id": "change-cn_24_open_dates"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e3",
+                                "test_data_id": "cn_25"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e4",
+                                "test_data_id": "cn_24_maximal"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e5",
+                                "test_data_id": "cn_24_maximal_100_lots"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e7",
+                                "test_data_id": "cn-desg_24"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e8",
+                                "test_data_id": "cn_24_nego_accel"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5ea",
+                                "test_data_id": "change-cn_24_cumbria_suppliers"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5ec",
+                                "test_data_id": "cn_24_FRA_comments"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://www.w3.org/2006/time#unitType",
+                "short_result_path": "time:unitType",
+                "source_constraint_component": "sh:ClassConstraintComponent",
+                "short_source_constraint_component": "sh:ClassConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 14,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5d8",
+                                "test_data_id": "cn_23"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5da",
+                                "test_data_id": "cn_81"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5dc",
+                                "test_data_id": "cn_24_open"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5dd",
+                                "test_data_id": "cn_81_FRA"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5df",
+                                "test_data_id": "cn_24_open_accel"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e0",
+                                "test_data_id": "cn_24_multilingual"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e1",
+                                "test_data_id": "cn_24_cumbria"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e2",
+                                "test_data_id": "change-cn_24_open_dates"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e3",
+                                "test_data_id": "cn_25"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e6",
+                                "test_data_id": "cn_24_minimal"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e8",
+                                "test_data_id": "cn_24_nego_accel"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e9",
+                                "test_data_id": "change-cn_24_void"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5ea",
+                                "test_data_id": "change-cn_24_cumbria_suppliers"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5ec",
+                                "test_data_id": "cn_24_FRA_comments"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#hasBeginning",
+                "short_result_path": "epo:hasBeginning",
+                "source_constraint_component": "sh:DatatypeConstraintComponent",
+                "short_source_constraint_component": "sh:DatatypeConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 15,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5d8",
+                                "test_data_id": "cn_23"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5da",
+                                "test_data_id": "cn_81"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5dc",
+                                "test_data_id": "cn_24_open"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5dd",
+                                "test_data_id": "cn_81_FRA"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5de",
+                                "test_data_id": "qu-sy_25"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5df",
+                                "test_data_id": "cn_24_open_accel"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e0",
+                                "test_data_id": "cn_24_multilingual"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e1",
+                                "test_data_id": "cn_24_cumbria"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e2",
+                                "test_data_id": "change-cn_24_open_dates"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e3",
+                                "test_data_id": "cn_25"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e4",
+                                "test_data_id": "cn_24_maximal"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e5",
+                                "test_data_id": "cn_24_maximal_100_lots"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e8",
+                                "test_data_id": "cn_24_nego_accel"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5ea",
+                                "test_data_id": "change-cn_24_cumbria_suppliers"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5ec",
+                                "test_data_id": "cn_24_FRA_comments"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#hasTimePeriod",
+                "short_result_path": "epo:hasTimePeriod",
+                "source_constraint_component": "sh:MinCountConstraintComponent",
+                "short_source_constraint_component": "sh:MinCountConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 15,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5d8",
+                                "test_data_id": "cn_23"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5da",
+                                "test_data_id": "cn_81"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5dc",
+                                "test_data_id": "cn_24_open"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5dd",
+                                "test_data_id": "cn_81_FRA"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5de",
+                                "test_data_id": "qu-sy_25"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5df",
+                                "test_data_id": "cn_24_open_accel"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e0",
+                                "test_data_id": "cn_24_multilingual"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e1",
+                                "test_data_id": "cn_24_cumbria"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e2",
+                                "test_data_id": "change-cn_24_open_dates"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e3",
+                                "test_data_id": "cn_25"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e4",
+                                "test_data_id": "cn_24_maximal"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e5",
+                                "test_data_id": "cn_24_maximal_100_lots"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e8",
+                                "test_data_id": "cn_24_nego_accel"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5ea",
+                                "test_data_id": "change-cn_24_cumbria_suppliers"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5ec",
+                                "test_data_id": "cn_24_FRA_comments"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#hasProcedureType",
+                "short_result_path": "epo:hasProcedureType",
+                "source_constraint_component": "sh:MinCountConstraintComponent",
+                "short_source_constraint_component": "sh:MinCountConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 2,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5d8",
+                                "test_data_id": "cn_23"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5de",
+                                "test_data_id": "qu-sy_25"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#hasAdditionalInformationDeadline",
+                "short_result_path": "epo:hasAdditionalInformationDeadline",
+                "source_constraint_component": "sh:DatatypeConstraintComponent",
+                "short_source_constraint_component": "sh:DatatypeConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 1,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5da",
+                                "test_data_id": "cn_81"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#hasEnd",
+                "short_result_path": "epo:hasEnd",
+                "source_constraint_component": "sh:DatatypeConstraintComponent",
+                "short_source_constraint_component": "sh:DatatypeConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 6,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5de",
+                                "test_data_id": "qu-sy_25"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e1",
+                                "test_data_id": "cn_24_cumbria"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e4",
+                                "test_data_id": "cn_24_maximal"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e5",
+                                "test_data_id": "cn_24_maximal_100_lots"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5ea",
+                                "test_data_id": "change-cn_24_cumbria_suppliers"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5ec",
+                                "test_data_id": "cn_24_FRA_comments"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://purl.org/dc/terms/description",
+                "short_result_path": "dct:description",
+                "source_constraint_component": "sh:MaxCountConstraintComponent",
+                "short_source_constraint_component": "sh:MaxCountConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 1,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e0",
+                                "test_data_id": "cn_24_multilingual"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://www.w3.org/ns/locn#fullAddress",
+                "short_result_path": "locn:fullAddress",
+                "source_constraint_component": "sh:MaxCountConstraintComponent",
+                "short_source_constraint_component": "sh:MaxCountConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 1,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e0",
+                                "test_data_id": "cn_24_multilingual"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#hasOpeningDateTime",
+                "short_result_path": "epo:hasOpeningDateTime",
+                "source_constraint_component": "sh:DatatypeConstraintComponent",
+                "short_source_constraint_component": "sh:DatatypeConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 2,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e0",
+                                "test_data_id": "cn_24_multilingual"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5ec",
+                                "test_data_id": "cn_24_FRA_comments"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#hasReceiptTenderDeadline",
+                "short_result_path": "epo:hasReceiptTenderDeadline",
+                "source_constraint_component": "sh:DatatypeConstraintComponent",
+                "short_source_constraint_component": "sh:DatatypeConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 2,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e0",
+                                "test_data_id": "cn_24_multilingual"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5ec",
+                                "test_data_id": "cn_24_FRA_comments"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#hasOfficialLanguage",
+                "short_result_path": "epo:hasOfficialLanguage",
+                "source_constraint_component": "sh:MinCountConstraintComponent",
+                "short_source_constraint_component": "sh:MinCountConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 5,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e2",
+                                "test_data_id": "change-cn_24_open_dates"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e4",
+                                "test_data_id": "cn_24_maximal"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e5",
+                                "test_data_id": "cn_24_maximal_100_lots"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e9",
+                                "test_data_id": "change-cn_24_void"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5ea",
+                                "test_data_id": "change-cn_24_cumbria_suppliers"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#hasNoticeType",
+                "short_result_path": "epo:hasNoticeType",
+                "source_constraint_component": "sh:MinCountConstraintComponent",
+                "short_source_constraint_component": "sh:MinCountConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 5,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e2",
+                                "test_data_id": "change-cn_24_open_dates"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e4",
+                                "test_data_id": "cn_24_maximal"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e5",
+                                "test_data_id": "cn_24_maximal_100_lots"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e9",
+                                "test_data_id": "change-cn_24_void"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5ea",
+                                "test_data_id": "change-cn_24_cumbria_suppliers"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#refersToLot",
+                "short_result_path": "epo:refersToLot",
+                "source_constraint_component": "sh:MinCountConstraintComponent",
+                "short_source_constraint_component": "sh:MinCountConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 5,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e2",
+                                "test_data_id": "change-cn_24_open_dates"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e4",
+                                "test_data_id": "cn_24_maximal"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e5",
+                                "test_data_id": "cn_24_maximal_100_lots"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e9",
+                                "test_data_id": "change-cn_24_void"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5ea",
+                                "test_data_id": "change-cn_24_cumbria_suppliers"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#refersToProcedure",
+                "short_result_path": "epo:refersToProcedure",
+                "source_constraint_component": "sh:MinCountConstraintComponent",
+                "short_source_constraint_component": "sh:MinCountConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 5,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e2",
+                                "test_data_id": "change-cn_24_open_dates"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e4",
+                                "test_data_id": "cn_24_maximal"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e5",
+                                "test_data_id": "cn_24_maximal_100_lots"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e9",
+                                "test_data_id": "change-cn_24_void"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5ea",
+                                "test_data_id": "change-cn_24_cumbria_suppliers"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#hasDeadline",
+                "short_result_path": "epo:hasDeadline",
+                "source_constraint_component": "sh:DatatypeConstraintComponent",
+                "short_source_constraint_component": "sh:DatatypeConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 2,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e4",
+                                "test_data_id": "cn_24_maximal"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e5",
+                                "test_data_id": "cn_24_maximal_100_lots"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#isSubjectToProcedureSpecificTerm",
+                "short_result_path": "epo:isSubjectToProcedureSpecificTerm",
+                "source_constraint_component": "sh:MinCountConstraintComponent",
+                "short_source_constraint_component": "sh:MinCountConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 2,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e6",
+                                "test_data_id": "cn_24_minimal"
+                            },
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e9",
+                                "test_data_id": "change-cn_24_void"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#hasEstimatedInvitationToTenderDate",
+                "short_result_path": "epo:hasEstimatedInvitationToTenderDate",
+                "source_constraint_component": "sh:DatatypeConstraintComponent",
+                "short_source_constraint_component": "sh:DatatypeConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 1,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e8",
+                                "test_data_id": "cn_24_nego_accel"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#hasUnitCode",
+                "short_result_path": "epo:hasUnitCode",
+                "source_constraint_component": "sh:MinCountConstraintComponent",
+                "short_source_constraint_component": "sh:MinCountConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 1,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e8",
+                                "test_data_id": "cn_24_nego_accel"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#relatesToEFormSectionIdentifier",
+                "short_result_path": "epo:relatesToEFormSectionIdentifier",
+                "source_constraint_component": "sh:MinCountConstraintComponent",
+                "short_source_constraint_component": "sh:MinCountConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 1,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5e9",
+                                "test_data_id": "change-cn_24_void"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#hasProcurementDocumentChangeDate",
+                "short_result_path": "epo:hasProcurementDocumentChangeDate",
+                "source_constraint_component": "sh:DatatypeConstraintComponent",
+                "short_source_constraint_component": "sh:DatatypeConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 1,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67fbe94970ce61e9d6c0d5d7",
+                                "test_data_suite_id": "sdk_examples_cn-1.8",
+                                "test_data_oid": "67fbe94970ce61e9d6c0d5ea",
+                                "test_data_id": "change-cn_24_cumbria_suppliers"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

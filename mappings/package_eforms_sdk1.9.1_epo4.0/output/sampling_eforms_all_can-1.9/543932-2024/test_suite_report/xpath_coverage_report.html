@@ -1,0 +1,2328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>XPATH Coverage Report</title>
+    <link href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            margin: 25px auto;
+            width: 80%;
+        }
+
+        h2 {
+            padding-top: 20px;
+        }
+
+        .error {
+            color: red;
+        }
+
+        .success {
+            color: green;
+        }
+        .strong {
+            font-weight: bold;
+        }
+        .center {
+            text-align: center;
+        }
+        .dialog h4 {
+            margin: 0 0 10px;
+        }
+        .dialog ul, .dialog ol {
+            margin-top: 0;
+        }
+        .dialog {
+            display: none;
+        }
+        .dialog li {
+            margin-bottom: 8px;
+        }
+
+        table.dataTable thead th {
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        td.break-word {
+            word-break: break-word;
+            overflow-wrap: break-word;
+        }
+
+        table td {
+            vertical-align: top;
+        }
+
+        div.clear {
+            clear: both;
+        }
+
+        div.hr {
+            height: 5px;
+            margin: 5px 0;
+            background: #ccc;
+        }
+
+        div.hr.small {
+            height: 2px;
+        }
+
+        hr {
+            margin: 12px 0;
+            height: 5px;
+            background: #ccc;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+<h1>XPATH Coverage Report</h1>
+<hr>
+<h2>Report details: </h2>
+<ul>
+    <li><b>Date created:</b> 2025-04-14 13:04:38.127430+00:00</li>
+</ul>
+
+    <hr>
+    <h2>XPATH Assertions</h2>
+    <table class="display results" data-order='[[0, "asc"]]'>
+        <thead>
+        <tr>
+            <th>Form Field</th>
+            <th>XPATH</th>
+            <th>Found</th>
+            <th>Notices</th>
+        </tr>
+        </thead>
+        <tbody>
+        
+            <tr>
+                <td>ND-Root - None</td>
+                <td class="break-word">/*</td>
+                <td class="success">True</td>
+                <td>
+                    
+                    <span class="strong">1</span>
+                    
+                        &nbsp;
+                        <button class="open-dialog">Details</button>
+                        <div class="dialog" title="Test Datas">
+                            <ol>
+                                
+                                    <li>
+                                        <b>543932-2024</b> in <b>sampling_eforms_all_can-1.9</b>
+                                    </li>
+                                
+                            </ol>
+                        </div>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-ReviewRequests - None</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:AppealsInformation</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-ReviewStatus - None</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:AppealsInformation/efac:AppealStatus</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-AppealingParty - None</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:AppealsInformation/efac:AppealStatus/efac:AppealingParty</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-AppealProcessingParty - None</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:AppealsInformation/efac:AppealStatus/efac:AppealProcessingParty</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-PMCAnswersDeadline - None</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingProcess/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:AnswerReceptionPeriod</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-LotTenderOriginCountry - None</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:Origin</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-191-Tender - Country Origin</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:Origin/efbc:AreaCode</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-ConcessionRevenue - None</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:ConcessionRevenue</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-160-Tender - Concession Revenue Buyer</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:ConcessionRevenue/efbc:RevenueBuyerAmount</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-162-Tender - Concession Revenue User</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:ConcessionRevenue/efbc:RevenueUserAmount</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-163-Tender - Concession Value Description</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:ConcessionRevenue/efbc:ValueDescription</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-127-notice - Future Notice</td>
+                <td class="break-word">/*/cbc:PlannedDate</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-Part - None</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-137-Part - Purpose Lot Identifier</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cbc:ID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-PartTenderingProcess - None</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingProcess</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-PartPreviousPlanning - None</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingProcess/cac:NoticeDocumentReference</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-125(i)-Part - Previous Planning Identifier</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingProcess/cac:NoticeDocumentReference/cbc:ID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-1251-Part - Previous Planning Part Identifier</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingProcess/cac:NoticeDocumentReference/cbc:ReferencedDocumentInternalAddress</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-PartProcurementScope - None</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-22-Part - Internal Identifier</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cbc:ID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-21-Part - Title</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cbc:Name</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-24-Part - Description</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cbc:Description</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-23-Part - Main Nature</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cbc:ProcurementTypeCode[@listName='contract-nature']</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-PartContractAdditionalNature - None</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:ProcurementAdditionalType[cbc:ProcurementTypeCode/@listName='contract-nature']</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-726-Part - Suitable For SMEs</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cbc:SMESuitableIndicator</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-PartValueEstimate - None</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:RequestedTenderTotal</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-27-Part - Estimated Value</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:RequestedTenderTotal/cbc:EstimatedOverallContractAmount</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-PartMainClassification - None</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:MainCommodityClassification</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-26(m)-Part - Classification Type (e.g. CPV)</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:MainCommodityClassification/cbc:ItemClassificationCode/@listName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-262-Part - Main Classification Code</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:MainCommodityClassification/cbc:ItemClassificationCode</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-PartAdditionalClassification - None</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:AdditionalCommodityClassification</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-26(a)-Part - Classification Type (e.g. CPV)</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:AdditionalCommodityClassification/cbc:ItemClassificationCode/@listName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-263-Part - Additional Classification Code</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:AdditionalCommodityClassification/cbc:ItemClassificationCode</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-PartPlacePerformance - None</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:RealizedLocation</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-PartPerformanceAddress - None</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:RealizedLocation/cac:Address</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-5101(a)-Part - Place Performance Street</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:RealizedLocation/cac:Address/cbc:StreetName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-5101(b)-Part - Place Performance Streetline 1</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:RealizedLocation/cac:Address/cbc:AdditionalStreetName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-5101(c)-Part - Place Performance Streetline 2</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:RealizedLocation/cac:Address/cac:AddressLine/cbc:Line</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-5131-Part - Place Performance City</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:RealizedLocation/cac:Address/cbc:CityName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-5121-Part - Place Performance Post Code</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:RealizedLocation/cac:Address/cbc:PostalZone</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-5071-Part - Place Performance Country Subdivision</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:RealizedLocation/cac:Address/cbc:CountrySubentityCode</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-5141-Part - Place Performance Country Code</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:RealizedLocation/cac:Address/cac:Country/cbc:IdentificationCode</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-727-Part - Place Performance Services Other</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:RealizedLocation/cac:Address/cbc:Region</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-728-Part - Place Performance Additional Information</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:RealizedLocation/cbc:Description</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-PartDuration - None</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:PlannedPeriod</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-536-Part - Duration Start Date</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:PlannedPeriod/cbc:StartDate</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-537-Part - Duration End Date</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:PlannedPeriod/cbc:EndDate</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-36-Part - Duration Period</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:PlannedPeriod/cbc:DurationMeasure</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-538-Part - Duration Other</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:PlannedPeriod/cbc:DescriptionCode</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-115-Part - GPA Coverage</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingProcess/cbc:GovernmentAgreementConstraintIndicator</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-PartFAContractingSystem - None</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingProcess/cac:ContractingSystem[cbc:ContractingSystemTypeCode/@listName='framework-agreement']</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-PartDPSContractingSystem - None</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingProcess/cac:ContractingSystem[cbc:ContractingSystemTypeCode/@listName='dps-usage']</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-PartTenderingTerms - None</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-PartFiscalLegislation - None</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:FiscalLegislationDocumentReference</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPT-301-Part-FiscalLegis - Fiscal Legislation Organization Technical Identifier Reference</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:FiscalLegislationDocumentReference/cac:IssuerParty/cac:PartyIdentification/cbc:ID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPT-110-Part-FiscalLegis - URL to Fiscal Legislation</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:FiscalLegislationDocumentReference/cac:Attachment/cac:ExternalReference/cbc:URI</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPT-111-Part-FiscalLegis - Fiscal Legislation Document ID</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:FiscalLegislationDocumentReference/cbc:ID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-PartEnvironmentalLegislation - None</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:EnvironmentalLegislationDocumentReference</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPT-301-Part-EnvironLegis - Environmental Legislation Organization Technical Identifier Reference</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:EnvironmentalLegislationDocumentReference/cac:IssuerParty/cac:PartyIdentification/cbc:ID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPT-120-Part-EnvironLegis - URL to Environmental Legislation</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:EnvironmentalLegislationDocumentReference/cac:Attachment/cac:ExternalReference/cbc:URI</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPT-112-Part-EnvironLegis - Environmental Legislation Document ID</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:EnvironmentalLegislationDocumentReference/cbc:ID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-PartEmploymentLegislation - None</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:EmploymentLegislationDocumentReference</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPT-301-Part-EmployLegis - Employment Legislation Organization Technical Identifier Reference</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:EmploymentLegislationDocumentReference/cac:IssuerParty/cac:PartyIdentification/cbc:ID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPT-130-Part-EmployLegis - URL to Employment Legislation</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:EmploymentLegislationDocumentReference/cac:Attachment/cac:ExternalReference/cbc:URI</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPT-113-Part-EmployLegis - Employment Legislation Document ID</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:EmploymentLegislationDocumentReference/cbc:ID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPT-301-Part-TenderReceipt - Tender Recipient Technical Identifier Reference</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:TenderRecipientParty/cac:PartyIdentification/cbc:ID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPT-301-Part-TenderEval - Tender Evaluator Technical Identifier Reference</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:TenderEvaluationParty/cac:PartyIdentification/cbc:ID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-300-Part - Additional Information</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cbc:Note</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-PartReservedParticipation - None</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:TendererQualificationRequest[not(cbc:CompanyLegalFormCode)][not(cac:SpecificTendererRequirement/cbc:TendererRequirementTypeCode[@listName='missing-info-submission'])]</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-PartReservedProcurement - None</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:TendererQualificationRequest[not(cbc:CompanyLegalFormCode)][not(cac:SpecificTendererRequirement/cbc:TendererRequirementTypeCode[@listName='missing-info-submission'])]/cac:SpecificTendererRequirement[cbc:TendererRequirementTypeCode/@listName='reserved-procurement']</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-PartReservedExecution - None</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:ContractExecutionRequirement[cbc:ExecutionRequirementCode/@listName='reserved-execution']</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-PartInfoRequestPeriod - None</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingProcess/cac:AdditionalInformationRequestPeriod</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-13(d)-Part - Additional Information Deadline</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingProcess/cac:AdditionalInformationRequestPeriod/cbc:EndDate</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-13(t)-Part - Additional Information Deadline</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingProcess/cac:AdditionalInformationRequestPeriod/cbc:EndTime</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-PartProcurementDocument - None</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:CallForTendersDocumentReference</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-PartDocAllOfficialLanguages - None</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:OfficialLanguages</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-PartDocOfficialLanguage - None</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:OfficialLanguages/cac:Language</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-PartDocAllNonOfficialLanguages - None</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NonOfficialLanguages</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-PartDocNonOfficialLanguage - None</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NonOfficialLanguages/cac:Language</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-14-Part - Documents Restricted</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:CallForTendersDocumentReference/cbc:DocumentType</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPT-140-Part - Procurement Documents ID</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:CallForTendersDocumentReference/cbc:ID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-PartTenderingProcessExtension - None</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingProcess/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-632-Part - Tool Name</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingProcess/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efbc:AccessToolName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-124-Part - Tool Atypical URL</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingProcess/cbc:AccessToolsURI</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPT-301-Part-AddInfo - Additional Info Provider Technical Identifier Reference</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:AdditionalInformationParty/cac:PartyIdentification/cbc:ID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPT-301-Part-DocProvider - Document Provider Technical Identifier Reference</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:DocumentProviderParty/cac:PartyIdentification/cbc:ID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-PartReviewTerms - None</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:AppealTerms</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPT-301-Part-ReviewOrg - Review Organization Technical Identifier Reference</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:AppealTerms/cac:AppealReceiverParty/cac:PartyIdentification/cbc:ID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPT-301-Part-ReviewInfo - Review Info Provider Technical Identifier Reference</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:AppealTerms/cac:AppealInformationParty/cac:PartyIdentification/cbc:ID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPT-301-Part-Mediator - Mediator Technical Identifier Reference</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:AppealTerms/cac:MediationParty/cac:PartyIdentification/cbc:ID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-ContractModification - None</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:ContractModification</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-1501(n)-Contract - Modification Previous Notice Identifier</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:ContractModification/efbc:ChangedNoticeIdentifier</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-ModificationReason - None</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:ContractModification/efac:ChangeReason</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-200-Contract - Modification Reason Code</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:ContractModification/efac:ChangeReason/cbc:ReasonCode</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-201-Contract - Modification Reason Description</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:ContractModification/efac:ChangeReason/efbc:ReasonDescription</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-Modification - None</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:ContractModification/efac:Change</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-ModifiedSection - None</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:ContractModification/efac:Change/efac:ChangedSection</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-202-Contract - Modification Description</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:ContractModification/efac:Change/efbc:ChangeDescription</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPT-070-Lot - Reserved Execution justification</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:ContractExecutionRequirement[cbc:ExecutionRequirementCode/@listName='reserved-execution']/cbc:Description</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-ProcedureTransportServiceType - None</td>
+                <td class="break-word">/*/cac:ProcurementProject/cac:ProcurementAdditionalType[cbc:ProcurementTypeCode/@listName='transport-service']</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-QualityTarget - None</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:ContractExecutionRequirement[cbc:ExecutionRequirementCode/@listName='customer-service']</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPT-071-Lot - Quality Target Code</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:ContractExecutionRequirement[cbc:ExecutionRequirementCode/@listName='customer-service']/cbc:ExecutionRequirementCode</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPT-072-Lot - Quality Target Description</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:ContractExecutionRequirement[cbc:ExecutionRequirementCode/@listName='customer-service']/cbc:Description</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-ExtendedDurationJustification - None</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:SettledContract/efac:DurationJustification</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPP-020-Contract - Assets related contract extension indicator</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:SettledContract/efac:DurationJustification/efbc:ExtendedDurationIndicator</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-AssetList - None</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:SettledContract/efac:DurationJustification/efac:AssetsList</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-Asset - None</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:SettledContract/efac:DurationJustification/efac:AssetsList/efac:Asset</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPP-021-Contract - Used asset</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:SettledContract/efac:DurationJustification/efac:AssetsList/efac:Asset/efbc:AssetDescription</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPP-022-Contract - Significance (%)</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:SettledContract/efac:DurationJustification/efac:AssetsList/efac:Asset/efbc:AssetSignificance</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPP-023-Contract - Predominance (%)</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:SettledContract/efac:DurationJustification/efac:AssetsList/efac:Asset/efbc:AssetPredominance</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPP-080-Tender - Kilometers Public Transport</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efbc:PublicTransportationCumulatedDistance</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-RevenueAllocation - None</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:ContractTerm[efbc:TermCode/text()='all-rev-tic']</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPP-032-Tender - Revenues Allocation</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:ContractTerm[efbc:TermCode/text()='all-rev-tic']/efbc:TermPercent</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-OtherContractExecutionConditions - None</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:ContractTerm[not(efbc:TermCode/text()='all-rev-tic')][efbc:TermCode/@listName='contract-detail']</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPP-030-Tender - Contract conditions Code</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:ContractTerm[not(efbc:TermCode/text()='all-rev-tic')][efbc:TermCode/@listName='contract-detail']/efbc:TermCode</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPP-031-Tender - Contract Conditions Description (other than revenue allocation)</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:ContractTerm[not(efbc:TermCode/text()='all-rev-tic')][efbc:TermCode/@listName='contract-detail']/efbc:TermDescription</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-RewardsPenalties - None</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:ContractTerm[efbc:TermCode/@listName='rewards-penalties']</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPP-033-Tender - Penalties and Rewards Code</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:ContractTerm[efbc:TermCode/@listName='rewards-penalties']/efbc:TermCode</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPP-034-Tender - Penalties and Rewards Description</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:ContractTerm[efbc:TermCode/@listName='rewards-penalties']/efbc:TermDescription</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-125(i)-Part-Scheme - Previous Planning Identifier Schemename</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingProcess/cac:NoticeDocumentReference/cbc:ID/@schemeName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-137-Part-Scheme - Purpose Lot Identifier Schemename</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cbc:ID/@schemeName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-1501(n)-Contract-Scheme - Modification Previous Notice Identifier Schemename</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:ContractModification/efbc:ChangedNoticeIdentifier/@schemeName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-160-Tender-Currency - Concession Revenue Buyer Currency</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:ConcessionRevenue/efbc:RevenueBuyerAmount/@currencyID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-162-Tender-Currency - Concession Revenue User Currency</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:ConcessionRevenue/efbc:RevenueUserAmount/@currencyID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-163-Tender-Language - Concession Value Description Language</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:ConcessionRevenue/efbc:ValueDescription/@languageID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-191-Tender-List - Country Origin Listname</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:Origin/efbc:AreaCode/@listName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-200-Contract-List - Modification Reason Code Listname</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:ContractModification/efac:ChangeReason/cbc:ReasonCode/@listName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-201-Contract-Language - Modification Reason Description Language</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:ContractModification/efac:ChangeReason/efbc:ReasonDescription/@languageID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-202-Contract-Language - Modification Description Language</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:ContractModification/efac:Change/efbc:ChangeDescription/@languageID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-21-Part-Language - Title Language</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cbc:Name/@languageID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-22-Part-Scheme - Internal Identifier Schemename</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cbc:ID/@schemeName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-23-Part-List - Main Nature Listname</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cbc:ProcurementTypeCode[@listName='contract-nature']/@listName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-24-Part-Language - Description Language</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cbc:Description/@languageID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-27-Part-Currency - Estimated Value Currency</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:RequestedTenderTotal/cbc:EstimatedOverallContractAmount/@currencyID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-300-Part-Language - Additional Information Language</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cbc:Note/@languageID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-36-Part-Unit - Duration Period Unit</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:PlannedPeriod/cbc:DurationMeasure/@unitCode</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-5071-Part-List - Place Performance Country Subdivision Listname</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:RealizedLocation/cac:Address/cbc:CountrySubentityCode/@listName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-5141-Part-List - Place Performance Country Code Listname</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:RealizedLocation/cac:Address/cac:Country/cbc:IdentificationCode/@listName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-531-Part-List - Additional Nature (different from Main) Listname</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:ProcurementAdditionalType[cbc:ProcurementTypeCode/@listName='contract-nature']/cbc:ProcurementTypeCode/@listName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-538-Part-List - Duration Other Listname</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:PlannedPeriod/cbc:DescriptionCode/@listName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-71-Part-List - Reserved Participation Listname</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:TendererQualificationRequest[not(cbc:CompanyLegalFormCode)][not(cac:SpecificTendererRequirement/cbc:TendererRequirementTypeCode[@listName='missing-info-submission'])]/cac:SpecificTendererRequirement[cbc:TendererRequirementTypeCode/@listName='reserved-procurement']/cbc:TendererRequirementTypeCode/@listName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-728-Part-Language - Place Performance Additional Information Language</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:RealizedLocation/cbc:Description/@languageID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-736-Part-List - Reserved Execution Listname</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:ContractExecutionRequirement[cbc:ExecutionRequirementCode/@listName='reserved-execution']/cbc:ExecutionRequirementCode/@listName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-765-Part-List - Framework Agreement Listname</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingProcess/cac:ContractingSystem[cbc:ContractingSystemTypeCode/@listName='framework-agreement']/cbc:ContractingSystemTypeCode/@listName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-766-Part-List - Dynamic Purchasing System Listname</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingProcess/cac:ContractingSystem[cbc:ContractingSystemTypeCode/@listName='dps-usage']/cbc:ContractingSystemTypeCode/@listName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-779-Tender-Currency - Tender Payment Value Currency</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:AggregatedAmounts/cbc:PaidAmount/@currencyID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-780-Tender-Language - Tender Payment Value Additional Information Language</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:AggregatedAmounts/efbc:PaidAmountDescription/@languageID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-781-Lot-Language - Duration Additional Information Language</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:ProcurementProject/cac:PlannedPeriod/cbc:Description/@languageID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-782-Tender-Currency - Tender Penalties Currency</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:AggregatedAmounts/efbc:PenaltiesAmount/@currencyID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-783-Review-List - Review Request or Decision Listname</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:AppealsInformation/efac:AppealStatus/efbc:AppealStageCode/@listName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-788-Review-Language - Review Title Language</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:AppealsInformation/efac:AppealStatus/cbc:Title/@languageID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-789-Review-Language - Review Description Language</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:AppealsInformation/efac:AppealStatus/cbc:Description/@languageID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-790-Review-List - Review Decision Type Listname</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:AppealsInformation/efac:AppealStatus/efac:AppealDecision/efbc:DecisionTypeCode/@listName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-791-Review-List - Review Irregularity Type Listname</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:AppealsInformation/efac:AppealStatus/efac:AppealIrregularity/efbc:IrregularityTypeCode/@listName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-792-Review-List - Review Remedy Type Listname</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:AppealsInformation/efac:AppealStatus/efac:AppealRemedy/efbc:RemedyTypeCode/@listName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-793-Review-Currency - Review Remedy Value Currency</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:AppealsInformation/efac:AppealStatus/efbc:RemedyAmount/@currencyID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-795-Review-Currency - Review Request Fee Currency</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:AppealsInformation/efac:AppealStatus/cbc:FeeAmount/@currencyID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-798-Review-Language - Review Request Withdrawn Reasons Language</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:AppealsInformation/efac:AppealStatus/efbc:WithdrawnAppealReasons/@languageID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-799-ReviewBody-List - Review Body Type Listname</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:AppealsInformation/efac:AppealStatus/efac:AppealProcessingParty/efbc:AppealProcessingPartyTypeCode/@listName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPP-021-Contract-Language - Used asset Language</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:SettledContract/efac:DurationJustification/efac:AssetsList/efac:Asset/efbc:AssetDescription/@languageID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPP-030-Tender-List - Contract conditions Code Listname</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:ContractTerm[not(efbc:TermCode/text()='all-rev-tic')][efbc:TermCode/@listName='contract-detail']/efbc:TermCode/@listName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPP-031-Tender-Language - Contract Conditions Description (other than revenue allocation) Language</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:ContractTerm[not(efbc:TermCode/text()='all-rev-tic')][efbc:TermCode/@listName='contract-detail']/efbc:TermDescription/@languageID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPP-033-Tender-List - Penalties and Rewards Code Listname</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:ContractTerm[efbc:TermCode/@listName='rewards-penalties']/efbc:TermCode/@listName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPP-034-Tender-Language - Penalties and Rewards Description Language</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:ContractTerm[efbc:TermCode/@listName='rewards-penalties']/efbc:TermDescription/@languageID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPP-040-Procedure-List - Main Nature - Sub Type Listname</td>
+                <td class="break-word">/*/cac:ProcurementProject/cac:ProcurementAdditionalType[cbc:ProcurementTypeCode/@listName='transport-service']/cbc:ProcurementTypeCode/@listName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPP-080-Tender-Unit - Kilometers Public Transport Unit</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efbc:PublicTransportationCumulatedDistance/@unitCode</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPT-070-Lot-Language - Reserved Execution justification Language</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:ContractExecutionRequirement[cbc:ExecutionRequirementCode/@listName='reserved-execution']/cbc:Description/@languageID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPT-071-Lot-List - Quality Target Code Listname</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:ContractExecutionRequirement[cbc:ExecutionRequirementCode/@listName='customer-service']/cbc:ExecutionRequirementCode/@listName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPT-072-Lot-Language - Quality Target Description Language</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:ContractExecutionRequirement[cbc:ExecutionRequirementCode/@listName='customer-service']/cbc:Description/@languageID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPT-301-Part-AddInfo-Scheme - Additional Info Provider Technical Identifier Reference Schemename</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:AdditionalInformationParty/cac:PartyIdentification/cbc:ID/@schemeName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPT-301-Part-DocProvider-Scheme - Document Provider Technical Identifier Reference Schemename</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:DocumentProviderParty/cac:PartyIdentification/cbc:ID/@schemeName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPT-301-Part-EmployLegis-Scheme - Employment Legislation Organization Technical Identifier Reference Schemename</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:EmploymentLegislationDocumentReference/cac:IssuerParty/cac:PartyIdentification/cbc:ID/@schemeName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPT-301-Part-EnvironLegis-Scheme - Environmental Legislation Organization Technical Identifier Reference Schemename</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:EnvironmentalLegislationDocumentReference/cac:IssuerParty/cac:PartyIdentification/cbc:ID/@schemeName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPT-301-Part-FiscalLegis-Scheme - Fiscal Legislation Organization Technical Identifier Reference Schemename</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:FiscalLegislationDocumentReference/cac:IssuerParty/cac:PartyIdentification/cbc:ID/@schemeName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPT-301-Part-Mediator-Scheme - Mediator Technical Identifier Reference Schemename</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:AppealTerms/cac:MediationParty/cac:PartyIdentification/cbc:ID/@schemeName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPT-301-Part-ReviewInfo-Scheme - Review Info Provider Technical Identifier Reference Schemename</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:AppealTerms/cac:AppealInformationParty/cac:PartyIdentification/cbc:ID/@schemeName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPT-301-Part-ReviewOrg-Scheme - Review Organization Technical Identifier Reference Schemename</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:AppealTerms/cac:AppealReceiverParty/cac:PartyIdentification/cbc:ID/@schemeName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPT-301-Part-TenderEval-Scheme - Tender Evaluator Technical Identifier Reference Schemename</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:TenderEvaluationParty/cac:PartyIdentification/cbc:ID/@schemeName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPT-301-Part-TenderReceipt-Scheme - Tender Recipient Technical Identifier Reference Schemename</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:TenderRecipientParty/cac:PartyIdentification/cbc:ID/@schemeName</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-AppealDecision - None</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:AppealsInformation/efac:AppealStatus/efac:AppealDecision</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-AppealIrregularity - None</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:AppealsInformation/efac:AppealStatus/efac:AppealIrregularity</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-AppealRemedy - None</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:AppealsInformation/efac:AppealStatus/efac:AppealRemedy</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-707-Part - Documents Restricted Justification</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:CallForTendersDocumentReference/cbc:DocumentTypeCode</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-615-Part - Documents Restricted URL</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:CallForTendersDocumentReference/cac:Attachment[../cbc:DocumentType/text()='restricted-document']/cac:ExternalReference/cbc:URI</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-1501(s)-Contract - Modification Previous Notice Section Identifier</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:ContractModification/efac:Change/efac:ChangedSection/efbc:ChangedSectionIdentifier</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>ND-AppealedItemReference - None</td>
+                <td class="break-word">/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:AppealsInformation/efac:AppealStatus/efac:AppealedItem</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-531-Part - Additional Nature (different from Main)</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:ProcurementAdditionalType[cbc:ProcurementTypeCode/@listName='contract-nature']/cbc:ProcurementTypeCode</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-71-Part - Reserved Participation</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:TendererQualificationRequest[not(cbc:CompanyLegalFormCode)][not(cac:SpecificTendererRequirement/cbc:TendererRequirementTypeCode[@listName='missing-info-submission'])]/cac:SpecificTendererRequirement[cbc:TendererRequirementTypeCode/@listName='reserved-procurement']/cbc:TendererRequirementTypeCode</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-15-Part - Documents URL</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:CallForTendersDocumentReference/cac:Attachment[../cbc:DocumentType/text()='non-restricted-document']/cac:ExternalReference/cbc:URI</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OPP-040-Procedure - Main Nature - Sub Type</td>
+                <td class="break-word">/*/cac:ProcurementProject/cac:ProcurementAdditionalType[cbc:ProcurementTypeCode/@listName='transport-service']/cbc:ProcurementTypeCode</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-765-Part - Framework Agreement</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingProcess/cac:ContractingSystem[cbc:ContractingSystemTypeCode/@listName='framework-agreement']/cbc:ContractingSystemTypeCode</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-766-Part - Dynamic Purchasing System</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingProcess/cac:ContractingSystem[cbc:ContractingSystemTypeCode/@listName='dps-usage']/cbc:ContractingSystemTypeCode</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-736-Part - Reserved Execution</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:ContractExecutionRequirement[cbc:ExecutionRequirementCode/@listName='reserved-execution']/cbc:ExecutionRequirementCode</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-708-Part - Documents Official Language</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:OfficialLanguages/cac:Language/cbc:ID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+            <tr>
+                <td>BT-737-Part - Documents Unofficial Language</td>
+                <td class="break-word">/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NonOfficialLanguages/cac:Language/cbc:ID</td>
+                <td class="error">False</td>
+                <td>
+                    
+                    <span class="strong">0</span>
+                    
+                </td>
+            </tr>
+        
+        </tbody>
+    </table>
+
+<hr>
+</body>
+</html>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.print.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("table.display.results").DataTable({
+            dom: 'B<"clear">lf<"clear"><"hr small">iprtip',
+            buttons: [],
+            "lengthMenu": [[5, 15, 30, -1], [5, 15, 30, "All"]],
+            "pageLength": 15,
+            responsive: {
+                details: true
+            },
+            columnDefs: [
+                {"width": "50%", "targets": [1]}
+            ]
+        });
+
+        $("table.display.summary").DataTable({
+            dom: 'B<"clear">lfiprtip',
+            buttons: [],
+            "lengthMenu": [[5, 15, 30, -1], [5, 15, 30, "All"]],
+            "pageLength": 15,
+            responsive: {
+                details: true
+            }
+        });
+
+        $(document).on('click', '.open-dialog', function () {
+            $dialog = $(this).next('.dialog');
+            $dialog.dialog({
+                width: 800,
+                modal: true,
+                buttons: {
+                    "Close": function(event, ui) {
+                        $dialog.dialog('destroy');
+                    }
+                },
+                close: function(event, ui) {
+                    $dialog.dialog('destroy');
+                }
+            })
+            $dialog.dialog('open');
+            return false;
+        });
+    });
+
+</script>

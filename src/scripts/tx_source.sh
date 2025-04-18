@@ -17,7 +17,7 @@ fi
 show_help() {
     echo "Usage: $0 -t|--type <type> -v|--rule-version <version> -d|--data-file <filename>"
     echo "Options:"
-    echo "  -t, --type         Specify the type of transformation. Must be 'cn', 'can', or 'pin'."
+    echo "  -t, --type         Specify the type of transformation. Must be 'cn', 'can', 'pin', 'can-modif', 'compl' or 'pmc'."
     echo "  -v, --rule-version Specify the rule version to use in mappings-version. Must match the pattern '1.x' where x is a single or double-digit number."
     echo "  -d, --data-file    Specify the data file or files (comma-separated, quoted if spaced) to find under the root test_data folder."
     echo "  -h, --help         Display this help message."
@@ -51,7 +51,7 @@ if [[ -z "$type" ]]; then
 else
     # Convert type to lowercase for case-insensitive comparison
     type=$(echo "$type" | tr '[:upper:]' '[:lower:]')
-    if [[ "$type" != "cn" && "$type" != "can" && "$type" != "pin" && "$type" != "can-modif" ]]; then
+    if [[ "$type" != "cn" && "$type" != "can" && "$type" != "pin" && "$type" != "can-modif" && "$type" != "compl" && "$type" != "pmc" ]]; then
         echo "Error: type must be either 'cn', 'can', or 'pin'"
         exit 1
     fi
@@ -144,6 +144,14 @@ echo -n "Transforming reference $(echo "$type" | tr '[:lower:]' '[:upper:]') sou
 additional_mappings=""
 if [[ "$type" != "cn" ]]; then
     additional_mappings="mappings-${type/-modif/}/*"
+fi
+
+if [[ "$type" == "compl" ]]; then
+    additional_mappings="mappings-can/*"
+fi
+
+if [[ "$type" == "pmc" ]]; then
+    additional_mappings="mappings-pin/*"
 fi
 
 cp data/source_${type}.xml data/source.xml && $rmlmapper_cmd -m mappings/* $additional_mappings mappings-common/* mappings-${rule_version}/* -s turtle > output-${type}.ttl && rm data/source.xml

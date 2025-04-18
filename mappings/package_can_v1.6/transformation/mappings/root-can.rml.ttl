@@ -88,6 +88,48 @@ tedm:MG-ResultNotice_ND-Root
                     rr:parentTriplesMap tedm:MG-PaymentExecutor-announcesRole-ResultNotice_ND-PayerParty
                 ] ;
         ] ;
+    rr:predicateObjectMap
+        [
+            tedm:minSDKVersion "1.13" ;
+            rdfs:label "MG-ReviewRequest-seeAlso-ResultNotice" ;
+            rdfs:comment "the relation between MG-ReviewDecision and ResultNotice under ND-Root" ;
+            rr:predicate rdfs:seeAlso ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-ReviewRequest-seeAlso-ResultNotice_ND-ReviewStatus
+                ] ;
+        ] ;
+    rr:predicateObjectMap
+        [
+            tedm:minSDKVersion "1.13" ;
+            rdfs:label "MG-ReviewDecision-seeAlso-ResultNotice" ;
+            rdfs:comment "the relation between MG-ReviewDecision and ResultNotice under ND-Root" ;
+            rr:predicate rdfs:seeAlso ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-ReviewDecision-seeAlso-ResultNotice_ND-ReviewStatus
+                ] ;
+        ] ;
+     rr:predicateObjectMap
+        [
+            rdfs:label "MG-Reviewer-announcesRole-ResultNotice" ;
+            rdfs:comment "the relation between MG-Reviewer and ResultNotice under ND-Root" ;
+            rr:predicate epo:announcesRole  ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-Reviewer_ND-AppealProcessingParty ;
+                ] ;
+        ] ;
+     rr:predicateObjectMap
+        [
+            rdfs:label "MG-ReviewRequester" ;
+            rdfs:comment "ReviewRequester ResultNotice and ReviewRequester under ND-Root" ;
+            rr:predicate epo:announcesRole  ;
+            rr:objectMap
+                [
+                    rr:parentTriplesMap tedm:MG-ReviewRequester_ND-AppealingParty;
+                ] ;
+        ] ;
 .
 
 tedm:MG-ResultNotice_ND-NoticeResult a rr:TriplesMap ;

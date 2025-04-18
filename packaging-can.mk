@@ -10,14 +10,8 @@ package_can_minimal_v%:
 	@ mkdir -p $(OUTPUT_DIR)
 	@ rm -rfv $(PKG_DIR)
 	@ cp -rv mappings/$(PKG_PREFIX_CAN)_v1.$* $(PKG_DIR)
-ifeq ($(PACKAGE_EXAMPLES_BY_DEFAULT), 1)
 	@ echo "Removing all CAN SDK v1.$* example data except can_24_maximal"
 	@ find $(PKG_DIR)/$(TEST_DATA_DIR) -type f -not -path "*can_24_maximal*" -exec rm -fv {} \;
-ifeq ($(INCLUDE_INVALID_EXAMPLES), 1)
-	@ echo "Removing any INVALID CAN SDK v1.$* example data"
-	@ rm -rv $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CAN)_invalid-1.$*
-endif
-endif
 ifeq ($(REPLACE_CM_METADATA_ID), 1)
 	@ echo "Modifying Identifier in the CM and replacing XLSX"
 	@ mkdir -p $(PKG_TMP) && unzip $(PKG_DIR)/$(CM_FILE) -d $(PKG_TMP)
@@ -31,6 +25,10 @@ endif
 ifeq ($(EXCLUDE_SPARQL_VALIDATIONS), 1)
 	@ echo "Removing SPARQL validations"
 	@ rm -rfv $(PKG_DIR)/validation/sparql/* -v
+endif
+ifeq ($(EXCLUDE_SELECT_VALIDATIONS), 1)
+	@ echo "Removing SELECT SPARQL validations"
+	@ find $(PKG_DIR)/validation/sparql -name "*select.rq" -exec rm -fv {} \;
 endif
 	@ echo "Removing any empty test_data subfolders"
 	@ for i in $$(find $(PKG_DIR) -type d -empty -path "*/test_data/*"); do rm -rfv $$i; done
@@ -50,10 +48,9 @@ package_can_examples_v%:
 	@ echo "Including CAN SDK v1.$* example data"
 	@ mkdir -p $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)-1.$*
 	@ cp -rv $(SDK_DATA_DIR_CAN)/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)-1.$*/
-ifeq ($(INCLUDE_INVALID_EXAMPLES), 1)
-	@ echo "Including CAN SDK v1.$* example data, INVALIDs"
-	@ mkdir -p $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)_invalid-1.$*
-	@ cp -rv $(SDK_DATA_DIR_CAN)_invalid/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)_invalid-1.$*
+ifeq ($(INCLUDE_INVALID_EXAMPLES), 0)
+	@ echo "Removing any INVALID CAN SDK v1.$* example data"
+	@ rm -rv $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CAN)_invalid-1.$*
 endif
 ifeq ($(REPLACE_CM_METADATA_ID_EXAMPLES), 1)
 	@ echo "Modifying Identifier in the CM and replacing XLSX"
@@ -68,6 +65,10 @@ endif
 ifeq ($(EXCLUDE_SPARQL_VALIDATIONS), 1)
 	@ echo "Removing SPARQL validations"
 	@ rm -rfv $(PKG_DIR)/validation/sparql/* -v
+endif
+ifeq ($(EXCLUDE_SELECT_VALIDATIONS), 1)
+	@ echo "Removing SELECT SPARQL validations"
+	@ find $(PKG_DIR)/validation/sparql -name "*select.rq" -exec rm -fv {} \;
 endif
 	@ echo "Removing any empty test_data subfolders"
 	@ for i in $$(find $(PKG_DIR) -type d -empty -path "*/test_data/*"); do rm -rfv $$i; done
@@ -111,6 +112,10 @@ ifeq ($(EXCLUDE_SPARQL_VALIDATIONS), 1)
 	@ echo "Removing SPARQL validations"
 	@ rm -rfv $(PKG_DIR)/validation/sparql/* -v
 endif
+ifeq ($(EXCLUDE_SELECT_VALIDATIONS), 1)
+	@ echo "Removing SELECT SPARQL validations"
+	@ find $(PKG_DIR)/validation/sparql -name "*select.rq" -exec rm -fv {} \;
+endif
 	@ echo "Removing any empty test_data subfolders"
 	@ for i in $$(find $(PKG_DIR) -type d -empty -path "*/test_data/*"); do rm -rfv $$i; done
 
@@ -130,10 +135,9 @@ package_can_maximal_v%:
 	@ echo "Including CAN SDK v1.$* example data"
 	@ mkdir -p $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)-1.$*
 	@ cp -rv $(SDK_DATA_DIR_CAN)/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)-1.$*/
-ifeq ($(INCLUDE_INVALID_EXAMPLES), 1)
-	@ echo "Including CAN SDK v1.$* example data, INVALIDs"
-	@ mkdir -p $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)_invalid-1.$*
-	@ cp -rv $(SDK_DATA_DIR_CAN)_invalid/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)_invalid-1.$*
+ifeq ($(INCLUDE_INVALID_EXAMPLES), 0)
+	@ echo "Removing any INVALID CAN SDK v1.$* example data"
+	@ rm -rv $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CAN)_invalid-1.$*
 endif
 ifeq ($(INCLUDE_OLD_SAMPLES), 1)
 	@ echo "Including (old) EF29 sample data"
@@ -158,6 +162,10 @@ endif
 ifeq ($(EXCLUDE_SPARQL_VALIDATIONS), 1)
 	@ echo "Removing SPARQL validations"
 	@ rm -rfv $(PKG_DIR)/validation/sparql/* -v
+endif
+ifeq ($(EXCLUDE_SELECT_VALIDATIONS), 1)
+	@ echo "Removing SELECT SPARQL validations"
+	@ find $(PKG_DIR)/validation/sparql -name "*select.rq" -exec rm -fv {} \;
 endif
 	@ echo "Removing any empty test_data subfolders"
 	@ for i in $$(find $(PKG_DIR) -type d -empty -path "*/test_data/*"); do rm -rfv $$i; done
@@ -195,6 +203,10 @@ ifeq ($(EXCLUDE_SPARQL_VALIDATIONS), 1)
 	@ echo "Removing SPARQL validations"
 	@ rm -rfv $(PKG_DIR)/validation/sparql/* -v
 endif
+ifeq ($(EXCLUDE_SELECT_VALIDATIONS), 1)
+	@ echo "Removing SELECT SPARQL validations"
+	@ find $(PKG_DIR)/validation/sparql -name "*select.rq" -exec rm -fv {} \;
+endif
 	@ echo "Removing any empty test_data subfolders"
 	@ for i in $$(find $(PKG_DIR) -type d -empty -path "*/test_data/*"); do rm -rfv $$i; done
 
@@ -212,9 +224,10 @@ package_can_attribs_v%:
 	@ rm -rfv $(PKG_DIR)
 	@ cp -rv mappings/$(PKG_PREFIX_CAN)_v1.$* $(PKG_DIR)
 # NOTE: CANs don't have multilingual examples
-	@ echo "Including CAN SDK v1.$* example data"
-	@ mkdir -p $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)-1.$*
-	@ cp -rv $(SDK_DATA_DIR_CAN)/eforms-sdk-1.$*/* $(PKG_DIR)/test_data/$(SDK_DATA_NAME_CAN)-1.$*/
+ifeq ($(INCLUDE_INVALID_EXAMPLES), 0)
+	@ echo "Removing any INVALID CAN SDK v1.$* example data"
+	@ rm -rv $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CAN)_invalid-1.$*
+endif
 ifeq ($(INCLUDE_OLD_SAMPLES), 1)
 	@ echo "Including (old) EF29 sample data"
 	@ mkdir -p $(PKG_DIR)/$(SAMPLES_DIR_CAN)-1.$*
@@ -243,6 +256,10 @@ endif
 ifeq ($(EXCLUDE_SPARQL_VALIDATIONS), 1)
 	@ echo "Removing SPARQL validations"
 	@ rm -rfv $(PKG_DIR)/validation/sparql/* -v
+endif
+ifeq ($(EXCLUDE_SELECT_VALIDATIONS), 1)
+	@ echo "Removing SELECT SPARQL validations"
+	@ find $(PKG_DIR)/validation/sparql -name "*select.rq" -exec rm -fv {} \;
 endif
 	@ echo "Removing any empty test_data subfolders"
 	@ for i in $$(find $(PKG_DIR) -type d -empty -path "*/test_data/*"); do rm -rfv $$i; done

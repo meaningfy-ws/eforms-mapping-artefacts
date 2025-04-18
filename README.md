@@ -2,12 +2,12 @@
 
 To update (synchronize) all tracked packages in toplevel `mappings` against the
 latest developmental RML rules in `src`, simply run `make`, which resolves to
-the default (first) Make target `package_sync`.
+the default (first) Make target `package_sync` (for packages organized
+by the eForms SDK version and document _type_).
 
-These packages, or "mapping suites", are _minimal_ in nature, meaning they
-contain very little (currently just one) test data. They serve as reference to
+These packages, or "mapping suites", serve as reference to
 the package _variants_ that can be generated from `src`, for different rule
-_profiles_ (currently CN or CAN).
+_profiles_ (currently CN, CAN or PIN).
 
 The contents in `src` are laid out in a way that is conducive to local
 development, which packages are not. However, varying amounts of data can be
@@ -19,7 +19,10 @@ make package_cn_all_variants export_cn_all_variants
 
 > Replace `cn` with `can` in any relevant command depending on which profile of
 > rules you want to package for, i.e. Contract/Competition Notices (subtypes
-> EF10-24) or Contract Award Notices (subtype EF29).
+> EF10-24), Contract Award Notices (e.g. EF29) or Prior Information Notices
+> (e.g. EF9). If you would like "type-less", combined packages organized by
+> only the SDK version, the equivalent commands are `package_sync_combined`,
+> `package_all_variants` and `export_all_variants`.
 
 These will output complete packages in a `dist` folder, along with their ZIP
 archive files, suitable for loading into mapping tools such as [Mapping
@@ -30,6 +33,8 @@ based around the following variants:
 - **examples** All SDK examples, _except_ any `*100_lots.xml` or similar large data
 - **samples** All systematic, manual and random sample data, no SDK example
 - **maximal** All SDK examples and all sample data, _including_ any large data
+- **lang** Example and sample data meant specifically for testing multilingual notices
+- **attribs** Equivalent of _maximal_ except for testing only attribute fields
 
 You are free to modify any package and rerun the relevant export Make target,
 e.g. `make export_cn_minimal`. Note that these generated packages use content
@@ -42,7 +47,7 @@ found, which can lead to unwanted situations. A complete one-liner command
 could be:
 
 ```sh
-make clean && make && make package_cn_all_variants export_cn_all_variants
+make clean package_sync_typed package_cn_all_variants export_cn_all_variants
 ```
 
 ## Testing

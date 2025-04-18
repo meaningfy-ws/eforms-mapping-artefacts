@@ -1,5 +1,6 @@
 MAPPINGS_DIR = mappings
 OUTPUT_DIR = dist
+PKG_PREFIX = package_eforms
 PKG_PREFIX_CN = package_cn
 PKG_PREFIX_CAN = package_can
 PKG_PREFIX_PIN = package_pin
@@ -26,13 +27,14 @@ CM_TITLE_PREFIX_PIN = Package EF1-EF9
 CM_VER_STRING_PIN = v1.10
 TRIM_DOWN_SHACL = 1
 EXCLUDE_SPARQL_VALIDATIONS = 0
+EXCLUDE_SELECT_VALIDATIONS = 1
 INCLUDE_NEW_SAMPLES = 1
 INCLUDE_OLD_SAMPLES = 0
 INCLUDE_RANDOM_SAMPLES = 1
 EXCLUDE_PROBLEM_SAMPLES = 1
-INCLUDE_INVALID_EXAMPLES = 1
+INCLUDE_INVALID_EXAMPLES = 0
 EXCLUDE_LARGE_EXAMPLE = 1
-REPLACE_CM_METADATA_ID = 1
+REPLACE_CM_METADATA_ID = 0 # TODO: combined CM, per version + analyse substitution logic required
 REPLACE_CM_METADATA_ID_EXAMPLES = 0
 PACKAGE_EXAMPLES_BY_DEFAULT = 1
 
@@ -53,11 +55,11 @@ TX_DIR = transformation
 VALIDATION_DIR_SPARQL_RDF = src/validation/sparql/genericRDF
 VALIDATION_DIR_SPARQL_EPO = src/validation/sparql/genericEPO
 CM_FILENAME = conceptual_mappings.xlsx
-CM_ATTR_FILENAME = conceptual_mappings_CN+CAN_Attributes.xlsx
+CM_ATTR_FILENAME = conceptual_mappings_all_attributes.xlsx
 SHACL_FILE_EPO = ePO_core_shapes.ttl
 SHACL_PATH_EPO = validation/shacl/epo/$(SHACL_FILE_EPO)
-RELEASE_DIR = ../ted-rdf-mapping-eforms
-# override with make RELEASE_DIR=$your-dir ...
+RELEASE_DIR = ../ted-rdf-mapping-eForms
+ALL_CM_DIR = tmp/conceptual_mappings
 
 JENA_TOOLS_DIR = $(shell test ! -z ${JENA_HOME} && echo ${JENA_HOME} || echo `pwd`/jena)
 JENA_TOOLS_RIOT = $(JENA_TOOLS_DIR)/bin/riot
@@ -82,15 +84,13 @@ SAMPLES_ALL_CAN = $(TEST_DATA_DIR)/$(SAMPLES_ALL_BASENAME)_can
 SAMPLES_ALL_PIN = $(TEST_DATA_DIR)/$(SAMPLES_ALL_BASENAME)_pin
 CM_FILE = $(TX_DIR)/$(CM_FILENAME)
 
-VERSIONS := $(shell seq 3 10)
+VERSIONS := $(shell seq 3 13)
 # some versions don't currently have systematic and/or random samples
 VERSIONS_SAMPLES := $(3 6 7 8 9)
 
-# TODO: move src subfolders around to be more compatible w/ packages (mappings -> transformation)
 # we are not copying over CM for now -- leaving it under manual control
-# also not copying over data
 package_sync: package_prep package_sync_cn package_sync_can package_sync_pin
-
+package_sync_combined: $(addprefix package_sync_combined_v, $(VERSIONS))
 package_sync_cn: $(addprefix package_sync_cn_v, $(VERSIONS))
 package_sync_can: $(addprefix package_sync_can_v, $(VERSIONS))
 package_sync_pin: $(addprefix package_sync_pin_v, $(VERSIONS))
@@ -99,6 +99,7 @@ package_release_can: $(addprefix package_release_can_v, $(VERSIONS))
 package_release_pin: $(addprefix package_release_pin_v, $(VERSIONS))
 reformat_package_cn: $(addprefix reformat_package_cn_v, $(VERSIONS))
 reformat_package_can: $(addprefix reformat_package_can_v, $(VERSIONS))
+reformat_package_pin: $(addprefix reformat_package_pin_v, $(VERSIONS))
 package_cn_minimal: $(addprefix package_cn_minimal_v, $(VERSIONS))
 package_can_minimal: $(addprefix package_can_minimal_v, $(VERSIONS))
 package_pin_minimal: $(addprefix package_pin_minimal_v, $(VERSIONS))
@@ -135,12 +136,77 @@ package_pin_attribs: $(addprefix package_pin_attribs_v, $(VERSIONS))
 export_cn_attribs: $(addprefix export_cn_attribs_v, $(VERSIONS))
 export_can_attribs: $(addprefix export_can_attribs_v, $(VERSIONS))
 export_pin_attribs: $(addprefix export_pin_attribs_v, $(VERSIONS))
+package_release: $(addprefix package_release_v, $(VERSIONS))
+reformat_package: $(addprefix reformat_package_v, $(VERSIONS))
+package_minimal: $(addprefix package_minimal_v, $(VERSIONS))
+export_minimal: $(addprefix export_minimal_v, $(VERSIONS))
+package_examples: $(addprefix package_examples_v, $(VERSIONS))
+export_examples: $(addprefix export_examples_v, $(VERSIONS))
+package_samples: $(addprefix package_samples_v, $(VERSIONS))
+export_samples: $(addprefix export_samples_v, $(VERSIONS))
+package_maximal: $(addprefix package_maximal_v, $(VERSIONS))
+export_maximal: $(addprefix export_maximal_v, $(VERSIONS))
+package_lang: $(addprefix package_lang_v, $(VERSIONS))
+export_lang: $(addprefix export_lang_v, $(VERSIONS))
+package_attribs: $(addprefix package_attribs_v, $(VERSIONS))
+export_attribs: $(addprefix export_attribs_v, $(VERSIONS))
 test_versioned: $(addprefix test_versioned_v, $(VERSIONS))
 test_output_versioned: $(addprefix test_output_versioned_v, $(VERSIONS))
 
 package_prep:
 	@ echo "Staging versioned folders"
 	@ cd src && bash $(MULTIVER_SCRIPT)
+
+package_sync_combined_v%: package_prep
+	@ echo "Syncing combined package v1.$*"
+	@ $(eval PKG_DIR := mappings/$(PKG_PREFIX)_v1.$*)
+	@ mkdir -p $(PKG_DIR)/$(TX_DIR)/
+	@ rm -rfv $(PKG_DIR)/$(TX_DIR)/mappings*
+	@ cp -rv src/mappings $(PKG_DIR)/$(TX_DIR)/
+	@ cp -v src/mappings-can/* $(PKG_DIR)/$(TX_DIR)/mappings/
+	@ cp -v src/mappings-pin/* $(PKG_DIR)/$(TX_DIR)/mappings/
+	@ cp -v src/mappings-common/* $(PKG_DIR)/$(TX_DIR)/mappings/
+	@ cp -v src/mappings-1.$*/* $(PKG_DIR)/$(TX_DIR)/mappings/
+	@ echo "Replacing resources"
+	@ rm -rfv $(PKG_DIR)/$(TX_DIR)/resources
+	@ cp -rv src/$(TX_DIR)/resources $(PKG_DIR)/$(TX_DIR)/
+	@ echo "Replacing validations"
+	@ rm -rfv $(PKG_DIR)/validation
+	@ cp -rv src/validation $(PKG_DIR)/
+ifeq ($(EXCLUDE_SELECT_VALIDATIONS), 1)
+	@ echo "Removing SELECT SPARQL validations"
+	@ find $(PKG_DIR)/validation/sparql -name "*select.rq" -exec rm -fv {} \;
+endif
+ifeq ($(PACKAGE_EXAMPLES_BY_DEFAULT), 1)
+	@ echo "Including CN SDK v1.$* example data"
+	@ mkdir -p $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)-1.$*
+	@ cp -rv $(SDK_DATA_DIR_CN)/eforms-sdk-1.$*/* $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)-1.$*/
+	@ echo "Including CAN SDK v1.$* example data"
+	@ mkdir -p $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CAN)-1.$*
+	@ cp -rv $(SDK_DATA_DIR_CAN)/eforms-sdk-1.$*/* $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CAN)-1.$*/
+	@ echo "Including PIN SDK v1.$* example data"
+	@ mkdir -p $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_PIN)-1.$*
+	@ cp -rv $(SDK_DATA_DIR_PIN)/eforms-sdk-1.$*/* $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_PIN)-1.$*/
+ifeq ($(INCLUDE_INVALID_EXAMPLES), 1)
+	@ echo "Including CN SDK v1.$* example data, INVALIDs"
+	@ mkdir -p $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)_invalid-1.$*
+	@ cp -rv $(SDK_DATA_DIR_CN)_invalid/eforms-sdk-1.$*/* $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)_invalid-1.$*
+	@ echo "Including CAN SDK v1.$* example data, INVALIDs"
+	@ mkdir -p $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CAN)_invalid-1.$*
+	@ cp -rv $(SDK_DATA_DIR_CAN)_invalid/eforms-sdk-1.$*/* $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CAN)_invalid-1.$*
+	@ echo "Including PIN SDK v1.$* example data, INVALIDs"
+	@ mkdir -p $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_PIN)_invalid-1.$*
+	@ cp -rv $(SDK_DATA_DIR_PIN)_invalid/eforms-sdk-1.$*/* $(PKG_DIR)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_PIN)_invalid-1.$*
+endif
+endif
+ifeq ($(TRIM_DOWN_SHACL), 1)
+	@ echo "Modifying ePO SHACL file to suppress rdf:PlainLiteral violations"
+	@ sed -i 's/sh:datatype rdf:PlainLiteral/sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] )/' $(PKG_DIR)/$(SHACL_PATH_EPO)
+	@ echo "Modifying ePO SHACL file to substitute at-voc constraint with IRI"
+	@ sed -i 's/sh:class at-voc.*;/sh:nodeKind sh:IRI ;/' $(PKG_DIR)/$(SHACL_PATH_EPO)
+	@ sed -i 's/sh:class at-voc:environmental-impact,/sh:nodeKind sh:IRI ;/' $(PKG_DIR)/$(SHACL_PATH_EPO)
+	@ sed -i '/.*at-voc:green-public-procurement-criteria ;/d' $(PKG_DIR)/$(SHACL_PATH_EPO)
+endif
 
 package_sync_cn_v%:
 	@ echo "Syncing CN v1.$*"
@@ -159,6 +225,10 @@ package_sync_cn_v%:
 	@ echo "Replacing validations"
 	@ rm -rfv $(PKG_DIR_CN)/validation
 	@ cp -rv src/validation $(PKG_DIR_CN)/
+ifeq ($(EXCLUDE_SELECT_VALIDATIONS), 1)
+	@ echo "Removing SELECT SPARQL validations"
+	@ find $(PKG_DIR_CN)/validation/sparql -name "*select.rq" -exec rm -fv {} \;
+endif
 ifeq ($(PACKAGE_EXAMPLES_BY_DEFAULT), 1)
 	@ echo "Including CN SDK v1.$* example data"
 	@ mkdir -p $(PKG_DIR_CN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CN)-1.$*
@@ -195,6 +265,10 @@ package_sync_can_v%:
 	@ echo "Replacing validations"
 	@ rm -rfv $(PKG_DIR_CAN)/validation
 	@ cp -rv src/validation $(PKG_DIR_CAN)/
+ifeq ($(EXCLUDE_SELECT_VALIDATIONS), 1)
+	@ echo "Removing SELECT SPARQL validations"
+	@ find $(PKG_DIR_CAN)/validation/sparql -name "*select.rq" -exec rm -fv {} \;
+endif
 ifeq ($(PACKAGE_EXAMPLES_BY_DEFAULT), 1)
 	@ echo "Including CAN SDK v1.$* example data"
 	@ mkdir -p $(PKG_DIR_CAN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_CAN)-1.$*
@@ -221,15 +295,20 @@ package_sync_pin_v%:
 	@ rm -rfv $(PKG_DIR_PIN)/$(TX_DIR)/mappings*
 	@ cp -rv src/mappings $(PKG_DIR_PIN)/$(TX_DIR)/
 	@ cp -v src/mappings-pin/* $(PKG_DIR_PIN)/$(TX_DIR)/mappings/
-	@ cp -v src/mappings-can/* $(PKG_DIR_PIN)/$(TX_DIR)/mappings/
 	@ cp -v src/mappings-common/* $(PKG_DIR_PIN)/$(TX_DIR)/mappings/
 	@ cp -v src/mappings-1.$*/* $(PKG_DIR_PIN)/$(TX_DIR)/mappings/
+	@ echo "Removing irrelevant versioned files"
+	@ rm -fv $(PKG_DIR_PIN)/$(TX_DIR)/mappings/*can_v*
 	@ echo "Replacing resources"
 	@ rm -rfv $(PKG_DIR_PIN)/$(TX_DIR)/resources
 	@ cp -rv src/$(TX_DIR)/resources $(PKG_DIR_PIN)/$(TX_DIR)/
 	@ echo "Replacing validations"
 	@ rm -rfv $(PKG_DIR_PIN)/validation
 	@ cp -rv src/validation $(PKG_DIR_PIN)/
+ifeq ($(EXCLUDE_SELECT_VALIDATIONS), 1)
+	@ echo "Removing SELECT SPARQL validations"
+	@ find $(PKG_DIR_PIN)/validation/sparql -name "*select.rq" -exec rm -fv {} \;
+endif
 ifeq ($(PACKAGE_EXAMPLES_BY_DEFAULT), 1)
 	@ echo "Including PIN SDK v1.$* example data"
 	@ mkdir -p $(PKG_DIR_PIN)/$(TEST_DATA_DIR)/$(SDK_DATA_NAME_PIN)-1.$*
@@ -246,8 +325,10 @@ ifeq ($(TRIM_DOWN_SHACL), 1)
 	@ echo "Modifying ePO SHACL file to substitute at-voc constraint with IRI"
 	@ sed -i 's/sh:class at-voc.*;/sh:nodeKind sh:IRI ;/' $(PKG_DIR_PIN)/$(SHACL_PATH_EPO)
 	@ sed -i 's/sh:class at-voc:environmental-impact,/sh:nodeKind sh:IRI ;/' $(PKG_DIR_PIN)/$(SHACL_PATH_EPO)
-	@ sed -i '/.*at-voc:green-public-procurement-criteria ;/d' $(PKG_DIR_PIN)/$(SHACL_PATH_EPO)	
+	@ sed -i '/.*at-voc:green-public-procurement-criteria ;/d' $(PKG_DIR_PIN)/$(SHACL_PATH_EPO)
 endif
+
+# TODO release target for combined packages
 
 package_release_cn_v%: package_prep
 	@ $(eval PKG_DIR := $(RELEASE_DIR)/mappings/$(PKG_PREFIX_CN)_v1.$*)
@@ -304,6 +385,7 @@ package_release_pin_v%: package_prep
 include packaging-cn.mk
 include packaging-can.mk
 include packaging-pin.mk
+include packaging-all.mk
 include testing.mk
 include documentation.mk
 
@@ -420,3 +502,8 @@ list-mismatching-versions:
 
 list-latest-sdk-versions:
 	@ cd $(SDK_PROJECT_DIR) && for i in $(VERSIONS); do echo -n "v1.$$i: " && git tag -l | grep 1.$$i | sed 's/-/~/' | sort -V | sed 's/~/-/' | tail -n1; done
+
+copy_versioned_conceptual_mappings:
+	@ cd $(ALL_CM_DIR) && for i in $(VERSIONS); do cp -v *1.$$i*xlsx ../../$(MAPPINGS_DIR)/package_cn_v1.$$i/transformation/conceptual_mappings.xlsx; done
+	@ cd $(ALL_CM_DIR) && for i in $(VERSIONS); do cp -v *1.$$i*xlsx ../../$(MAPPINGS_DIR)/package_can_v1.$$i/transformation/conceptual_mappings.xlsx; done
+	@ cd $(ALL_CM_DIR) && for i in $(VERSIONS); do cp -v *1.$$i*xlsx ../../$(MAPPINGS_DIR)/package_pin_v1.$$i/transformation/conceptual_mappings.xlsx; done

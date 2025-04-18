@@ -1,9 +1,9 @@
 {
-    "created_at": "2025-04-14 13:03:38.996981+00:00",
+    "created_at": "2025-04-16 11:06:37.401281+00:00",
     "results": [
         {
             "shacl_suite": {
-                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                 "shacl_suite_id": "epo"
             },
             "results": [
@@ -12,7 +12,7 @@
                     "results": [
                         {
                             "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                                 "shacl_suite_id": "epo"
                             },
                             "result_path": "http://data.europa.eu/a4g/ontology#hasOfficialLanguage",
@@ -32,15 +32,15 @@
                                 "message": "Less than 1 values on epd:id_5a55c8b3-47e2-4651-9831-990ddf740e53_AwardDecision_CON-0001->:hasOfficialLanguage"
                             },
                             "test_data": {
-                                "test_data_suite_oid": "67fbe98170ce61e9d6c0d6bc",
+                                "test_data_suite_oid": "67feb328dca42e57948af7f7",
                                 "test_data_suite_id": "sampling_eforms_all_can-1.9",
-                                "test_data_oid": "67fbe98170ce61e9d6c0d6cc",
+                                "test_data_oid": "67feb329dca42e57948af807",
                                 "test_data_id": "415449-2024"
                             }
                         },
                         {
                             "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                                 "shacl_suite_id": "epo"
                             },
                             "result_path": "http://www.w3.org/2006/time#unitType",
@@ -60,15 +60,15 @@
                                 "message": "Value does not have class time:TemporalUnit"
                             },
                             "test_data": {
-                                "test_data_suite_oid": "67fbe98170ce61e9d6c0d6bc",
+                                "test_data_suite_oid": "67feb328dca42e57948af7f7",
                                 "test_data_suite_id": "sampling_eforms_all_can-1.9",
-                                "test_data_oid": "67fbe98170ce61e9d6c0d6cc",
+                                "test_data_oid": "67feb329dca42e57948af807",
                                 "test_data_id": "415449-2024"
                             }
                         },
                         {
                             "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                                 "shacl_suite_id": "epo"
                             },
                             "result_path": "http://data.europa.eu/a4g/ontology#hasBeginning",
@@ -88,15 +88,15 @@
                                 "message": "Value is not Literal with datatype xsd:dateTime"
                             },
                             "test_data": {
-                                "test_data_suite_oid": "67fbe98170ce61e9d6c0d6bc",
+                                "test_data_suite_oid": "67feb328dca42e57948af7f7",
                                 "test_data_suite_id": "sampling_eforms_all_can-1.9",
-                                "test_data_oid": "67fbe98170ce61e9d6c0d6cc",
+                                "test_data_oid": "67feb329dca42e57948af807",
                                 "test_data_id": "415449-2024"
                             }
                         },
                         {
                             "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                                 "shacl_suite_id": "epo"
                             },
                             "result_path": "http://data.europa.eu/a4g/ontology#hasTimePeriod",
@@ -116,43 +116,15 @@
                                 "message": "Less than 1 values on epd:id_5a55c8b3-47e2-4651-9831-990ddf740e53_ContractPeriod_4TghaR9Riayv2Hb6XHyc6D->:hasTimePeriod"
                             },
                             "test_data": {
-                                "test_data_suite_oid": "67fbe98170ce61e9d6c0d6bc",
+                                "test_data_suite_oid": "67feb328dca42e57948af7f7",
                                 "test_data_suite_id": "sampling_eforms_all_can-1.9",
-                                "test_data_oid": "67fbe98170ce61e9d6c0d6cc",
+                                "test_data_oid": "67feb329dca42e57948af807",
                                 "test_data_id": "415449-2024"
                             }
                         },
                         {
                             "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
-                                "shacl_suite_id": "epo"
-                            },
-                            "result_path": "http://data.europa.eu/a4g/ontology#hasPublicationDate",
-                            "short_result_path": "epo:hasPublicationDate",
-                            "source_constraint_component": "http://www.w3.org/ns/shacl#DatatypeConstraintComponent",
-                            "short_source_constraint_component": "sh:DatatypeConstraintComponent",
-                            "result": "violation",
-                            "binding": {
-                                "focus_node": "http://data.europa.eu/a4g/resource/id_5a55c8b3-47e2-4651-9831-990ddf740e53_Notice",
-                                "short_focus_node": "epd:id_5a55c8b3-47e2-4651-9831-990ddf740e53_Notice",
-                                "result_path": "http://data.europa.eu/a4g/ontology#hasPublicationDate",
-                                "short_result_path": "epo:hasPublicationDate",
-                                "result_severity": "http://www.w3.org/ns/shacl#Violation",
-                                "short_result_severity": "sh:Violation",
-                                "source_constraint_component": "http://www.w3.org/ns/shacl#DatatypeConstraintComponent",
-                                "short_source_constraint_component": "sh:DatatypeConstraintComponent",
-                                "message": "Value is not Literal with datatype xsd:date"
-                            },
-                            "test_data": {
-                                "test_data_suite_oid": "67fbe98170ce61e9d6c0d6bc",
-                                "test_data_suite_id": "sampling_eforms_all_can-1.9",
-                                "test_data_oid": "67fbe98170ce61e9d6c0d6cc",
-                                "test_data_id": "415449-2024"
-                            }
-                        },
-                        {
-                            "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                                 "shacl_suite_id": "epo"
                             },
                             "result_path": "http://data.europa.eu/a4g/ontology#hasOJSIssueNumber",
@@ -172,15 +144,43 @@
                                 "message": "Value is not Literal with datatype xsd:integer"
                             },
                             "test_data": {
-                                "test_data_suite_oid": "67fbe98170ce61e9d6c0d6bc",
+                                "test_data_suite_oid": "67feb328dca42e57948af7f7",
                                 "test_data_suite_id": "sampling_eforms_all_can-1.9",
-                                "test_data_oid": "67fbe98170ce61e9d6c0d6cc",
+                                "test_data_oid": "67feb329dca42e57948af807",
                                 "test_data_id": "415449-2024"
                             }
                         },
                         {
                             "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
+                                "shacl_suite_id": "epo"
+                            },
+                            "result_path": "http://data.europa.eu/a4g/ontology#hasPublicationDate",
+                            "short_result_path": "epo:hasPublicationDate",
+                            "source_constraint_component": "http://www.w3.org/ns/shacl#DatatypeConstraintComponent",
+                            "short_source_constraint_component": "sh:DatatypeConstraintComponent",
+                            "result": "violation",
+                            "binding": {
+                                "focus_node": "http://data.europa.eu/a4g/resource/id_5a55c8b3-47e2-4651-9831-990ddf740e53_Notice",
+                                "short_focus_node": "epd:id_5a55c8b3-47e2-4651-9831-990ddf740e53_Notice",
+                                "result_path": "http://data.europa.eu/a4g/ontology#hasPublicationDate",
+                                "short_result_path": "epo:hasPublicationDate",
+                                "result_severity": "http://www.w3.org/ns/shacl#Violation",
+                                "short_result_severity": "sh:Violation",
+                                "source_constraint_component": "http://www.w3.org/ns/shacl#DatatypeConstraintComponent",
+                                "short_source_constraint_component": "sh:DatatypeConstraintComponent",
+                                "message": "Value is not Literal with datatype xsd:date"
+                            },
+                            "test_data": {
+                                "test_data_suite_oid": "67feb328dca42e57948af7f7",
+                                "test_data_suite_id": "sampling_eforms_all_can-1.9",
+                                "test_data_oid": "67feb329dca42e57948af807",
+                                "test_data_id": "415449-2024"
+                            }
+                        },
+                        {
+                            "shacl_suite": {
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                                 "shacl_suite_id": "epo"
                             },
                             "result_path": "http://data.europa.eu/a4g/ontology#isSubjectToProcedureSpecificTerm",
@@ -200,15 +200,15 @@
                                 "message": "Less than 1 values on epd:id_5a55c8b3-47e2-4651-9831-990ddf740e53_Procedure_6dcsBnuV4FTNoRpTZHckqN->:isSubjectToProcedureSpecificTerm"
                             },
                             "test_data": {
-                                "test_data_suite_oid": "67fbe98170ce61e9d6c0d6bc",
+                                "test_data_suite_oid": "67feb328dca42e57948af7f7",
                                 "test_data_suite_id": "sampling_eforms_all_can-1.9",
-                                "test_data_oid": "67fbe98170ce61e9d6c0d6cc",
+                                "test_data_oid": "67feb329dca42e57948af807",
                                 "test_data_id": "415449-2024"
                             }
                         },
                         {
                             "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                                 "shacl_suite_id": "epo"
                             },
                             "result_path": "http://data.europa.eu/a4g/ontology#hasContractConclusionDate",
@@ -228,15 +228,15 @@
                                 "message": "Value is not Literal with datatype xsd:date"
                             },
                             "test_data": {
-                                "test_data_suite_oid": "67fbe98170ce61e9d6c0d6bc",
+                                "test_data_suite_oid": "67feb328dca42e57948af7f7",
                                 "test_data_suite_id": "sampling_eforms_all_can-1.9",
-                                "test_data_oid": "67fbe98170ce61e9d6c0d6cc",
+                                "test_data_oid": "67feb329dca42e57948af807",
                                 "test_data_id": "415449-2024"
                             }
                         },
                         {
                             "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                                 "shacl_suite_id": "epo"
                             },
                             "result_path": "http://data.europa.eu/a4g/ontology#hasOfficialLanguage",
@@ -256,15 +256,15 @@
                                 "message": "Less than 1 values on epd:id_5a55c8b3-47e2-4651-9831-990ddf740e53_SettledContract_CON-0001->:hasOfficialLanguage"
                             },
                             "test_data": {
-                                "test_data_suite_oid": "67fbe98170ce61e9d6c0d6bc",
+                                "test_data_suite_oid": "67feb328dca42e57948af7f7",
                                 "test_data_suite_id": "sampling_eforms_all_can-1.9",
-                                "test_data_oid": "67fbe98170ce61e9d6c0d6cc",
+                                "test_data_oid": "67feb329dca42e57948af807",
                                 "test_data_id": "415449-2024"
                             }
                         },
                         {
                             "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                                 "shacl_suite_id": "epo"
                             },
                             "result_path": "http://data.europa.eu/a4g/ontology#hasOfficialLanguage",
@@ -284,17 +284,17 @@
                                 "message": "Less than 1 values on epd:id_5a55c8b3-47e2-4651-9831-990ddf740e53_Tender_TEN-0001->:hasOfficialLanguage"
                             },
                             "test_data": {
-                                "test_data_suite_oid": "67fbe98170ce61e9d6c0d6bc",
+                                "test_data_suite_oid": "67feb328dca42e57948af7f7",
                                 "test_data_suite_id": "sampling_eforms_all_can-1.9",
-                                "test_data_oid": "67fbe98170ce61e9d6c0d6cc",
+                                "test_data_oid": "67feb329dca42e57948af807",
                                 "test_data_id": "415449-2024"
                             }
                         }
                     ],
                     "test_data": {
-                        "test_data_suite_oid": "67fbe98170ce61e9d6c0d6bc",
+                        "test_data_suite_oid": "67feb328dca42e57948af7f7",
                         "test_data_suite_id": "sampling_eforms_all_can-1.9",
-                        "test_data_oid": "67fbe98170ce61e9d6c0d6cc",
+                        "test_data_oid": "67feb329dca42e57948af807",
                         "test_data_id": "415449-2024"
                     },
                     "error": null,
@@ -306,14 +306,14 @@
     "summary": {
         "shacl_suites": [
             {
-                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                 "shacl_suite_id": "epo"
             }
         ],
         "results": [
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "",

@@ -1,9 +1,9 @@
 {
-    "created_at": "2025-04-14 13:00:37.669461+00:00",
+    "created_at": "2025-04-16 11:11:28.207397+00:00",
     "results": [
         {
             "shacl_suite": {
-                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                 "shacl_suite_id": "epo"
             },
             "results": [
@@ -12,7 +12,7 @@
                     "results": [
                         {
                             "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                                 "shacl_suite_id": "epo"
                             },
                             "result_path": "http://www.w3.org/2006/time#unitType",
@@ -32,15 +32,15 @@
                                 "message": "Value does not have class time:TemporalUnit"
                             },
                             "test_data": {
-                                "test_data_suite_oid": "67fbe91070ce61e9d6c0d526",
+                                "test_data_suite_oid": "67feb285dca42e57948af660",
                                 "test_data_suite_id": "sdk_examples_pin-1.7",
-                                "test_data_oid": "67fbe91070ce61e9d6c0d531",
+                                "test_data_oid": "67feb285dca42e57948af66b",
                                 "test_data_id": "CEI"
                             }
                         },
                         {
                             "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                                 "shacl_suite_id": "epo"
                             },
                             "result_path": "http://data.europa.eu/a4g/ontology#hasBeginning",
@@ -60,15 +60,15 @@
                                 "message": "Value is not Literal with datatype xsd:dateTime"
                             },
                             "test_data": {
-                                "test_data_suite_oid": "67fbe91070ce61e9d6c0d526",
+                                "test_data_suite_oid": "67feb285dca42e57948af660",
                                 "test_data_suite_id": "sdk_examples_pin-1.7",
-                                "test_data_oid": "67fbe91070ce61e9d6c0d531",
+                                "test_data_oid": "67feb285dca42e57948af66b",
                                 "test_data_id": "CEI"
                             }
                         },
                         {
                             "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                                 "shacl_suite_id": "epo"
                             },
                             "result_path": "http://data.europa.eu/a4g/ontology#hasTimePeriod",
@@ -88,17 +88,17 @@
                                 "message": "Less than 1 values on epd:id_37f3f877-01ee-4671-a49f-5581cffe6388_ContractPeriod_kSZMfSA8qTkPCvvg4J7pge->:hasTimePeriod"
                             },
                             "test_data": {
-                                "test_data_suite_oid": "67fbe91070ce61e9d6c0d526",
+                                "test_data_suite_oid": "67feb285dca42e57948af660",
                                 "test_data_suite_id": "sdk_examples_pin-1.7",
-                                "test_data_oid": "67fbe91070ce61e9d6c0d531",
+                                "test_data_oid": "67feb285dca42e57948af66b",
                                 "test_data_id": "CEI"
                             }
                         }
                     ],
                     "test_data": {
-                        "test_data_suite_oid": "67fbe91070ce61e9d6c0d526",
+                        "test_data_suite_oid": "67feb285dca42e57948af660",
                         "test_data_suite_id": "sdk_examples_pin-1.7",
-                        "test_data_oid": "67fbe91070ce61e9d6c0d531",
+                        "test_data_oid": "67feb285dca42e57948af66b",
                         "test_data_id": "CEI"
                     },
                     "error": null,
@@ -110,14 +110,14 @@
     "summary": {
         "shacl_suites": [
             {
-                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                 "shacl_suite_id": "epo"
             }
         ],
         "results": [
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "",

@@ -1,17 +1,17 @@
 {
-    "created_at": "2025-04-14 12:38:07.445964+00:00",
+    "created_at": "2025-04-15 19:39:38.802299+00:00",
     "results": [],
     "summary": {
         "shacl_suites": [
             {
-                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                 "shacl_suite_id": "epo"
             }
         ],
         "results": [
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasNoticeType",
@@ -35,75 +35,75 @@
                         "count": 12,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d43b",
+                                "test_data_oid": "67feb1f8dca42e57948af573",
                                 "test_data_id": "can-modif_24_value"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d440",
+                                "test_data_oid": "67feb1f9dca42e57948af578",
                                 "test_data_id": "can_81_FRA"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d443",
+                                "test_data_oid": "67feb1f9dca42e57948af57b",
                                 "test_data_id": "can-modif_24_duration"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d448",
+                                "test_data_oid": "67feb1f9dca42e57948af580",
                                 "test_data_id": "can_24_maximal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d45d",
+                                "test_data_oid": "67feb1f9dca42e57948af595",
                                 "test_data_id": "pin-only_24_maximal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d45e",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af596",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d460",
+                                "test_data_oid": "67feb1f9dca42e57948af598",
                                 "test_data_id": "104431-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d464",
+                                "test_data_oid": "67feb1f9dca42e57948af59c",
                                 "test_data_id": "765080-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d472",
+                                "test_data_oid": "67feb1f9dca42e57948af5aa",
                                 "test_data_id": "change-cn_24_open_dates"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d474",
+                                "test_data_oid": "67feb1f9dca42e57948af5ac",
                                 "test_data_id": "cn_24_maximal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d475",
+                                "test_data_oid": "67feb1f9dca42e57948af5ad",
                                 "test_data_id": "cn_24_maximal_100_lots"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d479",
+                                "test_data_oid": "67feb1f9dca42e57948af5b1",
                                 "test_data_id": "change-cn_24_void"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d47a",
+                                "test_data_oid": "67feb1f9dca42e57948af5b2",
                                 "test_data_id": "change-cn_24_cumbria_suppliers"
                             }
                         ]
@@ -112,7 +112,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#refersToLot",
@@ -136,135 +136,135 @@
                         "count": 22,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d43b",
+                                "test_data_oid": "67feb1f8dca42e57948af573",
                                 "test_data_id": "can-modif_24_value"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d440",
+                                "test_data_oid": "67feb1f9dca42e57948af578",
                                 "test_data_id": "can_81_FRA"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d443",
+                                "test_data_oid": "67feb1f9dca42e57948af57b",
                                 "test_data_id": "can-modif_24_duration"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d448",
+                                "test_data_oid": "67feb1f9dca42e57948af580",
                                 "test_data_id": "can_24_maximal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d451",
+                                "test_data_oid": "67feb1f9dca42e57948af589",
                                 "test_data_id": "pin-only_24_lots"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d452",
+                                "test_data_oid": "67feb1f9dca42e57948af58a",
                                 "test_data_id": "pin-buyer_24_published"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d453",
+                                "test_data_oid": "67feb1f9dca42e57948af58b",
                                 "test_data_id": "pin-only_fin-reg"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d457",
+                                "test_data_oid": "67feb1f9dca42e57948af58f",
                                 "test_data_id": "pin-only_24"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d458",
+                                "test_data_oid": "67feb1f9dca42e57948af590",
                                 "test_data_id": "pin-buyer_24_minimal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d459",
+                                "test_data_oid": "67feb1f9dca42e57948af591",
                                 "test_data_id": "pin-only_81"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d45a",
+                                "test_data_oid": "67feb1f9dca42e57948af592",
                                 "test_data_id": "pin-buyer_24"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d45c",
+                                "test_data_oid": "67feb1f9dca42e57948af594",
                                 "test_data_id": "pin-only_81_FRA"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d45d",
+                                "test_data_oid": "67feb1f9dca42e57948af595",
                                 "test_data_id": "pin-only_24_maximal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d45e",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af596",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d45f",
+                                "test_data_oid": "67feb1f9dca42e57948af597",
                                 "test_data_id": "727143-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d45e",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af596",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d460",
+                                "test_data_oid": "67feb1f9dca42e57948af598",
                                 "test_data_id": "104431-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d45e",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af596",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d461",
+                                "test_data_oid": "67feb1f9dca42e57948af599",
                                 "test_data_id": "125018-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d464",
+                                "test_data_oid": "67feb1f9dca42e57948af59c",
                                 "test_data_id": "765080-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d472",
+                                "test_data_oid": "67feb1f9dca42e57948af5aa",
                                 "test_data_id": "change-cn_24_open_dates"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d474",
+                                "test_data_oid": "67feb1f9dca42e57948af5ac",
                                 "test_data_id": "cn_24_maximal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d475",
+                                "test_data_oid": "67feb1f9dca42e57948af5ad",
                                 "test_data_id": "cn_24_maximal_100_lots"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d479",
+                                "test_data_oid": "67feb1f9dca42e57948af5b1",
                                 "test_data_id": "change-cn_24_void"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d47a",
+                                "test_data_oid": "67feb1f9dca42e57948af5b2",
                                 "test_data_id": "change-cn_24_cumbria_suppliers"
                             }
                         ]
@@ -273,7 +273,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#refersToProcedure",
@@ -297,75 +297,75 @@
                         "count": 12,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d43b",
+                                "test_data_oid": "67feb1f8dca42e57948af573",
                                 "test_data_id": "can-modif_24_value"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d440",
+                                "test_data_oid": "67feb1f9dca42e57948af578",
                                 "test_data_id": "can_81_FRA"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d443",
+                                "test_data_oid": "67feb1f9dca42e57948af57b",
                                 "test_data_id": "can-modif_24_duration"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d448",
+                                "test_data_oid": "67feb1f9dca42e57948af580",
                                 "test_data_id": "can_24_maximal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d45d",
+                                "test_data_oid": "67feb1f9dca42e57948af595",
                                 "test_data_id": "pin-only_24_maximal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d45e",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af596",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d460",
+                                "test_data_oid": "67feb1f9dca42e57948af598",
                                 "test_data_id": "104431-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d464",
+                                "test_data_oid": "67feb1f9dca42e57948af59c",
                                 "test_data_id": "765080-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d472",
+                                "test_data_oid": "67feb1f9dca42e57948af5aa",
                                 "test_data_id": "change-cn_24_open_dates"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d474",
+                                "test_data_oid": "67feb1f9dca42e57948af5ac",
                                 "test_data_id": "cn_24_maximal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d475",
+                                "test_data_oid": "67feb1f9dca42e57948af5ad",
                                 "test_data_id": "cn_24_maximal_100_lots"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d479",
+                                "test_data_oid": "67feb1f9dca42e57948af5b1",
                                 "test_data_id": "change-cn_24_void"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d47a",
+                                "test_data_oid": "67feb1f9dca42e57948af5b2",
                                 "test_data_id": "change-cn_24_cumbria_suppliers"
                             }
                         ]
@@ -374,7 +374,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasOfficialLanguage",
@@ -398,171 +398,171 @@
                         "count": 28,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d43b",
+                                "test_data_oid": "67feb1f8dca42e57948af573",
                                 "test_data_id": "can-modif_24_value"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d43c",
+                                "test_data_oid": "67feb1f8dca42e57948af574",
                                 "test_data_id": "veat_25"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d43d",
+                                "test_data_oid": "67feb1f8dca42e57948af575",
                                 "test_data_id": "can_24_LSBU"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d43e",
+                                "test_data_oid": "67feb1f8dca42e57948af576",
                                 "test_data_id": "can_25_withheld"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d43f",
+                                "test_data_oid": "67feb1f8dca42e57948af577",
                                 "test_data_id": "can_25_ENG_Buyers"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d440",
+                                "test_data_oid": "67feb1f9dca42e57948af578",
                                 "test_data_id": "can_81_FRA"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d441",
+                                "test_data_oid": "67feb1f9dca42e57948af579",
                                 "test_data_id": "can_24_FRA_comments"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d442",
+                                "test_data_oid": "67feb1f9dca42e57948af57a",
                                 "test_data_id": "can_24_no_tenders"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d443",
+                                "test_data_oid": "67feb1f9dca42e57948af57b",
                                 "test_data_id": "can-modif_24_duration"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d444",
+                                "test_data_oid": "67feb1f9dca42e57948af57c",
                                 "test_data_id": "veat_24"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d445",
+                                "test_data_oid": "67feb1f9dca42e57948af57d",
                                 "test_data_id": "can_24_minimal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d446",
+                                "test_data_oid": "67feb1f9dca42e57948af57e",
                                 "test_data_id": "t02_ESP"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d447",
+                                "test_data_oid": "67feb1f9dca42e57948af57f",
                                 "test_data_id": "can_25_ITA"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d448",
+                                "test_data_oid": "67feb1f9dca42e57948af580",
                                 "test_data_id": "can_24_maximal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d449",
+                                "test_data_oid": "67feb1f9dca42e57948af581",
                                 "test_data_id": "can_25_ENG_buyers_countries"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d44a",
+                                "test_data_oid": "67feb1f9dca42e57948af582",
                                 "test_data_id": "can_23_contracts"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d44b",
+                                "test_data_oid": "67feb1f9dca42e57948af583",
                                 "test_data_id": "can_25_ENG"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d44c",
+                                "test_data_oid": "67feb1f9dca42e57948af584",
                                 "test_data_id": "can_25_withheld_lots"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d44d",
+                                "test_data_oid": "67feb1f9dca42e57948af585",
                                 "test_data_id": "can_24_UKRI"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d44e",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af586",
                                 "test_data_suite_id": "sampling_eforms_all_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d44f",
+                                "test_data_oid": "67feb1f9dca42e57948af587",
                                 "test_data_id": "746583-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d45d",
+                                "test_data_oid": "67feb1f9dca42e57948af595",
                                 "test_data_id": "pin-only_24_maximal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d45e",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af596",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d460",
+                                "test_data_oid": "67feb1f9dca42e57948af598",
                                 "test_data_id": "104431-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d464",
+                                "test_data_oid": "67feb1f9dca42e57948af59c",
                                 "test_data_id": "765080-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d472",
+                                "test_data_oid": "67feb1f9dca42e57948af5aa",
                                 "test_data_id": "change-cn_24_open_dates"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d474",
+                                "test_data_oid": "67feb1f9dca42e57948af5ac",
                                 "test_data_id": "cn_24_maximal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d475",
+                                "test_data_oid": "67feb1f9dca42e57948af5ad",
                                 "test_data_id": "cn_24_maximal_100_lots"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d479",
+                                "test_data_oid": "67feb1f9dca42e57948af5b1",
                                 "test_data_id": "change-cn_24_void"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d47a",
+                                "test_data_oid": "67feb1f9dca42e57948af5b2",
                                 "test_data_id": "change-cn_24_cumbria_suppliers"
                             }
                         ]
@@ -571,7 +571,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasAwardDecisionDate",
@@ -595,57 +595,57 @@
                         "count": 9,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d43b",
+                                "test_data_oid": "67feb1f8dca42e57948af573",
                                 "test_data_id": "can-modif_24_value"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d43c",
+                                "test_data_oid": "67feb1f8dca42e57948af574",
                                 "test_data_id": "veat_25"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d440",
+                                "test_data_oid": "67feb1f9dca42e57948af578",
                                 "test_data_id": "can_81_FRA"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d441",
+                                "test_data_oid": "67feb1f9dca42e57948af579",
                                 "test_data_id": "can_24_FRA_comments"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d443",
+                                "test_data_oid": "67feb1f9dca42e57948af57b",
                                 "test_data_id": "can-modif_24_duration"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d444",
+                                "test_data_oid": "67feb1f9dca42e57948af57c",
                                 "test_data_id": "veat_24"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d447",
+                                "test_data_oid": "67feb1f9dca42e57948af57f",
                                 "test_data_id": "can_25_ITA"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d448",
+                                "test_data_oid": "67feb1f9dca42e57948af580",
                                 "test_data_id": "can_24_maximal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d44a",
+                                "test_data_oid": "67feb1f9dca42e57948af582",
                                 "test_data_id": "can_23_contracts"
                             }
                         ]
@@ -654,7 +654,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasLotReference",
@@ -678,21 +678,21 @@
                         "count": 3,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d43b",
+                                "test_data_oid": "67feb1f8dca42e57948af573",
                                 "test_data_id": "can-modif_24_value"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d443",
+                                "test_data_oid": "67feb1f9dca42e57948af57b",
                                 "test_data_id": "can-modif_24_duration"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d448",
+                                "test_data_oid": "67feb1f9dca42e57948af580",
                                 "test_data_id": "can_24_maximal"
                             }
                         ]
@@ -701,7 +701,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasProcedureType",
@@ -725,111 +725,111 @@
                         "count": 18,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d43b",
+                                "test_data_oid": "67feb1f8dca42e57948af573",
                                 "test_data_id": "can-modif_24_value"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d443",
+                                "test_data_oid": "67feb1f9dca42e57948af57b",
                                 "test_data_id": "can-modif_24_duration"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d447",
+                                "test_data_oid": "67feb1f9dca42e57948af57f",
                                 "test_data_id": "can_25_ITA"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d44a",
+                                "test_data_oid": "67feb1f9dca42e57948af582",
                                 "test_data_id": "can_23_contracts"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d451",
+                                "test_data_oid": "67feb1f9dca42e57948af589",
                                 "test_data_id": "pin-only_24_lots"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d452",
+                                "test_data_oid": "67feb1f9dca42e57948af58a",
                                 "test_data_id": "pin-buyer_24_published"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d453",
+                                "test_data_oid": "67feb1f9dca42e57948af58b",
                                 "test_data_id": "pin-only_fin-reg"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d455",
+                                "test_data_oid": "67feb1f9dca42e57948af58d",
                                 "test_data_id": "qu-sy_25"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d457",
+                                "test_data_oid": "67feb1f9dca42e57948af58f",
                                 "test_data_id": "pin-only_24"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d458",
+                                "test_data_oid": "67feb1f9dca42e57948af590",
                                 "test_data_id": "pin-buyer_24_minimal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d459",
+                                "test_data_oid": "67feb1f9dca42e57948af591",
                                 "test_data_id": "pin-only_81"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d45a",
+                                "test_data_oid": "67feb1f9dca42e57948af592",
                                 "test_data_id": "pin-buyer_24"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d45c",
+                                "test_data_oid": "67feb1f9dca42e57948af594",
                                 "test_data_id": "pin-only_81_FRA"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d45d",
+                                "test_data_oid": "67feb1f9dca42e57948af595",
                                 "test_data_id": "pin-only_24_maximal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d45e",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af596",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d45f",
+                                "test_data_oid": "67feb1f9dca42e57948af597",
                                 "test_data_id": "727143-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d45e",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af596",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d460",
+                                "test_data_oid": "67feb1f9dca42e57948af598",
                                 "test_data_id": "104431-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d45e",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af596",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d461",
+                                "test_data_oid": "67feb1f9dca42e57948af599",
                                 "test_data_id": "125018-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d46a",
+                                "test_data_oid": "67feb1f9dca42e57948af5a2",
                                 "test_data_id": "cn_23"
                             }
                         ]
@@ -838,7 +838,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasContractConclusionDate",
@@ -862,87 +862,87 @@
                         "count": 14,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d43b",
+                                "test_data_oid": "67feb1f8dca42e57948af573",
                                 "test_data_id": "can-modif_24_value"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d43d",
+                                "test_data_oid": "67feb1f8dca42e57948af575",
                                 "test_data_id": "can_24_LSBU"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d43e",
+                                "test_data_oid": "67feb1f8dca42e57948af576",
                                 "test_data_id": "can_25_withheld"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d43f",
+                                "test_data_oid": "67feb1f8dca42e57948af577",
                                 "test_data_id": "can_25_ENG_Buyers"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d440",
+                                "test_data_oid": "67feb1f9dca42e57948af578",
                                 "test_data_id": "can_81_FRA"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d441",
+                                "test_data_oid": "67feb1f9dca42e57948af579",
                                 "test_data_id": "can_24_FRA_comments"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d443",
+                                "test_data_oid": "67feb1f9dca42e57948af57b",
                                 "test_data_id": "can-modif_24_duration"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d445",
+                                "test_data_oid": "67feb1f9dca42e57948af57d",
                                 "test_data_id": "can_24_minimal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d446",
+                                "test_data_oid": "67feb1f9dca42e57948af57e",
                                 "test_data_id": "t02_ESP"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d448",
+                                "test_data_oid": "67feb1f9dca42e57948af580",
                                 "test_data_id": "can_24_maximal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d449",
+                                "test_data_oid": "67feb1f9dca42e57948af581",
                                 "test_data_id": "can_25_ENG_buyers_countries"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d44b",
+                                "test_data_oid": "67feb1f9dca42e57948af583",
                                 "test_data_id": "can_25_ENG"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d44c",
+                                "test_data_oid": "67feb1f9dca42e57948af584",
                                 "test_data_id": "can_25_withheld_lots"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d44d",
+                                "test_data_oid": "67feb1f9dca42e57948af585",
                                 "test_data_id": "can_24_UKRI"
                             }
                         ]
@@ -951,7 +951,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasAwardCriteriaStatedInProcurementDocuments",
@@ -975,231 +975,231 @@
                         "count": 38,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d43d",
+                                "test_data_oid": "67feb1f8dca42e57948af575",
                                 "test_data_id": "can_24_LSBU"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d43e",
+                                "test_data_oid": "67feb1f8dca42e57948af576",
                                 "test_data_id": "can_25_withheld"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d43f",
+                                "test_data_oid": "67feb1f8dca42e57948af577",
                                 "test_data_id": "can_25_ENG_Buyers"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d440",
+                                "test_data_oid": "67feb1f9dca42e57948af578",
                                 "test_data_id": "can_81_FRA"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d441",
+                                "test_data_oid": "67feb1f9dca42e57948af579",
                                 "test_data_id": "can_24_FRA_comments"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d442",
+                                "test_data_oid": "67feb1f9dca42e57948af57a",
                                 "test_data_id": "can_24_no_tenders"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d445",
+                                "test_data_oid": "67feb1f9dca42e57948af57d",
                                 "test_data_id": "can_24_minimal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d448",
+                                "test_data_oid": "67feb1f9dca42e57948af580",
                                 "test_data_id": "can_24_maximal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d449",
+                                "test_data_oid": "67feb1f9dca42e57948af581",
                                 "test_data_id": "can_25_ENG_buyers_countries"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d44a",
+                                "test_data_oid": "67feb1f9dca42e57948af582",
                                 "test_data_id": "can_23_contracts"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d44b",
+                                "test_data_oid": "67feb1f9dca42e57948af583",
                                 "test_data_id": "can_25_ENG"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d44c",
+                                "test_data_oid": "67feb1f9dca42e57948af584",
                                 "test_data_id": "can_25_withheld_lots"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d44d",
+                                "test_data_oid": "67feb1f9dca42e57948af585",
                                 "test_data_id": "can_24_UKRI"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d44e",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af586",
                                 "test_data_suite_id": "sampling_eforms_all_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d44f",
+                                "test_data_oid": "67feb1f9dca42e57948af587",
                                 "test_data_id": "746583-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d454",
+                                "test_data_oid": "67feb1f9dca42e57948af58c",
                                 "test_data_id": "pin-cfc_25"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d455",
+                                "test_data_oid": "67feb1f9dca42e57948af58d",
                                 "test_data_id": "qu-sy_25"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d463",
+                                "test_data_oid": "67feb1f9dca42e57948af59b",
                                 "test_data_id": "679217-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d464",
+                                "test_data_oid": "67feb1f9dca42e57948af59c",
                                 "test_data_id": "765080-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d465",
+                                "test_data_oid": "67feb1f9dca42e57948af59d",
                                 "test_data_id": "774489-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d466",
+                                "test_data_oid": "67feb1f9dca42e57948af59e",
                                 "test_data_id": "680162-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d467",
+                                "test_data_oid": "67feb1f9dca42e57948af59f",
                                 "test_data_id": "766823-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d468",
+                                "test_data_oid": "67feb1f9dca42e57948af5a0",
                                 "test_data_id": "746890-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d46a",
+                                "test_data_oid": "67feb1f9dca42e57948af5a2",
                                 "test_data_id": "cn_23"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d46b",
+                                "test_data_oid": "67feb1f9dca42e57948af5a3",
                                 "test_data_id": "cn_81"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d46c",
+                                "test_data_oid": "67feb1f9dca42e57948af5a4",
                                 "test_data_id": "cn-social_24"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d46d",
+                                "test_data_oid": "67feb1f9dca42e57948af5a5",
                                 "test_data_id": "cn_24_open"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d46e",
+                                "test_data_oid": "67feb1f9dca42e57948af5a6",
                                 "test_data_id": "cn_81_FRA"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d46f",
+                                "test_data_oid": "67feb1f9dca42e57948af5a7",
                                 "test_data_id": "cn_24_open_accel"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d470",
+                                "test_data_oid": "67feb1f9dca42e57948af5a8",
                                 "test_data_id": "cn_24_multilingual"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d471",
+                                "test_data_oid": "67feb1f9dca42e57948af5a9",
                                 "test_data_id": "cn_24_cumbria"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d472",
+                                "test_data_oid": "67feb1f9dca42e57948af5aa",
                                 "test_data_id": "change-cn_24_open_dates"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d473",
+                                "test_data_oid": "67feb1f9dca42e57948af5ab",
                                 "test_data_id": "cn_25"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d474",
+                                "test_data_oid": "67feb1f9dca42e57948af5ac",
                                 "test_data_id": "cn_24_maximal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d475",
+                                "test_data_oid": "67feb1f9dca42e57948af5ad",
                                 "test_data_id": "cn_24_maximal_100_lots"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d477",
+                                "test_data_oid": "67feb1f9dca42e57948af5af",
                                 "test_data_id": "cn-desg_24"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d478",
+                                "test_data_oid": "67feb1f9dca42e57948af5b0",
                                 "test_data_id": "cn_24_nego_accel"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d47a",
+                                "test_data_oid": "67feb1f9dca42e57948af5b2",
                                 "test_data_id": "change-cn_24_cumbria_suppliers"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d47b",
+                                "test_data_oid": "67feb1f9dca42e57948af5b3",
                                 "test_data_id": "cn_24_FRA_comments"
                             }
                         ]
@@ -1208,7 +1208,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasBeginning",
@@ -1232,177 +1232,177 @@
                         "count": 29,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d441",
+                                "test_data_oid": "67feb1f9dca42e57948af579",
                                 "test_data_id": "can_24_FRA_comments"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d443",
+                                "test_data_oid": "67feb1f9dca42e57948af57b",
                                 "test_data_id": "can-modif_24_duration"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d446",
+                                "test_data_oid": "67feb1f9dca42e57948af57e",
                                 "test_data_id": "t02_ESP"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d448",
+                                "test_data_oid": "67feb1f9dca42e57948af580",
                                 "test_data_id": "can_24_maximal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d44e",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af586",
                                 "test_data_suite_id": "sampling_eforms_all_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d44f",
+                                "test_data_oid": "67feb1f9dca42e57948af587",
                                 "test_data_id": "746583-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d454",
+                                "test_data_oid": "67feb1f9dca42e57948af58c",
                                 "test_data_id": "pin-cfc_25"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d455",
+                                "test_data_oid": "67feb1f9dca42e57948af58d",
                                 "test_data_id": "qu-sy_25"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d459",
+                                "test_data_oid": "67feb1f9dca42e57948af591",
                                 "test_data_id": "pin-only_81"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d45b",
+                                "test_data_oid": "67feb1f9dca42e57948af593",
                                 "test_data_id": "CEI"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d45d",
+                                "test_data_oid": "67feb1f9dca42e57948af595",
                                 "test_data_id": "pin-only_24_maximal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d463",
+                                "test_data_oid": "67feb1f9dca42e57948af59b",
                                 "test_data_id": "679217-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d464",
+                                "test_data_oid": "67feb1f9dca42e57948af59c",
                                 "test_data_id": "765080-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d465",
+                                "test_data_oid": "67feb1f9dca42e57948af59d",
                                 "test_data_id": "774489-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d466",
+                                "test_data_oid": "67feb1f9dca42e57948af59e",
                                 "test_data_id": "680162-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d467",
+                                "test_data_oid": "67feb1f9dca42e57948af59f",
                                 "test_data_id": "766823-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d46a",
+                                "test_data_oid": "67feb1f9dca42e57948af5a2",
                                 "test_data_id": "cn_23"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d46b",
+                                "test_data_oid": "67feb1f9dca42e57948af5a3",
                                 "test_data_id": "cn_81"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d46d",
+                                "test_data_oid": "67feb1f9dca42e57948af5a5",
                                 "test_data_id": "cn_24_open"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d46e",
+                                "test_data_oid": "67feb1f9dca42e57948af5a6",
                                 "test_data_id": "cn_81_FRA"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d46f",
+                                "test_data_oid": "67feb1f9dca42e57948af5a7",
                                 "test_data_id": "cn_24_open_accel"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d470",
+                                "test_data_oid": "67feb1f9dca42e57948af5a8",
                                 "test_data_id": "cn_24_multilingual"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d471",
+                                "test_data_oid": "67feb1f9dca42e57948af5a9",
                                 "test_data_id": "cn_24_cumbria"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d472",
+                                "test_data_oid": "67feb1f9dca42e57948af5aa",
                                 "test_data_id": "change-cn_24_open_dates"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d473",
+                                "test_data_oid": "67feb1f9dca42e57948af5ab",
                                 "test_data_id": "cn_25"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d474",
+                                "test_data_oid": "67feb1f9dca42e57948af5ac",
                                 "test_data_id": "cn_24_maximal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d475",
+                                "test_data_oid": "67feb1f9dca42e57948af5ad",
                                 "test_data_id": "cn_24_maximal_100_lots"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d478",
+                                "test_data_oid": "67feb1f9dca42e57948af5b0",
                                 "test_data_id": "cn_24_nego_accel"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d47a",
+                                "test_data_oid": "67feb1f9dca42e57948af5b2",
                                 "test_data_id": "change-cn_24_cumbria_suppliers"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d47b",
+                                "test_data_oid": "67feb1f9dca42e57948af5b3",
                                 "test_data_id": "cn_24_FRA_comments"
                             }
                         ]
@@ -1411,7 +1411,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasEnd",
@@ -1435,93 +1435,93 @@
                         "count": 15,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d441",
+                                "test_data_oid": "67feb1f9dca42e57948af579",
                                 "test_data_id": "can_24_FRA_comments"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d448",
+                                "test_data_oid": "67feb1f9dca42e57948af580",
                                 "test_data_id": "can_24_maximal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d44e",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af586",
                                 "test_data_suite_id": "sampling_eforms_all_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d44f",
+                                "test_data_oid": "67feb1f9dca42e57948af587",
                                 "test_data_id": "746583-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d455",
+                                "test_data_oid": "67feb1f9dca42e57948af58d",
                                 "test_data_id": "qu-sy_25"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d45d",
+                                "test_data_oid": "67feb1f9dca42e57948af595",
                                 "test_data_id": "pin-only_24_maximal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d463",
+                                "test_data_oid": "67feb1f9dca42e57948af59b",
                                 "test_data_id": "679217-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d464",
+                                "test_data_oid": "67feb1f9dca42e57948af59c",
                                 "test_data_id": "765080-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d465",
+                                "test_data_oid": "67feb1f9dca42e57948af59d",
                                 "test_data_id": "774489-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d466",
+                                "test_data_oid": "67feb1f9dca42e57948af59e",
                                 "test_data_id": "680162-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d467",
+                                "test_data_oid": "67feb1f9dca42e57948af59f",
                                 "test_data_id": "766823-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d471",
+                                "test_data_oid": "67feb1f9dca42e57948af5a9",
                                 "test_data_id": "cn_24_cumbria"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d474",
+                                "test_data_oid": "67feb1f9dca42e57948af5ac",
                                 "test_data_id": "cn_24_maximal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d475",
+                                "test_data_oid": "67feb1f9dca42e57948af5ad",
                                 "test_data_id": "cn_24_maximal_100_lots"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d47a",
+                                "test_data_oid": "67feb1f9dca42e57948af5b2",
                                 "test_data_id": "change-cn_24_cumbria_suppliers"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d47b",
+                                "test_data_oid": "67feb1f9dca42e57948af5b3",
                                 "test_data_id": "cn_24_FRA_comments"
                             }
                         ]
@@ -1530,7 +1530,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasTimePeriod",
@@ -1554,177 +1554,177 @@
                         "count": 29,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d441",
+                                "test_data_oid": "67feb1f9dca42e57948af579",
                                 "test_data_id": "can_24_FRA_comments"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d443",
+                                "test_data_oid": "67feb1f9dca42e57948af57b",
                                 "test_data_id": "can-modif_24_duration"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d446",
+                                "test_data_oid": "67feb1f9dca42e57948af57e",
                                 "test_data_id": "t02_ESP"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d448",
+                                "test_data_oid": "67feb1f9dca42e57948af580",
                                 "test_data_id": "can_24_maximal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d44e",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af586",
                                 "test_data_suite_id": "sampling_eforms_all_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d44f",
+                                "test_data_oid": "67feb1f9dca42e57948af587",
                                 "test_data_id": "746583-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d454",
+                                "test_data_oid": "67feb1f9dca42e57948af58c",
                                 "test_data_id": "pin-cfc_25"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d455",
+                                "test_data_oid": "67feb1f9dca42e57948af58d",
                                 "test_data_id": "qu-sy_25"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d459",
+                                "test_data_oid": "67feb1f9dca42e57948af591",
                                 "test_data_id": "pin-only_81"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d45b",
+                                "test_data_oid": "67feb1f9dca42e57948af593",
                                 "test_data_id": "CEI"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d45d",
+                                "test_data_oid": "67feb1f9dca42e57948af595",
                                 "test_data_id": "pin-only_24_maximal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d463",
+                                "test_data_oid": "67feb1f9dca42e57948af59b",
                                 "test_data_id": "679217-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d464",
+                                "test_data_oid": "67feb1f9dca42e57948af59c",
                                 "test_data_id": "765080-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d465",
+                                "test_data_oid": "67feb1f9dca42e57948af59d",
                                 "test_data_id": "774489-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d466",
+                                "test_data_oid": "67feb1f9dca42e57948af59e",
                                 "test_data_id": "680162-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d467",
+                                "test_data_oid": "67feb1f9dca42e57948af59f",
                                 "test_data_id": "766823-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d46a",
+                                "test_data_oid": "67feb1f9dca42e57948af5a2",
                                 "test_data_id": "cn_23"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d46b",
+                                "test_data_oid": "67feb1f9dca42e57948af5a3",
                                 "test_data_id": "cn_81"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d46d",
+                                "test_data_oid": "67feb1f9dca42e57948af5a5",
                                 "test_data_id": "cn_24_open"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d46e",
+                                "test_data_oid": "67feb1f9dca42e57948af5a6",
                                 "test_data_id": "cn_81_FRA"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d46f",
+                                "test_data_oid": "67feb1f9dca42e57948af5a7",
                                 "test_data_id": "cn_24_open_accel"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d470",
+                                "test_data_oid": "67feb1f9dca42e57948af5a8",
                                 "test_data_id": "cn_24_multilingual"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d471",
+                                "test_data_oid": "67feb1f9dca42e57948af5a9",
                                 "test_data_id": "cn_24_cumbria"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d472",
+                                "test_data_oid": "67feb1f9dca42e57948af5aa",
                                 "test_data_id": "change-cn_24_open_dates"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d473",
+                                "test_data_oid": "67feb1f9dca42e57948af5ab",
                                 "test_data_id": "cn_25"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d474",
+                                "test_data_oid": "67feb1f9dca42e57948af5ac",
                                 "test_data_id": "cn_24_maximal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d475",
+                                "test_data_oid": "67feb1f9dca42e57948af5ad",
                                 "test_data_id": "cn_24_maximal_100_lots"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d478",
+                                "test_data_oid": "67feb1f9dca42e57948af5b0",
                                 "test_data_id": "cn_24_nego_accel"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d47a",
+                                "test_data_oid": "67feb1f9dca42e57948af5b2",
                                 "test_data_id": "change-cn_24_cumbria_suppliers"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d47b",
+                                "test_data_oid": "67feb1f9dca42e57948af5b3",
                                 "test_data_id": "cn_24_FRA_comments"
                             }
                         ]
@@ -1733,7 +1733,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#isSubjectToProcedureSpecificTerm",
@@ -1757,117 +1757,117 @@
                         "count": 19,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d442",
+                                "test_data_oid": "67feb1f9dca42e57948af57a",
                                 "test_data_id": "can_24_no_tenders"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d445",
+                                "test_data_oid": "67feb1f9dca42e57948af57d",
                                 "test_data_id": "can_24_minimal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d446",
+                                "test_data_oid": "67feb1f9dca42e57948af57e",
                                 "test_data_id": "t02_ESP"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d447",
+                                "test_data_oid": "67feb1f9dca42e57948af57f",
                                 "test_data_id": "can_25_ITA"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d451",
+                                "test_data_oid": "67feb1f9dca42e57948af589",
                                 "test_data_id": "pin-only_24_lots"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d452",
+                                "test_data_oid": "67feb1f9dca42e57948af58a",
                                 "test_data_id": "pin-buyer_24_published"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d453",
+                                "test_data_oid": "67feb1f9dca42e57948af58b",
                                 "test_data_id": "pin-only_fin-reg"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d456",
+                                "test_data_oid": "67feb1f9dca42e57948af58e",
                                 "test_data_id": "t01_PRT"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d457",
+                                "test_data_oid": "67feb1f9dca42e57948af58f",
                                 "test_data_id": "pin-only_24"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d458",
+                                "test_data_oid": "67feb1f9dca42e57948af590",
                                 "test_data_id": "pin-buyer_24_minimal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d459",
+                                "test_data_oid": "67feb1f9dca42e57948af591",
                                 "test_data_id": "pin-only_81"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d45a",
+                                "test_data_oid": "67feb1f9dca42e57948af592",
                                 "test_data_id": "pin-buyer_24"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d45c",
+                                "test_data_oid": "67feb1f9dca42e57948af594",
                                 "test_data_id": "pin-only_81_FRA"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d45d",
+                                "test_data_oid": "67feb1f9dca42e57948af595",
                                 "test_data_id": "pin-only_24_maximal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d45e",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af596",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d45f",
+                                "test_data_oid": "67feb1f9dca42e57948af597",
                                 "test_data_id": "727143-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d45e",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af596",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d460",
+                                "test_data_oid": "67feb1f9dca42e57948af598",
                                 "test_data_id": "104431-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d45e",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af596",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d461",
+                                "test_data_oid": "67feb1f9dca42e57948af599",
                                 "test_data_id": "125018-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d476",
+                                "test_data_oid": "67feb1f9dca42e57948af5ae",
                                 "test_data_id": "cn_24_minimal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d479",
+                                "test_data_oid": "67feb1f9dca42e57948af5b1",
                                 "test_data_id": "change-cn_24_void"
                             }
                         ]
@@ -1876,7 +1876,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://www.w3.org/2006/time#unitType",
@@ -1900,153 +1900,153 @@
                         "count": 25,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d443",
+                                "test_data_oid": "67feb1f9dca42e57948af57b",
                                 "test_data_id": "can-modif_24_duration"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d446",
+                                "test_data_oid": "67feb1f9dca42e57948af57e",
                                 "test_data_id": "t02_ESP"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d454",
+                                "test_data_oid": "67feb1f9dca42e57948af58c",
                                 "test_data_id": "pin-cfc_25"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d456",
+                                "test_data_oid": "67feb1f9dca42e57948af58e",
                                 "test_data_id": "t01_PRT"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d459",
+                                "test_data_oid": "67feb1f9dca42e57948af591",
                                 "test_data_id": "pin-only_81"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d45b",
+                                "test_data_oid": "67feb1f9dca42e57948af593",
                                 "test_data_id": "CEI"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d45e",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af596",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d45f",
+                                "test_data_oid": "67feb1f9dca42e57948af597",
                                 "test_data_id": "727143-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d45e",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af596",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d461",
+                                "test_data_oid": "67feb1f9dca42e57948af599",
                                 "test_data_id": "125018-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d465",
+                                "test_data_oid": "67feb1f9dca42e57948af59d",
                                 "test_data_id": "774489-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d466",
+                                "test_data_oid": "67feb1f9dca42e57948af59e",
                                 "test_data_id": "680162-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d468",
+                                "test_data_oid": "67feb1f9dca42e57948af5a0",
                                 "test_data_id": "746890-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d46a",
+                                "test_data_oid": "67feb1f9dca42e57948af5a2",
                                 "test_data_id": "cn_23"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d46b",
+                                "test_data_oid": "67feb1f9dca42e57948af5a3",
                                 "test_data_id": "cn_81"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d46d",
+                                "test_data_oid": "67feb1f9dca42e57948af5a5",
                                 "test_data_id": "cn_24_open"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d46e",
+                                "test_data_oid": "67feb1f9dca42e57948af5a6",
                                 "test_data_id": "cn_81_FRA"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d46f",
+                                "test_data_oid": "67feb1f9dca42e57948af5a7",
                                 "test_data_id": "cn_24_open_accel"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d470",
+                                "test_data_oid": "67feb1f9dca42e57948af5a8",
                                 "test_data_id": "cn_24_multilingual"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d471",
+                                "test_data_oid": "67feb1f9dca42e57948af5a9",
                                 "test_data_id": "cn_24_cumbria"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d472",
+                                "test_data_oid": "67feb1f9dca42e57948af5aa",
                                 "test_data_id": "change-cn_24_open_dates"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d473",
+                                "test_data_oid": "67feb1f9dca42e57948af5ab",
                                 "test_data_id": "cn_25"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d476",
+                                "test_data_oid": "67feb1f9dca42e57948af5ae",
                                 "test_data_id": "cn_24_minimal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d478",
+                                "test_data_oid": "67feb1f9dca42e57948af5b0",
                                 "test_data_id": "cn_24_nego_accel"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d479",
+                                "test_data_oid": "67feb1f9dca42e57948af5b1",
                                 "test_data_id": "change-cn_24_void"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d47a",
+                                "test_data_oid": "67feb1f9dca42e57948af5b2",
                                 "test_data_id": "change-cn_24_cumbria_suppliers"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d47b",
+                                "test_data_oid": "67feb1f9dca42e57948af5b3",
                                 "test_data_id": "cn_24_FRA_comments"
                             }
                         ]
@@ -2055,7 +2055,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasProcurementScopeDividedIntoLot",
@@ -2079,81 +2079,81 @@
                         "count": 13,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d447",
+                                "test_data_oid": "67feb1f9dca42e57948af57f",
                                 "test_data_id": "can_25_ITA"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d451",
+                                "test_data_oid": "67feb1f9dca42e57948af589",
                                 "test_data_id": "pin-only_24_lots"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d452",
+                                "test_data_oid": "67feb1f9dca42e57948af58a",
                                 "test_data_id": "pin-buyer_24_published"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d453",
+                                "test_data_oid": "67feb1f9dca42e57948af58b",
                                 "test_data_id": "pin-only_fin-reg"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d457",
+                                "test_data_oid": "67feb1f9dca42e57948af58f",
                                 "test_data_id": "pin-only_24"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d458",
+                                "test_data_oid": "67feb1f9dca42e57948af590",
                                 "test_data_id": "pin-buyer_24_minimal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d459",
+                                "test_data_oid": "67feb1f9dca42e57948af591",
                                 "test_data_id": "pin-only_81"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d45a",
+                                "test_data_oid": "67feb1f9dca42e57948af592",
                                 "test_data_id": "pin-buyer_24"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d45c",
+                                "test_data_oid": "67feb1f9dca42e57948af594",
                                 "test_data_id": "pin-only_81_FRA"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d45d",
+                                "test_data_oid": "67feb1f9dca42e57948af595",
                                 "test_data_id": "pin-only_24_maximal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d45e",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af596",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d45f",
+                                "test_data_oid": "67feb1f9dca42e57948af597",
                                 "test_data_id": "727143-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d45e",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af596",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d460",
+                                "test_data_oid": "67feb1f9dca42e57948af598",
                                 "test_data_id": "104431-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d45e",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af596",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d461",
+                                "test_data_oid": "67feb1f9dca42e57948af599",
                                 "test_data_id": "125018-2023"
                             }
                         ]
@@ -2162,7 +2162,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#isSubmittedForLot",
@@ -2186,9 +2186,9 @@
                         "count": 1,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d43a",
+                                "test_data_suite_oid": "67feb1f8dca42e57948af572",
                                 "test_data_suite_id": "sdk_examples_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d448",
+                                "test_data_oid": "67feb1f9dca42e57948af580",
                                 "test_data_id": "can_24_maximal"
                             }
                         ]
@@ -2197,7 +2197,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasOJSIssueNumber",
@@ -2221,69 +2221,69 @@
                         "count": 11,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d44e",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af586",
                                 "test_data_suite_id": "sampling_eforms_all_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d44f",
+                                "test_data_oid": "67feb1f9dca42e57948af587",
                                 "test_data_id": "746583-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d452",
+                                "test_data_oid": "67feb1f9dca42e57948af58a",
                                 "test_data_id": "pin-buyer_24_published"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d45e",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af596",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d45f",
+                                "test_data_oid": "67feb1f9dca42e57948af597",
                                 "test_data_id": "727143-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d45e",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af596",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d460",
+                                "test_data_oid": "67feb1f9dca42e57948af598",
                                 "test_data_id": "104431-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d45e",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af596",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d461",
+                                "test_data_oid": "67feb1f9dca42e57948af599",
                                 "test_data_id": "125018-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d463",
+                                "test_data_oid": "67feb1f9dca42e57948af59b",
                                 "test_data_id": "679217-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d464",
+                                "test_data_oid": "67feb1f9dca42e57948af59c",
                                 "test_data_id": "765080-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d465",
+                                "test_data_oid": "67feb1f9dca42e57948af59d",
                                 "test_data_id": "774489-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d466",
+                                "test_data_oid": "67feb1f9dca42e57948af59e",
                                 "test_data_id": "680162-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d467",
+                                "test_data_oid": "67feb1f9dca42e57948af59f",
                                 "test_data_id": "766823-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d468",
+                                "test_data_oid": "67feb1f9dca42e57948af5a0",
                                 "test_data_id": "746890-2023"
                             }
                         ]
@@ -2292,7 +2292,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasPublicationDate",
@@ -2316,69 +2316,69 @@
                         "count": 11,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d44e",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af586",
                                 "test_data_suite_id": "sampling_eforms_all_can-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d44f",
+                                "test_data_oid": "67feb1f9dca42e57948af587",
                                 "test_data_id": "746583-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d452",
+                                "test_data_oid": "67feb1f9dca42e57948af58a",
                                 "test_data_id": "pin-buyer_24_published"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d45e",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af596",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d45f",
+                                "test_data_oid": "67feb1f9dca42e57948af597",
                                 "test_data_id": "727143-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d45e",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af596",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d460",
+                                "test_data_oid": "67feb1f9dca42e57948af598",
                                 "test_data_id": "104431-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d45e",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af596",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d461",
+                                "test_data_oid": "67feb1f9dca42e57948af599",
                                 "test_data_id": "125018-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d463",
+                                "test_data_oid": "67feb1f9dca42e57948af59b",
                                 "test_data_id": "679217-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d464",
+                                "test_data_oid": "67feb1f9dca42e57948af59c",
                                 "test_data_id": "765080-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d465",
+                                "test_data_oid": "67feb1f9dca42e57948af59d",
                                 "test_data_id": "774489-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d466",
+                                "test_data_oid": "67feb1f9dca42e57948af59e",
                                 "test_data_id": "680162-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d467",
+                                "test_data_oid": "67feb1f9dca42e57948af59f",
                                 "test_data_id": "766823-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d462",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af59a",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d468",
+                                "test_data_oid": "67feb1f9dca42e57948af5a0",
                                 "test_data_id": "746890-2023"
                             }
                         ]
@@ -2387,7 +2387,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://www.w3.org/ns/adms#identifier",
@@ -2411,81 +2411,81 @@
                         "count": 13,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d451",
+                                "test_data_oid": "67feb1f9dca42e57948af589",
                                 "test_data_id": "pin-only_24_lots"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d452",
+                                "test_data_oid": "67feb1f9dca42e57948af58a",
                                 "test_data_id": "pin-buyer_24_published"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d453",
+                                "test_data_oid": "67feb1f9dca42e57948af58b",
                                 "test_data_id": "pin-only_fin-reg"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d456",
+                                "test_data_oid": "67feb1f9dca42e57948af58e",
                                 "test_data_id": "t01_PRT"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d457",
+                                "test_data_oid": "67feb1f9dca42e57948af58f",
                                 "test_data_id": "pin-only_24"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d458",
+                                "test_data_oid": "67feb1f9dca42e57948af590",
                                 "test_data_id": "pin-buyer_24_minimal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d459",
+                                "test_data_oid": "67feb1f9dca42e57948af591",
                                 "test_data_id": "pin-only_81"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d45a",
+                                "test_data_oid": "67feb1f9dca42e57948af592",
                                 "test_data_id": "pin-buyer_24"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d45c",
+                                "test_data_oid": "67feb1f9dca42e57948af594",
                                 "test_data_id": "pin-only_81_FRA"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d45d",
+                                "test_data_oid": "67feb1f9dca42e57948af595",
                                 "test_data_id": "pin-only_24_maximal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d45e",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af596",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d45f",
+                                "test_data_oid": "67feb1f9dca42e57948af597",
                                 "test_data_id": "727143-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d45e",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af596",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d460",
+                                "test_data_oid": "67feb1f9dca42e57948af598",
                                 "test_data_id": "104431-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d45e",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af596",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d461",
+                                "test_data_oid": "67feb1f9dca42e57948af599",
                                 "test_data_id": "125018-2023"
                             }
                         ]
@@ -2494,7 +2494,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasEstimatedInvitationToTenderDate",
@@ -2518,15 +2518,15 @@
                         "count": 2,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d450",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af588",
                                 "test_data_suite_id": "sdk_examples_pin-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d454",
+                                "test_data_oid": "67feb1f9dca42e57948af58c",
                                 "test_data_id": "pin-cfc_25"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d478",
+                                "test_data_oid": "67feb1f9dca42e57948af5b0",
                                 "test_data_id": "cn_24_nego_accel"
                             }
                         ]
@@ -2535,7 +2535,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasAdditionalInformationDeadline",
@@ -2559,9 +2559,9 @@
                         "count": 1,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d46b",
+                                "test_data_oid": "67feb1f9dca42e57948af5a3",
                                 "test_data_id": "cn_81"
                             }
                         ]
@@ -2570,7 +2570,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://purl.org/dc/terms/description",
@@ -2594,9 +2594,9 @@
                         "count": 1,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d470",
+                                "test_data_oid": "67feb1f9dca42e57948af5a8",
                                 "test_data_id": "cn_24_multilingual"
                             }
                         ]
@@ -2605,7 +2605,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://www.w3.org/ns/locn#fullAddress",
@@ -2629,9 +2629,9 @@
                         "count": 1,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d470",
+                                "test_data_oid": "67feb1f9dca42e57948af5a8",
                                 "test_data_id": "cn_24_multilingual"
                             }
                         ]
@@ -2640,7 +2640,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasOpeningDateTime",
@@ -2664,15 +2664,15 @@
                         "count": 2,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d470",
+                                "test_data_oid": "67feb1f9dca42e57948af5a8",
                                 "test_data_id": "cn_24_multilingual"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d47b",
+                                "test_data_oid": "67feb1f9dca42e57948af5b3",
                                 "test_data_id": "cn_24_FRA_comments"
                             }
                         ]
@@ -2681,7 +2681,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasReceiptTenderDeadline",
@@ -2705,15 +2705,15 @@
                         "count": 2,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d470",
+                                "test_data_oid": "67feb1f9dca42e57948af5a8",
                                 "test_data_id": "cn_24_multilingual"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d47b",
+                                "test_data_oid": "67feb1f9dca42e57948af5b3",
                                 "test_data_id": "cn_24_FRA_comments"
                             }
                         ]
@@ -2722,7 +2722,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasDeadline",
@@ -2746,15 +2746,15 @@
                         "count": 2,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d474",
+                                "test_data_oid": "67feb1f9dca42e57948af5ac",
                                 "test_data_id": "cn_24_maximal"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d475",
+                                "test_data_oid": "67feb1f9dca42e57948af5ad",
                                 "test_data_id": "cn_24_maximal_100_lots"
                             }
                         ]
@@ -2763,7 +2763,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasUnitCode",
@@ -2787,9 +2787,9 @@
                         "count": 1,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d478",
+                                "test_data_oid": "67feb1f9dca42e57948af5b0",
                                 "test_data_id": "cn_24_nego_accel"
                             }
                         ]
@@ -2798,7 +2798,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#relatesToEFormSectionIdentifier",
@@ -2822,9 +2822,9 @@
                         "count": 1,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d479",
+                                "test_data_oid": "67feb1f9dca42e57948af5b1",
                                 "test_data_id": "change-cn_24_void"
                             }
                         ]
@@ -2833,7 +2833,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasProcurementDocumentChangeDate",
@@ -2857,9 +2857,9 @@
                         "count": 1,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8ac70ce61e9d6c0d469",
+                                "test_data_suite_oid": "67feb1f9dca42e57948af5a1",
                                 "test_data_suite_id": "sdk_examples_cn-1.5",
-                                "test_data_oid": "67fbe8ac70ce61e9d6c0d47a",
+                                "test_data_oid": "67feb1f9dca42e57948af5b2",
                                 "test_data_id": "change-cn_24_cumbria_suppliers"
                             }
                         ]

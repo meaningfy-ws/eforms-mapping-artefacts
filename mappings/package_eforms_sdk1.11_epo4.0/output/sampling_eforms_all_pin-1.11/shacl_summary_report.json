@@ -1,17 +1,17 @@
 {
-    "created_at": "2025-04-14 12:59:48.463639+00:00",
+    "created_at": "2025-04-16 09:59:39.543228+00:00",
     "results": [],
     "summary": {
         "shacl_suites": [
             {
-                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                 "shacl_suite_id": "epo"
             }
         ],
         "results": [
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasOfficialLanguage",
@@ -35,27 +35,27 @@
                         "count": 4,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c1",
+                                "test_data_oid": "67feb3e5dca42e57948af936",
                                 "test_data_id": "558049-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c2",
+                                "test_data_oid": "67feb3e5dca42e57948af937",
                                 "test_data_id": "384489-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7cb",
+                                "test_data_oid": "67feb3e5dca42e57948af940",
                                 "test_data_id": "547418-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d2",
+                                "test_data_oid": "67feb3e5dca42e57948af947",
                                 "test_data_id": "597501-2024"
                             }
                         ]
@@ -64,7 +64,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasNoticeType",
@@ -88,21 +88,21 @@
                         "count": 3,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c1",
+                                "test_data_oid": "67feb3e5dca42e57948af936",
                                 "test_data_id": "558049-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c2",
+                                "test_data_oid": "67feb3e5dca42e57948af937",
                                 "test_data_id": "384489-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7cb",
+                                "test_data_oid": "67feb3e5dca42e57948af940",
                                 "test_data_id": "547418-2024"
                             }
                         ]
@@ -111,7 +111,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#refersToLot",
@@ -135,33 +135,33 @@
                         "count": 5,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c1",
+                                "test_data_oid": "67feb3e5dca42e57948af936",
                                 "test_data_id": "558049-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c2",
+                                "test_data_oid": "67feb3e5dca42e57948af937",
                                 "test_data_id": "384489-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c9",
+                                "test_data_oid": "67feb3e5dca42e57948af93e",
                                 "test_data_id": "425792-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7cb",
+                                "test_data_oid": "67feb3e5dca42e57948af940",
                                 "test_data_id": "547418-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d3",
+                                "test_data_oid": "67feb3e5dca42e57948af948",
                                 "test_data_id": "407805-2024"
                             }
                         ]
@@ -170,7 +170,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#refersToProcedure",
@@ -194,21 +194,21 @@
                         "count": 3,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c1",
+                                "test_data_oid": "67feb3e5dca42e57948af936",
                                 "test_data_id": "558049-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c2",
+                                "test_data_oid": "67feb3e5dca42e57948af937",
                                 "test_data_id": "384489-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7cb",
+                                "test_data_oid": "67feb3e5dca42e57948af940",
                                 "test_data_id": "547418-2024"
                             }
                         ]
@@ -217,7 +217,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#relatesToEFormSectionIdentifier",
@@ -241,9 +241,9 @@
                         "count": 1,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c1",
+                                "test_data_oid": "67feb3e5dca42e57948af936",
                                 "test_data_id": "558049-2024"
                             }
                         ]
@@ -252,7 +252,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://www.w3.org/2006/time#unitType",
@@ -276,75 +276,75 @@
                         "count": 12,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c1",
+                                "test_data_oid": "67feb3e5dca42e57948af936",
                                 "test_data_id": "558049-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c2",
+                                "test_data_oid": "67feb3e5dca42e57948af937",
                                 "test_data_id": "384489-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c3",
+                                "test_data_oid": "67feb3e5dca42e57948af938",
                                 "test_data_id": "605710-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c5",
+                                "test_data_oid": "67feb3e5dca42e57948af93a",
                                 "test_data_id": "453260-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c8",
+                                "test_data_oid": "67feb3e5dca42e57948af93d",
                                 "test_data_id": "444576-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c9",
+                                "test_data_oid": "67feb3e5dca42e57948af93e",
                                 "test_data_id": "425792-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7ca",
+                                "test_data_oid": "67feb3e5dca42e57948af93f",
                                 "test_data_id": "483987-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7cb",
+                                "test_data_oid": "67feb3e5dca42e57948af940",
                                 "test_data_id": "547418-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7cc",
+                                "test_data_oid": "67feb3e5dca42e57948af941",
                                 "test_data_id": "504421-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7cd",
+                                "test_data_oid": "67feb3e5dca42e57948af942",
                                 "test_data_id": "399134-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7ce",
+                                "test_data_oid": "67feb3e5dca42e57948af943",
                                 "test_data_id": "440582-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d5",
+                                "test_data_oid": "67feb3e5dca42e57948af94a",
                                 "test_data_id": "433676-2024"
                             }
                         ]
@@ -353,7 +353,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasPublicationDate",
@@ -377,129 +377,129 @@
                         "count": 21,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c1",
+                                "test_data_oid": "67feb3e5dca42e57948af936",
                                 "test_data_id": "558049-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c2",
+                                "test_data_oid": "67feb3e5dca42e57948af937",
                                 "test_data_id": "384489-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c3",
+                                "test_data_oid": "67feb3e5dca42e57948af938",
                                 "test_data_id": "605710-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c4",
+                                "test_data_oid": "67feb3e5dca42e57948af939",
                                 "test_data_id": "387948-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c5",
+                                "test_data_oid": "67feb3e5dca42e57948af93a",
                                 "test_data_id": "453260-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c6",
+                                "test_data_oid": "67feb3e5dca42e57948af93b",
                                 "test_data_id": "533162-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c7",
+                                "test_data_oid": "67feb3e5dca42e57948af93c",
                                 "test_data_id": "404078-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c8",
+                                "test_data_oid": "67feb3e5dca42e57948af93d",
                                 "test_data_id": "444576-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c9",
+                                "test_data_oid": "67feb3e5dca42e57948af93e",
                                 "test_data_id": "425792-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7ca",
+                                "test_data_oid": "67feb3e5dca42e57948af93f",
                                 "test_data_id": "483987-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7cb",
+                                "test_data_oid": "67feb3e5dca42e57948af940",
                                 "test_data_id": "547418-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7cc",
+                                "test_data_oid": "67feb3e5dca42e57948af941",
                                 "test_data_id": "504421-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7cd",
+                                "test_data_oid": "67feb3e5dca42e57948af942",
                                 "test_data_id": "399134-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7ce",
+                                "test_data_oid": "67feb3e5dca42e57948af943",
                                 "test_data_id": "440582-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7cf",
+                                "test_data_oid": "67feb3e5dca42e57948af944",
                                 "test_data_id": "426212-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d0",
+                                "test_data_oid": "67feb3e5dca42e57948af945",
                                 "test_data_id": "372944-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d1",
+                                "test_data_oid": "67feb3e5dca42e57948af946",
                                 "test_data_id": "578480-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d2",
+                                "test_data_oid": "67feb3e5dca42e57948af947",
                                 "test_data_id": "597501-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d3",
+                                "test_data_oid": "67feb3e5dca42e57948af948",
                                 "test_data_id": "407805-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d4",
+                                "test_data_oid": "67feb3e5dca42e57948af949",
                                 "test_data_id": "490988-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d5",
+                                "test_data_oid": "67feb3e5dca42e57948af94a",
                                 "test_data_id": "433676-2024"
                             }
                         ]
@@ -508,7 +508,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasOJSIssueNumber",
@@ -532,129 +532,129 @@
                         "count": 21,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c1",
+                                "test_data_oid": "67feb3e5dca42e57948af936",
                                 "test_data_id": "558049-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c2",
+                                "test_data_oid": "67feb3e5dca42e57948af937",
                                 "test_data_id": "384489-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c3",
+                                "test_data_oid": "67feb3e5dca42e57948af938",
                                 "test_data_id": "605710-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c4",
+                                "test_data_oid": "67feb3e5dca42e57948af939",
                                 "test_data_id": "387948-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c5",
+                                "test_data_oid": "67feb3e5dca42e57948af93a",
                                 "test_data_id": "453260-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c6",
+                                "test_data_oid": "67feb3e5dca42e57948af93b",
                                 "test_data_id": "533162-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c7",
+                                "test_data_oid": "67feb3e5dca42e57948af93c",
                                 "test_data_id": "404078-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c8",
+                                "test_data_oid": "67feb3e5dca42e57948af93d",
                                 "test_data_id": "444576-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c9",
+                                "test_data_oid": "67feb3e5dca42e57948af93e",
                                 "test_data_id": "425792-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7ca",
+                                "test_data_oid": "67feb3e5dca42e57948af93f",
                                 "test_data_id": "483987-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7cb",
+                                "test_data_oid": "67feb3e5dca42e57948af940",
                                 "test_data_id": "547418-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7cc",
+                                "test_data_oid": "67feb3e5dca42e57948af941",
                                 "test_data_id": "504421-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7cd",
+                                "test_data_oid": "67feb3e5dca42e57948af942",
                                 "test_data_id": "399134-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7ce",
+                                "test_data_oid": "67feb3e5dca42e57948af943",
                                 "test_data_id": "440582-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7cf",
+                                "test_data_oid": "67feb3e5dca42e57948af944",
                                 "test_data_id": "426212-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d0",
+                                "test_data_oid": "67feb3e5dca42e57948af945",
                                 "test_data_id": "372944-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d1",
+                                "test_data_oid": "67feb3e5dca42e57948af946",
                                 "test_data_id": "578480-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d2",
+                                "test_data_oid": "67feb3e5dca42e57948af947",
                                 "test_data_id": "597501-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d3",
+                                "test_data_oid": "67feb3e5dca42e57948af948",
                                 "test_data_id": "407805-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d4",
+                                "test_data_oid": "67feb3e5dca42e57948af949",
                                 "test_data_id": "490988-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d5",
+                                "test_data_oid": "67feb3e5dca42e57948af94a",
                                 "test_data_id": "433676-2024"
                             }
                         ]
@@ -663,7 +663,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://www.w3.org/ns/adms#identifier",
@@ -687,69 +687,69 @@
                         "count": 11,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c2",
+                                "test_data_oid": "67feb3e5dca42e57948af937",
                                 "test_data_id": "384489-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c3",
+                                "test_data_oid": "67feb3e5dca42e57948af938",
                                 "test_data_id": "605710-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c5",
+                                "test_data_oid": "67feb3e5dca42e57948af93a",
                                 "test_data_id": "453260-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c9",
+                                "test_data_oid": "67feb3e5dca42e57948af93e",
                                 "test_data_id": "425792-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7cc",
+                                "test_data_oid": "67feb3e5dca42e57948af941",
                                 "test_data_id": "504421-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7cd",
+                                "test_data_oid": "67feb3e5dca42e57948af942",
                                 "test_data_id": "399134-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7cf",
+                                "test_data_oid": "67feb3e5dca42e57948af944",
                                 "test_data_id": "426212-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d0",
+                                "test_data_oid": "67feb3e5dca42e57948af945",
                                 "test_data_id": "372944-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d1",
+                                "test_data_oid": "67feb3e5dca42e57948af946",
                                 "test_data_id": "578480-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d3",
+                                "test_data_oid": "67feb3e5dca42e57948af948",
                                 "test_data_id": "407805-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d4",
+                                "test_data_oid": "67feb3e5dca42e57948af949",
                                 "test_data_id": "490988-2024"
                             }
                         ]
@@ -758,7 +758,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasAwardCriteriaStatedInProcurementDocuments",
@@ -782,45 +782,45 @@
                         "count": 7,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c3",
+                                "test_data_oid": "67feb3e5dca42e57948af938",
                                 "test_data_id": "605710-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c5",
+                                "test_data_oid": "67feb3e5dca42e57948af93a",
                                 "test_data_id": "453260-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c8",
+                                "test_data_oid": "67feb3e5dca42e57948af93d",
                                 "test_data_id": "444576-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7cd",
+                                "test_data_oid": "67feb3e5dca42e57948af942",
                                 "test_data_id": "399134-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d0",
+                                "test_data_oid": "67feb3e5dca42e57948af945",
                                 "test_data_id": "372944-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d1",
+                                "test_data_oid": "67feb3e5dca42e57948af946",
                                 "test_data_id": "578480-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d2",
+                                "test_data_oid": "67feb3e5dca42e57948af947",
                                 "test_data_id": "597501-2024"
                             }
                         ]
@@ -829,7 +829,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasBeginning",
@@ -853,57 +853,57 @@
                         "count": 9,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c3",
+                                "test_data_oid": "67feb3e5dca42e57948af938",
                                 "test_data_id": "605710-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c4",
+                                "test_data_oid": "67feb3e5dca42e57948af939",
                                 "test_data_id": "387948-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c6",
+                                "test_data_oid": "67feb3e5dca42e57948af93b",
                                 "test_data_id": "533162-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7cd",
+                                "test_data_oid": "67feb3e5dca42e57948af942",
                                 "test_data_id": "399134-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7ce",
+                                "test_data_oid": "67feb3e5dca42e57948af943",
                                 "test_data_id": "440582-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7cf",
+                                "test_data_oid": "67feb3e5dca42e57948af944",
                                 "test_data_id": "426212-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d0",
+                                "test_data_oid": "67feb3e5dca42e57948af945",
                                 "test_data_id": "372944-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d1",
+                                "test_data_oid": "67feb3e5dca42e57948af946",
                                 "test_data_id": "578480-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d2",
+                                "test_data_oid": "67feb3e5dca42e57948af947",
                                 "test_data_id": "597501-2024"
                             }
                         ]
@@ -912,7 +912,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasEnd",
@@ -936,51 +936,51 @@
                         "count": 8,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c3",
+                                "test_data_oid": "67feb3e5dca42e57948af938",
                                 "test_data_id": "605710-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c4",
+                                "test_data_oid": "67feb3e5dca42e57948af939",
                                 "test_data_id": "387948-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c6",
+                                "test_data_oid": "67feb3e5dca42e57948af93b",
                                 "test_data_id": "533162-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7cd",
+                                "test_data_oid": "67feb3e5dca42e57948af942",
                                 "test_data_id": "399134-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7cf",
+                                "test_data_oid": "67feb3e5dca42e57948af944",
                                 "test_data_id": "426212-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d0",
+                                "test_data_oid": "67feb3e5dca42e57948af945",
                                 "test_data_id": "372944-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d1",
+                                "test_data_oid": "67feb3e5dca42e57948af946",
                                 "test_data_id": "578480-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d2",
+                                "test_data_oid": "67feb3e5dca42e57948af947",
                                 "test_data_id": "597501-2024"
                             }
                         ]
@@ -989,7 +989,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasTimePeriod",
@@ -1013,57 +1013,57 @@
                         "count": 9,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c3",
+                                "test_data_oid": "67feb3e5dca42e57948af938",
                                 "test_data_id": "605710-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c4",
+                                "test_data_oid": "67feb3e5dca42e57948af939",
                                 "test_data_id": "387948-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c6",
+                                "test_data_oid": "67feb3e5dca42e57948af93b",
                                 "test_data_id": "533162-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7cd",
+                                "test_data_oid": "67feb3e5dca42e57948af942",
                                 "test_data_id": "399134-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7ce",
+                                "test_data_oid": "67feb3e5dca42e57948af943",
                                 "test_data_id": "440582-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7cf",
+                                "test_data_oid": "67feb3e5dca42e57948af944",
                                 "test_data_id": "426212-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d0",
+                                "test_data_oid": "67feb3e5dca42e57948af945",
                                 "test_data_id": "372944-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d1",
+                                "test_data_oid": "67feb3e5dca42e57948af946",
                                 "test_data_id": "578480-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d2",
+                                "test_data_oid": "67feb3e5dca42e57948af947",
                                 "test_data_id": "597501-2024"
                             }
                         ]
@@ -1072,7 +1072,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasAdditionalInformationDeadline",
@@ -1096,9 +1096,9 @@
                         "count": 1,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c4",
+                                "test_data_oid": "67feb3e5dca42e57948af939",
                                 "test_data_id": "387948-2024"
                             }
                         ]
@@ -1107,7 +1107,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasEstimatedInvitationToExpressInterestDate",
@@ -1131,15 +1131,15 @@
                         "count": 2,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c4",
+                                "test_data_oid": "67feb3e5dca42e57948af939",
                                 "test_data_id": "387948-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d2",
+                                "test_data_oid": "67feb3e5dca42e57948af947",
                                 "test_data_id": "597501-2024"
                             }
                         ]
@@ -1148,7 +1148,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasEstimatedInvitationToTenderDate",
@@ -1172,27 +1172,27 @@
                         "count": 4,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c4",
+                                "test_data_oid": "67feb3e5dca42e57948af939",
                                 "test_data_id": "387948-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c5",
+                                "test_data_oid": "67feb3e5dca42e57948af93a",
                                 "test_data_id": "453260-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c8",
+                                "test_data_oid": "67feb3e5dca42e57948af93d",
                                 "test_data_id": "444576-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d2",
+                                "test_data_oid": "67feb3e5dca42e57948af947",
                                 "test_data_id": "597501-2024"
                             }
                         ]
@@ -1201,7 +1201,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#isSubjectToProcedureSpecificTerm",
@@ -1225,75 +1225,75 @@
                         "count": 12,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c4",
+                                "test_data_oid": "67feb3e5dca42e57948af939",
                                 "test_data_id": "387948-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c5",
+                                "test_data_oid": "67feb3e5dca42e57948af93a",
                                 "test_data_id": "453260-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c6",
+                                "test_data_oid": "67feb3e5dca42e57948af93b",
                                 "test_data_id": "533162-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c7",
+                                "test_data_oid": "67feb3e5dca42e57948af93c",
                                 "test_data_id": "404078-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c8",
+                                "test_data_oid": "67feb3e5dca42e57948af93d",
                                 "test_data_id": "444576-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c9",
+                                "test_data_oid": "67feb3e5dca42e57948af93e",
                                 "test_data_id": "425792-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7ca",
+                                "test_data_oid": "67feb3e5dca42e57948af93f",
                                 "test_data_id": "483987-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7cb",
+                                "test_data_oid": "67feb3e5dca42e57948af940",
                                 "test_data_id": "547418-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7ce",
+                                "test_data_oid": "67feb3e5dca42e57948af943",
                                 "test_data_id": "440582-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7cf",
+                                "test_data_oid": "67feb3e5dca42e57948af944",
                                 "test_data_id": "426212-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d2",
+                                "test_data_oid": "67feb3e5dca42e57948af947",
                                 "test_data_id": "597501-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d3",
+                                "test_data_oid": "67feb3e5dca42e57948af948",
                                 "test_data_id": "407805-2024"
                             }
                         ]
@@ -1302,7 +1302,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasReceiptExpressionDeadline",
@@ -1326,9 +1326,9 @@
                         "count": 1,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c4",
+                                "test_data_oid": "67feb3e5dca42e57948af939",
                                 "test_data_id": "387948-2024"
                             }
                         ]
@@ -1337,7 +1337,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasProcedureType",
@@ -1361,15 +1361,15 @@
                         "count": 2,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c9",
+                                "test_data_oid": "67feb3e5dca42e57948af93e",
                                 "test_data_id": "425792-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d3",
+                                "test_data_oid": "67feb3e5dca42e57948af948",
                                 "test_data_id": "407805-2024"
                             }
                         ]
@@ -1378,7 +1378,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasProcurementScopeDividedIntoLot",
@@ -1402,15 +1402,15 @@
                         "count": 2,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7c9",
+                                "test_data_oid": "67feb3e5dca42e57948af93e",
                                 "test_data_id": "425792-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7d3",
+                                "test_data_oid": "67feb3e5dca42e57948af948",
                                 "test_data_id": "407805-2024"
                             }
                         ]
@@ -1419,7 +1419,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasProcurementDocumentChangeDate",
@@ -1443,9 +1443,9 @@
                         "count": 1,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7c0",
+                                "test_data_suite_oid": "67feb3e5dca42e57948af935",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7cb",
+                                "test_data_oid": "67feb3e5dca42e57948af940",
                                 "test_data_id": "547418-2024"
                             }
                         ]

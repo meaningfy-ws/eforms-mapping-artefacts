@@ -1,9 +1,9 @@
 {
-    "created_at": "2025-04-14 13:03:02.163375+00:00",
+    "created_at": "2025-04-16 11:06:00.897216+00:00",
     "results": [
         {
             "shacl_suite": {
-                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                 "shacl_suite_id": "epo"
             },
             "results": [
@@ -12,7 +12,7 @@
                     "results": [
                         {
                             "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                                 "shacl_suite_id": "epo"
                             },
                             "result_path": "http://data.europa.eu/a4g/ontology#hasEstimatedInvitationToTenderDate",
@@ -32,43 +32,15 @@
                                 "message": "Value is not Literal with datatype xsd:date"
                             },
                             "test_data": {
-                                "test_data_suite_oid": "67fbe98170ce61e9d6c0d6a5",
+                                "test_data_suite_oid": "67feb328dca42e57948af7e0",
                                 "test_data_suite_id": "sdk_examples_pin-1.9",
-                                "test_data_oid": "67fbe98170ce61e9d6c0d6ae",
+                                "test_data_oid": "67feb328dca42e57948af7e9",
                                 "test_data_id": "pin-rtl_81"
                             }
                         },
                         {
                             "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
-                                "shacl_suite_id": "epo"
-                            },
-                            "result_path": "http://www.w3.org/ns/adms#identifier",
-                            "short_result_path": "adms:identifier",
-                            "source_constraint_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
-                            "short_source_constraint_component": "sh:MinCountConstraintComponent",
-                            "result": "violation",
-                            "binding": {
-                                "focus_node": "http://data.europa.eu/a4g/resource/id_7f10ad90-127e-4c3b-a7ef-cfae9295d0ce_Procedure_iNVWPykMuHh9p4AY3uzvA2",
-                                "short_focus_node": "epd:id_7f10ad90-127e-4c3b-a7ef-cfae9295d0ce_Procedure_iNVWPykMuHh9p4AY3uzvA2",
-                                "result_path": "http://www.w3.org/ns/adms#identifier",
-                                "short_result_path": "adms:identifier",
-                                "result_severity": "http://www.w3.org/ns/shacl#Violation",
-                                "short_result_severity": "sh:Violation",
-                                "source_constraint_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
-                                "short_source_constraint_component": "sh:MinCountConstraintComponent",
-                                "message": "Less than 1 values on epd:id_7f10ad90-127e-4c3b-a7ef-cfae9295d0ce_Procedure_iNVWPykMuHh9p4AY3uzvA2->adms:identifier"
-                            },
-                            "test_data": {
-                                "test_data_suite_oid": "67fbe98170ce61e9d6c0d6a5",
-                                "test_data_suite_id": "sdk_examples_pin-1.9",
-                                "test_data_oid": "67fbe98170ce61e9d6c0d6ae",
-                                "test_data_id": "pin-rtl_81"
-                            }
-                        },
-                        {
-                            "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                                 "shacl_suite_id": "epo"
                             },
                             "result_path": "http://data.europa.eu/a4g/ontology#hasProcedureType",
@@ -88,17 +60,45 @@
                                 "message": "Less than 1 values on epd:id_7f10ad90-127e-4c3b-a7ef-cfae9295d0ce_Procedure_iNVWPykMuHh9p4AY3uzvA2->:hasProcedureType"
                             },
                             "test_data": {
-                                "test_data_suite_oid": "67fbe98170ce61e9d6c0d6a5",
+                                "test_data_suite_oid": "67feb328dca42e57948af7e0",
                                 "test_data_suite_id": "sdk_examples_pin-1.9",
-                                "test_data_oid": "67fbe98170ce61e9d6c0d6ae",
+                                "test_data_oid": "67feb328dca42e57948af7e9",
+                                "test_data_id": "pin-rtl_81"
+                            }
+                        },
+                        {
+                            "shacl_suite": {
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
+                                "shacl_suite_id": "epo"
+                            },
+                            "result_path": "http://www.w3.org/ns/adms#identifier",
+                            "short_result_path": "adms:identifier",
+                            "source_constraint_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+                            "short_source_constraint_component": "sh:MinCountConstraintComponent",
+                            "result": "violation",
+                            "binding": {
+                                "focus_node": "http://data.europa.eu/a4g/resource/id_7f10ad90-127e-4c3b-a7ef-cfae9295d0ce_Procedure_iNVWPykMuHh9p4AY3uzvA2",
+                                "short_focus_node": "epd:id_7f10ad90-127e-4c3b-a7ef-cfae9295d0ce_Procedure_iNVWPykMuHh9p4AY3uzvA2",
+                                "result_path": "http://www.w3.org/ns/adms#identifier",
+                                "short_result_path": "adms:identifier",
+                                "result_severity": "http://www.w3.org/ns/shacl#Violation",
+                                "short_result_severity": "sh:Violation",
+                                "source_constraint_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+                                "short_source_constraint_component": "sh:MinCountConstraintComponent",
+                                "message": "Less than 1 values on epd:id_7f10ad90-127e-4c3b-a7ef-cfae9295d0ce_Procedure_iNVWPykMuHh9p4AY3uzvA2->adms:identifier"
+                            },
+                            "test_data": {
+                                "test_data_suite_oid": "67feb328dca42e57948af7e0",
+                                "test_data_suite_id": "sdk_examples_pin-1.9",
+                                "test_data_oid": "67feb328dca42e57948af7e9",
                                 "test_data_id": "pin-rtl_81"
                             }
                         }
                     ],
                     "test_data": {
-                        "test_data_suite_oid": "67fbe98170ce61e9d6c0d6a5",
+                        "test_data_suite_oid": "67feb328dca42e57948af7e0",
                         "test_data_suite_id": "sdk_examples_pin-1.9",
-                        "test_data_oid": "67fbe98170ce61e9d6c0d6ae",
+                        "test_data_oid": "67feb328dca42e57948af7e9",
                         "test_data_id": "pin-rtl_81"
                     },
                     "error": null,
@@ -110,14 +110,14 @@
     "summary": {
         "shacl_suites": [
             {
-                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                 "shacl_suite_id": "epo"
             }
         ],
         "results": [
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "",

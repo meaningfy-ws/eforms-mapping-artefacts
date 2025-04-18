@@ -1,5 +1,5 @@
 {
-    "created_at": "2025-04-14 13:04:16.755578+00:00",
+    "created_at": "2025-04-16 08:53:45.159050+00:00",
     "results": [
         {
             "sdk_element_id": "ND-Root",
@@ -7,9 +7,9 @@
             "sdk_element_xpath": "/*",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -54,34 +54,6 @@
                 {
                     "xpath_condition": "exists(cbc:EndDate) or exists(cbc:EndTime)",
                     "meets_xpath_condition": false
-                }
-            ],
-            "message": null
-        },
-        {
-            "sdk_element_id": "ND-LotTenderOriginCountry",
-            "sdk_element_title": null,
-            "sdk_element_xpath": "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:Origin",
-            "test_data_xpaths": [],
-            "is_covered": false,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "",
-                    "meets_xpath_condition": true
-                }
-            ],
-            "message": null
-        },
-        {
-            "sdk_element_id": "BT-191-Tender",
-            "sdk_element_title": "Country Origin",
-            "sdk_element_xpath": "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:Origin/efbc:AreaCode",
-            "test_data_xpaths": [],
-            "is_covered": false,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "not( exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='cou-ori']) and efbc:AreaCode/text() = 'unpublished' )",
-                    "meets_xpath_condition": true
                 }
             ],
             "message": null
@@ -148,9 +120,9 @@
             "sdk_element_xpath": "/*/cbc:PlannedDate",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -175,9 +147,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -206,9 +178,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cbc:ID",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -237,9 +209,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingProcess",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -310,9 +282,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -341,9 +313,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cbc:ID",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -372,9 +344,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cbc:Name",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -403,9 +375,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cbc:Description",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -434,9 +406,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cbc:ProcurementTypeCode[@listName='contract-nature']",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -460,28 +432,14 @@
             "message": null
         },
         {
-            "sdk_element_id": "ND-PartContractAdditionalNature",
-            "sdk_element_title": null,
-            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:ProcurementAdditionalType[cbc:ProcurementTypeCode/@listName='contract-nature']",
-            "test_data_xpaths": [],
-            "is_covered": false,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "",
-                    "meets_xpath_condition": true
-                }
-            ],
-            "message": null
-        },
-        {
             "sdk_element_id": "BT-726-Part",
             "sdk_element_title": "Suitable For SMEs",
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cbc:SMESuitableIndicator",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -510,9 +468,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:RequestedTenderTotal",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -541,9 +499,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:RequestedTenderTotal/cbc:EstimatedOverallContractAmount",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -567,76 +525,14 @@
             "message": null
         },
         {
-            "sdk_element_id": "ND-PartMainClassification",
-            "sdk_element_title": null,
-            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:MainCommodityClassification",
-            "test_data_xpaths": [
-                {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
-                    "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
-                    "test_data_id": "205940-2025",
-                    "xpaths": [
-                        {
-                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:ProcurementProject/cac:MainCommodityClassification",
-                            "value": null
-                        },
-                        {
-                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:ProcurementProject/cac:MainCommodityClassification",
-                            "value": null
-                        }
-                    ]
-                }
-            ],
-            "is_covered": true,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "",
-                    "meets_xpath_condition": true
-                }
-            ],
-            "message": null
-        },
-        {
-            "sdk_element_id": "BT-26(m)-Part",
-            "sdk_element_title": "Classification Type (e.g. CPV)",
-            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:MainCommodityClassification/cbc:ItemClassificationCode/@listName",
-            "test_data_xpaths": [
-                {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
-                    "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
-                    "test_data_id": "205940-2025",
-                    "xpaths": [
-                        {
-                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:ProcurementProject/cac:MainCommodityClassification/cbc:ItemClassificationCode/listName",
-                            "value": "cpv"
-                        },
-                        {
-                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:ProcurementProject/cac:MainCommodityClassification/cbc:ItemClassificationCode/listName",
-                            "value": "cpv"
-                        }
-                    ]
-                }
-            ],
-            "is_covered": true,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "cbc:ItemClassificationCode[@listName='cpv']",
-                    "meets_xpath_condition": false
-                }
-            ],
-            "message": null
-        },
-        {
             "sdk_element_id": "BT-262-Part",
             "sdk_element_title": "Main Classification Code",
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:MainCommodityClassification/cbc:ItemClassificationCode",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -707,9 +603,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:RealizedLocation",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -738,9 +634,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:RealizedLocation/cac:Address",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -769,9 +665,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:RealizedLocation/cac:Address/cbc:StreetName",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -828,9 +724,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:RealizedLocation/cac:Address/cbc:CityName",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -859,9 +755,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:RealizedLocation/cac:Address/cbc:PostalZone",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -890,9 +786,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:RealizedLocation/cac:Address/cbc:CountrySubentityCode",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -921,9 +817,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:RealizedLocation/cac:Address/cac:Country/cbc:IdentificationCode",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -980,9 +876,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:PlannedPeriod",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -1053,9 +949,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:PlannedPeriod/cbc:DescriptionCode",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -1093,59 +989,14 @@
             "message": null
         },
         {
-            "sdk_element_id": "ND-PartFAContractingSystem",
-            "sdk_element_title": null,
-            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingProcess/cac:ContractingSystem[cbc:ContractingSystemTypeCode/@listName='framework-agreement']",
-            "test_data_xpaths": [
-                {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
-                    "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
-                    "test_data_id": "205940-2025",
-                    "xpaths": [
-                        {
-                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingProcess/cac:ContractingSystem",
-                            "value": null
-                        },
-                        {
-                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingProcess/cac:ContractingSystem",
-                            "value": null
-                        }
-                    ]
-                }
-            ],
-            "is_covered": true,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "",
-                    "meets_xpath_condition": true
-                }
-            ],
-            "message": null
-        },
-        {
-            "sdk_element_id": "ND-PartDPSContractingSystem",
-            "sdk_element_title": null,
-            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingProcess/cac:ContractingSystem[cbc:ContractingSystemTypeCode/@listName='dps-usage']",
-            "test_data_xpaths": [],
-            "is_covered": false,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "",
-                    "meets_xpath_condition": true
-                }
-            ],
-            "message": null
-        },
-        {
             "sdk_element_id": "ND-PartTenderingTerms",
             "sdk_element_title": null,
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -1154,37 +1005,6 @@
                         },
                         {
                             "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms",
-                            "value": null
-                        }
-                    ]
-                }
-            ],
-            "is_covered": true,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "",
-                    "meets_xpath_condition": true
-                }
-            ],
-            "message": null
-        },
-        {
-            "sdk_element_id": "ND-PartFiscalLegislation",
-            "sdk_element_title": null,
-            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:FiscalLegislationDocumentReference",
-            "test_data_xpaths": [
-                {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
-                    "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
-                    "test_data_id": "205940-2025",
-                    "xpaths": [
-                        {
-                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:FiscalLegislationDocumentReference",
-                            "value": null
-                        },
-                        {
-                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:FiscalLegislationDocumentReference",
                             "value": null
                         }
                     ]
@@ -1205,9 +1025,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:FiscalLegislationDocumentReference/cac:IssuerParty/cac:PartyIdentification/cbc:ID",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -1250,9 +1070,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:FiscalLegislationDocumentReference/cbc:ID",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -1262,37 +1082,6 @@
                         {
                             "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:FiscalLegislationDocumentReference/cbc:ID",
                             "value": "_DEFAULT_VALUE_CHANGE_ME_"
-                        }
-                    ]
-                }
-            ],
-            "is_covered": true,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "",
-                    "meets_xpath_condition": true
-                }
-            ],
-            "message": null
-        },
-        {
-            "sdk_element_id": "ND-PartEnvironmentalLegislation",
-            "sdk_element_title": null,
-            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:EnvironmentalLegislationDocumentReference",
-            "test_data_xpaths": [
-                {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
-                    "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
-                    "test_data_id": "205940-2025",
-                    "xpaths": [
-                        {
-                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:EnvironmentalLegislationDocumentReference",
-                            "value": null
-                        },
-                        {
-                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:EnvironmentalLegislationDocumentReference",
-                            "value": null
                         }
                     ]
                 }
@@ -1312,9 +1101,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:EnvironmentalLegislationDocumentReference/cac:IssuerParty/cac:PartyIdentification/cbc:ID",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -1357,9 +1146,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:EnvironmentalLegislationDocumentReference/cbc:ID",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -1369,37 +1158,6 @@
                         {
                             "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:EnvironmentalLegislationDocumentReference/cbc:ID",
                             "value": "_DEFAULT_VALUE_CHANGE_ME_"
-                        }
-                    ]
-                }
-            ],
-            "is_covered": true,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "",
-                    "meets_xpath_condition": true
-                }
-            ],
-            "message": null
-        },
-        {
-            "sdk_element_id": "ND-PartEmploymentLegislation",
-            "sdk_element_title": null,
-            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:EmploymentLegislationDocumentReference",
-            "test_data_xpaths": [
-                {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
-                    "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
-                    "test_data_id": "205940-2025",
-                    "xpaths": [
-                        {
-                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:EmploymentLegislationDocumentReference",
-                            "value": null
-                        },
-                        {
-                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:EmploymentLegislationDocumentReference",
-                            "value": null
                         }
                     ]
                 }
@@ -1419,9 +1177,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:EmploymentLegislationDocumentReference/cac:IssuerParty/cac:PartyIdentification/cbc:ID",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -1464,9 +1222,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:EmploymentLegislationDocumentReference/cbc:ID",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -1495,9 +1253,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:TenderRecipientParty/cac:PartyIdentification/cbc:ID",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -1530,9 +1288,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:TenderEvaluationParty/cac:PartyIdentification/cbc:ID",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -1565,45 +1323,14 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cbc:Note",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
                             "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:ProcurementProject/cbc:Note",
                             "value": "equipamiento cultural municipal"
-                        }
-                    ]
-                }
-            ],
-            "is_covered": true,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "",
-                    "meets_xpath_condition": true
-                }
-            ],
-            "message": null
-        },
-        {
-            "sdk_element_id": "ND-PartReservedExecution",
-            "sdk_element_title": null,
-            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:ContractExecutionRequirement[cbc:ExecutionRequirementCode/@listName='reserved-execution']",
-            "test_data_xpaths": [
-                {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
-                    "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
-                    "test_data_id": "205940-2025",
-                    "xpaths": [
-                        {
-                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:ContractExecutionRequirement",
-                            "value": null
-                        },
-                        {
-                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:ContractExecutionRequirement",
-                            "value": null
                         }
                     ]
                 }
@@ -1665,9 +1392,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:CallForTendersDocumentReference",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -1676,130 +1403,6 @@
                         },
                         {
                             "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:CallForTendersDocumentReference",
-                            "value": null
-                        }
-                    ]
-                }
-            ],
-            "is_covered": true,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "",
-                    "meets_xpath_condition": true
-                }
-            ],
-            "message": null
-        },
-        {
-            "sdk_element_id": "ND-PartDocAllOfficialLanguages",
-            "sdk_element_title": null,
-            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:OfficialLanguages",
-            "test_data_xpaths": [
-                {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
-                    "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
-                    "test_data_id": "205940-2025",
-                    "xpaths": [
-                        {
-                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:OfficialLanguages",
-                            "value": null
-                        },
-                        {
-                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:OfficialLanguages",
-                            "value": null
-                        }
-                    ]
-                }
-            ],
-            "is_covered": true,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "",
-                    "meets_xpath_condition": true
-                }
-            ],
-            "message": null
-        },
-        {
-            "sdk_element_id": "ND-PartDocOfficialLanguage",
-            "sdk_element_title": null,
-            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:OfficialLanguages/cac:Language",
-            "test_data_xpaths": [
-                {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
-                    "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
-                    "test_data_id": "205940-2025",
-                    "xpaths": [
-                        {
-                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:OfficialLanguages/cac:Language",
-                            "value": null
-                        },
-                        {
-                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:OfficialLanguages/cac:Language",
-                            "value": null
-                        }
-                    ]
-                }
-            ],
-            "is_covered": true,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "",
-                    "meets_xpath_condition": true
-                }
-            ],
-            "message": null
-        },
-        {
-            "sdk_element_id": "ND-PartDocAllNonOfficialLanguages",
-            "sdk_element_title": null,
-            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NonOfficialLanguages",
-            "test_data_xpaths": [
-                {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
-                    "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
-                    "test_data_id": "205940-2025",
-                    "xpaths": [
-                        {
-                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NonOfficialLanguages",
-                            "value": null
-                        },
-                        {
-                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NonOfficialLanguages",
-                            "value": null
-                        }
-                    ]
-                }
-            ],
-            "is_covered": true,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "",
-                    "meets_xpath_condition": true
-                }
-            ],
-            "message": null
-        },
-        {
-            "sdk_element_id": "ND-PartDocNonOfficialLanguage",
-            "sdk_element_title": null,
-            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NonOfficialLanguages/cac:Language",
-            "test_data_xpaths": [
-                {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
-                    "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
-                    "test_data_id": "205940-2025",
-                    "xpaths": [
-                        {
-                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NonOfficialLanguages/cac:Language",
-                            "value": null
-                        },
-                        {
-                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NonOfficialLanguages/cac:Language",
                             "value": null
                         }
                     ]
@@ -1820,9 +1423,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:CallForTendersDocumentReference/cbc:DocumentType",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -1855,9 +1458,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:CallForTendersDocumentReference/cbc:ID",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -1886,9 +1489,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingProcess/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -1913,9 +1516,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingProcess/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efbc:AccessToolName",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -1940,9 +1543,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingProcess/cbc:AccessToolsURI",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -1967,9 +1570,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:AdditionalInformationParty/cac:PartyIdentification/cbc:ID",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -2002,9 +1605,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:DocumentProviderParty/cac:PartyIdentification/cbc:ID",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -2033,9 +1636,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:AppealTerms",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -2064,9 +1667,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:AppealTerms/cac:AppealReceiverParty/cac:PartyIdentification/cbc:ID",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -2099,9 +1702,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:AppealTerms/cac:AppealInformationParty/cac:PartyIdentification/cbc:ID",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -2217,65 +1820,9 @@
             "message": null
         },
         {
-            "sdk_element_id": "ND-Modification",
-            "sdk_element_title": null,
-            "sdk_element_xpath": "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:ContractModification/efac:Change",
-            "test_data_xpaths": [],
-            "is_covered": false,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "exists(efac:ChangedSection/efbc:ChangedSectionIdentifier)",
-                    "meets_xpath_condition": false
-                }
-            ],
-            "message": null
-        },
-        {
-            "sdk_element_id": "ND-ModifiedSection",
-            "sdk_element_title": null,
-            "sdk_element_xpath": "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:ContractModification/efac:Change/efac:ChangedSection",
-            "test_data_xpaths": [],
-            "is_covered": false,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "",
-                    "meets_xpath_condition": true
-                }
-            ],
-            "message": null
-        },
-        {
             "sdk_element_id": "BT-202-Contract",
             "sdk_element_title": "Modification Description",
             "sdk_element_xpath": "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:ContractModification/efac:Change/efbc:ChangeDescription",
-            "test_data_xpaths": [],
-            "is_covered": false,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "",
-                    "meets_xpath_condition": true
-                }
-            ],
-            "message": null
-        },
-        {
-            "sdk_element_id": "OPT-070-Lot",
-            "sdk_element_title": "Reserved Execution justification",
-            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:ContractExecutionRequirement[cbc:ExecutionRequirementCode/@listName='reserved-execution']/cbc:Description",
-            "test_data_xpaths": [],
-            "is_covered": false,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "",
-                    "meets_xpath_condition": true
-                }
-            ],
-            "message": null
-        },
-        {
-            "sdk_element_id": "ND-ProcedureTransportServiceType",
-            "sdk_element_title": null,
-            "sdk_element_xpath": "/*/cac:ProcurementProject/cac:ProcurementAdditionalType[cbc:ProcurementTypeCode/@listName='transport-service']",
             "test_data_xpaths": [],
             "is_covered": false,
             "xpath_conditions": [
@@ -2374,48 +1921,6 @@
             "sdk_element_id": "ND-Asset",
             "sdk_element_title": null,
             "sdk_element_xpath": "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:SettledContract/efac:DurationJustification/efac:AssetsList/efac:Asset",
-            "test_data_xpaths": [],
-            "is_covered": false,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "",
-                    "meets_xpath_condition": true
-                }
-            ],
-            "message": null
-        },
-        {
-            "sdk_element_id": "OPP-021-Contract",
-            "sdk_element_title": "Used asset",
-            "sdk_element_xpath": "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:SettledContract/efac:DurationJustification/efac:AssetsList/efac:Asset/efbc:AssetDescription",
-            "test_data_xpaths": [],
-            "is_covered": false,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "",
-                    "meets_xpath_condition": true
-                }
-            ],
-            "message": null
-        },
-        {
-            "sdk_element_id": "OPP-022-Contract",
-            "sdk_element_title": "Significance (%)",
-            "sdk_element_xpath": "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:SettledContract/efac:DurationJustification/efac:AssetsList/efac:Asset/efbc:AssetSignificance",
-            "test_data_xpaths": [],
-            "is_covered": false,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "",
-                    "meets_xpath_condition": true
-                }
-            ],
-            "message": null
-        },
-        {
-            "sdk_element_id": "OPP-023-Contract",
-            "sdk_element_title": "Predominance (%)",
-            "sdk_element_xpath": "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:SettledContract/efac:DurationJustification/efac:AssetsList/efac:Asset/efbc:AssetPredominance",
             "test_data_xpaths": [],
             "is_covered": false,
             "xpath_conditions": [
@@ -2553,6 +2058,813 @@
             "message": null
         },
         {
+            "sdk_element_id": "BT-160-Tender-Currency",
+            "sdk_element_title": "Concession Revenue Buyer Currency",
+            "sdk_element_xpath": "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:ConcessionRevenue/efbc:RevenueBuyerAmount/@currencyID",
+            "test_data_xpaths": [],
+            "is_covered": false,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "not( exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='con-rev-buy']) and efbc:RevenueBuyerAmount/text() = '-1' )",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "BT-162-Tender-Currency",
+            "sdk_element_title": "Concession Revenue User Currency",
+            "sdk_element_xpath": "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:ConcessionRevenue/efbc:RevenueUserAmount/@currencyID",
+            "test_data_xpaths": [],
+            "is_covered": false,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "not( exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='con-rev-use']) and efbc:RevenueUserAmount/text() = '-1' )",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "BT-27-Part-Currency",
+            "sdk_element_title": "Estimated Value Currency",
+            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:RequestedTenderTotal/cbc:EstimatedOverallContractAmount/@currencyID",
+            "test_data_xpaths": [
+                {
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
+                    "test_data_suite_id": "sampling_eforms_all_pin-1.13",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
+                    "test_data_id": "205940-2025",
+                    "xpaths": [
+                        {
+                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:ProcurementProject/cac:RequestedTenderTotal/cbc:EstimatedOverallContractAmount/currencyID",
+                            "value": "EUR"
+                        },
+                        {
+                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:ProcurementProject/cac:RequestedTenderTotal/cbc:EstimatedOverallContractAmount/currencyID",
+                            "value": "EUR"
+                        }
+                    ]
+                }
+            ],
+            "is_covered": true,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "BT-779-Tender-Currency",
+            "sdk_element_title": "Tender Payment Value Currency",
+            "sdk_element_xpath": "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:AggregatedAmounts/cbc:PaidAmount/@currencyID",
+            "test_data_xpaths": [],
+            "is_covered": false,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "BT-782-Tender-Currency",
+            "sdk_element_title": "Tender Penalties Currency",
+            "sdk_element_xpath": "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:AggregatedAmounts/efbc:PenaltiesAmount/@currencyID",
+            "test_data_xpaths": [],
+            "is_covered": false,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "OPP-021-Contract",
+            "sdk_element_title": "Used asset",
+            "sdk_element_xpath": "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:SettledContract/efac:DurationJustification/efac:AssetsList/efac:Asset/efbc:AssetDescription",
+            "test_data_xpaths": [],
+            "is_covered": false,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "OPP-022-Contract",
+            "sdk_element_title": "Significance (%)",
+            "sdk_element_xpath": "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:SettledContract/efac:DurationJustification/efac:AssetsList/efac:Asset/efbc:AssetSignificance",
+            "test_data_xpaths": [],
+            "is_covered": false,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "OPP-023-Contract",
+            "sdk_element_title": "Predominance (%)",
+            "sdk_element_xpath": "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:SettledContract/efac:DurationJustification/efac:AssetsList/efac:Asset/efbc:AssetPredominance",
+            "test_data_xpaths": [],
+            "is_covered": false,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "ND-PartFiscalLegislation",
+            "sdk_element_title": null,
+            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:FiscalLegislationDocumentReference",
+            "test_data_xpaths": [
+                {
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
+                    "test_data_suite_id": "sampling_eforms_all_pin-1.13",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
+                    "test_data_id": "205940-2025",
+                    "xpaths": [
+                        {
+                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:FiscalLegislationDocumentReference",
+                            "value": null
+                        },
+                        {
+                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:FiscalLegislationDocumentReference",
+                            "value": null
+                        }
+                    ]
+                }
+            ],
+            "is_covered": true,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "ND-PartEnvironmentalLegislation",
+            "sdk_element_title": null,
+            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:EnvironmentalLegislationDocumentReference",
+            "test_data_xpaths": [
+                {
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
+                    "test_data_suite_id": "sampling_eforms_all_pin-1.13",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
+                    "test_data_id": "205940-2025",
+                    "xpaths": [
+                        {
+                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:EnvironmentalLegislationDocumentReference",
+                            "value": null
+                        },
+                        {
+                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:EnvironmentalLegislationDocumentReference",
+                            "value": null
+                        }
+                    ]
+                }
+            ],
+            "is_covered": true,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "ND-PartEmploymentLegislation",
+            "sdk_element_title": null,
+            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:EmploymentLegislationDocumentReference",
+            "test_data_xpaths": [
+                {
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
+                    "test_data_suite_id": "sampling_eforms_all_pin-1.13",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
+                    "test_data_id": "205940-2025",
+                    "xpaths": [
+                        {
+                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:EmploymentLegislationDocumentReference",
+                            "value": null
+                        },
+                        {
+                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:EmploymentLegislationDocumentReference",
+                            "value": null
+                        }
+                    ]
+                }
+            ],
+            "is_covered": true,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "BT-707-Part",
+            "sdk_element_title": "Documents Restricted Justification",
+            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:CallForTendersDocumentReference/cbc:DocumentTypeCode",
+            "test_data_xpaths": [],
+            "is_covered": false,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "BT-615-Part",
+            "sdk_element_title": "Documents Restricted URL",
+            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:CallForTendersDocumentReference/cac:Attachment[../cbc:DocumentType/text()='restricted-document']/cac:ExternalReference/cbc:URI",
+            "test_data_xpaths": [],
+            "is_covered": false,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "ND-ModifiedSection",
+            "sdk_element_title": null,
+            "sdk_element_xpath": "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:ContractModification/efac:Change/efac:ChangedSection",
+            "test_data_xpaths": [],
+            "is_covered": false,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "ND-LotTenderOriginCountry",
+            "sdk_element_title": null,
+            "sdk_element_xpath": "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:Origin",
+            "test_data_xpaths": [],
+            "is_covered": false,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "BT-191-Tender",
+            "sdk_element_title": "Country Origin",
+            "sdk_element_xpath": "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:Origin/efbc:AreaCode",
+            "test_data_xpaths": [],
+            "is_covered": false,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "not( exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='cou-ori']) and efbc:AreaCode/text() = 'unpublished' )",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "ND-PartContractAdditionalNature",
+            "sdk_element_title": null,
+            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:ProcurementAdditionalType[cbc:ProcurementTypeCode/@listName='contract-nature']",
+            "test_data_xpaths": [],
+            "is_covered": false,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "BT-531-Part",
+            "sdk_element_title": "Additional Nature (different from Main)",
+            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:ProcurementAdditionalType[cbc:ProcurementTypeCode/@listName='contract-nature']/cbc:ProcurementTypeCode",
+            "test_data_xpaths": [],
+            "is_covered": false,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "ND-PartMainClassification",
+            "sdk_element_title": null,
+            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:MainCommodityClassification",
+            "test_data_xpaths": [
+                {
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
+                    "test_data_suite_id": "sampling_eforms_all_pin-1.13",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
+                    "test_data_id": "205940-2025",
+                    "xpaths": [
+                        {
+                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:ProcurementProject/cac:MainCommodityClassification",
+                            "value": null
+                        },
+                        {
+                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:ProcurementProject/cac:MainCommodityClassification",
+                            "value": null
+                        }
+                    ]
+                }
+            ],
+            "is_covered": true,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "BT-26(m)-Part",
+            "sdk_element_title": "Classification Type (e.g. CPV)",
+            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:MainCommodityClassification/cbc:ItemClassificationCode/@listName",
+            "test_data_xpaths": [
+                {
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
+                    "test_data_suite_id": "sampling_eforms_all_pin-1.13",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
+                    "test_data_id": "205940-2025",
+                    "xpaths": [
+                        {
+                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:ProcurementProject/cac:MainCommodityClassification/cbc:ItemClassificationCode/listName",
+                            "value": "cpv"
+                        },
+                        {
+                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:ProcurementProject/cac:MainCommodityClassification/cbc:ItemClassificationCode/listName",
+                            "value": "cpv"
+                        }
+                    ]
+                }
+            ],
+            "is_covered": true,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "cbc:ItemClassificationCode[@listName='cpv']",
+                    "meets_xpath_condition": false
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "BT-15-Part",
+            "sdk_element_title": "Documents URL",
+            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:CallForTendersDocumentReference/cac:Attachment[../cbc:DocumentType/text()='non-restricted-document']/cac:ExternalReference/cbc:URI",
+            "test_data_xpaths": [
+                {
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
+                    "test_data_suite_id": "sampling_eforms_all_pin-1.13",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
+                    "test_data_id": "205940-2025",
+                    "xpaths": [
+                        {
+                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:CallForTendersDocumentReference/cac:Attachment/cac:ExternalReference/cbc:URI",
+                            "value": "https://contractaciopublica.cat/ca/perfils-contractant/detall/28279948?categoria=0"
+                        },
+                        {
+                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:CallForTendersDocumentReference/cac:Attachment/cac:ExternalReference/cbc:URI",
+                            "value": "https://contractaciopublica.cat/ca/perfils-contractant/detall/28279948?categoria=0"
+                        }
+                    ]
+                }
+            ],
+            "is_covered": true,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "ND-ProcedureTransportServiceType",
+            "sdk_element_title": null,
+            "sdk_element_xpath": "/*/cac:ProcurementProject/cac:ProcurementAdditionalType[cbc:ProcurementTypeCode/@listName='transport-service']",
+            "test_data_xpaths": [],
+            "is_covered": false,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "OPP-040-Procedure",
+            "sdk_element_title": "Main Nature - Sub Type",
+            "sdk_element_xpath": "/*/cac:ProcurementProject/cac:ProcurementAdditionalType[cbc:ProcurementTypeCode/@listName='transport-service']/cbc:ProcurementTypeCode",
+            "test_data_xpaths": [],
+            "is_covered": false,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "ND-PartFAContractingSystem",
+            "sdk_element_title": null,
+            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingProcess/cac:ContractingSystem[cbc:ContractingSystemTypeCode/@listName='framework-agreement']",
+            "test_data_xpaths": [
+                {
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
+                    "test_data_suite_id": "sampling_eforms_all_pin-1.13",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
+                    "test_data_id": "205940-2025",
+                    "xpaths": [
+                        {
+                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingProcess/cac:ContractingSystem",
+                            "value": null
+                        },
+                        {
+                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingProcess/cac:ContractingSystem",
+                            "value": null
+                        }
+                    ]
+                }
+            ],
+            "is_covered": true,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "BT-765-Part",
+            "sdk_element_title": "Framework Agreement",
+            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingProcess/cac:ContractingSystem[cbc:ContractingSystemTypeCode/@listName='framework-agreement']/cbc:ContractingSystemTypeCode",
+            "test_data_xpaths": [
+                {
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
+                    "test_data_suite_id": "sampling_eforms_all_pin-1.13",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
+                    "test_data_id": "205940-2025",
+                    "xpaths": [
+                        {
+                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingProcess/cac:ContractingSystem/cbc:ContractingSystemTypeCode",
+                            "value": "none"
+                        },
+                        {
+                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingProcess/cac:ContractingSystem/cbc:ContractingSystemTypeCode",
+                            "value": "none"
+                        }
+                    ]
+                }
+            ],
+            "is_covered": true,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "ND-PartDPSContractingSystem",
+            "sdk_element_title": null,
+            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingProcess/cac:ContractingSystem[cbc:ContractingSystemTypeCode/@listName='dps-usage']",
+            "test_data_xpaths": [],
+            "is_covered": false,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "BT-766-Part",
+            "sdk_element_title": "Dynamic Purchasing System",
+            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingProcess/cac:ContractingSystem[cbc:ContractingSystemTypeCode/@listName='dps-usage']/cbc:ContractingSystemTypeCode",
+            "test_data_xpaths": [],
+            "is_covered": false,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "ND-PartReservedExecution",
+            "sdk_element_title": null,
+            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:ContractExecutionRequirement[cbc:ExecutionRequirementCode/@listName='reserved-execution']",
+            "test_data_xpaths": [
+                {
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
+                    "test_data_suite_id": "sampling_eforms_all_pin-1.13",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
+                    "test_data_id": "205940-2025",
+                    "xpaths": [
+                        {
+                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:ContractExecutionRequirement",
+                            "value": null
+                        },
+                        {
+                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:ContractExecutionRequirement",
+                            "value": null
+                        }
+                    ]
+                }
+            ],
+            "is_covered": true,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "BT-736-Part",
+            "sdk_element_title": "Reserved Execution",
+            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:ContractExecutionRequirement[cbc:ExecutionRequirementCode/@listName='reserved-execution']/cbc:ExecutionRequirementCode",
+            "test_data_xpaths": [
+                {
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
+                    "test_data_suite_id": "sampling_eforms_all_pin-1.13",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
+                    "test_data_id": "205940-2025",
+                    "xpaths": [
+                        {
+                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:ContractExecutionRequirement/cbc:ExecutionRequirementCode",
+                            "value": "no"
+                        },
+                        {
+                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:ContractExecutionRequirement/cbc:ExecutionRequirementCode",
+                            "value": "no"
+                        }
+                    ]
+                }
+            ],
+            "is_covered": true,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "ND-PartDocAllOfficialLanguages",
+            "sdk_element_title": null,
+            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:OfficialLanguages",
+            "test_data_xpaths": [
+                {
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
+                    "test_data_suite_id": "sampling_eforms_all_pin-1.13",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
+                    "test_data_id": "205940-2025",
+                    "xpaths": [
+                        {
+                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:OfficialLanguages",
+                            "value": null
+                        },
+                        {
+                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:OfficialLanguages",
+                            "value": null
+                        }
+                    ]
+                }
+            ],
+            "is_covered": true,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "ND-PartDocOfficialLanguage",
+            "sdk_element_title": null,
+            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:OfficialLanguages/cac:Language",
+            "test_data_xpaths": [
+                {
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
+                    "test_data_suite_id": "sampling_eforms_all_pin-1.13",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
+                    "test_data_id": "205940-2025",
+                    "xpaths": [
+                        {
+                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:OfficialLanguages/cac:Language",
+                            "value": null
+                        },
+                        {
+                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:OfficialLanguages/cac:Language",
+                            "value": null
+                        }
+                    ]
+                }
+            ],
+            "is_covered": true,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "BT-708-Part",
+            "sdk_element_title": "Documents Official Language",
+            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:OfficialLanguages/cac:Language/cbc:ID",
+            "test_data_xpaths": [
+                {
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
+                    "test_data_suite_id": "sampling_eforms_all_pin-1.13",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
+                    "test_data_id": "205940-2025",
+                    "xpaths": [
+                        {
+                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:OfficialLanguages/cac:Language/cbc:ID",
+                            "value": "CAT"
+                        },
+                        {
+                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:OfficialLanguages/cac:Language/cbc:ID",
+                            "value": "CAT"
+                        }
+                    ]
+                }
+            ],
+            "is_covered": true,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "ND-PartDocAllNonOfficialLanguages",
+            "sdk_element_title": null,
+            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NonOfficialLanguages",
+            "test_data_xpaths": [
+                {
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
+                    "test_data_suite_id": "sampling_eforms_all_pin-1.13",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
+                    "test_data_id": "205940-2025",
+                    "xpaths": [
+                        {
+                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NonOfficialLanguages",
+                            "value": null
+                        },
+                        {
+                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NonOfficialLanguages",
+                            "value": null
+                        }
+                    ]
+                }
+            ],
+            "is_covered": true,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "ND-PartDocNonOfficialLanguage",
+            "sdk_element_title": null,
+            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NonOfficialLanguages/cac:Language",
+            "test_data_xpaths": [
+                {
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
+                    "test_data_suite_id": "sampling_eforms_all_pin-1.13",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
+                    "test_data_id": "205940-2025",
+                    "xpaths": [
+                        {
+                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NonOfficialLanguages/cac:Language",
+                            "value": null
+                        },
+                        {
+                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NonOfficialLanguages/cac:Language",
+                            "value": null
+                        }
+                    ]
+                }
+            ],
+            "is_covered": true,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "BT-737-Part",
+            "sdk_element_title": "Documents Unofficial Language",
+            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NonOfficialLanguages/cac:Language/cbc:ID",
+            "test_data_xpaths": [
+                {
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
+                    "test_data_suite_id": "sampling_eforms_all_pin-1.13",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
+                    "test_data_id": "205940-2025",
+                    "xpaths": [
+                        {
+                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NonOfficialLanguages/cac:Language/cbc:ID",
+                            "value": "CAT"
+                        },
+                        {
+                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NonOfficialLanguages/cac:Language/cbc:ID",
+                            "value": "CAT"
+                        }
+                    ]
+                }
+            ],
+            "is_covered": true,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "OPT-070-Lot",
+            "sdk_element_title": "Reserved Execution justification",
+            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cac:ContractExecutionRequirement[cbc:ExecutionRequirementCode/@listName='reserved-execution']/cbc:Description",
+            "test_data_xpaths": [],
+            "is_covered": false,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "OPP-035-Tender",
+            "sdk_element_title": "Revenues Allocation of tickets sales code",
+            "sdk_element_xpath": "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:ContractTerm[efbc:TermCode/text()='all-rev-tic']/efbc:TermCode",
+            "test_data_xpaths": [],
+            "is_covered": false,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
             "sdk_element_id": "BT-125(i)-Part-Scheme",
             "sdk_element_title": "Previous Planning Identifier Schemename",
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingProcess/cac:NoticeDocumentReference/cbc:ID/@schemeName",
@@ -2572,9 +2884,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cbc:ID/@schemeName",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -2606,34 +2918,6 @@
             "xpath_conditions": [
                 {
                     "xpath_condition": "",
-                    "meets_xpath_condition": true
-                }
-            ],
-            "message": null
-        },
-        {
-            "sdk_element_id": "BT-160-Tender-Currency",
-            "sdk_element_title": "Concession Revenue Buyer Currency",
-            "sdk_element_xpath": "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:ConcessionRevenue/efbc:RevenueBuyerAmount/@currencyID",
-            "test_data_xpaths": [],
-            "is_covered": false,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "not( exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='con-rev-buy']) and efbc:RevenueBuyerAmount/text() = '-1' )",
-                    "meets_xpath_condition": true
-                }
-            ],
-            "message": null
-        },
-        {
-            "sdk_element_id": "BT-162-Tender-Currency",
-            "sdk_element_title": "Concession Revenue User Currency",
-            "sdk_element_xpath": "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:ConcessionRevenue/efbc:RevenueUserAmount/@currencyID",
-            "test_data_xpaths": [],
-            "is_covered": false,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "not( exists(efac:FieldsPrivacy[efbc:FieldIdentifierCode/text()='con-rev-use']) and efbc:RevenueUserAmount/text() = '-1' )",
                     "meets_xpath_condition": true
                 }
             ],
@@ -2715,9 +2999,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cbc:Name/@languageID",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -2746,9 +3030,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cbc:ID/@schemeName",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -2777,9 +3061,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cbc:ProcurementTypeCode[@listName='contract-nature']/@listName",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -2808,9 +3092,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cbc:Description/@languageID",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -2820,37 +3104,6 @@
                         {
                             "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:ProcurementProject/cbc:Description/languageID",
                             "value": "SPA"
-                        }
-                    ]
-                }
-            ],
-            "is_covered": true,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "",
-                    "meets_xpath_condition": true
-                }
-            ],
-            "message": null
-        },
-        {
-            "sdk_element_id": "BT-27-Part-Currency",
-            "sdk_element_title": "Estimated Value Currency",
-            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:RequestedTenderTotal/cbc:EstimatedOverallContractAmount/@currencyID",
-            "test_data_xpaths": [
-                {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
-                    "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
-                    "test_data_id": "205940-2025",
-                    "xpaths": [
-                        {
-                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:ProcurementProject/cac:RequestedTenderTotal/cbc:EstimatedOverallContractAmount/currencyID",
-                            "value": "EUR"
-                        },
-                        {
-                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:ProcurementProject/cac:RequestedTenderTotal/cbc:EstimatedOverallContractAmount/currencyID",
-                            "value": "EUR"
                         }
                     ]
                 }
@@ -2870,9 +3123,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cbc:Note/@languageID",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -2911,9 +3164,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:RealizedLocation/cac:Address/cbc:CountrySubentityCode/@listName",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -2942,9 +3195,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:RealizedLocation/cac:Address/cac:Country/cbc:IdentificationCode/@listName",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -2987,9 +3240,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:PlannedPeriod/cbc:DescriptionCode/@listName",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -3032,9 +3285,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:ContractExecutionRequirement[cbc:ExecutionRequirementCode/@listName='reserved-execution']/cbc:ExecutionRequirementCode/@listName",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -3063,9 +3316,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingProcess/cac:ContractingSystem[cbc:ContractingSystemTypeCode/@listName='framework-agreement']/cbc:ContractingSystemTypeCode/@listName",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -3103,20 +3356,6 @@
             "message": null
         },
         {
-            "sdk_element_id": "BT-779-Tender-Currency",
-            "sdk_element_title": "Tender Payment Value Currency",
-            "sdk_element_xpath": "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:AggregatedAmounts/cbc:PaidAmount/@currencyID",
-            "test_data_xpaths": [],
-            "is_covered": false,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "",
-                    "meets_xpath_condition": true
-                }
-            ],
-            "message": null
-        },
-        {
             "sdk_element_id": "BT-780-Tender-Language",
             "sdk_element_title": "Tender Payment Value Additional Information Language",
             "sdk_element_xpath": "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:AggregatedAmounts/efbc:PaidAmountDescription/@languageID",
@@ -3134,20 +3373,6 @@
             "sdk_element_id": "BT-781-Lot-Language",
             "sdk_element_title": "Duration Additional Information Language",
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:ProcurementProject/cac:PlannedPeriod/cbc:Description/@languageID",
-            "test_data_xpaths": [],
-            "is_covered": false,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "",
-                    "meets_xpath_condition": true
-                }
-            ],
-            "message": null
-        },
-        {
-            "sdk_element_id": "BT-782-Tender-Currency",
-            "sdk_element_title": "Tender Penalties Currency",
-            "sdk_element_xpath": "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:AggregatedAmounts/efbc:PenaltiesAmount/@currencyID",
             "test_data_xpaths": [],
             "is_covered": false,
             "xpath_conditions": [
@@ -3218,6 +3443,20 @@
             "sdk_element_id": "OPP-034-Tender-Language",
             "sdk_element_title": "Penalties and Rewards Description Language",
             "sdk_element_xpath": "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:ContractTerm[efbc:TermCode/@listName='rewards-penalties']/efbc:TermDescription/@languageID",
+            "test_data_xpaths": [],
+            "is_covered": false,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "OPP-035-Tender-List",
+            "sdk_element_title": "Revenues Allocation of tickets sales code Listname",
+            "sdk_element_xpath": "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:ContractTerm[efbc:TermCode/text()='all-rev-tic']/efbc:TermCode/@listName",
             "test_data_xpaths": [],
             "is_covered": false,
             "xpath_conditions": [
@@ -3439,259 +3678,6 @@
             "message": null
         },
         {
-            "sdk_element_id": "BT-707-Part",
-            "sdk_element_title": "Documents Restricted Justification",
-            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:CallForTendersDocumentReference/cbc:DocumentTypeCode",
-            "test_data_xpaths": [],
-            "is_covered": false,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "",
-                    "meets_xpath_condition": true
-                }
-            ],
-            "message": null
-        },
-        {
-            "sdk_element_id": "BT-615-Part",
-            "sdk_element_title": "Documents Restricted URL",
-            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:CallForTendersDocumentReference/cac:Attachment[../cbc:DocumentType/text()='restricted-document']/cac:ExternalReference/cbc:URI",
-            "test_data_xpaths": [],
-            "is_covered": false,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "",
-                    "meets_xpath_condition": true
-                }
-            ],
-            "message": null
-        },
-        {
-            "sdk_element_id": "BT-531-Part",
-            "sdk_element_title": "Additional Nature (different from Main)",
-            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:ProcurementProject/cac:ProcurementAdditionalType[cbc:ProcurementTypeCode/@listName='contract-nature']/cbc:ProcurementTypeCode",
-            "test_data_xpaths": [],
-            "is_covered": false,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "",
-                    "meets_xpath_condition": true
-                }
-            ],
-            "message": null
-        },
-        {
-            "sdk_element_id": "BT-15-Part",
-            "sdk_element_title": "Documents URL",
-            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:CallForTendersDocumentReference/cac:Attachment[../cbc:DocumentType/text()='non-restricted-document']/cac:ExternalReference/cbc:URI",
-            "test_data_xpaths": [
-                {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
-                    "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
-                    "test_data_id": "205940-2025",
-                    "xpaths": [
-                        {
-                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:CallForTendersDocumentReference/cac:Attachment/cac:ExternalReference/cbc:URI",
-                            "value": "https://contractaciopublica.cat/ca/perfils-contractant/detall/28279948?categoria=0"
-                        },
-                        {
-                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:CallForTendersDocumentReference/cac:Attachment/cac:ExternalReference/cbc:URI",
-                            "value": "https://contractaciopublica.cat/ca/perfils-contractant/detall/28279948?categoria=0"
-                        }
-                    ]
-                }
-            ],
-            "is_covered": true,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "",
-                    "meets_xpath_condition": true
-                }
-            ],
-            "message": null
-        },
-        {
-            "sdk_element_id": "OPP-040-Procedure",
-            "sdk_element_title": "Main Nature - Sub Type",
-            "sdk_element_xpath": "/*/cac:ProcurementProject/cac:ProcurementAdditionalType[cbc:ProcurementTypeCode/@listName='transport-service']/cbc:ProcurementTypeCode",
-            "test_data_xpaths": [],
-            "is_covered": false,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "",
-                    "meets_xpath_condition": true
-                }
-            ],
-            "message": null
-        },
-        {
-            "sdk_element_id": "BT-765-Part",
-            "sdk_element_title": "Framework Agreement",
-            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingProcess/cac:ContractingSystem[cbc:ContractingSystemTypeCode/@listName='framework-agreement']/cbc:ContractingSystemTypeCode",
-            "test_data_xpaths": [
-                {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
-                    "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
-                    "test_data_id": "205940-2025",
-                    "xpaths": [
-                        {
-                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingProcess/cac:ContractingSystem/cbc:ContractingSystemTypeCode",
-                            "value": "none"
-                        },
-                        {
-                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingProcess/cac:ContractingSystem/cbc:ContractingSystemTypeCode",
-                            "value": "none"
-                        }
-                    ]
-                }
-            ],
-            "is_covered": true,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "",
-                    "meets_xpath_condition": true
-                }
-            ],
-            "message": null
-        },
-        {
-            "sdk_element_id": "BT-766-Part",
-            "sdk_element_title": "Dynamic Purchasing System",
-            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingProcess/cac:ContractingSystem[cbc:ContractingSystemTypeCode/@listName='dps-usage']/cbc:ContractingSystemTypeCode",
-            "test_data_xpaths": [],
-            "is_covered": false,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "",
-                    "meets_xpath_condition": true
-                }
-            ],
-            "message": null
-        },
-        {
-            "sdk_element_id": "BT-736-Part",
-            "sdk_element_title": "Reserved Execution",
-            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:ContractExecutionRequirement[cbc:ExecutionRequirementCode/@listName='reserved-execution']/cbc:ExecutionRequirementCode",
-            "test_data_xpaths": [
-                {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
-                    "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
-                    "test_data_id": "205940-2025",
-                    "xpaths": [
-                        {
-                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:ContractExecutionRequirement/cbc:ExecutionRequirementCode",
-                            "value": "no"
-                        },
-                        {
-                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:ContractExecutionRequirement/cbc:ExecutionRequirementCode",
-                            "value": "no"
-                        }
-                    ]
-                }
-            ],
-            "is_covered": true,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "",
-                    "meets_xpath_condition": true
-                }
-            ],
-            "message": null
-        },
-        {
-            "sdk_element_id": "BT-708-Part",
-            "sdk_element_title": "Documents Official Language",
-            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:OfficialLanguages/cac:Language/cbc:ID",
-            "test_data_xpaths": [
-                {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
-                    "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
-                    "test_data_id": "205940-2025",
-                    "xpaths": [
-                        {
-                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:OfficialLanguages/cac:Language/cbc:ID",
-                            "value": "CAT"
-                        },
-                        {
-                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:OfficialLanguages/cac:Language/cbc:ID",
-                            "value": "CAT"
-                        }
-                    ]
-                }
-            ],
-            "is_covered": true,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "",
-                    "meets_xpath_condition": true
-                }
-            ],
-            "message": null
-        },
-        {
-            "sdk_element_id": "BT-737-Part",
-            "sdk_element_title": "Documents Unofficial Language",
-            "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NonOfficialLanguages/cac:Language/cbc:ID",
-            "test_data_xpaths": [
-                {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
-                    "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
-                    "test_data_id": "205940-2025",
-                    "xpaths": [
-                        {
-                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NonOfficialLanguages/cac:Language/cbc:ID",
-                            "value": "CAT"
-                        },
-                        {
-                            "xpath": "PriorInformationNotice/cac:ProcurementProjectLot/cac:TenderingTerms/cac:CallForTendersDocumentReference/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NonOfficialLanguages/cac:Language/cbc:ID",
-                            "value": "CAT"
-                        }
-                    ]
-                }
-            ],
-            "is_covered": true,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "",
-                    "meets_xpath_condition": true
-                }
-            ],
-            "message": null
-        },
-        {
-            "sdk_element_id": "OPP-035-Tender",
-            "sdk_element_title": "Revenues Allocation of tickets sales code",
-            "sdk_element_xpath": "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:ContractTerm[efbc:TermCode/text()='all-rev-tic']/efbc:TermCode",
-            "test_data_xpaths": [],
-            "is_covered": false,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "",
-                    "meets_xpath_condition": true
-                }
-            ],
-            "message": null
-        },
-        {
-            "sdk_element_id": "OPP-035-Tender-List",
-            "sdk_element_title": "Revenues Allocation of tickets sales code Listname",
-            "sdk_element_xpath": "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotTender/efac:ContractTerm[efbc:TermCode/text()='all-rev-tic']/efbc:TermCode/@listName",
-            "test_data_xpaths": [],
-            "is_covered": false,
-            "xpath_conditions": [
-                {
-                    "xpath_condition": "",
-                    "meets_xpath_condition": true
-                }
-            ],
-            "message": null
-        },
-        {
             "sdk_element_id": "BT-1501(c)-Contract",
             "sdk_element_title": "Modified Contract Reference",
             "sdk_element_xpath": "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:ContractModification/efbc:ModifiedContractIdentifier",
@@ -3706,15 +3692,15 @@
             "message": null
         },
         {
-            "sdk_element_id": "BT-1501(p)-Contract",
-            "sdk_element_title": "Modified Notice Part Reference",
-            "sdk_element_xpath": "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:ContractModification/efac:Change/efac:ChangedSection/efbc:ChangedSectionIdentifier",
+            "sdk_element_id": "ND-Modification",
+            "sdk_element_title": null,
+            "sdk_element_xpath": "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:ContractModification/efac:Change",
             "test_data_xpaths": [],
             "is_covered": false,
             "xpath_conditions": [
                 {
-                    "xpath_condition": "",
-                    "meets_xpath_condition": true
+                    "xpath_condition": "exists(efac:ChangedSection/efbc:ChangedSectionIdentifier)",
+                    "meets_xpath_condition": false
                 }
             ],
             "message": null
@@ -3879,9 +3865,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:TendererQualificationRequest[not(cbc:CompanyLegalFormCode)][not(cac:SpecificTendererRequirement/cbc:TendererRequirementTypeCode[@listName='missing-info-submission'])][not(cac:SpecificTendererRequirement/cbc:TendererRequirementTypeCode[@listName='selection-criteria-source'])]",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -3910,9 +3896,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:TendererQualificationRequest[not(cbc:CompanyLegalFormCode)][not(cac:SpecificTendererRequirement/cbc:TendererRequirementTypeCode[@listName='missing-info-submission'])][not(cac:SpecificTendererRequirement/cbc:TendererRequirementTypeCode[@listName='selection-criteria-source'])]/cac:SpecificTendererRequirement[cbc:TendererRequirementTypeCode/@listName='reserved-procurement']",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -3941,9 +3927,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:TendererQualificationRequest[not(cbc:CompanyLegalFormCode)][not(cac:SpecificTendererRequirement/cbc:TendererRequirementTypeCode[@listName='missing-info-submission'])][not(cac:SpecificTendererRequirement/cbc:TendererRequirementTypeCode[@listName='selection-criteria-source'])]/cac:SpecificTendererRequirement[cbc:TendererRequirementTypeCode/@listName='reserved-procurement']/cbc:TendererRequirementTypeCode",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {
@@ -3958,6 +3944,20 @@
                 }
             ],
             "is_covered": true,
+            "xpath_conditions": [
+                {
+                    "xpath_condition": "",
+                    "meets_xpath_condition": true
+                }
+            ],
+            "message": null
+        },
+        {
+            "sdk_element_id": "BT-1501(p)-Contract",
+            "sdk_element_title": "Modified Notice Part Reference",
+            "sdk_element_xpath": "/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:ContractModification/efac:Change/efac:ChangedSection/efbc:ChangedSectionIdentifier",
+            "test_data_xpaths": [],
+            "is_covered": false,
             "xpath_conditions": [
                 {
                     "xpath_condition": "",
@@ -4000,9 +4000,9 @@
             "sdk_element_xpath": "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:TendererQualificationRequest[not(cbc:CompanyLegalFormCode)][not(cac:SpecificTendererRequirement/cbc:TendererRequirementTypeCode[@listName='missing-info-submission'])][not(cac:SpecificTendererRequirement/cbc:TendererRequirementTypeCode[@listName='selection-criteria-source'])]/cac:SpecificTendererRequirement[cbc:TendererRequirementTypeCode/@listName='reserved-procurement']/cbc:TendererRequirementTypeCode/@listName",
             "test_data_xpaths": [
                 {
-                    "test_data_suite_oid": "67fbeaae70ce61e9d6c0d9bc",
+                    "test_data_suite_oid": "67feb4dadca42e57948afb32",
                     "test_data_suite_id": "sampling_eforms_all_pin-1.13",
-                    "test_data_oid": "67fbeaae70ce61e9d6c0d9be",
+                    "test_data_oid": "67feb4dadca42e57948afb34",
                     "test_data_id": "205940-2025",
                     "xpaths": [
                         {

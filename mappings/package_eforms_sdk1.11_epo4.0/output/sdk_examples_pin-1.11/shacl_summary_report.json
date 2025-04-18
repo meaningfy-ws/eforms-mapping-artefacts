@@ -1,17 +1,17 @@
 {
-    "created_at": "2025-04-14 12:59:09.001310+00:00",
+    "created_at": "2025-04-16 09:59:14.000043+00:00",
     "results": [],
     "summary": {
         "shacl_suites": [
             {
-                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                 "shacl_suite_id": "epo"
             }
         ],
         "results": [
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#refersToLot",
@@ -35,75 +35,75 @@
                         "count": 12,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7aa",
+                                "test_data_oid": "67feb3e4dca42e57948af91f",
                                 "test_data_id": "pin-only_24_lots"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7ac",
+                                "test_data_oid": "67feb3e4dca42e57948af921",
                                 "test_data_id": "pin-buyer_24_published"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7ad",
+                                "test_data_oid": "67feb3e4dca42e57948af922",
                                 "test_data_id": "pin-only_fin-reg"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b0",
+                                "test_data_oid": "67feb3e4dca42e57948af925",
                                 "test_data_id": "pin-only_25"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b4",
+                                "test_data_oid": "67feb3e4dca42e57948af929",
                                 "test_data_id": "pin-only_24"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b5",
+                                "test_data_oid": "67feb3e5dca42e57948af92a",
                                 "test_data_id": "pin-buyer_24_minimal"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b7",
+                                "test_data_oid": "67feb3e5dca42e57948af92c",
                                 "test_data_id": "pin-only_81"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b9",
+                                "test_data_oid": "67feb3e5dca42e57948af92e",
                                 "test_data_id": "pin-buyer_24"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7ba",
+                                "test_data_oid": "67feb3e5dca42e57948af92f",
                                 "test_data_id": "pin-buyer_25"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7bc",
+                                "test_data_oid": "67feb3e5dca42e57948af931",
                                 "test_data_id": "pin-buyer_81"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7be",
+                                "test_data_oid": "67feb3e5dca42e57948af933",
                                 "test_data_id": "pin-only_81_FRA"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7bf",
+                                "test_data_oid": "67feb3e5dca42e57948af934",
                                 "test_data_id": "pin-only_24_maximal"
                             }
                         ]
@@ -112,7 +112,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://www.w3.org/ns/adms#identifier",
@@ -136,99 +136,99 @@
                         "count": 16,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7aa",
+                                "test_data_oid": "67feb3e4dca42e57948af91f",
                                 "test_data_id": "pin-only_24_lots"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7ab",
+                                "test_data_oid": "67feb3e4dca42e57948af920",
                                 "test_data_id": "pin-rtl_25"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7ac",
+                                "test_data_oid": "67feb3e4dca42e57948af921",
                                 "test_data_id": "pin-buyer_24_published"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7ad",
+                                "test_data_oid": "67feb3e4dca42e57948af922",
                                 "test_data_id": "pin-only_fin-reg"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b0",
+                                "test_data_oid": "67feb3e4dca42e57948af925",
                                 "test_data_id": "pin-only_25"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b1",
+                                "test_data_oid": "67feb3e4dca42e57948af926",
                                 "test_data_id": "t01_PRT"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b2",
+                                "test_data_oid": "67feb3e4dca42e57948af927",
                                 "test_data_id": "pin-rtl_81"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b4",
+                                "test_data_oid": "67feb3e4dca42e57948af929",
                                 "test_data_id": "pin-only_24"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b5",
+                                "test_data_oid": "67feb3e5dca42e57948af92a",
                                 "test_data_id": "pin-buyer_24_minimal"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b6",
+                                "test_data_oid": "67feb3e5dca42e57948af92b",
                                 "test_data_id": "pin-rtl_24"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b7",
+                                "test_data_oid": "67feb3e5dca42e57948af92c",
                                 "test_data_id": "pin-only_81"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b9",
+                                "test_data_oid": "67feb3e5dca42e57948af92e",
                                 "test_data_id": "pin-buyer_24"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7ba",
+                                "test_data_oid": "67feb3e5dca42e57948af92f",
                                 "test_data_id": "pin-buyer_25"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7bc",
+                                "test_data_oid": "67feb3e5dca42e57948af931",
                                 "test_data_id": "pin-buyer_81"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7be",
+                                "test_data_oid": "67feb3e5dca42e57948af933",
                                 "test_data_id": "pin-only_81_FRA"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7bf",
+                                "test_data_oid": "67feb3e5dca42e57948af934",
                                 "test_data_id": "pin-only_24_maximal"
                             }
                         ]
@@ -237,7 +237,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasProcedureType",
@@ -261,111 +261,111 @@
                         "count": 18,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7aa",
+                                "test_data_oid": "67feb3e4dca42e57948af91f",
                                 "test_data_id": "pin-only_24_lots"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7ab",
+                                "test_data_oid": "67feb3e4dca42e57948af920",
                                 "test_data_id": "pin-rtl_25"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7ac",
+                                "test_data_oid": "67feb3e4dca42e57948af921",
                                 "test_data_id": "pin-buyer_24_published"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7ad",
+                                "test_data_oid": "67feb3e4dca42e57948af922",
                                 "test_data_id": "pin-only_fin-reg"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7ae",
+                                "test_data_oid": "67feb3e4dca42e57948af923",
                                 "test_data_id": "pin-cfc-social_25"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b0",
+                                "test_data_oid": "67feb3e4dca42e57948af925",
                                 "test_data_id": "pin-only_25"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b2",
+                                "test_data_oid": "67feb3e4dca42e57948af927",
                                 "test_data_id": "pin-rtl_81"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b4",
+                                "test_data_oid": "67feb3e4dca42e57948af929",
                                 "test_data_id": "pin-only_24"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b5",
+                                "test_data_oid": "67feb3e5dca42e57948af92a",
                                 "test_data_id": "pin-buyer_24_minimal"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b6",
+                                "test_data_oid": "67feb3e5dca42e57948af92b",
                                 "test_data_id": "pin-rtl_24"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b7",
+                                "test_data_oid": "67feb3e5dca42e57948af92c",
                                 "test_data_id": "pin-only_81"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b8",
+                                "test_data_oid": "67feb3e5dca42e57948af92d",
                                 "test_data_id": "pin-cfc-social_23"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b9",
+                                "test_data_oid": "67feb3e5dca42e57948af92e",
                                 "test_data_id": "pin-buyer_24"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7ba",
+                                "test_data_oid": "67feb3e5dca42e57948af92f",
                                 "test_data_id": "pin-buyer_25"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7bb",
+                                "test_data_oid": "67feb3e5dca42e57948af930",
                                 "test_data_id": "CEI"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7bc",
+                                "test_data_oid": "67feb3e5dca42e57948af931",
                                 "test_data_id": "pin-buyer_81"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7be",
+                                "test_data_oid": "67feb3e5dca42e57948af933",
                                 "test_data_id": "pin-only_81_FRA"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7bf",
+                                "test_data_oid": "67feb3e5dca42e57948af934",
                                 "test_data_id": "pin-only_24_maximal"
                             }
                         ]
@@ -374,7 +374,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasProcurementScopeDividedIntoLot",
@@ -398,75 +398,75 @@
                         "count": 12,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7aa",
+                                "test_data_oid": "67feb3e4dca42e57948af91f",
                                 "test_data_id": "pin-only_24_lots"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7ac",
+                                "test_data_oid": "67feb3e4dca42e57948af921",
                                 "test_data_id": "pin-buyer_24_published"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7ad",
+                                "test_data_oid": "67feb3e4dca42e57948af922",
                                 "test_data_id": "pin-only_fin-reg"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b0",
+                                "test_data_oid": "67feb3e4dca42e57948af925",
                                 "test_data_id": "pin-only_25"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b4",
+                                "test_data_oid": "67feb3e4dca42e57948af929",
                                 "test_data_id": "pin-only_24"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b5",
+                                "test_data_oid": "67feb3e5dca42e57948af92a",
                                 "test_data_id": "pin-buyer_24_minimal"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b7",
+                                "test_data_oid": "67feb3e5dca42e57948af92c",
                                 "test_data_id": "pin-only_81"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b9",
+                                "test_data_oid": "67feb3e5dca42e57948af92e",
                                 "test_data_id": "pin-buyer_24"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7ba",
+                                "test_data_oid": "67feb3e5dca42e57948af92f",
                                 "test_data_id": "pin-buyer_25"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7bc",
+                                "test_data_oid": "67feb3e5dca42e57948af931",
                                 "test_data_id": "pin-buyer_81"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7be",
+                                "test_data_oid": "67feb3e5dca42e57948af933",
                                 "test_data_id": "pin-only_81_FRA"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7bf",
+                                "test_data_oid": "67feb3e5dca42e57948af934",
                                 "test_data_id": "pin-only_24_maximal"
                             }
                         ]
@@ -475,7 +475,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#isSubjectToProcedureSpecificTerm",
@@ -499,87 +499,87 @@
                         "count": 14,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7aa",
+                                "test_data_oid": "67feb3e4dca42e57948af91f",
                                 "test_data_id": "pin-only_24_lots"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7ac",
+                                "test_data_oid": "67feb3e4dca42e57948af921",
                                 "test_data_id": "pin-buyer_24_published"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7ad",
+                                "test_data_oid": "67feb3e4dca42e57948af922",
                                 "test_data_id": "pin-only_fin-reg"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b0",
+                                "test_data_oid": "67feb3e4dca42e57948af925",
                                 "test_data_id": "pin-only_25"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b1",
+                                "test_data_oid": "67feb3e4dca42e57948af926",
                                 "test_data_id": "t01_PRT"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b3",
+                                "test_data_oid": "67feb3e4dca42e57948af928",
                                 "test_data_id": "pin-cfc_24"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b4",
+                                "test_data_oid": "67feb3e4dca42e57948af929",
                                 "test_data_id": "pin-only_24"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b5",
+                                "test_data_oid": "67feb3e5dca42e57948af92a",
                                 "test_data_id": "pin-buyer_24_minimal"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b7",
+                                "test_data_oid": "67feb3e5dca42e57948af92c",
                                 "test_data_id": "pin-only_81"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b9",
+                                "test_data_oid": "67feb3e5dca42e57948af92e",
                                 "test_data_id": "pin-buyer_24"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7ba",
+                                "test_data_oid": "67feb3e5dca42e57948af92f",
                                 "test_data_id": "pin-buyer_25"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7bc",
+                                "test_data_oid": "67feb3e5dca42e57948af931",
                                 "test_data_id": "pin-buyer_81"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7be",
+                                "test_data_oid": "67feb3e5dca42e57948af933",
                                 "test_data_id": "pin-only_81_FRA"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7bf",
+                                "test_data_oid": "67feb3e5dca42e57948af934",
                                 "test_data_id": "pin-only_24_maximal"
                             }
                         ]
@@ -588,7 +588,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://www.w3.org/2006/time#unitType",
@@ -612,51 +612,51 @@
                         "count": 8,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7ab",
+                                "test_data_oid": "67feb3e4dca42e57948af920",
                                 "test_data_id": "pin-rtl_25"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7af",
+                                "test_data_oid": "67feb3e4dca42e57948af924",
                                 "test_data_id": "pin-cfc_25"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b1",
+                                "test_data_oid": "67feb3e4dca42e57948af926",
                                 "test_data_id": "t01_PRT"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b2",
+                                "test_data_oid": "67feb3e4dca42e57948af927",
                                 "test_data_id": "pin-rtl_81"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b3",
+                                "test_data_oid": "67feb3e4dca42e57948af928",
                                 "test_data_id": "pin-cfc_24"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b6",
+                                "test_data_oid": "67feb3e5dca42e57948af92b",
                                 "test_data_id": "pin-rtl_24"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b7",
+                                "test_data_oid": "67feb3e5dca42e57948af92c",
                                 "test_data_id": "pin-only_81"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7bb",
+                                "test_data_oid": "67feb3e5dca42e57948af930",
                                 "test_data_id": "CEI"
                             }
                         ]
@@ -665,7 +665,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasPublicationDate",
@@ -689,9 +689,9 @@
                         "count": 1,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7ac",
+                                "test_data_oid": "67feb3e4dca42e57948af921",
                                 "test_data_id": "pin-buyer_24_published"
                             }
                         ]
@@ -700,7 +700,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasOJSIssueNumber",
@@ -724,9 +724,9 @@
                         "count": 1,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7ac",
+                                "test_data_oid": "67feb3e4dca42e57948af921",
                                 "test_data_id": "pin-buyer_24_published"
                             }
                         ]
@@ -735,7 +735,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasAwardCriteriaStatedInProcurementDocuments",
@@ -759,9 +759,9 @@
                         "count": 1,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7af",
+                                "test_data_oid": "67feb3e4dca42e57948af924",
                                 "test_data_id": "pin-cfc_25"
                             }
                         ]
@@ -770,7 +770,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasBeginning",
@@ -794,21 +794,21 @@
                         "count": 3,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7af",
+                                "test_data_oid": "67feb3e4dca42e57948af924",
                                 "test_data_id": "pin-cfc_25"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b7",
+                                "test_data_oid": "67feb3e5dca42e57948af92c",
                                 "test_data_id": "pin-only_81"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7bf",
+                                "test_data_oid": "67feb3e5dca42e57948af934",
                                 "test_data_id": "pin-only_24_maximal"
                             }
                         ]
@@ -817,7 +817,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasTimePeriod",
@@ -841,21 +841,21 @@
                         "count": 3,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7af",
+                                "test_data_oid": "67feb3e4dca42e57948af924",
                                 "test_data_id": "pin-cfc_25"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b7",
+                                "test_data_oid": "67feb3e5dca42e57948af92c",
                                 "test_data_id": "pin-only_81"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7bf",
+                                "test_data_oid": "67feb3e5dca42e57948af934",
                                 "test_data_id": "pin-only_24_maximal"
                             }
                         ]
@@ -864,7 +864,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasEstimatedInvitationToTenderDate",
@@ -888,15 +888,15 @@
                         "count": 2,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7af",
+                                "test_data_oid": "67feb3e4dca42e57948af924",
                                 "test_data_id": "pin-cfc_25"
                             },
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7b2",
+                                "test_data_oid": "67feb3e4dca42e57948af927",
                                 "test_data_id": "pin-rtl_81"
                             }
                         ]
@@ -905,7 +905,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasMainActivity",
@@ -929,9 +929,9 @@
                         "count": 1,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7ba",
+                                "test_data_oid": "67feb3e5dca42e57948af92f",
                                 "test_data_id": "pin-buyer_25"
                             }
                         ]
@@ -940,7 +940,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasOfficialLanguage",
@@ -964,9 +964,9 @@
                         "count": 1,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7bf",
+                                "test_data_oid": "67feb3e5dca42e57948af934",
                                 "test_data_id": "pin-only_24_maximal"
                             }
                         ]
@@ -975,7 +975,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasNoticeType",
@@ -999,9 +999,9 @@
                         "count": 1,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7bf",
+                                "test_data_oid": "67feb3e5dca42e57948af934",
                                 "test_data_id": "pin-only_24_maximal"
                             }
                         ]
@@ -1010,7 +1010,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#refersToProcedure",
@@ -1034,9 +1034,9 @@
                         "count": 1,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7bf",
+                                "test_data_oid": "67feb3e5dca42e57948af934",
                                 "test_data_id": "pin-only_24_maximal"
                             }
                         ]
@@ -1045,7 +1045,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasEnd",
@@ -1069,9 +1069,9 @@
                         "count": 1,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7bf",
+                                "test_data_oid": "67feb3e5dca42e57948af934",
                                 "test_data_id": "pin-only_24_maximal"
                             }
                         ]

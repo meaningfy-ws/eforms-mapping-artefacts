@@ -166,7 +166,8 @@ epd:id_46977f5c-86be-450a-900d-43594fb88cb6_PartPurpose_hq9SUTbfgyszaBVWP2RTwv a
 
 epd:id_46977f5c-86be-450a-900d-43594fb88cb6_PartSpecificDuration_kSZMfSA8qTkPCvvg4J7pge
   a epo:SpecificDuration;
-  time:numericDuration 60.0 .
+  time:numericDuration 60.0;
+  time:unitType time:unitDay .
 
 epd:id_46977f5c-86be-450a-900d-43594fb88cb6_PlannedProcurementPartIdentifier_adyhtKZkzxr6SEjy3tRyua
   a adms:Identifier;

@@ -132,7 +132,8 @@ epd:id_64bdfc22-2f35-4109-9817-a8f0bd9468b6_PartPurpose_hq9SUTbfgyszaBVWP2RTwv a
 
 epd:id_64bdfc22-2f35-4109-9817-a8f0bd9468b6_PartSpecificDuration_kSZMfSA8qTkPCvvg4J7pge
   a epo:SpecificDuration;
-  time:numericDuration 4.0 .
+  time:numericDuration 4.0;
+  time:unitType time:unitYear .
 
 epd:id_64bdfc22-2f35-4109-9817-a8f0bd9468b6_PlannedProcurementPartIdentifier_adyhtKZkzxr6SEjy3tRyua
   a adms:Identifier;

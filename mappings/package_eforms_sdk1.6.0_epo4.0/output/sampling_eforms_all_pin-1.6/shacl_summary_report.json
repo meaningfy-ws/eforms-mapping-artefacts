@@ -1,82 +1,17 @@
 {
-    "created_at": "2025-04-14 12:45:25.020250+00:00",
+    "created_at": "2025-04-15 19:51:12.281051+00:00",
     "results": [],
     "summary": {
         "shacl_suites": [
             {
-                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                 "shacl_suite_id": "epo"
             }
         ],
         "results": [
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
-                    "shacl_suite_id": "epo"
-                },
-                "result_path": "http://data.europa.eu/a4g/ontology#hasOJSIssueNumber",
-                "short_result_path": "epo:hasOJSIssueNumber",
-                "source_constraint_component": "sh:DatatypeConstraintComponent",
-                "short_source_constraint_component": "sh:DatatypeConstraintComponent",
-                "result": {
-                    "valid": {
-                        "count": 0,
-                        "test_datas": []
-                    },
-                    "info": {
-                        "count": 0,
-                        "test_datas": []
-                    },
-                    "warning": {
-                        "count": 0,
-                        "test_datas": []
-                    },
-                    "violation": {
-                        "count": 6,
-                        "test_datas": [
-                            {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
-                                "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d493",
-                                "test_data_id": "626161-2023"
-                            },
-                            {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
-                                "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d494",
-                                "test_data_id": "367760-2024"
-                            },
-                            {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
-                                "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d495",
-                                "test_data_id": "787442-2023"
-                            },
-                            {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
-                                "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d496",
-                                "test_data_id": "262891-2023"
-                            },
-                            {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
-                                "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d497",
-                                "test_data_id": "680290-2023"
-                            },
-                            {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
-                                "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d498",
-                                "test_data_id": "455486-2023"
-                            }
-                        ]
-                    }
-                }
-            },
-            {
-                "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasPublicationDate",
@@ -100,39 +35,39 @@
                         "count": 6,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d493",
+                                "test_data_oid": "67feb23cdca42e57948af5ce",
                                 "test_data_id": "626161-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d494",
+                                "test_data_oid": "67feb23cdca42e57948af5cf",
                                 "test_data_id": "367760-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d495",
+                                "test_data_oid": "67feb23cdca42e57948af5d0",
                                 "test_data_id": "787442-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d496",
+                                "test_data_oid": "67feb23cdca42e57948af5d1",
                                 "test_data_id": "262891-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d497",
+                                "test_data_oid": "67feb23cdca42e57948af5d2",
                                 "test_data_id": "680290-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d498",
+                                "test_data_oid": "67feb23cdca42e57948af5d3",
                                 "test_data_id": "455486-2023"
                             }
                         ]
@@ -141,7 +76,72 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#hasOJSIssueNumber",
+                "short_result_path": "epo:hasOJSIssueNumber",
+                "source_constraint_component": "sh:DatatypeConstraintComponent",
+                "short_source_constraint_component": "sh:DatatypeConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 6,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
+                                "test_data_suite_id": "sampling_eforms_all_pin-1.6",
+                                "test_data_oid": "67feb23cdca42e57948af5ce",
+                                "test_data_id": "626161-2023"
+                            },
+                            {
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
+                                "test_data_suite_id": "sampling_eforms_all_pin-1.6",
+                                "test_data_oid": "67feb23cdca42e57948af5cf",
+                                "test_data_id": "367760-2024"
+                            },
+                            {
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
+                                "test_data_suite_id": "sampling_eforms_all_pin-1.6",
+                                "test_data_oid": "67feb23cdca42e57948af5d0",
+                                "test_data_id": "787442-2023"
+                            },
+                            {
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
+                                "test_data_suite_id": "sampling_eforms_all_pin-1.6",
+                                "test_data_oid": "67feb23cdca42e57948af5d1",
+                                "test_data_id": "262891-2023"
+                            },
+                            {
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
+                                "test_data_suite_id": "sampling_eforms_all_pin-1.6",
+                                "test_data_oid": "67feb23cdca42e57948af5d2",
+                                "test_data_id": "680290-2023"
+                            },
+                            {
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
+                                "test_data_suite_id": "sampling_eforms_all_pin-1.6",
+                                "test_data_oid": "67feb23cdca42e57948af5d3",
+                                "test_data_id": "455486-2023"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#refersToLot",
@@ -165,27 +165,27 @@
                         "count": 4,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d493",
+                                "test_data_oid": "67feb23cdca42e57948af5ce",
                                 "test_data_id": "626161-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d494",
+                                "test_data_oid": "67feb23cdca42e57948af5cf",
                                 "test_data_id": "367760-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d497",
+                                "test_data_oid": "67feb23cdca42e57948af5d2",
                                 "test_data_id": "680290-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d498",
+                                "test_data_oid": "67feb23cdca42e57948af5d3",
                                 "test_data_id": "455486-2023"
                             }
                         ]
@@ -194,7 +194,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://www.w3.org/ns/adms#identifier",
@@ -218,27 +218,27 @@
                         "count": 4,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d493",
+                                "test_data_oid": "67feb23cdca42e57948af5ce",
                                 "test_data_id": "626161-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d494",
+                                "test_data_oid": "67feb23cdca42e57948af5cf",
                                 "test_data_id": "367760-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d497",
+                                "test_data_oid": "67feb23cdca42e57948af5d2",
                                 "test_data_id": "680290-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d498",
+                                "test_data_oid": "67feb23cdca42e57948af5d3",
                                 "test_data_id": "455486-2023"
                             }
                         ]
@@ -247,13 +247,13 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://www.w3.org/2006/time#unitType",
                 "short_result_path": "time:unitType",
-                "source_constraint_component": "sh:MinCountConstraintComponent",
-                "short_source_constraint_component": "sh:MinCountConstraintComponent",
+                "source_constraint_component": "sh:ClassConstraintComponent",
+                "short_source_constraint_component": "sh:ClassConstraintComponent",
                 "result": {
                     "valid": {
                         "count": 0,
@@ -271,21 +271,21 @@
                         "count": 3,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d493",
+                                "test_data_oid": "67feb23cdca42e57948af5ce",
                                 "test_data_id": "626161-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d497",
+                                "test_data_oid": "67feb23cdca42e57948af5d2",
                                 "test_data_id": "680290-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d498",
+                                "test_data_oid": "67feb23cdca42e57948af5d3",
                                 "test_data_id": "455486-2023"
                             }
                         ]
@@ -294,7 +294,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasProcedureType",
@@ -318,27 +318,27 @@
                         "count": 4,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d493",
+                                "test_data_oid": "67feb23cdca42e57948af5ce",
                                 "test_data_id": "626161-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d494",
+                                "test_data_oid": "67feb23cdca42e57948af5cf",
                                 "test_data_id": "367760-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d497",
+                                "test_data_oid": "67feb23cdca42e57948af5d2",
                                 "test_data_id": "680290-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d498",
+                                "test_data_oid": "67feb23cdca42e57948af5d3",
                                 "test_data_id": "455486-2023"
                             }
                         ]
@@ -347,7 +347,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasProcurementScopeDividedIntoLot",
@@ -371,27 +371,27 @@
                         "count": 4,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d493",
+                                "test_data_oid": "67feb23cdca42e57948af5ce",
                                 "test_data_id": "626161-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d494",
+                                "test_data_oid": "67feb23cdca42e57948af5cf",
                                 "test_data_id": "367760-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d497",
+                                "test_data_oid": "67feb23cdca42e57948af5d2",
                                 "test_data_id": "680290-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d498",
+                                "test_data_oid": "67feb23cdca42e57948af5d3",
                                 "test_data_id": "455486-2023"
                             }
                         ]
@@ -400,7 +400,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#isSubjectToProcedureSpecificTerm",
@@ -424,39 +424,39 @@
                         "count": 6,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d493",
+                                "test_data_oid": "67feb23cdca42e57948af5ce",
                                 "test_data_id": "626161-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d494",
+                                "test_data_oid": "67feb23cdca42e57948af5cf",
                                 "test_data_id": "367760-2024"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d495",
+                                "test_data_oid": "67feb23cdca42e57948af5d0",
                                 "test_data_id": "787442-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d496",
+                                "test_data_oid": "67feb23cdca42e57948af5d1",
                                 "test_data_id": "262891-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d497",
+                                "test_data_oid": "67feb23cdca42e57948af5d2",
                                 "test_data_id": "680290-2023"
                             },
                             {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d498",
+                                "test_data_oid": "67feb23cdca42e57948af5d3",
                                 "test_data_id": "455486-2023"
                             }
                         ]
@@ -465,7 +465,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#playedBy",
@@ -489,9 +489,9 @@
                         "count": 1,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d497",
+                                "test_data_oid": "67feb23cdca42e57948af5d2",
                                 "test_data_id": "680290-2023"
                             }
                         ]
@@ -500,7 +500,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#relatesToEFormSectionIdentifier",
@@ -524,9 +524,9 @@
                         "count": 1,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d498",
+                                "test_data_oid": "67feb23cdca42e57948af5d3",
                                 "test_data_id": "455486-2023"
                             }
                         ]
@@ -535,77 +535,7 @@
             },
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
-                    "shacl_suite_id": "epo"
-                },
-                "result_path": "http://data.europa.eu/a4g/ontology#hasNoticeType",
-                "short_result_path": "epo:hasNoticeType",
-                "source_constraint_component": "sh:MinCountConstraintComponent",
-                "short_source_constraint_component": "sh:MinCountConstraintComponent",
-                "result": {
-                    "valid": {
-                        "count": 0,
-                        "test_datas": []
-                    },
-                    "info": {
-                        "count": 0,
-                        "test_datas": []
-                    },
-                    "warning": {
-                        "count": 0,
-                        "test_datas": []
-                    },
-                    "violation": {
-                        "count": 1,
-                        "test_datas": [
-                            {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
-                                "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d498",
-                                "test_data_id": "455486-2023"
-                            }
-                        ]
-                    }
-                }
-            },
-            {
-                "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
-                    "shacl_suite_id": "epo"
-                },
-                "result_path": "http://data.europa.eu/a4g/ontology#refersToProcedure",
-                "short_result_path": "epo:refersToProcedure",
-                "source_constraint_component": "sh:MinCountConstraintComponent",
-                "short_source_constraint_component": "sh:MinCountConstraintComponent",
-                "result": {
-                    "valid": {
-                        "count": 0,
-                        "test_datas": []
-                    },
-                    "info": {
-                        "count": 0,
-                        "test_datas": []
-                    },
-                    "warning": {
-                        "count": 0,
-                        "test_datas": []
-                    },
-                    "violation": {
-                        "count": 1,
-                        "test_datas": [
-                            {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
-                                "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d498",
-                                "test_data_id": "455486-2023"
-                            }
-                        ]
-                    }
-                }
-            },
-            {
-                "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "http://data.europa.eu/a4g/ontology#hasOfficialLanguage",
@@ -629,9 +559,79 @@
                         "count": 1,
                         "test_datas": [
                             {
-                                "test_data_suite_oid": "67fbe8df70ce61e9d6c0d492",
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
                                 "test_data_suite_id": "sampling_eforms_all_pin-1.6",
-                                "test_data_oid": "67fbe8df70ce61e9d6c0d498",
+                                "test_data_oid": "67feb23cdca42e57948af5d3",
+                                "test_data_id": "455486-2023"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#hasNoticeType",
+                "short_result_path": "epo:hasNoticeType",
+                "source_constraint_component": "sh:MinCountConstraintComponent",
+                "short_source_constraint_component": "sh:MinCountConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 1,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
+                                "test_data_suite_id": "sampling_eforms_all_pin-1.6",
+                                "test_data_oid": "67feb23cdca42e57948af5d3",
+                                "test_data_id": "455486-2023"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "shacl_suite": {
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
+                    "shacl_suite_id": "epo"
+                },
+                "result_path": "http://data.europa.eu/a4g/ontology#refersToProcedure",
+                "short_result_path": "epo:refersToProcedure",
+                "source_constraint_component": "sh:MinCountConstraintComponent",
+                "short_source_constraint_component": "sh:MinCountConstraintComponent",
+                "result": {
+                    "valid": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "info": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "warning": {
+                        "count": 0,
+                        "test_datas": []
+                    },
+                    "violation": {
+                        "count": 1,
+                        "test_datas": [
+                            {
+                                "test_data_suite_oid": "67feb23cdca42e57948af5cd",
+                                "test_data_suite_id": "sampling_eforms_all_pin-1.6",
+                                "test_data_oid": "67feb23cdca42e57948af5d3",
                                 "test_data_id": "455486-2023"
                             }
                         ]

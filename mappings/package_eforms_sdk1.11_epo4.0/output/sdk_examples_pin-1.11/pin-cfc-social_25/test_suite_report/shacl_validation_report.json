@@ -1,9 +1,9 @@
 {
-    "created_at": "2025-04-14 12:58:41.471414+00:00",
+    "created_at": "2025-04-16 09:58:56.238725+00:00",
     "results": [
         {
             "shacl_suite": {
-                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                 "shacl_suite_id": "epo"
             },
             "results": [
@@ -12,7 +12,7 @@
                     "results": [
                         {
                             "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                                 "shacl_suite_id": "epo"
                             },
                             "result_path": "http://data.europa.eu/a4g/ontology#hasProcedureType",
@@ -32,17 +32,17 @@
                                 "message": "Less than 1 values on epd:id_57f7cfe8-eb93-4351-b7ef-e1f1aa586cd9_Procedure_iNVWPykMuHh9p4AY3uzvA2->:hasProcedureType"
                             },
                             "test_data": {
-                                "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                                "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                                 "test_data_suite_id": "sdk_examples_pin-1.11",
-                                "test_data_oid": "67fbea0470ce61e9d6c0d7ae",
+                                "test_data_oid": "67feb3e4dca42e57948af923",
                                 "test_data_id": "pin-cfc-social_25"
                             }
                         }
                     ],
                     "test_data": {
-                        "test_data_suite_oid": "67fbea0470ce61e9d6c0d7a9",
+                        "test_data_suite_oid": "67feb3e4dca42e57948af91e",
                         "test_data_suite_id": "sdk_examples_pin-1.11",
-                        "test_data_oid": "67fbea0470ce61e9d6c0d7ae",
+                        "test_data_oid": "67feb3e4dca42e57948af923",
                         "test_data_id": "pin-cfc-social_25"
                     },
                     "error": null,
@@ -54,14 +54,14 @@
     "summary": {
         "shacl_suites": [
             {
-                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                 "shacl_suite_id": "epo"
             }
         ],
         "results": [
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "",

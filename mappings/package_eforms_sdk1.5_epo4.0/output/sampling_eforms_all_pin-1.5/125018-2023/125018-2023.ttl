@@ -219,11 +219,13 @@ epd:id_49cca485-0d7d-4f93-a0dd-c1014a918be7_PartPurpose_hq9SUTbfgyszaBVWP2RTwv a
 
 epd:id_49cca485-0d7d-4f93-a0dd-c1014a918be7_PartSpecificDuration_WT2qnSUcghXQ3BDGtZzxFK
   a epo:SpecificDuration;
-  time:numericDuration 48.0 .
+  time:numericDuration 48.0;
+  time:unitType time:unitMonth .
 
 epd:id_49cca485-0d7d-4f93-a0dd-c1014a918be7_PartSpecificDuration_kSZMfSA8qTkPCvvg4J7pge
   a epo:SpecificDuration;
-  time:numericDuration 48.0 .
+  time:numericDuration 48.0;
+  time:unitType time:unitMonth .
 
 epd:id_49cca485-0d7d-4f93-a0dd-c1014a918be7_PlannedProcurementPartIdentifier_MERF6WnoPEnVfJ9wqSQxW9
   a adms:Identifier;

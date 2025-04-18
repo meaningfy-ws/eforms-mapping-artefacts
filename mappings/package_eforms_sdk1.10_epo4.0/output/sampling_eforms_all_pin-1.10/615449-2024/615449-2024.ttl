@@ -219,7 +219,8 @@ epd:id_6619cecb-db6e-43c5-bf09-93532308f0f6_PartPurpose_hq9SUTbfgyszaBVWP2RTwv a
 
 epd:id_6619cecb-db6e-43c5-bf09-93532308f0f6_PartSpecificDuration_kSZMfSA8qTkPCvvg4J7pge
   a epo:SpecificDuration;
-  time:numericDuration 48.0 .
+  time:numericDuration 48.0;
+  time:unitType time:unitMonth .
 
 epd:id_6619cecb-db6e-43c5-bf09-93532308f0f6_PlannedProcurementPartIdentifier_adyhtKZkzxr6SEjy3tRyua
   a adms:Identifier;

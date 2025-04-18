@@ -1,9 +1,9 @@
 {
-    "created_at": "2025-04-14 12:59:42.640438+00:00",
+    "created_at": "2025-04-16 08:49:54.305265+00:00",
     "results": [
         {
             "shacl_suite": {
-                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                 "shacl_suite_id": "epo"
             },
             "results": [
@@ -12,7 +12,7 @@
                     "results": [
                         {
                             "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                                 "shacl_suite_id": "epo"
                             },
                             "result_path": "http://data.europa.eu/a4g/ontology#hasNoticeType",
@@ -32,15 +32,15 @@
                                 "message": "Less than 1 values on epd:id_202214-2025_Notice->:hasNoticeType"
                             },
                             "test_data": {
-                                "test_data_suite_oid": "67fbeaad70ce61e9d6c0d98a",
+                                "test_data_suite_oid": "67feb4d9dca42e57948afb00",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.13",
-                                "test_data_oid": "67fbeaad70ce61e9d6c0d98b",
+                                "test_data_oid": "67feb4d9dca42e57948afb01",
                                 "test_data_id": "222026-2025"
                             }
                         },
                         {
                             "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                                 "shacl_suite_id": "epo"
                             },
                             "result_path": "http://data.europa.eu/a4g/ontology#refersToLot",
@@ -60,15 +60,15 @@
                                 "message": "Less than 1 values on epd:id_202214-2025_Notice->:refersToLot"
                             },
                             "test_data": {
-                                "test_data_suite_oid": "67fbeaad70ce61e9d6c0d98a",
+                                "test_data_suite_oid": "67feb4d9dca42e57948afb00",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.13",
-                                "test_data_oid": "67fbeaad70ce61e9d6c0d98b",
+                                "test_data_oid": "67feb4d9dca42e57948afb01",
                                 "test_data_id": "222026-2025"
                             }
                         },
                         {
                             "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                                 "shacl_suite_id": "epo"
                             },
                             "result_path": "http://data.europa.eu/a4g/ontology#refersToProcedure",
@@ -88,15 +88,15 @@
                                 "message": "Less than 1 values on epd:id_202214-2025_Notice->:refersToProcedure"
                             },
                             "test_data": {
-                                "test_data_suite_oid": "67fbeaad70ce61e9d6c0d98a",
+                                "test_data_suite_oid": "67feb4d9dca42e57948afb00",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.13",
-                                "test_data_oid": "67fbeaad70ce61e9d6c0d98b",
+                                "test_data_oid": "67feb4d9dca42e57948afb01",
                                 "test_data_id": "222026-2025"
                             }
                         },
                         {
                             "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                                 "shacl_suite_id": "epo"
                             },
                             "result_path": "http://data.europa.eu/a4g/ontology#hasOfficialLanguage",
@@ -116,15 +116,15 @@
                                 "message": "Less than 1 values on epd:id_202214-2025_Notice->:hasOfficialLanguage"
                             },
                             "test_data": {
-                                "test_data_suite_oid": "67fbeaad70ce61e9d6c0d98a",
+                                "test_data_suite_oid": "67feb4d9dca42e57948afb00",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.13",
-                                "test_data_oid": "67fbeaad70ce61e9d6c0d98b",
+                                "test_data_oid": "67feb4d9dca42e57948afb01",
                                 "test_data_id": "222026-2025"
                             }
                         },
                         {
                             "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                                 "shacl_suite_id": "epo"
                             },
                             "result_path": "http://data.europa.eu/a4g/ontology#hasAwardCriteriaStatedInProcurementDocuments",
@@ -144,15 +144,15 @@
                                 "message": "Less than 1 values on epd:id_7fc75dcb-13be-4b48-975c-6e95c4d3b120_AwardCriterion_359JSctUnpNnkRhdBFNPmF->:hasAwardCriteriaStatedInProcurementDocuments"
                             },
                             "test_data": {
-                                "test_data_suite_oid": "67fbeaad70ce61e9d6c0d98a",
+                                "test_data_suite_oid": "67feb4d9dca42e57948afb00",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.13",
-                                "test_data_oid": "67fbeaad70ce61e9d6c0d98b",
+                                "test_data_oid": "67feb4d9dca42e57948afb01",
                                 "test_data_id": "222026-2025"
                             }
                         },
                         {
                             "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                                 "shacl_suite_id": "epo"
                             },
                             "result_path": "http://data.europa.eu/a4g/ontology#hasAwardCriteriaStatedInProcurementDocuments",
@@ -172,15 +172,15 @@
                                 "message": "Less than 1 values on epd:id_7fc75dcb-13be-4b48-975c-6e95c4d3b120_AwardCriterion_83TR8A3HiWh9GmZEyyQGjQ->:hasAwardCriteriaStatedInProcurementDocuments"
                             },
                             "test_data": {
-                                "test_data_suite_oid": "67fbeaad70ce61e9d6c0d98a",
+                                "test_data_suite_oid": "67feb4d9dca42e57948afb00",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.13",
-                                "test_data_oid": "67fbeaad70ce61e9d6c0d98b",
+                                "test_data_oid": "67feb4d9dca42e57948afb01",
                                 "test_data_id": "222026-2025"
                             }
                         },
                         {
                             "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                                 "shacl_suite_id": "epo"
                             },
                             "result_path": "http://data.europa.eu/a4g/ontology#hasAwardCriteriaStatedInProcurementDocuments",
@@ -200,15 +200,15 @@
                                 "message": "Less than 1 values on epd:id_7fc75dcb-13be-4b48-975c-6e95c4d3b120_AwardCriterion_Ee3JXqpmik8eG35Uay4dJk->:hasAwardCriteriaStatedInProcurementDocuments"
                             },
                             "test_data": {
-                                "test_data_suite_oid": "67fbeaad70ce61e9d6c0d98a",
+                                "test_data_suite_oid": "67feb4d9dca42e57948afb00",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.13",
-                                "test_data_oid": "67fbeaad70ce61e9d6c0d98b",
+                                "test_data_oid": "67feb4d9dca42e57948afb01",
                                 "test_data_id": "222026-2025"
                             }
                         },
                         {
                             "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                                 "shacl_suite_id": "epo"
                             },
                             "result_path": "http://data.europa.eu/a4g/ontology#hasAwardCriteriaStatedInProcurementDocuments",
@@ -228,15 +228,15 @@
                                 "message": "Less than 1 values on epd:id_7fc75dcb-13be-4b48-975c-6e95c4d3b120_AwardCriterion_MGJNUreXVLg5AkPswtTpQ5->:hasAwardCriteriaStatedInProcurementDocuments"
                             },
                             "test_data": {
-                                "test_data_suite_oid": "67fbeaad70ce61e9d6c0d98a",
+                                "test_data_suite_oid": "67feb4d9dca42e57948afb00",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.13",
-                                "test_data_oid": "67fbeaad70ce61e9d6c0d98b",
+                                "test_data_oid": "67feb4d9dca42e57948afb01",
                                 "test_data_id": "222026-2025"
                             }
                         },
                         {
                             "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                                 "shacl_suite_id": "epo"
                             },
                             "result_path": "http://data.europa.eu/a4g/ontology#hasAwardCriteriaStatedInProcurementDocuments",
@@ -256,15 +256,15 @@
                                 "message": "Less than 1 values on epd:id_7fc75dcb-13be-4b48-975c-6e95c4d3b120_AwardCriterion_QaDZD9SvbXf8nLh2wqBGkh->:hasAwardCriteriaStatedInProcurementDocuments"
                             },
                             "test_data": {
-                                "test_data_suite_oid": "67fbeaad70ce61e9d6c0d98a",
+                                "test_data_suite_oid": "67feb4d9dca42e57948afb00",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.13",
-                                "test_data_oid": "67fbeaad70ce61e9d6c0d98b",
+                                "test_data_oid": "67feb4d9dca42e57948afb01",
                                 "test_data_id": "222026-2025"
                             }
                         },
                         {
                             "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                                 "shacl_suite_id": "epo"
                             },
                             "result_path": "http://data.europa.eu/a4g/ontology#hasAwardCriteriaStatedInProcurementDocuments",
@@ -284,15 +284,15 @@
                                 "message": "Less than 1 values on epd:id_7fc75dcb-13be-4b48-975c-6e95c4d3b120_AwardCriterion_YaNBcRZDvhuxuRHVsGrYGs->:hasAwardCriteriaStatedInProcurementDocuments"
                             },
                             "test_data": {
-                                "test_data_suite_oid": "67fbeaad70ce61e9d6c0d98a",
+                                "test_data_suite_oid": "67feb4d9dca42e57948afb00",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.13",
-                                "test_data_oid": "67fbeaad70ce61e9d6c0d98b",
+                                "test_data_oid": "67feb4d9dca42e57948afb01",
                                 "test_data_id": "222026-2025"
                             }
                         },
                         {
                             "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                                 "shacl_suite_id": "epo"
                             },
                             "result_path": "http://data.europa.eu/a4g/ontology#hasAwardCriteriaStatedInProcurementDocuments",
@@ -312,15 +312,15 @@
                                 "message": "Less than 1 values on epd:id_7fc75dcb-13be-4b48-975c-6e95c4d3b120_AwardCriterion_hCGDbs9bnXJMh65gsF7cVY->:hasAwardCriteriaStatedInProcurementDocuments"
                             },
                             "test_data": {
-                                "test_data_suite_oid": "67fbeaad70ce61e9d6c0d98a",
+                                "test_data_suite_oid": "67feb4d9dca42e57948afb00",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.13",
-                                "test_data_oid": "67fbeaad70ce61e9d6c0d98b",
+                                "test_data_oid": "67feb4d9dca42e57948afb01",
                                 "test_data_id": "222026-2025"
                             }
                         },
                         {
                             "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                                 "shacl_suite_id": "epo"
                             },
                             "result_path": "http://data.europa.eu/a4g/ontology#hasAwardCriteriaStatedInProcurementDocuments",
@@ -340,15 +340,15 @@
                                 "message": "Less than 1 values on epd:id_7fc75dcb-13be-4b48-975c-6e95c4d3b120_AwardCriterion_i3zBAxudtgs8WSjxhwTJxg->:hasAwardCriteriaStatedInProcurementDocuments"
                             },
                             "test_data": {
-                                "test_data_suite_oid": "67fbeaad70ce61e9d6c0d98a",
+                                "test_data_suite_oid": "67feb4d9dca42e57948afb00",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.13",
-                                "test_data_oid": "67fbeaad70ce61e9d6c0d98b",
+                                "test_data_oid": "67feb4d9dca42e57948afb01",
                                 "test_data_id": "222026-2025"
                             }
                         },
                         {
                             "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                                 "shacl_suite_id": "epo"
                             },
                             "result_path": "http://www.w3.org/2006/time#unitType",
@@ -368,15 +368,15 @@
                                 "message": "Value does not have class time:TemporalUnit"
                             },
                             "test_data": {
-                                "test_data_suite_oid": "67fbeaad70ce61e9d6c0d98a",
+                                "test_data_suite_oid": "67feb4d9dca42e57948afb00",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.13",
-                                "test_data_oid": "67fbeaad70ce61e9d6c0d98b",
+                                "test_data_oid": "67feb4d9dca42e57948afb01",
                                 "test_data_id": "222026-2025"
                             }
                         },
                         {
                             "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                                 "shacl_suite_id": "epo"
                             },
                             "result_path": "http://www.w3.org/2006/time#unitType",
@@ -396,15 +396,15 @@
                                 "message": "Value does not have class time:TemporalUnit"
                             },
                             "test_data": {
-                                "test_data_suite_oid": "67fbeaad70ce61e9d6c0d98a",
+                                "test_data_suite_oid": "67feb4d9dca42e57948afb00",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.13",
-                                "test_data_oid": "67fbeaad70ce61e9d6c0d98b",
+                                "test_data_oid": "67feb4d9dca42e57948afb01",
                                 "test_data_id": "222026-2025"
                             }
                         },
                         {
                             "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                                 "shacl_suite_id": "epo"
                             },
                             "result_path": "http://data.europa.eu/a4g/ontology#hasBeginning",
@@ -424,15 +424,15 @@
                                 "message": "Value is not Literal with datatype xsd:dateTime"
                             },
                             "test_data": {
-                                "test_data_suite_oid": "67fbeaad70ce61e9d6c0d98a",
+                                "test_data_suite_oid": "67feb4d9dca42e57948afb00",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.13",
-                                "test_data_oid": "67fbeaad70ce61e9d6c0d98b",
+                                "test_data_oid": "67feb4d9dca42e57948afb01",
                                 "test_data_id": "222026-2025"
                             }
                         },
                         {
                             "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                                 "shacl_suite_id": "epo"
                             },
                             "result_path": "http://data.europa.eu/a4g/ontology#hasTimePeriod",
@@ -452,15 +452,15 @@
                                 "message": "Less than 1 values on epd:id_7fc75dcb-13be-4b48-975c-6e95c4d3b120_ContractPeriod_DW9uu9Ka9v6eCrwhU9MmBC->:hasTimePeriod"
                             },
                             "test_data": {
-                                "test_data_suite_oid": "67fbeaad70ce61e9d6c0d98a",
+                                "test_data_suite_oid": "67feb4d9dca42e57948afb00",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.13",
-                                "test_data_oid": "67fbeaad70ce61e9d6c0d98b",
+                                "test_data_oid": "67feb4d9dca42e57948afb01",
                                 "test_data_id": "222026-2025"
                             }
                         },
                         {
                             "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                                 "shacl_suite_id": "epo"
                             },
                             "result_path": "http://data.europa.eu/a4g/ontology#hasBeginning",
@@ -480,15 +480,15 @@
                                 "message": "Value is not Literal with datatype xsd:dateTime"
                             },
                             "test_data": {
-                                "test_data_suite_oid": "67fbeaad70ce61e9d6c0d98a",
+                                "test_data_suite_oid": "67feb4d9dca42e57948afb00",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.13",
-                                "test_data_oid": "67fbeaad70ce61e9d6c0d98b",
+                                "test_data_oid": "67feb4d9dca42e57948afb01",
                                 "test_data_id": "222026-2025"
                             }
                         },
                         {
                             "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                                 "shacl_suite_id": "epo"
                             },
                             "result_path": "http://data.europa.eu/a4g/ontology#hasTimePeriod",
@@ -508,15 +508,15 @@
                                 "message": "Less than 1 values on epd:id_7fc75dcb-13be-4b48-975c-6e95c4d3b120_ContractPeriod_JNctcsx6JXdNkzdL4P6dek->:hasTimePeriod"
                             },
                             "test_data": {
-                                "test_data_suite_oid": "67fbeaad70ce61e9d6c0d98a",
+                                "test_data_suite_oid": "67feb4d9dca42e57948afb00",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.13",
-                                "test_data_oid": "67fbeaad70ce61e9d6c0d98b",
+                                "test_data_oid": "67feb4d9dca42e57948afb01",
                                 "test_data_id": "222026-2025"
                             }
                         },
                         {
                             "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                                 "shacl_suite_id": "epo"
                             },
                             "result_path": "http://data.europa.eu/a4g/ontology#hasOJSIssueNumber",
@@ -536,15 +536,15 @@
                                 "message": "Value is not Literal with datatype xsd:integer"
                             },
                             "test_data": {
-                                "test_data_suite_oid": "67fbeaad70ce61e9d6c0d98a",
+                                "test_data_suite_oid": "67feb4d9dca42e57948afb00",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.13",
-                                "test_data_oid": "67fbeaad70ce61e9d6c0d98b",
+                                "test_data_oid": "67feb4d9dca42e57948afb01",
                                 "test_data_id": "222026-2025"
                             }
                         },
                         {
                             "shacl_suite": {
-                                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                                 "shacl_suite_id": "epo"
                             },
                             "result_path": "http://data.europa.eu/a4g/ontology#hasPublicationDate",
@@ -564,17 +564,17 @@
                                 "message": "Value is not Literal with datatype xsd:date"
                             },
                             "test_data": {
-                                "test_data_suite_oid": "67fbeaad70ce61e9d6c0d98a",
+                                "test_data_suite_oid": "67feb4d9dca42e57948afb00",
                                 "test_data_suite_id": "sampling_eforms_all_cn-1.13",
-                                "test_data_oid": "67fbeaad70ce61e9d6c0d98b",
+                                "test_data_oid": "67feb4d9dca42e57948afb01",
                                 "test_data_id": "222026-2025"
                             }
                         }
                     ],
                     "test_data": {
-                        "test_data_suite_oid": "67fbeaad70ce61e9d6c0d98a",
+                        "test_data_suite_oid": "67feb4d9dca42e57948afb00",
                         "test_data_suite_id": "sampling_eforms_all_cn-1.13",
-                        "test_data_oid": "67fbeaad70ce61e9d6c0d98b",
+                        "test_data_oid": "67feb4d9dca42e57948afb01",
                         "test_data_id": "222026-2025"
                     },
                     "error": null,
@@ -586,14 +586,14 @@
     "summary": {
         "shacl_suites": [
             {
-                "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                "shacl_suite_oid": "67feb1bbdca42e57948af567",
                 "shacl_suite_id": "epo"
             }
         ],
         "results": [
             {
                 "shacl_suite": {
-                    "shacl_suite_oid": "67fbe85370ce61e9d6c0d3fd",
+                    "shacl_suite_oid": "67feb1bbdca42e57948af567",
                     "shacl_suite_id": "epo"
                 },
                 "result_path": "",
